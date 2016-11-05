@@ -1,0 +1,33 @@
+/* 
+  Localizable.strings
+  GOLFKit
+
+  Created by John Bishop on 11/5/16.
+  Copyright © 2016 Mulligan Software. All rights reserved.
+*/
+
+//	Standard Tee Colors
+"GOLF_TEE_COLOR_NAME_BLACK" = "Black";
+"GOLF_TEE_COLOR_NAME_BLUE" = "Blue";
+"GOLF_TEE_COLOR_NAME_WHITE" = "White";
+"GOLF_TEE_COLOR_NAME_GREEN" = "Green";
+"GOLF_TEE_COLOR_NAME_RED" = "Red";
+"GOLF_TEE_COLOR_NAME_YELLOW" = "Yellow";
+"GOLF_TEE_COLOR_NAME_BROWN" = "Brown";
+"GOLF_TEE_COLOR_NAME_GOLD" = "Gold";
+"GOLF_TEE_COLOR_NAME_SILVER" = "Silver";
+"GOLF_TEE_COLOR_NAME_PURPLE" = "Purple";
+"GOLF_TEE_COLOR_NAME_ORANGE" = "Orange";
+"GOLF_TEE_COLOR_NAME_MAROON" = "Maroon";
+"GOLF_TEE_COLOR_NAME_TAN" = "Tan";
+"GOLF_TEE_COLOR_NAME_BLUE_AND_WHITE" = "Blue & White";
+"GOLF_TEE_COLOR_NAME_RED_AND_YELLOW" = "Red & Yellow";
+"GOLF_TEE_COLOR_NAME_YELLOW_AND_BLUE" = "Yellow & Blue";
+"GOLF_TEE_COLOR_NAME_RED_AND_WHITE" = "Red & White";
+"GOLF_TEE_COLOR_NAME_BLACK_AND_GOLD" = "Black & Gold";
+"GOLF_TEE_COLOR_NAME_WHITE_AND_GOLD" = "White & Gold";
+"GOLF_TEE_COLOR_NAME_BLACK_AND_WHITE" = "Black & White";
+"GOLF_TEE_COLOR_NAME_CUSTOM" = "Custom";
+"GOLF_TEE_COLOR_NAME_UNKNOWN" = "Unknown";
+"GOLF_TEE_COLOR_NAME_ADD" = "Add";
+"GOLF_TEE_COLOR_NAME_ALL" = "All";
