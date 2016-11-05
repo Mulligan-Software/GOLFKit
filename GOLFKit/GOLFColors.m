@@ -19,4 +19,4 @@
 #endif
 
 
-#undef GOLFAppColor
+//	#undef GOLFAppColor

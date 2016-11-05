@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		29A337FF1DCE74440074A064 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29E888CA1DCE5E6400C4A63A /* Localizable.strings */; };
+		29A338001DCE74570074A064 /* GOLFColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 29E888CD1DCE611600C4A63A /* GOLFColors.h */; };
+		29A338011DCE745B0074A064 /* GOLFColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E888CE1DCE611600C4A63A /* GOLFColors.m */; };
+		29A338021DCE74600074A064 /* GOLFKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 29E888AF1DCE5B0000C4A63A /* GOLFKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29A338041DCE76E30074A064 /* TeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A338031DCE76E30074A064 /* TeeMarkers.xcassets */; };
+		29A338051DCE76E30074A064 /* TeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A338031DCE76E30074A064 /* TeeMarkers.xcassets */; };
+		29A338081DCE81D70074A064 /* GOLFTeeMarkers.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A338061DCE81D70074A064 /* GOLFTeeMarkers.h */; };
+		29A338091DCE81D70074A064 /* GOLFTeeMarkers.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A338061DCE81D70074A064 /* GOLFTeeMarkers.h */; };
+		29A3380A1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A338071DCE81D70074A064 /* GOLFTeeMarkers.m */; };
+		29A3380B1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A338071DCE81D70074A064 /* GOLFTeeMarkers.m */; };
 		29E888BB1DCE5B0000C4A63A /* GOLFKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E888BA1DCE5B0000C4A63A /* GOLFKitTests.m */; };
 		29E888BD1DCE5B0000C4A63A /* GOLFKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 29E888AF1DCE5B0000C4A63A /* GOLFKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29E888C81DCE5E6400C4A63A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29E888CA1DCE5E6400C4A63A /* Localizable.strings */; };
@@ -26,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		29A338031DCE76E30074A064 /* TeeMarkers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TeeMarkers.xcassets; sourceTree = "<group>"; };
+		29A338061DCE81D70074A064 /* GOLFTeeMarkers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOLFTeeMarkers.h; sourceTree = "<group>"; };
+		29A338071DCE81D70074A064 /* GOLFTeeMarkers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLFTeeMarkers.m; sourceTree = "<group>"; };
 		29E888AC1DCE5B0000C4A63A /* GOLFKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GOLFKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29E888AF1DCE5B0000C4A63A /* GOLFKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GOLFKit.h; path = GOLFKit/GOLFKit.h; sourceTree = "<group>"; };
 		29E888B01DCE5B0000C4A63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -121,6 +134,9 @@
 			children = (
 				29E888CD1DCE611600C4A63A /* GOLFColors.h */,
 				29E888CE1DCE611600C4A63A /* GOLFColors.m */,
+				29A338061DCE81D70074A064 /* GOLFTeeMarkers.h */,
+				29A338071DCE81D70074A064 /* GOLFTeeMarkers.m */,
+				29A338031DCE76E30074A064 /* TeeMarkers.xcassets */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -149,6 +165,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A338081DCE81D70074A064 /* GOLFTeeMarkers.h in Headers */,
 				29E888CF1DCE611600C4A63A /* GOLFColors.h in Headers */,
 				29E888BD1DCE5B0000C4A63A /* GOLFKit.h in Headers */,
 			);
@@ -158,6 +175,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A338091DCE81D70074A064 /* GOLFTeeMarkers.h in Headers */,
+				29A338001DCE74570074A064 /* GOLFColors.h in Headers */,
+				29A338021DCE74600074A064 /* GOLFKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A338041DCE76E30074A064 /* TeeMarkers.xcassets in Resources */,
 				29E888C81DCE5E6400C4A63A /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -282,6 +303,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A338051DCE76E30074A064 /* TeeMarkers.xcassets in Resources */,
+				29A337FF1DCE74440074A064 /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -292,6 +315,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A3380A1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */,
 				29E888D01DCE611600C4A63A /* GOLFColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +332,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A3380B1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */,
+				29A338011DCE745B0074A064 /* GOLFColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
