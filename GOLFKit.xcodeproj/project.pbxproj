@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2930CDA31DCFEC4F0089491D /* LittleTeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2930CDA21DCFEC4F0089491D /* LittleTeeMarkers.xcassets */; };
+		2930CDA41DCFEC4F0089491D /* LittleTeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2930CDA21DCFEC4F0089491D /* LittleTeeMarkers.xcassets */; };
 		29A337FF1DCE74440074A064 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29E888CA1DCE5E6400C4A63A /* Localizable.strings */; };
 		29A338001DCE74570074A064 /* GOLFColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 29E888CD1DCE611600C4A63A /* GOLFColors.h */; };
 		29A338011DCE745B0074A064 /* GOLFColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E888CE1DCE611600C4A63A /* GOLFColors.m */; };
@@ -36,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2930CDA21DCFEC4F0089491D /* LittleTeeMarkers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LittleTeeMarkers.xcassets; sourceTree = "<group>"; };
 		29A338031DCE76E30074A064 /* TeeMarkers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TeeMarkers.xcassets; sourceTree = "<group>"; };
 		29A338061DCE81D70074A064 /* GOLFTeeMarkers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOLFTeeMarkers.h; sourceTree = "<group>"; };
 		29A338071DCE81D70074A064 /* GOLFTeeMarkers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLFTeeMarkers.m; sourceTree = "<group>"; };
@@ -137,6 +140,7 @@
 				29A338061DCE81D70074A064 /* GOLFTeeMarkers.h */,
 				29A338071DCE81D70074A064 /* GOLFTeeMarkers.m */,
 				29A338031DCE76E30074A064 /* TeeMarkers.xcassets */,
+				2930CDA21DCFEC4F0089491D /* LittleTeeMarkers.xcassets */,
 			);
 			name = UI;
 			sourceTree = "<group>";
@@ -287,6 +291,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2930CDA31DCFEC4F0089491D /* LittleTeeMarkers.xcassets in Resources */,
 				29A338041DCE76E30074A064 /* TeeMarkers.xcassets in Resources */,
 				29E888C81DCE5E6400C4A63A /* Localizable.strings in Resources */,
 			);
@@ -303,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2930CDA41DCFEC4F0089491D /* LittleTeeMarkers.xcassets in Resources */,
 				29A338051DCE76E30074A064 /* TeeMarkers.xcassets in Resources */,
 				29A337FF1DCE74440074A064 /* Localizable.strings in Resources */,
 			);

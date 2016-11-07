@@ -20,3 +20,32 @@
 
 
 //	#undef GOLFAppColor
+
+
+@implementation GOLFAppColor (GOLFColorCategories)
+
++ (id)GOLFFactoryEagleScoreColor {
+	return [GOLFAppColor purpleColor];
+}
+
++ (id)GOLFFactoryBirdieScoreColor {
+	return [GOLFAppColor redColor];
+}
+
++ (id)GOLFFactoryParScoreColor {
+	return [GOLFAppColor blueColor];
+}
+
++ (id)GOLFFactoryBogeyScoreColor {
+	return [GOLFAppColor blackColor];
+}
+
++ (id)GOLFFactoryUnderParScoreColor {
+	return [GOLFAppColor GOLFFactoryBirdieScoreColor];
+}
+
++ (id)GOLFFactoryOverParScoreColor {
+	return [GOLFAppColor GOLFFactoryBogeyScoreColor];
+}
+
+@end
