@@ -156,6 +156,15 @@ NSArray * GOLFStandardTeeColorArray(void) {
 				@"tee_marker_teal", @"teeImageName", nil];
 		[workingList addObject:colorDict];
 		
+		//	Azure
+		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithInt:GOLFTeeColorAzure], @"teeColorIndex",
+				[GOLFAppColor colorWithRed:0 green:0.875 blue:1.0 alpha:1.0], @"teeColor",
+				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_AZURE", @""), @"teeColorName",
+				@"TeeMarkerAzure", @"teeIconName",
+				@"tee_marker_azure", @"teeImageName", nil];
+		[workingList addObject:colorDict];
+		
 		//	Blue & White
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithInt:GOLFTeeColorBlueAndWhite], @"teeColorIndex",

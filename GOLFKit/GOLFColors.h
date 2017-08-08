@@ -27,7 +27,7 @@
 //	#undef GOLFAppColor
 
 //	Misc constants
-#define	numberOfCandidateTeeColors	22
+#define	numberOfCandidateTeeColors	23
 
 typedef NS_ENUM(NSInteger, GOLFTeeColorIndex) {
 	GOLFTeeColorBlack = 0,			//	Black (0)
@@ -45,7 +45,8 @@ typedef NS_ENUM(NSInteger, GOLFTeeColorIndex) {
 	GOLFTeeColorTan,				//	Tan (12)
 	GOLFTeeColorPink,				//	Pink (13)
 	GOLFTeeColorTeal,				//	Teal (14)
-	GOLFTeeColorLastSolid = GOLFTeeColorTeal,
+	GOLFTeeColorAzure,				//	Azure (15)
+	GOLFTeeColorLastSolid = GOLFTeeColorAzure,
 	GOLFTeeColorBlueAndWhite = 20,	//	Blue & White (20)
 	GOLFTeeColorFirstCombo = GOLFTeeColorBlueAndWhite,
 	GOLFTeeColorRedAndYellow = 21,		//	Red & Yellow (21)

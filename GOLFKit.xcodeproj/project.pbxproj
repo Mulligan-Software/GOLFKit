@@ -9,6 +9,36 @@
 /* Begin PBXBuildFile section */
 		2930CDA31DCFEC4F0089491D /* LittleTeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2930CDA21DCFEC4F0089491D /* LittleTeeMarkers.xcassets */; };
 		2930CDA41DCFEC4F0089491D /* LittleTeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2930CDA21DCFEC4F0089491D /* LittleTeeMarkers.xcassets */; };
+		2941402D1DDA02D700CC9605 /* TeeMarkerAdd.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2941402C1DDA02D700CC9605 /* TeeMarkerAdd.icns */; };
+		294140481DDA03E300CC9605 /* TeeMarkerAll.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2941402E1DDA03E300CC9605 /* TeeMarkerAll.icns */; };
+		294140491DDA03E300CC9605 /* TeeMarkerBlack.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2941402F1DDA03E300CC9605 /* TeeMarkerBlack.icns */; };
+		2941404A1DDA03E300CC9605 /* TeeMarkerBlackAndGold.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140301DDA03E300CC9605 /* TeeMarkerBlackAndGold.icns */; };
+		2941404B1DDA03E300CC9605 /* TeeMarkerBlackAndWhite.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140311DDA03E300CC9605 /* TeeMarkerBlackAndWhite.icns */; };
+		2941404C1DDA03E300CC9605 /* TeeMarkerBlue.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140321DDA03E300CC9605 /* TeeMarkerBlue.icns */; };
+		2941404D1DDA03E300CC9605 /* TeeMarkerBlueAndWhite.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140331DDA03E300CC9605 /* TeeMarkerBlueAndWhite.icns */; };
+		2941404E1DDA03E300CC9605 /* TeeMarkerBrown.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140341DDA03E300CC9605 /* TeeMarkerBrown.icns */; };
+		2941404F1DDA03E300CC9605 /* TeeMarkerGeneric.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140351DDA03E300CC9605 /* TeeMarkerGeneric.icns */; };
+		294140501DDA03E300CC9605 /* TeeMarkerGold.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140361DDA03E300CC9605 /* TeeMarkerGold.icns */; };
+		294140511DDA03E300CC9605 /* TeeMarkerGreen.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140371DDA03E300CC9605 /* TeeMarkerGreen.icns */; };
+		294140521DDA03E300CC9605 /* TeeMarkerMaroon.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140381DDA03E300CC9605 /* TeeMarkerMaroon.icns */; };
+		294140531DDA03E300CC9605 /* TeeMarkerOrange.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140391DDA03E300CC9605 /* TeeMarkerOrange.icns */; };
+		294140541DDA03E300CC9605 /* TeeMarkerPink.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2941403A1DDA03E300CC9605 /* TeeMarkerPink.icns */; };
+		294140551DDA03E300CC9605 /* TeeMarkerPurple.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2941403B1DDA03E300CC9605 /* TeeMarkerPurple.icns */; };
+		294140561DDA03E300CC9605 /* TeeMarkerRainbow.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2941403C1DDA03E300CC9605 /* TeeMarkerRainbow.icns */; };
+		294140571DDA03E300CC9605 /* TeeMarkerRed.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2941403D1DDA03E300CC9605 /* TeeMarkerRed.icns */; };
+		294140581DDA03E300CC9605 /* TeeMarkerRedAndWhite.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2941403E1DDA03E300CC9605 /* TeeMarkerRedAndWhite.icns */; };
+		294140591DDA03E300CC9605 /* TeeMarkerRedAndYellow.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2941403F1DDA03E300CC9605 /* TeeMarkerRedAndYellow.icns */; };
+		2941405A1DDA03E300CC9605 /* TeeMarkerSilver.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140401DDA03E300CC9605 /* TeeMarkerSilver.icns */; };
+		2941405B1DDA03E300CC9605 /* TeeMarkerTan.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140411DDA03E300CC9605 /* TeeMarkerTan.icns */; };
+		2941405C1DDA03E300CC9605 /* TeeMarkerTeal.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140421DDA03E300CC9605 /* TeeMarkerTeal.icns */; };
+		2941405D1DDA03E300CC9605 /* TeeMarkerUSA.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140431DDA03E300CC9605 /* TeeMarkerUSA.icns */; };
+		2941405E1DDA03E300CC9605 /* TeeMarkerWhite.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140441DDA03E300CC9605 /* TeeMarkerWhite.icns */; };
+		2941405F1DDA03E300CC9605 /* TeeMarkerWhiteAndGold.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140451DDA03E300CC9605 /* TeeMarkerWhiteAndGold.icns */; };
+		294140601DDA03E300CC9605 /* TeeMarkerYellow.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140461DDA03E300CC9605 /* TeeMarkerYellow.icns */; };
+		294140611DDA03E300CC9605 /* TeeMarkerYellowAndBlue.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140471DDA03E300CC9605 /* TeeMarkerYellowAndBlue.icns */; };
+		294140631DDB582600CC9605 /* GOLFKitTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 294140621DDB582600CC9605 /* GOLFKitTypes.h */; };
+		294140641DDB582600CC9605 /* GOLFKitTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 294140621DDB582600CC9605 /* GOLFKitTypes.h */; };
+		296F4DDF1F3A40A100781C46 /* TeeMarkerAzure.icns in Resources */ = {isa = PBXBuildFile; fileRef = 296F4DDE1F3A40A100781C46 /* TeeMarkerAzure.icns */; };
 		29A337FF1DCE74440074A064 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29E888CA1DCE5E6400C4A63A /* Localizable.strings */; };
 		29A338001DCE74570074A064 /* GOLFColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 29E888CD1DCE611600C4A63A /* GOLFColors.h */; };
 		29A338011DCE745B0074A064 /* GOLFColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E888CE1DCE611600C4A63A /* GOLFColors.m */; };
@@ -39,6 +69,35 @@
 
 /* Begin PBXFileReference section */
 		2930CDA21DCFEC4F0089491D /* LittleTeeMarkers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LittleTeeMarkers.xcassets; sourceTree = "<group>"; };
+		2941402C1DDA02D700CC9605 /* TeeMarkerAdd.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerAdd.icns; path = "Support/TeeMarker icns/TeeMarkerAdd.icns"; sourceTree = SOURCE_ROOT; };
+		2941402E1DDA03E300CC9605 /* TeeMarkerAll.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerAll.icns; path = "Support/TeeMarker icns/TeeMarkerAll.icns"; sourceTree = SOURCE_ROOT; };
+		2941402F1DDA03E300CC9605 /* TeeMarkerBlack.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerBlack.icns; path = "Support/TeeMarker icns/TeeMarkerBlack.icns"; sourceTree = SOURCE_ROOT; };
+		294140301DDA03E300CC9605 /* TeeMarkerBlackAndGold.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerBlackAndGold.icns; path = "Support/TeeMarker icns/TeeMarkerBlackAndGold.icns"; sourceTree = SOURCE_ROOT; };
+		294140311DDA03E300CC9605 /* TeeMarkerBlackAndWhite.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerBlackAndWhite.icns; path = "Support/TeeMarker icns/TeeMarkerBlackAndWhite.icns"; sourceTree = SOURCE_ROOT; };
+		294140321DDA03E300CC9605 /* TeeMarkerBlue.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerBlue.icns; path = "Support/TeeMarker icns/TeeMarkerBlue.icns"; sourceTree = SOURCE_ROOT; };
+		294140331DDA03E300CC9605 /* TeeMarkerBlueAndWhite.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerBlueAndWhite.icns; path = "Support/TeeMarker icns/TeeMarkerBlueAndWhite.icns"; sourceTree = SOURCE_ROOT; };
+		294140341DDA03E300CC9605 /* TeeMarkerBrown.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerBrown.icns; path = "Support/TeeMarker icns/TeeMarkerBrown.icns"; sourceTree = SOURCE_ROOT; };
+		294140351DDA03E300CC9605 /* TeeMarkerGeneric.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerGeneric.icns; path = "Support/TeeMarker icns/TeeMarkerGeneric.icns"; sourceTree = SOURCE_ROOT; };
+		294140361DDA03E300CC9605 /* TeeMarkerGold.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerGold.icns; path = "Support/TeeMarker icns/TeeMarkerGold.icns"; sourceTree = SOURCE_ROOT; };
+		294140371DDA03E300CC9605 /* TeeMarkerGreen.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerGreen.icns; path = "Support/TeeMarker icns/TeeMarkerGreen.icns"; sourceTree = SOURCE_ROOT; };
+		294140381DDA03E300CC9605 /* TeeMarkerMaroon.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerMaroon.icns; path = "Support/TeeMarker icns/TeeMarkerMaroon.icns"; sourceTree = SOURCE_ROOT; };
+		294140391DDA03E300CC9605 /* TeeMarkerOrange.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerOrange.icns; path = "Support/TeeMarker icns/TeeMarkerOrange.icns"; sourceTree = SOURCE_ROOT; };
+		2941403A1DDA03E300CC9605 /* TeeMarkerPink.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerPink.icns; path = "Support/TeeMarker icns/TeeMarkerPink.icns"; sourceTree = SOURCE_ROOT; };
+		2941403B1DDA03E300CC9605 /* TeeMarkerPurple.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerPurple.icns; path = "Support/TeeMarker icns/TeeMarkerPurple.icns"; sourceTree = SOURCE_ROOT; };
+		2941403C1DDA03E300CC9605 /* TeeMarkerRainbow.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerRainbow.icns; path = "Support/TeeMarker icns/TeeMarkerRainbow.icns"; sourceTree = SOURCE_ROOT; };
+		2941403D1DDA03E300CC9605 /* TeeMarkerRed.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerRed.icns; path = "Support/TeeMarker icns/TeeMarkerRed.icns"; sourceTree = SOURCE_ROOT; };
+		2941403E1DDA03E300CC9605 /* TeeMarkerRedAndWhite.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerRedAndWhite.icns; path = "Support/TeeMarker icns/TeeMarkerRedAndWhite.icns"; sourceTree = SOURCE_ROOT; };
+		2941403F1DDA03E300CC9605 /* TeeMarkerRedAndYellow.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerRedAndYellow.icns; path = "Support/TeeMarker icns/TeeMarkerRedAndYellow.icns"; sourceTree = SOURCE_ROOT; };
+		294140401DDA03E300CC9605 /* TeeMarkerSilver.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerSilver.icns; path = "Support/TeeMarker icns/TeeMarkerSilver.icns"; sourceTree = SOURCE_ROOT; };
+		294140411DDA03E300CC9605 /* TeeMarkerTan.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerTan.icns; path = "Support/TeeMarker icns/TeeMarkerTan.icns"; sourceTree = SOURCE_ROOT; };
+		294140421DDA03E300CC9605 /* TeeMarkerTeal.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerTeal.icns; path = "Support/TeeMarker icns/TeeMarkerTeal.icns"; sourceTree = SOURCE_ROOT; };
+		294140431DDA03E300CC9605 /* TeeMarkerUSA.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerUSA.icns; path = "Support/TeeMarker icns/TeeMarkerUSA.icns"; sourceTree = SOURCE_ROOT; };
+		294140441DDA03E300CC9605 /* TeeMarkerWhite.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerWhite.icns; path = "Support/TeeMarker icns/TeeMarkerWhite.icns"; sourceTree = SOURCE_ROOT; };
+		294140451DDA03E300CC9605 /* TeeMarkerWhiteAndGold.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerWhiteAndGold.icns; path = "Support/TeeMarker icns/TeeMarkerWhiteAndGold.icns"; sourceTree = SOURCE_ROOT; };
+		294140461DDA03E300CC9605 /* TeeMarkerYellow.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerYellow.icns; path = "Support/TeeMarker icns/TeeMarkerYellow.icns"; sourceTree = SOURCE_ROOT; };
+		294140471DDA03E300CC9605 /* TeeMarkerYellowAndBlue.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerYellowAndBlue.icns; path = "Support/TeeMarker icns/TeeMarkerYellowAndBlue.icns"; sourceTree = SOURCE_ROOT; };
+		294140621DDB582600CC9605 /* GOLFKitTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLFKitTypes.h; path = GOLFKit/GOLFKitTypes.h; sourceTree = "<group>"; };
+		296F4DDE1F3A40A100781C46 /* TeeMarkerAzure.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerAzure.icns; path = "Support/TeeMarker icns/TeeMarkerAzure.icns"; sourceTree = SOURCE_ROOT; };
 		29A338031DCE76E30074A064 /* TeeMarkers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TeeMarkers.xcassets; sourceTree = "<group>"; };
 		29A338061DCE81D70074A064 /* GOLFTeeMarkers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOLFTeeMarkers.h; sourceTree = "<group>"; };
 		29A338071DCE81D70074A064 /* GOLFTeeMarkers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLFTeeMarkers.m; sourceTree = "<group>"; };
@@ -83,10 +142,54 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		294140281DD8E2F000CC9605 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				294140291DD8E30800CC9605 /* TeeMarker icns */,
+			);
+			name = UI;
+			sourceTree = "<group>";
+		};
+		294140291DD8E30800CC9605 /* TeeMarker icns */ = {
+			isa = PBXGroup;
+			children = (
+				2941402C1DDA02D700CC9605 /* TeeMarkerAdd.icns */,
+				2941402E1DDA03E300CC9605 /* TeeMarkerAll.icns */,
+				296F4DDE1F3A40A100781C46 /* TeeMarkerAzure.icns */,
+				2941402F1DDA03E300CC9605 /* TeeMarkerBlack.icns */,
+				294140301DDA03E300CC9605 /* TeeMarkerBlackAndGold.icns */,
+				294140311DDA03E300CC9605 /* TeeMarkerBlackAndWhite.icns */,
+				294140321DDA03E300CC9605 /* TeeMarkerBlue.icns */,
+				294140331DDA03E300CC9605 /* TeeMarkerBlueAndWhite.icns */,
+				294140341DDA03E300CC9605 /* TeeMarkerBrown.icns */,
+				294140351DDA03E300CC9605 /* TeeMarkerGeneric.icns */,
+				294140361DDA03E300CC9605 /* TeeMarkerGold.icns */,
+				294140371DDA03E300CC9605 /* TeeMarkerGreen.icns */,
+				294140381DDA03E300CC9605 /* TeeMarkerMaroon.icns */,
+				294140391DDA03E300CC9605 /* TeeMarkerOrange.icns */,
+				2941403A1DDA03E300CC9605 /* TeeMarkerPink.icns */,
+				2941403B1DDA03E300CC9605 /* TeeMarkerPurple.icns */,
+				2941403C1DDA03E300CC9605 /* TeeMarkerRainbow.icns */,
+				2941403D1DDA03E300CC9605 /* TeeMarkerRed.icns */,
+				2941403E1DDA03E300CC9605 /* TeeMarkerRedAndWhite.icns */,
+				2941403F1DDA03E300CC9605 /* TeeMarkerRedAndYellow.icns */,
+				294140401DDA03E300CC9605 /* TeeMarkerSilver.icns */,
+				294140411DDA03E300CC9605 /* TeeMarkerTan.icns */,
+				294140421DDA03E300CC9605 /* TeeMarkerTeal.icns */,
+				294140431DDA03E300CC9605 /* TeeMarkerUSA.icns */,
+				294140441DDA03E300CC9605 /* TeeMarkerWhite.icns */,
+				294140451DDA03E300CC9605 /* TeeMarkerWhiteAndGold.icns */,
+				294140461DDA03E300CC9605 /* TeeMarkerYellow.icns */,
+				294140471DDA03E300CC9605 /* TeeMarkerYellowAndBlue.icns */,
+			);
+			name = "TeeMarker icns";
+			sourceTree = "<group>";
+		};
 		29E888A21DCE5B0000C4A63A = {
 			isa = PBXGroup;
 			children = (
 				29E888AF1DCE5B0000C4A63A /* GOLFKit.h */,
+				294140621DDB582600CC9605 /* GOLFKitTypes.h */,
 				29E888D11DCE652700C4A63A /* Common */,
 				29E888AE1DCE5B0000C4A63A /* GOLFKit */,
 				29E888B91DCE5B0000C4A63A /* GOLFKitTests */,
@@ -156,6 +259,7 @@
 		29E888DA1DCE65E000C4A63A /* GOLFKit (OS X) */ = {
 			isa = PBXGroup;
 			children = (
+				294140281DD8E2F000CC9605 /* UI */,
 				29E888DC1DCE65E000C4A63A /* Info.plist */,
 			);
 			name = "GOLFKit (OS X)";
@@ -170,6 +274,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29A338081DCE81D70074A064 /* GOLFTeeMarkers.h in Headers */,
+				294140631DDB582600CC9605 /* GOLFKitTypes.h in Headers */,
 				29E888CF1DCE611600C4A63A /* GOLFColors.h in Headers */,
 				29E888BD1DCE5B0000C4A63A /* GOLFKit.h in Headers */,
 			);
@@ -180,6 +285,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29A338091DCE81D70074A064 /* GOLFTeeMarkers.h in Headers */,
+				294140641DDB582600CC9605 /* GOLFKitTypes.h in Headers */,
 				29A338001DCE74570074A064 /* GOLFColors.h in Headers */,
 				29A338021DCE74600074A064 /* GOLFKit.h in Headers */,
 			);
@@ -308,9 +414,37 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				294140581DDA03E300CC9605 /* TeeMarkerRedAndWhite.icns in Resources */,
+				2941405E1DDA03E300CC9605 /* TeeMarkerWhite.icns in Resources */,
+				2941404E1DDA03E300CC9605 /* TeeMarkerBrown.icns in Resources */,
+				294140501DDA03E300CC9605 /* TeeMarkerGold.icns in Resources */,
+				2941404F1DDA03E300CC9605 /* TeeMarkerGeneric.icns in Resources */,
+				294140611DDA03E300CC9605 /* TeeMarkerYellowAndBlue.icns in Resources */,
+				294140511DDA03E300CC9605 /* TeeMarkerGreen.icns in Resources */,
+				2941402D1DDA02D700CC9605 /* TeeMarkerAdd.icns in Resources */,
+				294140491DDA03E300CC9605 /* TeeMarkerBlack.icns in Resources */,
 				2930CDA41DCFEC4F0089491D /* LittleTeeMarkers.xcassets in Resources */,
+				2941404D1DDA03E300CC9605 /* TeeMarkerBlueAndWhite.icns in Resources */,
 				29A338051DCE76E30074A064 /* TeeMarkers.xcassets in Resources */,
+				294140601DDA03E300CC9605 /* TeeMarkerYellow.icns in Resources */,
+				2941405F1DDA03E300CC9605 /* TeeMarkerWhiteAndGold.icns in Resources */,
 				29A337FF1DCE74440074A064 /* Localizable.strings in Resources */,
+				294140541DDA03E300CC9605 /* TeeMarkerPink.icns in Resources */,
+				294140571DDA03E300CC9605 /* TeeMarkerRed.icns in Resources */,
+				294140481DDA03E300CC9605 /* TeeMarkerAll.icns in Resources */,
+				294140531DDA03E300CC9605 /* TeeMarkerOrange.icns in Resources */,
+				294140551DDA03E300CC9605 /* TeeMarkerPurple.icns in Resources */,
+				2941405A1DDA03E300CC9605 /* TeeMarkerSilver.icns in Resources */,
+				2941405D1DDA03E300CC9605 /* TeeMarkerUSA.icns in Resources */,
+				2941404A1DDA03E300CC9605 /* TeeMarkerBlackAndGold.icns in Resources */,
+				2941405C1DDA03E300CC9605 /* TeeMarkerTeal.icns in Resources */,
+				2941404B1DDA03E300CC9605 /* TeeMarkerBlackAndWhite.icns in Resources */,
+				294140561DDA03E300CC9605 /* TeeMarkerRainbow.icns in Resources */,
+				294140591DDA03E300CC9605 /* TeeMarkerRedAndYellow.icns in Resources */,
+				296F4DDF1F3A40A100781C46 /* TeeMarkerAzure.icns in Resources */,
+				2941404C1DDA03E300CC9605 /* TeeMarkerBlue.icns in Resources */,
+				294140521DDA03E300CC9605 /* TeeMarkerMaroon.icns in Resources */,
+				2941405B1DDA03E300CC9605 /* TeeMarkerTan.icns in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -549,6 +683,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mulligansoftware.GOLFKit;
 				PRODUCT_NAME = GOLFKit;
+				REZ_SEARCH_PATHS = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
@@ -571,6 +706,7 @@
 				MACOSX_DEPLOYMENT_TARGET = 10.8;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mulligansoftware.GOLFKit;
 				PRODUCT_NAME = GOLFKit;
+				REZ_SEARCH_PATHS = "";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
 			};
