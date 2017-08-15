@@ -1,0 +1,12 @@
+/* 
+  InfoPlist.strings
+  GOLFKit
+
+  Created by John Bishop on 8/8/17.
+  Copyright © 2017 Mulligan Software. All rights reserved.
+*/
+
+CFBundleName = "GOLFKit";
+CFBundleShortVersionString = "1.0";
+CFBundleGetInfoString = "GOLFKit 1.0, Copyright © 2017 Mulligan Software";
+NSHumanReadableCopyright = "© Copyright 2017 Mulligan Software.  Tous droits réservés.";

@@ -29,7 +29,7 @@
 //	Misc constants
 #define	numberOfCandidateTeeColors	23
 
-typedef NS_ENUM(NSInteger, GOLFTeeColorIndex) {
+typedef NS_ENUM(NSUInteger, GOLFTeeColorIndex) {
 	GOLFTeeColorBlack = 0,			//	Black (0)
 	GOLFTeeColorBlue,				//	Blue (1)
 	GOLFTeeColorWhite,				//	White (2)

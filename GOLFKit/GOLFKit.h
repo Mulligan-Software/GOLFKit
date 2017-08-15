@@ -38,7 +38,7 @@ FOUNDATION_EXPORT const unsigned char GOLFKitVersionString[];
 
 //	iOS and Watch only
 #if TARGET_OS_IOS || TARGET_OS_WATCH
-//	#import <GOLFKit/GOLFiOSandWatchh>
+//	#import <GOLFKit/GOLFiOSandWatch.h>
 #endif
 
 //	iOS only
