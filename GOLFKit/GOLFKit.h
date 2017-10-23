@@ -7,7 +7,7 @@
 //
 //	Umbrella header for the GolfKit framework
 
-@import Foundation
+@import Foundation;
 
 //! Project version number for GOLFKit.
 FOUNDATION_EXPORT double GOLFKitVersionNumber;

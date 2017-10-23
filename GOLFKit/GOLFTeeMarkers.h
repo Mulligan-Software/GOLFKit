@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GOLFColors.h"
 
 NSArray * GOLFStandardTeeColorArray(void);
 //	returns an array of tee color dictionaries, containing:
@@ -23,3 +24,5 @@ NSArray * GOLFStandardTeeColorArray(void);
 //
 //	You are generally not required to keep a copy of this array, as a static version is built when first needed.  If you request
 //	the array, you will receive a copy of it that you are free to discard after use.
+
+GOLFAppColor * GOLFTeeColorFromTeeColorIndex(GOLFTeeColorIndex colorIndex);

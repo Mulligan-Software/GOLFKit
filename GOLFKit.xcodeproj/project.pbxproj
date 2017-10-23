@@ -50,6 +50,10 @@
 		29A338091DCE81D70074A064 /* GOLFTeeMarkers.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A338061DCE81D70074A064 /* GOLFTeeMarkers.h */; };
 		29A3380A1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A338071DCE81D70074A064 /* GOLFTeeMarkers.m */; };
 		29A3380B1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A338071DCE81D70074A064 /* GOLFTeeMarkers.m */; };
+		29C0E38C1F9E90580009E23C /* NSNumber+GOLFExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 29C0E38A1F9E90580009E23C /* NSNumber+GOLFExtensions.h */; };
+		29C0E38D1F9E90580009E23C /* NSNumber+GOLFExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 29C0E38A1F9E90580009E23C /* NSNumber+GOLFExtensions.h */; };
+		29C0E38E1F9E90580009E23C /* NSNumber+GOLFExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C0E38B1F9E90580009E23C /* NSNumber+GOLFExtensions.m */; };
+		29C0E38F1F9E90580009E23C /* NSNumber+GOLFExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C0E38B1F9E90580009E23C /* NSNumber+GOLFExtensions.m */; };
 		29E888BB1DCE5B0000C4A63A /* GOLFKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E888BA1DCE5B0000C4A63A /* GOLFKitTests.m */; };
 		29E888BD1DCE5B0000C4A63A /* GOLFKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 29E888AF1DCE5B0000C4A63A /* GOLFKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29E888C81DCE5E6400C4A63A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29E888CA1DCE5E6400C4A63A /* Localizable.strings */; };
@@ -105,6 +109,8 @@
 		29A338031DCE76E30074A064 /* TeeMarkers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = TeeMarkers.xcassets; sourceTree = "<group>"; };
 		29A338061DCE81D70074A064 /* GOLFTeeMarkers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOLFTeeMarkers.h; sourceTree = "<group>"; };
 		29A338071DCE81D70074A064 /* GOLFTeeMarkers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLFTeeMarkers.m; sourceTree = "<group>"; };
+		29C0E38A1F9E90580009E23C /* NSNumber+GOLFExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+GOLFExtensions.h"; sourceTree = "<group>"; };
+		29C0E38B1F9E90580009E23C /* NSNumber+GOLFExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+GOLFExtensions.m"; sourceTree = "<group>"; };
 		29E888AC1DCE5B0000C4A63A /* GOLFKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GOLFKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29E888AF1DCE5B0000C4A63A /* GOLFKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GOLFKit.h; path = GOLFKit/GOLFKit.h; sourceTree = "<group>"; };
 		29E888B01DCE5B0000C4A63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -189,6 +195,15 @@
 			name = "TeeMarker icns";
 			sourceTree = "<group>";
 		};
+		29C0E3901F9E921F0009E23C /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				29C0E38A1F9E90580009E23C /* NSNumber+GOLFExtensions.h */,
+				29C0E38B1F9E90580009E23C /* NSNumber+GOLFExtensions.m */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
 		29E888A21DCE5B0000C4A63A = {
 			isa = PBXGroup;
 			children = (
@@ -233,6 +248,7 @@
 		29E888D11DCE652700C4A63A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				29C0E3901F9E921F0009E23C /* Categories */,
 				29E888D21DCE654800C4A63A /* UI */,
 				29E888D31DCE655400C4A63A /* Localization */,
 			);
@@ -281,6 +297,7 @@
 				29A338081DCE81D70074A064 /* GOLFTeeMarkers.h in Headers */,
 				294140631DDB582600CC9605 /* GOLFKitTypes.h in Headers */,
 				29E888CF1DCE611600C4A63A /* GOLFColors.h in Headers */,
+				29C0E38C1F9E90580009E23C /* NSNumber+GOLFExtensions.h in Headers */,
 				29E888BD1DCE5B0000C4A63A /* GOLFKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -292,6 +309,7 @@
 				29A338091DCE81D70074A064 /* GOLFTeeMarkers.h in Headers */,
 				294140641DDB582600CC9605 /* GOLFKitTypes.h in Headers */,
 				29A338001DCE74570074A064 /* GOLFColors.h in Headers */,
+				29C0E38D1F9E90580009E23C /* NSNumber+GOLFExtensions.h in Headers */,
 				29A338021DCE74600074A064 /* GOLFKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -359,7 +377,7 @@
 		29E888A31DCE5B0000C4A63A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0810;
+				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = "Mulligan Software";
 				TargetAttributes = {
 					29E888AB1DCE5B0000C4A63A = {
@@ -462,6 +480,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29A3380A1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */,
+				29C0E38E1F9E90580009E23C /* NSNumber+GOLFExtensions.m in Sources */,
 				29E888D01DCE611600C4A63A /* GOLFColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -479,6 +498,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29A3380B1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */,
+				29C0E38F1F9E90580009E23C /* NSNumber+GOLFExtensions.m in Sources */,
 				29A338011DCE745B0074A064 /* GOLFColors.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,6 +556,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -559,8 +580,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -588,6 +609,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
@@ -605,8 +627,8 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VERSIONING_SYSTEM = "apple-generic";

@@ -8,6 +8,7 @@
 
 #import "GOLFTeeMarkers.h"
 #import "GOLFColors.h"
+#import "NSNumber+GOLFExtensions.h"
 
 //	Private Prototypes
 
@@ -265,6 +266,23 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		GOLFStandardColorArray = [NSArray arrayWithArray:workingList];
 	}
 	return [GOLFStandardColorArray copy];
+}
+
+//=================================================================
+//	GOLFTeeColorFromTeeColorIndex
+//=================================================================
+GOLFAppColor * GOLFTeeColorFromTeeColorIndex(GOLFTeeColorIndex colorIndex) {
+	if ((colorIndex != kNotATeeColorIndex) && (colorIndex >= 0) && (colorIndex < GOLFTeeColorCustom)) {
+		for (NSDictionary *colorDict in GOLFStandardTeeColorArray()) {
+			if ([[colorDict objectForKey:@"teeColorIndex"] teeColorIndexValue] == colorIndex)
+				return [colorDict objectForKey:@"teeColor"];
+		}
+	}
+#if TARGET_OS_IOS || TARGET_OS_WATCH
+	return [GOLFAppColor blackColor];
+#elif TARGET_OS_MAC
+	return [[GOLFAppColor blackColor] colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+#endif
 }
 
 
