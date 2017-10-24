@@ -9,15 +9,10 @@
 
 @import Foundation;
 
-//! Project version number for GOLFKit.
-FOUNDATION_EXPORT double GOLFKitVersionNumber;
-
-//! Project version string for GOLFKit.
-FOUNDATION_EXPORT const unsigned char GOLFKitVersionString[];
-
 // In this header, you should import all the public headers of your framework using statements like #import <GolfKit/PublicHeader.h>
 
 //	Models
+#import <GOLFKit/GOLFKitTypes.h>
 //	#import <GOLFKit/GOLFClubs.h>
 
 //	Documents (Scoring, Standings, etc.)
@@ -30,6 +25,7 @@ FOUNDATION_EXPORT const unsigned char GOLFKitVersionString[];
 
 //	User Interface (Colors, text, localization, etc.)
 #import <GOLFKit/GOLFColors.h>
+#import <GOLFKit/GOLFTeeMarkers.h>
 
 //	Custom Drawing (not available on the Watch)
 #if !TARGET_OS_WATCH

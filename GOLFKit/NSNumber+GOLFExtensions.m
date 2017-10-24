@@ -7,6 +7,7 @@
 //
 
 #import "NSNumber+GOLFExtensions.h"
+#import "GOLFKitTypes.h"
 
 @implementation NSNumber (GOLFExtensions)
 

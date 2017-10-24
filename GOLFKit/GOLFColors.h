@@ -13,13 +13,13 @@
 
 @import UIKit;
 
-#define GOLFAppColor UIColor
+#define GOLFColor UIColor
 
 #elif TARGET_OS_MAC
 
 @import Cocoa;
 
-#define GOLFAppColor NSColor
+#define GOLFColor NSColor
 
 #endif
 
@@ -30,7 +30,7 @@
 #define	numberOfCandidateTeeColors	23
 #define kNotATeeColorIndex -1
 
-typedef NS_ENUM(NSInteger, GOLFTeeColorIndex) {
+typedef NS_ENUM(NSInteger, teeColorIndexEnumeration) {
 	GOLFTeeColorBlack = 0,			//	Black (0)
 	GOLFTeeColorBlue,				//	Blue (1)
 	GOLFTeeColorWhite,				//	White (2)
@@ -64,7 +64,7 @@ typedef NS_ENUM(NSInteger, GOLFTeeColorIndex) {
 };
 
 
-@interface GOLFAppColor (GOLFColorCategories)
+@interface GOLFColor (GOLFColorCategories)
 
 + (id)GOLFFactoryEagleScoreColor;
 + (id)GOLFFactoryBirdieScoreColor;

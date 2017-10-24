@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "GOLFKitTypes.h"
 #import "GOLFColors.h"
 
 NSArray * GOLFStandardTeeColorArray(void);
@@ -20,9 +21,19 @@ NSArray * GOLFStandardTeeColorArray(void);
 //	teeImageName		NSString name of the tee image (.PNG), like "tee_marker_blueandwhite" (excluding any size or scale identification)
 //	isComboColor		NSNumber optional boolean TRUE if entry represents a color combination (two colors)
 //	firstColorIndex		NSNumber teeColorIndex of one of the combination's solid colors (when isComboColor exists and is TRUE)
-//	secondColorIndex	NSNumber steeColorIndex of the other of the combination's solid colors (when isComboColor exists and is TRUE)
+//	secondColorIndex	NSNumber teeColorIndex of the other of the combination's solid colors (when isComboColor exists and is TRUE)
 //
 //	You are generally not required to keep a copy of this array, as a static version is built when first needed.  If you request
 //	the array, you will receive a copy of it that you are free to discard after use.
 
-GOLFAppColor * GOLFTeeColorFromTeeColorIndex(GOLFTeeColorIndex colorIndex);
+GOLFColor * GOLFTeeColorFromTeeColorIndex(GOLFTeeColorIndex proposedColorIndex);
+//	Returns the NSColor (macOS) or UIColor (iOS) that best represents the tee indicated by the proposedColorIndex
+//	Returns a best-visual color for combo tees, a black color if there is no tee identified by the proposedColorIndex
+
+GOLFTeeColorIndex GOLFTeeColorIndexFromTeeColor(GOLFColor *teeColor);
+//	Returns a GOLFTeeColorIndex that identifies a tee whose color matches teeColor (exactly as predefined)
+//	Returns GOLFTeeColorCustom if no exact match is found, GOLFTeeColorUnknown if no teeColor given.
+
+NSString * GOLFTeeColorNameFromTeeColorIndex(GOLFTeeColorIndex proposedColorIndex);
+//	Returns the localized name of the tee whose colorIndex matches proposedColorIndex, like "Blue", "Rouge et Blanc", etc.
+//	Can also return "Custom", "Unknown", "Add" and "All" for special cases

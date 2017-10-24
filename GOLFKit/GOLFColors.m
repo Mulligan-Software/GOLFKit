@@ -10,42 +10,42 @@
 
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
-#define GOLFAppColor UIColor
+#define GOLFColor UIColor
 
 #elif TARGET_OS_MAC
 
-#define GOLFAppColor NSColor
+#define GOLFColor NSColor
 
 #endif
 
 
-//	#undef GOLFAppColor
+//	#undef GOLFColor
 
 
-@implementation GOLFAppColor (GOLFColorCategories)
+@implementation GOLFColor (GOLFColorCategories)
 
 + (id)GOLFFactoryEagleScoreColor {
-	return [GOLFAppColor purpleColor];
+	return [GOLFColor purpleColor];
 }
 
 + (id)GOLFFactoryBirdieScoreColor {
-	return [GOLFAppColor redColor];
+	return [GOLFColor redColor];
 }
 
 + (id)GOLFFactoryParScoreColor {
-	return [GOLFAppColor blueColor];
+	return [GOLFColor blueColor];
 }
 
 + (id)GOLFFactoryBogeyScoreColor {
-	return [GOLFAppColor blackColor];
+	return [GOLFColor blackColor];
 }
 
 + (id)GOLFFactoryUnderParScoreColor {
-	return [GOLFAppColor GOLFFactoryBirdieScoreColor];
+	return [GOLFColor GOLFFactoryBirdieScoreColor];
 }
 
 + (id)GOLFFactoryOverParScoreColor {
-	return [GOLFAppColor GOLFFactoryBogeyScoreColor];
+	return [GOLFColor GOLFFactoryBogeyScoreColor];
 }
 
 @end

@@ -12,7 +12,7 @@
 
 #endif /* GOLFKitTypes_h */
 
-typedef int GOLFTeeColorIndex;
+typedef NSInteger GOLFTeeColorIndex;
 typedef int GOLFTeeSlopeRating;
 typedef float GOLFTeeCourseRating;
 
