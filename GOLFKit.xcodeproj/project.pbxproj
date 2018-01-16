@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2900E04E1F9FA8B900C19542 /* TeeMarkerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2900E04D1F9FA8B900C19542 /* TeeMarkerTests.m */; };
 		2930CDA31DCFEC4F0089491D /* LittleTeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2930CDA21DCFEC4F0089491D /* LittleTeeMarkers.xcassets */; };
 		2930CDA41DCFEC4F0089491D /* LittleTeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2930CDA21DCFEC4F0089491D /* LittleTeeMarkers.xcassets */; };
 		2941402D1DDA02D700CC9605 /* TeeMarkerAdd.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2941402C1DDA02D700CC9605 /* TeeMarkerAdd.icns */; };
@@ -36,11 +37,11 @@
 		2941405F1DDA03E300CC9605 /* TeeMarkerWhiteAndGold.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140451DDA03E300CC9605 /* TeeMarkerWhiteAndGold.icns */; };
 		294140601DDA03E300CC9605 /* TeeMarkerYellow.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140461DDA03E300CC9605 /* TeeMarkerYellow.icns */; };
 		294140611DDA03E300CC9605 /* TeeMarkerYellowAndBlue.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140471DDA03E300CC9605 /* TeeMarkerYellowAndBlue.icns */; };
-		294140631DDB582600CC9605 /* GOLFKitTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 294140621DDB582600CC9605 /* GOLFKitTypes.h */; };
-		294140641DDB582600CC9605 /* GOLFKitTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 294140621DDB582600CC9605 /* GOLFKitTypes.h */; };
+		294140631DDB582600CC9605 /* GOLFKitTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 294140621DDB582600CC9605 /* GOLFKitTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		294140641DDB582600CC9605 /* GOLFKitTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 294140621DDB582600CC9605 /* GOLFKitTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		296F4DDF1F3A40A100781C46 /* TeeMarkerAzure.icns in Resources */ = {isa = PBXBuildFile; fileRef = 296F4DDE1F3A40A100781C46 /* TeeMarkerAzure.icns */; };
 		296F4DE21F3A497000781C46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 296F4DE41F3A497000781C46 /* InfoPlist.strings */; };
-		29A337FF1DCE74440074A064 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29E888CA1DCE5E6400C4A63A /* Localizable.strings */; };
+		29A337FF1DCE74440074A064 /* GOLFKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29E888CA1DCE5E6400C4A63A /* GOLFKit.strings */; };
 		29A338001DCE74570074A064 /* GOLFColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 29E888CD1DCE611600C4A63A /* GOLFColors.h */; };
 		29A338011DCE745B0074A064 /* GOLFColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E888CE1DCE611600C4A63A /* GOLFColors.m */; };
 		29A338021DCE74600074A064 /* GOLFKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 29E888AF1DCE5B0000C4A63A /* GOLFKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -56,7 +57,7 @@
 		29C0E38F1F9E90580009E23C /* NSNumber+GOLFExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C0E38B1F9E90580009E23C /* NSNumber+GOLFExtensions.m */; };
 		29E888BB1DCE5B0000C4A63A /* GOLFKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E888BA1DCE5B0000C4A63A /* GOLFKitTests.m */; };
 		29E888BD1DCE5B0000C4A63A /* GOLFKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 29E888AF1DCE5B0000C4A63A /* GOLFKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29E888C81DCE5E6400C4A63A /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29E888CA1DCE5E6400C4A63A /* Localizable.strings */; };
+		29E888C81DCE5E6400C4A63A /* GOLFKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29E888CA1DCE5E6400C4A63A /* GOLFKit.strings */; };
 		29E888CF1DCE611600C4A63A /* GOLFColors.h in Headers */ = {isa = PBXBuildFile; fileRef = 29E888CD1DCE611600C4A63A /* GOLFColors.h */; };
 		29E888D01DCE611600C4A63A /* GOLFColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E888CE1DCE611600C4A63A /* GOLFColors.m */; };
 		29E888F41DCE6BBC00C4A63A /* GOLFKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 29E888AC1DCE5B0000C4A63A /* GOLFKit.framework */; };
@@ -73,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2900E04D1F9FA8B900C19542 /* TeeMarkerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TeeMarkerTests.m; sourceTree = "<group>"; };
 		2930CDA21DCFEC4F0089491D /* LittleTeeMarkers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LittleTeeMarkers.xcassets; sourceTree = "<group>"; };
 		2941402C1DDA02D700CC9605 /* TeeMarkerAdd.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerAdd.icns; path = "Support/TeeMarker icns/TeeMarkerAdd.icns"; sourceTree = SOURCE_ROOT; };
 		2941402E1DDA03E300CC9605 /* TeeMarkerAll.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerAll.icns; path = "Support/TeeMarker icns/TeeMarkerAll.icns"; sourceTree = SOURCE_ROOT; };
@@ -112,14 +114,14 @@
 		29C0E38A1F9E90580009E23C /* NSNumber+GOLFExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSNumber+GOLFExtensions.h"; sourceTree = "<group>"; };
 		29C0E38B1F9E90580009E23C /* NSNumber+GOLFExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSNumber+GOLFExtensions.m"; sourceTree = "<group>"; };
 		29E888AC1DCE5B0000C4A63A /* GOLFKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GOLFKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		29E888AF1DCE5B0000C4A63A /* GOLFKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GOLFKit.h; path = GOLFKit/GOLFKit.h; sourceTree = "<group>"; };
+		29E888AF1DCE5B0000C4A63A /* GOLFKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GOLFKit.h; path = GOLFKit/GOLFKit/GOLFKit.h; sourceTree = "<group>"; };
 		29E888B01DCE5B0000C4A63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		29E888B51DCE5B0000C4A63A /* GOLFKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GOLFKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29E888BA1DCE5B0000C4A63A /* GOLFKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOLFKitTests.m; sourceTree = "<group>"; };
 		29E888BC1DCE5B0000C4A63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		29E888C91DCE5E6400C4A63A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		29E888CB1DCE5EA300C4A63A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/Localizable.strings; sourceTree = "<group>"; };
-		29E888CC1DCE5EBA00C4A63A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/Localizable.strings; sourceTree = "<group>"; };
+		29E888C91DCE5E6400C4A63A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GOLFKit.strings; sourceTree = "<group>"; };
+		29E888CB1DCE5EA300C4A63A /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/GOLFKit.strings; sourceTree = "<group>"; };
+		29E888CC1DCE5EBA00C4A63A /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/GOLFKit.strings; sourceTree = "<group>"; };
 		29E888CD1DCE611600C4A63A /* GOLFColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOLFColors.h; sourceTree = "<group>"; };
 		29E888CE1DCE611600C4A63A /* GOLFColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLFColors.m; sourceTree = "<group>"; };
 		29E888D91DCE65E000C4A63A /* GOLFKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GOLFKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				29E888BA1DCE5B0000C4A63A /* GOLFKitTests.m */,
+				2900E04D1F9FA8B900C19542 /* TeeMarkerTests.m */,
 				29E888BC1DCE5B0000C4A63A /* Info.plist */,
 			);
 			path = GOLFKitTests;
@@ -272,7 +275,7 @@
 		29E888D31DCE655400C4A63A /* Localization */ = {
 			isa = PBXGroup;
 			children = (
-				29E888CA1DCE5E6400C4A63A /* Localizable.strings */,
+				29E888CA1DCE5E6400C4A63A /* GOLFKit.strings */,
 			);
 			name = Localization;
 			sourceTree = "<group>";
@@ -423,7 +426,7 @@
 				2930CDA31DCFEC4F0089491D /* LittleTeeMarkers.xcassets in Resources */,
 				296F4DE21F3A497000781C46 /* InfoPlist.strings in Resources */,
 				29A338041DCE76E30074A064 /* TeeMarkers.xcassets in Resources */,
-				29E888C81DCE5E6400C4A63A /* Localizable.strings in Resources */,
+				29E888C81DCE5E6400C4A63A /* GOLFKit.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -452,7 +455,7 @@
 				29A338051DCE76E30074A064 /* TeeMarkers.xcassets in Resources */,
 				294140601DDA03E300CC9605 /* TeeMarkerYellow.icns in Resources */,
 				2941405F1DDA03E300CC9605 /* TeeMarkerWhiteAndGold.icns in Resources */,
-				29A337FF1DCE74440074A064 /* Localizable.strings in Resources */,
+				29A337FF1DCE74440074A064 /* GOLFKit.strings in Resources */,
 				294140541DDA03E300CC9605 /* TeeMarkerPink.icns in Resources */,
 				294140571DDA03E300CC9605 /* TeeMarkerRed.icns in Resources */,
 				294140481DDA03E300CC9605 /* TeeMarkerAll.icns in Resources */,
@@ -489,6 +492,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2900E04E1F9FA8B900C19542 /* TeeMarkerTests.m in Sources */,
 				29E888BB1DCE5B0000C4A63A /* GOLFKitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -524,14 +528,14 @@
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
-		29E888CA1DCE5E6400C4A63A /* Localizable.strings */ = {
+		29E888CA1DCE5E6400C4A63A /* GOLFKit.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				29E888C91DCE5E6400C4A63A /* en */,
 				29E888CB1DCE5EA300C4A63A /* fr */,
 				29E888CC1DCE5EBA00C4A63A /* es */,
 			);
-			name = Localizable.strings;
+			name = GOLFKit.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

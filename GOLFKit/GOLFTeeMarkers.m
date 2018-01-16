@@ -39,7 +39,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		NSDictionary *colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorBlack], @"teeColorIndex",
 				[GOLFColor blackColor], @"teeColor",
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_BLACK", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_BLACK", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerBlack", @"teeIconName",
 				@"tee_marker_black", @"teeImageName", nil];
 		[workingList addObject:colorDict];
@@ -48,7 +48,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorBlue], @"teeColorIndex",
 				[GOLFColor blueColor], @"teeColor",
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_BLUE", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_BLUE", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerBlue", @"teeIconName",
 				@"tee_marker_blue", @"teeImageName", nil];
 		[workingList addObject:colorDict];
@@ -57,7 +57,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorWhite], @"teeColorIndex",
 				[GOLFColor whiteColor], @"teeColor",
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_WHITE", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_WHITE", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerWhite", @"teeIconName",
 				@"tee_marker_white", @"teeImageName", nil];
 		[workingList addObject:colorDict];
@@ -66,7 +66,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorGreen], @"teeColorIndex",
 				[GOLFColor colorWithRed:0.0 green:(0.6) blue:0.0 alpha:1.0], @"teeColor",
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_GREEN", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_GREEN", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerGreen", @"teeIconName",
 				@"tee_marker_green", @"teeImageName", nil];
 		[workingList addObject:colorDict];
@@ -75,7 +75,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorRed], @"teeColorIndex",
 				[GOLFColor redColor], @"teeColor",
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_RED", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_RED", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerRed", @"teeIconName",
 				@"tee_marker_red", @"teeImageName", nil];
 		[workingList addObject:colorDict];
@@ -84,7 +84,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorYellow], @"teeColorIndex",
 				[GOLFColor yellowColor], @"teeColor",
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_YELLOW", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_YELLOW", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerYellow", @"teeIconName",
 				@"tee_marker_yellow", @"teeImageName", nil];
 		[workingList addObject:colorDict];
@@ -93,7 +93,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorBrown], @"teeColorIndex",
 				[GOLFColor brownColor], @"teeColor",
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_BROWN", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_BROWN", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerBrown", @"teeIconName",
 				@"tee_marker_brown", @"teeImageName", nil];
 		[workingList addObject:colorDict];
@@ -102,7 +102,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorGold], @"teeColorIndex",
 				[GOLFColor colorWithRed:1.0 green:(0.6) blue:0.0 alpha:1.0], @"teeColor",
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_GOLDE", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_GOLD", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerGold", @"teeIconName",
 				@"tee_marker_gold", @"teeImageName", nil];
 		[workingList addObject:colorDict];
@@ -111,7 +111,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorSilver], @"teeColorIndex",
 				[GOLFColor colorWithRed:(0.6) green:(0.6) blue:(0.8) alpha:1.0], @"teeColor",
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_SILVER", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_SILVER", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerSilver", @"teeIconName",
 				@"tee_marker_silver", @"teeImageName", nil];
 		[workingList addObject:colorDict];
@@ -120,7 +120,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorPurple], @"teeColorIndex",
 				[GOLFColor purpleColor], @"teeColor",
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_PURPLE", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_PURPLE", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerPurple", @"teeIconName",
 				@"tee_marker_purple", @"teeImageName", nil];
 		[workingList addObject:colorDict];
@@ -129,7 +129,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorOrange], @"teeColorIndex",
 				[GOLFColor orangeColor], @"teeColor",
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_ORANGE", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_ORANGE", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerOrange", @"teeIconName",
 				@"tee_marker_orange", @"teeImageName", nil];
 		[workingList addObject:colorDict];
@@ -138,7 +138,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorMaroon], @"teeColorIndex",
 				[GOLFColor colorWithRed:0.5 green:0 blue:0.25 alpha:1.0], @"teeColor",
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_MAROON", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_MAROON", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerMaroon", @"teeIconName",
 				@"tee_marker_maroon", @"teeImageName", nil];
 		[workingList addObject:colorDict];
@@ -147,7 +147,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorTan], @"teeColorIndex",
 				[GOLFColor colorWithRed:0.792 green:0.675 blue:0.592 alpha:1.0], @"teeColor",
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_TAN", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_TAN", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerTan", @"teeIconName",
 				@"tee_marker_tan", @"teeImageName", nil];
 		[workingList addObject:colorDict];
@@ -156,7 +156,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorPink], @"teeColorIndex",
 				[GOLFColor colorWithRed:1.0 green:0.753 blue:0.796 alpha:1.0], @"teeColor",
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_PINK", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_PINK", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerPink", @"teeIconName",
 				@"tee_marker_pink", @"teeImageName", nil];
 		[workingList addObject:colorDict];
@@ -165,7 +165,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorTeal], @"teeColorIndex",
 				[GOLFColor colorWithRed:0 green:0.502 blue:0.502 alpha:1.0], @"teeColor",
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_TEAL", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_TEAL", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerTeal", @"teeIconName",
 				@"tee_marker_teal", @"teeImageName", nil];
 		[workingList addObject:colorDict];
@@ -174,7 +174,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorAzure], @"teeColorIndex",
 				[GOLFColor colorWithRed:0 green:0.875 blue:1.0 alpha:1.0], @"teeColor",
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_AZURE", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_AZURE", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerAzure", @"teeIconName",
 				@"tee_marker_azure", @"teeImageName", nil];
 		[workingList addObject:colorDict];
@@ -183,7 +183,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorBlueAndWhite], @"teeColorIndex",
 				[GOLFColor colorWithRed:0 green:0.06 blue:1.0 alpha:1.0], @"teeColor",	//	Not quite blue
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_BLUE_AND_WHITE", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_BLUE_AND_WHITE", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerBlueAndWhite", @"teeIconName",
 				@"tee_marker_blueandwhite", @"teeImageName",
 				[NSNumber numberWithBool:YES], @"isComboColor",
@@ -195,7 +195,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorRedAndYellow], @"teeColorIndex",
 				[GOLFColor colorWithRed:1.0 green:0 blue:0.02 alpha:1.0], @"teeColor",	//	Not quite red
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_RED_AND_YELLOW", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_RED_AND_YELLOW", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerRedAndYellow", @"teeIconName",
 				@"tee_marker_redandyellow", @"teeImageName",
 				[NSNumber numberWithBool:YES], @"isComboColor",
@@ -207,7 +207,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorYellowAndBlue], @"teeColorIndex",
 				[GOLFColor colorWithRed:1.0 green:1.0 blue:0.02 alpha:1.0], @"teeColor",	//	Not quite yellow
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_YELLOW_AND_BLUE", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_YELLOW_AND_BLUE", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerYellowAndBlue", @"teeIconName",
 				@"tee_marker_yellowandblue", @"teeImageName",
 				[NSNumber numberWithBool:YES], @"isComboColor",
@@ -219,7 +219,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorRedAndWhite], @"teeColorIndex",
 				[GOLFColor colorWithRed:1.0 green:0.02 blue:0.02 alpha:1.0], @"teeColor",	//	Not quite red
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_RED_AND_WHITE", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_RED_AND_WHITE", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerRedAndWhite", @"teeIconName",
 				@"tee_marker_redandwhite", @"teeImageName",
 				[NSNumber numberWithBool:YES], @"isComboColor",
@@ -231,7 +231,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorBlackAndGold], @"teeColorIndex",
 				[GOLFColor colorWithRed:0.1 green:0.06 blue:0.0 alpha:1.0], @"teeColor",	//	Dark gold
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_BLACK_AND_GOLD", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_BLACK_AND_GOLD", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerBlackAndGold", @"teeIconName",
 				@"tee_marker_blackandgold", @"teeImageName",
 				[NSNumber numberWithBool:YES], @"isComboColor",
@@ -243,7 +243,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorWhiteAndGold], @"teeColorIndex",
 				[GOLFColor colorWithRed:1.0 green:0.61 blue:0.01 alpha:1.0], @"teeColor",	//	Light gold
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_WHITE_AND_GOLD", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_WHITE_AND_GOLD", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerWhiteAndGold", @"teeIconName",
 				@"tee_marker_whiteandgold", @"teeImageName",
 				[NSNumber numberWithBool:YES], @"isComboColor",
@@ -255,7 +255,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorBlackAndWhite], @"teeColorIndex",
 				[GOLFColor darkGrayColor], @"teeColor",
-				NSLocalizedString(@"GOLF_TEE_COLOR_NAME_BLACK_AND_WHITE", @""), @"teeColorName",
+				NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_BLACK_AND_WHITE", @"GOLFKit", @""), @"teeColorName",
 				@"TeeMarkerBlackAndWhite", @"teeIconName",
 				@"tee_marker_blackandwhite", @"teeImageName",
 				[NSNumber numberWithBool:YES], @"isComboColor",
@@ -290,22 +290,36 @@ GOLFColor * GOLFTeeColorFromTeeColorIndex(GOLFTeeColorIndex proposedColorIndex) 
 //=================================================================
 GOLFTeeColorIndex GOLFTeeColorIndexFromTeeColor(GOLFColor *teeColor) {
 	if (teeColor) {
+	CGFloat redComponent;
+	CGFloat greenComponent;
+	CGFloat blueComponent;
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 		GOLFColor *rgb = teeColor;
+		[rgb getRed:&redComponent green:&greenComponent blue:&blueComponent alpha:nil];
 #elif TARGET_OS_MAC
 		GOLFColor *rgb = [teeColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+		redComponent = [rgb redComponent];
+		greenComponent = [rgb greenComponent];
+		blueComponent = [rgb blueComponent];
 #endif
 
 		for (NSDictionary *colorDict in GOLFStandardTeeColorArray()) {
 			GOLFTeeColorIndex testColorIndex = [[colorDict objectForKey:@"teeColorIndex"] teeColorIndexValue];
 			if (testColorIndex < GOLFTeeColorCustom) {
 				//	We'll try to find a matching color in the numerically identifiable colors…
+				CGFloat redTestComponent;
+				CGFloat greenTestComponent;
+				CGFloat blueTestComponent;
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 				GOLFColor *testColor = [colorDict objectForKey:@"teeColor"];
+				[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
 #elif TARGET_OS_MAC
 				GOLFColor *testColor = [[colorDict objectForKey:@"teeColor"] colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+				redTestComponent = [testColor redComponent];
+				greenTestComponent = [testColor greenComponent];
+				blueTestComponent = [testColor blueComponent];
 #endif
-				if (([testColor redComponent] == [rgb redComponent]) && ([testColor greenComponent] == [rgb greenComponent]) && ([testColor blueComponent] == [rgb blueComponent])) {
+				if ((redTestComponent == redComponent) && (greenTestComponent == greenComponent) && (blueTestComponent == blueComponent)) {
 					return testColorIndex;
 				}
 			}
@@ -320,20 +334,20 @@ GOLFTeeColorIndex GOLFTeeColorIndexFromTeeColor(GOLFColor *teeColor) {
 //=================================================================
 NSString * GOLFTeeColorNameFromTeeColorIndex(GOLFTeeColorIndex proposedColorIndex) {
 	if ((proposedColorIndex < 0) || (proposedColorIndex == kNotATeeColorIndex) || (proposedColorIndex == GOLFTeeColorUnknown))
-		return NSLocalizedString(@"GOLF_TEE_COLOR_NAME_UNKNOWN", @"");
+		return NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_UNKNOWN", @"GOLFKit", @"");
 	if (proposedColorIndex == GOLFTeeColorCustom)
-		return NSLocalizedString(@"GOLF_TEE_COLOR_NAME_CUSTOM", @"");
+		return NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_CUSTOM", @"GOLFKit", @"");
 	if (proposedColorIndex == GOLFTeeColorAdd)
-		return NSLocalizedString(@"GOLF_TEE_COLOR_NAME_ADD", @"");
+		return NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_ADD", @"GOLFKit", @"");
 	if (proposedColorIndex == GOLFTeeColorAll)
-		return NSLocalizedString(@"GOLF_TEE_COLOR_NAME_ALL", @"");
+		return NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_ALL", @"GOLFKit", @"");
 
 	for (NSDictionary *colorDict in GOLFStandardTeeColorArray()) {
 		if ([[colorDict objectForKey:@"teeColorIndex"] teeColorIndexValue] == proposedColorIndex)
 			return [colorDict objectForKey:@"teeColorName"];	//	The GOLFStandardTeeColorArray is localized!
 	}
 
-	return NSLocalizedString(@"GOLF_TEE_COLOR_NAME_UNKNOWN", @"");
+	return NSLocalizedStringFromTable(@"GOLF_TEE_COLOR_NAME_UNKNOWN", @"GOLFKit", @"");
 }
 
 
