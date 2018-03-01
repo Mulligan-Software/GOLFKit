@@ -8,7 +8,7 @@
 
 #import "GOLFKit.h"
 
-@interface NSNumber (MULExtensions)
+@interface NSNumber (GOLFExtensions)
 
 + (id)numberWithTeeColorIndex:(GOLFTeeColorIndex)teeColorIndex;
 - (GOLFTeeColorIndex)teeColorIndexValue;

@@ -15,6 +15,9 @@
 #import <GOLFKit/GOLFKitTypes.h>
 //	#import <GOLFKit/GOLFClubs.h>
 
+//	Categories
+#import <GOLFKit/NSNumber+GOLFExtensions.h>
+
 //	Documents (Scoring, Standings, etc.)
 #if !TARGET_OS_WATCH
 //	#import <GOLFKit/GOLFScoringDocument.h>

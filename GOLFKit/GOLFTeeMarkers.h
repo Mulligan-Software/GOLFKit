@@ -10,6 +10,16 @@
 #import "GOLFKitTypes.h"
 #import "GOLFColors.h"
 
+#if TARGET_OS_IOS || TARGET_OS_WATCH
+
+#define GOLFTeeImage UIImage
+
+#elif TARGET_OS_MAC
+
+#define GOLFTeeImage NSImage
+
+#endif
+
 NSArray * GOLFStandardTeeColorArray(void);
 //	returns an array of tee color dictionaries, containing:
 //	key					data
@@ -37,3 +47,13 @@ GOLFTeeColorIndex GOLFTeeColorIndexFromTeeColor(GOLFColor *teeColor);
 NSString * GOLFTeeColorNameFromTeeColorIndex(GOLFTeeColorIndex proposedColorIndex);
 //	Returns the localized name of the tee whose colorIndex matches proposedColorIndex, like "Blue", "Rouge et Blanc", etc.
 //	Can also return "Custom", "Unknown", "Add" and "All" for special cases
+
+GOLFTeeImage * GOLFTeeMarkerImageFromTeeColorIndex(GOLFTeeColorIndex teeColorIndex);
+//	Returns a standard (32x32 pt.) tee marker image associated with the teeColorIndex provided
+//	When teeColorIndex is GOLFTeeColorAdd, returns the special "Add" tee icon
+//	If teeColorIndex is GOLFTeeColorCustom or not any of the above, returns the special "Generic" tee icon
+
+GOLFTeeImage * GOLFLittleTeeMarkerImageFromTeeColorIndex(GOLFTeeColorIndex teeColorIndex);
+//	Returns a small (16x16 pt.) tee marker image associated with the teeColorIndex provided
+//	When teeColorIndex is GOLFTeeColorAdd, returns the special "Add" tee icon
+//	If teeColorIndex is GOLFTeeColorCustom or not any of the above, returns the special "Generic" tee icon

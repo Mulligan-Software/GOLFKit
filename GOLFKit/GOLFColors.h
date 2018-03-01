@@ -7,7 +7,7 @@
 //
 
 @import Foundation;
-
+#import "GOLFKitTypes.h"
 
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
@@ -27,10 +27,10 @@
 //	#undef GOLFAppColor
 
 //	Misc constants
-#define	numberOfCandidateTeeColors	23
+#define	GOLFNumberOfCandidateTeeColors	23
 #define kNotATeeColorIndex -1
 
-typedef NS_ENUM(NSInteger, teeColorIndexEnumeration) {
+typedef NS_ENUM(GOLFTeeColorIndex, teeColorIndexEnumeration) {
 	GOLFTeeColorBlack = 0,				//	Black (0)
 	GOLFTeeColorFirstSolid = GOLFTeeColorBlack,
 	GOLFTeeColorBlue = 1,				//	Blue (1)
