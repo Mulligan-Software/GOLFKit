@@ -31,6 +31,8 @@
 "GOLF_TEE_COLOR_NAME_WHITE_AND_GOLD" = "weiß und gold";
 "GOLF_TEE_COLOR_NAME_BLACK_AND_WHITE" = "schwarz und weiß";
 "GOLF_TEE_COLOR_NAME_CUSTOM" = "angepasste";
+"GOLF_TEE_COLOR_NAME_USA" = "USA.";
+"GOLF_TEE_COLOR_NAME_EU" = "EU.";
 "GOLF_TEE_COLOR_NAME_UNKNOWN" = "unbekannte";
-"GOLF_TEE_COLOR_NAME_ADD" = "erg.";	/* ergänzen (add, add to, amend) */
+"GOLF_TEE_COLOR_NAME_ADD" = "ergänzen";
 "GOLF_TEE_COLOR_NAME_ALL" = "alle";
