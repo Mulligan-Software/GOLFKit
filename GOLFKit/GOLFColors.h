@@ -27,7 +27,7 @@
 //	#undef GOLFAppColor
 
 //	Misc constants
-#define	GOLFNumberOfCandidateTeeColors	24
+#define	GOLFNumberOfCandidateTeeColors	26
 #define kNotATeeColorIndex -1
 
 typedef NS_ENUM(GOLFTeeColorIndex, teeColorIndexEnumeration) {
@@ -61,6 +61,7 @@ typedef NS_ENUM(GOLFTeeColorIndex, teeColorIndexEnumeration) {
 	GOLFTeeColorCustom = 50,			//	Custom tee color (50)
 	GOLFTeeColorUSA,					//	Custom tee marker (U.S.A) (51)
 	GOLFTeeColorEU,						//	Custom tee marker (E.U.) (52)
+	GOLFTeeColorPGA,					//	Custom tee marker (PGA) (53)
 	GOLFTeeColorUnknown = 99,			//	Unknown tee color
 	GOLFTeeColorAdd = 998,				//	"Add" tee color
 	GOLFTeeColorAll = 999				//	"All" tee color
