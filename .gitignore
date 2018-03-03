@@ -231,8 +231,5 @@ fastlane/screenshots
 
 # GOLFKit (GitHub project)
 #
-/GOLFKit Framework (iOS)/GOLFKit.framework
-/GOLFKit Framework (iOS)/GOLFKit.framework.dSYM
-/GOLFKit Framework (macOS)/GOLFKit.framework
-/GOLFKit Framework (macOS)/GOLFKit.framework.dSYM
-/GOLFKit.xcodeproj/project.xcworkspace/xcuserdata/jb.xcuserdatad
+
+*.xcuserdatad

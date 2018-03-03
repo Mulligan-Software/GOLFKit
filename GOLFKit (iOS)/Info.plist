@@ -19,7 +19,7 @@
 	<key>CFBundleShortVersionString</key>
 	<string>9.0</string>
 	<key>CFBundleVersion</key>
-	<string>2</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2018 Mulligan Software. All rights reserved.</string>
 	<key>NSPrincipalClass</key>

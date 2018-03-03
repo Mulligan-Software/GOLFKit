@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Scheme
-   LastUpgradeVersion = "0900"
+   LastUpgradeVersion = "0920"
    version = "1.3">
    <BuildAction
       parallelizeBuildables = "YES"
@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "29E888AB1DCE5B0000C4A63A"
                BuildableName = "GOLFKit.framework"
-               BlueprintName = "GOLFKit"
+               BlueprintName = "GOLFKit (iOS)"
                ReferencedContainer = "container:GOLFKit.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -45,7 +45,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "29E888AB1DCE5B0000C4A63A"
             BuildableName = "GOLFKit.framework"
-            BlueprintName = "GOLFKit"
+            BlueprintName = "GOLFKit (iOS)"
             ReferencedContainer = "container:GOLFKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -68,7 +68,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "29E888AB1DCE5B0000C4A63A"
             BuildableName = "GOLFKit.framework"
-            BlueprintName = "GOLFKit"
+            BlueprintName = "GOLFKit (iOS)"
             ReferencedContainer = "container:GOLFKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -86,7 +86,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "29E888AB1DCE5B0000C4A63A"
             BuildableName = "GOLFKit.framework"
-            BlueprintName = "GOLFKit"
+            BlueprintName = "GOLFKit (iOS)"
             ReferencedContainer = "container:GOLFKit.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

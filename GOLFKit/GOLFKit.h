@@ -9,6 +9,12 @@
 
 @import Foundation;
 
+//! Project version number for GOLFKit.
+//FOUNDATION_EXPORT double GOLFKitVersionNumber;
+
+//! Project version string for GOLFKit.
+//FOUNDATION_EXPORT const unsigned char GOLFKitVersionString[];
+
 // In this header, you should import all the public headers of your framework using statements like #import <GolfKit/PublicHeader.h>
 
 //	Models
@@ -54,3 +60,8 @@
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 //	#import <GOLFKit/GOLFMac.h>
 #endif
+
+//	Bundle identification etc.
+NSString * GOLFKitBundleShortVersionString(void);
+NSString * GOLFKitBundleVersion(void);
+

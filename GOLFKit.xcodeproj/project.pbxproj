@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2900E04E1F9FA8B900C19542 /* TeeMarkerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2900E04D1F9FA8B900C19542 /* TeeMarkerTests.m */; };
-		2907DB992048AB7D00A04B8F /* TeeMarkerEU.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2907DB982048AB7C00A04B8F /* TeeMarkerEU.icns */; };
 		2930CDA31DCFEC4F0089491D /* LittleTeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2930CDA21DCFEC4F0089491D /* LittleTeeMarkers.xcassets */; };
 		2930CDA41DCFEC4F0089491D /* LittleTeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2930CDA21DCFEC4F0089491D /* LittleTeeMarkers.xcassets */; };
 		2941402D1DDA02D700CC9605 /* TeeMarkerAdd.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2941402C1DDA02D700CC9605 /* TeeMarkerAdd.icns */; };
@@ -40,6 +39,8 @@
 		294140611DDA03E300CC9605 /* TeeMarkerYellowAndBlue.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140471DDA03E300CC9605 /* TeeMarkerYellowAndBlue.icns */; };
 		294140631DDB582600CC9605 /* GOLFKitTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 294140621DDB582600CC9605 /* GOLFKitTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		294140641DDB582600CC9605 /* GOLFKitTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 294140621DDB582600CC9605 /* GOLFKitTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		296411EC204B44CF002A70CB /* GOLFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 296411EB204B44CF002A70CB /* GOLFKit.m */; };
+		296411ED204B44CF002A70CB /* GOLFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 296411EB204B44CF002A70CB /* GOLFKit.m */; };
 		296896BD2049B0180030630C /* TeeMarkerPGA.icns in Resources */ = {isa = PBXBuildFile; fileRef = 296896BB2049AFFF0030630C /* TeeMarkerPGA.icns */; };
 		296F4DDF1F3A40A100781C46 /* TeeMarkerAzure.icns in Resources */ = {isa = PBXBuildFile; fileRef = 296F4DDE1F3A40A100781C46 /* TeeMarkerAzure.icns */; };
 		296F4DE21F3A497000781C46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 296F4DE41F3A497000781C46 /* InfoPlist.strings */; };
@@ -53,6 +54,7 @@
 		29A338091DCE81D70074A064 /* GOLFTeeMarkers.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A338061DCE81D70074A064 /* GOLFTeeMarkers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29A3380A1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A338071DCE81D70074A064 /* GOLFTeeMarkers.m */; };
 		29A3380B1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A338071DCE81D70074A064 /* GOLFTeeMarkers.m */; };
+		29B00A7D204AFFE000E10210 /* TeeMarkerEU.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2907DB982048AB7C00A04B8F /* TeeMarkerEU.icns */; };
 		29C0E38C1F9E90580009E23C /* NSNumber+GOLFExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 29C0E38A1F9E90580009E23C /* NSNumber+GOLFExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29C0E38D1F9E90580009E23C /* NSNumber+GOLFExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 29C0E38A1F9E90580009E23C /* NSNumber+GOLFExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29C0E38E1F9E90580009E23C /* NSNumber+GOLFExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C0E38B1F9E90580009E23C /* NSNumber+GOLFExtensions.m */; };
@@ -107,6 +109,7 @@
 		294140461DDA03E300CC9605 /* TeeMarkerYellow.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = TeeMarkerYellow.icns; sourceTree = "<group>"; };
 		294140471DDA03E300CC9605 /* TeeMarkerYellowAndBlue.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = TeeMarkerYellowAndBlue.icns; sourceTree = "<group>"; };
 		294140621DDB582600CC9605 /* GOLFKitTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLFKitTypes.h; path = GOLFKit/GOLFKitTypes.h; sourceTree = "<group>"; };
+		296411EB204B44CF002A70CB /* GOLFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLFKit.m; sourceTree = "<group>"; };
 		296896BB2049AFFF0030630C /* TeeMarkerPGA.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = TeeMarkerPGA.icns; sourceTree = "<group>"; };
 		296F4DDE1F3A40A100781C46 /* TeeMarkerAzure.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = TeeMarkerAzure.icns; path = "GOLFKit (OS X)/TeeMarker icns/TeeMarkerAzure.icns"; sourceTree = SOURCE_ROOT; };
 		296F4DE31F3A497000781C46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -263,6 +266,7 @@
 			isa = PBXGroup;
 			children = (
 				29E888AF1DCE5B0000C4A63A /* GOLFKit.h */,
+				296411EB204B44CF002A70CB /* GOLFKit.m */,
 				29C0E3901F9E921F0009E23C /* Categories */,
 				29E888D21DCE654800C4A63A /* UI */,
 				29E888D31DCE655400C4A63A /* Localization */,
@@ -334,9 +338,9 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		29E888AB1DCE5B0000C4A63A /* GOLFKit */ = {
+		29E888AB1DCE5B0000C4A63A /* GOLFKit (iOS) */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 29E888C01DCE5B0000C4A63A /* Build configuration list for PBXNativeTarget "GOLFKit" */;
+			buildConfigurationList = 29E888C01DCE5B0000C4A63A /* Build configuration list for PBXNativeTarget "GOLFKit (iOS)" */;
 			buildPhases = (
 				29E888A71DCE5B0000C4A63A /* Sources */,
 				29E888A81DCE5B0000C4A63A /* Frameworks */,
@@ -347,7 +351,7 @@
 			);
 			dependencies = (
 			);
-			name = GOLFKit;
+			name = "GOLFKit (iOS)";
 			productName = GOLFKit;
 			productReference = 29E888AC1DCE5B0000C4A63A /* GOLFKit.framework */;
 			productType = "com.apple.product-type.framework";
@@ -394,7 +398,7 @@
 		29E888A31DCE5B0000C4A63A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0900;
+				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Mulligan Software";
 				TargetAttributes = {
 					29E888AB1DCE5B0000C4A63A = {
@@ -426,7 +430,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				29E888AB1DCE5B0000C4A63A /* GOLFKit */,
+				29E888AB1DCE5B0000C4A63A /* GOLFKit (iOS) */,
 				29E888D81DCE65E000C4A63A /* GOLFKit (OS X) */,
 				29E888B41DCE5B0000C4A63A /* GOLFKitTests */,
 			);
@@ -438,7 +442,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2907DB992048AB7D00A04B8F /* TeeMarkerEU.icns in Resources */,
 				2930CDA31DCFEC4F0089491D /* LittleTeeMarkers.xcassets in Resources */,
 				296F4DE21F3A497000781C46 /* InfoPlist.strings in Resources */,
 				29A338041DCE76E30074A064 /* TeeMarkers.xcassets in Resources */,
@@ -460,6 +463,7 @@
 				294140581DDA03E300CC9605 /* TeeMarkerRedAndWhite.icns in Resources */,
 				2941405E1DDA03E300CC9605 /* TeeMarkerWhite.icns in Resources */,
 				2941404E1DDA03E300CC9605 /* TeeMarkerBrown.icns in Resources */,
+				29B00A7D204AFFE000E10210 /* TeeMarkerEU.icns in Resources */,
 				294140501DDA03E300CC9605 /* TeeMarkerGold.icns in Resources */,
 				2941404F1DDA03E300CC9605 /* TeeMarkerGeneric.icns in Resources */,
 				296896BD2049B0180030630C /* TeeMarkerPGA.icns in Resources */,
@@ -500,6 +504,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				296411EC204B44CF002A70CB /* GOLFKit.m in Sources */,
 				29A3380A1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */,
 				29C0E38E1F9E90580009E23C /* NSNumber+GOLFExtensions.m in Sources */,
 				29E888D01DCE611600C4A63A /* GOLFColors.m in Sources */,
@@ -519,6 +524,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				296411ED204B44CF002A70CB /* GOLFKit.m in Sources */,
 				29A3380B1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */,
 				29C0E38F1F9E90580009E23C /* NSNumber+GOLFExtensions.m in Sources */,
 				29A338011DCE745B0074A064 /* GOLFColors.m in Sources */,
@@ -530,7 +536,7 @@
 /* Begin PBXTargetDependency section */
 		29E888B81DCE5B0000C4A63A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 29E888AB1DCE5B0000C4A63A /* GOLFKit */;
+			target = 29E888AB1DCE5B0000C4A63A /* GOLFKit (iOS) */;
 			targetProxy = 29E888B71DCE5B0000C4A63A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -606,7 +612,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -665,7 +671,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -702,10 +708,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mulligansoftware.GOLFKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GOLFKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
 		};
@@ -725,10 +733,12 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mulligansoftware.GOLFKit;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = GOLFKit;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
 		};
@@ -814,7 +824,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		29E888C01DCE5B0000C4A63A /* Build configuration list for PBXNativeTarget "GOLFKit" */ = {
+		29E888C01DCE5B0000C4A63A /* Build configuration list for PBXNativeTarget "GOLFKit (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				29E888C11DCE5B0000C4A63A /* Debug */,
