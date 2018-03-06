@@ -21,7 +21,7 @@
 #endif
 
 //
-typedef NS_OPTIONS(NSUInteger, GOLFTeeMarkerImageSize) {
+typedef NS_ENUM(NSUInteger, GOLFTeeMarkerImageSize) {
         GOLFTeeMarkerImageSize16pt		= 16,
         GOLFTeeMarkerImageSize32pt		= 32,
         GOLFTeeMarkerImageSize64pt		= 64,

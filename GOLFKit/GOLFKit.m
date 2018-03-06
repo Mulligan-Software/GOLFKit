@@ -8,12 +8,25 @@
 
 #import "GOLFKit.h"
 
+//	Private Prototypes
+static NSBundle *cachedGolfKitBundle = nil;
+
+//=================================================================
+//	GOLFKitBundle
+//=================================================================
+NSBundle * GOLFKitBundle(void) {
+	if (cachedGolfKitBundle == nil) {
+		cachedGolfKitBundle = [NSBundle bundleWithIdentifier:GOLFKIT_BUNDLE_ID];
+	}
+	return cachedGolfKitBundle;
+}
+
 //=================================================================
 //	GOLFKitBundleShortVersionString
 //	The string version of CFBundleShortVersionString from Info.plist for GOLFKit
 //=================================================================
 NSString * GOLFKitBundleShortVersionString(void) {
-	NSBundle *ourBundle = [NSBundle bundleWithIdentifier:@"com.mulligansoftware.GOLFKit"];
+	NSBundle *ourBundle = GOLFKitBundle();
 	return [[ourBundle localizedInfoDictionary] objectForKey:@"CFBundleShortVersionString"] ? : [[ourBundle infoDictionary] objectForKey:@"CFBundleShortVersionString"];
 }
 
@@ -22,7 +35,7 @@ NSString * GOLFKitBundleShortVersionString(void) {
 //	The string version of CFBundleVersion from Info.plist for GOLFKit
 //=================================================================
 NSString * GOLFKitBundleVersion(void) {
-	NSBundle *ourBundle = [NSBundle bundleWithIdentifier:@"com.mulligansoftware.GOLFKit"];
+	NSBundle *ourBundle = GOLFKitBundle();
 	return [[ourBundle localizedInfoDictionary] objectForKey:@"CFBundleVersion"] ? : [[ourBundle infoDictionary] objectForKey:@"CFBundleVersion"];
 }
 

@@ -29,8 +29,8 @@
 //	#import <GOLFKit/GOLFScoringDocument.h>
 #endif
 
-//	Presentation (Lists, Items, Results, etc.)
-//	#import <GOLFKit/GOLFScoresPresenting.h>
+//	Common Features (Handicapping, etc.)
+#import <GOLFKit/GOLFHandicapping.h>
 
 //	User Interface (Colors, text, localization, etc.)
 #import <GOLFKit/GOLFColors.h>
@@ -61,7 +61,10 @@
 //	#import <GOLFKit/GOLFMac.h>
 #endif
 
+#define GOLFKIT_BUNDLE_ID			@"com.mulligansoftware.GOLFKit"
+
 //	Bundle identification etc.
+NSBundle * GOLFKitBundle(void);
 NSString * GOLFKitBundleShortVersionString(void);
 NSString * GOLFKitBundleVersion(void);
 

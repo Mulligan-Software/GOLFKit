@@ -12,6 +12,8 @@
 
 typedef NSInteger GOLFTeeColorIndex;
 
+//	typedef NSUInteger GOLFHandicapMethodIndex;
+
 //typedef int GOLFTeeSlopeRating;
 //typedef float GOLFTeeCourseRating;
 

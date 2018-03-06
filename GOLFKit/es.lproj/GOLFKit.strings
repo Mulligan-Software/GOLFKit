@@ -31,9 +31,10 @@
 "GOLF_TEE_COLOR_NAME_WHITE_AND_GOLD" = "Blanco y Dorado";
 "GOLF_TEE_COLOR_NAME_BLACK_AND_WHITE" = "Negro y Blanco";
 "GOLF_TEE_COLOR_NAME_CUSTOM" = "Personalizado";
-"GOLF_TEE_COLOR_NAME_USA" = "EE.UU.";
-"GOLF_TEE_COLOR_NAME_EU" = "UE.";
-"GOLF_TEE_COLOR_NAME_PGA" = "PGA Tour";
+"GOLF_TEE_COLOR_NAME_USA" = "EE.UU.";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_EU" = "UE.";		//	Custom tee
+"GOLF_TEE_COLOR_NAME_PGA" = "PGA Tour";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_USGA" = "USGA";	//	Custom tee
 "GOLF_TEE_COLOR_NAME_GENERIC" = "Un Tee";
 "GOLF_TEE_COLOR_NAME_UNKNOWN" = "Desconocido";
 "GOLF_TEE_COLOR_NAME_ADD" = "Añadir";
