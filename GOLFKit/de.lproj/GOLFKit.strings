@@ -39,3 +39,83 @@
 "GOLF_TEE_COLOR_NAME_UNKNOWN" = "unbekannte";
 "GOLF_TEE_COLOR_NAME_ADD" = "ergänzen";
 "GOLF_TEE_COLOR_NAME_ALL" = "alle";
+
+//	Handicap methods & associations
+"HANDICAP_METHOD_2ND_BEST" = "Golfergebnisse zweitbestes System";
+"HANDICAP_METHOD_AGU" = "Golf Australien Handicap-System ";
+"HANDICAP_METHOD_CONGU" = "CONGU Handicap-System einheitlich";
+"HANDICAP_METHOD_EGA" = "EGA Handicap-System";
+"HANDICAP_METHOD_MULLIGAN" = "Mulligan behindert";
+"HANDICAP_METHOD_PERSONAL" = "Einzelperson behindert";
+"HANDICAP_METHOD_RCGA" = "Golf Kanada Handicap-System";
+"HANDICAP_METHOD_UNKNOWN" = "Unbekannte Handicap-Method";
+"HANDICAP_METHOD_USGA" = "USGA Handicap-System";
+"HANDICAP_METHOD_WHS" = "Weltweites Handicap-System";
+"HANDICAP_ASSOCIATION_AGU" = "Golf Australien";
+"HANDICAP_ASSOCIATION_CONGU" = "Rat der Nationalen Golf-Verien";
+"HANDICAP_ASSOCIATION_EGA" = "Europäischer Golfverband";
+"HANDICAP_ASSOCIATION_RCGA" = "Golf Kanada";
+"HANDICAP_ASSOCIATION_USGA" = "Vereinigten Staaten Golfverband";
+"HANDICAP_ASSOCIATION_WHS" = "Weltweites Handicap-System";	//	Temporary?
+
+//	Titles & Abbr.
+"TITLE_ALLOWANCE" = "Zustimmung";
+"TITLE_CCR" = "Course Rating berechnet";
+"TITLE_CCR_ABBR" = "CCR";
+"TITLE_CSS" = "Wettbewerbs-Scratch-Score";
+"TITLE_CSS_ABBR" = "CSS";
+"TITLE_HANDICAP" = "Handicap";
+"TITLE_HANDICAP_ABBR" = "Hdcp";
+"TITLE_HANDICAP_PLURAL" = "Handicapen";
+"TITLE_HANDICAP_ADJUSTED_GROSS" = "Bruto-Score korrigierend";
+"TITLE_HANDICAP_ALLOWANCE" = "Handicap Zustimmung";
+"TITLE_HANDICAP_ALLOWANCE_ABBR" = "Zust";
+"TITLE_HANDICAP_CATEGORY" = "Handicapklasse";
+"TITLE_HANDICAP_CATEGORY_ABBR" = "Klasse";
+"TITLE_HANDICAP_COURSE" = "Golfplatz Handicap";
+"TITLE_HANDICAP_COURSE_PLURAL" = "Golfplatz Handicapen";
+"TITLE_HANDICAP_COURSE_TM" = "Course Handicap™";
+"TITLE_HANDICAP_COURSE_TM_PLURAL" = "Course Handicaps™";
+"TITLE_HANDICAP_DAILY" = "Täglichen Handicap";
+"TITLE_HANDICAP_DAILY_PLURAL" = "Täglichen Handicapen";
+"TITLE_HANDICAP_DIFFERENTIAL" = "Differential Handicap";
+"TITLE_HANDICAP_DIFFERENTIAL_ABBR" = "Diff";
+"TITLE_HANDICAP_EGA" = "EGA Handicap";
+"TITLE_HANDICAP_EGA_PLURAL" = "EGA Handicapen";
+"TITLE_HANDICAP_EGA_PLAYING" = "EGA Spielen Handicap";
+"TITLE_HANDICAP_EGA_PLAYING_PLURAL" = "EGA Spielen Handicapen";
+"TITLE_HANDICAP_ESTIMATED" = "Geschätzt Handicap";
+"TITLE_HANDICAP_ESTIMATED_ABBR" = "Est";
+"TITLE_HANDICAP_ESTIMATED_PLURAL" = "Geschätzt Handicapen";
+"TITLE_HANDICAP_EXACT" = "Exakt Handicap";
+"TITLE_HANDICAP_EXACT_PLURAL" = "Exakt Handicapen";
+"TITLE_HANDICAP_FACTOR" = "Handicapfaktor";
+"TITLE_HANDICAP_FACTOR_PLURAL" = "Handicapfaktoren";
+"TITLE_HANDICAP_GA" = "G.A. Handicap";
+"TITLE_HANDICAP_GA_PLURAL" = "G.A. Handicapen";
+"TITLE_HANDICAP_GRADE" = "Handicap Klasse";
+"TITLE_HANDICAP_GRADE_ABBR" = "Klasse";
+"TITLE_HANDICAP_INDEX" = "Handicap Index";
+"TITLE_HANDICAP_INDEX_ABBR" = "Index";
+"TITLE_HANDICAP_INDEX_PLURAL" = "Handicap Indizes";
+"TITLE_HANDICAP_INDEX_RTM" = "Handicap Index®";
+"TITLE_HANDICAP_INDEX_RTM_PLURAL" = "Handicap Indexes®";
+"TITLE_HANDICAP_MULLIGAN" = "Mulligan Handicap";
+"TITLE_HANDICAP_MULLIGAN_PLURAL" = "Mulligan Handicapen";
+"TITLE_HANDICAP_PERSONAL" = "Individuell Handicap";
+"TITLE_HANDICAP_PERSONAL_PLURAL" = "Individuell Handicapen";
+"TITLE_HANDICAP_PLAYING" = "Spielen Handicap";
+"TITLE_HANDICAP_PLAYING_PLURAL" = "Spielen Handicapen";
+"TITLE_GRADE" = "Klasse";
+"TITLE_SSS" = "Scratch Score genormt";
+"TITLE_SSS_ABBR" = "SSS";
+
+//	Tooltips
+"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - benutzt\nA - entfernt\nC - kombiniert\nT - Tournier\nP - Strafe";
+"TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - benutzt\nA - entfernt\nC - kombiniert\nT - Tournier\nP - Strafe";
+"TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - benutzt\nA - entfernt\nC - kombiniert\nT - Tournier\nP - Strafe";
+"TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - benutzt\nA - entfernt\nC - kombiniert";
+"TOOLTIP_ROUNDS_MODIFIER_CONGU" = "* - benutzt\nT - Tournier";
+"TOOLTIP_ROUNDS_MODIFIER_EGA" = "* - benutzt\nT - Tournier";
+"TOOLTIP_ROUNDS_MODIFIER_MULLIGAN" = "* - benutzt\nA - entfernt\nT - Tournier";
+

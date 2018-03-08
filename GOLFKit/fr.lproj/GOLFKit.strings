@@ -39,3 +39,83 @@
 "GOLF_TEE_COLOR_NAME_UNKNOWN" = "Inconnu";
 "GOLF_TEE_COLOR_NAME_ADD" = "Ajouter";
 "GOLF_TEE_COLOR_NAME_ALL" = "Tout";
+
+//	Handicap methods & associations
+"HANDICAP_METHOD_2ND_BEST" = "Système Second-Best Score";
+"HANDICAP_METHOD_AGU" = "Golf Australie Système de Handicap";
+"HANDICAP_METHOD_CONGU" = "CONGU Système Handicapant Unifié";
+"HANDICAP_METHOD_EGA" = "EGA Système de Handicap";
+"HANDICAP_METHOD_MULLIGAN" = "Handicapant Mulligan";
+"HANDICAP_METHOD_PERSONAL" = "Handicapant Individuel";
+"HANDICAP_METHOD_RCGA" = "Golf Canada Système de Handicap";
+"HANDICAP_METHOD_UNKNOWN" = "Système handicapant inconnu";
+"HANDICAP_METHOD_USGA" = "USGA Système de Handicap";
+"HANDICAP_METHOD_WHS" = "Système de Handicap Mondial";
+"HANDICAP_ASSOCIATION_AGU" = "Golf Australie";
+"HANDICAP_ASSOCIATION_CONGU" = "Conseil des Syndicats Nationaux de Golf";
+"HANDICAP_ASSOCIATION_EGA" = "Association Européenne de Golf";
+"HANDICAP_ASSOCIATION_RCGA" = "Golf Canada";
+"HANDICAP_ASSOCIATION_USGA" = "Association de Golf des États-Unis";
+"HANDICAP_ASSOCIATION_WHS" = "Système de Handicap Mondial";	//	Temporary?
+
+//	Titles & Abbr.
+"TITLE_ALLOWANCE" = "Allocation";
+"TITLE_CCR" = "Calculated Course Rating";
+"TITLE_CCR_ABBR" = "CCR";
+"TITLE_CSS" = "Scratch Score de Compétition";
+"TITLE_CSS_ABBR" = "CSS";
+"TITLE_HANDICAP" = "Handicap";
+"TITLE_HANDICAP_ABBR" = "Hdcp";
+"TITLE_HANDICAP_PLURAL" = "Handicaps";
+"TITLE_HANDICAP_ADJUSTED_GROSS" = "Score Brut Adjusté";
+"TITLE_HANDICAP_ALLOWANCE" = "Allocation de Handicap";
+"TITLE_HANDICAP_ALLOWANCE_ABBR" = "Alloc";
+"TITLE_HANDICAP_CATEGORY" = "Handicap Catégorie";
+"TITLE_HANDICAP_CATEGORY_ABBR" = "Catégorie";
+"TITLE_HANDICAP_COURSE" = "Course Handicap";
+"TITLE_HANDICAP_COURSE_PLURAL" = "Course Handicaps";
+"TITLE_HANDICAP_COURSE_TM" = "Course Handicap™";
+"TITLE_HANDICAP_COURSE_TM_PLURAL" = "Course Handicaps™";
+"TITLE_HANDICAP_DAILY" = "Daily Handicap";
+"TITLE_HANDICAP_DAILY_PLURAL" = "Daily Handicaps";
+"TITLE_HANDICAP_DIFFERENTIAL" = "Différential de Handicap";
+"TITLE_HANDICAP_DIFFERENTIAL_ABBR" = "Diff";
+"TITLE_HANDICAP_EGA" = "EGA Handicap";
+"TITLE_HANDICAP_EGA_PLURAL" = "EGA Handicaps";
+"TITLE_HANDICAP_EGA_PLAYING" = "EGA Handicap Jouer";
+"TITLE_HANDICAP_EGA_PLAYING_PLURAL" = "EGA Handicaps Jouer";
+"TITLE_HANDICAP_ESTIMATED" = "Handicap Estimatif";
+"TITLE_HANDICAP_ESTIMATED_ABBR" = "Est";
+"TITLE_HANDICAP_ESTIMATED_PLURAL" = "Handicaps Estimatifs";
+"TITLE_HANDICAP_EXACT" = "Handicap Exact";
+"TITLE_HANDICAP_EXACT_PLURAL" = "Handicaps Exact";
+"TITLE_HANDICAP_FACTOR" = "Facteur de Handicap";
+"TITLE_HANDICAP_FACTOR_PLURAL" = "Facteurs de Handicap";
+"TITLE_HANDICAP_GA" = "G.A. Handicap";
+"TITLE_HANDICAP_GA_PLURAL" = "G.A. Handicaps";
+"TITLE_HANDICAP_GRADE" = "Handicap Classe";
+"TITLE_HANDICAP_GRADE_ABBR" = "Classe";
+"TITLE_HANDICAP_INDEX" = "Handicap Index";
+"TITLE_HANDICAP_INDEX_ABBR" = "Index";
+"TITLE_HANDICAP_INDEX_PLURAL" = "Handicap Indexes";
+"TITLE_HANDICAP_INDEX_RTM" = "Handicap Index®";
+"TITLE_HANDICAP_INDEX_RTM_PLURAL" = "Handicap Indexes®";
+"TITLE_HANDICAP_MULLIGAN" = "Handicap Mulligan";
+"TITLE_HANDICAP_MULLIGAN_PLURAL" = "Handicaps Mulligan";
+"TITLE_HANDICAP_PERSONAL" = "Handicap Individuel";
+"TITLE_HANDICAP_PERSONAL_PLURAL" = "Handicaps Individuels";
+"TITLE_HANDICAP_PLAYING" = "Handicap Jouer";
+"TITLE_HANDICAP_PLAYING_PLURAL" = "Handicaps Jouer";
+"TITLE_GRADE" = "Classe";
+"TITLE_SSS" = "Standard Scratch Score";
+"TITLE_SSS_ABBR" = "SSS";
+
+//	Tooltips
+"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - utilisé\nA - loin\nC - combiné\nT - tournoi\nP - pénalité";
+"TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - utilisé\nA - loin\nC - combiné\nT - tournoi\nP - pénalité";
+"TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - utilisé\nA - loin\nC - combiné\nT - tournoi\nP - pénalité";
+"TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - utilisé\nA - loin\nC - combiné";
+"TOOLTIP_ROUNDS_MODIFIER_CONGU" = "* - utilisé\nT - tournoi";
+"TOOLTIP_ROUNDS_MODIFIER_EGA" = "* - utilisé\nT - tournoi";
+"TOOLTIP_ROUNDS_MODIFIER_MULLIGAN" = "* - utilisé\nA - loin\nT - tournoi";
+

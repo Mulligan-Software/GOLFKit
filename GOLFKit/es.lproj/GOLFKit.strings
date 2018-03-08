@@ -39,3 +39,83 @@
 "GOLF_TEE_COLOR_NAME_UNKNOWN" = "Desconocido";
 "GOLF_TEE_COLOR_NAME_ADD" = "Añadir";
 "GOLF_TEE_COLOR_NAME_ALL" = "Todo";
+
+//	Handicap methods & associations
+"HANDICAP_METHOD_2ND_BEST" = "Sistema Segundo-Mejor Puntaje";
+"HANDICAP_METHOD_AGU" = "Sistema Handicap de Golf Australia";
+"HANDICAP_METHOD_CONGU" = "Sistema Handicap Unificado de CONGU";
+"HANDICAP_METHOD_EGA" = "Sistema Handicap EGA";
+"HANDICAP_METHOD_MULLIGAN" = "Handicapping Mulligan";
+"HANDICAP_METHOD_PERSONAL" = "Handicapping Personales";
+"HANDICAP_METHOD_RCGA" = "Sistema Handicap Golf Canada";
+"HANDICAP_METHOD_UNKNOWN" = "Método de handicap desconocido";
+"HANDICAP_METHOD_USGA" = "Sistema Handicap USGA";
+"HANDICAP_METHOD_WHS" = "Sistema Handicap Mundial";
+"HANDICAP_ASSOCIATION_AGU" = "Golf Australia";
+"HANDICAP_ASSOCIATION_CONGU" = "Consejo de Uniones Nacionales de Golf";
+"HANDICAP_ASSOCIATION_EGA" = "Asociación Europea de Golf";
+"HANDICAP_ASSOCIATION_RCGA" = "Golf Canada";
+"HANDICAP_ASSOCIATION_USGA" = "Asociación de Golf de Estados Unidos";
+"HANDICAP_ASSOCIATION_WHS" = "Sistema Handicap Mundial";	//	Temporary?
+
+//	Titles & Abbr.
+"TITLE_ALLOWANCE" = "Asignacíon";
+"TITLE_CCR" = "Course Rating Calculado";
+"TITLE_CCR_ABBR" = "CCR";
+"TITLE_CSS" = "Scratch Score de Competencia";
+"TITLE_CSS_ABBR" = "CSS";
+"TITLE_HANDICAP" = "Handicap";
+"TITLE_HANDICAP_ABBR" = "Hdcp";
+"TITLE_HANDICAP_PLURAL" = "Handicaps";
+"TITLE_HANDICAP_ADJUSTED_GROSS" = "Puntaje Bruto Adjustado";
+"TITLE_HANDICAP_ALLOWANCE" = "Asignacíon de handicap";
+"TITLE_HANDICAP_ALLOWANCE_ABBR" = "Asign";
+"TITLE_HANDICAP_CATEGORY" = "Categoría de Handicap";
+"TITLE_HANDICAP_CATEGORY_ABBR" = "Categoría";
+"TITLE_HANDICAP_COURSE" = "Handicap de Campo";
+"TITLE_HANDICAP_COURSE_PLURAL" = "Handicaps de Campo";
+"TITLE_HANDICAP_COURSE_TM" = "Course Handicap™";
+"TITLE_HANDICAP_COURSE_TM_PLURAL" = "Course Handicaps™";
+"TITLE_HANDICAP_DAILY" = "Handicap Cotidiano";
+"TITLE_HANDICAP_DAILY_PLURAL" = "Handicaps Cotidianos";
+"TITLE_HANDICAP_DIFFERENTIAL" = "Diferencial de Handicap";
+"TITLE_HANDICAP_DIFFERENTIAL_ABBR" = "Dif";
+"TITLE_HANDICAP_EGA" = "Handicap EGA";
+"TITLE_HANDICAP_EGA_PLURAL" = "Handicaps EGA";
+"TITLE_HANDICAP_EGA_PLAYING" = "Handicap de Jugar EGA";
+"TITLE_HANDICAP_EGA_PLAYING_PLURAL" = "Handicaps de Jugar EGA";
+"TITLE_HANDICAP_ESTIMATED" = "Handicap Estimado";
+"TITLE_HANDICAP_ESTIMATED_ABBR" = "Est";
+"TITLE_HANDICAP_ESTIMATED_PLURAL" = "Handicaps Estimados";
+"TITLE_HANDICAP_EXACT" = "Handicap Exacto";
+"TITLE_HANDICAP_EXACT_PLURAL" = "Handicaps Exactos";
+"TITLE_HANDICAP_FACTOR" = "Factor de Handicap";
+"TITLE_HANDICAP_FACTOR_PLURAL" = "Factores de Handicap";
+"TITLE_HANDICAP_GA" = "Handicap G.A.";
+"TITLE_HANDICAP_GA_PLURAL" = "Handicaps G.A.";
+"TITLE_HANDICAP_GRADE" = "Grado de Handicap";
+"TITLE_HANDICAP_GRADE_ABBR" = "Grado";
+"TITLE_HANDICAP_INDEX" = "Índice de Handicap";
+"TITLE_HANDICAP_INDEX_ABBR" = "Índice";
+"TITLE_HANDICAP_INDEX_PLURAL" = "Índices de Handicap";
+"TITLE_HANDICAP_INDEX_RTM" = "Handicap Index®";
+"TITLE_HANDICAP_INDEX_RTM_PLURAL" = "Handicap Indexes®";
+"TITLE_HANDICAP_MULLIGAN" = "Handicap Mulligan";
+"TITLE_HANDICAP_MULLIGAN_PLURAL" = "Handicaps Mulligan";
+"TITLE_HANDICAP_PERSONAL" = "Handicap Personal";
+"TITLE_HANDICAP_PERSONAL_PLURAL" = "Handicaps Personales";
+"TITLE_HANDICAP_PLAYING" = "Handicap de Jugar";
+"TITLE_HANDICAP_PLAYING_PLURAL" = "Handicaps de Jugar";
+"TITLE_GRADE" = "Grado";
+"TITLE_SSS" = "Standard Scratch Score";
+"TITLE_SSS_ABBR" = "SSS";
+
+//	Tooltips
+"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - utilizado\nA - allá\nC - combinado\nT - torneo\nP - pena";
+"TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - utilizado\nA - allá\nC - combinado\nT - torneo\nP - pena";
+"TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - utilizado\nA - allá\nC - combinado\nT - torneo\nP - pena";
+"TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - utilizado\nA - allá\nC - combinado";
+"TOOLTIP_ROUNDS_MODIFIER_CONGU" = "* - utilizado\nT - torneo";
+"TOOLTIP_ROUNDS_MODIFIER_EGA" = "* - utilizado\nT - torneo";
+"TOOLTIP_ROUNDS_MODIFIER_MULLIGAN" = "* - utilizado\nA - allá\nT - torneo";
+

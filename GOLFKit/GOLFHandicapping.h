@@ -17,27 +17,27 @@
 
 typedef NS_OPTIONS(NSUInteger, GOLFRoundHandicapOption) {
 	GOLFRoundHandicapOptionNone			= 0,			//	(0)
-	GOLFRoundHandicapOptionUsed			= 1 << 0,		//	(1)
-	GOLFRoundHandicapOptionEligible		= 1 << 1,		//	(2)
-	GOLFRoundHandicapOptionTournament	= 1 << 2,		//	(4)
-	GOLFRoundHandicapOptionCombined		= 1 << 3,		//	(8)
-	GOLFRoundHandicapOption9Holes		= 1 << 4,		//	(16)
-	GOLFRoundHandicapOptionAway			= 1 << 5,		//	(32)
-	GOLFRoundHandicapOptionHome			= 1 << 6,		//	(64)
+	GOLFRoundHandicapOptionUsed			= 1 << 0,		//	(1)			Round used in handicap latest calculation (ie: one of the best 10 of last 20)
+	GOLFRoundHandicapOptionEligible		= 1 << 1,		//	(2)			Round is identified as eligible for use/review in calculations (stats and handicapping)
+	GOLFRoundHandicapOptionTournament	= 1 << 2,		//	(4)			Round identified as a "tournament" round
+	GOLFRoundHandicapOptionCombined		= 1 << 3,		//	(8)			18-hole round constructed from two 9-hole rounds
+	GOLFRoundHandicapOption9Holes		= 1 << 4,		//	(16)		9-hole round
+	GOLFRoundHandicapOptionAway			= 1 << 5,		//	(32)		Round identified as played "away" - not at home course
+	GOLFRoundHandicapOptionHome			= 1 << 6,		//	(64)		Round identified as played at home course
 	GOLFRoundHandicapOptionSpare1		= 1 << 7,		//	(128)
 	GOLFRoundHandicapOptionSpare2		= 1 << 8,		//	(256)
-	GOLFRoundHandicapOptionInternet		= 1 << 9,		//	(512)
-	GOLFRoundHandicapOptionPenalty		= 1 << 10		//	(1024)
+	GOLFRoundHandicapOptionInternet		= 1 << 9,		//	(512)		Round recorded/entered via the internet
+	GOLFRoundHandicapOptionPenalty		= 1 << 10		//	(1024)		Round identified as a "penalty" round - may adjust handicap
 };
 
 typedef NS_ENUM(NSUInteger, GOLFHandicapMethodIndex) {
 	GOLFHandicapMethodNone = 0,			//	none (0)
-	GOLFHandicapMethodWHS,				//	World Handicap System (1)
-	GOLFHandicapMethodUSGA,				//	USGA Handicap System (2)
-	GOLFHandicapMethodRCGA,				//	RCGA (Golf Canada) Handicap System (3)
-	GOLFHandicapMethodAGU,				//	AGU (Golf Australia) Handicap System (4)
-	GOLFHandicapMethodEGA,				//	EGA (European Golf Association) Handicap System (5)
-	GOLFHandicapMethodCONGU,			//	CONGU Unified Handicap System (6)
+	GOLFHandicapMethodUSGA,				//	USGA Handicap System (1)
+	GOLFHandicapMethodRCGA,				//	RCGA (Golf Canada) Handicap System (2)
+	GOLFHandicapMethodAGU,				//	AGU (Golf Australia) Handicap System (3)
+	GOLFHandicapMethodEGA,				//	EGA (European Golf Association) Handicap System (4)
+	GOLFHandicapMethodCONGU,			//	CONGU Unified Handicap System (5)
+	GOLFHandicapMethodWHS,				//	World Handicap System (6)
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 	GOLFHandicapMethodMulligan = 20,	//	Mulligan Handicap System (20)
 	GOLFHandicapMethodPersonal,			//	Personalized Handicap System (21)
@@ -86,65 +86,96 @@ GOLFHandicapAuthority * GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodI
 //	system, or to lookup or calculate handicapping information related to the handicapping method.
 //	Returns nil if the methodIndex is zero (GOLFHandicapMethodNone), unknown (GOLFHandicapMethodUnknown) or invalid.
 
+NSString * GOLFHandicapMethodName(GOLFHandicapAuthority *authority);
+//	Returns the localized name of the handicap system or method supported by the provided GOLFHandicapAuthority
 
-#pragma mark Functions
 NSArray * GOLFHandicapAuthorities(void);	//	An array of dictionaries
-GOLFHandicapAuthority * DefaultHandicapAuthority(void);
-//	MULGolfAssociation * GolfAssociationWithAcronym(NSString *acronym);
-BOOL CertifiableAuthority(GOLFHandicapAuthority *authority);
-//GOLFPlayingHandicap CourseHandicap(GOLFHandicapAuthority *authority, GOLFHandicapIndex handicapIndex, BOOL is9HoleIndex, GOLFTeeSlope slope, id roundOrEvent);
-GOLFHandicapStrokes StrokeControlLimit(GOLFHandicapAuthority *authority, GOLFPlayingHandicap courseHandicap, BOOL for9Holes, NSObject *anObject);
-NSInteger WorstNHoles(NSArray *worstHoles, NSInteger numberOfHoles, BOOL andAHalf);
-GOLFHandicapIndex MaximumNonLocalIndex(GOLFHandicapAuthority *authority, BOOL playerIsFemale, BOOL for9Holes);
-BOOL CCRUsedForHandicapping(GOLFHandicapAuthority *authority, BOOL *required);
-BOOL StablefordRequiredForHandicapping(GOLFHandicapAuthority *authority);
-BOOL DoesTournamentAdjustment(GOLFHandicapAuthority *authority);
-//GOLFHandicapDifferential Differential(GOLFHandicapAuthority *authority, GOLFRound *aRound);
-//GOLFHandicapDifferential SideDifferential(GOLFHandicapAuthority *authority, GOLFRoundSide *aSide);
-NSInteger DifferentialSort(id dict1, id dict2, void *context);
-NSInteger ScoreSort(id dict1, id dict2, void *context);
-//NSString * DifferentialString(GOLFHandicapAuthority *authority, GOLFRound *aRound);
-NSString * HandicapIndexString(GOLFHandicapAuthority *authority, GOLFHandicapIndex hdcpIndex, BOOL playerIsFemale, BOOL nineHoles);
-NSString * RoundModifierKeyString(GOLFHandicapAuthority *authority);
-NSInteger DifferentialsToUseFrom(GOLFHandicapAuthority *authority, NSInteger numberOfScores);
-GOLFHandicapIndex HandicapReductionFrom(GOLFHandicapAuthority *authority, GOLFHandicapIndex excessIndex, NSInteger eligibleScores);
-//NSMutableArray * ScoringRecordFor(GOLFCompetitor *competitor, GOLFHandicapAuthority *authority, NSDate *date);
-NSMutableArray * TournamentRecordFrom(NSArray *scoringRecord);
-//BOOL ValidateRound(GOLFRound *aRound);
-//NSString * TrendHandicapStringThrough(GOLFCompetitor *competitor, GOLFHandicapAuthority *authority, NSDate *date);
-GOLFHandicapStrokes DefaultHandicapLimitsDifference(GOLFHandicapAuthority *authority);
-float DefaultHandicapLimitsPctAdj(GOLFHandicapAuthority *authority);
+//	Returns an NSArray of NSDictionaries, each with information about an available handicapping authority and the
+//	handicapping system used by its golfers:
+//
+//	Type			Key						Description
+//	--------------	----------------------	---------------------------------
+//	NSNumber		methodIndex				GOLFHandicapMethodIndex identifying the handicapping authority
+//	NSString		authority				A mnemonic identifying the handicapping authority - used in most handicapping function calls
+//	NSString		authorityDisplay		A mnemonic identifying the handicapping authority - used in most handicapping function calls
+//	NSString		association				The localized name of the handicapping association (authority)
+//	NSString		methodName				The localized name of the handicap system supported by the authority
+//	NSNumber		certifiable				A BOOL indicating whether the handicap method requires certification for use
 
-#pragma mark User Interface Info
-NSString * HandicappingAuthorityMethodName(GOLFHandicapAuthority *authority);	//	The handicapping system name
-NSString * AdjustedGrossTitle(GOLFHandicapAuthority *authority);
-NSString * DifferentialTitle(GOLFHandicapAuthority *authority);
-NSString * LocalIndexModifier(GOLFHandicapAuthority *authority);
-NSString * ExceptionalScoringModifier(GOLFHandicapAuthority *authority);
-NSString * NineHoleModifier(GOLFHandicapAuthority *authority);
-NSString * GradeTitle(GOLFHandicapAuthority *authority);
-NSString * CCRTitle(GOLFHandicapAuthority *authority);
-NSString * HandicapIndexTitle(GOLFHandicapAuthority *authority, BOOL plural);
-NSString * CourseHandicapTitle(GOLFHandicapAuthority *authority, BOOL plural);
-NSString * HandicapAllowanceTitle(GOLFHandicapAuthority *authority);
+NSString * GOLFHandicapIndexTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural);
+//	Returns a localized title for an "official" calculated handicap ("Handicap Index®", "Índice de Handicap", "Exakt Handicapen", etc.)
 
-#pragma mark Golf Australia / Australian Golf Union (AGU) functions
-NSInteger AGUGradeFromHandicap(GOLFPlayingHandicap handicap);
-NSInteger AGUBufferLimitFromHandicap(GOLFPlayingHandicap handicap);
-float AGUPerStrokeAdjustmentFromHandicap(GOLFPlayingHandicap handicap);
-//GOLFHandicapIndex AGUAnchorHandicapTo(GOLFCompetitor *competitor, NSDate *date);
-//GOLFHandicapIndex GACapPointTo(GOLFCompetitor *competitor, NSDate *date);
+NSString * GOLFPlayingHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural);
+//	Returns a localized title for the handicap strokes for play ("Playing Handicap", "Handicap de Campo", "EGA Handicap Jouer", etc.)
 
-#pragma mark Congress of National Golf Unions (CONGU) functions
-float CONGUBufferZoneLimitFromCategory(NSInteger category);
-NSInteger CONGUCategoryFromExactHandicap(GOLFHandicapIndex exactHandicap, BOOL playerIsFemale);
-float CONGUPerStrokeAdjustmentBelowBufferZoneInCategory(NSInteger category);
-float CONGUAdjustmentAboveBufferZoneInCategory(NSInteger category);
-float CONGUExceptionalScoringReductionForNetDifferentials(NSArray *netDifferentials);
+NSString * GOLFHandicapAllowanceTitle(GOLFHandicapMethodIndex handicapMethod);
+//	Returns a localized title for the allowed handicap strokes in competition ("Handicap Allowance", "Allocation de Handicap", etc.)
 
-#pragma mark European Golf Association (EGA)
-NSInteger EGACategoryFromEGAHandicap(GOLFHandicapIndex EGAHandicap, BOOL playerIsFemale);
-float EGABufferLimitFromCategory(NSInteger category, BOOL is9HoleRound);
-float EGAPerStrokeHandicapReductionFromCategory(NSInteger category);
-float EGAHandicapAdditionFromCategory(NSInteger category);
+NSString * GOLFHandicapAdjustedGrossTitle(GOLFHandicapMethodIndex handicapMethod);
+//	Returns a localized title for the intermediate adjusted score used for handicap calculation ("Adjusted Gross Score", "Puntaje Bruto Adjustado", etc.)
+
+NSString * GOLFHandicapDifferentialTitle(GOLFHandicapMethodIndex handicapMethod, BOOL abbreviated);
+//	Returns a localized title for the intermediate differential-from-scratch value used in handicap calculation ("Handicap Differential", etc.)
+
+NSString * GOLFHandicapGradeTitle(GOLFHandicapMethodIndex handicapMethod, BOOL abbreviated);
+//	Returns, for handicap systems with grades or categories, a localized title for that division ("Handicap Grade", "Klasse", etc.)
+
+NSString * GOLFHandicapCCRTitle(GOLFHandicapMethodIndex handicapMethod, BOOL abbreviated);	//	Calculated Course Rating
+//	Returns a localized title describing a daily-calculated conditions-dependent Course Rating to be applied to competitive rounds played
+
+NSString * GOLFHandicapCSSTitle(GOLFHandicapMethodIndex handicapMethod, BOOL abbreviated);	//	Competition Scratch Score
+//	Returns a localized title describing a calculated conditions-dependent expert Scratch Score for adjusting competitive rounds played
+
+NSString * GOLFHandicapSSSTitle(GOLFHandicapMethodIndex handicapMethod, BOOL abbreviated);	//	Standard Scratch Score
+//	Returns a localized descriptive title for the "standard" score expected of an expert player without a handicap
+
+//	Authority-specific data
+BOOL GOLFHandicapCertifiableAuthority(GOLFHandicapAuthority *authority);
+//	Indicates whether the use of the handicapping method of this authority requires certification
+
+NSString * GOLFHandicapMethodNameForAuthority(GOLFHandicapAuthority *authority);
+//	Returns the localized name of the handicapping method administered by this authority
+
+GOLFHandicapIndex GOLFHandicapMaximumNonLocalIndexForAuthority(GOLFHandicapAuthority *authority, BOOL playerIsFemale, BOOL for9Holes);
+//	Returns the highest "standard" or authorized handicap index allowed by this handicapping authority
+
+NSString * GOLFHandicapLocalIndexModifierForAuthority(GOLFHandicapAuthority *authority);
+//	Returns the short (1 character) modifier used to indicate that a handicap is for local (home club) use only - "L" (local), "C" (club), etc.
+
+NSString * GOLFHandicapNineHoleModifierForAuthority(GOLFHandicapAuthority *authority);
+//	Returns the short (1 character) modifier used to indicate that a handicap or score is for a 9-hole round - "N", "9", etc.
+
+NSString * GOLFHandicapGradeTitleForAuthority(GOLFHandicapAuthority *authority);
+//	Returns the localized short title identifying the classification of handicaps in some systems - "Grade", "Categorie", "Klasse", etc.
+
+NSString * GOLFHandicapExceptionalScoringModifierForAuthority(GOLFHandicapAuthority *authority);
+//	Returns the short (1 character) modified used to indicate that a handicap has been adjusted for exceptional scores in a player's scoring record
+
+NSString * GOLFRoundModifierTooltip(GOLFHandicapAuthority *authority);
+//	Returns the appropriate tooltip (with line feeds) tabulating the description of round modifiers ("* - used", "T - Torneo", "E - Estimado", etc.
+
+BOOL GOLFHandicapStablefordRequiredForAuthority(GOLFHandicapAuthority *authority);
+//	Indicates whether the handicapping method of this authority requires Stableford scores or equivalents for handicap calculation
+
+BOOL GOLFDoesTournamentAdjustmentForAuthority(GOLFHandicapAuthority *authority);
+//	Indicates whether the handicapping method of this authority accommodates adjustments or special handling for "tournament" (T) scores
+
+BOOL GOLFHandicapCCRUsedForAuthority(GOLFHandicapAuthority *authority, BOOL *required);
+//	Indicates whether the handicapping method for this authority uses (or requires) a conditions-dependent CCR or CSS returned for scores used for handicapping
+
+GOLFHandicapStrokes GOLFHandicapDefaultLimitsDifferenceForAuthority(GOLFHandicapAuthority *authority);
+//	In foursomes or partners competitions which limit the difference between partners' handicaps, the limit of that difference,
+//	usually resulting in the adjustment (reduction) of the higher-handicapped partner's handicap allowance.
+
+float GOLFHandicapDefaultLimitsPctAdjForAuthority(GOLFHandicapAuthority *authority);
+//	In foursomes or partners competitions which limit the difference between partners' handicaps, the percentage reduction (0.0 - 100.0)
+//	of BOTH partner's, or ALL teammates' handicap allowances.
+
+NSInteger GOLFHandicapDifferentialsToUseForAuthority(GOLFHandicapAuthority *authority, NSInteger numberOfScores);
+//	In handicapping methods based on the calculation of Handicap Differentials, the number of those "best" differentials to be used for handicap calculation
+//	USGA - best 10 of last 20 differentials, WHS - best 8 of last 20 differentials, etc.
+
+GOLFHandicapDifferential GOLFHandicapExceptionalScoringReductionForAuthority(GOLFHandicapAuthority *authority, GOLFHandicapIndex excessIndex, NSInteger eligibleScores);
+//	In handicapping methods with adjustments for exceptional scoring, the amount of that adjustment based on the number of eligible scores and the amount
+//	by which those scores exceed the player's expected performance.
 

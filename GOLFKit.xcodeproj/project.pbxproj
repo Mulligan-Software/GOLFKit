@@ -10,8 +10,8 @@
 		2900E04E1F9FA8B900C19542 /* TeeMarkerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2900E04D1F9FA8B900C19542 /* TeeMarkerTests.m */; };
 		2912D75F204EE3C800649734 /* GOLFHandicapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 2912D75E204EE3C800649734 /* GOLFHandicapping.m */; };
 		2912D760204EE3C800649734 /* GOLFHandicapping.m in Sources */ = {isa = PBXBuildFile; fileRef = 2912D75E204EE3C800649734 /* GOLFHandicapping.m */; };
-		2912D762204EE40D00649734 /* GOLFHandicapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 2912D761204EE40D00649734 /* GOLFHandicapping.h */; };
-		2912D763204EE40D00649734 /* GOLFHandicapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 2912D761204EE40D00649734 /* GOLFHandicapping.h */; };
+		2912D762204EE40D00649734 /* GOLFHandicapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 2912D761204EE40D00649734 /* GOLFHandicapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2912D763204EE40D00649734 /* GOLFHandicapping.h in Headers */ = {isa = PBXBuildFile; fileRef = 2912D761204EE40D00649734 /* GOLFHandicapping.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29164282204C3B7800E87478 /* GenericTeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29164281204C3B7800E87478 /* GenericTeeMarkers.xcassets */; };
 		29164283204C3BB700E87478 /* GenericTeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29164281204C3B7800E87478 /* GenericTeeMarkers.xcassets */; };
 		2930CDA31DCFEC4F0089491D /* LittleTeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2930CDA21DCFEC4F0089491D /* LittleTeeMarkers.xcassets */; };
@@ -45,6 +45,10 @@
 		294140611DDA03E300CC9605 /* GOLFTeeMarkerYellowAndBlue.icns in Resources */ = {isa = PBXBuildFile; fileRef = 294140471DDA03E300CC9605 /* GOLFTeeMarkerYellowAndBlue.icns */; };
 		294140631DDB582600CC9605 /* GOLFKitTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 294140621DDB582600CC9605 /* GOLFKitTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		294140641DDB582600CC9605 /* GOLFKitTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 294140621DDB582600CC9605 /* GOLFKitTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2954DC072050EBC2008A7306 /* GOLFUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 2954DC052050EBC2008A7306 /* GOLFUtilities.h */; };
+		2954DC082050EBC2008A7306 /* GOLFUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 2954DC052050EBC2008A7306 /* GOLFUtilities.h */; };
+		2954DC092050EBC2008A7306 /* GOLFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2954DC062050EBC2008A7306 /* GOLFUtilities.m */; };
+		2954DC0A2050EBC2008A7306 /* GOLFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2954DC062050EBC2008A7306 /* GOLFUtilities.m */; };
 		296411EC204B44CF002A70CB /* GOLFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 296411EB204B44CF002A70CB /* GOLFKit.m */; };
 		296411ED204B44CF002A70CB /* GOLFKit.m in Sources */ = {isa = PBXBuildFile; fileRef = 296411EB204B44CF002A70CB /* GOLFKit.m */; };
 		296896BD2049B0180030630C /* GOLFTeeMarkerPGA.icns in Resources */ = {isa = PBXBuildFile; fileRef = 296896BB2049AFFF0030630C /* GOLFTeeMarkerPGA.icns */; };
@@ -121,6 +125,8 @@
 		294140461DDA03E300CC9605 /* GOLFTeeMarkerYellow.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = GOLFTeeMarkerYellow.icns; path = "GOLFKit (OS X)/TeeMarker icns/GOLFTeeMarkerYellow.icns"; sourceTree = SOURCE_ROOT; };
 		294140471DDA03E300CC9605 /* GOLFTeeMarkerYellowAndBlue.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = GOLFTeeMarkerYellowAndBlue.icns; path = "GOLFKit (OS X)/TeeMarker icns/GOLFTeeMarkerYellowAndBlue.icns"; sourceTree = SOURCE_ROOT; };
 		294140621DDB582600CC9605 /* GOLFKitTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLFKitTypes.h; path = GOLFKit/GOLFKitTypes.h; sourceTree = "<group>"; };
+		2954DC052050EBC2008A7306 /* GOLFUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOLFUtilities.h; sourceTree = "<group>"; };
+		2954DC062050EBC2008A7306 /* GOLFUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOLFUtilities.m; sourceTree = "<group>"; };
 		296411EB204B44CF002A70CB /* GOLFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLFKit.m; sourceTree = "<group>"; };
 		296896BB2049AFFF0030630C /* GOLFTeeMarkerPGA.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = GOLFTeeMarkerPGA.icns; path = "GOLFKit (OS X)/TeeMarker icns/GOLFTeeMarkerPGA.icns"; sourceTree = SOURCE_ROOT; };
 		296F4DDE1F3A40A100781C46 /* GOLFTeeMarkerAzure.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = GOLFTeeMarkerAzure.icns; path = "GOLFKit (OS X)/TeeMarker icns/GOLFTeeMarkerAzure.icns"; sourceTree = SOURCE_ROOT; };
@@ -293,6 +299,8 @@
 			children = (
 				29E888AF1DCE5B0000C4A63A /* GOLFKit.h */,
 				296411EB204B44CF002A70CB /* GOLFKit.m */,
+				2954DC052050EBC2008A7306 /* GOLFUtilities.h */,
+				2954DC062050EBC2008A7306 /* GOLFUtilities.m */,
 				29C0E3901F9E921F0009E23C /* Categories */,
 				2912D764204EE95400649734 /* Handicapping */,
 				29E888D21DCE654800C4A63A /* UI */,
@@ -347,6 +355,7 @@
 				29A338081DCE81D70074A064 /* GOLFTeeMarkers.h in Headers */,
 				294140631DDB582600CC9605 /* GOLFKitTypes.h in Headers */,
 				29E888CF1DCE611600C4A63A /* GOLFColors.h in Headers */,
+				2954DC072050EBC2008A7306 /* GOLFUtilities.h in Headers */,
 				29C0E38C1F9E90580009E23C /* NSNumber+GOLFExtensions.h in Headers */,
 				2912D762204EE40D00649734 /* GOLFHandicapping.h in Headers */,
 				29E888BD1DCE5B0000C4A63A /* GOLFKit.h in Headers */,
@@ -360,6 +369,7 @@
 				29A338091DCE81D70074A064 /* GOLFTeeMarkers.h in Headers */,
 				294140641DDB582600CC9605 /* GOLFKitTypes.h in Headers */,
 				29A338001DCE74570074A064 /* GOLFColors.h in Headers */,
+				2954DC082050EBC2008A7306 /* GOLFUtilities.h in Headers */,
 				29C0E38D1F9E90580009E23C /* NSNumber+GOLFExtensions.h in Headers */,
 				2912D763204EE40D00649734 /* GOLFHandicapping.h in Headers */,
 				29A338021DCE74600074A064 /* GOLFKit.h in Headers */,
@@ -544,6 +554,7 @@
 				29A3380A1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */,
 				29C0E38E1F9E90580009E23C /* NSNumber+GOLFExtensions.m in Sources */,
 				29E888D01DCE611600C4A63A /* GOLFColors.m in Sources */,
+				2954DC092050EBC2008A7306 /* GOLFUtilities.m in Sources */,
 				2912D75F204EE3C800649734 /* GOLFHandicapping.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,6 +576,7 @@
 				29A3380B1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */,
 				29C0E38F1F9E90580009E23C /* NSNumber+GOLFExtensions.m in Sources */,
 				29A338011DCE745B0074A064 /* GOLFColors.m in Sources */,
+				2954DC0A2050EBC2008A7306 /* GOLFUtilities.m in Sources */,
 				2912D760204EE3C800649734 /* GOLFHandicapping.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
