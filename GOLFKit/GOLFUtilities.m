@@ -30,7 +30,7 @@ NSString * GOLFUnlocalizedCurrentCountry(void) {
 //	something like: "JFMAMJJASOND"
 //=================================================================
 NSString * GOLFMonthAbbreviationString(void) {
-	NSDateFormatter *dateFormatter = [[[NSDateFormatter alloc] init] ah_autorelease];
+	NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
 	[dateFormatter setFormatterBehavior:NSDateFormatterBehavior10_4];
 	[dateFormatter setLocale:[NSLocale currentLocale]];	//	Set us up for the user's locale
 	NSString *returnString = [NSString string];	//	Start empty

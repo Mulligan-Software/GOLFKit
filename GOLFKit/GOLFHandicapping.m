@@ -11,6 +11,18 @@
 #import "GOLFHandicapping.h"
 
 //	Globals
+GOLFHandicapAuthority * const GOLFHandicapAuthorityUSGA			= @"USGA";
+GOLFHandicapAuthority * const GOLFHandicapAuthorityRCGA			= @"RCGA";
+GOLFHandicapAuthority * const GOLFHandicapAuthorityAGU			= @"AGU";
+GOLFHandicapAuthority * const GOLFHandicapAuthorityEGA			= @"EGA";
+GOLFHandicapAuthority * const GOLFHandicapAuthorityCONGU		= @"CONGU";
+GOLFHandicapAuthority * const GOLFHandicapAuthorityWHS			= @"WHS";
+#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
+GOLFHandicapAuthority * const GOLFHandicapAuthorityMulligan		= @"MULLIGAN";
+GOLFHandicapAuthority * const GOLFHandicapAuthorityPersonal		= @"PERSONAL";
+GOLFHandicapAuthority * const GOLFHandicapAuthoritySecondBest	= @"SECONDBEST";
+#endif
+
 static NSArray *cachedGOLFHandicapAuthorities = nil;
 
 //=================================================================
@@ -55,7 +67,37 @@ GOLFHandicapAuthority * GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodI
 }
 
 //=================================================================
-//	CertifiableAuthority
+//	GOLFHandicapBestMethodIndexFromAuthority
+//=================================================================
+GOLFHandicapMethodIndex GOLFHandicapBestMethodIndexFromAuthority(GOLFHandicapAuthority *authority) {
+	if (authority && [authority isKindOfClass:[GOLFHandicapAuthority class]]) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityUSGA]) {
+			return GOLFHandicapMethodUSGA;
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityRCGA]) {
+			return GOLFHandicapMethodRCGA;
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityAGU]) {
+			return GOLFHandicapMethodAGU;
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityEGA]) {
+			return GOLFHandicapMethodEGA;
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityCONGU]) {
+			return GOLFHandicapMethodCONGU;
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
+			return GOLFHandicapMethodWHS;
+#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
+			return GOLFHandicapMethodMulligan;
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityPersonal]) {
+			return GOLFHandicapMethodPersonal;
+		} else if ([authority isEqualToString:GOLFHandicapSecondBest]) {
+			return GOLFHandicapMethodSecondBest;
+#endif
+		}
+	}
+	return GOLFHandicapMethodUSGA;
+}
+
+//=================================================================
+//	GOLFHandicapCertifiableAuthority
 //=================================================================
 BOOL GOLFHandicapCertifiableAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
@@ -77,7 +119,7 @@ NSArray * GOLFHandicapAuthorities(void) {
 		NSMutableArray *workingArray = [NSMutableArray arrayWithObjects:
 				[NSDictionary dictionaryWithObjectsAndKeys:
 						[NSNumber numberWithUnsignedInteger:GOLFHandicapMethodUSGA], @"methodIndex",
-						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodUSGA), @"authority",
+						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodUSGA), @"handicapAuthority",
 						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodUSGA), @"authorityDisplay",
 						NSLocalizedStringFromTableInBundle(@"HANDICAP_ASSOCIATION_USGA", @"GOLFKit", ourBundle, @""), @"association",
 						NSLocalizedStringFromTableInBundle(@"HANDICAP_METHOD_USGA", @"GOLFKit", ourBundle, @""), @"methodName",
@@ -85,7 +127,7 @@ NSArray * GOLFHandicapAuthorities(void) {
 						nil],
 				[NSDictionary dictionaryWithObjectsAndKeys:
 						[NSNumber numberWithUnsignedInteger:GOLFHandicapMethodRCGA], @"methodIndex",
-						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodRCGA), @"authority",
+						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodRCGA), @"handicapAuthority",
 						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodRCGA), @"authorityDisplay",
 						NSLocalizedStringFromTableInBundle(@"HANDICAP_ASSOCIATION_RCGA", @"GOLFKit", ourBundle, @""), @"association",
 						NSLocalizedStringFromTableInBundle(@"HANDICAP_METHOD_RCGA", @"GOLFKit", ourBundle, @""), @"methodName",
@@ -93,7 +135,7 @@ NSArray * GOLFHandicapAuthorities(void) {
 						nil],
 				[NSDictionary dictionaryWithObjectsAndKeys:
 						[NSNumber numberWithUnsignedInteger:GOLFHandicapMethodAGU], @"methodIndex",
-						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodAGU), @"authority",
+						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodAGU), @"handicapAuthority",
 						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodAGU), @"authorityDisplay",
 						NSLocalizedStringFromTableInBundle(@"HANDICAP_ASSOCIATION_AGU", @"GOLFKit", ourBundle, @""), @"association",
 						NSLocalizedStringFromTableInBundle(@"HANDICAP_METHOD_AGU", @"GOLFKit", ourBundle, @""), @"methodName",
@@ -101,7 +143,7 @@ NSArray * GOLFHandicapAuthorities(void) {
 						nil],
 				[NSDictionary dictionaryWithObjectsAndKeys:
 						[NSNumber numberWithUnsignedInteger:GOLFHandicapMethodEGA], @"methodIndex",
-						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodEGA), @"authority",
+						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodEGA), @"handicapAuthority",
 						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodEGA), @"authorityDisplay",
 						NSLocalizedStringFromTableInBundle(@"HANDICAP_ASSOCIATION_EGA", @"GOLFKit", ourBundle, @""), @"association",
 						NSLocalizedStringFromTableInBundle(@"HANDICAP_METHOD_EGA", @"GOLFKit", ourBundle, @""), @"methodName",
@@ -109,7 +151,7 @@ NSArray * GOLFHandicapAuthorities(void) {
 						nil],
 				[NSDictionary dictionaryWithObjectsAndKeys:
 						[NSNumber numberWithUnsignedInteger:GOLFHandicapMethodCONGU], @"methodIndex",
-						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodCONGU), @"authority",
+						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodCONGU), @"handicapAuthority",
 						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodCONGU), @"authorityDisplay",
 						NSLocalizedStringFromTableInBundle(@"HANDICAP_ASSOCIATION_CONGU", @"GOLFKit", ourBundle, @""), @"association",
 						NSLocalizedStringFromTableInBundle(@"HANDICAP_METHOD_CONGU", @"GOLFKit", ourBundle, @""), @"methodName",
@@ -117,7 +159,7 @@ NSArray * GOLFHandicapAuthorities(void) {
 						nil],
 				[NSDictionary dictionaryWithObjectsAndKeys:
 						[NSNumber numberWithUnsignedInteger:GOLFHandicapMethodWHS], @"methodIndex",
-						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodWHS), @"authority",
+						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodWHS), @"handicapAuthority",
 						[NSString string], @"authorityDisplay",		//	Temporary?
 						NSLocalizedStringFromTableInBundle(@"HANDICAP_METHOD_WHS", @"GOLFKit", ourBundle, @""), @"association",	//	Temporary?
 						NSLocalizedStringFromTableInBundle(@"HANDICAP_METHOD_WHS", @"GOLFKit", ourBundle, @""), @"methodName",
@@ -127,19 +169,19 @@ NSArray * GOLFHandicapAuthorities(void) {
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 		[workingArray addObject:[NSDictionary dictionaryWithObjectsAndKeys:
 					[NSNumber numberWithUnsignedInteger:GOLFHandicapMethodMulligan], @"methodIndex",
-					GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodMulligan), @"authority",
+					GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodMulligan), @"handicapAuthority",
 					NSLocalizedStringFromTableInBundle(@"HANDICAP_METHOD_MULLIGAN", @"GOLFKit", ourBundle, @""), @"methodName",
 					nil]];
 		
 		[workingArray addObject:[NSDictionary dictionaryWithObjectsAndKeys:
 					[NSNumber numberWithUnsignedInteger:GOLFHandicapMethodPersonal], @"methodIndex",
-					GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodPersonal), @"authority",
+					GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodPersonal), @"handicapAuthority",
 					NSLocalizedStringFromTableInBundle(@"HANDICAP_METHOD_PERSONAL", @"GOLFKit", ourBundle, @""), @"methodName",
 					nil]];
 
 		[workingArray addObject:[NSDictionary dictionaryWithObjectsAndKeys:
 					[NSNumber numberWithUnsignedInteger:GOLFHandicapMethodSecondBest], @"methodIndex",
-					GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodSecondBest), @"authority",
+					GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodSecondBest), @"handicapAuthority",
 					NSLocalizedStringFromTableInBundle(@"HANDICAP_METHOD_2ND_BEST", @"GOLFKit", ourBundle, @""), @"methodName",
 					nil]];
 #endif
@@ -154,7 +196,7 @@ NSArray * GOLFHandicapAuthorities(void) {
 NSString * GOLFHandicapMethodNameForAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
 		for (NSDictionary *authorityDict in GOLFHandicapAuthorities()) {
-			if ([authority isEqualToString:[authorityDict objectForKey:@"authority"]])
+			if ([authority isEqualToString:[authorityDict objectForKey:@"handicapAuthority"]])
 				return [authorityDict objectForKey:@"methodName"];
 		}
 	}
@@ -281,7 +323,7 @@ NSString * GOLFHandicapSSSTitle(GOLFHandicapMethodIndex handicapMethod, BOOL abb
 }
 
 //=================================================================
-//	MaximumNonLocalIndex
+//	GOLFHandicapMaximumNonLocalIndexForAuthority
 //=================================================================
 GOLFHandicapIndex GOLFHandicapMaximumNonLocalIndexForAuthority(GOLFHandicapAuthority *authority, BOOL playerIsFemale, BOOL for9Holes) {
 	if (authority) {
@@ -324,7 +366,7 @@ GOLFHandicapIndex GOLFHandicapMaximumNonLocalIndexForAuthority(GOLFHandicapAutho
 }
 
 //=================================================================
-//	LocalIndexModifier
+//	GOLFHandicapLocalIndexModifierForAuthority
 //=================================================================
 NSString * GOLFHandicapLocalIndexModifierForAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
@@ -350,7 +392,7 @@ NSString * GOLFHandicapLocalIndexModifierForAuthority(GOLFHandicapAuthority *aut
 }
 
 //=================================================================
-//	NineHoleModifier
+//	GOLFHandicapNineHoleModifierForAuthority
 //=================================================================
 NSString * GOLFHandicapNineHoleModifierForAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
@@ -372,7 +414,7 @@ NSString * GOLFHandicapNineHoleModifierForAuthority(GOLFHandicapAuthority *autho
 }
 
 //=================================================================
-//	GradeTitle
+//	GOLFHandicapGradeTitleForAuthority
 //=================================================================
 NSString * GOLFHandicapGradeTitleForAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
@@ -386,7 +428,7 @@ NSString * GOLFHandicapGradeTitleForAuthority(GOLFHandicapAuthority *authority) 
 }
 
 //=================================================================
-//	ExceptionalScoringModifier
+//	GOLFHandicapExceptionalScoringModifierForAuthority
 //=================================================================
 NSString * GOLFHandicapExceptionalScoringModifierForAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
@@ -400,7 +442,7 @@ NSString * GOLFHandicapExceptionalScoringModifierForAuthority(GOLFHandicapAuthor
 }
 
 //=================================================================
-//	RoundModifierTooltip
+//	GOLFRoundModifierTooltip
 //=================================================================
 NSString * GOLFRoundModifierTooltip(GOLFHandicapAuthority *authority) {
 	if (authority) {
@@ -430,7 +472,7 @@ NSString * GOLFRoundModifierTooltip(GOLFHandicapAuthority *authority) {
 }
 
 //=================================================================
-//	StablefordRequiredForHandicapping
+//	GOLFHandicapStablefordRequiredForAuthority
 //=================================================================
 BOOL GOLFHandicapStablefordRequiredForAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
@@ -451,7 +493,7 @@ BOOL GOLFHandicapStablefordRequiredForAuthority(GOLFHandicapAuthority *authority
 }
 
 //=================================================================
-//	DoesTournamentAdjustment
+//	GOLFDoesTournamentAdjustmentForAuthority
 //=================================================================
 BOOL GOLFDoesTournamentAdjustmentForAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
@@ -471,7 +513,7 @@ BOOL GOLFDoesTournamentAdjustmentForAuthority(GOLFHandicapAuthority *authority) 
 }
 
 //=================================================================
-//	CCRUsedForHandicapping
+//	GOLFHandicapCCRUsedForAuthority
 //=================================================================
 BOOL GOLFHandicapCCRUsedForAuthority(GOLFHandicapAuthority *authority, BOOL *required) {
 	if (authority) {
@@ -506,7 +548,7 @@ BOOL GOLFHandicapCCRUsedForAuthority(GOLFHandicapAuthority *authority, BOOL *req
 }
 
 //=================================================================
-//	DefaultHandicapLimitsDifference
+//	GOLFHandicapDefaultLimitsDifferenceForAuthority
 //=================================================================
 GOLFHandicapStrokes GOLFHandicapDefaultLimitsDifferenceForAuthority(GOLFHandicapAuthority *authority) {
 	GOLFHandicapStrokes difference = 8;
@@ -525,7 +567,7 @@ GOLFHandicapStrokes GOLFHandicapDefaultLimitsDifferenceForAuthority(GOLFHandicap
 }
 
 //=================================================================
-//	DefaultHandicapLimitsPctAdj
+//	GOLFHandicapDefaultLimitsPctAdjForAuthority
 //=================================================================
 float GOLFHandicapDefaultLimitsPctAdjForAuthority(GOLFHandicapAuthority *authority) {
 	float adjustment = 10.0;
@@ -544,7 +586,7 @@ float GOLFHandicapDefaultLimitsPctAdjForAuthority(GOLFHandicapAuthority *authori
 }
 
 //=================================================================
-//	DifferentialsToUseFrom
+//	GOLFHandicapDifferentialsToUseForAuthority
 //=================================================================
 NSInteger GOLFHandicapDifferentialsToUseForAuthority(GOLFHandicapAuthority *authority, NSInteger numberOfScores) {
 	if (authority) {
@@ -626,7 +668,7 @@ NSInteger GOLFHandicapDifferentialsToUseForAuthority(GOLFHandicapAuthority *auth
 }
 
 //=================================================================
-//	HandicapReductionFrom
+//	GOLFHandicapExceptionalScoringReductionForAuthority
 //=================================================================
 GOLFHandicapDifferential GOLFHandicapExceptionalScoringReductionForAuthority(GOLFHandicapAuthority *authority, GOLFHandicapIndex excessIndex, NSInteger eligibleScores) {
 	if (authority) {

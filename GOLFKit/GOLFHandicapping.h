@@ -80,11 +80,29 @@ typedef float GOLFHandicapIndex;			//	The portable course and player independent
 typedef NSInteger GOLFPlayingHandicap;		//	The whole unadjusted course and player-dependent strokes calculated for a player
 typedef NSInteger GOLFHandicapStrokes;		//	Any value related to strokes earned, taken or used
 
+extern GOLFHandicapAuthority * const ScoresExportControllerDidFinishNotification;
+
+extern GOLFHandicapAuthority * const GOLFHandicapAuthorityUSGA;
+extern GOLFHandicapAuthority * const GOLFHandicapAuthorityRCGA;
+extern GOLFHandicapAuthority * const GOLFHandicapAuthorityAGU;
+extern GOLFHandicapAuthority * const GOLFHandicapAuthorityEGA;
+extern GOLFHandicapAuthority * const GOLFHandicapAuthorityCONGU;
+extern GOLFHandicapAuthority * const GOLFHandicapAuthorityWHS;
+#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
+extern GOLFHandicapAuthority * const GOLFHandicapAuthorityMulligan;
+extern GOLFHandicapAuthority * const GOLFHandicapAuthorityPersonal;
+extern GOLFHandicapAuthority * const GOLFHandicapAuthoritySecondBest;
+#endif
+
 GOLFHandicapAuthority * GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodIndex methodIndex);
 //	Returns the GOLFHandicapAuthority mnemonic that best represents the handicapping method indicated by the methodIndex.
 //	The returned string mnemonic may be used to identify the organization responsible for administering the handicapping
 //	system, or to lookup or calculate handicapping information related to the handicapping method.
 //	Returns nil if the methodIndex is zero (GOLFHandicapMethodNone), unknown (GOLFHandicapMethodUnknown) or invalid.
+
+GOLFHandicapMethodIndex GOLFHandicapBestMethodIndexFromAuthority(GOLFHandicapAuthority *authority);
+//	Returns the best (guess/most likely) GOLFHandicapMethodIndex for a specified handicap authority mnemonic, whether good, bad, or missing
+//	Will NOT return GOLFHandicapMethodUnknown
 
 NSString * GOLFHandicapMethodName(GOLFHandicapAuthority *authority);
 //	Returns the localized name of the handicap system or method supported by the provided GOLFHandicapAuthority
@@ -96,8 +114,8 @@ NSArray * GOLFHandicapAuthorities(void);	//	An array of dictionaries
 //	Type			Key						Description
 //	--------------	----------------------	---------------------------------
 //	NSNumber		methodIndex				GOLFHandicapMethodIndex identifying the handicapping authority
-//	NSString		authority				A mnemonic identifying the handicapping authority - used in most handicapping function calls
-//	NSString		authorityDisplay		A mnemonic identifying the handicapping authority - used in most handicapping function calls
+//	NSString		handicapAuthority		A mnemonic identifying the handicapping authority - used in most handicapping function calls
+//	NSString		authorityDisplay		A mnemonic for display identifying the handicapping authority
 //	NSString		association				The localized name of the handicapping association (authority)
 //	NSString		methodName				The localized name of the handicap system supported by the authority
 //	NSNumber		certifiable				A BOOL indicating whether the handicap method requires certification for use
