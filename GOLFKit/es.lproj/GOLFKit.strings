@@ -119,3 +119,7 @@
 "TOOLTIP_ROUNDS_MODIFIER_EGA" = "* - utilizado\nT - torneo";
 "TOOLTIP_ROUNDS_MODIFIER_MULLIGAN" = "* - utilizado\nA - allá\nT - torneo";
 
+//	Phrases
+"CURRENT_%@_TITLE" = "%@ Actual";
+"CURRENT_%@_TITLE_PLURAL" = "%@ Actuales";
+

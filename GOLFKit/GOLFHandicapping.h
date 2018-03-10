@@ -80,18 +80,16 @@ typedef float GOLFHandicapIndex;			//	The portable course and player independent
 typedef NSInteger GOLFPlayingHandicap;		//	The whole unadjusted course and player-dependent strokes calculated for a player
 typedef NSInteger GOLFHandicapStrokes;		//	Any value related to strokes earned, taken or used
 
-extern GOLFHandicapAuthority * const ScoresExportControllerDidFinishNotification;
-
-extern GOLFHandicapAuthority * const GOLFHandicapAuthorityUSGA;
-extern GOLFHandicapAuthority * const GOLFHandicapAuthorityRCGA;
-extern GOLFHandicapAuthority * const GOLFHandicapAuthorityAGU;
-extern GOLFHandicapAuthority * const GOLFHandicapAuthorityEGA;
-extern GOLFHandicapAuthority * const GOLFHandicapAuthorityCONGU;
-extern GOLFHandicapAuthority * const GOLFHandicapAuthorityWHS;
+extern GOLFHandicapAuthority * const GOLFHandicapAuthorityUSGA;			//	"USGA"
+extern GOLFHandicapAuthority * const GOLFHandicapAuthorityRCGA;			//	"RCGA"
+extern GOLFHandicapAuthority * const GOLFHandicapAuthorityAGU;			//	"AGU"
+extern GOLFHandicapAuthority * const GOLFHandicapAuthorityEGA;			//	"EGA"
+extern GOLFHandicapAuthority * const GOLFHandicapAuthorityCONGU;		//	"CONGU"
+extern GOLFHandicapAuthority * const GOLFHandicapAuthorityWHS;			//	"WHS"
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
-extern GOLFHandicapAuthority * const GOLFHandicapAuthorityMulligan;
-extern GOLFHandicapAuthority * const GOLFHandicapAuthorityPersonal;
-extern GOLFHandicapAuthority * const GOLFHandicapAuthoritySecondBest;
+extern GOLFHandicapAuthority * const GOLFHandicapAuthorityMulligan;		//	"MULLIGAN"
+extern GOLFHandicapAuthority * const GOLFHandicapAuthorityPersonal;		//	"PERSONAL"
+extern GOLFHandicapAuthority * const GOLFHandicapAuthoritySecondBest;	//	"SECONDBEST"
 #endif
 
 GOLFHandicapAuthority * GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodIndex methodIndex);
@@ -122,6 +120,9 @@ NSArray * GOLFHandicapAuthorities(void);	//	An array of dictionaries
 
 NSString * GOLFHandicapIndexTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural);
 //	Returns a localized title for an "official" calculated handicap ("Handicap Index®", "Índice de Handicap", "Exakt Handicapen", etc.)
+
+NSString * GOLFHandicapCurrentIndexTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural);
+//	Returns a localized title as above with a "current" qualifier ("Current Handicap Index", "Índice de Handicap Actual", "Aktuellen Exakt Handicapen")
 
 NSString * GOLFPlayingHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural);
 //	Returns a localized title for the handicap strokes for play ("Playing Handicap", "Handicap de Campo", "EGA Handicap Jouer", etc.)

@@ -31,32 +31,32 @@ static NSArray *cachedGOLFHandicapAuthorities = nil;
 GOLFHandicapAuthority * GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodIndex methodIndex) {
 	switch (methodIndex) {
   		case GOLFHandicapMethodUSGA:
-    		return (GOLFHandicapAuthority *)@"USGA";
+    		return (GOLFHandicapAuthority *)GOLFHandicapAuthorityUSGA;
 
   		case GOLFHandicapMethodRCGA:
-    		return (GOLFHandicapAuthority *)@"RCGA";
+    		return (GOLFHandicapAuthority *)GOLFHandicapAuthorityRCGA;
 
   		case GOLFHandicapMethodAGU:
-    		return (GOLFHandicapAuthority *)@"AGU";
+    		return (GOLFHandicapAuthority *)GOLFHandicapAuthorityAGU;
 
   		case GOLFHandicapMethodEGA:
-    		return (GOLFHandicapAuthority *)@"EGA";
+    		return (GOLFHandicapAuthority *)GOLFHandicapAuthorityEGA;
 
   		case GOLFHandicapMethodCONGU:
-    		return (GOLFHandicapAuthority *)@"CONGU";
+    		return (GOLFHandicapAuthority *)GOLFHandicapAuthorityCONGU;
 
   		case GOLFHandicapMethodWHS:
-    		return (GOLFHandicapAuthority *)@"WHS";
+    		return (GOLFHandicapAuthority *)GOLFHandicapAuthorityWHS;
 
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
   		case GOLFHandicapMethodMulligan:
-    		return (GOLFHandicapAuthority *)@"MULLIGAN";
+    		return (GOLFHandicapAuthority *)GOLFHandicapAuthorityMulligan;
 
   		case GOLFHandicapMethodPersonal:
-    		return (GOLFHandicapAuthority *)@"PERSONAL";
+    		return (GOLFHandicapAuthority *)GOLFHandicapAuthorityPersonal;
 
   		case GOLFHandicapMethodSecondBest:
-    		return (GOLFHandicapAuthority *)@"SECONDBEST";
+    		return (GOLFHandicapAuthority *)GOLFHandicapAuthoritySecondBest;
 #endif
 
   		case GOLFHandicapMethodNone:
@@ -101,9 +101,9 @@ GOLFHandicapMethodIndex GOLFHandicapBestMethodIndexFromAuthority(GOLFHandicapAut
 //=================================================================
 BOOL GOLFHandicapCertifiableAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
-		if ([authority isEqualToString:@"USGA"] || [authority isEqualToString:@"RCGA"]
-				|| [authority isEqualToString:@"AGU"] || [authority isEqualToString:@"CONGU"]
-				|| [authority isEqualToString:@"EGA"]) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityUSGA] || [authority isEqualToString:GOLFHandicapAuthorityRCGA]
+				|| [authority isEqualToString:GOLFHandicapAuthorityAGU] || [authority isEqualToString:GOLFHandicapAuthorityCONGU]
+				|| [authority isEqualToString:GOLFHandicapAuthorityEGA]) {
 			return YES;
 		}
 	}
@@ -243,6 +243,15 @@ NSString * GOLFHandicapIndexTitle(GOLFHandicapMethodIndex handicapMethod, BOOL p
 }
 
 //=================================================================
+//	GOLFHandicapCurrentIndexTitle
+//=================================================================
+NSString * GOLFHandicapCurrentIndexTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural) {
+	NSString *titleString = GOLFHandicapIndexTitle(handicapMethod, plural);	//	This and the format string must handle capitalization
+	NSString *currentFormat = NSLocalizedStringFromTableInBundle((plural ? @"CURRENT_%@_TITLE_PLURAL" : @"CURRENT_%@_TITLE"), @"GOLFKit", GOLFKitBundle(), @"");
+	return [NSString stringWithFormat:currentFormat, titleString];
+}
+
+//=================================================================
 //	GOLFPlayingHandicapTitle
 //=================================================================
 NSString * GOLFPlayingHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural) {
@@ -269,7 +278,7 @@ NSString * GOLFPlayingHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOOL
   		case GOLFHandicapMethodPersonal:
 #endif
   		default:
-    		return NSLocalizedStringFromTableInBundle((plural ? @"PLAYING_HANDICAPS_TITLE" : @"PLAYING_HANDICAP_TITLE"), @"GOLFKit", GOLFKitBundle(), @"");
+    		return NSLocalizedStringFromTableInBundle((plural ? @"TITLE_HANDICAP_PLAYING_PLURAL" : @"TITLE_HANDICAP_PLAYING"), @"GOLFKit", GOLFKitBundle(), @"");
 	}
 }
 
@@ -327,34 +336,34 @@ NSString * GOLFHandicapSSSTitle(GOLFHandicapMethodIndex handicapMethod, BOOL abb
 //=================================================================
 GOLFHandicapIndex GOLFHandicapMaximumNonLocalIndexForAuthority(GOLFHandicapAuthority *authority, BOOL playerIsFemale, BOOL for9Holes) {
 	if (authority) {
-		if ([authority isEqualToString:@"WHS"] || [authority isEqualToString:@"EGA"]) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityWHS] || [authority isEqualToString:GOLFHandicapAuthorityEGA]) {
 			//	Gender-independent
 			return (for9Holes ? 27.0 : 54.0);
-		} else if ([authority isEqualToString:@"USGA"] || [authority isEqualToString:@"RCGA"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityUSGA] || [authority isEqualToString:GOLFHandicapAuthorityRCGA]) {
 			if (playerIsFemale)
 				return (for9Holes ? 20.2 : 40.4);
 			else
 				return (for9Holes ? 18.2 : 36.4);
-		} else if ([authority isEqualToString:@"AGU"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityAGU]) {
 			if (playerIsFemale)
 				return (for9Holes ? 22.7 : 45.4);
 			else
 				return (for9Holes ? 18.2 : 36.4);
-		} else if ([authority isEqualToString:@"CONGU"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityCONGU]) {
 			if (playerIsFemale)
 				return (for9Holes ? 18.0 : 36.0);
 			else
 				return (for9Holes ? 14.0 : 28.0);
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
-		} else if ([authority isEqualToString:@"MULLIGAN"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
 			//	Gender-independent
 			return (for9Holes ? 20.0 : 40.0);
-		} else if ([authority isEqualToString:@"SECONDBEST"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthoritySecondBest]) {
 			if (playerIsFemale)
 				return (for9Holes ? 20.0 : 40.0);
 			else
 				return (for9Holes ? 18.0 : 36.0);
-		} else if ([authority isEqualToString:@"PERSONAL"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityPersonal]) {
 			float max = (playerIsFemale
 					? [[[NSUserDefaults standardUserDefaults] objectForKey:@"PHMaximumWomensStandard"] floatValue]
 					: [[[NSUserDefaults standardUserDefaults] objectForKey:@"PHMaximumMensStandard"] floatValue]);
@@ -370,20 +379,20 @@ GOLFHandicapIndex GOLFHandicapMaximumNonLocalIndexForAuthority(GOLFHandicapAutho
 //=================================================================
 NSString * GOLFHandicapLocalIndexModifierForAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
-		if ([authority isEqualToString:@"WHS"]) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
 			return @"L";	//	"Local"
-		} else if ([authority isEqualToString:@"USGA"] || [authority isEqualToString:@"RCGA"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityUSGA] || [authority isEqualToString:GOLFHandicapAuthorityRCGA]) {
 			return @"L";	//	"Local"
-		} else if ([authority isEqualToString:@"AGU"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityAGU]) {
 			return @"L";	//	"Local"
-		} else if ([authority isEqualToString:@"EGA"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityEGA]) {
 			return @"C";	//	"Club"
-		} else if ([authority isEqualToString:@"CONGU"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityCONGU]) {
 			return @"C";	//	"Club"
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
-		} else if ([authority isEqualToString:@"MULLIGAN"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
 			return @"L";	//	"Local"
-		} else if ([authority isEqualToString:@"PERSONAL"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityPersonal]) {
 			return [[NSUserDefaults standardUserDefaults] objectForKey:@"PHNonStandardModifier"];
 #endif
 		}
@@ -396,16 +405,16 @@ NSString * GOLFHandicapLocalIndexModifierForAuthority(GOLFHandicapAuthority *aut
 //=================================================================
 NSString * GOLFHandicapNineHoleModifierForAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
-		if ([authority isEqualToString:@"WHS"]) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
 			return @"N";
-		} else if ([authority isEqualToString:@"USGA"] || [authority isEqualToString:@"RCGA"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityUSGA] || [authority isEqualToString:GOLFHandicapAuthorityRCGA]) {
 			return @"N";
-		} else if ([authority isEqualToString:@"EGA"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityEGA]) {
 			return @"N";
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
-		} else if ([authority isEqualToString:@"MULLIGAN"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
 			return @"N";
-		} else if ([authority isEqualToString:@"PERSONAL"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityPersonal]) {
 			return @"N";
 #endif
 		}
@@ -418,9 +427,9 @@ NSString * GOLFHandicapNineHoleModifierForAuthority(GOLFHandicapAuthority *autho
 //=================================================================
 NSString * GOLFHandicapGradeTitleForAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
-		if ([authority isEqualToString:@"WHS"]) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
 			return NSLocalizedStringFromTableInBundle(@"TITLE_HANDICAP_GRADE_ABBR", @"GOLFKit", GOLFKitBundle(), @"");
-		} else if ([authority isEqualToString:@"EGA"] || [authority isEqualToString:@"CONGU"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityEGA] || [authority isEqualToString:GOLFHandicapAuthorityCONGU]) {
 			return NSLocalizedStringFromTableInBundle(@"TITLE_HANDICAP_CATEGORY_ABBR", @"GOLFKit", GOLFKitBundle(), @"");
 		}
 	}
@@ -432,9 +441,9 @@ NSString * GOLFHandicapGradeTitleForAuthority(GOLFHandicapAuthority *authority) 
 //=================================================================
 NSString * GOLFHandicapExceptionalScoringModifierForAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
-		if (([authority isEqualToString:@"USGA"]) || ([authority isEqualToString:@"RCGA"])) {
+		if (([authority isEqualToString:GOLFHandicapAuthorityUSGA]) || ([authority isEqualToString:GOLFHandicapAuthorityRCGA])) {
 			return @"R";	//	"Restricted"
-		} else if ([authority isEqualToString:@"CONGU"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityCONGU]) {
 			return @"E";	//	"Exceptional Scoring Reduction"
 		}
 	}
@@ -446,24 +455,24 @@ NSString * GOLFHandicapExceptionalScoringModifierForAuthority(GOLFHandicapAuthor
 //=================================================================
 NSString * GOLFRoundModifierTooltip(GOLFHandicapAuthority *authority) {
 	if (authority) {
-		if ([authority isEqualToString:@"WHS"]) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
 			return NSLocalizedStringFromTableInBundle(@"TOOLTIP_ROUNDS_MODIFIER_WHS", @"GOLFKit", GOLFKitBundle(), @"");
-		} else if ([authority isEqualToString:@"USGA"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityUSGA]) {
 			return NSLocalizedStringFromTableInBundle(@"TOOLTIP_ROUNDS_MODIFIER_USGA", @"GOLFKit", GOLFKitBundle(), @"");
-		} else if ([authority isEqualToString:@"RCGA"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityRCGA]) {
 			return NSLocalizedStringFromTableInBundle(@"TOOLTIP_ROUNDS_MODIFIER_RCGA", @"GOLFKit", GOLFKitBundle(), @"");
-		} else if ([authority isEqualToString:@"AGU"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityAGU]) {
 			return NSLocalizedStringFromTableInBundle(@"TOOLTIP_ROUNDS_MODIFIER_AGU", @"GOLFKit", GOLFKitBundle(), @"");
-		} else if ([authority isEqualToString:@"CONGU"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityCONGU]) {
 			return NSLocalizedStringFromTableInBundle(@"TOOLTIP_ROUNDS_MODIFIER_CONGU", @"GOLFKit", GOLFKitBundle(), @"");
-		} else if ([authority isEqualToString:@"EGA"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityEGA]) {
 			return NSLocalizedStringFromTableInBundle(@"TOOLTIP_ROUNDS_MODIFIER_EGA", @"GOLFKit", GOLFKitBundle(), @"");
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
-		} else if ([authority isEqualToString:@"PERSONAL"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityPersonal]) {
 			return NSLocalizedStringFromTableInBundle(@"TOOLTIP_ROUNDS_MODIFIER_USGA", @"GOLFKit", GOLFKitBundle(), @"");
-		} else if ([authority isEqualToString:@"MULLIGAN"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
 			return NSLocalizedStringFromTableInBundle(@"TOOLTIP_ROUNDS_MODIFIER_MULLIGAN", @"GOLFKit", GOLFKitBundle(), @"");
-		} else if ([authority isEqualToString:@"SECONDBEST"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthoritySecondBest]) {
 			return NSLocalizedStringFromTableInBundle(@"TOOLTIP_ROUNDS_MODIFIER_EGA", @"GOLFKit", GOLFKitBundle(), @"");
 #endif
 		}
@@ -476,15 +485,15 @@ NSString * GOLFRoundModifierTooltip(GOLFHandicapAuthority *authority) {
 //=================================================================
 BOOL GOLFHandicapStablefordRequiredForAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
-		if ([authority isEqualToString:@"EGA"]) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityEGA]) {
 			//	Stableford-based handicap computations
 			return YES;
-		} else if ([authority isEqualToString:@"AGU"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityAGU]) {
 			return NO;	//	Since Sep 2011
-		} else if ([authority isEqualToString:@"CONGU"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityCONGU]) {
 			return YES;	//	Since 2016
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
-		} else if ([authority isEqualToString:@"PERSONAL"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityPersonal]) {
 			return NO;
 #endif
 		}
@@ -497,14 +506,14 @@ BOOL GOLFHandicapStablefordRequiredForAuthority(GOLFHandicapAuthority *authority
 //=================================================================
 BOOL GOLFDoesTournamentAdjustmentForAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
-		if ([authority isEqualToString:@"WHS"]) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
 			return YES;
-		} else if ([authority isEqualToString:@"USGA"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityUSGA]) {
 			return YES;
-		} else if ([authority isEqualToString:@"RCGA"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityRCGA]) {
 			return YES;
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
-		} else if ([authority isEqualToString:@"PERSONAL"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityPersonal]) {
 			return [[[NSUserDefaults standardUserDefaults] objectForKey:@"PHFlagTournamentScores"] boolValue];
 #endif
 		}
@@ -517,26 +526,26 @@ BOOL GOLFDoesTournamentAdjustmentForAuthority(GOLFHandicapAuthority *authority) 
 //=================================================================
 BOOL GOLFHandicapCCRUsedForAuthority(GOLFHandicapAuthority *authority, BOOL *required) {
 	if (authority) {
-		if ([authority isEqualToString:@"AGU"]) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityAGU]) {
 			//	CSS-based differential calculation (CSS = Competition Scratch Score) since 2016
 			if (required) {
 				*required = NO;
 			}
 			return YES;
-		} else if ([authority isEqualToString:@"CONGU"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityCONGU]) {
 			//	CSS-based differential calculation (CSS = Competition Scratch Score)
 			if (required) {
 				*required = YES;	//	Calculation must return CSS, SSS or par
 			}
 			return YES;
-		} else if ([authority isEqualToString:@"EGA"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityEGA]) {
 			//	Buffer (threshold) adjustment (CBA = Computed Buffer Adjustment)
 			if (required) {
 				*required = NO;	//	Although default value is zero
 			}
 			return YES;
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
-		} else if ([authority isEqualToString:@"PERSONAL"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityPersonal]) {
 			if (required) {
 				*required = NO;
 			}
@@ -553,12 +562,12 @@ BOOL GOLFHandicapCCRUsedForAuthority(GOLFHandicapAuthority *authority, BOOL *req
 GOLFHandicapStrokes GOLFHandicapDefaultLimitsDifferenceForAuthority(GOLFHandicapAuthority *authority) {
 	GOLFHandicapStrokes difference = 8;
 	if (authority) {
-		if ([authority isEqualToString:@"WHS"]) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
 			difference = (NSInteger)8;
-		} else if ([authority isEqualToString:@"USGA"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityUSGA]) {
 			difference = (NSInteger)8;
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
-		} else if ([authority isEqualToString:@"MULLIGAN"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
 			difference = (NSInteger)10;
 #endif
 		}
@@ -572,12 +581,12 @@ GOLFHandicapStrokes GOLFHandicapDefaultLimitsDifferenceForAuthority(GOLFHandicap
 float GOLFHandicapDefaultLimitsPctAdjForAuthority(GOLFHandicapAuthority *authority) {
 	float adjustment = 10.0;
 	if (authority) {
-		if ([authority isEqualToString:@"WHS"]) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
 			adjustment = (float)10.0;
-		} else if ([authority isEqualToString:@"USGA"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityUSGA]) {
 			adjustment = (float)10.0;
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
-		} else if ([authority isEqualToString:@"MULLIGAN"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
 			adjustment = (float)12.0;
 #endif
 		}
@@ -590,7 +599,7 @@ float GOLFHandicapDefaultLimitsPctAdjForAuthority(GOLFHandicapAuthority *authori
 //=================================================================
 NSInteger GOLFHandicapDifferentialsToUseForAuthority(GOLFHandicapAuthority *authority, NSInteger numberOfScores) {
 	if (authority) {
-		if ([authority isEqualToString:@"USGA"] || [authority isEqualToString:@"RCGA"]) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityUSGA] || [authority isEqualToString:GOLFHandicapAuthorityRCGA]) {
 		
 			//	Scores				Differentials
 			//	----------------------------------
@@ -612,7 +621,7 @@ NSInteger GOLFHandicapDifferentialsToUseForAuthority(GOLFHandicapAuthority *auth
 				return ((NSInteger)((numberOfScores + 1) / 2) - 2);
 			else
 				return numberOfScores - 10;
-		} else if ([authority isEqualToString:@"AGU"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityAGU]) {
 		
 			//	Scores				Differentials
 			//	----------------------------------
@@ -632,7 +641,7 @@ NSInteger GOLFHandicapDifferentialsToUseForAuthority(GOLFHandicapAuthority *auth
 				return 1;
 			else
 				return ((NSInteger)((numberOfScores + 1) / 2) - 2);
-		} else if ([authority isEqualToString:@"WHS"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
 		
 			//	Scores				Differentials
 			//	----------------------------------
@@ -653,7 +662,7 @@ NSInteger GOLFHandicapDifferentialsToUseForAuthority(GOLFHandicapAuthority *auth
 			else
 				return ((NSInteger)((numberOfScores + 1) / 2) - 2);
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
-		} else if ([authority isEqualToString:@"PERSONAL"]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityPersonal]) {
 			NSInteger useLastNScores = [[[NSUserDefaults standardUserDefaults] objectForKey:@"PHUseLastNScores"] integerValue];
 			NSInteger discardBestNScores = [[[NSUserDefaults standardUserDefaults] objectForKey:@"PHDiscardNBestScores"] integerValue];
 			NSInteger discardWorstNScores = [[[NSUserDefaults standardUserDefaults] objectForKey:@"PHDiscardNWorstScores"] integerValue];
@@ -672,7 +681,7 @@ NSInteger GOLFHandicapDifferentialsToUseForAuthority(GOLFHandicapAuthority *auth
 //=================================================================
 GOLFHandicapDifferential GOLFHandicapExceptionalScoringReductionForAuthority(GOLFHandicapAuthority *authority, GOLFHandicapIndex excessIndex, NSInteger eligibleScores) {
 	if (authority) {
-		if ([authority isEqualToString:@"USGA"] || [authority isEqualToString:@"RCGA"] || [authority isEqualToString:@"WHS"]) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityUSGA] || [authority isEqualToString:GOLFHandicapAuthorityRCGA] || [authority isEqualToString:GOLFHandicapAuthorityWHS]) {
 			//
 			//                     USGA Handicap Reduction Table
 			//
