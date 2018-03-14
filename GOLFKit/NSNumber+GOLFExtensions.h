@@ -7,6 +7,7 @@
 //
 
 #import "GOLFKit.h"
+#import "GOLFColors.h"
 
 @interface NSNumber (GOLFExtensions)
 

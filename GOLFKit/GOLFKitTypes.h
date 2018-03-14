@@ -10,25 +10,30 @@
 #define GOLFKitTypes_h
 #endif /* GOLFKitTypes_h */
 
-typedef NSInteger GOLFTeeColorIndex;
+//	Temporary defines
+#define kNotAPar					-999		//	No-value for par
 
-//	typedef NSUInteger GOLFHandicapMethodIndex;
+typedef NSInteger GOLFTeeColorIndex;	//	Defined in GOLFColors.h
 
-//typedef int GOLFTeeSlopeRating;
-//typedef float GOLFTeeCourseRating;
+typedef NSInteger GOLFTeeSLOPERating;
+typedef float GOLFTeeCourseRating;
 
-//typedef float GOLFHandicapIndex;
-//typedef float GOLFHandicapAllowance;
-//typedef float GOLFHandicapDifferential;
+typedef float GOLFHandicapIndex;
+typedef NSInteger GOLFPlayingHandicap;
+typedef float GOLFHandicapAllowance;
+typedef float GOLFHandicapDifferential;
+typedef NSInteger GOLFHandicapGrade;	//	Grade, category, classification, etc.
 
-//typedef int GOLFRoundCCR;
+typedef NSInteger GOLFRoundCCR;
 //typedef int GOLFYardage;
-//typedef int GOLFPar;
+typedef NSInteger GOLFPar;
 //typedef int GOLFHandicap;
 //typedef int GOLFHoleNumber;
 //typedef int GOLFScore;
 //typedef float GOLFNetScore;
 //typedef int GOLFPutts;
+
+//typedef NSUInteger GOLFHandicapMethodIndex;
 
 //typedef unsigned int GOLFPlayType;
 //typedef unsigned int GOLFAllowanceType;

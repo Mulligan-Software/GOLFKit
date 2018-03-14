@@ -7,6 +7,7 @@
 //
 
 @import Foundation;
+@import CoreGraphics;
 #import "GOLFKitTypes.h"
 
 //	Misc constants
@@ -15,19 +16,39 @@
 //													---
 #define kGOLFHandicapNumberOfMethods				9		//	Total number of handicapping methods
 
+#define kNotAHandicapIndex							-999.0		//	No-value for GOLFHandicapIndex
+#define kNotACourseRating							-999.0		//	No-value for GOLFTeeCourseRating
+#define kNotASLOPERating							-999		//	No-value for GOLFTeeSLOPERating
+#define kNotAPlayingHandicap						-999		//	No-value for GOLFPlayingHandicap
+#define kNotAGrade									-999		//	No-value for GOLFHandicapGrade
+
 typedef NS_OPTIONS(NSUInteger, GOLFRoundHandicapOption) {
 	GOLFRoundHandicapOptionNone			= 0,			//	(0)
+	GOLFRoundHandicapOptionsNone		= GOLFRoundHandicapOptionNone,
 	GOLFRoundHandicapOptionUsed			= 1 << 0,		//	(1)			Round used in handicap latest calculation (ie: one of the best 10 of last 20)
 	GOLFRoundHandicapOptionEligible		= 1 << 1,		//	(2)			Round is identified as eligible for use/review in calculations (stats and handicapping)
 	GOLFRoundHandicapOptionTournament	= 1 << 2,		//	(4)			Round identified as a "tournament" round
 	GOLFRoundHandicapOptionCombined		= 1 << 3,		//	(8)			18-hole round constructed from two 9-hole rounds
 	GOLFRoundHandicapOption9Holes		= 1 << 4,		//	(16)		9-hole round
 	GOLFRoundHandicapOptionAway			= 1 << 5,		//	(32)		Round identified as played "away" - not at home course
-	GOLFRoundHandicapOptionHome			= 1 << 6,		//	(64)		Round identified as played at home course
+	GOLFRoundHandicapOptionHome			= 1 << 6,		//	(64)		Round identified as played at home course (not exclusive of GOLFRoundHandicapOptionAway)
 	GOLFRoundHandicapOptionSpare1		= 1 << 7,		//	(128)
 	GOLFRoundHandicapOptionSpare2		= 1 << 8,		//	(256)
 	GOLFRoundHandicapOptionInternet		= 1 << 9,		//	(512)		Round recorded/entered via the internet
-	GOLFRoundHandicapOptionPenalty		= 1 << 10		//	(1024)		Round identified as a "penalty" round - may adjust handicap
+	GOLFRoundHandicapOptionPenalty		= 1 << 10		//	(1024)		Round identified as a "penalty" round - may have adjusted handicap
+};
+
+typedef NS_OPTIONS(NSUInteger, GOLFHandicapCalculationOption) {
+	GOLFHandicapCalculationOptionNone				= 0,			//	(0)
+	GOLFHandicapCalculationOptionsNone				= GOLFHandicapCalculationOptionNone,
+	GOLFHandicapCalculationOptionNeed9HoleResult	= 1 << 0,		//	(1)		Need return of a 9-hole handicap
+	GOLFHandicapCalculationOptionNeedWomensResult	= 1 << 1,		//	(2)		Need return of a woman's handicap
+	GOLFHandicapCalculationOption9HoleHandicap		= 1 << 2,		//	(4)		Provided GOLFHandicapIndex or GOLFPlaying Handicap is for 9 holes
+	GOLFHandicapCalculationOption9HoleRating		= 1 << 3,		//	(8)		Provided GOLFTeeCourseRating is for 9 holes
+	GOLFHandicapCalculationOption9HoleSLOPE			= 1 << 4,		//	(16)	Provided GOLFTeeSLOPERating is for 9 holes
+	GOLFHandicapCalculationOption9HolePar			= 1 << 5,		//	(32)	Provided GOLFPar is for 9 holes
+	GOLFHandicapCalculationOptionSpare1				= 1 << 6,		//	(64)
+	GOLFHandicapCalculationOptionSpare2				= 1 << 7,		//	(128)
 };
 
 typedef NS_ENUM(NSUInteger, GOLFHandicapMethodIndex) {
@@ -91,6 +112,10 @@ extern GOLFHandicapAuthority * const GOLFHandicapAuthorityMulligan;		//	"MULLIGA
 extern GOLFHandicapAuthority * const GOLFHandicapAuthorityPersonal;		//	"PERSONAL"
 extern GOLFHandicapAuthority * const GOLFHandicapAuthoritySecondBest;	//	"SECONDBEST"
 #endif
+
+GOLFHandicapAuthority * GOLFDefaultHandicapAuthority(void);
+//	Without any further help, return an appropriate GOLFHandicapAuthority
+//	Last resort is "USGA"
 
 GOLFHandicapAuthority * GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodIndex methodIndex);
 //	Returns the GOLFHandicapAuthority mnemonic that best represents the handicapping method indicated by the methodIndex.
@@ -198,3 +223,78 @@ GOLFHandicapDifferential GOLFHandicapExceptionalScoringReductionForAuthority(GOL
 //	In handicapping methods with adjustments for exceptional scoring, the amount of that adjustment based on the number of eligible scores and the amount
 //	by which those scores exceed the player's expected performance.
 
+GOLFTeeSLOPERating GOLFHandicapUnratedSLOPERatingForAuthority(GOLFHandicapAuthority *authority);
+//	The appropriate SLOPE Rating to be used for unrated tees
+
+//	From The Scoring Machine…
+//NSInteger StrokeControlLimit(NSString *authority, NSInteger courseHandicap, BOOL for9Holes, NSObject *anObject);
+
+GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOLFHandicapIndex handicapIndex, GOLFTeeCourseRating courseRating, GOLFTeeSLOPERating slopeRating, GOLFPar par, GOLFHandicapCalculationOption options, NSDictionary *info);
+//	Playing handicap calculation per the authority
+//
+//	GOLFHandicapAuthority *			authority		required		Handicap authority
+//	GOLFHandicapIndex				handicapIndex	required		18 holes unless GOLFHandicapCalculationOption9HoleIndex (kNotAHandicapIndex is valid)
+//	GOLFTeeCourseRating				courseRating	required		18 holes unless GOLFHandicapCalculationOption9HoleRating (kNotACourseRating is valid)
+//	GOLFTeeSLOPERating				slopeRating		required		18 holes unless GOLFHandicapCalculationOption9HoleSLOPE (kNotASLOPERating is valid)
+//	GOLFPar							par				required		18 holes unless GOLFHandicapCalculationOption9HolePar (kNotAPar is valid)
+//	GOLFHandicapCalculationOption	options			required		Calculations options or GOLFHandicapCalculationOptionNone
+//	NSDictionary *					info			optional		optional NSDictionary
+//
+//	options:
+//	GOLFHandicapCalculationOptionNeed9HoleResult	(1)		Need return of a 9-hole handicap
+//	GOLFHandicapCalculationOptionNeedWomensResult	(2)		Need return of a woman's handicap
+//	GOLFHandicapCalculationOption9HoleHandicap		(4)		Provided GOLFHandicapIndex or GOLFPlayingHandicap is for 9 holes
+//	GOLFHandicapCalculationOption9HoleRating		(8)		Provided GOLFTeeCourseRating is for 9 holes
+//	GOLFHandicapCalculationOption9HoleSLOPE			(16)	Provided GOLFTeeSLOPERating is for 9 holes
+//	GOLFHandicapCalculationOption9HolePar			(32)	Provided GOLFPar is for 9 holes
+//
+//	info:
+//	key					type			description
+//	------------------	--------------	-------------------------------------------------------
+//	is9HoleResult		NSNumber *		BOOL indicating result is for 9-hole play
+//	isWomensResult		NSNumber *		BOOL indicating result is for women
+//	referenceObject		id				a <GOLFHandicapDataSource> with data of interest
+//	need9HoleHandicap	NSNumber *		(legacy) BOOL (TRUE --> courseRating and/or par are 9-hole values)
+//	needWomensHandicap	NSNumber *		(legacy) BOOL (TRUE --> courseRating and/or par are women's values)
+//	event				id				(legacy) an event <GOLFHandicapDataSource> with handicap data
+//	roundSide			id				(legacy) a side <GOLFHandicapDataSource> with handicap data
+//	round				id				(legacy) a round <GOLFHandicapDataSource> with handicap data
+//	courseRating		NSNumber *		(legacy) 9 or 18-hole course rating value
+//	par					NSNumber *		(legacy) 9 or 18-hole par
+
+CGPoint GOLFLowHighIndexesAsPointFor(GOLFHandicapAuthority *authority, GOLFPlayingHandicap playingHandicap, GOLFTeeCourseRating courseRating, GOLFTeeSLOPERating slopeRating, GOLFPar par, GOLFHandicapCalculationOption options, id <GOLFHandicapDataSource>referenceSource);
+//	Handicap Index range for a Playing Handicap
+//
+//	GOLFHandicapAuthority *			authority		required		Handicap authority
+//	GOLFPlayingHandicap				playingHandicap	required		18 holes unless GOLFHandicapCalculationOption9HoleHandicap (kNotAPlayingHandicap is valid)
+//	GOLFTeeCourseRating				courseRating	optional		18 holes unless GOLFHandicapCalculationOption9HoleRating (kNotACourseRating is valid)
+//	GOLFTeeSLOPERating				slopeRating		optional		18 holes unless GOLFHandicapCalculationOption9HoleSLOPE (kNotASLOPERating is valid)
+//	GOLFPar							par				optional		18 holes unless GOLFHandicapCalculationOption9HolePar (kNotAPar is valid)
+//	GOLFHandicapCalculationOption	options			required		Calculations options or GOLFHandicapCalculationOptionNone
+//	GOLFHandicapDataSource			referenceSource	optional		optional <GOLFHandicapDataSource> - most likely a tee
+//
+//	options:
+//	GOLFHandicapCalculationOptionNeed9HoleResult	(1)		Need return of a 9-hole Handicap Index range
+//	GOLFHandicapCalculationOption9HoleHandicap		(4)		Provided GOLFPlayingHandicap is for 9 holes
+//	GOLFHandicapCalculationOption9HoleRating		(8)		Provided GOLFTeeCourseRating is for 9 holes
+//	GOLFHandicapCalculationOption9HoleSLOPE			(16)	Provided GOLFTeeSLOPERating is for 9 holes
+//	GOLFHandicapCalculationOption9HolePar			(32)	Provided GOLFPar is for 9 holes
+
+GOLFPlayingHandicap GOLFFirstLocalHandicapForAuthority(GOLFHandicapAuthority *authority, GOLFHandicapIndex limitingIndex, GOLFTeeCourseRating courseRating, GOLFTeeSLOPERating slopeRating, GOLFPar par, GOLFHandicapCalculationOption options, id <GOLFHandicapDataSource>referenceSource);
+//	The first local (club) handicap following the last (limiting) official handicap index
+//
+//	GOLFHandicapAuthority *			authority		required		Handicap authority
+//	GOLFHandicapIndex				limitingIndex	required		18 holes unless GOLFHandicapCalculationOption9HoleHandicap (kNotAHandicapIndex is valid)
+//	GOLFTeeCourseRating				courseRating	required		18 holes unless GOLFHandicapCalculationOption9HoleRating (kNotACourseRating is valid)
+//	GOLFTeeSLOPERating				slopeRating		required		18 holes unless GOLFHandicapCalculationOption9HoleSLOPE (kNotASLOPERating is valid)
+//	GOLFPar							par				required		18 holes unless GOLFHandicapCalculationOption9HolePar (kNotAPar is valid)
+//	GOLFHandicapCalculationOption	options			required		Calculations options or GOLFHandicapCalculationOptionNone
+//	GOLFHandicapDataSource			referenceSource	optional		optional <GOLFHandicapDataSource> - most likely a tee
+//
+//	options:
+//	GOLFHandicapCalculationOptionNeed9HoleResult	(1)		Need return of a 9-hole handicap
+//	GOLFHandicapCalculationOptionNeedWomensResult	(2)		Need return of a woman's handicap
+//	GOLFHandicapCalculationOption9HoleHandicap		(4)		Provided GOLFPlayingHandicap is for 9 holes
+//	GOLFHandicapCalculationOption9HoleRating		(8)		Provided GOLFTeeCourseRating is for 9 holes
+//	GOLFHandicapCalculationOption9HoleSLOPE			(16)	Provided GOLFTeeSLOPERating is for 9 holes
+//	GOLFHandicapCalculationOption9HolePar			(32)	Provided GOLFPar is for 9 holes

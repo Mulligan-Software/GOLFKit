@@ -9,6 +9,8 @@
 
 @import Foundation;
 
+@protocol GOLFHandicapDataSource;
+
 //! Project version number for GOLFKit.
 //FOUNDATION_EXPORT double GOLFKitVersionNumber;
 
@@ -19,6 +21,7 @@
 
 //	Models
 #import <GOLFKit/GOLFKitTypes.h>
+#import <GOLFKit/GOLFUtilities.h>
 //	#import <GOLFKit/GOLFClubs.h>
 
 //	Categories
@@ -68,3 +71,32 @@ NSBundle * GOLFKitBundle(void);
 NSString * GOLFKitBundleShortVersionString(void);
 NSString * GOLFKitBundleVersion(void);
 
+@protocol GOLFHandicapDataSource <NSObject>
+
+@optional
+
+- (NSString *)handicapAuthority;
+//	The handicap authority used for handicapping - usually available from events or rounds
+//	return NSString*, nil if none or using a default
+
+- (NSNumber *)handicapIndexForWomen:(BOOL *)women for9Holes:(BOOL *)nineHoles;
+//	A previously determined handicapIndex - usually available from rounds
+//	Non-nil *women, *nineHoles pre-set TRUE if ladies or nineHole response required - change if response requires
+//	return float equivalent, nil for no data, *women = TRUE for ladies, *nineHoles = TRUE for 9-hole index
+
+- (NSNumber *)teeSLOPERatingForWomen:(BOOL *)women for9Holes:(BOOL *)nineHoles;
+//	A previously determined SLOPE Rating - usually available from rounds, sides or tees
+//	Non-nil *women, *nineHoles pre-set TRUE if women's or nineHole's response required - change if response requires
+//	return NSInteger equivalent, nil for no data, *women = TRUE for ladies, *for9Holes = TRUE for 9-hole rating
+
+- (NSNumber *)teeCourseRatingForWomen:(BOOL *)women for9Holes:(BOOL *)nineHoles;
+//	A previously determined Course Rating - usually available from rounds, sides or tees
+//	Non-nil *women, *nineHoles pre-set TRUE if women's or nineHole's response required - change if response requires
+//	return float equivalent, nil for no data, *women = TRUE for ladies, *for9Holes = TRUE for 9-hole rating
+
+- (NSNumber *)teeParForWomen:(BOOL *)women for9Holes:(BOOL *)nineHoles;
+//	Previously determined par - usually available from rounds, sides or tees
+//	Non-nil *women, *nineHoles pre-set TRUE if women's or nineHole's response required - change if response requires
+//	return NSInteger equivalent, nil for no data, *women = TRUE for ladies, *for9Holes = TRUE for 9-hole par
+
+@end

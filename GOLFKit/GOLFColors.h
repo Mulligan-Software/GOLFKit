@@ -33,7 +33,7 @@
 //										---
 #define kGOLFTeeColorsNumberOfStandard	27		//	Total Standard tee colors
 
-#define kNotATeeColorIndex				-999
+#define kNotATeeColorIndex				-999	//	No-value GOLFTeeColorIndex specification
 
 typedef NS_ENUM(GOLFTeeColorIndex, teeColorIndexEnumeration) {
 	GOLFTeeColorBlack = 0,				//	Black (0)
