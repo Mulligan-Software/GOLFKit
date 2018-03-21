@@ -30,6 +30,7 @@
 "GOLF_TEE_COLOR_NAME_BLACK_AND_GOLD" = "Noir & Or";
 "GOLF_TEE_COLOR_NAME_WHITE_AND_GOLD" = "Blanc & Or";
 "GOLF_TEE_COLOR_NAME_BLACK_AND_WHITE" = "Noir & Blanc";
+"GOLF_TEE_COLOR_NAME_BLUE_AND_GREEN" = "Bleue & Vert";
 "GOLF_TEE_COLOR_NAME_CUSTOM" = "Personnalisé";
 "GOLF_TEE_COLOR_NAME_USA" = "USA";		//	Custom tee
 "GOLF_TEE_COLOR_NAME_EU" = "UE.";		//	Custom tee

@@ -263,6 +263,18 @@ NSArray * GOLFStandardTeeColorArray(void) {
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorWhite], @"secondColorIndex", nil];
 		[workingList addObject:colorDict];
 		
+		//	Blue & Green
+		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithUnsignedInteger:GOLFTeeColorBlueAndGreen], @"teeColorIndex",
+				[GOLFColor colorWithRed:0.0 green:(0.6) blue:0.9 alpha:1.0], @"teeColor",
+				NSLocalizedStringFromTableInBundle(@"GOLF_TEE_COLOR_NAME_BLUE_AND_GREEN", @"GOLFKit", ourBundle, @""), @"teeColorName",
+				@"GOLFTeeMarkerBlueAndGreen", @"teeIconName",
+				@"tee_marker_blueandgreen", @"teeImageName",
+				[NSNumber numberWithBool:YES], @"isComboColor",
+				[NSNumber numberWithUnsignedInteger:GOLFTeeColorBlue], @"firstColorIndex",
+				[NSNumber numberWithUnsignedInteger:GOLFTeeColorGreen], @"secondColorIndex", nil];
+		[workingList addObject:colorDict];
+		
 		//	U.S.A.
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorUSA], @"teeColorIndex",
