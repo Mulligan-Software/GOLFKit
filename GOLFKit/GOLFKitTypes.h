@@ -12,6 +12,9 @@
 
 //	Temporary defines
 #define kNotAPar					-999		//	No-value for par
+#define kNotAYardage				-999		//	No-value for yardage (imperial or metric)
+#define kNotAHoleNumber				-999		//	No-value for a hole number
+#define kNotAHoleHandicap			-999		//	No-value for hole handicap (stroke allocation)
 
 typedef NSInteger GOLFTeeColorIndex;	//	Defined in GOLFColors.h
 
@@ -25,10 +28,11 @@ typedef float GOLFHandicapDifferential;
 typedef NSInteger GOLFHandicapGrade;	//	Grade, category, classification, etc.
 
 typedef NSInteger GOLFRoundCCR;
-//typedef int GOLFYardage;
+
 typedef NSInteger GOLFPar;
-//typedef int GOLFHandicap;
-//typedef int GOLFHoleNumber;
+typedef NSInteger GOLFYardage;
+typedef NSInteger GOLFHoleNumber;
+typedef NSInteger GOLFHoleHandicap;
 //typedef int GOLFScore;
 //typedef float GOLFNetScore;
 //typedef int GOLFPutts;

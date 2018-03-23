@@ -11,10 +11,12 @@
 #import "GOLFKitTypes.h"
 
 //	Misc constants
-#define	kGOLFHandicapMethodsNumberOfCertifiable		6		//	WHS (1) through CONGU (6), total of 6
+#define	kGOLFHandicapMethodsNumberOfCertifiable		6		//	USGA (1) through WHS (6), total of 6
 #define	kGOLFHandicapMethodsNumberOfMiscellaneous	3		//	Mulligan (20) through Second-Best (22), total of 3
 //													---
 #define kGOLFHandicapNumberOfMethods				9		//	Total number of handicapping methods
+
+#define kUnratedTeeSLOPERating						113			//	Default SLOPE rating for unrated tee
 
 #define kNotAHandicapIndex							-999.0		//	No-value for GOLFHandicapIndex
 #define kNotACourseRating							-999.0		//	No-value for GOLFTeeCourseRating

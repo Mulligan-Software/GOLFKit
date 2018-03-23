@@ -918,7 +918,7 @@ GOLFTeeSLOPERating GOLFHandicapUnratedSLOPERatingForAuthority(GOLFHandicapAuthor
 GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOLFHandicapIndex handicapIndex, GOLFTeeCourseRating courseRating, GOLFTeeSLOPERating slopeRating, GOLFPar par, GOLFHandicapCalculationOption options, NSDictionary *info) {
 
 	//	Parameters:
-	//	GOLFHandicapAuthority *			authority		required		Handicap authority
+	//	GOLFHandicapAuthority *			authority		optional		Handicap authority
 	//	GOLFHandicapIndex				handicapIndex	required		18 holes unless GOLFHandicapCalculationOption9HoleIndex (kNotAHandicapIndex is valid)
 	//	GOLFTeeCourseRating				courseRating	required		18 holes unless GOLFHandicapCalculationOption9HoleRating (kNotACourseRating is valid)
 	//	GOLFTeeSLOPERating				slopeRating		required		18 holes unless GOLFHandicapCalculationOption9HoleSLOPE (kNotASLOPERating is valid)
@@ -949,7 +949,7 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 	//	par					NSNumber *		(legacy) 9 or 18-hole par
 
 	GOLFPlayingHandicap playingHandicap = kNotAPlayingHandicap;	//	Start with a default return response
-	id referenceSource = nil;	//	Assume we don't have a reference source (round, event, competitor, scorecard, etc.)
+	id <GOLFHandicapDataSource> referenceSource = nil;	//	Assume we don't have a reference source (round, event, competitor, scorecard, etc.)
 	BOOL is9HoleResult = NO;
 	BOOL isWomensResult = NO;
 	
@@ -971,8 +971,27 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 		}
 	}
 	
-	GOLFHandicapAuthority *localAuthority = (authority ?: [[NSUserDefaults standardUserDefaults] objectForKey:@"LastSelectedHandicapAuthority"]);
-	localAuthority = (localAuthority ?: GOLFDefaultHandicapAuthority());
+	//	Determine the correct handicapping authority for calculation…
+	GOLFHandicapAuthority *localAuthority = nil;
+	if (referenceSource && [referenceSource respondsToSelector:@selector(handicapAuthority)]) {
+		localAuthority = [referenceSource handicapAuthority];	//	First choice - our referenceSource knows the handicapping authority
+	}
+	if (localAuthority == nil) {
+		localAuthority = authority;	//	Second choice - it's been provided as a parameter
+		
+		if (localAuthority == nil) {
+			localAuthority = [[NSUserDefaults standardUserDefaults] objectForKey:@"LastSelectedHandicapAuthority"];	//	Third choice - last authority selected
+
+			if (localAuthority == nil) {
+				localAuthority = GOLFDefaultHandicapAuthority();	//	Fourth choice - a default authority setting
+
+				if (localAuthority == nil) {
+					localAuthority = GOLFHandicapAuthorityUSGA;	//	Last choice - USGA
+				}
+			}
+		}
+	}
+	
 	GOLFHandicapIndex localIndex = handicapIndex;
 	BOOL have9HoleIndex = ((options & GOLFHandicapCalculationOption9HoleHandicap) != 0);
 	if (referenceSource && [referenceSource respondsToSelector:@selector(handicapIndexForWomen:for9Holes:)]) {

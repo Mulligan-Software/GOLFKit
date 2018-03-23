@@ -14,4 +14,28 @@
 + (id)numberWithTeeColorIndex:(GOLFTeeColorIndex)teeColorIndex;
 - (GOLFTeeColorIndex)teeColorIndexValue;
 
++ (id)numberWithHandicapIndex:(GOLFHandicapIndex)handicapIndex;
+- (GOLFHandicapIndex)handicapIndexValue;
+
++ (id)numberWithPlayingHandicap:(GOLFPlayingHandicap)playingHandicap;
+- (GOLFPlayingHandicap)playingHandicapValue;
+
++ (id)numberWithTeeSLOPERating:(GOLFTeeSLOPERating)teeSLOPERating;
+- (GOLFTeeSLOPERating)teeSLOPERatingValue;
+
++ (id)numberWithTeeCourseRating:(GOLFTeeCourseRating)teeCourseRating;
+- (GOLFTeeCourseRating)teeCourseRatingValue;
+
++ (id)numberWithPar:(GOLFPar)par;
+- (GOLFPar)parValue;
+
++ (id)numberWithYardage:(GOLFYardage)yardage;
+- (GOLFYardage)yardageValue;
+
++ (id)numberWithHoleNumber:(GOLFHoleNumber)holeNumber;
+- (GOLFHoleNumber)holeNumberValue;
+
++ (id)numberWithHoleHandicap:(GOLFHoleHandicap)holeHandicap;
+- (GOLFHoleHandicap)holeHandicapValue;
+
 @end
