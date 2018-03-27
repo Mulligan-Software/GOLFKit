@@ -6,6 +6,14 @@
   Copyright © 2016 Mulligan Software. All rights reserved.
 */
 
+//	Golf Words
+"course" = "campo";
+"courses" = "campos";
+"par" = "par";
+"pars" = "pars";
+"tee" = "tee";
+"tees" = "tees";
+
 //	Standard Tee Colors
 "GOLF_TEE_COLOR_NAME_BLACK" = "Negro";
 "GOLF_TEE_COLOR_NAME_BLUE" = "Azul";
@@ -75,6 +83,7 @@
 "TITLE_HANDICAP_CATEGORY_ABBR" = "Categoría";
 "TITLE_HANDICAP_COURSE" = "Handicap de Campo";
 "TITLE_HANDICAP_COURSE_PLURAL" = "Handicaps de Campo";
+"TITLE_HANDICAP_COURSE_RATING" = "Clasificación del campo";
 "TITLE_HANDICAP_COURSE_TM" = "Course Handicap™";
 "TITLE_HANDICAP_COURSE_TM_PLURAL" = "Course Handicaps™";
 "TITLE_HANDICAP_DAILY" = "Handicap Cotidiano";
@@ -107,6 +116,12 @@
 "TITLE_HANDICAP_PERSONAL_PLURAL" = "Handicaps Personales";
 "TITLE_HANDICAP_PLAYING" = "Handicap de Jugar";
 "TITLE_HANDICAP_PLAYING_PLURAL" = "Handicaps de Jugar";
+"TITLE_HANDICAP_SLOPE_CHART" = "El Gráfico Slope";
+"TITLE_HANDICAP_SLOPE_RATING" = "Clasificación de Slope";
+"TITLE_HANDICAP_TABLE" = "Tabla de Handicap";
+"TITLE_HANDICAP_WORLD_INDEX" = "Índice de Handicap Mundial";
+"TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
+"TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "Índices de Handicap Mundials";
 "TITLE_GRADE" = "Grado";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
@@ -120,9 +135,12 @@
 "TOOLTIP_ROUNDS_MODIFIER_EGA" = "* - utilizado\nT - torneo";
 "TOOLTIP_ROUNDS_MODIFIER_MULLIGAN" = "* - utilizado\nA - allá\nT - torneo";
 
-//	Phrases
+//	Phrases & Formats
+"AND_%@" = " y %@";
 "CURRENT_%@_TITLE" = "%@ Actual";
 "CURRENT_%@_TITLE_PLURAL" = "%@ Actuales";
+"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Una Tabla %@ (%@) es utilizada para convertir un %@, publicado por tu club o asociación autorizada del golf, a un %@ basada en el %@ para un tee.";
+"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "Una Tabla %@ (%@) es utilizada para convertir un %@, publicado por tu club o asociación autorizada del golf, a un %@ para un tee.";
 
 //	Countries
 "Algeria" = "Algeria";

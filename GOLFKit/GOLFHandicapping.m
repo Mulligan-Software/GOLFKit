@@ -36,10 +36,28 @@ static NSDictionary *cachedGOLFHomeCountryInfo = nil;
 //	GOLFDefaultHandicapAuthority()
 //=================================================================
 GOLFHandicapAuthority * GOLFDefaultHandicapAuthority() {
-	if (cachedGOLFHomeCountryInfo == nil) {
-		cachedGOLFHomeCountryInfo = GOLFHomeCountryInfo();	//	This might take a bit, so we just get it once
-	}
-	return [cachedGOLFHomeCountryInfo objectForKey:@"authoritys"];
+//	GOLFHandicapAuthority *prospectiveAuthority = [[NSUserDefaults standardUserDefaults] objectForKey:@"DefaultHandicapAuthority"];
+//	BOOL saveDefault = NO;
+//	if (prospectiveAuthority == nil) {
+//		saveDefault = YES;
+		if (cachedGOLFHomeCountryInfo == nil) {
+			cachedGOLFHomeCountryInfo = GOLFHomeCountryInfo();	//	This might take a bit, so we just get it once
+		}
+		GOLFHandicapAuthority *prospectiveAuthority = [cachedGOLFHomeCountryInfo objectForKey:@"authority"];
+		if (prospectiveAuthority == nil) {
+			prospectiveAuthority = [[NSUserDefaults standardUserDefaults] objectForKey:@"HandicapAuthority"];
+			if (prospectiveAuthority == nil) {
+				prospectiveAuthority = [[NSUserDefaults standardUserDefaults] objectForKey:@"LastSelectedHandicapAuthority"];
+				if (prospectiveAuthority == nil) {
+					prospectiveAuthority = GOLFHandicapAuthorityUSGA;
+				}
+			}
+		}
+//	}
+//	if (saveDefault) {
+//		[[NSUserDefaults standardUserDefaults] setObject:prospectiveAuthority forKey:@"DefaultHandicapAuthority"];
+//	}
+	return prospectiveAuthority;
 }
 
 //=================================================================
@@ -252,7 +270,7 @@ NSString * GOLFHandicapIndexTitle(GOLFHandicapMethodIndex handicapMethod, BOOL p
 #endif
 
   		case GOLFHandicapMethodWHS:
-    		return NSLocalizedStringFromTableInBundle((plural ? @"TITLE_HANDICAP_INDEX_PLURAL" : @"TITLE_HANDICAP_INDEX"), @"GOLFKit", GOLFKitBundle(), @"");
+    		return NSLocalizedStringFromTableInBundle((plural ? @"TITLE_HANDICAP_WORLD_INDEX_PLURAL" : @"TITLE_HANDICAP_WORLD_INDEX"), @"GOLFKit", GOLFKitBundle(), @"");
 
   		default:
     		return NSLocalizedStringFromTableInBundle((plural ? @"TITLE_HANDICAP_PLURAL" : @"TITLE_HANDICAP"), @"GOLFKit", GOLFKitBundle(), @"");
@@ -346,6 +364,111 @@ NSString * GOLFHandicapCSSTitle(GOLFHandicapMethodIndex handicapMethod, BOOL abb
 //=================================================================
 NSString * GOLFHandicapSSSTitle(GOLFHandicapMethodIndex handicapMethod, BOOL abbreviated) {
 	return NSLocalizedStringFromTableInBundle((abbreviated ? @"TITLE_SSS_ABBR" : @"TITLE_SSS"), @"GOLFKit", GOLFKitBundle(), @"");
+}
+
+//=================================================================
+//	GOLFHandicapTableBlurb(handicapMethod)
+//=================================================================
+NSString * GOLFHandicapTableBlurb(GOLFHandicapMethodIndex handicapMethod) {
+	NSString *slopeChartTitle = NSLocalizedStringFromTableInBundle(@"TITLE_HANDICAP_SLOPE_CHART", @"GOLFKit", GOLFKitBundle(), @"");	//	"Slope Chart"
+//	NSString *handicapTableTitle = NSLocalizedStringFromTableInBundle(@"TITLE_HANDICAP_TABLE", @"GOLFKit", GOLFKitBundle(), @"");	//	"Handicap Table"
+	NSString *playingHandicapTitle = GOLFPlayingHandicapTitle(handicapMethod, NO);	//	Localized
+	NSString *handicapIndexTitle = GOLFHandicapIndexTitle(handicapMethod, NO);	//	Localized
+
+	switch (handicapMethod) {
+#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
+  		case GOLFHandicapMethodMulligan:
+    		return [NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@", @"GOLFKit", GOLFKitBundle(), @""),
+    				playingHandicapTitle,
+    				slopeChartTitle,
+    				handicapIndexTitle,
+    				playingHandicapTitle];
+
+  		case GOLFHandicapMethodPersonal:
+			GOLFPlayingHandicapType playingHandicapType = [[[NSUserDefaults standardUserDefaults] objectForKey:@"PHPlayingHandicapType"] integerValue];
+			switch (playingHandicapType) {
+				case GOLFPlayingHandicapTypeRatingAdjusted:
+					//	Use just the rating to adjust the handicap…
+					return [NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@", @"GOLFKit", GOLFKitBundle(), @""),
+							playingHandicapTitle,
+							slopeChartTitle,
+							handicapIndexTitle,
+							playingHandicapTitle,
+							NSLocalizedStringFromTableInBundle(@"TITLE_HANDICAP_COURSE_RATING", @"GOLFKit", GOLFKitBundle(), @"")];
+
+				case GOLFPlayingHandicapTypeSlopeAdjusted:
+					//	Playing handicap is handicap adjusted from neutral slope…
+					return [NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@", @"GOLFKit", GOLFKitBundle(), @""),
+							playingHandicapTitle,
+							slopeChartTitle,
+							handicapIndexTitle,
+							playingHandicapTitle,
+							NSLocalizedStringFromTableInBundle(@"TITLE_HANDICAP_SLOPE_RATING", @"GOLFKit", GOLFKitBundle(), @"")];
+
+				case GOLFPlayingHandicapTypeFullyAdjusted:
+					{
+						//	Use both slope, rating and par to adjust the handicap…
+						NSString *usingPhrase = NSLocalizedStringFromTableInBundle(@"TITLE_HANDICAP_COURSE_RATING", @"GOLFKit", GOLFKitBundle(), @"");
+						usingPhrase = [usingPhrase stringByAppendingFormat:@", %@", NSLocalizedStringFromTableInBundle(@"TITLE_HANDICAP_SLOPE_RATING", @"GOLFKit", GOLFKitBundle(), @"")];
+						usingPhrase = [usingPhrase stringByAppendingFormat:NSLocalizedStringFromTableInBundle(@"AND_%@", @"GOLFKit", GOLFKitBundle(), @""), NSLocalizedStringFromTableInBundle(@"par", @"GOLFKit", GOLFKitBundle(), @"")];
+						return [NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@", @"GOLFKit", GOLFKitBundle(), @""),
+								playingHandicapTitle,
+								slopeChartTitle,
+								handicapIndexTitle,
+								playingHandicapTitle,
+								usingPhrase];
+					}
+
+				case GOLFPlayingHandicapTypeUnadjusted:
+				default:
+					//	The playing handicap is the rounded handicap
+					return [NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@", @"GOLFKit", GOLFKitBundle(), @""),
+							playingHandicapTitle,
+							slopeChartTitle,
+							handicapIndexTitle,
+							playingHandicapTitle];
+			}	//	switch (playingHandicapType)
+
+  		case GOLFHandicapMethodSecondBest:
+    		return [NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@", @"GOLFKit", GOLFKitBundle(), @""),
+    				playingHandicapTitle,
+    				slopeChartTitle,
+    				handicapIndexTitle,
+    				playingHandicapTitle];
+#endif
+
+  		case GOLFHandicapMethodEGA:
+  		case GOLFHandicapMethodWHS:
+  			{
+				NSString *usingPhrase = NSLocalizedStringFromTableInBundle(@"TITLE_HANDICAP_SLOPE_RATING", @"GOLFKit", GOLFKitBundle(), @"");
+				usingPhrase = [usingPhrase stringByAppendingFormat:@", %@", NSLocalizedStringFromTableInBundle(@"TITLE_HANDICAP_COURSE_RATING", @"GOLFKit", GOLFKitBundle(), @"")];
+				usingPhrase = [usingPhrase stringByAppendingFormat:NSLocalizedStringFromTableInBundle(@"AND_%@", @"GOLFKit", GOLFKitBundle(), @""), NSLocalizedStringFromTableInBundle(@"par", @"GOLFKit", GOLFKitBundle(), @"")];
+				return [NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@", @"GOLFKit", GOLFKitBundle(), @""),
+						playingHandicapTitle,
+						slopeChartTitle,
+						handicapIndexTitle,
+						playingHandicapTitle,
+						usingPhrase];
+			}
+
+  		case GOLFHandicapMethodUSGA:
+  		case GOLFHandicapMethodRCGA:
+  		case GOLFHandicapMethodAGU:
+    		return [NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@", @"GOLFKit", GOLFKitBundle(), @""),
+    				playingHandicapTitle,
+    				slopeChartTitle,
+    				handicapIndexTitle,
+    				playingHandicapTitle,
+    				NSLocalizedStringFromTableInBundle(@"TITLE_HANDICAP_SLOPE_RATING", @"GOLFKit", GOLFKitBundle(), @"")];
+
+  		case GOLFHandicapMethodCONGU:
+  		default:
+    		return [NSString stringWithFormat:NSLocalizedStringFromTableInBundle(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@", @"GOLFKit", GOLFKitBundle(), @""),
+    				playingHandicapTitle,
+    				slopeChartTitle,
+    				handicapIndexTitle,
+    				playingHandicapTitle];
+	}
 }
 
 //=================================================================
@@ -1130,11 +1253,11 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 				playingHandicap = (GOLFPlayingHandicap)floorf((((negative ? -localIndex : localIndex) * localSlope) / unratedSLOPERating) + 0.5);
 				is9HoleResult = have9HoleIndex;
 			} else if (have9HoleIndex) {
-				//	9-hole index… need 18-hole courseHandicap…
+				//	9-hole index… need 18-hole playingHandicap…
 				playingHandicap = (GOLFPlayingHandicap)floorf((((negative ? -localIndex : localIndex) * localSlope * 2.0) / unratedSLOPERating) + 0.5);
 				is9HoleResult = NO;
 			} else {
-				//	18-hole index…, need 9-hole courseHandicap…
+				//	18-hole index…, need 9-hole playingHandicap…
 				float halfIndex = (floorf(((negative ? -localIndex : localIndex) * 5.0) + 0.5) / 10.0);	//	rounded to a tenth
 				playingHandicap = (GOLFPlayingHandicap)floorf(((halfIndex * localSlope) / unratedSLOPERating) + 0.5);
 				is9HoleResult = YES;
@@ -1151,11 +1274,11 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 				playingHandicap = (GOLFPlayingHandicap)floorf((((negative ? -localIndex : localIndex) * localSlope) / unratedSLOPERating) + 0.5);
 				is9HoleResult = have9HoleIndex;
 			} else if (have9HoleIndex) {
-				//	9-hole index… need 18-hole courseHandicap…
+				//	9-hole index… need 18-hole playingHandicap…
 				playingHandicap = (GOLFPlayingHandicap)floorf((((negative ? -localIndex : localIndex) * localSlope * 2.0) / unratedSLOPERating) + 0.5);
 				is9HoleResult = NO;
 			} else {
-				//	18-hole index…, need 9-hole courseHandicap…
+				//	18-hole index…, need 9-hole playingHandicap…
 				float halfIndex = (floorf(((negative ? -localIndex : localIndex) * 5.0) + 0.5) / 10.0);	//	rounded to a tenth
 				playingHandicap = (GOLFPlayingHandicap)floorf(((halfIndex * localSlope) / unratedSLOPERating) + 0.5);
 				is9HoleResult = YES;
@@ -1210,11 +1333,11 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 				playingHandicap = (GOLFPlayingHandicap)floorf(((localIndex * localSlope) / unratedSLOPERating) + 0.5);
 				is9HoleResult = have9HoleIndex;
 			} else if (have9HoleIndex) {
-				//	9-hole index… need 18-hole courseHandicap…
+				//	9-hole index… need 18-hole playingHandicap…
 				playingHandicap = (GOLFPlayingHandicap)floorf(((localIndex * localSlope * 2.0) / unratedSLOPERating) + 0.5);
 				is9HoleResult = NO;
 			} else {
-				//	18-hole index…, need 9-hole courseHandicap…
+				//	18-hole index…, need 9-hole playingHandicap…
 				float halfIndex = (floorf((localIndex * 5.0) + 0.5) / 10.0);	//	rounded to a tenth
 				playingHandicap = (GOLFPlayingHandicap)floorf(((halfIndex * localSlope) / unratedSLOPERating) + 0.5);
 				is9HoleResult = YES;

@@ -35,6 +35,14 @@
 	return (GOLFPlayingHandicap)[self integerValue];
 }
 
++ (id)numberWithHandicapAllowance:(GOLFHandicapAllowance)handicapAllowance {
+	return [NSNumber numberWithFloat:handicapAllowance];
+}
+
+- (GOLFHandicapAllowance)handicapAllowanceValue {
+	return (GOLFHandicapAllowance)[self floatValue];
+}
+
 + (id)numberWithTeeSLOPERating:(GOLFTeeSLOPERating)teeSLOPERating {
 	return [NSNumber numberWithInteger:teeSLOPERating];
 }

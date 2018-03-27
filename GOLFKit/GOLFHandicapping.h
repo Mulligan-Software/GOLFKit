@@ -16,7 +16,7 @@
 //													---
 #define kGOLFHandicapNumberOfMethods				9		//	Total number of handicapping methods
 
-#define kUnratedTeeSLOPERating						113			//	Default SLOPE rating for unrated tee
+//#define kUnratedTeeSLOPERating						113			//	Default SLOPE rating for unrated tee
 
 #define kNotAHandicapIndex							-999.0		//	No-value for GOLFHandicapIndex
 #define kNotACourseRating							-999.0		//	No-value for GOLFTeeCourseRating
@@ -175,6 +175,9 @@ NSString * GOLFHandicapCSSTitle(GOLFHandicapMethodIndex handicapMethod, BOOL abb
 NSString * GOLFHandicapSSSTitle(GOLFHandicapMethodIndex handicapMethod, BOOL abbreviated);	//	Standard Scratch Score
 //	Returns a localized descriptive title for the "standard" score expected of an expert player without a handicap
 
+NSString * GOLFHandicapTableBlurb(GOLFHandicapMethodIndex handicapMethod);	//	Slope Chart (Handicap Table) definition blurb
+//	Returns a localized descriptive blurb for how the contents of a Playing Handicap table are determined
+
 //	Authority-specific data
 BOOL GOLFHandicapCertifiableAuthority(GOLFHandicapAuthority *authority);
 //	Indicates whether the use of the handicapping method of this authority requires certification
@@ -227,9 +230,6 @@ GOLFHandicapDifferential GOLFHandicapExceptionalScoringReductionForAuthority(GOL
 
 GOLFTeeSLOPERating GOLFHandicapUnratedSLOPERatingForAuthority(GOLFHandicapAuthority *authority);
 //	The appropriate SLOPE Rating to be used for unrated tees
-
-//	From The Scoring Machine…
-//NSInteger StrokeControlLimit(NSString *authority, NSInteger courseHandicap, BOOL for9Holes, NSObject *anObject);
 
 GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOLFHandicapIndex handicapIndex, GOLFTeeCourseRating courseRating, GOLFTeeSLOPERating slopeRating, GOLFPar par, GOLFHandicapCalculationOption options, NSDictionary *info);
 //	Playing handicap calculation per the authority

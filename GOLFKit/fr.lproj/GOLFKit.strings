@@ -6,6 +6,14 @@
   Copyright © 2016 Mulligan Software. All rights reserved.
 */
 
+//	Golf Words
+"course" = "parcours";
+"courses" = "parcours";
+"par" = "par";
+"pars" = "pars";
+"tee" = "jalon";
+"tees" = "jalons";
+
 //	Standard Tee Colors
 "GOLF_TEE_COLOR_NAME_BLACK" = "Noir";
 "GOLF_TEE_COLOR_NAME_BLUE" = "Bleue";
@@ -75,6 +83,7 @@
 "TITLE_HANDICAP_CATEGORY_ABBR" = "Catégorie";
 "TITLE_HANDICAP_COURSE" = "Course Handicap";
 "TITLE_HANDICAP_COURSE_PLURAL" = "Course Handicaps";
+"TITLE_HANDICAP_COURSE_RATING" = "Évaluation Parcours";
 "TITLE_HANDICAP_COURSE_TM" = "Course Handicap™";
 "TITLE_HANDICAP_COURSE_TM_PLURAL" = "Course Handicaps™";
 "TITLE_HANDICAP_DAILY" = "Daily Handicap";
@@ -107,6 +116,12 @@
 "TITLE_HANDICAP_PERSONAL_PLURAL" = "Handicaps Individuels";
 "TITLE_HANDICAP_PLAYING" = "Handicap Jouer";
 "TITLE_HANDICAP_PLAYING_PLURAL" = "Handicaps Jouer";
+"TITLE_HANDICAP_SLOPE_CHART" = "Diagramme Slope";
+"TITLE_HANDICAP_SLOPE_RATING" = "Évaluation Slope";
+"TITLE_HANDICAP_TABLE" = "Table de Handicap";
+"TITLE_HANDICAP_WORLD_INDEX" = "Handicap Index Mondial";
+"TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
+"TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "Handicap Indexes Mondials";
 "TITLE_GRADE" = "Classe";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
@@ -120,9 +135,12 @@
 "TOOLTIP_ROUNDS_MODIFIER_EGA" = "* - utilisé\nT - tournoi";
 "TOOLTIP_ROUNDS_MODIFIER_MULLIGAN" = "* - utilisé\nA - loin\nT - tournoi";
 
-//	Phrases
+//	Phrases & Formats
+"AND_%@" = " et %@";
 "CURRENT_%@_TITLE" = "%@ Actuelle";
 "CURRENT_%@_TITLE_PLURAL" = "%@ Actuelles";
+"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Le Tableau %@ (%@) a pour but de transformer le %@ émis par un club de golf ou une association de golf autorisée en un %@ tenant compte de l’%@ de chacun des jalons de départ.";
+"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "Le Tableau %@ (%@) a pour but de transformer le %@ émis par un club de golf ou une association de golf autorisée en un %@ de chacun des jalons de départ.";
 
 //	Countries
 "Algeria" = "Algeria";

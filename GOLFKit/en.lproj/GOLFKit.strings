@@ -6,6 +6,14 @@
   Copyright © 2016 Mulligan Software. All rights reserved.
 */
 
+//	Golf Words
+"course" = "course";
+"courses" = "courses";
+"par" = "par";
+"pars" = "pars";
+"tee" = "tee";
+"tees" = "tees";
+
 //	Standard Tee Colors
 "GOLF_TEE_COLOR_NAME_BLACK" = "Black";
 "GOLF_TEE_COLOR_NAME_BLUE" = "Blue";
@@ -75,6 +83,7 @@
 "TITLE_HANDICAP_CATEGORY_ABBR" = "Category";
 "TITLE_HANDICAP_COURSE" = "Course Handicap";
 "TITLE_HANDICAP_COURSE_PLURAL" = "Course Handicaps";
+"TITLE_HANDICAP_COURSE_RATING" = "Course Rating";
 "TITLE_HANDICAP_COURSE_TM" = "Course Handicap™";
 "TITLE_HANDICAP_COURSE_TM_PLURAL" = "Course Handicaps™";
 "TITLE_HANDICAP_DAILY" = "Daily Handicap";
@@ -107,6 +116,12 @@
 "TITLE_HANDICAP_PERSONAL_PLURAL" = "Personal Handicaps";
 "TITLE_HANDICAP_PLAYING" = "Playing Handicap";
 "TITLE_HANDICAP_PLAYING_PLURAL" = "Playing Handicaps";
+"TITLE_HANDICAP_SLOPE_CHART" = "Slope Chart";
+"TITLE_HANDICAP_SLOPE_RATING" = "Slope Rating";
+"TITLE_HANDICAP_TABLE" = "Handicap Table";
+"TITLE_HANDICAP_WORLD_INDEX" = "World Handicap Index";
+"TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
+"TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "World Handicap Indexes";
 "TITLE_GRADE" = "Grade";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
@@ -120,9 +135,12 @@
 "TOOLTIP_ROUNDS_MODIFIER_EGA" = "* - used\nT - tournament";
 "TOOLTIP_ROUNDS_MODIFIER_MULLIGAN" = "* - used\nA - away\nT - tournament";
 
-//	Phrases
+//	Phrases & Formats
+"AND_%@" = " and %@";
 "CURRENT_%@_TITLE" = "Current %@";
 "CURRENT_%@_TITLE_PLURAL" = "Current %@";
+"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "A %@ Table (%@) is used to convert a %@, issued by your golf club or authorized golf association, to a %@ based on the %@ for a specific set of tees.";
+"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "A %@ Table (%@) is used to convert a %@, issued by your golf club or authorized golf association, to a %@ for a specific set of tees.";
 
 //	Countries
 "Algeria" = "Algeria";

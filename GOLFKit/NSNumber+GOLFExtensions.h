@@ -17,6 +17,9 @@
 + (id)numberWithHandicapIndex:(GOLFHandicapIndex)handicapIndex;
 - (GOLFHandicapIndex)handicapIndexValue;
 
++ (id)numberWithHandicapAllowance:(GOLFHandicapAllowance)handicapAllowance;
+- (GOLFHandicapAllowance)handicapAllowanceValue;
+
 + (id)numberWithPlayingHandicap:(GOLFPlayingHandicap)playingHandicap;
 - (GOLFPlayingHandicap)playingHandicapValue;
 

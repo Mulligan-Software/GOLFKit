@@ -77,5 +77,28 @@ NSDictionary * GOLFHomeCountryInfo(void) {
 	return [NSDictionary dictionaryWithDictionary:workingDict];
 }
 
+#pragma mark NSStringFrom… Utilities
+
+//=================================================================
+//	NSStringFromPlayingHandicap(playingHandicap)
+//=================================================================
+NSString * NSStringFromPlayingHandicap(GOLFPlayingHandicap playingHandicap) {
+	if (playingHandicap == kNotAPlayingHandicap) {
+		return @"kNotAPlayingHandicap";
+	} else {
+		return [NSString stringWithFormat:@"%ld", (long)playingHandicap];
+	}
+}
+
+//=================================================================
+//	NSStringFromHandicapIndex(handicapIndex)
+//=================================================================
+NSString * NSStringFromHandicapIndex(GOLFHandicapIndex handicapIndex) {
+	if (handicapIndex == kNotAHandicapIndex) {
+		return @"kNotAHandicapIndex";
+	} else {
+		return [NSString stringWithFormat:@"%1.1f", handicapIndex];
+	}
+}
 
 

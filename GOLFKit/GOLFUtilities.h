@@ -25,3 +25,11 @@ NSDictionary * GOLFHomeCountryInfo(void);
 //	association		NSString *				The name of the country's golf association
 //	URL				NSString *				The URL of the golf association
 //	authority		GOLFHandicapAuthority	The default golf authority for handicapping in this country
+
+#pragma mark NSStringFrom… Utilities
+
+NSString * NSStringFromPlayingHandicap(GOLFPlayingHandicap playingHandicap);
+//	The Playing Handicap or 'kNotAPlayingHandicap'
+
+NSString * NSStringFromHandicapIndex(GOLFHandicapIndex handicapIndex);
+//	The Handicap Index or 'kNotAHandicapIndex'

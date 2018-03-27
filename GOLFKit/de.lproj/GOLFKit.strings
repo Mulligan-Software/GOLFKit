@@ -6,6 +6,14 @@
   Copyright © 2016 Mulligan Software. All rights reserved.
 */
 
+//	Golf Words
+"course" = "Golfplatz";
+"courses" = "Golfplätze";
+"par" = "Par";
+"pars" = "Pars";
+"tee" = "Abschlag";
+"tees" = "Abschläge";
+
 //	Standard Tee Colors
 "GOLF_TEE_COLOR_NAME_BLACK" = "schwarz";
 "GOLF_TEE_COLOR_NAME_BLUE" = "blau";
@@ -75,6 +83,7 @@
 "TITLE_HANDICAP_CATEGORY_ABBR" = "Klasse";
 "TITLE_HANDICAP_COURSE" = "Golfplatz Handicap";
 "TITLE_HANDICAP_COURSE_PLURAL" = "Golfplatz Handicapen";
+"TITLE_HANDICAP_COURSE_RATING" = "Course Rating";
 "TITLE_HANDICAP_COURSE_TM" = "Course Handicap™";
 "TITLE_HANDICAP_COURSE_TM_PLURAL" = "Course Handicaps™";
 "TITLE_HANDICAP_DAILY" = "Täglichen Handicap";
@@ -107,6 +116,12 @@
 "TITLE_HANDICAP_PERSONAL_PLURAL" = "Individuell Handicapen";
 "TITLE_HANDICAP_PLAYING" = "Spielen Handicap";
 "TITLE_HANDICAP_PLAYING_PLURAL" = "Spielen Handicapen";
+"TITLE_HANDICAP_SLOPE_CHART" = "Slope-Diagramm";
+"TITLE_HANDICAP_SLOPE_RATING" = "Slope Rating";
+"TITLE_HANDICAP_TABLE" = "Handicap-Tabelle";
+"TITLE_HANDICAP_WORLD_INDEX" = "Weltweites Handicap Index";
+"TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
+"TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "Weltweites Handicap Indizes";
 "TITLE_GRADE" = "Klasse";
 "TITLE_SSS" = "Scratch Score genormt";
 "TITLE_SSS_ABBR" = "SSS";
@@ -120,9 +135,12 @@
 "TOOLTIP_ROUNDS_MODIFIER_EGA" = "* - benutzt\nT - Tournier";
 "TOOLTIP_ROUNDS_MODIFIER_MULLIGAN" = "* - benutzt\nA - entfernt\nT - Tournier";
 
-//	Phrases
+//	Phrases & Formats
+"AND_%@" = " und %@";
 "CURRENT_%@_TITLE" = "aktuelle %@";
 "CURRENT_%@_TITLE_PLURAL" = "aktuellen %@";
+"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Ein %@ Tabelle (%@) wird verwendet, um ein %@, ausgestellt von den Golfclub oder ermächtigt Golf Verien, um einen %@ zu konvertieren basierend auf der %@ für eine bestimmte Gruppe von Abschläge.";
+"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "Ein %@ Tabelle (%@) wird verwendet, um ein %@, ausgestellt von den Golfclub oder ermächtigt Golf Verien, um einen %@ zu konvertieren für eine bestimmte Gruppe von Abschläge.";
 
 //	Countries
 "Algeria" = "Algerien";
