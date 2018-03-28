@@ -6,13 +6,22 @@
   Copyright © 2016 Mulligan Software. All rights reserved.
 */
 
-//	Golf Words
-"course" = "campo";
-"courses" = "campos";
-"par" = "par";
-"pars" = "pars";
-"tee" = "tee";
-"tees" = "tees";
+//	Golf Terminology
+"TERM_CLUB" = "club";
+"TERM_CLUB_PLURAL" = "clubes";
+"TERM_COURSE" = "campo";
+"TERM_COURSE_PLURAL" = "campos";
+"TERM_PAR" = "par";
+"TERM_PAR_PLURAL" = "pars";
+"TERM_PLAYER" = "jugador";
+"TERM_PLAYER_PLURAL" = "jugadores";
+"TERM_ROUND" = "ronda";
+"TERM_ROUND_PLURAL" = "rondas";
+"TERM_SCORECARD" = "tarjeta";
+"TERM_SCORECARD_PLURAL" = "tarjetas";
+"TERM_TEE" = "tee";
+"TERM_TEE_PLURAL" = "tees";
+"TERM_TOURNAMENT" = "torneo";
 
 //	Standard Tee Colors
 "GOLF_TEE_COLOR_NAME_BLACK" = "Negro";

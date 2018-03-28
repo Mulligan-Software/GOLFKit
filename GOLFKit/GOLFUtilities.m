@@ -66,7 +66,7 @@ NSDictionary * GOLFHomeCountryInfo(void) {
 	[workingDict setObject:countryCode forKey:@"countryCode"];	//	In case we need to diagnose a missing country code
 	
 	if (countryName) {
-		countryName = NSLocalizedStringFromTableInBundle(countryName, @"GOLFKit", GOLFKitBundle(), @"");	//	Localize the country name
+		countryName = GOLFLocalizedString(countryName);
 	}
 	countryName = (countryName ?: [[NSUserDefaults standardUserDefaults] objectForKey:@"HomeCountry"]);	//	From manual setting, if any (already localized)
 	[workingDict setObject:countryName forKey:@"countryName"];	//	Replace with our best version of countryName
@@ -76,6 +76,18 @@ NSDictionary * GOLFHomeCountryInfo(void) {
 	
 	return [NSDictionary dictionaryWithDictionary:workingDict];
 }
+
+NSString * GOLFLocalizedString(NSString *key) {
+	if (key && (key.length > 0)) {
+		NSString *notFound = @"*-*";
+		NSString *prospectiveLocalization = [GOLFKitBundle() localizedStringForKey:key value:notFound table:@"GOLFKit"];
+		if (![prospectiveLocalization isEqualToString:notFound]) { return prospectiveLocalization; }
+		prospectiveLocalization = [[NSBundle mainBundle] localizedStringForKey:key value:notFound table:@"Localizable"];
+		if (![prospectiveLocalization isEqualToString:notFound]) { return prospectiveLocalization; }
+	}
+	return key;
+}
+
 
 #pragma mark NSStringFrom… Utilities
 
