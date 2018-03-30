@@ -146,6 +146,7 @@
 
 //	Phrases & Formats
 "AND_%@" = " and %@";
+"COURSE_HANDICAP_%@_TABLE" = "%@ Table";
 "CURRENT_%@_TITLE" = "Current %@";
 "CURRENT_%@_TITLE_PLURAL" = "Current %@";
 "DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Determine your %@ on the right by finding the row in which your %@ appears on the left.";

@@ -125,7 +125,7 @@
 "TITLE_HANDICAP_PERSONAL_PLURAL" = "Handicaps Personales";
 "TITLE_HANDICAP_PLAYING" = "Handicap de Jugar";
 "TITLE_HANDICAP_PLAYING_PLURAL" = "Handicaps de Jugar";
-"TITLE_HANDICAP_SLOPE_CHART" = "El Gráfico Slope";
+"TITLE_HANDICAP_SLOPE_CHART" = "Gráfico Slope";
 "TITLE_HANDICAP_SLOPE_RATING" = "Clasificación de Slope";
 "TITLE_HANDICAP_TABLE" = "Tabla de Handicap";
 "TITLE_HANDICAP_WORLD_INDEX" = "Índice de Handicap Mundial";
@@ -146,6 +146,7 @@
 
 //	Phrases & Formats
 "AND_%@" = " y %@";
+"COURSE_HANDICAP_%@_TABLE" = "Tabla %@";
 "CURRENT_%@_TITLE" = "%@ Actual";
 "CURRENT_%@_TITLE_PLURAL" = "%@ Actuales";
 "DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Determina tu %@ de la derecha encontrando la fila donde aparece tu %@ de la izquierda.";
