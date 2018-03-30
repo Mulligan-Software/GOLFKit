@@ -150,7 +150,6 @@ BOOL GOLFHandicapCertifiableAuthority(GOLFHandicapAuthority *authority) {
 //=================================================================
 NSArray * GOLFHandicapAuthorities(void) {
 	if (cachedGOLFHandicapAuthorities == nil) {
-		NSBundle *ourBundle = GOLFKitBundle();
 		NSMutableArray *workingArray = [NSMutableArray arrayWithObjects:
 				[NSDictionary dictionaryWithObjectsAndKeys:
 						[NSNumber numberWithUnsignedInteger:GOLFHandicapMethodUSGA], @"methodIndex",
@@ -469,6 +468,16 @@ NSString * GOLFHandicapTableBlurb(GOLFHandicapMethodIndex handicapMethod) {
     				handicapIndexTitle,
     				playingHandicapTitle];
 	}
+}
+
+//=================================================================
+//	GOLFHandicapTableInstruction(handicapMethod)
+//=================================================================
+NSString * GOLFHandicapTableInstruction(GOLFHandicapMethodIndex handicapMethod) {
+	NSString *playingHandicapTitle = GOLFPlayingHandicapTitle(handicapMethod, NO);	//	Localized
+	NSString *handicapIndexTitle = GOLFHandicapIndexTitle(handicapMethod, NO);	//	Localized
+
+	return [NSString stringWithFormat:GOLFLocalizedString(@"DETERMINE_YOUR_%@_WITH_YOUR_%@"), playingHandicapTitle, handicapIndexTitle];
 }
 
 //=================================================================

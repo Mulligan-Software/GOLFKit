@@ -178,6 +178,9 @@ NSString * GOLFHandicapSSSTitle(GOLFHandicapMethodIndex handicapMethod, BOOL abb
 NSString * GOLFHandicapTableBlurb(GOLFHandicapMethodIndex handicapMethod);	//	Slope Chart (Handicap Table) definition blurb
 //	Returns a localized descriptive blurb for how the contents of a Playing Handicap table are determined
 
+NSString * GOLFHandicapTableInstruction(GOLFHandicapMethodIndex handicapMethod);	//	Slope Chart (Handicap Table) selection instruction
+//	Returns a localized instruction for identifying your playing handicap on the right from the range of handicap indexes on the left
+
 //	Authority-specific data
 BOOL GOLFHandicapCertifiableAuthority(GOLFHandicapAuthority *authority);
 //	Indicates whether the use of the handicapping method of this authority requires certification

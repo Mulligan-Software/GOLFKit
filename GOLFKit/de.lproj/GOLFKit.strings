@@ -148,6 +148,7 @@
 "AND_%@" = " und %@";
 "CURRENT_%@_TITLE" = "aktuelle %@";
 "CURRENT_%@_TITLE_PLURAL" = "aktuellen %@";
+"DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Bestimme Dein %@ auf der rechten Seite indem Sie die Zeile finden, in der Ihre %@ auf der linken Seite steht.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Ein %@ Tabelle (%@) wird verwendet, um ein %@, ausgestellt von den Golfclub oder ermächtigt Golf Verien, um einen %@ zu konvertieren basierend auf der %@ für eine bestimmte Gruppe von Abschläge.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "Ein %@ Tabelle (%@) wird verwendet, um ein %@, ausgestellt von den Golfclub oder ermächtigt Golf Verien, um einen %@ zu konvertieren für eine bestimmte Gruppe von Abschläge.";
 

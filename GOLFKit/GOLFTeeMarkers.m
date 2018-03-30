@@ -19,7 +19,6 @@ static NSArray *cachedStandardTeeColorArray = nil;
 //=================================================================
 NSArray * GOLFStandardTeeColorArray(void) {
 	if (cachedStandardTeeColorArray == nil) {
-		NSBundle *ourBundle = GOLFKitBundle();
 		NSMutableArray *workingList = [NSMutableArray arrayWithCapacity:kGOLFTeeColorsNumberOfStandard];
 
 		//	Each entry in GOLFStandardTeeColorArray is a NSDictionary with the following keyed items:
@@ -487,7 +486,6 @@ GOLFTeeColorIndex GOLFTeeColorIndexFromTeeColor(GOLFColor *teeColor) {
 //	GOLFTeeColorNameFromTeeColorIndex
 //=================================================================
 NSString * GOLFTeeColorNameFromTeeColorIndex(GOLFTeeColorIndex proposedColorIndex) {
-	NSBundle *ourBundle = GOLFKitBundle();
 	if ((proposedColorIndex < 0) || (proposedColorIndex == kNotATeeColorIndex) || (proposedColorIndex == GOLFTeeColorUnknown))
 		return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_UNKNOWN");
 	if (proposedColorIndex == GOLFTeeColorGeneric)

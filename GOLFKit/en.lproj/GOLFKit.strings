@@ -148,6 +148,7 @@
 "AND_%@" = " and %@";
 "CURRENT_%@_TITLE" = "Current %@";
 "CURRENT_%@_TITLE_PLURAL" = "Current %@";
+"DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Determine your %@ on the right by finding the row in which your %@ appears on the left.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "A %@ Table (%@) is used to convert a %@, issued by your golf club or authorized golf association, to a %@ based on the %@ for a specific set of tees.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "A %@ Table (%@) is used to convert a %@, issued by your golf club or authorized golf association, to a %@ for a specific set of tees.";
 
