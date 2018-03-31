@@ -54,7 +54,14 @@ NSDictionary * GOLFHomeCountryInfo(void) {
 	//	authority		GOLFHandicapAuthority	The default golf authority for handicapping in this country
 	
 	NSLocale *ourLocale = [NSLocale autoupdatingCurrentLocale];
-	NSString *countryCode = ourLocale.countryCode;
+//	NSString *localeIdentifier = [ourLocale localeIdentifier];
+	NSString *countryCode = @"US";
+	if (@available(iOS 10.0, *)) {
+		countryCode = ourLocale.countryCode;
+	} else {
+		NSDictionary *localeDict = [NSLocale componentsFromLocaleIdentifier:[ourLocale localeIdentifier]];
+		countryCode = [localeDict objectForKey:NSLocaleCountryCode];
+	}
 	NSDictionary *rootDict = [NSDictionary dictionaryWithContentsOfFile:[GOLFKitBundle() pathForResource:@"GOLFCountries" ofType:@"plist"]];
 	NSMutableDictionary *workingDict = [[rootDict objectForKey:countryCode] mutableCopy];
 	NSString *countryName = [workingDict objectForKey:@"countryName"];	//	Pick it up (might be nil)

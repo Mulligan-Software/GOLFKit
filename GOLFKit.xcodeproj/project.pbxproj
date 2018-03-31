@@ -195,6 +195,7 @@
 		2912D764204EE95400649734 /* Handicapping */ = {
 			isa = PBXGroup;
 			children = (
+				29E888CA1DCE5E6400C4A63A /* GOLFKit.strings */,
 				2912D761204EE40D00649734 /* GOLFHandicapping.h */,
 				2912D75E204EE3C800649734 /* GOLFHandicapping.m */,
 			);
@@ -335,7 +336,6 @@
 			isa = PBXGroup;
 			children = (
 				29436C632055B5F90080E0FE /* GOLFCountries.plist */,
-				29E888CA1DCE5E6400C4A63A /* GOLFKit.strings */,
 			);
 			name = Localization;
 			path = GOLFKit;
@@ -635,8 +635,7 @@
 				29C6C4242047576800EF584C /* de */,
 			);
 			name = GOLFKit.strings;
-			path = GOLFKit;
-			sourceTree = SOURCE_ROOT;
+			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
 

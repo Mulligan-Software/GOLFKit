@@ -123,7 +123,7 @@ GOLFHandicapMethodIndex GOLFHandicapBestMethodIndexFromAuthority(GOLFHandicapAut
 			return GOLFHandicapMethodMulligan;
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityPersonal]) {
 			return GOLFHandicapMethodPersonal;
-		} else if ([authority isEqualToString:GOLFHandicapSecondBest]) {
+		} else if ([authority isEqualToString:GOLFHandicapAuthoritySecondBest]) {
 			return GOLFHandicapMethodSecondBest;
 #endif
 		}
@@ -384,49 +384,51 @@ NSString * GOLFHandicapTableBlurb(GOLFHandicapMethodIndex handicapMethod) {
     				playingHandicapTitle];
 
   		case GOLFHandicapMethodPersonal:
-			GOLFPlayingHandicapType playingHandicapType = [[[NSUserDefaults standardUserDefaults] objectForKey:@"PHPlayingHandicapType"] integerValue];
-			switch (playingHandicapType) {
-				case GOLFPlayingHandicapTypeRatingAdjusted:
-					//	Use just the rating to adjust the handicap…
-					return [NSString stringWithFormat:GOLFLocalizedString(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@"),
-							playingHandicapTitle,
-							slopeChartTitle,
-							handicapIndexTitle,
-							playingHandicapTitle,
-							GOLFLocalizedString(@"TITLE_HANDICAP_COURSE_RATING")];
-
-				case GOLFPlayingHandicapTypeSlopeAdjusted:
-					//	Playing handicap is handicap adjusted from neutral slope…
-					return [NSString stringWithFormat:GOLFLocalizedString(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@"),
-							playingHandicapTitle,
-							slopeChartTitle,
-							handicapIndexTitle,
-							playingHandicapTitle,
-							GOLFLocalizedString(@"TITLE_HANDICAP_SLOPE_RATING")];
-
-				case GOLFPlayingHandicapTypeFullyAdjusted:
-					{
-						//	Use both slope, rating and par to adjust the handicap…
-						NSString *usingPhrase = GOLFLocalizedString(@"TITLE_HANDICAP_COURSE_RATING");
-						usingPhrase = [usingPhrase stringByAppendingFormat:@", %@", GOLFLocalizedString(@"TITLE_HANDICAP_SLOPE_RATING")];
-						usingPhrase = [usingPhrase stringByAppendingFormat:GOLFLocalizedString(@"AND_%@"), GOLFLocalizedString(@"par")];
+  			{
+				GOLFPlayingHandicapType playingHandicapType = [[[NSUserDefaults standardUserDefaults] objectForKey:@"PHPlayingHandicapType"] integerValue];
+				switch (playingHandicapType) {
+					case GOLFPlayingHandicapTypeRatingAdjusted:
+						//	Use just the rating to adjust the handicap…
 						return [NSString stringWithFormat:GOLFLocalizedString(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@"),
 								playingHandicapTitle,
 								slopeChartTitle,
 								handicapIndexTitle,
 								playingHandicapTitle,
-								usingPhrase];
-					}
+								GOLFLocalizedString(@"TITLE_HANDICAP_COURSE_RATING")];
 
-				case GOLFPlayingHandicapTypeUnadjusted:
-				default:
-					//	The playing handicap is the rounded handicap
-					return [NSString stringWithFormat:GOLFLocalizedString(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@"),
-							playingHandicapTitle,
-							slopeChartTitle,
-							handicapIndexTitle,
-							playingHandicapTitle];
-			}	//	switch (playingHandicapType)
+					case GOLFPlayingHandicapTypeSlopeAdjusted:
+						//	Playing handicap is handicap adjusted from neutral slope…
+						return [NSString stringWithFormat:GOLFLocalizedString(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@"),
+								playingHandicapTitle,
+								slopeChartTitle,
+								handicapIndexTitle,
+								playingHandicapTitle,
+								GOLFLocalizedString(@"TITLE_HANDICAP_SLOPE_RATING")];
+
+					case GOLFPlayingHandicapTypeFullyAdjusted:
+						{
+							//	Use both slope, rating and par to adjust the handicap…
+							NSString *usingPhrase = GOLFLocalizedString(@"TITLE_HANDICAP_COURSE_RATING");
+							usingPhrase = [usingPhrase stringByAppendingFormat:@", %@", GOLFLocalizedString(@"TITLE_HANDICAP_SLOPE_RATING")];
+							usingPhrase = [usingPhrase stringByAppendingFormat:GOLFLocalizedString(@"AND_%@"), GOLFLocalizedString(@"par")];
+							return [NSString stringWithFormat:GOLFLocalizedString(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@"),
+									playingHandicapTitle,
+									slopeChartTitle,
+									handicapIndexTitle,
+									playingHandicapTitle,
+									usingPhrase];
+						}
+
+					case GOLFPlayingHandicapTypeUnadjusted:
+					default:
+						//	The playing handicap is the rounded handicap
+						return [NSString stringWithFormat:GOLFLocalizedString(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@"),
+								playingHandicapTitle,
+								slopeChartTitle,
+								handicapIndexTitle,
+								playingHandicapTitle];
+				}	//	switch (playingHandicapType)
+			}
 
   		case GOLFHandicapMethodSecondBest:
     		return [NSString stringWithFormat:GOLFLocalizedString(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@"),
