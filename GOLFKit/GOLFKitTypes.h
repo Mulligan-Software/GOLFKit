@@ -10,35 +10,27 @@
 #define GOLFKitTypes_h
 #endif /* GOLFKitTypes_h */
 
-//	Temporary defines
-#define kNotAPar					-999		//	No-value for par
-#define kNotAYardage				-999		//	No-value for yardage (imperial or metric)
-#define kNotAHoleNumber				-999		//	No-value for a hole number
-#define kNotAHoleHandicap			-999		//	No-value for hole handicap (stroke allocation)
-
-typedef NSInteger GOLFTeeColorIndex;	//	Defined in GOLFColors.h
-
-typedef NSInteger GOLFTeeSLOPERating;
-typedef float GOLFTeeCourseRating;
-
-typedef float GOLFHandicapIndex;
-typedef NSInteger GOLFPlayingHandicap;
-typedef float GOLFHandicapAllowance;
-typedef float GOLFHandicapDifferential;
-typedef NSInteger GOLFHandicapGrade;	//	Grade, category, classification, etc.
-
-typedef NSInteger GOLFRoundCCR;
-
+//	Clubs, courses, sides, tees, nines, etc.
 typedef NSInteger GOLFPar;
 typedef NSInteger GOLFYardage;
 typedef NSInteger GOLFHoleNumber;
 typedef NSInteger GOLFHoleHandicap;
-//typedef int GOLFScore;
-//typedef float GOLFNetScore;
-//typedef int GOLFPutts;
+typedef NSInteger GOLFTeeColorIndex;	//	Defined in GOLFColors.h
+typedef NSInteger GOLFTeeSLOPERating;
+typedef float GOLFTeeCourseRating;
 
-//typedef NSUInteger GOLFHandicapMethodIndex;
+//	Scoring - Events, Scorecards, rounds, etc.
+typedef NSInteger GOLFRoundCCR;
+typedef NSInteger GOLFScore;
+typedef float GOLFNetScore;
+typedef NSInteger GOLFPutts;
 
-//typedef unsigned int GOLFPlayType;
-//typedef unsigned int GOLFAllowanceType;
+//	Handicapping
+typedef float GOLFHandicapAllowance;
+typedef NSString GOLFHandicapAuthority;
+typedef float GOLFHandicapDifferential;		//	The intermediate adjusted handicapping "value" of a round used for handicap calculation
+typedef NSInteger GOLFHandicapGrade;		//	Grade, category, classification, etc.
+typedef float GOLFHandicapIndex;			//	The portable course and player independent evaluation of a golfer's skill
+typedef NSInteger GOLFPlayingHandicap;		//	The whole unadjusted course and player-dependent strokes calculated for a player
+typedef NSInteger GOLFHandicapStrokes;		//	Any value related to strokes earned, taken or used
 

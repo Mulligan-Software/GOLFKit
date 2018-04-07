@@ -1188,9 +1188,9 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 			if (referenceSource && [referenceSource respondsToSelector:@selector(teeCourseRatingForWomen:for9Holes:)]) {
 				BOOL for9Holes = need9HoleResult;
 				BOOL forWomen = needWomensResult;
-				NSNumber *ratingValue = [referenceSource teeCourseRatingForWomen:&forWomen for9Holes:&for9Holes];
-				if (ratingValue) {
-					localRating = [ratingValue floatValue];
+				NSNumber *ratingNumber = [referenceSource teeCourseRatingForWomen:&forWomen for9Holes:&for9Holes];
+				if (ratingNumber) {
+					localRating = [ratingNumber teeCourseRatingValue];
 					have9HoleRating = for9Holes;
 					haveWomensRating = forWomen;
 				}
@@ -1205,9 +1205,9 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 					if (extraSource && [extraSource respondsToSelector:@selector(teeCourseRatingForWomen:for9Holes:)]) {
 						for9Holes = need9HoleResult;
 						forWomen = needWomensResult;
-						ratingValue = [extraSource teeCourseRatingForWomen:&forWomen for9Holes:&for9Holes];
-						if (ratingValue) {
-							localRating = [ratingValue floatValue];
+						ratingNumber = [extraSource teeCourseRatingForWomen:&forWomen for9Holes:&for9Holes];
+						if (ratingNumber) {
+							localRating = [ratingNumber teeCourseRatingValue];
 							have9HoleRating = for9Holes;
 							haveWomensRating = forWomen;
 						}
@@ -1575,25 +1575,25 @@ CGPoint GOLFLowHighIndexesAsPointFor(GOLFHandicapAuthority *authority, GOLFPlayi
 	if (referenceSource) {
 		BOOL for9Holes = need9HoleResult;
 		if ([referenceSource respondsToSelector:@selector(teeSLOPERatingForWomen:for9Holes:)]) {
-			NSNumber *slopeValue = [referenceSource teeSLOPERatingForWomen:nil for9Holes:&for9Holes];
-			if (slopeValue) {
-				localSlope = [slopeValue integerValue];
+			NSNumber *slopeNumber = [referenceSource teeSLOPERatingForWomen:nil for9Holes:&for9Holes];
+			if (slopeNumber) {
+				localSlope = [slopeNumber teeSLOPERatingValue];
 				have9HoleSlope = for9Holes;
 			}
 		}
 		if ([referenceSource respondsToSelector:@selector(teeCourseRatingForWomen:for9Holes:)]) {
 			for9Holes = need9HoleResult;
-			NSNumber *ratingValue = [referenceSource teeCourseRatingForWomen:nil for9Holes:&for9Holes];
-			if (ratingValue) {
-				localRating = [ratingValue floatValue];
+			NSNumber *ratingNumber = [referenceSource teeCourseRatingForWomen:nil for9Holes:&for9Holes];
+			if (ratingNumber) {
+				localRating = [ratingNumber teeCourseRatingValue];
 				have9HoleRating = for9Holes;
 			}
 		}
 		if ([referenceSource respondsToSelector:@selector(teeParForWomen:for9Holes:)]) {
 			for9Holes = need9HoleResult;
-			NSNumber *parValue = [referenceSource teeParForWomen:nil for9Holes:&for9Holes];
-			if (parValue) {
-				localPar = [parValue integerValue];
+			NSNumber *parNumber = [referenceSource teeParForWomen:nil for9Holes:&for9Holes];
+			if (parNumber) {
+				localPar = [parNumber parValue];
 				have9HolePar = for9Holes;
 			}
 		}
@@ -1694,25 +1694,25 @@ GOLFPlayingHandicap GOLFFirstLocalHandicapForAuthority(GOLFHandicapAuthority *au
 	if (referenceSource) {
 		BOOL for9Holes = need9HoleResult;
 		if ([referenceSource respondsToSelector:@selector(teeSLOPERatingForWomen:for9Holes:)]) {
-			NSNumber *slopeValue = [referenceSource teeSLOPERatingForWomen:nil for9Holes:&for9Holes];
-			if (slopeValue) {
-				localSlope = [slopeValue integerValue];
+			NSNumber *slopeNumber = [referenceSource teeSLOPERatingForWomen:nil for9Holes:&for9Holes];
+			if (slopeNumber) {
+				localSlope = [slopeNumber teeSLOPERatingValue];
 				have9HoleSlope = for9Holes;
 			}
 		}
 		if ([referenceSource respondsToSelector:@selector(teeCourseRatingForWomen:for9Holes:)]) {
 			for9Holes = need9HoleResult;
-			NSNumber *ratingValue = [referenceSource teeCourseRatingForWomen:nil for9Holes:&for9Holes];
-			if (ratingValue) {
-				localRating = [ratingValue floatValue];
+			NSNumber *ratingNumber = [referenceSource teeCourseRatingForWomen:nil for9Holes:&for9Holes];
+			if (ratingNumber) {
+				localRating = [ratingNumber teeCourseRatingValue];
 				have9HoleRating = for9Holes;
 			}
 		}
 		if ([referenceSource respondsToSelector:@selector(teeParForWomen:for9Holes:)]) {
 			for9Holes = need9HoleResult;
-			NSNumber *parValue = [referenceSource teeParForWomen:nil for9Holes:&for9Holes];
-			if (parValue) {
-				localPar = [parValue integerValue];
+			NSNumber *parNumber = [referenceSource teeParForWomen:nil for9Holes:&for9Holes];
+			if (parNumber) {
+				localPar = [parNumber parValue];
 				have9HolePar = for9Holes;
 			}
 		}
@@ -1763,9 +1763,9 @@ GOLFHandicapGrade EGACategoryFromEGAHandicap(GOLFHandicapIndex EGAHandicap, BOOL
 		else if (EGAHandicap < 54.1)	//	Category 6
 			return 6;
 		else							//	Beyond category
-			return (GOLFHandicapGrade)kNotAGrade;
+			return (GOLFHandicapGrade)kNotAHandicapGrade;
 	}
-	return (GOLFHandicapGrade)kNotAGrade;
+	return (GOLFHandicapGrade)kNotAHandicapGrade;
 }
 
 //=================================================================

@@ -66,9 +66,11 @@ typedef NS_ENUM(GOLFTeeColorIndex, teeColorIndexEnumeration) {
 	GOLFTeeColorLastCombo = GOLFTeeColorBlueAndGreen,
 	GOLFTeeColorCustom = 50,			//	Custom tee color (50)
 	GOLFTeeColorUSA,					//	Custom tee marker (U.S.A) (51)
+	GOLFTeeColorFirstSpecial = GOLFTeeColorUSA,
 	GOLFTeeColorEU,						//	Custom tee marker (E.U.) (52)
 	GOLFTeeColorPGA,					//	Custom tee marker (PGA) (53)
 	GOLFTeeColorUSGA,					//	Custom tee marker (USGA) (54)
+	GOLFTeeColorLastSpecial = GOLFTeeColorUSGA,
 	GOLFTeeColorGeneric = 98,			//	Generic tee color (98)
 	GOLFTeeColorUnknown = 99,			//	Unknown tee color
 	GOLFTeeColorAdd = 998,				//	"Add" tee color

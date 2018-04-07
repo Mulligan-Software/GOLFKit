@@ -8,6 +8,7 @@
 
 #import "GOLFKit.h"
 #import "GOLFColors.h"
+#import "GOLFScoring.h"
 
 @interface NSNumber (GOLFExtensions)
 
@@ -19,6 +20,15 @@
 
 + (id)numberWithHandicapAllowance:(GOLFHandicapAllowance)handicapAllowance;
 - (GOLFHandicapAllowance)handicapAllowanceValue;
+
++ (id)numberWithHandicapStrokes:(GOLFHandicapStrokes)handicapStrokes;
+- (GOLFHandicapStrokes)handicapStrokesValue;
+
++ (id)numberWithHandicapGrade:(GOLFHandicapGrade)handicapGrade;
+- (GOLFHandicapGrade)handicapGradeValue;
+
++ (id)numberWithHandicapDifferential:(GOLFHandicapDifferential)handicapDifferential;
+- (GOLFHandicapDifferential)handicapDifferentialValue;
 
 + (id)numberWithPlayingHandicap:(GOLFPlayingHandicap)playingHandicap;
 - (GOLFPlayingHandicap)playingHandicapValue;
@@ -40,5 +50,23 @@
 
 + (id)numberWithHoleHandicap:(GOLFHoleHandicap)holeHandicap;
 - (GOLFHoleHandicap)holeHandicapValue;
+
++ (id)numberWithRoundCCR:(GOLFRoundCCR)roundCCR;
+- (GOLFRoundCCR)roundCCRValue;
+
++ (id)numberWithScore:(GOLFScore)score;
+- (GOLFScore)scoreValue;
+
++ (id)numberWithNetScore:(GOLFNetScore)netScore;
+- (GOLFNetScore)netScoreValue;
+
++ (id)numberWithPutts:(GOLFPutts)putts;
+- (GOLFPutts)puttsValue;
+
++ (id)numberWithPlayType:(GOLFPlayType)playType;
+- (GOLFPlayType)playTypeValue;
+
++ (id)numberWithAllowanceType:(GOLFAllowanceType)allowanceType;
+- (GOLFAllowanceType)allowanceTypeValue;
 
 @end

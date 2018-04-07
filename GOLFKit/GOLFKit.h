@@ -22,7 +22,6 @@
 //	Models
 #import <GOLFKit/GOLFKitTypes.h>
 #import <GOLFKit/GOLFUtilities.h>
-//	#import <GOLFKit/GOLFClubs.h>
 
 //	Categories
 #import <GOLFKit/NSNumber+GOLFExtensions.h>
@@ -33,7 +32,12 @@
 #endif
 
 //	Common Features (Handicapping, etc.)
+#import <GOLFKit/GOLFClubs.h>
+#import <GOLFKit/GOLFScoring.h>
 #import <GOLFKit/GOLFHandicapping.h>
+
+//	Common category extensions
+#import <GOLFKit/NSNumber+GOLFExtensions.h>
 
 //	User Interface (Colors, text, localization, etc.)
 #import <GOLFKit/GOLFColors.h>

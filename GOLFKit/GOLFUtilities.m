@@ -78,7 +78,7 @@ NSDictionary * GOLFHomeCountryInfo(void) {
 	countryName = (countryName ?: [[NSUserDefaults standardUserDefaults] objectForKey:@"HomeCountry"]);	//	From manual setting, if any (already localized)
 	[workingDict setObject:countryName forKey:@"countryName"];	//	Replace with our best version of countryName
 
-	authority = (authority ?: @"USGA");
+	authority = (authority ?: GOLFHandicapAuthorityUSGA);
 	[workingDict setObject:@"authority" forKey:authority];	//	Replace with the best version of authority
 	
 	return [NSDictionary dictionaryWithDictionary:workingDict];

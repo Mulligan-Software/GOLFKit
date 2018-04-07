@@ -43,6 +43,30 @@
 	return (GOLFHandicapAllowance)[self floatValue];
 }
 
++ (id)numberWithHandicapStrokes:(GOLFHandicapStrokes)handicapStrokes {
+	return [NSNumber numberWithInteger:handicapStrokes];
+}
+
+- (GOLFHandicapStrokes)handicapStrokesValue {
+	return (GOLFHandicapStrokes)[self integerValue];
+}
+
++ (id)numberWithHandicapGrade:(GOLFHandicapGrade)handicapGrade {
+	return [NSNumber numberWithInteger:handicapGrade];
+}
+
+- (GOLFHandicapGrade)handicapGradeValue {
+	return (GOLFHandicapGrade)[self integerValue];
+}
+
++ (id)numberWithHandicapDifferential:(GOLFHandicapDifferential)handicapDifferential {
+	return [NSNumber numberWithFloat:handicapDifferential];
+}
+
+- (GOLFHandicapDifferential)handicapDifferentialValue {
+	return (GOLFHandicapDifferential)[self floatValue];
+}
+
 + (id)numberWithTeeSLOPERating:(GOLFTeeSLOPERating)teeSLOPERating {
 	return [NSNumber numberWithInteger:teeSLOPERating];
 }
@@ -89,6 +113,54 @@
 
 - (GOLFHoleHandicap)holeHandicapValue {
 	return (GOLFHoleHandicap)[self integerValue];
+}
+
++ (id)numberWithRoundCCR:(GOLFRoundCCR)roundCCR {
+	return [NSNumber numberWithInteger:roundCCR];
+}
+
+- (GOLFRoundCCR)roundCCRValue {
+	return (GOLFRoundCCR)[self roundCCRValue];
+}
+
++ (id)numberWithScore:(GOLFScore)score {
+    return [NSNumber numberWithInteger:(NSInteger)score];
+}
+
+- (GOLFScore)scoreValue {
+    return (GOLFScore)[self integerValue];
+}
+
++ (id)numberWithNetScore:(GOLFNetScore)netScore {
+    return [NSNumber numberWithFloat:(float)netScore];
+}
+
+- (GOLFNetScore)netScoreValue {
+    return (GOLFNetScore)[self floatValue];
+}
+
++ (id)numberWithPutts:(GOLFPutts)putts {
+    return [NSNumber numberWithInteger:(NSInteger)putts];
+}
+
+- (GOLFPutts)puttsValue {
+    return (GOLFPutts)[self integerValue];
+}
+
++ (id)numberWithPlayType:(GOLFPlayType)playType {
+	return [NSNumber numberWithUnsignedInteger:playType];
+}
+
+- (GOLFPlayType)playTypeValue {
+	return (GOLFPlayType)[self unsignedIntegerValue];
+}
+
++ (id)numberWithAllowanceType:(GOLFAllowanceType)allowanceType {
+	return [NSNumber numberWithUnsignedInteger:allowanceType];
+}
+
+- (GOLFAllowanceType)allowanceTypeValue {
+	return (GOLFAllowanceType)[self unsignedIntegerValue];
 }
 
 @end

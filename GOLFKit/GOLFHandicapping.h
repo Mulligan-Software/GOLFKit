@@ -19,26 +19,11 @@
 //#define kUnratedTeeSLOPERating						113			//	Default SLOPE rating for unrated tee
 
 #define kNotAHandicapIndex							-999.0		//	No-value for GOLFHandicapIndex
-#define kNotACourseRating							-999.0		//	No-value for GOLFTeeCourseRating
-#define kNotASLOPERating							-999		//	No-value for GOLFTeeSLOPERating
 #define kNotAPlayingHandicap						-999		//	No-value for GOLFPlayingHandicap
-#define kNotAGrade									-999		//	No-value for GOLFHandicapGrade
-
-typedef NS_OPTIONS(NSUInteger, GOLFRoundHandicapOption) {
-	GOLFRoundHandicapOptionNone			= 0,			//	(0)
-	GOLFRoundHandicapOptionsNone		= GOLFRoundHandicapOptionNone,
-	GOLFRoundHandicapOptionUsed			= 1 << 0,		//	(1)			Round used in handicap latest calculation (ie: one of the best 10 of last 20)
-	GOLFRoundHandicapOptionEligible		= 1 << 1,		//	(2)			Round is identified as eligible for use/review in calculations (stats and handicapping)
-	GOLFRoundHandicapOptionTournament	= 1 << 2,		//	(4)			Round identified as a "tournament" round
-	GOLFRoundHandicapOptionCombined		= 1 << 3,		//	(8)			18-hole round constructed from two 9-hole rounds
-	GOLFRoundHandicapOption9Holes		= 1 << 4,		//	(16)		9-hole round
-	GOLFRoundHandicapOptionAway			= 1 << 5,		//	(32)		Round identified as played "away" - not at home course
-	GOLFRoundHandicapOptionHome			= 1 << 6,		//	(64)		Round identified as played at home course (not exclusive of GOLFRoundHandicapOptionAway)
-	GOLFRoundHandicapOptionSpare1		= 1 << 7,		//	(128)
-	GOLFRoundHandicapOptionSpare2		= 1 << 8,		//	(256)
-	GOLFRoundHandicapOptionInternet		= 1 << 9,		//	(512)		Round recorded/entered via the internet
-	GOLFRoundHandicapOptionPenalty		= 1 << 10		//	(1024)		Round identified as a "penalty" round - may have adjusted handicap
-};
+#define kNotAHandicapGrade							-999		//	No-value for GOLFHandicapGrade
+#define kNotHandicapStrokes							-999		//	No-value for GOLFHandicapStrokes
+#define kNotAHandicapAllowance						-999.0		//	No-value for GOLFHandicapAllowance
+#define kNotAHandicapDifferential					-999.0		//	No-value for GOLFHandicapDIfferential
 
 typedef NS_OPTIONS(NSUInteger, GOLFHandicapCalculationOption) {
 	GOLFHandicapCalculationOptionNone				= 0,			//	(0)
@@ -96,12 +81,6 @@ typedef NS_ENUM(NSUInteger, GOLFPlayingHandicapType) {
 	GOLFPlayingHandicapTypeSlopeAdjusted = 10,		//	Playing handicap adjusted to course rating with slope rating	(10)
 	GOLFPlayingHandicapTypeUnknown = 99				//	Unknown playing handicap style
 };
-
-typedef NSString GOLFHandicapAuthority;
-typedef float GOLFHandicapDifferential;		//	The intermediate adjusted handicapping "value" of a round used for handicap calculation
-typedef float GOLFHandicapIndex;			//	The portable course and player independent evaluation of a golfer's skill
-typedef NSInteger GOLFPlayingHandicap;		//	The whole unadjusted course and player-dependent strokes calculated for a player
-typedef NSInteger GOLFHandicapStrokes;		//	Any value related to strokes earned, taken or used
 
 extern GOLFHandicapAuthority * const GOLFHandicapAuthorityUSGA;			//	"USGA"
 extern GOLFHandicapAuthority * const GOLFHandicapAuthorityRCGA;			//	"RCGA"
