@@ -63,6 +63,8 @@
 		296F4DE21F3A497000781C46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 296F4DE41F3A497000781C46 /* InfoPlist.strings */; };
 		297C860E204BA5D000A40BDB /* LargeTeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297C860D204BA5D000A40BDB /* LargeTeeMarkers.xcassets */; };
 		297C860F204BA5D000A40BDB /* LargeTeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297C860D204BA5D000A40BDB /* LargeTeeMarkers.xcassets */; };
+		2988BCFB2078547800C173BE /* GOLFExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2988BCFA2078547800C173BE /* GOLFExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2988BCFC2078547800C173BE /* GOLFExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2988BCFA2078547800C173BE /* GOLFExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2990FA9420726F7000E7DB45 /* GOLFClubs.h in Headers */ = {isa = PBXBuildFile; fileRef = 2990FA9220726F7000E7DB45 /* GOLFClubs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2990FA9520726F7000E7DB45 /* GOLFClubs.h in Headers */ = {isa = PBXBuildFile; fileRef = 2990FA9220726F7000E7DB45 /* GOLFClubs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2990FA9620726F7000E7DB45 /* GOLFClubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2990FA9320726F7000E7DB45 /* GOLFClubs.m */; };
@@ -149,6 +151,7 @@
 		296F4DE51F3A497900781C46 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		296F4DE61F3A497E00781C46 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		297C860D204BA5D000A40BDB /* LargeTeeMarkers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = LargeTeeMarkers.xcassets; path = GOLFKit/LargeTeeMarkers.xcassets; sourceTree = SOURCE_ROOT; };
+		2988BCFA2078547800C173BE /* GOLFExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOLFExtensions.h; sourceTree = "<group>"; };
 		2990FA9220726F7000E7DB45 /* GOLFClubs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOLFClubs.h; sourceTree = "<group>"; };
 		2990FA9320726F7000E7DB45 /* GOLFClubs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOLFClubs.m; sourceTree = "<group>"; };
 		299AC8BB204E027F0035FFF8 /* GOLFTeeMarkerUSGA.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = GOLFTeeMarkerUSGA.icns; sourceTree = "<group>"; };
@@ -282,6 +285,7 @@
 		29C0E3901F9E921F0009E23C /* Categories */ = {
 			isa = PBXGroup;
 			children = (
+				2988BCFA2078547800C173BE /* GOLFExtensions.h */,
 				29C0E38A1F9E90580009E23C /* NSNumber+GOLFExtensions.h */,
 				29C0E38B1F9E90580009E23C /* NSNumber+GOLFExtensions.m */,
 			);
@@ -393,6 +397,7 @@
 			files = (
 				29A338081DCE81D70074A064 /* GOLFTeeMarkers.h in Headers */,
 				294140631DDB582600CC9605 /* GOLFKitTypes.h in Headers */,
+				2988BCFB2078547800C173BE /* GOLFExtensions.h in Headers */,
 				2990FA9420726F7000E7DB45 /* GOLFClubs.h in Headers */,
 				29E888CF1DCE611600C4A63A /* GOLFColors.h in Headers */,
 				2954DC072050EBC2008A7306 /* GOLFUtilities.h in Headers */,
@@ -409,6 +414,7 @@
 			files = (
 				29A338091DCE81D70074A064 /* GOLFTeeMarkers.h in Headers */,
 				294140641DDB582600CC9605 /* GOLFKitTypes.h in Headers */,
+				2988BCFC2078547800C173BE /* GOLFExtensions.h in Headers */,
 				2990FA9520726F7000E7DB45 /* GOLFClubs.h in Headers */,
 				29A338001DCE74570074A064 /* GOLFColors.h in Headers */,
 				2954DC082050EBC2008A7306 /* GOLFUtilities.h in Headers */,
