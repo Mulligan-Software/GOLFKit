@@ -9,6 +9,10 @@
 @import Foundation;
 #import "GOLFKitTypes.h"
 
+//	No-value constants
+#define kNotAnIntegerValue			-999		//	No-value for misc. NSInteger-based value storage
+#define kNotAFloatValue				-999.0		//	No-value for misc. float-based value storage
+
 NSString * GOLFUnlocalizedCurrentCountry(void);
 //	The unlocalized name of the country for which the user's device is configured, discovered from NSLocale features
 

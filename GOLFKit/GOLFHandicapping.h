@@ -35,34 +35,34 @@ typedef NS_OPTIONS(NSUInteger, GOLFHandicapCalculationOption) {
 	GOLFHandicapCalculationOption9HoleSLOPE			= 1 << 4,		//	(16)	Provided GOLFTeeSLOPERating is for 9 holes
 	GOLFHandicapCalculationOption9HolePar			= 1 << 5,		//	(32)	Provided GOLFPar is for 9 holes
 	GOLFHandicapCalculationOptionSpare1				= 1 << 6,		//	(64)
-	GOLFHandicapCalculationOptionSpare2				= 1 << 7,		//	(128)
+	GOLFHandicapCalculationOptionSpare2				= 1 << 7		//	(128)
 };
 
 typedef NS_ENUM(NSUInteger, GOLFHandicapMethodIndex) {
-	GOLFHandicapMethodNone = 0,			//	none (0)
-	GOLFHandicapMethodUSGA,				//	USGA Handicap System (1)
-	GOLFHandicapMethodRCGA,				//	RCGA (Golf Canada) Handicap System (2)
-	GOLFHandicapMethodAGU,				//	AGU (Golf Australia) Handicap System (3)
-	GOLFHandicapMethodEGA,				//	EGA (European Golf Association) Handicap System (4)
-	GOLFHandicapMethodCONGU,			//	CONGU Unified Handicap System (5)
-	GOLFHandicapMethodWHS,				//	World Handicap System (6)
+	GOLFHandicapMethodNone = 0,					//	none (0)
+	GOLFHandicapMethodUSGA,						//	USGA Handicap System (1)
+	GOLFHandicapMethodRCGA,						//	RCGA (Golf Canada) Handicap System (2)
+	GOLFHandicapMethodAGU,						//	AGU (Golf Australia) Handicap System (3)
+	GOLFHandicapMethodEGA,						//	EGA (European Golf Association) Handicap System (4)
+	GOLFHandicapMethodCONGU,					//	CONGU Unified Handicap System (5)
+	GOLFHandicapMethodWHS,						//	World Handicap System (6)
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
-	GOLFHandicapMethodMulligan = 20,	//	Mulligan Handicap System (20)
-	GOLFHandicapMethodPersonal,			//	Personalized Handicap System (21)
-	GOLFHandicapMethodSecondBest,		//	Second-Best Score Handicap System (22)
+	GOLFHandicapMethodMulligan = 20,			//	Mulligan Handicap System (20)
+	GOLFHandicapMethodPersonal,					//	Personalized Handicap System (21)
+	GOLFHandicapMethodSecondBest,				//	Second-Best Score Handicap System (22)
 #endif
-	GOLFHandicapMethodUnknown = 999		//	Unknown handicapping type
+	GOLFHandicapMethodUnknown = 999				//	Unknown handicapping type
 };
 
 typedef NS_ENUM(NSUInteger, GOLFHandicapStrokeControl) {
-	GOLFHandicapStrokeControlNone = 0,		//	Don't adjust strokes for handicapping	(0)
-	GOLFHandicapStrokeControlDouble,		//	Limit to gross double-bogey				(1)
-	GOLFHandicapStrokeControlNetDouble,		//	Limit to net double-bogey				(2)
-	GOLFHandicapStrokeControlDoublePlus10,	//	Limit to double-bogey plus 10% of playing handicap	(3)
-	GOLFHandicapStrokeControlTriple,		//	Limit to gross triple-bogey				(4)
-	GOLFHandicapStrokeControlNetTriple,		//	Limit to net triple-bogey				(5)
-	GOLFHandicapStrokeControlESC = 10,		//	Equitable Stroke Control (ESC) limit	(10)
-	GOLFHandicapStrokeControlUnknown = 99	//	Unknown stroke control technique
+	GOLFHandicapStrokeControlNone = 0,			//	Don't adjust strokes for handicapping	(0)
+	GOLFHandicapStrokeControlDouble,			//	Limit to gross double-bogey				(1)
+	GOLFHandicapStrokeControlNetDouble,			//	Limit to net double-bogey				(2)
+	GOLFHandicapStrokeControlDoublePlus10,		//	Limit to double-bogey plus 10% of playing handicap	(3)
+	GOLFHandicapStrokeControlTriple,			//	Limit to gross triple-bogey				(4)
+	GOLFHandicapStrokeControlNetTriple,			//	Limit to net triple-bogey				(5)
+	GOLFHandicapStrokeControlESC = 10,			//	Equitable Stroke Control (ESC) limit	(10)
+	GOLFHandicapStrokeControlUnknown = 99		//	Unknown stroke control technique
 };
 
 typedef NS_ENUM(NSUInteger, GOLFHandicapDifferentialType) {
@@ -180,7 +180,7 @@ NSString * GOLFHandicapGradeTitleForAuthority(GOLFHandicapAuthority *authority);
 //	Returns the localized short title identifying the classification of handicaps in some systems - "Grade", "Categorie", "Klasse", etc.
 
 NSString * GOLFHandicapExceptionalScoringModifierForAuthority(GOLFHandicapAuthority *authority);
-//	Returns the short (1 character) modified used to indicate that a handicap has been adjusted for exceptional scores in a player's scoring record
+//	Returns the short (1 character) modified used to indicate that a handicap has been adjusted for exceptional scores in a player's scoring record ("R", etc.)
 
 NSString * GOLFRoundModifierTooltip(GOLFHandicapAuthority *authority);
 //	Returns the appropriate tooltip (with line feeds) tabulating the description of round modifiers ("* - used", "T - Torneo", "E - Estimado", etc.
