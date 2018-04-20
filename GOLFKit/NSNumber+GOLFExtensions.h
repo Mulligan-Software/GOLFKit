@@ -57,8 +57,14 @@
 + (id)numberWithScore:(GOLFScore)score;
 - (GOLFScore)scoreValue;
 
++ (id)numberWithGrossScore:(GOLFGrossScore)grossScore;
+- (GOLFGrossScore)grossScoreValue;
+
 + (id)numberWithNetScore:(GOLFNetScore)netScore;
 - (GOLFNetScore)netScoreValue;
+
++ (id)numberWithCompScore:(GOLFCompScore)compScore;
+- (GOLFCompScore)compScoreValue;
 
 + (id)numberWithPutts:(GOLFPutts)putts;
 - (GOLFPutts)puttsValue;

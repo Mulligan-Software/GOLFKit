@@ -131,12 +131,28 @@
     return (GOLFScore)[self integerValue];
 }
 
++ (id)numberWithGrossScore:(GOLFGrossScore)grossScore {
+    return [NSNumber numberWithInteger:(NSInteger)grossScore];
+}
+
+- (GOLFGrossScore)grossScoreValue {
+    return (GOLFGrossScore)[self integerValue];
+}
+
 + (id)numberWithNetScore:(GOLFNetScore)netScore {
     return [NSNumber numberWithFloat:(float)netScore];
 }
 
 - (GOLFNetScore)netScoreValue {
     return (GOLFNetScore)[self floatValue];
+}
+
++ (id)numberWithCompScore:(GOLFCompScore)compScore {
+    return [NSNumber numberWithFloat:(float)compScore];
+}
+
+- (GOLFCompScore)compScoreValue {
+    return (GOLFCompScore)[self floatValue];
 }
 
 + (id)numberWithPutts:(GOLFPutts)putts {

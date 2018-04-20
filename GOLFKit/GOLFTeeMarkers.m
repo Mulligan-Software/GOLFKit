@@ -527,6 +527,8 @@ GOLFTeeImage * GOLFTeeMarkerImageFromSpecs(GOLFTeeColorIndex teeColorIndex, GOLF
 
 	//	Starting with defaults…
 	NSUInteger workingSize = imageSize;
+
+#if TARGET_OS_IOS || TARGET_OS_WATCH
 	NSString *workingTeeImageName = @"tee_marker_generic";
 	
 	//	Finalize the image size…
@@ -563,10 +565,87 @@ GOLFTeeImage * GOLFTeeMarkerImageFromSpecs(GOLFTeeColorIndex teeColorIndex, GOLF
 			workingTeeImageName = @"tee_marker_usga";
 		}
 	}
-#if TARGET_OS_IOS || TARGET_OS_WATCH
 	return [GOLFTeeImage imageNamed:[workingTeeImageName stringByAppendingFormat:@"_%lu", (unsigned long)workingSize] inBundle:ourBundle compatibleWithTraitCollection:nil];
+	
 #elif TARGET_OS_MAC
-	return (GOLFTeeImage *)[ourBundle imageForResource:[workingTeeImageName stringByAppendingFormat:@"_%lu", (unsigned long)workingSize]];
+	NSString *workingTeeIconName = @"GOLFTeeMarkerGeneric";
+	GOLFTeeImage *workingTeeMarkerImage = nil;
+	
+	//	We can live with the requested size…
+	
+	if (teeColorIndex == GOLFTeeColorCustom) {
+		NSRect offscreenRect = NSMakeRect(0.0, 0.0, 128.0, 128.0);
+		NSBitmapImageRep *offscreenRep = [[NSBitmapImageRep alloc] initWithBitmapDataPlanes:nil
+				pixelsWide:offscreenRect.size.width pixelsHigh:offscreenRect.size.height 
+				bitsPerSample:8 samplesPerPixel:4 
+				hasAlpha:YES isPlanar:NO 
+				colorSpaceName:NSCalibratedRGBColorSpace bitmapFormat:0 
+				bytesPerRow:(4 * offscreenRect.size.width) bitsPerPixel:32];
+		 
+		[NSGraphicsContext saveGraphicsState];
+		[NSGraphicsContext setCurrentContext:[NSGraphicsContext graphicsContextWithBitmapImageRep:offscreenRep]];
+		 
+		//	We need to draw an icon and a color dot in the graphics context
+		if (teeColor == nil) {
+			[(GOLFTeeImage *)[ourBundle imageForResource:@"GOLFTeeMarkerGeneric"] drawAtPoint:offscreenRect.origin fromRect:NSZeroRect operation:NSCompositeCopy fraction:1.0];
+		} else {
+			//	Draw the white icon into the context
+			GOLFColor *localTintingColor = [teeColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+			[(GOLFTeeImage *)[ourBundle imageForResource:@"GOLFTeeMarkerWhite"] drawAtPoint:offscreenRect.origin fromRect:NSZeroRect operation:NSCompositeCopy fraction:1.0];
+			//	The actual colored circle of the 128x128 image is 100 pixels wide, 14px left, 7 px top, 14 px right, 21 px bottom
+			
+			NSGradient *colorGradient = [[NSGradient alloc] initWithColorsAndLocations:
+					[GOLFColor whiteColor], 0.0,
+					[GOLFColor colorWithDeviceRed:[localTintingColor redComponent] green:[localTintingColor greenComponent] blue:[localTintingColor blueComponent] alpha:0.60], 0.2,
+					[GOLFColor colorWithDeviceRed:[localTintingColor redComponent] green:[localTintingColor greenComponent] blue:[localTintingColor blueComponent] alpha:0.85], 0.5,
+					localTintingColor, 0.9,
+					[GOLFColor darkGrayColor], 1.0,
+					nil];
+			NSRect colorRect = NSMakeRect(offscreenRect.origin.x + 14.0, offscreenRect.origin.y + 21.0, offscreenRect.size.width - 28.0, offscreenRect.size.height - 28.0);
+			NSBezierPath *circle = [NSBezierPath bezierPathWithOvalInRect:colorRect];
+			[colorGradient drawInBezierPath:circle angle:-90.0];
+			
+//			[colorGradient ah_release];
+		}
+		 
+		[NSGraphicsContext restoreGraphicsState];
+		
+		workingTeeMarkerImage = [[GOLFTeeImage alloc] initWithSize:offscreenRect.size];
+		[workingTeeMarkerImage addRepresentation:offscreenRep];	//	Add the image representation to the image
+//		[offscreenRep ah_release];	//	The image will retain the rep
+	} else {
+		//	Finalize the icon name…
+		if (teeColorIndex != GOLFTeeColorGeneric) {
+			if ((teeColorIndex >= GOLFTeeColorFirstSolid) && (teeColorIndex <= GOLFTeeColorLastCombo)) {
+				for (NSDictionary *colorDict in GOLFStandardTeeColorArray()) {
+					if ([[colorDict objectForKey:@"teeColorIndex"] integerValue] == teeColorIndex) {
+						workingTeeIconName = [colorDict objectForKey:@"teeIconName"];
+						break;	//	Out of "for (NSDictionary *colorDict" loop
+					}
+				}
+			} else if (teeColorIndex == GOLFTeeColorAdd) {
+				workingTeeIconName = @"GOLFTeeMarkerAdd";
+			} else if (teeColorIndex == GOLFTeeColorAll) {
+				workingTeeIconName = @"GOLFTeeMarkerAll";
+			} else if (teeColorIndex == GOLFTeeColorUSA) {
+				workingTeeIconName = @"GOLFTeeMarkerUSA";
+			} else if (teeColorIndex == GOLFTeeColorEU) {
+				workingTeeIconName = @"GOLFTeeMarkerEU";
+			} else if (teeColorIndex == GOLFTeeColorPGA) {
+				workingTeeIconName = @"GOLFTeeMarkerPGA";
+			} else if (teeColorIndex == GOLFTeeColorUSGA) {
+				workingTeeIconName = @"GOLFTeeMarkerUSGA";
+			}
+		}
+//		workingTeeMarkerImage = [GOLFTeeImage imageNamed:workingTeeIconName];	//	The icon as pulled from the bundle
+		workingTeeMarkerImage = (GOLFTeeImage *)[ourBundle imageForResource:workingTeeIconName];	//	The icon as pulled from the bundle
+	}
+
+	NSImageRep *imageRep = [workingTeeMarkerImage bestRepresentationForRect:NSMakeRect(0.0, 0.0, workingSize, workingSize) context:[NSGraphicsContext currentContext] hints:nil];
+	GOLFTeeImage *sizedImage = [[NSImage alloc] initWithSize:NSMakeSize(workingSize, workingSize)];
+	[sizedImage addRepresentation:imageRep];
+	return sizedImage;
+	
 #endif
 
 }

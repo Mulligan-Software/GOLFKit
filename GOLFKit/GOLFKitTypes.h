@@ -20,10 +20,12 @@ typedef NSInteger GOLFTeeSLOPERating;
 typedef float GOLFTeeCourseRating;
 
 //	Scoring - Events, Scorecards, rounds, etc.
-typedef NSInteger GOLFRoundCCR;
-typedef NSInteger GOLFScore;
-typedef float GOLFNetScore;
-typedef NSInteger GOLFPutts;
+typedef NSInteger GOLFRoundCCR;		//	Calculated course rating, etc.
+typedef NSInteger GOLFScore;		//	Gross (or whole number) score
+typedef GOLFScore GOLFGrossScore;	//	 Some might prefer this type description
+typedef float GOLFNetScore;			//	Net score (might be computed to some smaller precision)
+typedef float GOLFCompScore;		//	Competition score (might be strokes, points, etc. and have fractional parts)
+typedef NSInteger GOLFPutts;		//	Putts
 
 //	Handicapping
 typedef float GOLFHandicapAllowance;

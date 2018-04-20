@@ -10,8 +10,10 @@
 #import "GOLFKitTypes.h"
 
 #define kNotAScore						-999		//	No-value for a whole-number score - GOLFScore
+#define kNotAGrossScore					-999		//	No-value for a gross score - GOLFGrossScore
 #define kNotPutts						-999		//	No-value for number of putts - GOLFPutts
 #define kNotANetScore					-999.0		//	No-value for net score - GOLFNetScore
+#define kNotACompScore					-999.0		//	No-value for comp score - GOLFCompScore
 #define kNotARoundCCR					-999		//	No-value for round's calculated course rating - GOLFRoundCCR
 
 typedef NS_ENUM(NSUInteger, GOLFAllowanceType) {
@@ -131,3 +133,48 @@ typedef NS_ENUM(NSUInteger, GOLFPlayType) {
 #if !defined(IS_POINT_QUOTA_COMPATIBLE_PLAY_TYPE)
 	#define IS_POINT_QUOTA_COMPATIBLE_PLAY_TYPE(_type)	((((_type) == NoTeamPlayType) || ((_type) == TotalTeamPlayType) || ((_type) == TeamBestNPlayType)) ? YES : NO)
 #endif
+
+typedef NS_OPTIONS(NSUInteger, GOLFRoundSideStatus) {
+	GOLFRoundSideStatusNone						= 0,			//	(0)
+	GOLFRoundSideStatusOption0					= 1 << 0,		//	(1)
+	GOLFRoundSideStatusOption1					= 1 << 1,		//	(2)
+	GOLFRoundSideStatusOption2					= 1 << 2,		//	(4)
+	GOLFRoundSideStatusOption3					= 1 << 3,		//	(8)
+	GOLFRoundSideStatusIsFront					= 1 << 4,		//	(16)		Round's front side
+	GOLFRoundSideStatusOption5					= 1 << 5,		//	(32)
+	GOLFRoundSideStatusOption6					= 1 << 6,		//	(64)
+	GOLFRoundSideStatusOption7					= 1 << 7,		//	(128)
+	GOLFRoundSideStatusOption8					= 1 << 8,		//	(256)
+	GOLFRoundSideStatusOption9					= 1 << 9,		//	(512)
+	GOLFRoundSideStatusOption10					= 1 << 10,		//	(1024)
+	GOLFRoundSideStatusHigherIsBetter			= 1 << 11		//	(2048)		Comp scoring is in points (higher is better)
+};
+
+typedef NS_OPTIONS(NSUInteger, GOLFRoundSideProcessingStatus) {
+	GOLFRoundSideProcessingStatusNone					= 0,			//	(0)
+	GOLFRoundSideProcessingStatusNeedsYdgUpdate			= 1 << 0,		//	(1)			Need to update yardages and/or totals
+	GOLFRoundSideProcessingStatusNeedsParUpdate			= 1 << 1,		//	(2)			Need to update par and/or totals
+	GOLFRoundSideProcessingStatusNeedsCompParUpdate		= 1 << 2,		//	(4)			Need to update competition par and/or totals
+	GOLFRoundSideProcessingStatusNeedsScoreUpdate		= 1 << 3,		//	(8)			Need to update gross scores and/or totals
+	GOLFRoundSideProcessingStatusNeedsNetScoreUpdate	= 1 << 4,		//	(16)		Need to update net scores and/or totals	
+	GOLFRoundSideProcessingStatusNeedsCompScoreUpdate	= 1 << 5,		//	(32)		Need to update competition scores and/or totals
+	GOLFRoundSideProcessingStatusNeedsPuttsUpdate		= 1 << 6,		//	(64)		Need to update putts and/or totals
+	GOLFRoundSideProcessingStatusOption7				= 1 << 7,		//	(128)
+	GOLFRoundSideProcessingStatusOption8				= 1 << 8		//	(256)
+};
+
+typedef NS_OPTIONS(NSUInteger, GOLFRoundHoleStatus) {
+	GOLFRoundHoleStatusNone					= 0,			//	(0)
+	GOLFRoundHoleStatusGreensideBunkerHit	= 1 << 0,		//	(1)			Greenside bunker hit
+	GOLFRoundHoleStatusUpAndDown			= 1 << 1,		//	(2)			Up and Down recorded
+	GOLFRoundHoleStatusOption2				= 1 << 2,		//	(4)
+	GOLFRoundHoleStatusIsX					= 1 << 3,		//	(8)			Hole is flagged as disqualified
+	GOLFRoundHoleStatusIsNetSkin			= 1 << 4,		//	(16)		Hole wins a net skin
+	GOLFRoundHoleStatusIsGrossSkin			= 1 << 5,		//	(32)		Hole wins a gross skin
+	GOLFRoundHoleStatusIsCompSkin			= 1 << 6,		//	(64)		Hole wins a competition skin
+	GOLFRoundHoleStatusOption7				= 1 << 7,		//	(128)
+	GOLFRoundHoleStatusOption8				= 1 << 8,		//	(256)
+	GOLFRoundHoleStatusOption9				= 1 << 9,		//	(512)
+	GOLFRoundHoleStatusOption10				= 1 << 10,		//	(1024)
+	GOLFRoundHoleStatusHigherIsBetter		= 1 << 11		//	(2048)		Comp scoring is in points (higher is better)
+};
