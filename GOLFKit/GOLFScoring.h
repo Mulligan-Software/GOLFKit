@@ -178,3 +178,41 @@ typedef NS_OPTIONS(NSUInteger, GOLFRoundHoleStatus) {
 	GOLFRoundHoleStatusOption10				= 1 << 10,		//	(1024)
 	GOLFRoundHoleStatusHigherIsBetter		= 1 << 11		//	(2048)		Comp scoring is in points (higher is better)
 };
+
+//=================================================================
+//	GOLFHoleSelectionInstructionsForAllowanceType(allowanceType)
+//=================================================================
+NSString * GOLFHoleSelectionInstructionsForAllowanceType(GOLFAllowanceType allowanceType);
+//	Returns an appropriate localized instruction string concerning the selection of the holes associated with the specified GOLFAllowanceType
+
+#pragma mark NSStringFrom… Utilities
+
+//=================================================================
+//	NSStringFromAllowanceType(allowanceType, info, descriptiveText)
+//=================================================================
+NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictionary *info, NSString **descriptiveText);
+//	Returns a localized title/name of the allowanceType ("Full Handicap", "Callaway", "Handicap Difference", etc.) and
+//	optionally (when the address of descriptiveText is provided), a localized short description of the type of
+//	allowance ("no strokes", "calculated team handicap", etc.)
+//
+//	info (optional):
+//	key					type						description
+//	-----------------	-------------------------	-------------------------------------------------------------------------------------
+//	handicapAuthority	GOLFHandicapAuthority *		The handicap authority associated with this presentation (default provided if missing)
+//	allowancePct		NSNumber *					The allowance percentage (of 100) for the SpecifiedPercentAllowanceType (default provided if missing)s
+
+
+//=================================================================
+//	NSStringFromPlayType(playType, info, descriptiveText)
+//=================================================================
+NSString * NSStringFromPlayType(GOLFPlayType playType, NSDictionary *info, NSString **descriptiveText);
+//	Returns a localized title/name of the playType ("Medal Play", "Chapman", "Irish Four-Ball", etc.) and
+//	optionally (when the address of descriptiveText is provided), a localized short description of the style
+//	of play ("Ball played alternately after selected drive", etc.)
+//
+//	info (optional):
+//	key					type			description
+//	------------------	--------------	-------------------------------------------------------
+//	bestRoundsN			NSNumber *		Integer N of TeamBestNPlayType (Team total of best N rounds) - default: 4
+//
+

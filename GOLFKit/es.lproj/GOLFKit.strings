@@ -7,10 +7,13 @@
 */
 
 //	Golf Terminology
+"TERM_CLICK" = "clic";
 "TERM_CLUB" = "club";
 "TERM_CLUB_PLURAL" = "clubes";
 "TERM_COURSE" = "campo";
 "TERM_COURSE_PLURAL" = "campos";
+"TERM_GROSS" = "bruto";
+"TERM_NET" = "neto";
 "TERM_PAR" = "par";
 "TERM_PAR_PLURAL" = "pars";
 "TERM_PLAYER" = "jugador";
@@ -19,9 +22,11 @@
 "TERM_ROUND_PLURAL" = "rondas";
 "TERM_SCORECARD" = "tarjeta";
 "TERM_SCORECARD_PLURAL" = "tarjetas";
+"TERM_TAP" = "pulse";
 "TERM_TEE" = "tee";
 "TERM_TEE_PLURAL" = "tees";
 "TERM_TOURNAMENT" = "torneo";
+"TERM_UNKNOWN" = "ignoto";
 
 //	Standard Tee Colors
 "GOLF_TEE_COLOR_NAME_BLACK" = "Negro";
@@ -135,7 +140,116 @@
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
 
-//	Tooltips
+//	GOLFPlayType Titles & Descriptions
+"PLAY_TYPE_MEDAL_PLAY" = "Stroke Play";
+"PLAY_TYPE_MEDAL_PLAY_DESC" = "Stroke Play individual";
+"PLAY_TYPE_SELECTED_HOLES" = "Hoyos Seleccionados";
+"PLAY_TYPE_SELECTED_HOLES_DESC" = "Sólo que puntajes de hoyos seleccionados";
+"PLAY_TYPE_STABLEFORD" = "Stableford";
+"PLAY_TYPE_STABLEFORD_DESC" = "Puntos - bogey 1, par 2, birdie 3, 4, 5, …";
+"PLAY_TYPE_MODIFIED_STABLEFORD" = "Stableford modificado";
+"PLAY_TYPE_MODIFIED_STABLEFORD_DESC" = "Puntos - bogey 1, par 2, birdie 4, 6, 8, …";
+"PLAY_TYPE_HALF_STABLEFORD" = "Stableford Medio";
+"PLAY_TYPE_HALF_STABLEFORD_DESC" = "Puntos - par 1, birdie 2, 3, 4, …";
+"PLAY_TYPE_CHICAGO" = "Chicago";
+"PLAY_TYPE_CHICAGO_DESC" = "Puntos - bogey 1, par 2, birdie 4, 8, 16, …s";
+"PLAY_TYPE_INTERNATIONAL" = "The INTERNATIONAL™";
+"PLAY_TYPE_INTERNATIONAL_DESC" = "Puntos - peor -3, bogey -1, par 0, birdie 2, 5, 8";
+"PLAY_TYPE_9_POINT" = "9’s";
+"PLAY_TYPE_9_POINT_DESC" = "3 o más jugadores dividen 9 (16, 25, 36) puntos por hoyo";
+"PLAY_TYPE_6_POINT" = "Juego 6-Puntos";
+"PLAY_TYPE_6_POINT_DESC" = "3 jugadores dividen 6 puntos por hoyo";
+"PLAY_TYPE_MEDAL_MATCH" = "Match Play por los Puntos";
+"PLAY_TYPE_MEDAL_MATCH_DESC" = "2 puntos por hoyo vs. cada competidor en la tarjeta";
+"PLAY_TYPE_TEAM_BETTER_BALL" = "Best-Ball";
+"PLAY_TYPE_TEAM_BETTER_BALL_DESC" = "Puntaje más bajo de los compañeros";
+"PLAY_TYPE_TEAM_TWO_BEST_BALLS" = "Two Best Balls";
+"PLAY_TYPE_TEAM_TWO_BEST_BALLS_DESC" = "2 puntajes bajas de 3 o más compañeros";
+"PLAY_TYPE_TEAM_THREE_BEST_BALLS" = "Three Best Balls";
+"PLAY_TYPE_TEAM_THREE_BEST_BALLS_DESC" = "3 puntajes bajas de 4 o más compañeros";
+"PLAY_TYPE_TEAM_RITZ" = "La Ritz";
+"PLAY_TYPE_TEAM_RITZ_DESC" = "Mejor pelota bruto de compañeros, luego otra pelota neta";
+"PLAY_TYPE_TEAM_RITZ_REVERSE" = "La Ritz en Reversa";
+"PLAY_TYPE_TEAM_RITZ_REVERSE_DESC" = "Mejor pelota neto de compañeros, luego otra pelota bruta";
+"PLAY_TYPE_TEAM_FOUR_BALL" = "Four-Ball";
+"PLAY_TYPE_TEAM_FOUR_BALL_DESC" = "Mejor pelota de compañeros";
+"PLAY_TYPE_TEAM_FOURSOMES" = "Foursomes";
+"PLAY_TYPE_TEAM_FOURSOMES_DESC" = "Una pelota jugada de manera alterna";
+"PLAY_TYPE_TEAM_GREENSOMES" = "Greensomes";
+"PLAY_TYPE_TEAM_GREENSOMES_DESC" = "Pelota jugada de manera alterna después el drive seleccionado";
+"PLAY_TYPE_TEAM_SCRAMBLE" = "Scramble";
+"PLAY_TYPE_TEAM_SCRAMBLE_DESC" = "Compañeros juegan desde la mejor posición seleccionada";
+"PLAY_TYPE_TEAM_CHAPMAN" = "Chapman/Pinehurst";
+"PLAY_TYPE_TEAM_CHAPMAN_DESC" = "Pelota jugada de manera alterna después los drives intercambiados";
+"PLAY_TYPE_TEAM_WALTZ" = "Waltz";
+"PLAY_TYPE_TEAM_WALTZ_DESC" = "1 ball (par 5), 2 balls (par 4), 3 balls (par 3)";
+"PLAY_TYPE_TEAM_MODIFIED_WALTZ" = "Waltz modificado";
+"PLAY_TYPE_TEAM_MODIFIED_WALTZ_DESC" = "1 ball (par-5), 2 balls (par-3 y par-4)";
+"PLAY_TYPE_TEAM_CHA_CHA_CHA" = "Cha-Cha-Cha";
+"PLAY_TYPE_TEAM_CHA_CHA_CHA_DESC" = "1 ball, 2 balls, 3 balls, repetir";
+"PLAY_TYPE_TEAM_CHA_CHA" = "Cha-Cha";
+"PLAY_TYPE_TEAM_CHA_CHA_DESC" = "1 ball, 2 balls, repetir";
+"PLAY_TYPE_TEAM_IRISH_4_BALL" = "Four-Ball Irlandés";
+"PLAY_TYPE_TEAM_IRISH_4_BALL_DESC" = "1 ball (x6), 2 balls (x5), 3 balls (x4), 4 balls (x3)";
+"PLAY_TYPE_TEAM_BOWMAKER" = "Bowmaker 3-Ball";
+"PLAY_TYPE_TEAM_BOWMAKER_DESC" = "1 ball (x6), 2 balls (x6), 3 balls (x6)";
+"PLAY_TYPE_TEAM_TOTAL" = "Total Equipo";
+"PLAY_TYPE_TEAM_TOTAL_DESC" = "Total de los puntajes de los compañeros";
+"PLAY_TYPE_TEAM_AVG" = "Promedio de Compañeros";
+"PLAY_TYPE_TEAM_AVG_DESC" = "Promedio de puntajes de los competidores de equipo";
+"PLAY_TYPE_TEAM_BEST_ROUND" = "Mejor Ronda";
+"PLAY_TYPE_TEAM_BEST_ROUNDS" = "Mejores Rondas";	//	Preceded by "N "
+"PLAY_TYPE_TEAM_FOURBALL_COMBO" = "Four-Ball Combo";
+"PLAY_TYPE_TEAM_FOURBALL_COMBO_DESC" = "Four-Ball teams of scorecard co-competitors";
+"PLAY_TYPE_NO_TEAM_PLAY" = "No juego del equipo";
+"PLAY_TYPE_NO_TEAM_PLAY_DESC" = "Sólo que puntajes de los jugadores";
+"PLAY_TYPE_NO_PLAYER_SCORES" = "Sin puntajes de jugadores";
+"PLAY_TYPE_NO_PLAYER_SCORES_DESC" = "Sólo que puntaje del equipo";
+
+"CLICKORTAP_%@_NUMBER_TO_ADJUST" = "%@ el número para adjustarlo";
+
+//	GOLFAllowanceType Titles & Descriptions
+"ALLOWANCE_TYPE_STANDARD" = "Asignación Standard";
+"ALLOWANCE_TYPE_STANDARD_DESC" = "";
+"ALLOWANCE_TYPE_GROSS" = "Bruto";
+"ALLOWANCE_TYPE_GROSS_DESC" = "sin handicap";
+"ALLOWANCE_TYPE_NET" = "Neto";
+"ALLOWANCE_TYPE_NET_DESC" = "Puntaje neto equipo de los puntajes netos de los compañeros";
+"ALLOWANCE_TYPE_POINT_QUOTA" = "Cuota de Puntos";
+"ALLOWANCE_TYPE_POINT_QUOTA_DESC" = "Puntos Stableford brutos más/menos una cuota handicap-basada";
+"ALLOWANCE_TYPE_FULL_HANDICAP" = "Handicap Completo";
+"ALLOWANCE_TYPE_MEN_90_WOMEN_95" = "Caballeros 90%, Damas 95%";
+"ALLOWANCE_TYPE_MEN_80_WOMEN_90" = "Caballeros 80%, Damas 90%";
+"ALLOWANCE_TYPE_A_PLAYER_50_B_40" = "50% jugador A + 40% jugador B";
+"ALLOWANCE_TYPE_A_PLAYER_50_B_40_DESC" = "Compañero con handicap menor 50% + compañero 40%";
+"ALLOWANCE_TYPE_A_PLAYER_50_B_20" = "50% jugador A + 20% jugador B";
+"ALLOWANCE_TYPE_A_PLAYER_50_B_20_DESC" = "Compañero con handicap menor 50% + compañero 20%";
+"ALLOWANCE_TYPE_TEAMMATES_100_AVG" = "Promedio de Compañeros";
+"ALLOWANCE_TYPE_TEAMMATES_80_AVG" = "80% Promedio de Compañeros";
+"ALLOWANCE_TYPE_AGGREGATE_3_8" = "3/8 del agregado";
+"ALLOWANCE_TYPE_AGGREGATE_3_8_DESC" = "3/8 de total handicaps de compañeros";
+"ALLOWANCE_TYPE_DIFFERENCE" = "Diferencia";
+"ALLOWANCE_TYPE_DIFFERENCE_DESC" = "Handicap menor juega scratch";
+"ALLOWANCE_TYPE_A_PLAYER_50" = "50% de la handicap de jugador A";
+"ALLOWANCE_TYPE_A_PLAYER_35_B_15" = "35% jugador A + 15% jugador B";
+"ALLOWANCE_TYPE_A_PLAYER_25_B_15_C_10" = "25% A + 15% B + 10% C";
+"ALLOWANCE_TYPE_A_PLAYER_20_B_15_C_10_D_5" = "20% A + 15% B + 10% C + 5% D";
+"ALLOWANCE_TYPE_SCHEID_SCRAMBLE" = "Scheid Scramble";
+"ALLOWANCE_TYPE_ZIG_ZAG_SYSTEM" = "Sistema ZIG-ZAG";
+"ALLOWANCE_TYPE_OFFICIAL_CALLAWAY" = "Callaway «Oficial»";
+"ALLOWANCE_TYPE_SCHEID_SYSTEM" = "Sistema Scheid";
+"ALLOWANCE_TYPE_PEORIA" = "Peoria";
+"ALLOWANCE_TYPE_MODIFIED_PEORIA" = "Peoria modificado";
+"ALLOWANCE_TYPE_SYSTEM_36" = "Sistema 36";
+
+"ALLOWANCE_CALCULATED_TEAM_HANDICAP" = "Handicap equipo calculado";
+"ALLOWANCE_TEAM_FOR_%d_OR_MORE_PLAYERS" = "Handicap equipo para %d o más jugadores";
+"ALLOWANCE_ONE_TIME_PLAYER" = "Handicap de jugador calculado una vez";
+"ALLOWANCE_ONE_TIME_TEAM" = "Handicap de equipo calculado una vez";
+"%d_PCT_OF_HANDICAP_%@" = "%d%% de %@";
+"OF" = "de";	//	95% de Handicap de Jugar
+
+//	Tooltips & Instructions
 "TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - utilizado\nA - allá\nC - combinado\nT - torneo\nP - pena";
 "TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - utilizado\nA - allá\nC - combinado\nT - torneo\nP - pena";
 "TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - utilizado\nA - allá\nC - combinado\nT - torneo\nP - pena";
@@ -143,6 +257,11 @@
 "TOOLTIP_ROUNDS_MODIFIER_CONGU" = "* - utilizado\nT - torneo";
 "TOOLTIP_ROUNDS_MODIFIER_EGA" = "* - utilizado\nT - torneo";
 "TOOLTIP_ROUNDS_MODIFIER_MULLIGAN" = "* - utilizado\nA - allá\nT - torneo";
+
+"INSTRUCTION_PEORIA_%@_CLICKORTAP" = "%@ para seleccionar los seis hoyos, dos hoyos par-3, dos hoyos par-4, y dos hoyos par-5 cuyos puntajes se utilizan para calcular el handicap de cada jugador.";
+"INSTRUCTION_MODIFIED_PEORIA_%@_CLICKORTAP" = "%@ para seleccionar los seis hoyos, uno hoyo par-3, uno hoyo par-5, y cuatro hoyos par-4 (dos en cada nueve) cuyos puntajes se utilizan para calcular el handicap de cada jugador.";
+"INSTRUCTION_ZIG_ZAG_%@_CLICKORTAP" = "%@ para seleccionnar los tres hoyos cuyos resultados se utilizan para calcular una handicap de cada equipo.";
+"INSTRUCTION_SELECTED_HOLES_%@_CLICKORTAP" = "%@ para seleccionar los hoyos cuyos resultados se utilizarán para calcular el puntaje total de cada jugador.";
 
 //	Phrases & Formats
 "AND_%@" = " y %@";

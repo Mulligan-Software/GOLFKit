@@ -16,7 +16,8 @@
 //													---
 #define kGOLFHandicapNumberOfMethods				9		//	Total number of handicapping methods
 
-//#define kUnratedTeeSLOPERating						113			//	Default SLOPE rating for unrated tee
+#define GOLFDefaultSpecifiedPercentageAllowance		80		//	Default percentage for SpecifiedPercentAllowanceType
+#define GOLFDefaultUnratedTeeSLOPERating			113		//	Default SLOPE rating for unrated tee
 
 #define kNotAHandicapIndex							-999.0		//	No-value for GOLFHandicapIndex
 #define kNotAPlayingHandicap						-999		//	No-value for GOLFPlayingHandicap
