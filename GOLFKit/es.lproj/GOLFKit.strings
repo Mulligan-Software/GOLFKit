@@ -7,26 +7,56 @@
 */
 
 //	Golf Terminology
+"TERM_AVERAGE" = "promedio";
+"TERM_BEST" = "mejor";
+"TERM_BESTBALL" = "Best-Ball";
+"TERM_BOWMAKER" = "Bowmaker";
+"TERM_CALLAWAY" = "Callaway";
+"TERM_CHACHA" = "Cha-Cha";
+"TERM_CHACHACHA" = "Cha-Cha-Cha";
+"TERM_CHAPMAN" = "Chapman";
+"TERM_CHICAGO" = "Chicago";
 "TERM_CLICK" = "clic";
 "TERM_CLUB" = "club";
 "TERM_CLUB_PLURAL" = "clubes";
 "TERM_COURSE" = "campo";
 "TERM_COURSE_PLURAL" = "campos";
+"TERM_FOURBALL" = "Four-Ball";
+"TERM_FOURSOMES" = "Foursomes";
+"TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "bruto";
+"TERM_INTERNATIONAL" = "International";
+"TERM_IRISH" = "Irlandesa";
+"TERM_MEDAL" = "medalla";
+"TERM_MEDALMATCH" = "Match Medalla";
 "TERM_NET" = "neto";
+"TERM_NINEPT" = "9-Puntos";
+"TERM_NONE" = "nada";
 "TERM_PAR" = "par";
 "TERM_PAR_PLURAL" = "pars";
+"TERM_PEORIA" = "Peoria";
 "TERM_PLAYER" = "jugador";
 "TERM_PLAYER_PLURAL" = "jugadores";
+"TERM_QUOTA" = "cuota";
+"TERM_REVERSERITZ" = "Ritz Reversa";
+"TERM_RITZ" = "Ritz";
 "TERM_ROUND" = "ronda";
 "TERM_ROUND_PLURAL" = "rondas";
+"TERM_SCHEID" = "Scheid";
 "TERM_SCORECARD" = "tarjeta";
 "TERM_SCORECARD_PLURAL" = "tarjetas";
+"TERM_SCRAMBLE" = "Scramble";
+"TERM_SELECTED" = "seleccionado";
+"TERM_SIXPT" = "6-Puntos";
+"TERM_STABLEFORD" = "Stableford";
 "TERM_TAP" = "pulse";
 "TERM_TEE" = "tee";
 "TERM_TEE_PLURAL" = "tees";
+"TERM_TOTAL" = "total";
 "TERM_TOURNAMENT" = "torneo";
 "TERM_UNKNOWN" = "ignoto";
+"TERM_WALTZ" = "Waltz";
+"TERM_ZIGZAG" = "Zig-Zag";
 
 //	Standard Tee Colors
 "GOLF_TEE_COLOR_NAME_BLACK" = "Negro";
@@ -163,9 +193,9 @@
 "PLAY_TYPE_MEDAL_MATCH_DESC" = "2 puntos por hoyo vs. cada competidor en la tarjeta";
 "PLAY_TYPE_TEAM_BETTER_BALL" = "Best-Ball";
 "PLAY_TYPE_TEAM_BETTER_BALL_DESC" = "Puntaje más bajo de los compañeros";
-"PLAY_TYPE_TEAM_TWO_BEST_BALLS" = "Two Best Balls";
+"PLAY_TYPE_TEAM_TWO_BEST_BALLS" = "Dos Best Balls";
 "PLAY_TYPE_TEAM_TWO_BEST_BALLS_DESC" = "2 puntajes bajas de 3 o más compañeros";
-"PLAY_TYPE_TEAM_THREE_BEST_BALLS" = "Three Best Balls";
+"PLAY_TYPE_TEAM_THREE_BEST_BALLS" = "Tres Best Balls";
 "PLAY_TYPE_TEAM_THREE_BEST_BALLS_DESC" = "3 puntajes bajas de 4 o más compañeros";
 "PLAY_TYPE_TEAM_RITZ" = "La Ritz";
 "PLAY_TYPE_TEAM_RITZ_DESC" = "Mejor pelota bruto de compañeros, luego otra pelota neta";

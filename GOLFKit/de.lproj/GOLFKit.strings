@@ -7,26 +7,56 @@
 */
 
 //	Golf Terminology
+"TERM_AVERAGE" = "mittlere";
+"TERM_BEST" = "beste";
+"TERM_BESTBALL" = "Best-Ball";
+"TERM_BOWMAKER" = "Bowmaker";
+"TERM_CALLAWAY" = "Callaway";
+"TERM_CHACHA" = "Cha-Cha";
+"TERM_CHACHACHA" = "Cha-Cha-Cha";
+"TERM_CHAPMAN" = "Chapman";
+"TERM_CHICAGO" = "Chicago";
 "TERM_CLICK" = "klicken";
 "TERM_CLUB" = "Club";
 "TERM_CLUB_PLURAL" = "Clubs";
 "TERM_COURSE" = "Golfplatz";
 "TERM_COURSE_PLURAL" = "Golfplätze";
+"TERM_FOURBALL" = "Vier-Ball";
+"TERM_FOURSOMES" = "Viererspiel";
+"TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "brutto";
+"TERM_INTERNATIONAL" = "International";
+"TERM_IRISH" = "irische";
+"TERM_MEDAL" = "medaille";
+"TERM_MEDALMATCH" = "Match Medaille";
 "TERM_NET" = "netto";
+"TERM_NINEPT" = "9-Punkte";
+"TERM_NONE" = "keiner";
 "TERM_PAR" = "Par";
 "TERM_PAR_PLURAL" = "Pars";
+"TERM_PEORIA" = "Peoria";
 "TERM_PLAYER" = "Spieler";
 "TERM_PLAYER_PLURAL" = "Spieler";
+"TERM_QUOTA" = "quote";
+"TERM_REVERSERITZ" = "Ritz Rückwärts";
+"TERM_RITZ" = "Ritz";
 "TERM_ROUND" = "Runde";
 "TERM_ROUND_PLURAL" = "Runden";
+"TERM_SCHEID" = "Scheid";
 "TERM_SCORECARD" = "Scorecard";
 "TERM_SCORECARD_PLURAL" = "Scorecards";
+"TERM_SCRAMBLE" = "Gerangel";
+"TERM_SELECTED" = "ausgewält";
+"TERM_SIXPT" = "6-Punkte";
+"TERM_STABLEFORD" = "Stableford";
 "TERM_TAP" = "tippen";
 "TERM_TEE" = "Abschlag";
 "TERM_TEE_PLURAL" = "Abschläge";
+"TERM_TOTAL" = "gesamt";
 "TERM_TOURNAMENT" = "Turnier";
 "TERM_UNKNOWN" = "unbekannt";
+"TERM_WALTZ" = "Waltzer";
+"TERM_ZIGZAG" = "Zig-Zag";
 
 //	Standard Tee Colors
 "GOLF_TEE_COLOR_NAME_BLACK" = "schwarz";

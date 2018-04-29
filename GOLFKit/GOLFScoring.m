@@ -42,6 +42,12 @@ NSString * GOLFHoleSelectionInstructionsForAllowanceType(GOLFAllowanceType allow
 //	NSStringFromAllowanceType(allowanceType, info, descriptiveText)
 //=================================================================
 NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictionary *info, NSString **descriptiveText) {
+//	info (optional):
+//	key					type						description
+//	-----------------	-------------------------	-------------------------------------------------------------------------------------
+//	handicapAuthority	GOLFHandicapAuthority *		The handicap authority associated with this presentation (default provided if missing)
+//	short				NSNumber *					BOOL indicating need for short (abbreviated?) return (if available)
+//	allowancePct		NSNumber *					The allowance percentage (of 100) for the SpecifiedPercentAllowanceType (default provided if missing)
 
 //		Allowance Types
 //
@@ -82,9 +88,10 @@ NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictiona
 //		UnknownAllowanceType				99			Unknown or error
 	
 	GOLFHandicapAuthority *authority = (info ? [info objectForKey:@"handicapAuthority"] : nil);
-	if (authority == nil) {
-		authority = GOLFDefaultHandicapAuthority();
-	}
+	BOOL needShortText = (info ? [[info objectForKey:@"short"] boolValue] : NO);	//	Return "short" variation if available
+
+	if (authority == nil) authority = GOLFDefaultHandicapAuthority();
+	
 	GOLFHandicapMethodIndex methodIndex = GOLFHandicapBestMethodIndexFromAuthority(authority);
 	
 	switch(allowanceType) {
@@ -98,19 +105,19 @@ NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictiona
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"ALLOWANCE_TYPE_GROSS_DESC");
 			}
-			return [GOLFLocalizedString(@"ALLOWANCE_TYPE_GROSS") capitalizedString];
+			return (needShortText ? GOLFLocalizedString(@"TERM_NONE") : [GOLFLocalizedString(@"ALLOWANCE_TYPE_GROSS") capitalizedString]);
 
 		case NetAllowanceType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"ALLOWANCE_TYPE_NET_DESC");
 			}
-			return [GOLFLocalizedString(@"ALLOWANCE_TYPE_NET") capitalizedString];
+			return (needShortText ? GOLFLocalizedString(@"TERM_NET") : [GOLFLocalizedString(@"ALLOWANCE_TYPE_NET") capitalizedString]);
 
 		case QuotaAllowanceType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"ALLOWANCE_TYPE_POINT_QUOTA_DESC");
 			}
-			return GOLFLocalizedString(@"ALLOWANCE_TYPE_POINT_QUOTA");
+			return (needShortText ? GOLFLocalizedString(@"TERM_QUOTA") : GOLFLocalizedString(@"ALLOWANCE_TYPE_POINT_QUOTA"));
 
 		case FullHandicapAllowanceType:
 			if (descriptiveText) {
@@ -155,7 +162,7 @@ NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictiona
 				NSNumber *workingNumber = (info ? [info objectForKey:@"allowancePct"] : nil);
 				NSInteger pct = (workingNumber ? [workingNumber integerValue] : GOLFDefaultSpecifiedPercentageAllowance);
 				NSString *fullTitle = NSStringFromAllowanceType(FullHandicapAllowanceType, nil, nil);	//	"Full Handicap"
-				return [NSString stringWithFormat:GOLFLocalizedString(@"%d_PCT_OF_HANDICAP_%@"), pct, fullTitle];
+				return (needShortText ? [NSString stringWithFormat:@"%ld%%", (long)pct] : [NSString stringWithFormat:GOLFLocalizedString(@"%d_PCT_OF_HANDICAP_%@"), pct, fullTitle]);
 			}
 
 		case AverageCombinedAllowanceType:
@@ -210,37 +217,37 @@ NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictiona
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"ALLOWANCE_ONE_TIME_TEAM");
 			}
-			return GOLFLocalizedString(@"ALLOWANCE_TYPE_SCHEID_SCRAMBLE");
+			return (needShortText ? GOLFLocalizedString(@"TERM_SCHEID") : GOLFLocalizedString(@"ALLOWANCE_TYPE_SCHEID_SCRAMBLE"));
 
 		case ScrambleZigZagAllowanceType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"ALLOWANCE_ONE_TIME_TEAM");
 			}
-			return GOLFLocalizedString(@"ALLOWANCE_TYPE_ZIG_ZAG_SYSTEM");
+			return (needShortText ? GOLFLocalizedString(@"TERM_ZIGZAG") : GOLFLocalizedString(@"ALLOWANCE_TYPE_ZIG_ZAG_SYSTEM"));
 
 		case CallawayAllowanceType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"ALLOWANCE_ONE_TIME_PLAYER");
 			}
-			return GOLFLocalizedString(@"ALLOWANCE_TYPE_OFFICIAL_CALLAWAY");
+			return (needShortText ? GOLFLocalizedString(@"TERM_CALLAWAY") : GOLFLocalizedString(@"ALLOWANCE_TYPE_OFFICIAL_CALLAWAY"));
 
 		case ScheidAllowanceType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"ALLOWANCE_ONE_TIME_PLAYER");
 			}
-			return GOLFLocalizedString(@"ALLOWANCE_TYPE_SCHEID_SYSTEM");
+			return (needShortText ? GOLFLocalizedString(@"TERM_SCHEID") : GOLFLocalizedString(@"ALLOWANCE_TYPE_SCHEID_SYSTEM"));
 
 		case PeoriaAllowanceType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"ALLOWANCE_ONE_TIME_PLAYER");
 			}
-			return GOLFLocalizedString(@"ALLOWANCE_TYPE_PEORIA");
+			return (needShortText ? GOLFLocalizedString(@"TERM_PEORIA") : GOLFLocalizedString(@"ALLOWANCE_TYPE_PEORIA"));
 
 		case ModifiedPeoriaAllowanceType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"ALLOWANCE_ONE_TIME_PLAYER");
 			}
-			return GOLFLocalizedString(@"ALLOWANCE_TYPE_MODIFIED_PEORIA");
+			return (needShortText ? GOLFLocalizedString(@"TERM_PEORIA") : GOLFLocalizedString(@"ALLOWANCE_TYPE_MODIFIED_PEORIA"));
 
 		case System36AllowanceType:
 			if (descriptiveText) {
@@ -261,6 +268,11 @@ NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictiona
 //	NSStringFromPlayType(playType, info, descriptiveText)
 //=================================================================
 NSString * NSStringFromPlayType(GOLFPlayType playType, NSDictionary *info, NSString **descriptiveText) {
+//	info (optional):
+//	key					type			description
+//	------------------	--------------	-------------------------------------------------------
+//	short				NSNumber *		BOOL indicating need for short (abbreviated?) return (if available)
+//	bestRoundsN			NSNumber *		Integer N of TeamBestNPlayType (Team total of best N rounds) - default: 4
 
 //		Play/Competiton Types
 //
@@ -300,174 +312,176 @@ NSString * NSStringFromPlayType(GOLFPlayType playType, NSDictionary *info, NSStr
 //		TeamOnlyPlayType					91			Team-only scoring (no individual scoring)
 //		UnknownPlayType						99			Unknown or erroneous play type / round style
 
+	BOOL needShortText = (info ? [[info objectForKey:@"short"] boolValue] : NO);	//	Return "short" variation if available
+
 	switch(playType) {
 		case MedalPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_MEDAL_PLAY_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_MEDAL_PLAY");
+			return (needShortText ? [GOLFLocalizedString(@"TERM_MEDAL") capitalizedString] : GOLFLocalizedString(@"PLAY_TYPE_MEDAL_PLAY"));
 
 		case SelectedHolesPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_SELECTED_HOLES_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_SELECTED_HOLES");
+			return (needShortText ? [GOLFLocalizedString(@"TERM_SELECTED") capitalizedString] : GOLFLocalizedString(@"PLAY_TYPE_SELECTED_HOLES"));
 
 		case StablefordPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_STABLEFORD_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_STABLEFORD");
+			return (needShortText ? GOLFLocalizedString(@"TERM_STABLEFORD") : GOLFLocalizedString(@"PLAY_TYPE_STABLEFORD"));
 
 		case ModifiedStablefordPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_MODIFIED_STABLEFORD_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_MODIFIED_STABLEFORD");
+			return (needShortText ? GOLFLocalizedString(@"TERM_STABLEFORD") : GOLFLocalizedString(@"PLAY_TYPE_MODIFIED_STABLEFORD"));
 
 		case HalfStablefordPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_HALF_STABLEFORD_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_HALF_STABLEFORD");
+			return (needShortText ? GOLFLocalizedString(@"TERM_STABLEFORD") : GOLFLocalizedString(@"PLAY_TYPE_HALF_STABLEFORD"));
 
 		case ChicagoPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_CHICAGO_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_CHICAGO");
+			return (needShortText ? GOLFLocalizedString(@"TERM_CHICAGO") : GOLFLocalizedString(@"PLAY_TYPE_CHICAGO"));
 
 		case InternationalPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_INTERNATIONAL_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_INTERNATIONAL");
+			return (needShortText ? GOLFLocalizedString(@"TERM_INTERNATIONAL") : GOLFLocalizedString(@"PLAY_TYPE_INTERNATIONAL"));
 
 		case NinePointGamePlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_9_POINT_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_9_POINT");
+			return (needShortText ? GOLFLocalizedString(@"TERM_NINEPT") : GOLFLocalizedString(@"PLAY_TYPE_9_POINT"));
 
 		case SixPointGamePlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_6_POINT_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_6_POINT");
+			return (needShortText ? GOLFLocalizedString(@"TERM_SIXPT") : GOLFLocalizedString(@"PLAY_TYPE_6_POINT"));
 
 		case MedalMatchPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_MEDAL_MATCH_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_MEDAL_MATCH");
+			return (needShortText ? GOLFLocalizedString(@"TERM_MEDALMATCH") : GOLFLocalizedString(@"PLAY_TYPE_MEDAL_MATCH"));
 
 		case BetterBallTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_BETTER_BALL_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_TEAM_BETTER_BALL");
+			return (needShortText ? GOLFLocalizedString(@"TERM_BESTBALL") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_BETTER_BALL"));
 
 		case TwoBestBallsTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_TWO_BEST_BALLS_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_TEAM_TWO_BEST_BALLS");
+			return (needShortText ? GOLFLocalizedString(@"TERM_BESTBALL") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_TWO_BEST_BALLS"));
 
 		case ThreeBestBallsTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_THREE_BEST_BALLS_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_TEAM_THREE_BEST_BALLS");
+			return (needShortText ? GOLFLocalizedString(@"TERM_BESTBALL") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_THREE_BEST_BALLS"));
 
 		case TheRitzTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_RITZ_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_TEAM_RITZ");
+			return (needShortText ? GOLFLocalizedString(@"TERM_RITZ") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_RITZ"));
 
 		case TheRitzReverseTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_RITZ_REVERSE_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_TEAM_RITZ_REVERSE");
+			return (needShortText ? GOLFLocalizedString(@"TERM_REVERSERITZ") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_RITZ_REVERSE"));
 
 		case FourBallTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_FOUR_BALL_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_TEAM_FOUR_BALL");
+			return (needShortText ? GOLFLocalizedString(@"TERM_FOURBALL") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_FOUR_BALL"));
 
 		case FoursomesTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_FOURSOMES_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_TEAM_FOURSOMES");
+			return (needShortText ? GOLFLocalizedString(@"TERM_FOURSOMES") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_FOURSOMES"));
 
 		case GreensomesTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_GREENSOMES_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_TEAM_GREENSOMES");
+			return (needShortText ? GOLFLocalizedString(@"TERM_GREENSOMES") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_GREENSOMES"));
 
 		case ScrambleTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_SCRAMBLE_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_TEAM_SCRAMBLE");
+			return (needShortText ? GOLFLocalizedString(@"TERM_SCRAMBLE") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_SCRAMBLE"));
 
 		case ChapmanTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_CHAPMAN_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_TEAM_CHAPMAN");
+			return (needShortText ? GOLFLocalizedString(@"TERM_CHAPMAN") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_CHAPMAN"));
 
 		case WaltzTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_WALTZ_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_TEAM_WALTZ");
+			return (needShortText ? GOLFLocalizedString(@"TERM_WALTZ") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_WALTZ"));
 
 		case ModifiedWaltzTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_MODIFIED_WALTZ_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_TEAM_MODIFIED_WALTZ");
+			return (needShortText ? GOLFLocalizedString(@"TERM_WALTZ") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_MODIFIED_WALTZ"));
 
 		case ChaChaChaTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_CHA_CHA_CHA_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_TEAM_CHA_CHA_CHA");
+			return (needShortText ? GOLFLocalizedString(@"TERM_CHACHACHA") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_CHA_CHA_CHA"));
 
 		case ChaChaTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_CHA_CHA_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_TEAM_CHA_CHA");
+			return (needShortText ? GOLFLocalizedString(@"TERM_CHACHA") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_CHA_CHA"));
 
 		case IrishFourBallTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_IRISH_4_BALL_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_TEAM_IRISH_4_BALL");
+			return (needShortText ? GOLFLocalizedString(@"TERM_IRISH") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_IRISH_4_BALL"));
 
 		case BowmakerThreeBallTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_BOWMAKER_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_TEAM_BOWMAKER");
+			return (needShortText ? GOLFLocalizedString(@"TERM_BOWMAKER") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_BOWMAKER"));
 
 		case TotalTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_TOTAL_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_TEAM_TOTAL");
+			return (needShortText ? GOLFLocalizedString(@"TERM_TOTAL") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_TOTAL"));
 
 		case PlayerAverageTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_AVG_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_TEAM_AVG");
+			return (needShortText ? GOLFLocalizedString(@"TERM_AVERAGE") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_AVG"));
 
 		case TeamBestNPlayType:
 			{
@@ -480,26 +494,28 @@ NSString * NSStringFromPlayType(GOLFPlayType playType, NSDictionary *info, NSStr
 				}
 				NSNumber *workingNumber = (info ? [info objectForKey:@"bestRoundsN"] : nil);
 				NSInteger bestN = (workingNumber ? [workingNumber integerValue] : 4);
-				return [NSString stringWithFormat:@"%ld %@", (long)bestN, ((bestN > 1) ? GOLFLocalizedString(@"PLAY_TYPE_TEAM_BEST_ROUNDS") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_BEST_ROUND"))];
+				return (needShortText
+						? [NSString stringWithFormat:@"%@ %ld", [GOLFLocalizedString(@"TERM_BEST") capitalizedString], (long)bestN]
+						: [NSString stringWithFormat:@"%ld %@", (long)bestN, ((bestN > 1) ? GOLFLocalizedString(@"PLAY_TYPE_TEAM_BEST_ROUNDS") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_BEST_ROUND"))]);
 			}
 
 		case FourballComboTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_FOURBALL_COMBO_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_TEAM_FOURBALL_COMBO");
+			return (needShortText ? GOLFLocalizedString(@"TERM_FOURBALL") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_FOURBALL_COMBO"));
 
 		case NoTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_NO_TEAM_PLAY_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_NO_TEAM_PLAY");
+			return (needShortText ? nil : GOLFLocalizedString(@"PLAY_TYPE_NO_TEAM_PLAY"));
 
 		case TeamOnlyPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_NO_PLAYER_SCORES_DESC");
 			}
-			return GOLFLocalizedString(@"PLAY_TYPE_NO_PLAYER_SCORES");
+			return (needShortText ? nil : GOLFLocalizedString(@"PLAY_TYPE_NO_PLAYER_SCORES"));
 
 		case UnknownPlayType:
 		default:
