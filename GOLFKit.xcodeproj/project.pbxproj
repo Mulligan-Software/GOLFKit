@@ -61,6 +61,10 @@
 		296CDDA92062F7A4006DBA2C /* GOLFTeeMarkerBlueAndGreen.icns in Resources */ = {isa = PBXBuildFile; fileRef = 296CDDA82062F7A3006DBA2C /* GOLFTeeMarkerBlueAndGreen.icns */; };
 		296F4DDF1F3A40A100781C46 /* GOLFTeeMarkerAzure.icns in Resources */ = {isa = PBXBuildFile; fileRef = 296F4DDE1F3A40A100781C46 /* GOLFTeeMarkerAzure.icns */; };
 		296F4DE21F3A497000781C46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 296F4DE41F3A497000781C46 /* InfoPlist.strings */; };
+		2971397F2098D5AE00F482BD /* MulliganScoring.m in Sources */ = {isa = PBXBuildFile; fileRef = 2971397E2098D5AE00F482BD /* MulliganScoring.m */; };
+		297139802098D5AE00F482BD /* MulliganScoring.m in Sources */ = {isa = PBXBuildFile; fileRef = 2971397E2098D5AE00F482BD /* MulliganScoring.m */; };
+		297139822098D64000F482BD /* MulliganScoring.h in Headers */ = {isa = PBXBuildFile; fileRef = 297139812098D64000F482BD /* MulliganScoring.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		297139832098D64000F482BD /* MulliganScoring.h in Headers */ = {isa = PBXBuildFile; fileRef = 297139812098D64000F482BD /* MulliganScoring.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		297C860E204BA5D000A40BDB /* LargeTeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297C860D204BA5D000A40BDB /* LargeTeeMarkers.xcassets */; };
 		297C860F204BA5D000A40BDB /* LargeTeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297C860D204BA5D000A40BDB /* LargeTeeMarkers.xcassets */; };
 		2988BCFB2078547800C173BE /* GOLFExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2988BCFA2078547800C173BE /* GOLFExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -150,6 +154,8 @@
 		296F4DE31F3A497000781C46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		296F4DE51F3A497900781C46 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		296F4DE61F3A497E00781C46 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		2971397E2098D5AE00F482BD /* MulliganScoring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MulliganScoring.m; path = "Mulligan Scoring/MulliganScoring.m"; sourceTree = "<group>"; };
+		297139812098D64000F482BD /* MulliganScoring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MulliganScoring.h; path = "Mulligan Scoring/MulliganScoring.h"; sourceTree = "<group>"; };
 		297C860D204BA5D000A40BDB /* LargeTeeMarkers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = LargeTeeMarkers.xcassets; path = GOLFKit/LargeTeeMarkers.xcassets; sourceTree = SOURCE_ROOT; };
 		2988BCFA2078547800C173BE /* GOLFExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOLFExtensions.h; sourceTree = "<group>"; };
 		2990FA9220726F7000E7DB45 /* GOLFClubs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOLFClubs.h; sourceTree = "<group>"; };
@@ -230,6 +236,8 @@
 			children = (
 				29290A6820727B88005A0E3F /* GOLFScoring.h */,
 				29290A6920727B88005A0E3F /* GOLFScoring.m */,
+				297139812098D64000F482BD /* MulliganScoring.h */,
+				2971397E2098D5AE00F482BD /* MulliganScoring.m */,
 			);
 			name = Scoring;
 			sourceTree = "<group>";
@@ -405,6 +413,7 @@
 				2912D762204EE40D00649734 /* GOLFHandicapping.h in Headers */,
 				29E888BD1DCE5B0000C4A63A /* GOLFKit.h in Headers */,
 				29290A6A20727B88005A0E3F /* GOLFScoring.h in Headers */,
+				297139822098D64000F482BD /* MulliganScoring.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,6 +431,7 @@
 				2912D763204EE40D00649734 /* GOLFHandicapping.h in Headers */,
 				29A338021DCE74600074A064 /* GOLFKit.h in Headers */,
 				29290A6B20727B88005A0E3F /* GOLFScoring.h in Headers */,
+				297139832098D64000F482BD /* MulliganScoring.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -602,6 +612,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2971397F2098D5AE00F482BD /* MulliganScoring.m in Sources */,
 				296411EC204B44CF002A70CB /* GOLFKit.m in Sources */,
 				29A3380A1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */,
 				29C0E38E1F9E90580009E23C /* NSNumber+GOLFExtensions.m in Sources */,
@@ -626,6 +637,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				297139802098D5AE00F482BD /* MulliganScoring.m in Sources */,
 				296411ED204B44CF002A70CB /* GOLFKit.m in Sources */,
 				29A3380B1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */,
 				29C0E38F1F9E90580009E23C /* NSNumber+GOLFExtensions.m in Sources */,
@@ -719,7 +731,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -780,7 +792,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -808,7 +820,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -836,7 +848,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -861,7 +873,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				INFOPLIST_FILE = GOLFKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -874,7 +886,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 6;
+				CURRENT_PROJECT_VERSION = 7;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				INFOPLIST_FILE = GOLFKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";

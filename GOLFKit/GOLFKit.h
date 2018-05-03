@@ -35,6 +35,7 @@
 #import <GOLFKit/GOLFClubs.h>
 #import <GOLFKit/GOLFScoring.h>
 #import <GOLFKit/GOLFHandicapping.h>
+#import <GOLFKit/MulliganScoring.h>
 
 //	Common category extensions
 #import <GOLFKit/NSNumber+GOLFExtensions.h>
