@@ -28,8 +28,8 @@ typedef float GOLFCompScore;		//	Competition score (might be strokes, points, et
 typedef NSInteger GOLFPutts;		//	Putts
 
 //	Handicapping
-typedef float GOLFHandicapAllowance;
-typedef NSString GOLFHandicapAuthority;
+typedef float GOLFHandicapAllowance;		//	A whole or mixed handicap allowance used to compute a competition score from a gross score
+typedef NSString GOLFHandicapAuthority;		//	The mnemonic for a golf handicapping authority (USGA, PERSONAL, etc.)
 typedef float GOLFHandicapDifferential;		//	The intermediate adjusted handicapping "value" of a round used for handicap calculation
 typedef NSInteger GOLFHandicapGrade;		//	Grade, category, classification, etc.
 typedef float GOLFHandicapIndex;			//	The portable course and player independent evaluation of a golfer's skill

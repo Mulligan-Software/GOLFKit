@@ -28,10 +28,10 @@
 
 //	Misc constants
 #define	kGOLFTeeColorsNumberOfSolid		16		//	Black (0) through Azure (15), total of 16
-#define	kGOLFTeeColorsNumberOfCombo		8		//	Blue & White (20) through Black & Green (27), total of 8
+#define	kGOLFTeeColorsNumberOfCombo		9		//	Blue & White (20) through Green & White (28), total of 9
 #define kGOLFTeeColorsNumberOfCustom	4		//	U.S.A (51) through USGA (54), total of 4
 //										---
-#define kGOLFTeeColorsNumberOfStandard	28		//	Total Standard tee colors
+#define kGOLFTeeColorsNumberOfStandard	29		//	Total Standard tee colors
 
 #define kNotATeeColorIndex				-999	//	No-value GOLFTeeColorIndex specification
 
@@ -63,7 +63,8 @@ typedef NS_ENUM(GOLFTeeColorIndex, teeColorIndexEnumeration) {
 	GOLFTeeColorWhiteAndGold,			//	White & Gold (25)
 	GOLFTeeColorBlackAndWhite,			//	Black & White (26)
 	GOLFTeeColorBlueAndGreen,			//	Blue & Green (27)
-	GOLFTeeColorLastCombo = GOLFTeeColorBlueAndGreen,
+	GOLFTeeColorGreenAndWhite,			//	Green & White (28)
+	GOLFTeeColorLastCombo = GOLFTeeColorGreenAndWhite,
 	GOLFTeeColorCustom = 50,			//	Custom tee color (50)
 	GOLFTeeColorUSA,					//	Custom tee marker (U.S.A) (51)
 	GOLFTeeColorFirstSpecial = GOLFTeeColorUSA,
