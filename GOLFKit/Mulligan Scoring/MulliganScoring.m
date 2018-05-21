@@ -43,9 +43,10 @@ NSString * const MulliganScoringRoundIDUniversalTypeIdentifier = @"com.mulligans
 NSString * const MulliganScoringTeamRoundIDUniversalTypeIdentifier = @"com.mulligansoftware.scoring.teamRoundID";
 
 //	iTunes URL's for Mulligan & iOS apps
-NSString * const iTunesMulliganAppsURL = @"http://itunes.apple.com/us/artist/mulligan-software/id334049704";
-NSString * const iTunesTeeChartURL = @"http://itunes.apple.com/us/app/teechart/id334049701?ls=1&mt=8";
-NSString * const iTunesiPressURL = @"http://itunes.apple.com/us/app/ipress/id481425041?ls=1&mt=8";
+NSString * const iTunesEagleURL = @"https://itunes.apple.com/us/app/eagle/id403115926?ls-1&mt=12";
+NSString * const iTunesMulliganAppsURL = @"https://itunes.apple.com/us/artist/mulligan-software/id334049704";
+NSString * const iTunesTeeChartURL = @"https://itunes.apple.com/us/app/teechart/id334049701?ls=1&mt=8";
+NSString * const iTunesiPressURL = @"https://itunes.apple.com/us/app/ipress/id481425041?ls=1&mt=8";
 NSString * const iTunesScoringMachineURL = @"https://itunes.apple.com/us/app/the-scoring-machine/id831912888?ls=1&mt=8";
 
 //	Mulligan Software online data URLs

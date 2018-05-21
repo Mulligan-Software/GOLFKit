@@ -139,6 +139,7 @@
 "TITLE_HANDICAP_EGA_PLURAL" = "Handicaps EGA";
 "TITLE_HANDICAP_EGA_PLAYING" = "Handicap de Jugar EGA";
 "TITLE_HANDICAP_EGA_PLAYING_PLURAL" = "Handicaps de Jugar EGA";
+"TITLE_HANDICAP_ELIGIBLE_SCORE" = "Puntaje Eligible";
 "TITLE_HANDICAP_ESTIMATED" = "Handicap Estimado";
 "TITLE_HANDICAP_ESTIMATED_ABBR" = "Est";
 "TITLE_HANDICAP_ESTIMATED_PLURAL" = "Handicaps Estimados";
@@ -163,6 +164,7 @@
 "TITLE_HANDICAP_PLAYING_PLURAL" = "Handicaps de Jugar";
 "TITLE_HANDICAP_SLOPE_CHART" = "Gráfico Slope";
 "TITLE_HANDICAP_SLOPE_RATING" = "Clasificación de Slope";
+"TITLE_HANDICAP_STABLEFORD_SCORE" = "Puntaje Stableford";
 "TITLE_HANDICAP_TABLE" = "Tabla de Handicap";
 "TITLE_HANDICAP_WORLD_INDEX" = "Índice de Handicap Mundial";
 "TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";

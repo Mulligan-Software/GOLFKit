@@ -327,6 +327,12 @@ NSString * GOLFHandicapAllowanceTitle(GOLFHandicapMethodIndex handicapMethod) {
 //	GOLFHandicapAdjustedGrossTitle(handicapMethod)
 //=================================================================
 NSString * GOLFHandicapAdjustedGrossTitle(GOLFHandicapMethodIndex handicapMethod) {
+	if (handicapMethod == GOLFHandicapMethodAGU) {
+		return GOLFLocalizedString(@"TITLE_HANDICAP_ELIGIBLE_SCORE");
+	} else if ((handicapMethod == GOLFHandicapMethodEGA) || (handicapMethod == GOLFHandicapMethodCONGU)) {
+		return GOLFLocalizedString(@"TITLE_HANDICAP_STABLEFORD_SCORE");
+	}
+	//	Everybody else
 	return GOLFLocalizedString(@"TITLE_HANDICAP_ADJUSTED_GROSS");
 }
 

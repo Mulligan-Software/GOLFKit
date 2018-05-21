@@ -42,7 +42,8 @@ extern NSString * const MulliganScoringEventIDUniversalTypeIdentifier;
 extern NSString * const MulliganScoringRoundIDUniversalTypeIdentifier;
 extern NSString * const MulliganScoringTeamRoundIDUniversalTypeIdentifier;
 
-//	iTunes URL's for Mulligan & iOS apps
+//	iTunes URL's for Eagle & iOS apps
+extern NSString * const iTunesEagleURL;
 extern NSString * const iTunesMulliganAppsURL;;
 extern NSString * const iTunesTeeChartURL;
 extern NSString * const iTunesiPressURL;
