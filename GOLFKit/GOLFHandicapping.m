@@ -354,7 +354,14 @@ NSString * GOLFHandicapGradeTitle(GOLFHandicapMethodIndex handicapMethod, BOOL a
 //	GOLFHandicapCCRTitle(handicapMethod, abbreviated)
 //=================================================================
 NSString * GOLFHandicapCCRTitle(GOLFHandicapMethodIndex handicapMethod, BOOL abbreviated) {
-	return GOLFLocalizedString(abbreviated ? @"TITLE_CCR_ABBR" : @"TITLE_CCR");
+	if (handicapMethod == GOLFHandicapMethodAGU) {
+		return GOLFLocalizedString(abbreviated ? @"TITLE_DSR_ABBR" : @"TITLE_DSR");	//	Daily Scratch Rating
+	} else if (handicapMethod == GOLFHandicapMethodCONGU) {
+		return GOLFLocalizedString(abbreviated ? @"TITLE_CSS_ABBR" : @"TITLE_CSS");	//	Competition Scratch Score
+	} else if ((handicapMethod == GOLFHandicapMethodEGA) || (handicapMethod == GOLFHandicapMethodWHS)) {
+		return GOLFLocalizedString(abbreviated ? @"TITLE_CBA_ABBR" : @"TITLE_CBA");	//	Computed Buffer Adjustment
+	}
+	return GOLFLocalizedString(abbreviated ? @"TITLE_CCR_ABBR" : @"TITLE_CCR");	//	Calculated Course Rating
 }
 
 //=================================================================

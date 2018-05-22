@@ -114,10 +114,14 @@
 
 //	Titles & Abbr.
 "TITLE_ALLOWANCE" = "Allowance";
+"TITLE_CBA" = "Computed Buffer Adjustment";
+"TITLE_CBA_ABBR" = "CBA";
 "TITLE_CCR" = "Calculated Course Rating";
 "TITLE_CCR_ABBR" = "CCR";
 "TITLE_CSS" = "Competition Scratch Score";
 "TITLE_CSS_ABBR" = "CSS";
+"TITLE_DSR" = "Daily Scratch Rating";
+"TITLE_DSR_ABBR" = "DSR";
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
 "TITLE_HANDICAP_PLURAL" = "Handicaps";

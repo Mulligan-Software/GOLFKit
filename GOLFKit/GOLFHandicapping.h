@@ -109,9 +109,6 @@ GOLFHandicapMethodIndex GOLFHandicapBestMethodIndexFromAuthority(GOLFHandicapAut
 //	Returns the best (guess/most likely) GOLFHandicapMethodIndex for a specified handicap authority mnemonic, whether good, bad, or missing
 //	Will NOT return GOLFHandicapMethodUnknown
 
-NSString * GOLFHandicapMethodName(GOLFHandicapAuthority *authority);
-//	Returns the localized name of the handicap system or method supported by the provided GOLFHandicapAuthority
-
 NSArray * GOLFHandicapAuthorities(void);	//	An array of dictionaries
 //	Returns an NSArray of NSDictionaries, each with information about an available handicapping authority and the
 //	handicapping system used by its golfers:
