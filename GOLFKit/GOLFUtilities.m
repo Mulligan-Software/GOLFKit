@@ -40,6 +40,58 @@ NSString * GOLFMonthAbbreviationString(void) {
 }
 
 //=================================================================
+//	GOLFCountriesInfoForCountryCode(countryCode)
+//=================================================================
+NSDictionary * GOLFCountriesInfoForCountryCode(NSString *countryCode) {
+	//	Returns localized country information from GOLFCountries.plist
+	//	Returns US info (without states) if country code isn't found
+	
+	//	Key				Type					Description
+	//	-------------	---------------------	--------------------------------------------
+	//	countryCode		NSString *				Country code from locale date on this device
+	//	countryName		NSString *				The localized name of the country
+	//	association		NSString *				The name of the country's golf association
+	//	URL				NSString *				The URL of the golf association
+	//	authority		GOLFHandicapAuthority	The default golf authority for handicapping in this country
+	//	states			NSArray *				Optional array of states dictionaries for this country - postalCode, stateName
+	
+	NSDictionary *rootDict = [NSDictionary dictionaryWithContentsOfFile:[GOLFKitBundle() pathForResource:@"GOLFCountries" ofType:@"plist"]];
+	NSMutableDictionary *workingDict = [[rootDict objectForKey:countryCode] mutableCopy];
+	BOOL returnStates = YES;	//	Include the 'states' part of the country dictionary
+	NSString *countryName = [workingDict objectForKey:@"countryName"];	//	Pick it up (might be nil)
+	GOLFHandicapAuthority * authority = [workingDict objectForKey:@"authority"];
+	if (workingDict == nil) {
+		workingDict = [[rootDict objectForKey:@"US"] mutableCopy];
+		returnStates = NO;
+	}
+	
+	[workingDict setObject:countryCode forKey:@"countryCode"];	//	In case we need to diagnose a missing country code
+	
+	if (countryName) {
+		//	Best… a localized version of the country name (otherwise, unlocalized)
+		countryName = GOLFLocalizedString(countryName);
+	} else {
+		//	Without one, use the home country default, if available
+		countryName = [[NSUserDefaults standardUserDefaults] objectForKey:@"HomeCountry"];
+		if (countryName == nil) {
+			//	Worst… "Unknown"
+			countryName = [GOLFLocalizedString(@"TERM_UNKNOWN") capitalizedString];
+		}
+	}
+	[workingDict setObject:countryName forKey:@"countryName"];	//	Replace with our best version of countryName
+
+	authority = (authority ?: GOLFHandicapAuthorityUSGA);
+	[workingDict setObject:@"authority" forKey:authority];	//	Replace with the best version of authority
+	
+	//	Peel off the states part of the dictionary if requested…
+	if (!returnStates) {
+		[workingDict removeObjectForKey:@"states"];
+	}
+	
+	return [NSDictionary dictionaryWithDictionary:workingDict];
+}
+
+//=================================================================
 //	GOLFHomeCountryInfo
 //=================================================================
 NSDictionary * GOLFHomeCountryInfo(void) {
@@ -52,6 +104,7 @@ NSDictionary * GOLFHomeCountryInfo(void) {
 	//	association		NSString *				The name of the country's golf association
 	//	URL				NSString *				The URL of the golf association
 	//	authority		GOLFHandicapAuthority	The default golf authority for handicapping in this country
+	//	states			NSArray *				Optional array of states dictionaries for this country - postalCode, stateName
 	
 	NSLocale *ourLocale = [NSLocale autoupdatingCurrentLocale];
 //	NSString *localeIdentifier = [ourLocale localeIdentifier];
@@ -62,26 +115,8 @@ NSDictionary * GOLFHomeCountryInfo(void) {
 		NSDictionary *localeDict = [NSLocale componentsFromLocaleIdentifier:[ourLocale localeIdentifier]];
 		countryCode = [localeDict objectForKey:NSLocaleCountryCode];
 	}
-	NSDictionary *rootDict = [NSDictionary dictionaryWithContentsOfFile:[GOLFKitBundle() pathForResource:@"GOLFCountries" ofType:@"plist"]];
-	NSMutableDictionary *workingDict = [[rootDict objectForKey:countryCode] mutableCopy];
-	NSString *countryName = [workingDict objectForKey:@"countryName"];	//	Pick it up (might be nil)
-	GOLFHandicapAuthority * authority = [workingDict objectForKey:@"authority"];
-	if (workingDict == nil) {
-		workingDict = [[rootDict objectForKey:@"US"] mutableCopy];
-	}
 	
-	[workingDict setObject:countryCode forKey:@"countryCode"];	//	In case we need to diagnose a missing country code
-	
-	if (countryName) {
-		countryName = GOLFLocalizedString(countryName);
-	}
-	countryName = (countryName ?: [[NSUserDefaults standardUserDefaults] objectForKey:@"HomeCountry"]);	//	From manual setting, if any (already localized)
-	[workingDict setObject:countryName forKey:@"countryName"];	//	Replace with our best version of countryName
-
-	authority = (authority ?: GOLFHandicapAuthorityUSGA);
-	[workingDict setObject:@"authority" forKey:authority];	//	Replace with the best version of authority
-	
-	return [NSDictionary dictionaryWithDictionary:workingDict];
+	return GOLFCountriesInfoForCountryCode(countryCode);
 }
 
 NSString * GOLFLocalizedString(NSString *key) {

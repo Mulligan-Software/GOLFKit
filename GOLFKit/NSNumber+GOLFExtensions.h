@@ -30,6 +30,9 @@
 + (id)numberWithHandicapDifferential:(GOLFHandicapDifferential)handicapDifferential;
 - (GOLFHandicapDifferential)handicapDifferentialValue;
 
++ (id)numberWithOfficialHandicap:(GOLFOfficialHandicap)officialHandicap;
+- (GOLFOfficialHandicap)officialHandicapValue;
+
 + (id)numberWithPlayingHandicap:(GOLFPlayingHandicap)playingHandicap;
 - (GOLFPlayingHandicap)playingHandicapValue;
 

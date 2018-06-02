@@ -27,6 +27,14 @@
 	return (GOLFHandicapIndex)[self floatValue];
 }
 
++ (id)numberWithOfficialHandicap:(GOLFOfficialHandicap)officialHandicap {
+	return [NSNumber numberWithFloat:officialHandicap];
+}
+
+- (GOLFOfficialHandicap)officialHandicapValue {
+	return (GOLFOfficialHandicap)[self floatValue];
+}
+
 + (id)numberWithPlayingHandicap:(GOLFPlayingHandicap)playingHandicap {
 	return [NSNumber numberWithInteger:playingHandicap];
 }

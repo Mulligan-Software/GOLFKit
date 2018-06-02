@@ -50,6 +50,6 @@ NSString * const iTunesiPressURL = @"https://itunes.apple.com/us/app/ipress/id48
 NSString * const iTunesScoringMachineURL = @"https://itunes.apple.com/us/app/the-scoring-machine/id831912888?ls=1&mt=8";
 
 //	Mulligan Software online data URLs
-NSString * const MulliganSoftwareVersionsDictionaryURL = @"http://www.mulligansoftware.com/golf/data/versions.xml";
-NSString * const MulliganSoftwareClubsListDictionaryURL = @"http://www.mulligansoftware.com/golf/data/clubs_list.xml";
-NSString * const MulliganSoftwaresCountriesDictionaryURL = @"http://www.mulligansoftware.com/golf/data/countries_list.xml";
+NSString * const MulliganSoftwareVersionsDictionaryURL = @"https://www.mulligansoftware.com/golf/data/versions.xml";
+NSString * const MulliganSoftwareClubsListDictionaryURL = @"https://www.mulligansoftware.com/golf/data/clubs_list.xml";
+NSString * const MulliganSoftwaresCountriesDictionaryURL = @"https://www.mulligansoftware.com/golf/data/countries_list.xml";

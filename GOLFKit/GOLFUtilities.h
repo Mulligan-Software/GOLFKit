@@ -19,8 +19,8 @@ NSString * GOLFUnlocalizedCurrentCountry(void);
 NSString * GOLFMonthAbbreviationString(void);
 //	A 12-character string of the months' names - like "JFMAMJJASOND"
 
-NSDictionary * GOLFHomeCountryInfo(void);
-//	Localized home country information from GOLFCountries.plist
+NSDictionary * GOLFCountriesInfoForCountryCode(NSString *countryCode);
+//	Country information from GOLFCountries.plist - using the countryCode
 //
 //	Key				Type					Description
 //	-------------	---------------------	--------------------------------------------
@@ -29,6 +29,11 @@ NSDictionary * GOLFHomeCountryInfo(void);
 //	association		NSString *				The name of the country's golf association
 //	URL				NSString *				The URL of the golf association
 //	authority		GOLFHandicapAuthority	The default golf authority for handicapping in this country
+//	states			NSArray *				Optional array of states dictionaries for this country - postalCode, stateName
+
+NSDictionary * GOLFHomeCountryInfo(void);
+//	Localized home country information from GOLFCountries.plist
+//	See GOLFCountriesInfoForCountryCode() above
 
 NSString * GOLFLocalizedString(NSString *key);
 //	Localized NSString from a) GOLFKit.strings or b) the app's Localizable.strings

@@ -20,6 +20,7 @@
 #define GOLFDefaultUnratedTeeSLOPERating			113			//	Default SLOPE rating for unrated tee
 
 #define kNotAHandicapIndex							-999.0		//	No-value for GOLFHandicapIndex
+#define kNotAnOfficialHandicap						-999.0		//	No-value for GOLFOfficialHandicap
 #define kNotAPlayingHandicap						-999		//	No-value for GOLFPlayingHandicap
 #define kNotAHandicapGrade							-999		//	No-value for GOLFHandicapGrade
 #define kNotHandicapStrokes							-999		//	No-value for GOLFHandicapStrokes
@@ -127,6 +128,9 @@ NSString * GOLFHandicapIndexTitle(GOLFHandicapMethodIndex handicapMethod, BOOL p
 
 NSString * GOLFHandicapCurrentIndexTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural);
 //	Returns a localized title as above with a "current" qualifier ("Current Handicap Index", "Índice de Handicap Actual", "Aktuellen Exakt Handicapen")
+
+NSString * GOLFOfficialHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural);
+//	Returns a localized title for an "official" calculated handicap ("Handicap Index®", "Índice de Handicap", "Exakt Handicapen", etc.)
 
 NSString * GOLFPlayingHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural);
 //	Returns a localized title for the handicap strokes for play ("Playing Handicap", "Handicap de Campo", "EGA Handicap Jouer", etc.)

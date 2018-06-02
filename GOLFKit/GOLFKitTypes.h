@@ -33,6 +33,7 @@ typedef NSString GOLFHandicapAuthority;		//	The mnemonic for a golf handicapping
 typedef float GOLFHandicapDifferential;		//	The intermediate adjusted handicapping "value" of a round used for handicap calculation
 typedef NSInteger GOLFHandicapGrade;		//	Grade, category, classification, etc.
 typedef float GOLFHandicapIndex;			//	The portable course and player independent evaluation of a golfer's skill
+typedef float GOLFOfficialHandicap;			//	The course and player-independent numerical representation of a golfer's skill
 typedef NSInteger GOLFPlayingHandicap;		//	The whole unadjusted course and player-dependent strokes calculated for a player
 typedef NSInteger GOLFHandicapStrokes;		//	Any value related to strokes earned, taken or used
 
