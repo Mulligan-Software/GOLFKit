@@ -19,6 +19,9 @@ NSString * GOLFUnlocalizedCurrentCountry(void);
 NSString * GOLFMonthAbbreviationString(void);
 //	A 12-character string of the months' names - like "JFMAMJJASOND"
 
+NSDictionary * GOLFCountriesInfo(void);
+//	The entire GOLFCountries.plist localized
+
 NSDictionary * GOLFCountriesInfoForCountryCode(NSString *countryCode);
 //	Country information from GOLFCountries.plist - using the countryCode
 //

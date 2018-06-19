@@ -156,6 +156,7 @@ NSArray * GOLFHandicapAuthorities(void) {
 						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodUSGA), @"handicapAuthority",
 						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodUSGA), @"authorityDisplay",
 						GOLFLocalizedString(@"HANDICAP_ASSOCIATION_USGA"), @"association",
+						@"https://www.usga.org", @"URL",
 						GOLFLocalizedString(@"HANDICAP_METHOD_USGA"), @"methodName",
 						[NSNumber numberWithBool:YES], @"certifiable",
 						nil],
@@ -164,6 +165,7 @@ NSArray * GOLFHandicapAuthorities(void) {
 						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodRCGA), @"handicapAuthority",
 						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodRCGA), @"authorityDisplay",
 						GOLFLocalizedString(@"HANDICAP_ASSOCIATION_RCGA"), @"association",
+						@"http://www.golfcanada.ca", @"URL",
 						GOLFLocalizedString(@"HANDICAP_METHOD_RCGA"), @"methodName",
 						[NSNumber numberWithBool:YES], @"certifiable",
 						nil],
@@ -172,6 +174,7 @@ NSArray * GOLFHandicapAuthorities(void) {
 						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodAGU), @"handicapAuthority",
 						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodAGU), @"authorityDisplay",
 						GOLFLocalizedString(@"HANDICAP_ASSOCIATION_AGU"), @"association",
+						@"http://www.golfaustralia.org.au", @"URL",
 						GOLFLocalizedString(@"HANDICAP_METHOD_AGU"), @"methodName",
 						[NSNumber numberWithBool:YES], @"certifiable",
 						nil],
@@ -180,6 +183,7 @@ NSArray * GOLFHandicapAuthorities(void) {
 						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodEGA), @"handicapAuthority",
 						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodEGA), @"authorityDisplay",
 						GOLFLocalizedString(@"HANDICAP_ASSOCIATION_EGA"), @"association",
+						@"http://www.ega-golf.ch", @"URL",
 						GOLFLocalizedString(@"HANDICAP_METHOD_EGA"), @"methodName",
 						[NSNumber numberWithBool:YES], @"certifiable",
 						nil],
@@ -188,6 +192,7 @@ NSArray * GOLFHandicapAuthorities(void) {
 						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodCONGU), @"handicapAuthority",
 						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodCONGU), @"authorityDisplay",
 						GOLFLocalizedString(@"HANDICAP_ASSOCIATION_CONGU"), @"association",
+						@"http://www.congu.com", @"URL",
 						GOLFLocalizedString(@"HANDICAP_METHOD_CONGU"), @"methodName",
 						[NSNumber numberWithBool:YES], @"certifiable",
 						nil],
@@ -196,6 +201,7 @@ NSArray * GOLFHandicapAuthorities(void) {
 						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodWHS), @"handicapAuthority",
 						[NSString string], @"authorityDisplay",		//	Temporary?
 						GOLFLocalizedString(@"HANDICAP_METHOD_WHS"), @"association",	//	Temporary?
+						@"http://www.worldhandicapsystem.com", @"URL",
 						GOLFLocalizedString(@"HANDICAP_METHOD_WHS"), @"methodName",
 						nil],
 				nil];

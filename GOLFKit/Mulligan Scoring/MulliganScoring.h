@@ -33,6 +33,9 @@ extern NSString * const GoogleDriveScoringMachineClientSecret;
 extern NSString * const EvernoteConsumerKey;
 extern NSString * const EvernoteConsumerSecret;
 
+//	PinIt credentials
+extern NSString * const PinItScoringMachineAppID;
+
 //	Mulligan Scoring UTI's, etc.
 extern NSString * const MulliganScoringCourseIDUniversalTypeIdentifier;
 extern NSString * const MulliganScoringCompetitorIDUniversalTypeIdentifier;
@@ -44,12 +47,16 @@ extern NSString * const MulliganScoringTeamRoundIDUniversalTypeIdentifier;
 
 //	iTunes URL's for Eagle & iOS apps
 extern NSString * const iTunesEagleURL;
+//extern NSString * const iTunesMacAppStoreForEagleURL;
 extern NSString * const iTunesMulliganAppsURL;;
 extern NSString * const iTunesTeeChartURL;
 extern NSString * const iTunesiPressURL;
 extern NSString * const iTunesScoringMachineURL;
 
 //	Mulligan Software online data URLs
+extern NSString * const MulliganSoftwareDisplayURL;
 extern NSString * const MulliganSoftwareVersionsDictionaryURL;
 extern NSString * const MulliganSoftwareClubsListDictionaryURL;
-extern NSString * const MulliganSoftwaresCountriesDictionaryURL;
+extern NSString * const MulliganSoftwareCountriesDictionaryURL;
+extern NSString * const MulliganSoftwareForEagleURL;
+extern NSString * const MulliganSoftwareForiPressURL;

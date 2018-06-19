@@ -62,7 +62,7 @@ NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictiona
 //		Men80Women90AllowanceType			12			Men 80%, Women 90% (Best-Ball of 4)
 //		A60B40AllowanceType					13			A player 60%, B player 40% (Chapman/Pinehurst)
 //		A50B20AllowanceType					14			A player 50%, B player 20%
-//		SpecifiedPercentageAllowanceType	15			A specified percentage of Playing Handicap
+//		SpecifiedPercentAllowanceType		15			A specified percentage of Playing Handicap
 //
 //		AverageCombinedAllowanceType		20			Average of teammates' Playing Handicaps (Foursomes)
 //		AverageCombined80AllowanceType		21			80% of average teammates' handicap (Greensomes)

@@ -128,7 +128,7 @@
 }
 
 - (GOLFRoundCCR)roundCCRValue {
-	return (GOLFRoundCCR)[self roundCCRValue];
+	return (GOLFRoundCCR)[self integerValue];
 }
 
 + (id)numberWithScore:(GOLFScore)score {

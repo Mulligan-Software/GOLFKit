@@ -1418,6 +1418,54 @@
 		<key>URL</key>
 		<string>http://www.congu.com</string>
 	</dict>
+	<key>UK-EN</key>
+	<dict>
+		<key>countryCode</key>
+		<string>UK</string>
+		<key>countryName</key>
+		<string>England</string>
+		<key>authority</key>
+		<string>CONGU</string>
+		<key>association</key>
+		<string>English Golf Union</string>
+		<key>URL</key>
+		<string>http://www.englishgolfunion.org</string>
+	</dict>
+	<key>UK-SC</key>
+	<dict>
+		<key>countryCode</key>
+		<string>UK</string>
+		<key>countryName</key>
+		<string>Scotland</string>
+		<key>authority</key>
+		<string>CONGU</string>
+		<key>association</key>
+		<string>Scottish Golf Union</string>
+		<key>URL</key>
+		<string>http://www.scottishgolfunion.org</string>
+	</dict>
+	<key>UK-NI</key>
+	<dict>
+		<key>countryCode</key>
+		<string>UK</string>
+		<key>countryName</key>
+		<string>Northern Ireland</string>
+		<key>authority</key>
+		<string>CONGU</string>
+	</dict>
+	<key>UK-WL</key>
+	<dict>
+		<key>countryCode</key>
+		<string>UK</string>
+		<key>countryName</key>
+		<string>Wales</string>
+		<key>authority</key>
+		<string>CONGU</string>
+		<key>association</key>
+		<string>Golf Union of Wales</string>
+		<key>URL</key>
+		<string>http://www.welshgolf.org</string>
+	</dict>
 	<key>US</key>
 	<dict>
 		<key>countryCode</key>

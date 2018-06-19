@@ -40,6 +40,15 @@ NSString * GOLFMonthAbbreviationString(void) {
 }
 
 //=================================================================
+//	GOLFCountriesInfo()
+//=================================================================
+NSDictionary * GOLFCountriesInfo(void) {
+	//	Returns the entire GOLFCountries.plist
+	
+	return [NSDictionary dictionaryWithContentsOfFile:[GOLFKitBundle() pathForResource:@"GOLFCountries" ofType:@"plist"]];
+}
+
+//=================================================================
 //	GOLFCountriesInfoForCountryCode(countryCode)
 //=================================================================
 NSDictionary * GOLFCountriesInfoForCountryCode(NSString *countryCode) {

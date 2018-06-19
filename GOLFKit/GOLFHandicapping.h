@@ -114,14 +114,15 @@ NSArray * GOLFHandicapAuthorities(void);	//	An array of dictionaries
 //	Returns an NSArray of NSDictionaries, each with information about an available handicapping authority and the
 //	handicapping system used by its golfers:
 //
-//	Type			Key						Description
-//	--------------	----------------------	---------------------------------
-//	NSNumber		methodIndex				GOLFHandicapMethodIndex identifying the handicapping authority
-//	NSString		handicapAuthority		A mnemonic identifying the handicapping authority - used in most handicapping function calls
-//	NSString		authorityDisplay		A mnemonic for display identifying the handicapping authority
-//	NSString		association				The localized name of the handicapping association (authority)
-//	NSString		methodName				The localized name of the handicap system supported by the authority
-//	NSNumber		certifiable				A BOOL indicating whether the handicap method requires certification for use
+//	Key						Type			Description
+//	----------------------	--------------	---------------------------------
+//	methodIndex				NSNumber *		GOLFHandicapMethodIndex identifying the handicapping authority
+//	handicapAuthority		NSString *		A mnemonic identifying the handicapping authority - used in most handicapping function calls
+//	authorityDisplay		NSString *		A mnemonic for display identifying the handicapping authority
+//	association				NSString *		The localized name of the handicapping association (authority)
+//	URL						NSString *		The URL of the handicapping association (authority) web site
+//	methodName				NSString *		The localized name of the handicap system supported by the authority
+//	certifiable				NSNumber *		A BOOL indicating whether the handicap method requires certification for use
 
 NSString * GOLFHandicapIndexTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural);
 //	Returns a localized title for an "official" calculated handicap ("Handicap Index®", "Índice de Handicap", "Exakt Handicapen", etc.)

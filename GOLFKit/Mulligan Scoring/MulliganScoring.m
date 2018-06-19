@@ -33,6 +33,9 @@ NSString * const GoogleDriveScoringMachineClientSecret = @"iQ4KcPqFlyfgPQKdSOY9_
 NSString * const EvernoteConsumerKey = @"mulligangolf";
 NSString * const EvernoteConsumerSecret = @"589d644f45ece686";
 
+//	PinIt credentials
+NSString * const PinItScoringMachineAppID = @"1443072";
+
 //	Mulligan Scoring UTI's, etc.
 NSString * const MulliganScoringCourseIDUniversalTypeIdentifier = @"com.mulligansoftware.scoring.courseID";
 NSString * const MulliganScoringCompetitorIDUniversalTypeIdentifier = @"com.mulligansoftware.scoring.competitorID";
@@ -43,13 +46,18 @@ NSString * const MulliganScoringRoundIDUniversalTypeIdentifier = @"com.mulligans
 NSString * const MulliganScoringTeamRoundIDUniversalTypeIdentifier = @"com.mulligansoftware.scoring.teamRoundID";
 
 //	iTunes URL's for Mulligan & iOS apps
-NSString * const iTunesEagleURL = @"https://itunes.apple.com/us/app/eagle/id403115926?ls-1&mt=12";
+NSString * const iTunesEagleURL = @"https://itunes.apple.com/us/app/eagle/id403115926?ls=1&mt=12";
+//NSString * const iTunesMacAppStoreForEagleURL = @"https://geo.itunes.apple.com/us/app/eagle/id403115926?mt=12";
 NSString * const iTunesMulliganAppsURL = @"https://itunes.apple.com/us/artist/mulligan-software/id334049704";
 NSString * const iTunesTeeChartURL = @"https://itunes.apple.com/us/app/teechart/id334049701?ls=1&mt=8";
 NSString * const iTunesiPressURL = @"https://itunes.apple.com/us/app/ipress/id481425041?ls=1&mt=8";
 NSString * const iTunesScoringMachineURL = @"https://itunes.apple.com/us/app/the-scoring-machine/id831912888?ls=1&mt=8";
 
 //	Mulligan Software online data URLs
+NSString * const MulliganSoftwareDisplayURL = @"www.mulligansoftware.com";
 NSString * const MulliganSoftwareVersionsDictionaryURL = @"https://www.mulligansoftware.com/golf/data/versions.xml";
 NSString * const MulliganSoftwareClubsListDictionaryURL = @"https://www.mulligansoftware.com/golf/data/clubs_list.xml";
-NSString * const MulliganSoftwaresCountriesDictionaryURL = @"https://www.mulligansoftware.com/golf/data/countries_list.xml";
+NSString * const MulliganSoftwareCountriesDictionaryURL = @"https://www.mulligansoftware.com/golf/data/countries_list.xml";
+NSString * const MulliganSoftwareForEagleURL = @"https://www.mulligansoftware.com/responsive/mulligans-eagle.html";
+NSString * const MulliganSoftwareForiPressURL = @"https://www.mulligansoftware.com/responsive/ipress.html";
+
