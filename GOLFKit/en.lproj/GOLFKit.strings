@@ -25,6 +25,7 @@
 "TERM_FOURSOMES" = "Foursomes";
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "gross";
+"TERM_HOLE" = "hole";
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "Irish";
 "TERM_MEDAL" = "medal";
@@ -118,10 +119,12 @@
 "TITLE_CBA_ABBR" = "CBA";
 "TITLE_CCR" = "Calculated Course Rating";
 "TITLE_CCR_ABBR" = "CCR";
+"TITLE_CHOOSE_HOLE" = "Choose a Hole";
 "TITLE_CSS" = "Competition Scratch Score";
 "TITLE_CSS_ABBR" = "CSS";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
+"TITLE_FIRST_HOLE" = "First Hole";
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
 "TITLE_HANDICAP_PLURAL" = "Handicaps";
@@ -174,6 +177,9 @@
 "TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
 "TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "World Handicap Indexes";
 "TITLE_GRADE" = "Grade";
+"TITLE_LAST_HOLE" = "Last Hole";
+"TITLE_NEXT_HOLE" = "Next Hole";
+"TITLE_PREVIOUS_HOLE" = "Previous Hole";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
 
@@ -308,6 +314,7 @@
 "DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Determine your %@ on the right by finding the row in which your %@ appears on the left.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "A %@ Table (%@) is used to convert a %@, issued by your golf club or authorized golf association, to a %@ based on the %@ for a specific set of tees.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "A %@ Table (%@) is used to convert a %@, issued by your golf club or authorized golf association, to a %@ for a specific set of tees.";
+"NUMBER_%ld_ABBR" = "No. %ld";
 
 //	Countries
 "Algeria" = "Algeria";

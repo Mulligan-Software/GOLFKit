@@ -25,6 +25,7 @@
 "TERM_FOURSOMES" = "Viererspiel";
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "brutto";
+"TERM_HOLE" = "Loch";
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "irische";
 "TERM_MEDAL" = "medaille";
@@ -118,10 +119,12 @@
 "TITLE_CBA_ABBR" = "CBA";
 "TITLE_CCR" = "Course Rating berechnet";
 "TITLE_CCR_ABBR" = "CCR";
+"TITLE_CHOOSE_HOLE" = "Wählen ein Golfloch";
 "TITLE_CSS" = "Wettbewerbs-Scratch-Score";
 "TITLE_CSS_ABBR" = "CSS";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
+"TITLE_FIRST_HOLE" = "erstes Loch";
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
 "TITLE_HANDICAP_PLURAL" = "Handicapen";
@@ -174,6 +177,9 @@
 "TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
 "TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "Weltweites Handicap Indizes";
 "TITLE_GRADE" = "Klasse";
+"TITLE_LAST_HOLE" = "letztes Loch";
+"TITLE_NEXT_HOLE" = "nächstes Loch";
+"TITLE_PREVIOUS_HOLE" = "vorheriges Loch";
 "TITLE_SSS" = "Scratch Score genormt";
 "TITLE_SSS_ABBR" = "SSS";
 
@@ -308,6 +314,7 @@
 "DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Bestimme Dein %@ auf der rechten Seite indem Sie die Zeile finden, in der Ihre %@ auf der linken Seite steht.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Ein %@ Tabelle (%@) wird verwendet, um ein %@, ausgestellt von den Golfclub oder ermächtigt Golf Verien, um einen %@ zu konvertieren basierend auf der %@ für eine bestimmte Gruppe von Abschläge.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "Ein %@ Tabelle (%@) wird verwendet, um ein %@, ausgestellt von den Golfclub oder ermächtigt Golf Verien, um einen %@ zu konvertieren für eine bestimmte Gruppe von Abschläge.";
+"NUMBER_%ld_ABBR" = "Nr. %ld";
 
 //	Countries
 "Algeria" = "Algerien";

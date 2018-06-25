@@ -25,6 +25,7 @@
 "TERM_FOURSOMES" = "Foursomes";
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "brut";
+"TERM_HOLE" = "trou";
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "Irlandais";
 "TERM_MEDAL" = "médaille";
@@ -118,10 +119,12 @@
 "TITLE_CBA_ABBR" = "CBA";
 "TITLE_CCR" = "Calculated Course Rating";
 "TITLE_CCR_ABBR" = "CCR";
+"TITLE_CHOOSE_HOLE" = "Choisissez un trou";
 "TITLE_CSS" = "Scratch Score de Compétition";
 "TITLE_CSS_ABBR" = "CSS";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
+"TITLE_FIRST_HOLE" = "Premier Trou";
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
 "TITLE_HANDICAP_PLURAL" = "Handicaps";
@@ -174,6 +177,9 @@
 "TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
 "TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "Handicap Indexes Mondials";
 "TITLE_GRADE" = "Classe";
+"TITLE_LAST_HOLE" = "Dernier Trou";
+"TITLE_NEXT_HOLE" = "Trou Suivant";
+"TITLE_PREVIOUS_HOLE" = "Trou Précédent";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
 
@@ -308,6 +314,7 @@
 "DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Déterminez votre %@ à droite en repérant la rangée ou apparaît votre %@ de gauche.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Le Tableau %@ (%@) a pour but de transformer le %@ émis par un club de golf ou une association de golf autorisée en un %@ tenant compte de l’%@ de chacun des jalons de départ.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "Le Tableau %@ (%@) a pour but de transformer le %@ émis par un club de golf ou une association de golf autorisée en un %@ de chacun des jalons de départ.";
+"NUMBER_%ld_ABBR" = "No. %ld";
 
 //	Countries
 "Algeria" = "Algeria";
