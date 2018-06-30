@@ -98,7 +98,7 @@
 		<key>countryName</key>
 		<string>Bahamas</string>
 		<key>URL</key>
-		<string>http://www.bgfnet.com</string>
+		<string>http://www.bahamasgolf.org</string>
 		<key>authority</key>
 		<string>USGA</string>
 	</dict>
@@ -131,7 +131,7 @@
 		<key>association</key>
 		<string>Bermuda Golf Association</string>
 		<key>URL</key>
-		<string>http://www.bermudagolf.org</string>
+		<string>https://www.bermudagolf.org</string>
 		<key>authority</key>
 		<string>USGA</string>
 	</dict>
@@ -144,7 +144,7 @@
 		<key>association</key>
 		<string>Federacion Boliviana de Golf</string>
 		<key>URL</key>
-		<string>http://www.boliviagolf.com</string>
+		<string>https://www.golfbolivia.com</string>
 	</dict>
 	<key>BW</key>
 	<dict>
@@ -158,7 +158,7 @@
 		<key>countryCode</key>
 		<string>BR</string>
 		<key>association</key>
-		<string>Brazilian Golf Federation</string>
+		<string>Confederação Brasileira de Golfe</string>
 		<key>URL</key>
 		<string>http://www.cbg.com.br</string>
 		<key>countryName</key>
@@ -199,7 +199,7 @@
 		<key>authority</key>
 		<string>USGA</string>
 		<key>URL</key>
-		<string>http://www.cambodiangolf-federation.com</string>
+		<string>https://www.igfgolf.org/nationalmembers/cambodian-golf-federation/</string>
 	</dict>
 	<key>CA</key>
 	<dict>
@@ -304,7 +304,7 @@
 		<key>countryName</key>
 		<string>Cayman Islands</string>
 		<key>URL</key>
-		<string>http://www.ciga.ky</string>
+		<string>https://www.ciga.ky</string>
 		<key>authority</key>
 		<string>USGA</string>
 	</dict>
@@ -315,7 +315,7 @@
 		<key>association</key>
 		<string>Federación Chilena de Golf</string>
 		<key>URL</key>
-		<string>http://www.chilefolf.cl</string>
+		<string>https://www.chilegolf.cl</string>
 		<key>countryName</key>
 		<string>Chile</string>
 		<key>authority</key>
@@ -328,7 +328,7 @@
 		<key>association</key>
 		<string>China Golf Association</string>
 		<key>URL</key>
-		<string>http://www.golf.org.cn</string>
+		<string>https://www.igfgolf.org/nationalmembers/china-golf-association/</string>
 		<key>countryName</key>
 		<string>China</string>
 		<key>authority</key>
@@ -341,7 +341,7 @@
 		<key>association</key>
 		<string>Chinese Taipei Golf Association</string>
 		<key>URL</key>
-		<string>http://www.twgolf.org</string>
+		<string>https://www.igfgolf.org/nationalmembers/chinese-taipei-golf-association/</string>
 		<key>countryName</key>
 		<string>Chinese Taipei</string>
 		<key>authority</key>
@@ -352,9 +352,9 @@
 		<key>countryCode</key>
 		<string>CO</string>
 		<key>association</key>
-		<string>Colombian Golf Federation</string>
+		<string>Federación Colombiana de Golf</string>
 		<key>URL</key>
-		<string>http://www.federacioncolombianadegolf.com</string>
+		<string>https://www.federacioncolombianadegolf.com</string>
 		<key>countryName</key>
 		<string>Colombia</string>
 		<key>authority</key>
@@ -374,7 +374,7 @@
 		<key>association</key>
 		<string>Costa Rica Golf Association</string>
 		<key>URL</key>
-		<string>http://www.anagolf.com</string>
+		<string>https://www.anagolf.org</string>
 		<key>countryName</key>
 		<string>Costa Rica</string>
 		<key>authority</key>
@@ -398,7 +398,7 @@
 		<key>association</key>
 		<string>Cyprus Golf Federation</string>
 		<key>URL</key>
-		<string>http://www.cyprusgolffed.org</string>
+		<string>https://www.cgf.org.cy</string>
 		<key>countryName</key>
 		<string>Cyprus</string>
 		<key>authority</key>
@@ -409,9 +409,9 @@
 		<key>countryCode</key>
 		<string>CZ</string>
 		<key>association</key>
-		<string>Czech Golf Federation</string>
+		<string>Česká golfová federace</string>
 		<key>URL</key>
-		<string>http://www.cgf.cz</string>
+		<string>https://www.cgf.cz</string>
 		<key>countryName</key>
 		<string>Czech Republic</string>
 		<key>authority</key>
@@ -431,7 +431,7 @@
 		<key>association</key>
 		<string>Dansk Golf Union</string>
 		<key>URL</key>
-		<string>http://www.dgu.org</string>
+		<string>https://www.danskgolfunion.dk</string>
 		<key>countryName</key>
 		<string>Denmark</string>
 		<key>authority</key>
@@ -444,9 +444,9 @@
 		<key>countryName</key>
 		<string>Dominican Republic</string>
 		<key>association</key>
-		<string>Dominican Golf Federation</string>
+		<string>Federación Dominicana de Golf</string>
 		<key>URL</key>
-		<string>http://www.fedogolf.org.do</string>
+		<string>https://fedogolf.org.do</string>
 		<key>authority</key>
 		<string>USGA</string>
 	</dict>
@@ -457,7 +457,7 @@
 		<key>association</key>
 		<string>Federación Ecuatoriana de Golf</string>
 		<key>URL</key>
-		<string>http://www.feg.org.ec</string>
+		<string>https://www.feg.org.ec</string>
 		<key>countryName</key>
 		<string>Ecuador</string>
 		<key>authority</key>
@@ -470,7 +470,7 @@
 		<key>association</key>
 		<string>Council of National Golf Unions</string>
 		<key>URL</key>
-		<string>http://www.congu.com</string>
+		<string>http://www.congu.co.uk</string>
 		<key>countryName</key>
 		<string>Great Britain</string>
 		<key>authority</key>
@@ -497,7 +497,7 @@
 		<key>association</key>
 		<string>Estonian Golf Association</string>
 		<key>URL</key>
-		<string>http://www.golf.ee</string>
+		<string>https://www.golf.ee</string>
 		<key>countryName</key>
 		<string>Estonia</string>
 		<key>authority</key>
@@ -517,7 +517,7 @@
 		<key>association</key>
 		<string>Finnish Golf Union</string>
 		<key>URL</key>
-		<string>http://www.golf.fi</string>
+		<string>https://www.golf.fi</string>
 		<key>countryName</key>
 		<string>Finland</string>
 		<key>authority</key>
@@ -530,7 +530,7 @@
 		<key>association</key>
 		<string>Fédération Française de Golf</string>
 		<key>URL</key>
-		<string>http://www.ffgolf.org</string>
+		<string>https://www.ffgolf.org</string>
 		<key>countryName</key>
 		<string>France</string>
 		<key>authority</key>
@@ -543,7 +543,7 @@
 		<key>association</key>
 		<string>Deutscher Golf Verband</string>
 		<key>URL</key>
-		<string>http://www.golf.de</string>
+		<string>https://www.golf.de</string>
 		<key>countryName</key>
 		<string>Germany</string>
 		<key>authority</key>
