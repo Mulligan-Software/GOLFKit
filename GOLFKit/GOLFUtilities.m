@@ -118,7 +118,7 @@ NSDictionary * GOLFHomeCountryInfo(void) {
 	NSLocale *ourLocale = [NSLocale autoupdatingCurrentLocale];
 //	NSString *localeIdentifier = [ourLocale localeIdentifier];
 	NSString *countryCode = @"US";
-	if (@available(iOS 10.0, *)) {
+	if (@available(macOS 10.12, iOS 10.0, *)) {
 		countryCode = ourLocale.countryCode;
 	} else {
 		NSDictionary *localeDict = [NSLocale componentsFromLocaleIdentifier:[ourLocale localeIdentifier]];
