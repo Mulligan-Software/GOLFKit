@@ -180,6 +180,8 @@
 "TITLE_LAST_HOLE" = "Dernier Trou";
 "TITLE_NEXT_HOLE" = "Trou Suivant";
 "TITLE_PREVIOUS_HOLE" = "Trou Précédent";
+"TITLE_PRINT_SCORECARD" = "Imprimer Carte de Score";
+"TITLE_PRINT_SCORECARDS" = "Imprimer Cartes de Score";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
 

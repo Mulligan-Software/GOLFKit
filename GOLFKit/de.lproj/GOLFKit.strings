@@ -180,6 +180,8 @@
 "TITLE_LAST_HOLE" = "letztes Loch";
 "TITLE_NEXT_HOLE" = "nächstes Loch";
 "TITLE_PREVIOUS_HOLE" = "vorheriges Loch";
+"TITLE_PRINT_SCORECARD" = "Drucken Scorecard";
+"TITLE_PRINT_SCORECARDS" = "Drucken Scorecards";
 "TITLE_SSS" = "Scratch Score genormt";
 "TITLE_SSS_ABBR" = "SSS";
 

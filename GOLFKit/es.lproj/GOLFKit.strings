@@ -180,6 +180,8 @@
 "TITLE_LAST_HOLE" = "Último Hoyo";
 "TITLE_NEXT_HOLE" = "Próximo Hoyo";
 "TITLE_PREVIOUS_HOLE" = "Hoyo Precedente";
+"TITLE_PRINT_SCORECARD" = "Imprimir Tarjeta";
+"TITLE_PRINT_SCORECARDS" = "Imprimir Tarjetas";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
 

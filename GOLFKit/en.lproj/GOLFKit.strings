@@ -180,6 +180,8 @@
 "TITLE_LAST_HOLE" = "Last Hole";
 "TITLE_NEXT_HOLE" = "Next Hole";
 "TITLE_PREVIOUS_HOLE" = "Previous Hole";
+"TITLE_PRINT_SCORECARD" = "Print Scorecard";
+"TITLE_PRINT_SCORECARDS" = "Print Scorecards";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
 

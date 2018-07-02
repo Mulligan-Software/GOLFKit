@@ -85,6 +85,9 @@
 		29A338091DCE81D70074A064 /* GOLFTeeMarkers.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A338061DCE81D70074A064 /* GOLFTeeMarkers.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29A3380A1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A338071DCE81D70074A064 /* GOLFTeeMarkers.m */; };
 		29A3380B1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A338071DCE81D70074A064 /* GOLFTeeMarkers.m */; };
+		29A6028F20EA88F3006DD2EE /* iOSIcons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 29A6028E20EA88F3006DD2EE /* iOSIcons.xcassets */; };
+		29A6029220EA95BF006DD2EE /* GOLFiOSUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A6029020EA95BF006DD2EE /* GOLFiOSUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29A6029320EA95BF006DD2EE /* GOLFiOSUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A6029120EA95BF006DD2EE /* GOLFiOSUtilities.m */; };
 		29B00A7D204AFFE000E10210 /* GOLFTeeMarkerEU.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2907DB982048AB7C00A04B8F /* GOLFTeeMarkerEU.icns */; };
 		29C0E38C1F9E90580009E23C /* NSNumber+GOLFExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 29C0E38A1F9E90580009E23C /* NSNumber+GOLFExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29C0E38D1F9E90580009E23C /* NSNumber+GOLFExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 29C0E38A1F9E90580009E23C /* NSNumber+GOLFExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -168,6 +171,9 @@
 		29A338031DCE76E30074A064 /* TeeMarkers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = TeeMarkers.xcassets; path = GOLFKit/TeeMarkers.xcassets; sourceTree = SOURCE_ROOT; };
 		29A338061DCE81D70074A064 /* GOLFTeeMarkers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLFTeeMarkers.h; path = GOLFKit/GOLFTeeMarkers.h; sourceTree = SOURCE_ROOT; };
 		29A338071DCE81D70074A064 /* GOLFTeeMarkers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLFTeeMarkers.m; path = GOLFKit/GOLFTeeMarkers.m; sourceTree = SOURCE_ROOT; };
+		29A6028E20EA88F3006DD2EE /* iOSIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = iOSIcons.xcassets; sourceTree = "<group>"; };
+		29A6029020EA95BF006DD2EE /* GOLFiOSUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOLFiOSUtilities.h; sourceTree = "<group>"; };
+		29A6029120EA95BF006DD2EE /* GOLFiOSUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOLFiOSUtilities.m; sourceTree = "<group>"; };
 		29C0E38A1F9E90580009E23C /* NSNumber+GOLFExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSNumber+GOLFExtensions.h"; path = "GOLFKit/NSNumber+GOLFExtensions.h"; sourceTree = SOURCE_ROOT; };
 		29C0E38B1F9E90580009E23C /* NSNumber+GOLFExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+GOLFExtensions.m"; path = "GOLFKit/NSNumber+GOLFExtensions.m"; sourceTree = SOURCE_ROOT; };
 		29C6C41A20471B7E00EF584C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -330,6 +336,9 @@
 			children = (
 				29E888B01DCE5B0000C4A63A /* Info.plist */,
 				296F4DE41F3A497000781C46 /* InfoPlist.strings */,
+				29A6029020EA95BF006DD2EE /* GOLFiOSUtilities.h */,
+				29A6029120EA95BF006DD2EE /* GOLFiOSUtilities.m */,
+				29A6028E20EA88F3006DD2EE /* iOSIcons.xcassets */,
 			);
 			path = "GOLFKit (iOS)";
 			sourceTree = SOURCE_ROOT;
@@ -413,6 +422,7 @@
 				29E888CF1DCE611600C4A63A /* GOLFColors.h in Headers */,
 				2954DC072050EBC2008A7306 /* GOLFUtilities.h in Headers */,
 				29C0E38C1F9E90580009E23C /* NSNumber+GOLFExtensions.h in Headers */,
+				29A6029220EA95BF006DD2EE /* GOLFiOSUtilities.h in Headers */,
 				2912D762204EE40D00649734 /* GOLFHandicapping.h in Headers */,
 				29E888BD1DCE5B0000C4A63A /* GOLFKit.h in Headers */,
 				29290A6A20727B88005A0E3F /* GOLFScoring.h in Headers */,
@@ -549,6 +559,7 @@
 				296F4DE21F3A497000781C46 /* InfoPlist.strings in Resources */,
 				29A338041DCE76E30074A064 /* TeeMarkers.xcassets in Resources */,
 				297C860E204BA5D000A40BDB /* LargeTeeMarkers.xcassets in Resources */,
+				29A6028F20EA88F3006DD2EE /* iOSIcons.xcassets in Resources */,
 				29164282204C3B7800E87478 /* GenericTeeMarkers.xcassets in Resources */,
 				29436C642055B5F90080E0FE /* GOLFCountries.plist in Resources */,
 				29E888C81DCE5E6400C4A63A /* GOLFKit.strings in Resources */,
@@ -616,6 +627,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29A6029320EA95BF006DD2EE /* GOLFiOSUtilities.m in Sources */,
 				2971397F2098D5AE00F482BD /* MulliganScoring.m in Sources */,
 				296411EC204B44CF002A70CB /* GOLFKit.m in Sources */,
 				29A3380A1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */,
@@ -735,7 +747,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -796,7 +808,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -824,7 +836,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -852,7 +864,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -877,7 +889,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				INFOPLIST_FILE = GOLFKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -890,7 +902,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				INFOPLIST_FILE = GOLFKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -906,7 +918,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -932,7 +944,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 11;
+				CURRENT_PROJECT_VERSION = 12;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				DYLIB_COMPATIBILITY_VERSION = 1;
