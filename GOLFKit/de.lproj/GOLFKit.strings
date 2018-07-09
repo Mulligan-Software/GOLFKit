@@ -317,6 +317,9 @@
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Ein %@ Tabelle (%@) wird verwendet, um ein %@, ausgestellt von den Golfclub oder ermächtigt Golf Verien, um einen %@ zu konvertieren basierend auf der %@ für eine bestimmte Gruppe von Abschläge.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "Ein %@ Tabelle (%@) wird verwendet, um ein %@, ausgestellt von den Golfclub oder ermächtigt Golf Verien, um einen %@ zu konvertieren für eine bestimmte Gruppe von Abschläge.";
 "NUMBER_%ld_ABBR" = "Nr. %ld";
+"ORDINAL_FIRST" = ".";
+"ORDINAL_NTH" = ".";
+"ORDINAL_20TH_TO_29TH" = ".,.,.,.,.,.,.,.,.,.";
 
 //	Countries
 "Algeria" = "Algerien";

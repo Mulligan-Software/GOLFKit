@@ -47,13 +47,17 @@ NSString * const MulliganScoringTeamRoundIDUniversalTypeIdentifier = @"com.mulli
 
 //	iTunes URL's for Mulligan & iOS apps
 NSString * const iTunesEagleURL = @"https://itunes.apple.com/us/app/eagle/id403115926?ls=1&mt=12";
-//NSString * const iTunesMacAppStoreForEagleURL = @"https://geo.itunes.apple.com/us/app/eagle/id403115926?mt=12";
 NSString * const iTunesMulliganAppsURL = @"https://itunes.apple.com/us/artist/mulligan-software/id334049704";
 NSString * const iTunesTeeChartURL = @"https://itunes.apple.com/us/app/teechart/id334049701?ls=1&mt=8";
 NSString * const iTunesiPressURL = @"https://itunes.apple.com/us/app/ipress/id481425041?ls=1&mt=8";
 NSString * const iTunesScoringMachineURL = @"https://itunes.apple.com/us/app/the-scoring-machine/id831912888?ls=1&mt=8";
 
+#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
+NSString * const iTunesMacAppStoreForEagleURL = @"https://geo.itunes.apple.com/us/app/eagle/id403115926?mt=12";	//	Not useful from iOS
+#endif
+
 //	Mulligan Software online data URLs
+NSString * const MulliganSoftwareWebSiteURL = @"https://www.mulligansoftware.com";
 NSString * const MulliganSoftwareDisplayURL = @"www.mulligansoftware.com";
 NSString * const MulliganSoftwareVersionsDictionaryURL = @"https://www.mulligansoftware.com/golf/data/versions.xml";
 NSString * const MulliganSoftwareClubsListDictionaryURL = @"https://www.mulligansoftware.com/golf/data/clubs_list.xml";

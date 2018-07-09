@@ -201,7 +201,7 @@ NSArray * GOLFHandicapAuthorities(void) {
 						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodWHS), @"handicapAuthority",
 						[NSString string], @"authorityDisplay",		//	Temporary?
 						GOLFLocalizedString(@"HANDICAP_METHOD_WHS"), @"association",	//	Temporary?
-						@"http://www.worldhandicapsystem.com", @"URL",
+						@"http://www.usga.org/content/usga/home-page/Handicapping/world-handicap-system/WHS-resources.html", @"URL",
 						GOLFLocalizedString(@"HANDICAP_METHOD_WHS"), @"methodName",
 						nil],
 				nil];

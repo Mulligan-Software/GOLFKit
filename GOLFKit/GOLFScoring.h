@@ -179,13 +179,23 @@ typedef NS_OPTIONS(NSUInteger, GOLFRoundHoleStatus) {
 	GOLFRoundHoleStatusHigherIsBetter		= 1 << 11		//	(2048)		Comp scoring is in points (higher is better)
 };
 
+
 //=================================================================
 //	GOLFHoleSelectionInstructionsForAllowanceType(allowanceType)
 //=================================================================
 NSString * GOLFHoleSelectionInstructionsForAllowanceType(GOLFAllowanceType allowanceType);
 //	Returns an appropriate localized instruction string concerning the selection of the holes associated with the specified GOLFAllowanceType
 
+
 #pragma mark NSStringFrom… Utilities
+
+//=================================================================
+//	NSStringOrdinalSuffixFromRank(rank)
+//=================================================================
+NSString * NSStringOrdinalSuffixFromRank(NSUInteger rank);
+//	Returns a localized suffix for a positive integer rank
+//	In English, "st", "nd", "rd", "th", "th", etc.
+
 
 //=================================================================
 //	NSStringFromAllowanceType(allowanceType, info, descriptiveText)

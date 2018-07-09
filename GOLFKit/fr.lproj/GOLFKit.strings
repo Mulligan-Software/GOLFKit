@@ -317,6 +317,9 @@
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Le Tableau %@ (%@) a pour but de transformer le %@ émis par un club de golf ou une association de golf autorisée en un %@ tenant compte de l’%@ de chacun des jalons de départ.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "Le Tableau %@ (%@) a pour but de transformer le %@ émis par un club de golf ou une association de golf autorisée en un %@ de chacun des jalons de départ.";
 "NUMBER_%ld_ABBR" = "No. %ld";
+"ORDINAL_FIRST" = "ᵉʳ";		/*	1ᵉʳ	*/
+"ORDINAL_NTH" = "ᵉ";
+"ORDINAL_20TH_TO_29TH" = "ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ";	/*	20ᵉ, 21ᵉ, 22ᵉ, etc.	*/
 
 //	Countries
 "Algeria" = "Algeria";

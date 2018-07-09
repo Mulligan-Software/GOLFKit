@@ -317,6 +317,9 @@
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "A %@ Table (%@) is used to convert a %@, issued by your golf club or authorized golf association, to a %@ based on the %@ for a specific set of tees.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "A %@ Table (%@) is used to convert a %@, issued by your golf club or authorized golf association, to a %@ for a specific set of tees.";
 "NUMBER_%ld_ABBR" = "No. %ld";
+"ORDINAL_FIRST" = "st";		/*	1st	*/
+"ORDINAL_NTH" = "th";		/*	9th	*/
+"ORDINAL_20TH_TO_29TH" = "th,st,nd,rd,th,th,th,th,th,th";	/*	20th, 21st, 22nd, 23rd, 24th, 25th, etc.		*/
 
 //	Countries
 "Algeria" = "Algeria";

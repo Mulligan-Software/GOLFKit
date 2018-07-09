@@ -39,6 +39,21 @@ NSString * GOLFHoleSelectionInstructionsForAllowanceType(GOLFAllowanceType allow
 #pragma mark NSStringFrom… Utilities
 
 //=================================================================
+//	NSStringOrdinalSuffixFromRank(rank)
+//=================================================================
+NSString * NSStringOrdinalSuffixFromRank(NSUInteger rank) {
+//	Returns a localized suffix for a positive integer rank
+//	In English, "st", "nd", "rd", "th", "th", etc.
+	
+	if (rank == 1)
+		return GOLFLocalizedString(@"ORDINAL_FIRST");
+	else if (((rank % 100) > 9) && ((rank % 100) < 15))
+		return GOLFLocalizedString(@"ORDINAL_NTH");
+	else	
+		return [[GOLFLocalizedString(@"ORDINAL_20TH_TO_29TH") componentsSeparatedByString:@","] objectAtIndex:(rank % 10)];
+}
+
+//=================================================================
 //	NSStringFromAllowanceType(allowanceType, info, descriptiveText)
 //=================================================================
 NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictionary *info, NSString **descriptiveText) {

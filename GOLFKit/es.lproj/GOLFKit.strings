@@ -316,7 +316,10 @@
 "DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Determina tu %@ de la derecha encontrando la fila donde aparece tu %@ de la izquierda.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Una Tabla %@ (%@) es utilizada para convertir un %@, publicado por tu club o asociación autorizada del golf, a un %@ basada en el %@ para un tee.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "Una Tabla %@ (%@) es utilizada para convertir un %@, publicado por tu club o asociación autorizada del golf, a un %@ para un tee.";
-"NUMBER_%ld_ABBR" = "No. %ld";
+"NUMBER_%ld_ABBR" = "No. %ld";	/*	No. 3	*/
+"ORDINAL_FIRST" = "ᵉʳ";		/*	1ᵉʳ	*/
+"ORDINAL_NTH" = "º";		/*	nth (like 133º)	*/
+"ORDINAL_20TH_TO_29TH" = "º,º,º,º,º,º,º,º,º,º";	/*	20º, 21º, 22º, etc.	*/
 
 //	Countries
 "Algeria" = "Algeria";
