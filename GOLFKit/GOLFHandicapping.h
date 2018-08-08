@@ -220,12 +220,12 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 //	Playing handicap calculation per the authority
 //
 //	GOLFHandicapAuthority *			authority		required		Handicap authority
-//	GOLFHandicapIndex				handicapIndex	required		18 holes unless GOLFHandicapCalculationOption9HoleIndex (kNotAHandicapIndex is valid)
+//	GOLFHandicapIndex				handicapIndex	required		18 holes unless GOLFHandicapCalculationOption9HoleHandicap (kNotAHandicapIndex is valid)
 //	GOLFTeeCourseRating				courseRating	required		18 holes unless GOLFHandicapCalculationOption9HoleRating (kNotACourseRating is valid)
 //	GOLFTeeSLOPERating				slopeRating		required		18 holes unless GOLFHandicapCalculationOption9HoleSLOPE (kNotASLOPERating is valid)
 //	GOLFPar							par				required		18 holes unless GOLFHandicapCalculationOption9HolePar (kNotAPar is valid)
 //	GOLFHandicapCalculationOption	options			required		Calculations options or GOLFHandicapCalculationOptionNone
-//	NSDictionary *					info			optional		optional NSDictionary
+//	NSDictionary *					info			optional		optional parameters (described below)
 //
 //	options:
 //	GOLFHandicapCalculationOptionNeed9HoleResult	(1)		Need return of a 9-hole handicap

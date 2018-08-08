@@ -115,6 +115,7 @@
 
 //	Titles & Abbr.
 "TITLE_ALLOWANCE" = "Asignacíon";
+"TITLE_CANCEL" = "Cancelar";
 "TITLE_CBA" = "Computed Buffer Adjustment";
 "TITLE_CBA_ABBR" = "CBA";
 "TITLE_CCR" = "Course Rating Calculado";
@@ -182,6 +183,7 @@
 "TITLE_PREVIOUS_HOLE" = "Hoyo Precedente";
 "TITLE_PRINT_SCORECARD" = "Imprimir Tarjeta";
 "TITLE_PRINT_SCORECARDS" = "Imprimir Tarjetas";
+"TITLE_REGISTER" = "Registrar";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
 
@@ -313,7 +315,7 @@
 "COURSE_HANDICAP_%@_TABLE" = "Tabla %@";
 "CURRENT_%@_TITLE" = "%@ Actual";
 "CURRENT_%@_TITLE_PLURAL" = "%@ Actuales";
-"DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Determina tu %@ de la derecha encontrando la fila donde aparece tu %@ de la izquierda.";
+"DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Determina tu %@ de la derecha encontrando la fila donde aparece tu 18-hoyos %@ de la izquierda.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Una Tabla %@ (%@) es utilizada para convertir un %@, publicado por tu club o asociación autorizada del golf, a un %@ basada en el %@ para un tee.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "Una Tabla %@ (%@) es utilizada para convertir un %@, publicado por tu club o asociación autorizada del golf, a un %@ para un tee.";
 "NUMBER_%ld_ABBR" = "No. %ld";	/*	No. 3	*/

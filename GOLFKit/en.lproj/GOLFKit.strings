@@ -115,6 +115,7 @@
 
 //	Titles & Abbr.
 "TITLE_ALLOWANCE" = "Allowance";
+"TITLE_CANCEL" = "Cancel";
 "TITLE_CBA" = "Computed Buffer Adjustment";
 "TITLE_CBA_ABBR" = "CBA";
 "TITLE_CCR" = "Calculated Course Rating";
@@ -182,6 +183,7 @@
 "TITLE_PREVIOUS_HOLE" = "Previous Hole";
 "TITLE_PRINT_SCORECARD" = "Print Scorecard";
 "TITLE_PRINT_SCORECARDS" = "Print Scorecards";
+"TITLE_REGISTER" = "Register";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
 
@@ -313,7 +315,7 @@
 "COURSE_HANDICAP_%@_TABLE" = "%@ Table";
 "CURRENT_%@_TITLE" = "Current %@";
 "CURRENT_%@_TITLE_PLURAL" = "Current %@";
-"DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Determine your %@ on the right by finding the row in which your %@ appears on the left.";
+"DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Determine your %@ on the right by finding the row in which your 18-hole %@ appears on the left.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "A %@ Table (%@) is used to convert a %@, issued by your golf club or authorized golf association, to a %@ based on the %@ for a specific set of tees.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "A %@ Table (%@) is used to convert a %@, issued by your golf club or authorized golf association, to a %@ for a specific set of tees.";
 "NUMBER_%ld_ABBR" = "No. %ld";
