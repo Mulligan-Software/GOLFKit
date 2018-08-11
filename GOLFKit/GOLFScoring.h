@@ -87,6 +87,7 @@ typedef NS_ENUM(NSUInteger, GOLFPlayType) {
 	ScrambleTeamPlayType,				//	Multi-player ball (Scramble)							(42)
 	ChapmanTeamPlayType,				//	Multi-player ball (Chapman/Pinehurst)					(43)
 	LastTeamOnlyPlayType = ChapmanTeamPlayType,
+	AnyTeamOnlyPlayType = 49,			//	Multi-player ball (any type)							(49)
 	WaltzTeamPlayType = 50,				//	3-ball (par 3's), 2-ball (par 4's), 1-ball (par 5's)	(50)
 	ModifiedWaltzTeamPlayType,			//	2-ball (par 3's and 4's), 1-ball (par 5's)				(51)
 	ChaChaChaTeamPlayType,				//	1-ball, 2-balls, 3-balls (repeated)						(52)
@@ -133,6 +134,47 @@ typedef NS_ENUM(NSUInteger, GOLFPlayType) {
 #if !defined(IS_POINT_QUOTA_COMPATIBLE_PLAY_TYPE)
 	#define IS_POINT_QUOTA_COMPATIBLE_PLAY_TYPE(_type)	((((_type) == NoTeamPlayType) || ((_type) == TotalTeamPlayType) || ((_type) == TeamBestNPlayType)) ? YES : NO)
 #endif
+
+//	Status Masks
+
+typedef NS_OPTIONS(NSUInteger, GOLFRoundStatus) {
+	GOLFRoundStatusNone						= 0,			//	(0)
+	GOLFRoundStatusNoFairways				= 1 << 0,		//	(1)			No fairways hit (not the same as all fairways unknown)
+	GOLFRoundStatusIgnoreForHandicapping	= 1 << 1,		//	(2)			Ignored for stats and handicapping
+	GOLFRoundStatusIsPenalty				= 1 << 2,		//	(4)			Penalty Round
+	GOLFRoundStatusUsesMultipleTees			= 1 << 3,		//	(8)			Round is contested on more than 1 tee
+	GOLFRoundStatusUsesSSS					= 1 << 4,		//	(16)		Round's course rated with a Standard Scratch Score
+	GOLFRoundStatusNetScoreInTenths			= 1 << 5,		//	(32)		Net scores report to a tenth
+	GOLFRoundStatusIsDisqualified			= 1 << 6,		//	(64)		Competitor's round disqualified
+	GOLFRoundStatusOption7					= 1 << 7,		//	(128)
+	GOLFRoundStatusOption8					= 1 << 8,		//	(256)
+	GOLFRoundStatusOption9					= 1 << 9,		//	(512)
+	GOLFRoundStatusOption10					= 1 << 10,		//	(1024)
+	GOLFRoundStatusHigherIsBetter			= 1 << 11,		//	(2048)		Comp scoring is in points (higher is better)
+	GOLFRoundStatusSkinsOptOut				= 1 << 12		//	(4096)		Round opted-out of skins - all types
+};
+
+typedef NS_OPTIONS(NSUInteger, GOLFRoundProcessingStatus) {
+	GOLFRoundProcessingStatusNone							= 0,			//	(0)
+	GOLFRoundProcessingStatusNeedsYdgUpdate					= 1 << 0,		//	(1)			Need to update yardages and/or totals
+	GOLFRoundProcessingStatusNeedsParUpdate					= 1 << 1,		//	(2)			Need to update par and/or totals
+	GOLFRoundProcessingStatusNeedsCompParUpdate				= 1 << 2,		//	(4)			Need to update competition par and/or totals
+	GOLFRoundProcessingStatusNeedsScoreUpdate				= 1 << 3,		//	(8)			Need to update gross scores and/or totals
+	GOLFRoundProcessingStatusNeedsNetScoreUpdate			= 1 << 4,		//	(16)		Need to update net scores and/or totals	
+	GOLFRoundProcessingStatusNeedsCompScoreUpdate			= 1 << 5,		//	(32)		Need to update competition scores and/or totals
+	GOLFRoundProcessingStatusNeedsPuttsUpdate				= 1 << 6,		//	(64)		Need to update putts and/or totals
+	GOLFRoundProcessingStatusOption7						= 1 << 7,		//	(128)
+	GOLFRoundProcessingStatusOption8						= 1 << 8,		//	(256)
+	GOLFRoundProcessingStatusOption9						= 1 << 9,		//	(512)
+	GOLFRoundProcessingStatusOption10						= 1 << 10,		//	(1024)
+	GOLFRoundProcessingStatusOption11						= 1 << 11,		//	(2048)
+	GOLFRoundProcessingStatusOption12						= 1 << 12,		//	(4096)
+	GOLFRoundProcessingStatusOption13						= 1 << 13,		//	(8192)
+	GOLFRoundProcessingStatusOption14						= 1 << 14,		//	(16384)
+	GOLFRoundProcessingStatusOption15						= 1 << 15,		//	(32768)
+	GOLFRoundProcessingStatusNeedsCourseHandicapUpdate		= 1 << 16,		//	(65536)
+	GOLFRoundProcessingStatusNeedsHandicapAllowanceUpdate	= 1 << 17		//	(131072)
+};
 
 typedef NS_OPTIONS(NSUInteger, GOLFRoundSideStatus) {
 	GOLFRoundSideStatusNone						= 0,			//	(0)
