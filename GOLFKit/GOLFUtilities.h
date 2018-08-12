@@ -48,3 +48,6 @@ NSString * NSStringFromPlayingHandicap(GOLFPlayingHandicap playingHandicap);
 
 NSString * NSStringFromHandicapIndex(GOLFHandicapIndex handicapIndex);
 //	The Handicap Index or 'kNotAHandicapIndex'
+
+NSString * NSStringForClickOrTap(void);
+//	Localized 'click' or 'tap'

@@ -14,25 +14,18 @@
 //	GOLFHoleSelectionInstructionsForAllowanceType(allowanceType)
 //=================================================================
 NSString * GOLFHoleSelectionInstructionsForAllowanceType(GOLFAllowanceType allowanceType) {
-
-#if TARGET_OS_IOS || TARGET_OS_WATCH
-	NSString *clickOrTap = [GOLFLocalizedString(@"TERM_TAP") capitalizedString];
-#elif TARGET_OS_MAC
-	NSString *clickOrTap = [GOLFLocalizedString(@"TERM_CLICK") capitalizedString];
-#endif
-
 	switch (allowanceType) {
 		case PeoriaAllowanceType:
-			return [NSString stringWithFormat:GOLFLocalizedString(@"INSTRUCTION_PEORIA_%@_CLICKORTAP"), clickOrTap];
+			return [NSString stringWithFormat:GOLFLocalizedString(@"ALLOWANCE_TYPE_PEORIA_INSTRUCTION_%@_CLICKORTAP"), [NSStringForClickOrTap() capitalizedString]];
 
 		case ModifiedPeoriaAllowanceType:
-			return [NSString stringWithFormat:GOLFLocalizedString(@"INSTRUCTION_MODIFIED_PEORIA_%@_CLICKORTAP"), clickOrTap];
+			return [NSString stringWithFormat:GOLFLocalizedString(@"ALLOWANCE_TYPE_MODIFIED_PEORIA_INSTRUCTION_%@_CLICKORTAP"), [NSStringForClickOrTap() capitalizedString]];
 
 		case ScrambleZigZagAllowanceType:
-			return [NSString stringWithFormat:GOLFLocalizedString(@"INSTRUCTION_ZIG_ZAG_%@_CLICKORTAP"), clickOrTap];
+			return [NSString stringWithFormat:GOLFLocalizedString(@"ALLOWANCE_TYPE_ZIG_ZAG_SYSTEM_INSTRUCTION_%@_CLICKORTAP"), [NSStringForClickOrTap() capitalizedString]];
 
 		default:
-			return [NSString stringWithFormat:GOLFLocalizedString(@"INSTRUCTION_SELECTED_HOLES_%@_CLICKORTAP"), clickOrTap];
+			return [NSString stringWithFormat:GOLFLocalizedString(@"PLAY_TYPE_SELECTED_HOLES_INSTRUCTION_%@_CLICKORTAP"), [NSStringForClickOrTap() capitalizedString]];
 	}
 }
 
@@ -502,9 +495,9 @@ NSString * NSStringFromPlayType(GOLFPlayType playType, NSDictionary *info, NSStr
 			{
 				if (descriptiveText) {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
-					*descriptiveText = GOLFLocalizedString(@"TAP_NUMBER_TO_ADJUST");
+					*descriptiveText = [NSString stringWithFormat:GOLFLocalizedString(@"CLICKORTAP_%@_NUMBER_TO_ADJUST"), GOLFLocalizedString(@"TERM_TAP")];
 #elif TARGET_OS_MAC
-					*descriptiveText = GOLFLocalizedString(@"CLICK_NUMBER_TO_ADJUST");
+					*descriptiveText = [NSString stringWithFormat:GOLFLocalizedString(@"CLICKORTAP_%@_NUMBER_TO_ADJUST"), GOLFLocalizedString(@"TERM_CLICK")];
 #endif
 				}
 				NSNumber *workingNumber = (info ? [info objectForKey:@"bestRoundsN"] : nil);
@@ -540,3 +533,141 @@ NSString * NSStringFromPlayType(GOLFPlayType playType, NSDictionary *info, NSStr
 			return [GOLFLocalizedString(@"TERM_UNKNOWN") capitalizedString];
 	}
 }
+
+//=================================================================
+//	NSStringFromTiebreakerMethod(method, descriptiveText)
+//=================================================================
+NSString * NSStringFromTiebreakerMethod(GOLFTiebreakerMethod method, NSString **descriptiveText) {
+
+//		Tiebreaker Methods
+//
+//		Method								Value		Description
+//		--------------------------------	--------	-----------------------------------
+//		GOLFTiebreakerMethodNone				0		No tie-breaking
+//		GOLFTiebreakerMethodUSGA				1		USGA tie-breaking method (back nine, last 6, last 3, last hole)
+//		GOLFTiebreakerMethodHandicapsForward	2		Hole-by-hole handicap tie-breaking method (no. 1 handicap, no. 2 handicap, etc.)
+//		GOLFTiebreakerMethodHandicapsBackward	3		Hole-by-hole handicap tie-breaking method (no. 18 handicap, no. 17 handicap, etc.)
+//		GOLFTiebreakerMethodHolesForward		4		Hole-by-hole handicap tie-breaking method (1st hole, 2nd hole, etc.)
+//		GOLFTiebreakerMethodHolesBackward		5		Hole-by-hole handicap tie-breaking method (18th hole, 17th hole, etc.)
+//		GOLFTiebreakerMethodHigherHandicap		6		Higher team or individual handicap wins
+//		GOLFTiebreakerMethodLowerHandicap		7		Lower team or individual handicap wins
+//		GOLFTiebreakerMethodUnknown				99		Unknown or error method
+	
+	switch(method) {
+		case GOLFTiebreakerMethodNone:
+			if (descriptiveText) {
+				*descriptiveText = @"";
+			}
+			return GOLFLocalizedString(@"TIEBREAKING_NONE");
+			
+		case GOLFTiebreakerMethodUSGA:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"TIEBREAKING_USGA_DESC");
+			}
+			return GOLFLocalizedString(@"TIEBREAKING_USGA");
+			
+		case GOLFTiebreakerMethodHandicapsForward:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"TIEBREAKING_HDCP_FORWARD_DESC");
+			}
+			return GOLFLocalizedString(@"TIEBREAKING_HDCP_FORWARD");
+			
+		case GOLFTiebreakerMethodHandicapsBackward:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"TIEBREAKING_HDCP_BACKWARD_DESC");
+			}
+			return GOLFLocalizedString(@"TIEBREAKING_HDCP_BACKWARD");
+			
+		case GOLFTiebreakerMethodHolesForward:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"TIEBREAKING_HOLE_FORWARD_DESC");
+			}
+			return GOLFLocalizedString(@"TIEBREAKING_HOLE_FORWARD");
+			
+		case GOLFTiebreakerMethodHolesBackward:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"TIEBREAKING_HOLE_BACKWARD_DESC");
+			}
+			return GOLFLocalizedString(@"TIEBREAKING_HOLE_BACKWARD");
+
+		case GOLFTiebreakerMethodHigherHandicap:
+			if (descriptiveText != nil) {
+				*descriptiveText = @"";
+			}
+			return GOLFLocalizedString(@"TIEBREAKING_HIGH_HANDICAP");
+
+		case GOLFTiebreakerMethodLowerHandicap:
+			if (descriptiveText != nil) {
+				*descriptiveText = @"";
+			}
+			return GOLFLocalizedString(@"TIEBREAKING_LOW_HANDICAP");
+		
+		default:
+			if (descriptiveText != nil) {
+				*descriptiveText = ((method == GOLFTiebreakerMethodUnknown) ? @"" : [NSString stringWithFormat:@"(%lu)", (unsigned long)method]);
+			}
+			return [GOLFLocalizedString(@"TERM_UNKNOWN") capitalizedString];
+	}
+}
+
+//=================================================================
+//	NSStringFromTiebreakerOutcome(outcome, result)
+//=================================================================
+NSString * NSStringFromTiebreakerOutcome(GOLFTiebreakerOutcome outcome, NSNumber *result) {
+
+//		Tiebreaker Outcomes
+//
+//		Outcome								Value		Description
+//		--------------------------------	--------	-----------------------------------
+//		GOLFTiebreakerOutcomeTied				0		Couldn't break tie
+//		GOLFTiebreakerOutcomeHoleScore			1		Tie was broken by score at a particular hole (forward, backward, hole handicaps, hole numbers)
+//		GOLFTiebreakerOutcomeLastHole			2		Tie was broken based on score of last hole
+//		GOLFTiebreakerOutcomeLast3Holes			3		Tie was broken based on total score of last 3 holes
+//		GOLFTiebreakerOutcomeLast6Holes			4		Tie was broken based on total score of last 6 holes
+//		GOLFTiebreakerOutcomeLast9Holes			5		Tie was broken based on total score of last 9 holes
+//		GOLFTiebreakerOutcomeLast18Holes		6		Tie was broken based on total score of last 18 holes
+//		GOLFTiebreakerOutcomeRoundTotal			7		Tie was broken based on total round score
+//		GOLFTiebreakerOutcomeHandicap			8		Tie was broken based on individual or team handicap
+//		GOLFTiebreakerOutcomeRoundComplete		9		Tie was broken based on complete / incomplete round
+//		GOLFTiebreakerOutcomeCoinFlip			98		Tie was broken by lot
+//		GOLFTiebreakerOutcomeUnknown			99		Unknown or error result
+	
+	switch(outcome) {
+		case GOLFTiebreakerOutcomeTied:
+			return GOLFLocalizedString(@"TIEBREAKER_OUTCOME_TIED");
+			
+		case GOLFTiebreakerOutcomeHoleScore:
+			return [NSString stringWithFormat:GOLFLocalizedString(@"TIEBREAKER_HOLE_NO_%d"), [result integerValue]];
+			
+		case GOLFTiebreakerOutcomeLastHole:
+			return GOLFLocalizedString(@"TIEBREAKER_OUTCOME_LAST");
+			
+		case GOLFTiebreakerOutcomeLast3Holes:
+			return GOLFLocalizedString(@"TIEBREAKER_OUTCOME_LAST_3");
+			
+		case GOLFTiebreakerOutcomeLast6Holes:
+			return GOLFLocalizedString(@"TIEBREAKER_OUTCOME_LAST_6");
+			
+		case GOLFTiebreakerOutcomeLast9Holes:
+			return GOLFLocalizedString(@"TIEBREAKER_OUTCOME_LAST_9");
+
+		case GOLFTiebreakerOutcomeLast18Holes:
+			return GOLFLocalizedString(@"TIEBREAKER_OUTCOME_LAST_18");
+
+		case GOLFTiebreakerOutcomeRoundTotal:
+			return GOLFLocalizedString(@"TIEBREAKER_OUTCOME_ROUND_TOTAL");
+
+		case GOLFTiebreakerOutcomeHandicap:
+			return GOLFLocalizedString(@"TIEBREAKER_OUTCOME_BY_HANDICAP");
+			
+		case GOLFTiebreakerOutcomeRoundComplete:
+			return GOLFLocalizedString(@"TIEBREAKER_OUTCOME_BY_COMPLETE");
+			
+		case GOLFTiebreakerOutcomeCoinFlip:
+			return GOLFLocalizedString(@"TIEBREAKER_OUTCOME_BY_LOT");
+
+		default:
+			return [GOLFLocalizedString(@"TERM_UNKNOWN") capitalizedString];
+	}
+}
+

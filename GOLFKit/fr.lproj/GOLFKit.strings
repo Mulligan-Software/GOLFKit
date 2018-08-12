@@ -26,6 +26,7 @@
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "brut";
 "TERM_HOLE" = "trou";
+"TERM_INDICATE" = "indiquer";
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "Irlandais";
 "TERM_MEDAL" = "médaille";
@@ -113,6 +114,31 @@
 "HANDICAP_ASSOCIATION_USGA" = "Association de Golf des États-Unis";
 "HANDICAP_ASSOCIATION_WHS" = "Système de Handicap Mondial";	//	Temporary?
 
+"TIEBREAKER_HOLE_NO_%d" = "trou no. %d";
+"TIEBREAKER_OUTCOME_TIED" = "égalité";
+"TIEBREAKER_OUTCOME_LAST" = "trou ultime";
+"TIEBREAKER_OUTCOME_LAST_3" = "3 derniers trous";
+"TIEBREAKER_OUTCOME_LAST_6" = "6 derniers trous";
+"TIEBREAKER_OUTCOME_LAST_9" = "9 derniers trous";
+"TIEBREAKER_OUTCOME_LAST_18" = "18 derniers trous";
+"TIEBREAKER_OUTCOME_ROUND_TOTAL" = "total de partie";
+"TIEBREAKER_OUTCOME_BY_HANDICAP" = "handicap";
+"TIEBREAKER_OUTCOME_BY_COMPLETE" = "partie complète";
+"TIEBREAKER_OUTCOME_BY_LOT" = "tirage au sort";
+"TIEBREAKING_HDCP_BACKWARD" = "par handicap de trou, à l’envers";
+"TIEBREAKING_HDCP_BACKWARD_DESC" = "Trou de handicap 18, handicap 17, etc.";
+"TIEBREAKING_HDCP_FORWARD" = "par handicap de trou";
+"TIEBREAKING_HDCP_FORWARD_DESC" = "Trou de handicap 1, handicap 2, etc.";
+"TIEBREAKING_HIGH_HANDICAP" = "handicap plus grande va gagner";
+"TIEBREAKING_HOLE_BACKWARD" = "par trou, à l’envers";
+"TIEBREAKING_HOLE_BACKWARD_DESC" = "Trou no. 18, no. 17, etc.";
+"TIEBREAKING_HOLE_FORWARD" = "par trou";
+"TIEBREAKING_HOLE_FORWARD_DESC" = "Trou no. 1, no. 2, etc.";
+"TIEBREAKING_LOW_HANDICAP" = "handicap plus petit va gagner";
+"TIEBREAKING_NONE" = "Aucun";
+"TIEBREAKING_USGA" = "Rapprocher des cartes";
+"TIEBREAKING_USGA_DESC" = "Dernier 9 trous, dernier 6, dernier 3, trou ultime";
+
 //	Titles & Abbr.
 "TITLE_ALLOWANCE" = "Allocation";
 "TITLE_CANCEL" = "Annuler";
@@ -177,6 +203,7 @@
 "TITLE_HANDICAP_WORLD_INDEX" = "Handicap Index Mondial";
 "TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
 "TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "Handicap Indexes Mondials";
+"TITLE_HOLES_TO_BE_SCORED" = "Trous à marquer";
 "TITLE_GRADE" = "Classe";
 "TITLE_LAST_HOLE" = "Dernier Trou";
 "TITLE_NEXT_HOLE" = "Trou Suivant";
@@ -192,6 +219,7 @@
 "PLAY_TYPE_MEDAL_PLAY_DESC" = "Jeu par coups individuel";
 "PLAY_TYPE_SELECTED_HOLES" = "Trous selectionés";
 "PLAY_TYPE_SELECTED_HOLES_DESC" = "Score seulement des trous selectionés";
+"PLAY_TYPE_SELECTED_HOLES_INSTRUCTION_%@_CLICKORTAP" = "%@ pour sélectionner les trous dont les résultats doivent être utilisés pour calculer le score total de chaque joueur.";
 "PLAY_TYPE_STABLEFORD" = "Stableford";
 "PLAY_TYPE_STABLEFORD_DESC" = "Points - bogey 1, par 2, birdie 3, 4, 5, …";
 "PLAY_TYPE_MODIFIED_STABLEFORD" = "Stableford modifié";
@@ -283,10 +311,13 @@
 "ALLOWANCE_TYPE_A_PLAYER_20_B_15_C_10_D_5" = "20% A + 15% B + 10% C + 5% D";
 "ALLOWANCE_TYPE_SCHEID_SCRAMBLE" = "Scheid Scramble";
 "ALLOWANCE_TYPE_ZIG_ZAG_SYSTEM" = "Système ZIG-ZAG";
+"ALLOWANCE_TYPE_ZIG_ZAG_SYSTEM_INSTRUCTION_%@_CLICKORTAP" = "%@ pour sélectionner les trois trous dont les résultats doivent être utilisés pour calculer le handicap ZIG-ZAG de chaque équipe.";
 "ALLOWANCE_TYPE_OFFICIAL_CALLAWAY" = "Callaway «Officiel»";
 "ALLOWANCE_TYPE_SCHEID_SYSTEM" = "Système Scheid";
 "ALLOWANCE_TYPE_PEORIA" = "Peoria";
+"ALLOWANCE_TYPE_PEORIA_INSTRUCTION_%@_CLICKORTAP" = "%@ pour sélectionner les six trous, dont deux par-3 trous, deux par-4 trous, et deux par-5 trous dont les résultats son utilisé pour calculer le handicap de chaque joueur.";
 "ALLOWANCE_TYPE_MODIFIED_PEORIA" = "Peoria Modifié";
+"ALLOWANCE_TYPE_MODIFIED_PEORIA_INSTRUCTION_%@_CLICKORTAP" = "%@ pour sélectionner les six trous, dont un par-3 trou, un par-5 trou, et quatre par-4 trous (deux sur chaque neuf) dont les résultats son utilisé pour calculer le handicap de chaque joueur.";
 "ALLOWANCE_TYPE_SYSTEM_36" = "Système 36";
 
 "ALLOWANCE_CALCULATED_TEAM_HANDICAP" = "Handicap d’équipe calculé";
@@ -305,17 +336,12 @@
 "TOOLTIP_ROUNDS_MODIFIER_EGA" = "* - utilisé\nT - tournoi";
 "TOOLTIP_ROUNDS_MODIFIER_MULLIGAN" = "* - utilisé\nA - loin\nT - tournoi";
 
-"INSTRUCTION_PEORIA_%@_CLICKORTAP" = "%@ pour sélectionner les six trous, dont deux par-3 trous, deux par-4 trous, et deux par-5 trous dont les résultats son utilisé pour calculer le handicap de chaque joueur.";
-"INSTRUCTION_MODIFIED_PEORIA_%@_CLICKORTAP" = "%@ pour sélectionner les six trous, dont un par-3 trou, un par-5 trou, et quatre par-4 trous (deux sur chaque neuf) dont les résultats son utilisé pour calculer le handicap de chaque joueur.";
-"INSTRUCTION_ZIG_ZAG_%@_CLICKORTAP" = "%@ pour sélectionner les trois trous dont les résultats doivent être utilisés pour calculer le handicap ZIG-ZAG de chaque équipe.";
-"INSTRUCTION_SELECTED_HOLES_%@_CLICKORTAP" = "%@ pour sélectionner les trous dont les résultats doivent être utilisés pour calculer le score total de chaque joueur.";
-
 //	Phrases & Formats
 "AND_%@" = " et %@";
 "COURSE_HANDICAP_%@_TABLE" = "Tableau %@";
 "CURRENT_%@_TITLE" = "%@ Actuelle";
 "CURRENT_%@_TITLE_PLURAL" = "%@ Actuelles";
-"DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Déterminez votre %@ à droite en repérant la rangée ou apparaît votre %@ 18-trous de gauche.";
+"DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Déterminez votre %@ à droite en repérant la rangée ou apparaît votre %@ de gauche.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Le Tableau %@ (%@) a pour but de transformer le %@ émis par un club de golf ou une association de golf autorisée en un %@ tenant compte de l’%@ de chacun des jalons de départ.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "Le Tableau %@ (%@) a pour but de transformer le %@ émis par un club de golf ou une association de golf autorisée en un %@ de chacun des jalons de départ.";
 "NUMBER_%ld_ABBR" = "No. %ld";

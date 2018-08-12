@@ -164,4 +164,18 @@ NSString * NSStringFromHandicapIndex(GOLFHandicapIndex handicapIndex) {
 	}
 }
 
+//=================================================================
+//	NSStringForClickOrTap()
+//=================================================================
+NSString * NSStringForClickOrTap(void) {
+	//	returns localized 'click' or 'tap'
+#if TARGET_OS_IOS || TARGET_OS_WATCH
+	return GOLFLocalizedString(@"TERM_TAP");
+#elif TARGET_OS_MAC
+	return GOLFLocalizedString(@"TERM_CLICK");
+#endif
+
+	//	Huh?
+	return GOLFLocalizedString(@"TERM_INDICATE");
+}
 

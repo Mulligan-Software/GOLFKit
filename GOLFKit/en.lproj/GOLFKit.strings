@@ -26,6 +26,7 @@
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "gross";
 "TERM_HOLE" = "hole";
+"TERM_INDICATE" = "indicate";
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "Irish";
 "TERM_MEDAL" = "medal";
@@ -113,6 +114,31 @@
 "HANDICAP_ASSOCIATION_USGA" = "United States Golf Association";
 "HANDICAP_ASSOCIATION_WHS" = "World Golf Handicap System";	//	Temporary?
 
+"TIEBREAKER_HOLE_NO_%d" = "hole no. %d";
+"TIEBREAKER_OUTCOME_TIED" = "tied";
+"TIEBREAKER_OUTCOME_LAST" = "last hole";
+"TIEBREAKER_OUTCOME_LAST_3" = "last 3 holes";
+"TIEBREAKER_OUTCOME_LAST_6" = "last 6 holes";
+"TIEBREAKER_OUTCOME_LAST_9" = "last 9 holes";
+"TIEBREAKER_OUTCOME_LAST_18" = "last 18 holes";
+"TIEBREAKER_OUTCOME_ROUND_TOTAL" = "round total";
+"TIEBREAKER_OUTCOME_BY_HANDICAP" = "handicap";
+"TIEBREAKER_OUTCOME_BY_COMPLETE" = "complete round";
+"TIEBREAKER_OUTCOME_BY_LOT" = "by lot";
+"TIEBREAKING_HDCP_BACKWARD" = "by hole handicaps, backwards";
+"TIEBREAKING_HDCP_BACKWARD_DESC" = "No. 18 handicap hole, no. 17, etc.";
+"TIEBREAKING_HDCP_FORWARD" = "by hole handicaps";
+"TIEBREAKING_HDCP_FORWARD_DESC" = "No. 1 handicap hole, no. 2, etc.";
+"TIEBREAKING_HIGH_HANDICAP" = "higher handicap wins";
+"TIEBREAKING_HOLE_BACKWARD" = "by hole, backwards";
+"TIEBREAKING_HOLE_BACKWARD_DESC" = "Hole no. 18, no. 17, etc.";
+"TIEBREAKING_HOLE_FORWARD" = "by hole";
+"TIEBREAKING_HOLE_FORWARD_DESC" = "Hole no. 1, no. 2, etc.";
+"TIEBREAKING_LOW_HANDICAP" = "lower handicap wins";
+"TIEBREAKING_NONE" = "None";
+"TIEBREAKING_USGA" = "USGA scorecard match";
+"TIEBREAKING_USGA_DESC" = "Last 9 holes, last 6, last 3, last hole";
+
 //	Titles & Abbr.
 "TITLE_ALLOWANCE" = "Allowance";
 "TITLE_CANCEL" = "Cancel";
@@ -177,6 +203,7 @@
 "TITLE_HANDICAP_WORLD_INDEX" = "World Handicap Index";
 "TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
 "TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "World Handicap Indexes";
+"TITLE_HOLES_TO_BE_SCORED" = "Holes to be Scored";
 "TITLE_GRADE" = "Grade";
 "TITLE_LAST_HOLE" = "Last Hole";
 "TITLE_NEXT_HOLE" = "Next Hole";
@@ -192,6 +219,7 @@
 "PLAY_TYPE_MEDAL_PLAY_DESC" = "Individual stroke play";
 "PLAY_TYPE_SELECTED_HOLES" = "Selected Holes";
 "PLAY_TYPE_SELECTED_HOLES_DESC" = "Score only for selected holes";
+"PLAY_TYPE_SELECTED_HOLES_INSTRUCTION_%@_CLICKORTAP" = "%@ to select the holes whose scores are to be used to calculate each player’s total score.";
 "PLAY_TYPE_STABLEFORD" = "Stableford";
 "PLAY_TYPE_STABLEFORD_DESC" = "Points - bogey 1, par 2, birdie 3, 4, 5, …";
 "PLAY_TYPE_MODIFIED_STABLEFORD" = "Modified Stableford";
@@ -283,10 +311,13 @@
 "ALLOWANCE_TYPE_A_PLAYER_20_B_15_C_10_D_5" = "20% A + 15% B + 10% C + 5% D";
 "ALLOWANCE_TYPE_SCHEID_SCRAMBLE" = "Scheid Scramble";
 "ALLOWANCE_TYPE_ZIG_ZAG_SYSTEM" = "ZIG-ZAG System";
+"ALLOWANCE_TYPE_ZIG_ZAG_SYSTEM_INSTRUCTION_%@_CLICKORTAP" = "%@ to select the three holes whose scores are used to calculate each team’s ZIG-ZAG handicap.";
 "ALLOWANCE_TYPE_OFFICIAL_CALLAWAY" = "“Official” Callaway";
 "ALLOWANCE_TYPE_SCHEID_SYSTEM" = "Scheid System";
 "ALLOWANCE_TYPE_PEORIA" = "Peoria";
+"ALLOWANCE_TYPE_PEORIA_INSTRUCTION_%@_CLICKORTAP" = "%@ to select the six holes, including two par-3 holes, two par-4 holes, and two par-5 holes whose scores are used to calculate each player’s handicap.";
 "ALLOWANCE_TYPE_MODIFIED_PEORIA" = "Modified Peoria";
+"ALLOWANCE_TYPE_MODIFIED_PEORIA_INSTRUCTION_%@_CLICKORTAP" = "%@ to select the six holes, including one par-3 hole, one par-5 hole, and four par-4 holes (two on each nine) whose scores are used to calculate each player’s handicap.";
 "ALLOWANCE_TYPE_SYSTEM_36" = "System 36";
 
 "ALLOWANCE_CALCULATED_TEAM_HANDICAP" = "Calculated team handicap";
@@ -294,7 +325,7 @@
 "ALLOWANCE_ONE_TIME_PLAYER" = "One-time calculated player’s handicap";
 "ALLOWANCE_ONE_TIME_TEAM" = "One-time calculated team handicap";
 "%d_PCT_OF_HANDICAP_%@" = "%d%% of %@";
-"OF" = "of";	//	95% of Playing Handicap
+"OF" = "of";	//	95% of Playing Handicap or "of Course Handicap™"
 
 //	Tooltips & Instructions
 "TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - used\nA - away\nC - combined\nT - tournament\nP - penalty";
@@ -305,17 +336,12 @@
 "TOOLTIP_ROUNDS_MODIFIER_EGA" = "* - used\nT - tournament";
 "TOOLTIP_ROUNDS_MODIFIER_MULLIGAN" = "* - used\nA - away\nT - tournament";
 
-"INSTRUCTION_PEORIA_%@_CLICKORTAP" = "%@ to select the six holes, including two par-3 holes, two par-4 holes, and two par-5 holes whose scores are used to calculate each player’s handicap.";
-"INSTRUCTION_MODIFIED_PEORIA_%@_CLICKORTAP" = "%@ to select the six holes, including one par-3 hole, one par-5 hole, and four par-4 holes (two on each nine) whose scores are used to calculate each player’s handicap.";
-"INSTRUCTION_ZIG_ZAG_%@_CLICKORTAP" = "%@ to select the three holes whose scores are used to calculate each team’s ZIG-ZAG handicap.";
-"INSTRUCTION_SELECTED_HOLES_%@_CLICKORTAP" = "%@ to select the holes whose scores are to be used to calculate each player’s total score.";
-
 //	Phrases & Formats
 "AND_%@" = " and %@";
 "COURSE_HANDICAP_%@_TABLE" = "%@ Table";
 "CURRENT_%@_TITLE" = "Current %@";
 "CURRENT_%@_TITLE_PLURAL" = "Current %@";
-"DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Determine your %@ on the right by finding the row in which your 18-hole %@ appears on the left.";
+"DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Determine your %@ on the right by finding the row in which your %@ appears on the left.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "A %@ Table (%@) is used to convert a %@, issued by your golf club or authorized golf association, to a %@ based on the %@ for a specific set of tees.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "A %@ Table (%@) is used to convert a %@, issued by your golf club or authorized golf association, to a %@ for a specific set of tees.";
 "NUMBER_%ld_ABBR" = "No. %ld";

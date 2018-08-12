@@ -135,6 +135,34 @@ typedef NS_ENUM(NSUInteger, GOLFPlayType) {
 	#define IS_POINT_QUOTA_COMPATIBLE_PLAY_TYPE(_type)	((((_type) == NoTeamPlayType) || ((_type) == TotalTeamPlayType) || ((_type) == TeamBestNPlayType)) ? YES : NO)
 #endif
 
+typedef NS_ENUM(NSUInteger, GOLFTiebreakerMethod) {
+	GOLFTiebreakerMethodNone = 0,			//	No tie-breaking
+	GOLFTiebreakerMethodUSGA,				//	USGA scorecard tie-breaking method (back nine, last 6, last 3, last hole)
+	GOLFTiebreakerMethodCountBack = GOLFTiebreakerMethodUSGA,
+	GOLFTiebreakerMethodHandicapsForward,	//	Hole-by-hole handicap tie-breaking method (no. 1 handicap, no. 2 handicap, etc.)
+	GOLFTiebreakerMethodHandicapsBackward,	//	Hole-by-hole handicap tie-breaking method (no. 18 handicap, no. 17 handicap, etc.)
+	GOLFTiebreakerMethodHolesForward,		//	Hole-by-hole handicap tie-breaking method (1st hole, 2nd hole, etc.)
+	GOLFTiebreakerMethodHolesBackward,		//	Hole-by-hole handicap tie-breaking method (18th hole, 17th hole, etc.)
+	GOLFTiebreakerMethodHigherHandicap,		//	Higher team or individual handicap wins
+	GOLFTiebreakerMethodLowerHandicap,		//	Lower team or individual handicap wins
+	GOLFTiebreakerMethodUnknown = 99		//	Unknown or error method
+};
+
+typedef NS_ENUM(NSUInteger, GOLFTiebreakerOutcome) {
+	GOLFTiebreakerOutcomeTied = 0,			//	Couldn't break tie
+	GOLFTiebreakerOutcomeHoleScore,			//	Tie was broken by score at a particular hole (forward, backward, hole handicaps, hole numbers)
+	GOLFTiebreakerOutcomeLastHole,			//	Tie was broken based on score of last hole
+	GOLFTiebreakerOutcomeLast3Holes,		//	Tie was broken based on total score of last 3 holes
+	GOLFTiebreakerOutcomeLast6Holes,		//	Tie was broken based on total score of last 6 holes
+	GOLFTiebreakerOutcomeLast9Holes,		//	Tie was broken based on total score of last 9 holes
+	GOLFTiebreakerOutcomeLast18Holes,		//	Tie was broken based on total score of last 18 holes
+	GOLFTiebreakerOutcomeRoundTotal,		//	Tie was broken based on total round score
+	GOLFTiebreakerOutcomeHandicap,			//	Tie was broken based on individual or team handicap
+	GOLFTiebreakerOutcomeRoundComplete,		//	Tie was broken based on complete / incomplete round
+	GOLFTiebreakerOutcomeCoinFlip = 98,		//	Tie was broken by lot
+	GOLFTiebreakerOutcomeUnknown = 99		//	Unknown or error result
+};
+
 //	Status Masks
 
 typedef NS_OPTIONS(NSUInteger, GOLFRoundStatus) {
@@ -268,4 +296,21 @@ NSString * NSStringFromPlayType(GOLFPlayType playType, NSDictionary *info, NSStr
 //	------------------	--------------	-------------------------------------------------------
 //	short				NSNumber *		BOOL indicating need for short (abbreviated?) return (if available)
 //	bestRoundsN			NSNumber *		Integer N of TeamBestNPlayType (Team total of best N rounds) - default: 4
+
+
+//=================================================================
+//	NSStringFromTiebreakerMethod(method, descriptiveText)
+//=================================================================
+NSString * NSStringFromTiebreakerMethod(GOLFTiebreakerMethod method, NSString **descriptiveText);
+//	Returns a localized title/name of the tiebreaking method ("USGA", "Low Handicap", "Holes, backward", etc.) and
+//	optionally (when the address of descriptiveText is provided), a localized description of the tiebreaker
+//	("last 9 holes", "hole 18, hole 17, etc.", etc.)
+
+
+//=================================================================
+//	NSStringFromTiebreakerOutcome(outcome, result)
+//=================================================================
+NSString * NSStringFromTiebreakerOutcome(GOLFTiebreakerOutcome outcome, NSNumber *result);
+//	Returns a localized description of the reason a tiebreaker was invoked ("last 6 holes", "complete round", etc.)
+//	If available, provide a numeric result that identifies the hole (or handicap, etc.) involved in the tiebreak.
 
