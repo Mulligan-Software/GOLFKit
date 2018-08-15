@@ -163,23 +163,33 @@ typedef NS_ENUM(NSUInteger, GOLFTiebreakerOutcome) {
 	GOLFTiebreakerOutcomeUnknown = 99		//	Unknown or error result
 };
 
+typedef NS_ENUM(NSUInteger, GOLFFairwayStatus) {
+	GOLFFairwayStatusUnknown = 0,			//	We don't know if a fairway was hit, or there's no fairway (par 3)	(0)
+	GOLFFairwayStatusMissed,				//	Fairway designated as missed	(1)
+	GOLFFairwayStatusHit,					//	Fairway designated as hit		(2)
+	GOLFFairwayStatusForceMissed = 99		//	Force a FairwayMissed setting	(99)
+};
+
 //	Status Masks
 
 typedef NS_OPTIONS(NSUInteger, GOLFRoundStatus) {
 	GOLFRoundStatusNone						= 0,			//	(0)
 	GOLFRoundStatusNoFairways				= 1 << 0,		//	(1)			No fairways hit (not the same as all fairways unknown)
 	GOLFRoundStatusIgnoreForHandicapping	= 1 << 1,		//	(2)			Ignored for stats and handicapping
-	GOLFRoundStatusIsPenalty				= 1 << 2,		//	(4)			Penalty Round
+	GOLFRoundStatusIsPenaltyRound			= 1 << 2,		//	(4)			Penalty Round
 	GOLFRoundStatusUsesMultipleTees			= 1 << 3,		//	(8)			Round is contested on more than 1 tee
 	GOLFRoundStatusUsesSSS					= 1 << 4,		//	(16)		Round's course rated with a Standard Scratch Score
 	GOLFRoundStatusNetScoreInTenths			= 1 << 5,		//	(32)		Net scores report to a tenth
 	GOLFRoundStatusIsDisqualified			= 1 << 6,		//	(64)		Competitor's round disqualified
-	GOLFRoundStatusOption7					= 1 << 7,		//	(128)
-	GOLFRoundStatusOption8					= 1 << 8,		//	(256)
-	GOLFRoundStatusOption9					= 1 << 9,		//	(512)
-	GOLFRoundStatusOption10					= 1 << 10,		//	(1024)
+	GOLFRoundStatusUses9HoleOverrides		= 1 << 7,		//	(128)		Override handicaps are 9-hole values
+	GOLFRoundStatusIsInternetPostedRound	= 1 << 8,		//	(256)		Round has been posted via the internet
+	GOLFRoundStatusIsHandicapPostedRound	= 1 << 9,		//	(512)		Round has been posted for handicapping
+	GOLFRoundStatusIsMatchRound				= 1 << 10,		//	(1024)		Round was played during Match Play
 	GOLFRoundStatusHigherIsBetter			= 1 << 11,		//	(2048)		Comp scoring is in points (higher is better)
-	GOLFRoundStatusSkinsOptOut				= 1 << 12		//	(4096)		Round opted-out of skins - all types
+	GOLFRoundStatusOptedOutOfSkins			= 1 << 12,		//	(4096)		Competitor has opted out of skins competition in this round
+	GOLFRoundStatus13						= 1 << 13,		//	(8192)
+	GOLFRoundStatus14						= 1 << 14,		//	(16384)
+	GOLFRoundStatusIsMissingCompetitor		= 1 << 15		//	(32768)		Core Data fault on access
 };
 
 typedef NS_OPTIONS(NSUInteger, GOLFRoundProcessingStatus) {

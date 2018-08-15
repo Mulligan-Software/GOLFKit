@@ -51,3 +51,11 @@ NSString * NSStringFromHandicapIndex(GOLFHandicapIndex handicapIndex);
 
 NSString * NSStringForClickOrTap(void);
 //	Localized 'click' or 'tap'
+
+//=================================================================
+//	Utilities:
+//
+//	NSStringFromNSComparisonResult(result)
+//
+//=================================================================
+NSString * NSStringFromNSComparisonResult(NSComparisonResult result);

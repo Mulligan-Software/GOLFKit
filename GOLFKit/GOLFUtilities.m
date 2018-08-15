@@ -179,3 +179,18 @@ NSString * NSStringForClickOrTap(void) {
 	return GOLFLocalizedString(@"TERM_INDICATE");
 }
 
+//=================================================================
+//	NSStringFromNSComparisonResult(result)
+//=================================================================
+NSString * NSStringFromNSComparisonResult(NSComparisonResult result) {
+	switch (result) {
+		case NSOrderedSame:
+			return @"NSOrderedSame";
+		case NSOrderedAscending:
+			return @"NSOrderedAscending";
+		case NSOrderedDescending:
+			return @"NSOrderedDescending";
+		default:
+			return @"";
+    }
+}

@@ -104,4 +104,15 @@ NSString * GOLFKitBundleVersion(void);
 //	Non-nil *women, *nineHoles pre-set TRUE if women's or nineHole's response required - change if response requires
 //	return NSInteger equivalent, nil for no data, *women = TRUE for ladies, *for9Holes = TRUE for 9-hole par
 
+- (NSDictionary *)strokeControlInfo;
+//	A dictionary of information required to do handicapping stroke control:
+//
+//	Key						Type			Description
+//	----------------------	--------------	---------------------------------
+//	numberOfHoles			NSNumber *		The number of holes against which stroke control should be applied (1 for a hole, 9 for a side, etc.)
+//	par						NSNumber *		GOLFPar for this entity (may be estimated)
+//	strokes					NSNumber *		GOLFHandicapStrokes for this entity (may be estimated)
+//	competitor				id				Any associated competitor with this entity
+//	competitorIsFemale		NSNumber *		A BOOL indicating whether competitor is female
+
 @end

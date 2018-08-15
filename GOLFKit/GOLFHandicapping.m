@@ -553,6 +553,259 @@ GOLFHandicapIndex GOLFHandicapMaximumNonLocalIndexForAuthority(GOLFHandicapAutho
 }
 
 //=================================================================
+//	GOLFHandicapStrokeControlLimitForAuthority(authority, playingHandicap, options, info)
+//=================================================================
+//GOLFScore GOLFHandicapStrokeControlLimitForAuthority(GOLFHandicapAuthority *authority, GOLFPlayingHandicap playingHandicap, BOOL for9Holes, NSObject *anObject) {
+GOLFScore GOLFHandicapStrokeControlLimitForAuthority(GOLFHandicapAuthority *authority, GOLFPlayingHandicap playingHandicap, GOLFHandicapCalculationOption options, NSDictionary *info) {
+
+	//	GOLFHandicapAuthority *			authority		required		Handicap authority
+	//	GOLFPlayingHandicap *			playingHandicap	required		18 holes unless GOLFHandicapCalculationOption9HoleHandicap (kNotAPlayingHandicap is valid)
+	//	GOLFHandicapCalculationOption	options			required		Calculations options or GOLFHandicapCalculationOptionNone
+	//	NSDictionary *					info			optional		optional parameters (described below)
+	//
+	//	options:
+	//	GOLFHandicapCalculationOption9HoleHandicap		(4)		Provided GOLFPlayingHandicap is for 9 holes
+	//
+	//	info:
+	//	key					type						description
+	//	------------------	--------------------------	-------------------------------------------------------
+	//	referenceObject		id							a <GOLFHandicapDataSource> that responds to strokeControlInfo:
+	//	strokeControlType	GOLFHandicapStrokeControl	Personal Handicapping stroke control style ????
+
+	GOLFScore limit = kMaximumStrokeControlLimit;	//	The default is no stroke limitations
+	BOOL playingHandicapIs9Holes = ((options & GOLFHandicapCalculationOption9HoleHandicap) != 0);
+	NSInteger numberOfHoles = (playingHandicapIs9Holes ? 9 : 18);
+	GOLFPar par = (GOLFPar)(numberOfHoles * 4);
+	GOLFHandicapStrokes strokes = 0;
+	id competitor = nil;
+	BOOL competitorIsFemale = NO;
+	id <GOLFHandicapDataSource> referenceObject = (info != nil) ? [info objectForKey:@"referenceObject"] : nil;
+	
+	if ((referenceObject != nil) && [referenceObject respondsToSelector:@selector(strokeControlInfo)]) {
+		NSDictionary *scInfo = [referenceObject strokeControlInfo];
+		//	Key						Type			Description
+		//	----------------------	--------------	---------------------------------
+		//	numberOfHoles			NSNumber *		The number of holes against which stroke control should be applied (1 for a hole, 9 for a side, etc.)
+		//	par						NSNumber *		GOLFPar for this entity (may be estimated)
+		//	strokes					NSNumber *		GOLFHandicapStrokes for this entity (may be estimated)
+		//	competitor				id				Any associated competitor with this entity
+		//	competitorIsFemale		NSNumber *		A BOOL indicating whether competitor is female
+		
+		competitor = [scInfo objectForKey:@"competitor"];
+		NSNumber *workingNumber = [scInfo objectForKey:@"competitorIsFemale"];
+		if (workingNumber) {
+			competitorIsFemale = [workingNumber boolValue];
+		}
+		workingNumber = [scInfo objectForKey:@"numberOfHoles"];
+		if (workingNumber) {
+			numberOfHoles = [workingNumber integerValue];
+		}
+		workingNumber = [scInfo objectForKey:@"par"];
+		if (workingNumber) {
+			par = [workingNumber parValue];
+		}
+		workingNumber = [scInfo objectForKey:@"strokes"];
+		if (workingNumber) {
+			strokes = [workingNumber handicapStrokesValue];
+		}
+		
+//		if ([anObject isKindOfClass:[GOLFRoundHole class]]) {
+//			numberOfHoles = 1;
+//			partialPar = [(GOLFRoundHole *)anObject par];
+//			par = ((partialPar == kNotAPar) ? 4 : partialPar);
+//			partialStrokes = [(GOLFRoundHole *)anObject strokes];
+//			strokes = ((partialStrokes == kNotAPlayingHandicap) ? 0 : partialStrokes);
+//			ourCompetitor = [[[(GOLFRoundHole *)anObject side] round] competitor];
+//		} else if ([anObject isKindOfClass:[GOLFRoundSide class]]) {
+//			NSInteger sideHoles = [(GOLFRoundSide *)anObject numberOfScoredHoles];
+//			numberOfHoles = (sideHoles > 0 ? sideHoles : 9);
+//			partialPar = [(GOLFRoundSide *)anObject partialPar];
+//			par = ((partialPar < 0) ? (GOLFPar)(numberOfHoles * 4) : partialPar);
+//			partialStrokes = [(GOLFRoundSide *)anObject partialStrokes];
+//			strokes = ((partialStrokes < 0) ? 0 : partialStrokes);
+//			ourCompetitor = [[(GOLFRoundSide *)anObject round] competitor];
+//		} else if ([anObject isKindOfClass:[GOLFRound class]]) {
+//			GOLFRoundSide *aSide = [(GOLFRound *)anObject frontSide];
+//			NSInteger sideHoles = [aSide numberOfScoredHoles];
+//			numberOfHoles = (sideHoles > 0 ? sideHoles : 9);
+//			partialPar = [aSide partialPar];
+//			par = ((partialPar < 0) ? (GOLFPar)(numberOfHoles * 4) : partialPar);
+//			partialStrokes = [aSide partialStrokes];
+//			strokes = ((partialStrokes < 0) ? 0 : partialStrokes);
+//			ourCompetitor = [(GOLFRound *)anObject competitor];
+//			aSide = [(GOLFRound *)anObject backSide];
+//			if (aSide != nil) {
+//				sideHoles = [aSide numberOfScoredHoles];
+//				numberOfHoles += (sideHoles > 0 ? sideHoles : 9);
+//				partialPar = [aSide partialPar];
+//				par += ((partialPar < 0) ? ((sideHoles > 0 ? sideHoles : 9) * 4) : partialPar);
+//				partialStrokes = [aSide partialStrokes];
+//				strokes += ((partialStrokes < 0) ? 0 : partialStrokes);
+//			}
+//		}
+	
+		if ([authority isEqualToString:GOLFHandicapAuthorityUSGA]) {
+
+			//	USGA Equitable Stroke Control
+			//	Course Handicap			Maximum Number on Any Hole
+			//	-----------------      ----------------------------
+			//		9 or less					2 over par
+			//		10 - 19							7
+			//		20 - 29							8
+			//		30 - 39							9
+			//		40 or more						10
+
+			//	USGA Equitable Stroke Control - 9 holes
+			//	Course Handicap			Maximum Number on Any Hole
+			//	-----------------      ----------------------------
+			//		4 or less					2 over par
+			//		5 - 9							7
+			//		10 - 14							8
+			//		15 - 19							9
+			//		20 or more						10
+			
+			limit = 10 * numberOfHoles;
+			
+			if (playingHandicap != kNotAPlayingHandicap) {
+				if (playingHandicapIs9Holes) {
+					if (playingHandicap > 4)
+						limit = ((GOLFScore)MIN(MAX(0, (GOLFPlayingHandicap)(playingHandicap / 5)), 4) + 6) * numberOfHoles;
+					else
+						limit = (2 * numberOfHoles) + par;
+				}
+				else if (playingHandicap > 9)
+					limit = ((GOLFScore)MIN(MAX((NSInteger)0, (GOLFPlayingHandicap)(playingHandicap / 10)), 4) + 6) * numberOfHoles;
+				else
+					limit = (2 * numberOfHoles) + par;
+			}
+		}
+
+		else if ([authority isEqualToString:GOLFHandicapAuthorityRCGA]) {
+
+			//	Golf Canada Equitable Stroke Control (effective March 1, 2012)
+			//	Course Handicap			Maximum Number on Any Hole
+			//	-----------------      ----------------------------
+			//		9 or less					2 over par
+			//		10 - 19							7
+			//		20 - 29							8
+			//		30 - 39							9
+			//		40 or more						10
+
+			//	Golf Canada Equitable Stroke Control - 9 holes
+			//	Course Handicap			Maximum Number on Any Hole
+			//	-----------------      ----------------------------
+			//		4 or less					2 over par
+			//		5 - 9							7
+			//		10 - 14							8
+			//		15 - 19							9
+			//		20 or more						10
+			
+			limit = 10 * numberOfHoles;
+			
+			if (playingHandicap != kNotAPlayingHandicap) {
+				if (playingHandicapIs9Holes) {
+					if (playingHandicap > 4)
+						limit = ((NSInteger)MIN(MAX(0, (GOLFPlayingHandicap)(playingHandicap / 5)), 4) + 6) * numberOfHoles;
+					else
+						limit = (2 * numberOfHoles) + par;
+				} else if (playingHandicap > 9) {
+					limit = ((NSInteger)MIN(MAX((NSInteger)0, (GOLFPlayingHandicap)(playingHandicap / 10)), 4) + 6) * numberOfHoles;
+				} else {
+					limit = (2 * numberOfHoles) + par;
+				}
+			}
+		}
+		else if ([authority isEqualToString:@"OLDAGU"]) {
+			//	Golf Australia only limits hole scores for first 3 rounds!
+			//	Since Sep 2011
+			
+			//	Men - 3 over par
+			//	Women - 4 over par
+
+			limit = (((((competitor == nil) || competitorIsFemale) ? 4 : 3) * numberOfHoles) + par);
+			
+		}
+		else if ([authority isEqualToString:GOLFHandicapAuthorityAGU]) {
+			//	Net double-bogey (Stableford limit)
+
+			limit = ((2 * numberOfHoles) + par + (playingHandicap == kNotAPlayingHandicap ? (4 * numberOfHoles) : strokes));
+			
+		}
+		else if ([authority isEqualToString:GOLFHandicapAuthorityCONGU]) {
+			//	CONGU limits scores for handicapping to "Nett Double Bogey"
+			
+			limit = ((2 * numberOfHoles) + par + (playingHandicap == kNotAPlayingHandicap ? (4 * numberOfHoles) : strokes));
+			
+		}
+		else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
+			//	Mulligan Stroke Control
+			//	Limit is net double-bogey (two over par + strokes)
+			
+			limit = ((2 * numberOfHoles) + par + (playingHandicap == kNotAPlayingHandicap ? (4 * numberOfHoles) : strokes));
+			
+		}
+		else if ([authority isEqualToString:GOLFHandicapAuthorityPersonal]) {
+
+			//	GOLFHandicapStrokeControlNone = 0,			//	Don't adjust strokes for handicapping				(0)
+			//	GOLFHandicapStrokeControlDoubleBogey,		//	Limit to gross double-bogey							(1)
+			//	GOLFHandicapStrokeControlNetDoubleBogey,	//	Limit to net double-bogey							(2)
+			//	GOLFHandicapStrokeControlDoubleBogeyPlus10,	//	Limit to double-bogey plus 10% of playing handicap	(3)
+			//	GOLFHandicapStrokeControlTripleBogey,		//	Limit to gross triple-bogey							(4)
+			//	GOLFHandicapStrokeControlNetTripleBogey,	//	Limit to net triple-bogey							(5)
+			//	GOLFHandicapStrokeControlESC = 10,			//	Equitable Stroke Control (ESC) limit				(10)
+
+			GOLFHandicapStrokeControl adjustmentType = [[[NSUserDefaults standardUserDefaults] objectForKey:@"PHStrokeAdjustmentType"] integerValue];
+
+			switch (adjustmentType) {
+				case GOLFHandicapStrokeControlDoubleBogey:
+					limit = ((2 * numberOfHoles) + par);
+					break;
+					
+				case GOLFHandicapStrokeControlNetDoubleBogey:
+					limit = ((2 * numberOfHoles) + par + (playingHandicap == kNotAPlayingHandicap ? (4 * numberOfHoles) : strokes));
+					break;
+					
+				case GOLFHandicapStrokeControlDoubleBogeyPlus10:
+					limit = ((2 * numberOfHoles) + par);
+					if ((playingHandicap != kNotAPlayingHandicap) && (playingHandicap > 0)) {
+						limit += (((NSInteger)floorf((playingHandicap / 10.0) + 0.5)) * numberOfHoles);
+					}
+					break;
+					
+				case GOLFHandicapStrokeControlTripleBogey:
+					limit = ((3 * numberOfHoles) + par);
+					break;
+					
+				case GOLFHandicapStrokeControlNetTripleBogey:
+					limit = ((3 * numberOfHoles) + par + (playingHandicap == kNotAPlayingHandicap ? (4 * numberOfHoles) : strokes));
+					break;
+					
+				case GOLFHandicapStrokeControlESC:
+					limit = 10 * numberOfHoles;
+					if (playingHandicap != kNotAPlayingHandicap) {
+						if (playingHandicapIs9Holes) {
+							if (playingHandicap > 4)
+								limit = ((NSInteger)MIN(MAX(0, (GOLFPlayingHandicap)(playingHandicap / 5)), 4) + 6) * numberOfHoles;
+							else
+								limit = (2 * numberOfHoles) + par;
+						}
+						else if (playingHandicap > 9)
+							limit = ((NSInteger)MIN(MAX((NSInteger)0, (GOLFPlayingHandicap)(playingHandicap / 10)), 4) + 6) * numberOfHoles;
+						else
+							limit = (2 * numberOfHoles) + par;
+					}
+					break;
+					
+				case GOLFHandicapStrokeControlNone:
+				default:
+					break;
+			}	//	switch (adjustmentType)
+		}
+	}
+	return limit;
+}
+
+//=================================================================
 //	GOLFHandicapLocalIndexModifierForAuthority(authority)
 //=================================================================
 NSString * GOLFHandicapLocalIndexModifierForAuthority(GOLFHandicapAuthority *authority) {
@@ -1622,7 +1875,7 @@ CGPoint GOLFLowHighIndexesAsPointFor(GOLFHandicapAuthority *authority, GOLFPlayi
 			}
 		}
 	}
-	//	Make the Course Rating, SLOPE Rating and par conform to the supplied courseHandicap…
+	//	Make the Course Rating, SLOPE Rating and par conform to the supplied playingHandicap…
 	if ((localSlope != kNotASLOPERating) && (have9HoleSlope != have9HolePlayingHandicap)) {
 		have9HoleSlope = have9HolePlayingHandicap;	//	SLOPE Ratings are same size on 9 or 18 hole courses
 	}

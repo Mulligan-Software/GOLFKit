@@ -26,6 +26,7 @@
 #define kNotHandicapStrokes							-999		//	No-value for GOLFHandicapStrokes
 #define kNotAHandicapAllowance						-999.0		//	No-value for GOLFHandicapAllowance
 #define kNotAHandicapDifferential					-999.0		//	No-value for GOLFHandicapDIfferential
+#define kMaximumStrokeControlLimit					999			//	HIghest limit for stroke control of a GOLFScore
 
 typedef NS_OPTIONS(NSUInteger, GOLFHandicapCalculationOption) {
 	GOLFHandicapCalculationOptionNone				= 0,			//	(0)
@@ -38,6 +39,23 @@ typedef NS_OPTIONS(NSUInteger, GOLFHandicapCalculationOption) {
 	GOLFHandicapCalculationOption9HolePar			= 1 << 5,		//	(32)	Provided GOLFPar is for 9 holes
 	GOLFHandicapCalculationOptionSpare1				= 1 << 6,		//	(64)
 	GOLFHandicapCalculationOptionSpare2				= 1 << 7		//	(128)
+};
+
+//	For handicap records
+typedef NS_OPTIONS(NSUInteger, GOLFRoundHandicapOption) {
+	GOLFRoundHandicapOptionNone						= 0,			//	(0)
+	GOLFRoundHandicapOptionsNone					= GOLFRoundHandicapOptionNone,
+	GOLFRoundHandicapOptionUsed						= 1 << 0,		//	(1)		Round used in handicap latest calculation (ie: one of the best 10 of last 20)
+	GOLFRoundHandicapOptionEligible					= 1 << 1,		//	(2)		Round is identified as eligible for use/review in calculations (stats and handicapping)
+	GOLFRoundHandicapOptionTournament				= 1 << 2,		//	(4)		Round identified as a "tournament" round
+	GOLFRoundHandicapOptionCombined					= 1 << 3,		//	(8)		18-hole round constructed from two 9-hole rounds
+	GOLFRoundHandicapOption9Holes					= 1 << 4,		//	(16)	9-hole round
+	GOLFRoundHandicapOptionAway						= 1 << 5,		//	(32)	Round identified as played "away" - not at home course
+	GOLFRoundHandicapOptionHome						= 1 << 6,		//	(64)	Round identified as played at home course (not exclusive of GOLFRoundHandicapOptionAway)
+	GOLFRoundHandicapOption7						= 1 << 7,		//	(128)
+	GOLFRoundHandicapOption8						= 1 << 8,		//	(256)
+	GOLFRoundHandicapOptionInternet					= 1 << 9,		//	(512)	Round recorded/entered via the internet
+	GOLFRoundHandicapOptionPenalty					= 1 << 10		//	(1024)	Round identified as a "penalty" round - may have adjusted handicap
 };
 
 typedef NS_ENUM(NSUInteger, GOLFHandicapMethodIndex) {
@@ -57,13 +75,13 @@ typedef NS_ENUM(NSUInteger, GOLFHandicapMethodIndex) {
 };
 
 typedef NS_ENUM(NSUInteger, GOLFHandicapStrokeControl) {
-	GOLFHandicapStrokeControlNone = 0,			//	Don't adjust strokes for handicapping	(0)
-	GOLFHandicapStrokeControlDouble,			//	Limit to gross double-bogey				(1)
-	GOLFHandicapStrokeControlNetDouble,			//	Limit to net double-bogey				(2)
-	GOLFHandicapStrokeControlDoublePlus10,		//	Limit to double-bogey plus 10% of playing handicap	(3)
-	GOLFHandicapStrokeControlTriple,			//	Limit to gross triple-bogey				(4)
-	GOLFHandicapStrokeControlNetTriple,			//	Limit to net triple-bogey				(5)
-	GOLFHandicapStrokeControlESC = 10,			//	Equitable Stroke Control (ESC) limit	(10)
+	GOLFHandicapStrokeControlNone = 0,			//	Don't adjust strokes for handicapping				(0)
+	GOLFHandicapStrokeControlDoubleBogey,		//	Limit to gross double-bogey							(1)
+	GOLFHandicapStrokeControlNetDoubleBogey,	//	Limit to net double-bogey							(2)
+	GOLFHandicapStrokeControlDoubleBogeyPlus10,	//	Limit to double-bogey plus 10% of playing handicap	(3)
+	GOLFHandicapStrokeControlTripleBogey,		//	Limit to gross triple-bogey							(4)
+	GOLFHandicapStrokeControlNetTripleBogey,	//	Limit to net triple-bogey							(5)
+	GOLFHandicapStrokeControlESC = 10,			//	Equitable Stroke Control (ESC) limit				(10)
 	GOLFHandicapStrokeControlUnknown = 99		//	Unknown stroke control technique
 };
 
@@ -215,6 +233,22 @@ GOLFHandicapDifferential GOLFHandicapExceptionalScoringReductionForAuthority(GOL
 
 GOLFTeeSLOPERating GOLFHandicapUnratedSLOPERatingForAuthority(GOLFHandicapAuthority *authority);
 //	The appropriate SLOPE Rating to be used for unrated tees
+
+GOLFScore GOLFHandicapStrokeControlLimitForAuthority(GOLFHandicapAuthority *authority, GOLFPlayingHandicap playingHandicap, GOLFHandicapCalculationOption options, NSDictionary *info);
+//	Handicapping stroke control for rounds, roundSides, roundHoles
+//
+//	GOLFHandicapAuthority *			authority		required		Handicap authority
+//	GOLFPlayingHandicap *			playingHandicap	required		18 holes unless GOLFHandicapCalculationOption9HoleHandicap (kNotAPlayingHandicap is valid)
+//	GOLFHandicapCalculationOption	options			required		Calculations options or GOLFHandicapCalculationOptionNone
+//	NSDictionary *					info			optional		optional parameters (described below)
+//
+//	options:
+//	GOLFHandicapCalculationOption9HoleHandicap		(4)		Provided GOLFPlayingHandicap is for 9 holes
+//
+//	info:
+//	key					type			description
+//	------------------	--------------	-------------------------------------------------------
+//	referenceObject		id				a <GOLFHandicapDataSource> that responds to strokeControlInfo:
 
 GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOLFHandicapIndex handicapIndex, GOLFTeeCourseRating courseRating, GOLFTeeSLOPERating slopeRating, GOLFPar par, GOLFHandicapCalculationOption options, NSDictionary *info);
 //	Playing handicap calculation per the authority
