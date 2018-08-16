@@ -39,6 +39,8 @@
 "TERM_PEORIA" = "Peoria";
 "TERM_PLAYER" = "Spieler";
 "TERM_PLAYER_PLURAL" = "Spieler";
+"TERM_POINTS" = "Punkte";
+"TERM_POINTS_ABBR" = "Pte.";
 "TERM_QUOTA" = "quote";
 "TERM_REVERSERITZ" = "Ritz Rückwärts";
 "TERM_RITZ" = "Ritz";
@@ -348,6 +350,8 @@
 "ORDINAL_FIRST" = ".";
 "ORDINAL_NTH" = ".";
 "ORDINAL_20TH_TO_29TH" = ".,.,.,.,.,.,.,.,.,.";
+"SCORECARD_EXCEEDS_1_PLAYER" = "Scorecard überschreitet maximal 1 Spieler";
+"SCORECARD_EXCEEDS_%ld_PLAYERS" = "Scorecard überschreitet maximal %ld Spieler";
 
 //	Countries
 "Algeria" = "Algerien";
