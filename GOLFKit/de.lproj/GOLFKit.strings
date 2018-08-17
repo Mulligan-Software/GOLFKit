@@ -330,6 +330,12 @@
 "OF" = "des";	//	95% des Spielen Handicap
 
 //	Tooltips & Instructions
+"TOOLTIP_PLAYER_GROSS_SCORE" = "Die gesamte Brutto Punktzahl des Spielers";
+"TOOLTIP_PLAYER_NET_SCORE" = "Die gesamte Netto Punktzahl des Spielers";
+"TOOLTIP_PLAYER_TOTAL_SCORE" = "Die Gesamtpunktzahl des Speilers";
+"TOOLTIP_ROUND_GROSS_SCORE" = "Brutto Punktzahl";
+"TOOLTIP_ROUND_NET_SCORE" = "Netto Punktzahl";
+"TOOLTIP_ROUND_TOTAL_SCORE" = "Gesamtpunktzahl";
 "TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - benutzt\nA - entfernt\nC - kombiniert\nT - Tournier\nP - Strafe";
 "TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - benutzt\nA - entfernt\nC - kombiniert\nT - Tournier\nP - Strafe";
 "TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - benutzt\nA - entfernt\nC - kombiniert\nT - Tournier\nP - Strafe";
@@ -337,6 +343,9 @@
 "TOOLTIP_ROUNDS_MODIFIER_CONGU" = "* - benutzt\nT - Tournier";
 "TOOLTIP_ROUNDS_MODIFIER_EGA" = "* - benutzt\nT - Tournier";
 "TOOLTIP_ROUNDS_MODIFIER_MULLIGAN" = "* - benutzt\nA - entfernt\nT - Tournier";
+"TOOLTIP_TEAM_GROSS_SCORE" = "Die gesamte Brutto Punktzahl der Mannschaft";
+"TOOLTIP_TEAM_NET_SCORE" = "Die gesamte Netto Punktzahl der Mannschaft";
+"TOOLTIP_TEAM_TOTAL_SCORE" = "Die Gesamtpunktzahl der Mannschaft";
 
 //	Phrases & Formats
 "AND_%@" = " und %@";

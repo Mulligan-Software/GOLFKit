@@ -483,13 +483,13 @@ NSString * NSStringFromPlayType(GOLFPlayType playType, NSDictionary *info, NSStr
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_TOTAL_DESC");
 			}
-			return (needShortText ? GOLFLocalizedString(@"TERM_TOTAL") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_TOTAL"));
+			return (needShortText ? [GOLFLocalizedString(@"TERM_TOTAL") capitalizedString] : GOLFLocalizedString(@"PLAY_TYPE_TEAM_TOTAL"));
 
 		case PlayerAverageTeamPlayType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_TEAM_AVG_DESC");
 			}
-			return (needShortText ? GOLFLocalizedString(@"TERM_AVERAGE") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_AVG"));
+			return (needShortText ? [GOLFLocalizedString(@"TERM_AVERAGE") capitalizedString] : GOLFLocalizedString(@"PLAY_TYPE_TEAM_AVG"));
 
 		case TeamBestNPlayType:
 			{

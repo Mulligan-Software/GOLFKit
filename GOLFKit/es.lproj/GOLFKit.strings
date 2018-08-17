@@ -330,6 +330,12 @@
 "OF" = "de";	//	95% de Handicap de Jugar
 
 //	Tooltips & Instructions
+"TOOLTIP_PLAYER_GROSS_SCORE" = "El puntaje bruto total del jugador";
+"TOOLTIP_PLAYER_NET_SCORE" = "El puntaje neto total del jugador";
+"TOOLTIP_PLAYER_TOTAL_SCORE" = "El puntaje total del jugador";
+"TOOLTIP_ROUND_GROSS_SCORE" = "Puntaje bruto";
+"TOOLTIP_ROUND_NET_SCORE" = "Puntaje neto";
+"TOOLTIP_ROUND_TOTAL_SCORE" = "Puntaje total";
 "TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - utilizado\nA - allá\nC - combinado\nT - torneo\nP - pena";
 "TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - utilizado\nA - allá\nC - combinado\nT - torneo\nP - pena";
 "TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - utilizado\nA - allá\nC - combinado\nT - torneo\nP - pena";
@@ -337,6 +343,9 @@
 "TOOLTIP_ROUNDS_MODIFIER_CONGU" = "* - utilizado\nT - torneo";
 "TOOLTIP_ROUNDS_MODIFIER_EGA" = "* - utilizado\nT - torneo";
 "TOOLTIP_ROUNDS_MODIFIER_MULLIGAN" = "* - utilizado\nA - allá\nT - torneo";
+"TOOLTIP_TEAM_GROSS_SCORE" = "El puntaje bruto total del equipo";
+"TOOLTIP_TEAM_NET_SCORE" = "El puntaje neto total del equipo";
+"TOOLTIP_TEAM_TOTAL_SCORE" = "El puntaje total del equipo";
 
 //	Phrases & Formats
 "AND_%@" = " y %@";
