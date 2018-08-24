@@ -7,6 +7,8 @@
 */
 
 //	Golf Terminology
+"TERM_ADJUSTED" = "ajustado";
+"TERM_ADJUSTED_ABBR" = "ajus.";
 "TERM_AVERAGE" = "promedio";
 "TERM_BEST" = "mejor";
 "TERM_BESTBALL" = "Best-Ball";
@@ -21,6 +23,8 @@
 "TERM_CLUB_PLURAL" = "clubes";
 "TERM_COURSE" = "campo";
 "TERM_COURSE_PLURAL" = "campos";
+"TERM_DISQUALIFIED" = "descalificado";
+"TERM_DISQUALIFIED_ABBR" = "desc.";
 "TERM_FOURBALL" = "Four-Ball";
 "TERM_FOURSOMES" = "Foursomes";
 "TERM_GREENSOMES" = "Greensomes";
@@ -29,6 +33,7 @@
 "TERM_INDICATE" = "indicar";
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "Irlandesa";
+"TERM_LIMITED" = "limitado";
 "TERM_MEDAL" = "medalla";
 "TERM_MEDALMATCH" = "Match Medalla";
 "TERM_NET" = "neto";
@@ -274,6 +279,7 @@
 "PLAY_TYPE_TEAM_TOTAL_DESC" = "Total de los puntajes de los compañeros";
 "PLAY_TYPE_TEAM_AVG" = "Promedio de Compañeros";
 "PLAY_TYPE_TEAM_AVG_DESC" = "Promedio de puntajes de los competidores de equipo";
+"PLAY_TYPE_TEAM_BEST_TEAMMATES_ROUNDS" = "Mejores Rondas de los compañeros";
 "PLAY_TYPE_TEAM_BEST_ROUND" = "Mejor Ronda";
 "PLAY_TYPE_TEAM_BEST_ROUNDS" = "Mejores Rondas";	//	Preceded by "N "
 "PLAY_TYPE_TEAM_FOURBALL_COMBO" = "Four-Ball Combo";
@@ -326,6 +332,8 @@
 "ALLOWANCE_TEAM_FOR_%d_OR_MORE_PLAYERS" = "Handicap equipo para %d o más jugadores";
 "ALLOWANCE_ONE_TIME_PLAYER" = "Handicap de jugador calculado una vez";
 "ALLOWANCE_ONE_TIME_TEAM" = "Handicap de equipo calculado una vez";
+"ALLOWANCE_PCT_OF_HANDICAP_%@" = "%% de %@";	//	% de Handicap de Jugar
+"BEST_%d_ROUNDS" = "Mejores %d Rondas";
 "%d_PCT_OF_HANDICAP_%@" = "%d%% de %@";
 "OF" = "de";	//	95% de Handicap de Jugar
 
@@ -353,6 +361,7 @@
 "CURRENT_%@_TITLE" = "%@ Actual";
 "CURRENT_%@_TITLE_PLURAL" = "%@ Actuales";
 "DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Determina tu %@ de la derecha encontrando la fila donde aparece tu %@ de la izquierda.";
+"FOOTNOTE_CHARACTER" = "†";		//	Special character
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Una Tabla %@ (%@) es utilizada para convertir un %@, publicado por tu club o asociación autorizada del golf, a un %@ basada en el %@ para un tee.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "Una Tabla %@ (%@) es utilizada para convertir un %@, publicado por tu club o asociación autorizada del golf, a un %@ para un tee.";
 "NUMBER_%ld_ABBR" = "No. %ld";	/*	No. 3	*/

@@ -7,6 +7,8 @@
 */
 
 //	Golf Terminology
+"TERM_ADJUSTED" = "adjusted";
+"TERM_ADJUSTED_ABBR" = "adj.";
 "TERM_AVERAGE" = "average";
 "TERM_BEST" = "best";
 "TERM_BESTBALL" = "Best-Ball";
@@ -21,6 +23,8 @@
 "TERM_CLUB_PLURAL" = "clubs";
 "TERM_COURSE" = "course";
 "TERM_COURSE_PLURAL" = "courses";
+"TERM_DISQUALIFIED" = "disqualified";
+"TERM_DISQUALIFIED_ABBR" = "disq.";
 "TERM_FOURBALL" = "Four-Ball";
 "TERM_FOURSOMES" = "Foursomes";
 "TERM_GREENSOMES" = "Greensomes";
@@ -29,6 +33,7 @@
 "TERM_INDICATE" = "indicate";
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "Irish";
+"TERM_LIMITED" = "limited";
 "TERM_MEDAL" = "medal";
 "TERM_MEDALMATCH" = "Medal Match";
 "TERM_NET" = "net";
@@ -274,6 +279,7 @@
 "PLAY_TYPE_TEAM_TOTAL_DESC" = "Total of partners’ or teammates’ scores";
 "PLAY_TYPE_TEAM_AVG" = "Average of Teammates";
 "PLAY_TYPE_TEAM_AVG_DESC" = "Average of partners’ or teammates’ scores";
+"PLAY_TYPE_TEAM_BEST_TEAMMATES_ROUNDS" = "Best Rounds of Teammates";
 "PLAY_TYPE_TEAM_BEST_ROUND" = "Best Round";
 "PLAY_TYPE_TEAM_BEST_ROUNDS" = "Best Rounds";	//	Preceded by "N "
 "PLAY_TYPE_TEAM_FOURBALL_COMBO" = "Four-Ball Combo";
@@ -326,6 +332,8 @@
 "ALLOWANCE_TEAM_FOR_%d_OR_MORE_PLAYERS" = "Team handicap for %d or more players";
 "ALLOWANCE_ONE_TIME_PLAYER" = "One-time calculated player’s handicap";
 "ALLOWANCE_ONE_TIME_TEAM" = "One-time calculated team handicap";
+"ALLOWANCE_PCT_OF_HANDICAP_%@" = "%% of %@";
+"BEST_%d_ROUNDS" = "Best %d Rounds";
 "%d_PCT_OF_HANDICAP_%@" = "%d%% of %@";
 "OF" = "of";	//	95% of Playing Handicap or "of Course Handicap™"
 
@@ -353,8 +361,10 @@
 "CURRENT_%@_TITLE" = "Current %@";
 "CURRENT_%@_TITLE_PLURAL" = "Current %@";
 "DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Determine your %@ on the right by finding the row in which your %@ appears on the left.";
+"FOOTNOTE_CHARACTER" = "†";		//	Special character
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "A %@ Table (%@) is used to convert a %@, issued by your golf club or authorized golf association, to a %@ based on the %@ for a specific set of tees.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "A %@ Table (%@) is used to convert a %@, issued by your golf club or authorized golf association, to a %@ for a specific set of tees.";
+"NONBREAKING_SPACE" = "\U00A0";		//	Special character
 "NUMBER_%ld_ABBR" = "No. %ld";
 "ORDINAL_FIRST" = "st";		/*	1st	*/
 "ORDINAL_NTH" = "th";		/*	9th	*/

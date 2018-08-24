@@ -501,10 +501,16 @@ NSString * NSStringFromPlayType(GOLFPlayType playType, NSDictionary *info, NSStr
 #endif
 				}
 				NSNumber *workingNumber = (info ? [info objectForKey:@"bestRoundsN"] : nil);
-				NSInteger bestN = (workingNumber ? [workingNumber integerValue] : 4);
-				return (needShortText
-						? [NSString stringWithFormat:@"%@ %ld", [GOLFLocalizedString(@"TERM_BEST") capitalizedString], (long)bestN]
-						: [NSString stringWithFormat:@"%ld %@", (long)bestN, ((bestN > 1) ? GOLFLocalizedString(@"PLAY_TYPE_TEAM_BEST_ROUNDS") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_BEST_ROUND"))]);
+				if (workingNumber == nil) {
+					return (needShortText
+							? [GOLFLocalizedString(@"TERM_BEST") capitalizedString]				//	"Best"
+							: GOLFLocalizedString(@"PLAY_TYPE_TEAM_BEST_TEAMMATES_ROUNDS"));	//	"Best Rounds of Teammates"
+				} else {
+					NSInteger bestN = MAX(1, [workingNumber integerValue]);
+					return (needShortText
+							? [NSString stringWithFormat:@"%@ %ld", [GOLFLocalizedString(@"TERM_BEST") capitalizedString], (long)bestN]
+							: [NSString stringWithFormat:@"%ld %@", (long)bestN, ((bestN > 1) ? GOLFLocalizedString(@"PLAY_TYPE_TEAM_BEST_ROUNDS") : GOLFLocalizedString(@"PLAY_TYPE_TEAM_BEST_ROUND"))]);
+				}
 			}
 
 		case FourballComboTeamPlayType:

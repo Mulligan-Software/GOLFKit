@@ -609,41 +609,6 @@ GOLFScore GOLFHandicapStrokeControlLimitForAuthority(GOLFHandicapAuthority *auth
 			strokes = [workingNumber handicapStrokesValue];
 		}
 		
-//		if ([anObject isKindOfClass:[GOLFRoundHole class]]) {
-//			numberOfHoles = 1;
-//			partialPar = [(GOLFRoundHole *)anObject par];
-//			par = ((partialPar == kNotAPar) ? 4 : partialPar);
-//			partialStrokes = [(GOLFRoundHole *)anObject strokes];
-//			strokes = ((partialStrokes == kNotAPlayingHandicap) ? 0 : partialStrokes);
-//			ourCompetitor = [[[(GOLFRoundHole *)anObject side] round] competitor];
-//		} else if ([anObject isKindOfClass:[GOLFRoundSide class]]) {
-//			NSInteger sideHoles = [(GOLFRoundSide *)anObject numberOfScoredHoles];
-//			numberOfHoles = (sideHoles > 0 ? sideHoles : 9);
-//			partialPar = [(GOLFRoundSide *)anObject partialPar];
-//			par = ((partialPar < 0) ? (GOLFPar)(numberOfHoles * 4) : partialPar);
-//			partialStrokes = [(GOLFRoundSide *)anObject partialStrokes];
-//			strokes = ((partialStrokes < 0) ? 0 : partialStrokes);
-//			ourCompetitor = [[(GOLFRoundSide *)anObject round] competitor];
-//		} else if ([anObject isKindOfClass:[GOLFRound class]]) {
-//			GOLFRoundSide *aSide = [(GOLFRound *)anObject frontSide];
-//			NSInteger sideHoles = [aSide numberOfScoredHoles];
-//			numberOfHoles = (sideHoles > 0 ? sideHoles : 9);
-//			partialPar = [aSide partialPar];
-//			par = ((partialPar < 0) ? (GOLFPar)(numberOfHoles * 4) : partialPar);
-//			partialStrokes = [aSide partialStrokes];
-//			strokes = ((partialStrokes < 0) ? 0 : partialStrokes);
-//			ourCompetitor = [(GOLFRound *)anObject competitor];
-//			aSide = [(GOLFRound *)anObject backSide];
-//			if (aSide != nil) {
-//				sideHoles = [aSide numberOfScoredHoles];
-//				numberOfHoles += (sideHoles > 0 ? sideHoles : 9);
-//				partialPar = [aSide partialPar];
-//				par += ((partialPar < 0) ? ((sideHoles > 0 ? sideHoles : 9) * 4) : partialPar);
-//				partialStrokes = [aSide partialStrokes];
-//				strokes += ((partialStrokes < 0) ? 0 : partialStrokes);
-//			}
-//		}
-	
 		if ([authority isEqualToString:GOLFHandicapAuthorityUSGA]) {
 
 			//	USGA Equitable Stroke Control
@@ -737,6 +702,7 @@ GOLFScore GOLFHandicapStrokeControlLimitForAuthority(GOLFHandicapAuthority *auth
 			limit = ((2 * numberOfHoles) + par + (playingHandicap == kNotAPlayingHandicap ? (4 * numberOfHoles) : strokes));
 			
 		}
+#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 		else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
 			//	Mulligan Stroke Control
 			//	Limit is net double-bogey (two over par + strokes)
@@ -801,6 +767,7 @@ GOLFScore GOLFHandicapStrokeControlLimitForAuthority(GOLFHandicapAuthority *auth
 					break;
 			}	//	switch (adjustmentType)
 		}
+#endif
 	}
 	return limit;
 }

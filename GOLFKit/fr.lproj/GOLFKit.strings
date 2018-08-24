@@ -7,6 +7,8 @@
 */
 
 //	Golf Terminology
+"TERM_ADJUSTED" = "ajusté";
+"TERM_ADJUSTED_ABBR" = "ajus.";
 "TERM_AVERAGE" = "moyenne";
 "TERM_BEST" = "meilleur";
 "TERM_BESTBALL" = "Meilleure Balle";
@@ -21,6 +23,8 @@
 "TERM_CLUB_PLURAL" = "clubs";
 "TERM_COURSE" = "parcours";
 "TERM_COURSE_PLURAL" = "parcours";
+"TERM_DISQUALIFIED" = "disqualifié";
+"TERM_DISQUALIFIED_ABBR" = "disq.";
 "TERM_FOURBALL" = "Quatre-Balle";
 "TERM_FOURSOMES" = "Foursomes";
 "TERM_GREENSOMES" = "Greensomes";
@@ -29,6 +33,7 @@
 "TERM_INDICATE" = "indiquer";
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "Irlandais";
+"TERM_LIMITED" = "limité";
 "TERM_MEDAL" = "médaille";
 "TERM_MEDALMATCH" = "Match Médaille";
 "TERM_NET" = "net";
@@ -274,6 +279,7 @@
 "PLAY_TYPE_TEAM_TOTAL_DESC" = "Total des scores de partenaires ou des coéquipiers";
 "PLAY_TYPE_TEAM_AVG" = "Moyenne des Coéquipiers";
 "PLAY_TYPE_TEAM_AVG_DESC" = "Moyenne des scores de partenaires ou des coéquipiers";
+"PLAY_TYPE_TEAM_BEST_TEAMMATES_ROUNDS" = "Meilleures Tours des coéquipiers";
 "PLAY_TYPE_TEAM_BEST_ROUND" = "Meilleure Tour";
 "PLAY_TYPE_TEAM_BEST_ROUNDS" = "Meilleures Tours";	//	Preceded by "N "
 "PLAY_TYPE_TEAM_FOURBALL_COMBO" = "Four-Ball Combo";
@@ -326,6 +332,8 @@
 "ALLOWANCE_TEAM_FOR_%d_OR_MORE_PLAYERS" = "Handicap d’équipe pour %d ou plusieurs joueurs";
 "ALLOWANCE_ONE_TIME_PLAYER" = "Un-fois handicap calculé de joueur";
 "ALLOWANCE_ONE_TIME_TEAM" = "Un-fois handicap calculé d’équipe";
+"ALLOWANCE_PCT_OF_HANDICAP_%@" = "%% de %@";	//	% de Handicap Jouer
+"BEST_%d_ROUNDS" = "Meilleures %d Tours";
 "%d_PCT_OF_HANDICAP_%@" = "%d%% de %@";		//	80% de Handicap Jouer
 "OF" = "de";	//	95% de Handicap Complète
 
@@ -353,6 +361,7 @@
 "CURRENT_%@_TITLE" = "%@ Actuelle";
 "CURRENT_%@_TITLE_PLURAL" = "%@ Actuelles";
 "DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Déterminez votre %@ à droite en repérant la rangée ou apparaît votre %@ de gauche.";
+"FOOTNOTE_CHARACTER" = "†";		//	Special character
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Le Tableau %@ (%@) a pour but de transformer le %@ émis par un club de golf ou une association de golf autorisée en un %@ tenant compte de l’%@ de chacun des jalons de départ.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "Le Tableau %@ (%@) a pour but de transformer le %@ émis par un club de golf ou une association de golf autorisée en un %@ de chacun des jalons de départ.";
 "NUMBER_%ld_ABBR" = "No. %ld";

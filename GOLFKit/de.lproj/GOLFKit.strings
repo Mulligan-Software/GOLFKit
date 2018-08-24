@@ -7,6 +7,8 @@
 */
 
 //	Golf Terminology
+"TERM_ADJUSTED" = "angepasst";
+"TERM_ADJUSTED_ABBR" = "ange.";
 "TERM_AVERAGE" = "mittlere";
 "TERM_BEST" = "beste";
 "TERM_BESTBALL" = "Best-Ball";
@@ -21,6 +23,8 @@
 "TERM_CLUB_PLURAL" = "Clubs";
 "TERM_COURSE" = "Golfplatz";
 "TERM_COURSE_PLURAL" = "Golfplätze";
+"TERM_DISQUALIFIED" = "disqualifiziert";
+"TERM_DISQUALIFIED_ABBR" = "disq.";
 "TERM_FOURBALL" = "Vier-Ball";
 "TERM_FOURSOMES" = "Viererspiel";
 "TERM_GREENSOMES" = "Greensomes";
@@ -29,6 +33,7 @@
 "TERM_INDICATE" = "zeigen";
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "irische";
+"TERM_LIMITED" = "limitiert";
 "TERM_MEDAL" = "medaille";
 "TERM_MEDALMATCH" = "Match Medaille";
 "TERM_NET" = "netto";
@@ -271,11 +276,12 @@
 "PLAY_TYPE_TEAM_BOWMAKER" = "Bowmaker 3-Ball";
 "PLAY_TYPE_TEAM_BOWMAKER_DESC" = "1 ball (x6), 2 bälle (x6), 3 bälle (x6)";
 "PLAY_TYPE_TEAM_TOTAL" = "Team-Gesamtpunktzahl";
-"PLAY_TYPE_TEAM_TOTAL_DESC" = "Gesampunktezahl der Partner oder Teammitglieder";
+"PLAY_TYPE_TEAM_TOTAL_DESC" = "Gesampunktezahl der Partner oder Teamkollegen";
 "PLAY_TYPE_TEAM_AVG" = "Mitspieler Mittelwert";
-"PLAY_TYPE_TEAM_AVG_DESC" = "mittlere Punktzahl von Partner oder Teammitgliedern";
+"PLAY_TYPE_TEAM_AVG_DESC" = "mittlere Punktzahl von Partner oder Teamkollegen";
+"PLAY_TYPE_TEAM_BEST_TEAMMATES_ROUNDS" = "besten Golfrunden der Teamkollegen";
 "PLAY_TYPE_TEAM_BEST_ROUND" = "beste Golfrunde";
-"PLAY_TYPE_TEAM_BEST_ROUNDS" = "bestw Golfrunden";	//	Preceded by "N "
+"PLAY_TYPE_TEAM_BEST_ROUNDS" = "besten Golfrunden";	//	Preceded by "N "
 "PLAY_TYPE_TEAM_FOURBALL_COMBO" = "Vier-Ball Kombination";
 "PLAY_TYPE_TEAM_FOURBALL_COMBO_DESC" = "Vier-Ball-Teams von Scorecard-Mitbewerbern";
 "PLAY_TYPE_NO_TEAM_PLAY" = "kein Teamspiel";
@@ -326,6 +332,8 @@
 "ALLOWANCE_TEAM_FOR_%d_OR_MORE_PLAYERS" = "Team Handicap für %d oder mehr Spieler";
 "ALLOWANCE_ONE_TIME_PLAYER" = "Einmalig errechnete Spieler Handicap";
 "ALLOWANCE_ONE_TIME_TEAM" = "Einmalig errechnete Team-Handicap";
+"ALLOWANCE_PCT_OF_HANDICAP_%@" = "%% des %@";	//	% des Spielen Handicap
+"BEST_%d_ROUNDS" = "besten %d Golfrunden";
 "%d_PCT_OF_HANDICAP_%@" = "%d%% des %@";
 "OF" = "des";	//	95% des Spielen Handicap
 
@@ -353,6 +361,7 @@
 "CURRENT_%@_TITLE" = "aktuelle %@";
 "CURRENT_%@_TITLE_PLURAL" = "aktuellen %@";
 "DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Bestimme Dein %@ auf der rechten Seite indem Sie die Zeile finden, in der Ihre %@ auf der linken Seite steht.";
+"FOOTNOTE_CHARACTER" = "†";		//	Special character
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Ein %@ Tabelle (%@) wird verwendet, um ein %@, ausgestellt von den Golfclub oder ermächtigt Golf Verien, um einen %@ zu konvertieren basierend auf der %@ für eine bestimmte Gruppe von Abschläge.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "Ein %@ Tabelle (%@) wird verwendet, um ein %@, ausgestellt von den Golfclub oder ermächtigt Golf Verien, um einen %@ zu konvertieren für eine bestimmte Gruppe von Abschläge.";
 "NUMBER_%ld_ABBR" = "Nr. %ld";
