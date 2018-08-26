@@ -6,7 +6,6 @@
 //  Copyright © 2018 Mulligan Software. All rights reserved.
 //
 
-#import "GOLFKit.h"
 #import "GOLFUtilities.h"
 #import "GOLFExtensions.h"
 #import "GOLFHandicapping.h"

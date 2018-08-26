@@ -39,6 +39,10 @@
 "TERM_NET" = "neto";
 "TERM_NINEPT" = "9-Puntos";
 "TERM_NONE" = "nada";
+"TERM_NUMBER" = "número";
+"TERM_NUMBER_ABBR" = "no.";
+"TERM_NUMBER_PLURAL" = "números";
+"TERM_NUMBER_PLURAL_ABBR" = "nos.";
 "TERM_PAR" = "par";
 "TERM_PAR_PLURAL" = "pars";
 "TERM_PEORIA" = "Peoria";
@@ -61,6 +65,7 @@
 "TERM_TAP" = "pulse";
 "TERM_TEE" = "tee";
 "TERM_TEE_PLURAL" = "tees";
+"TERM_TIEBREAKER" = "desempate";
 "TERM_TOTAL" = "total";
 "TERM_TOURNAMENT" = "torneo";
 "TERM_UNKNOWN" = "ignoto";
@@ -218,6 +223,7 @@
 "TITLE_PRINT_SCORECARD" = "Imprimir Tarjeta";
 "TITLE_PRINT_SCORECARDS" = "Imprimir Tarjetas";
 "TITLE_REGISTER" = "Registrar";
+"TITLE_SELECTED_HOLES" = "Hoyos Seleccionados";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
 
