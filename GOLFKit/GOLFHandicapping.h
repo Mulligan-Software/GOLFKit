@@ -206,6 +206,9 @@ NSString * GOLFHandicapExceptionalScoringModifierForAuthority(GOLFHandicapAuthor
 NSString * GOLFRoundModifierTooltip(GOLFHandicapAuthority *authority);
 //	Returns the appropriate tooltip (with line feeds) tabulating the description of round modifiers ("* - used", "T - Torneo", "E - Estimado", etc.
 
+BOOL GOLFHandicap9HoleHandicapsSupported(GOLFHandicapAuthority *authority);
+//	Indicates whether the handicapping method of this authority supports 9-hole handicap indexes
+
 BOOL GOLFHandicapStablefordRequiredForAuthority(GOLFHandicapAuthority *authority);
 //	Indicates whether the handicapping method of this authority requires Stableford scores or equivalents for handicap calculation
 

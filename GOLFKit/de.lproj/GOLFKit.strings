@@ -12,6 +12,8 @@
 "TERM_AVERAGE" = "mittlere";
 "TERM_BEST" = "beste";
 "TERM_BESTBALL" = "Best-Ball";
+"TERM_BET" = "Wette";
+"TERM_BET_PLURAL" = "Wetten";
 "TERM_BOWMAKER" = "Bowmaker";
 "TERM_CALLAWAY" = "Callaway";
 "TERM_CHACHA" = "Cha-Cha";
@@ -29,7 +31,9 @@
 "TERM_FOURSOMES" = "Viererspiel";
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "brutto";
+"TERM_HANDICAP" = "handicap";
 "TERM_HOLE" = "Loch";
+"TERM_HOLE_PLURAL" = "Löcher";
 "TERM_INDICATE" = "zeigen";
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "irische";
@@ -161,6 +165,7 @@
 "TITLE_CHOOSE_HOLE" = "Wählen ein Golfloch";
 "TITLE_CSS" = "Wettbewerbs-Scratch-Score";
 "TITLE_CSS_ABBR" = "CSS";
+"TITLE_DONE" = "Fertig";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
 "TITLE_FIRST_HOLE" = "erstes Loch";
@@ -344,6 +349,16 @@
 "OF" = "des";	//	95% des Spielen Handicap
 
 //	Tooltips & Instructions
+"TOOLTIP_9HOLE_BEGINNING_INDEX" = "Anfänglich Handicap (9-hole)";
+"TOOLTIP_9HOLE_BEGINNING_INDEX_%@" = "Anfänglich  %@ (9-hole)";
+"TOOLTIP_9HOLE_PLAYER" = "Stil der berechneten handicap";
+"TOOLTIP_9HOLE_PLAYER_%@" = "Stil der berechneten %@";
+"TOOLTIP_9HOLE_PLAYER_CHECKED" = "aktiviert um 9-Loch-Handicaps zu berechnen";
+"TOOLTIP_9HOLE_PLAYER_UNCHECKED" = "deaktiviert um 18-Loch-Handicaps zu berechnen";
+"TOOLTIP_9HOLE_PLAYER_UNAVAILABLE_%@" = "\n\nNicht verfügbar, da die %@ keine 9-Loch-Handicaps unterstützt.";
+"TOOLTIP_18HOLE_BEGINNING_INDEX" = "Anfänglich Handicap";
+"TOOLTIP_18HOLE_BEGINNING_INDEX_%@" = "Anfänglich %@";
+"TOOLTIP_BEGINNING_INDEX_EXTRA" = "zur Verwendung, bis ein gültiger Handicap-Datensatz verfügbar ist.";
 "TOOLTIP_PLAYER_GROSS_SCORE" = "Die gesamte Brutto Punktzahl des Spielers";
 "TOOLTIP_PLAYER_NET_SCORE" = "Die gesamte Netto Punktzahl des Spielers";
 "TOOLTIP_PLAYER_TOTAL_SCORE" = "Die Gesamtpunktzahl des Speilers";
@@ -367,6 +382,7 @@
 "CURRENT_%@_TITLE" = "aktuelle %@";
 "CURRENT_%@_TITLE_PLURAL" = "aktuellen %@";
 "DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Bestimme Dein %@ auf der rechten Seite indem Sie die Zeile finden, in der Ihre %@ auf der linken Seite steht.";
+"ELLIPSIS" = "…";
 "FOOTNOTE_CHARACTER" = "†";		//	Special character
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Ein %@ Tabelle (%@) wird verwendet, um ein %@, ausgestellt von den Golfclub oder ermächtigt Golf Verien, um einen %@ zu konvertieren basierend auf der %@ für eine bestimmte Gruppe von Abschläge.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "Ein %@ Tabelle (%@) wird verwendet, um ein %@, ausgestellt von den Golfclub oder ermächtigt Golf Verien, um einen %@ zu konvertieren für eine bestimmte Gruppe von Abschläge.";

@@ -12,6 +12,8 @@
 "TERM_AVERAGE" = "promedio";
 "TERM_BEST" = "mejor";
 "TERM_BESTBALL" = "Best-Ball";
+"TERM_BET" = "apuesta";
+"TERM_BET_PLURAL" = "apuestas";
 "TERM_BOWMAKER" = "Bowmaker";
 "TERM_CALLAWAY" = "Callaway";
 "TERM_CHACHA" = "Cha-Cha";
@@ -29,7 +31,9 @@
 "TERM_FOURSOMES" = "Foursomes";
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "bruto";
+"TERM_HANDICAP" = "handicap";
 "TERM_HOLE" = "hoyo";
+"TERM_HOLE_PLURAL" = "hoyos";
 "TERM_INDICATE" = "indicar";
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "Irlandesa";
@@ -161,6 +165,7 @@
 "TITLE_CHOOSE_HOLE" = "Elige un hoyo";
 "TITLE_CSS" = "Scratch Score de Competencia";
 "TITLE_CSS_ABBR" = "CSS";
+"TITLE_DONE" = "Aceptar";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
 "TITLE_FIRST_HOLE" = "Primer Hoyo";
@@ -344,6 +349,16 @@
 "OF" = "de";	//	95% de Handicap de Jugar
 
 //	Tooltips & Instructions
+"TOOLTIP_9HOLE_BEGINNING_INDEX" = "Handicap comienzo (9-hoyo)";
+"TOOLTIP_9HOLE_BEGINNING_INDEX_%@" = "%@ comienzo (9-hoyo)";
+"TOOLTIP_9HOLE_PLAYER" = "Estilo de handicap calculado";
+"TOOLTIP_9HOLE_PLAYER_%@" = "Estilo de %@ calculado";
+"TOOLTIP_9HOLE_PLAYER_CHECKED" = "marcado para calcular handicaps de 9 hoyos";
+"TOOLTIP_9HOLE_PLAYER_UNCHECKED" = "desmarcado para calcular handicaps de 18 hoyos";
+"TOOLTIP_9HOLE_PLAYER_UNAVAILABLE_%@" = "\n\nNo disponible porque %@ no soporta handicaps de 9 hoyos.";
+"TOOLTIP_18HOLE_BEGINNING_INDEX" = "Handicap comienzo";
+"TOOLTIP_18HOLE_BEGINNING_INDEX_%@" = "%@ comienzo";
+"TOOLTIP_BEGINNING_INDEX_EXTRA" = "para usar hasta que esté disponible un registro válido de handicap.";
 "TOOLTIP_PLAYER_GROSS_SCORE" = "El puntaje bruto total del jugador";
 "TOOLTIP_PLAYER_NET_SCORE" = "El puntaje neto total del jugador";
 "TOOLTIP_PLAYER_TOTAL_SCORE" = "El puntaje total del jugador";
@@ -367,6 +382,7 @@
 "CURRENT_%@_TITLE" = "%@ Actual";
 "CURRENT_%@_TITLE_PLURAL" = "%@ Actuales";
 "DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Determina tu %@ de la derecha encontrando la fila donde aparece tu %@ de la izquierda.";
+"ELLIPSIS" = "…";
 "FOOTNOTE_CHARACTER" = "†";		//	Special character
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Una Tabla %@ (%@) es utilizada para convertir un %@, publicado por tu club o asociación autorizada del golf, a un %@ basada en el %@ para un tee.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "Una Tabla %@ (%@) es utilizada para convertir un %@, publicado por tu club o asociación autorizada del golf, a un %@ para un tee.";

@@ -878,6 +878,24 @@ NSString * GOLFRoundModifierTooltip(GOLFHandicapAuthority *authority) {
 }
 
 //=================================================================
+//	GOLFHandicap9HoleHandicapsSupported(authority)
+//=================================================================
+BOOL GOLFHandicap9HoleHandicapsSupported(GOLFHandicapAuthority *authority) {
+	//	Indicates whether the handicapping method of this authority supports 9-hole handicap indexes
+	if (authority) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityAGU]) {
+			//	Golf Australia doesn't calculate 9-hole indexes
+			return NO;
+#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
+			return NO;
+#endif
+		}
+	}
+	return YES;	//	default
+}
+
+//=================================================================
 //	GOLFHandicapStablefordRequiredForAuthority(authority)
 //=================================================================
 BOOL GOLFHandicapStablefordRequiredForAuthority(GOLFHandicapAuthority *authority) {
