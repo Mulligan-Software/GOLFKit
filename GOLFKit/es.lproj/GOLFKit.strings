@@ -168,6 +168,8 @@
 "TITLE_DONE" = "Aceptar";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
+"TITLE_EVEN" = "Igual";
+"TITLE_EVEN_ABBR" = "E";
 "TITLE_FIRST_HOLE" = "Primer Hoyo";
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
@@ -231,6 +233,8 @@
 "TITLE_SELECTED_HOLES" = "Hoyos Seleccionados";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
+"TITLE_TOTAL_POINTS" = "Puntos Totales";
+"TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Puntos Totales v. Cuota %d";
 
 //	GOLFPlayType Titles & Descriptions
 "PLAY_TYPE_MEDAL_PLAY" = "Stroke Play";

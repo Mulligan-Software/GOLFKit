@@ -168,6 +168,8 @@
 "TITLE_DONE" = "Terminé";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
+"TITLE_EVEN" = "Égal";
+"TITLE_EVEN_ABBR" = "E";
 "TITLE_FIRST_HOLE" = "Premier Trou";
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
@@ -231,6 +233,8 @@
 "TITLE_SELECTED_HOLES" = "Trous Sélectionnés";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
+"TITLE_TOTAL_POINTS" = "Points Totaux";
+"TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Points Totaux v. Quota %d";
 
 //	GOLFPlayType Titles & Descriptions
 "PLAY_TYPE_MEDAL_PLAY" = "Partie par coups";
