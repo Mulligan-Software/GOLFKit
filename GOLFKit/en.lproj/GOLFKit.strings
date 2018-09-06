@@ -23,10 +23,13 @@
 "TERM_CLICK" = "click";
 "TERM_CLUB" = "club";
 "TERM_CLUB_PLURAL" = "clubs";
+"TERM_COLOR" = "color";
 "TERM_COURSE" = "course";
 "TERM_COURSE_PLURAL" = "courses";
 "TERM_DISQUALIFIED" = "disqualified";
 "TERM_DISQUALIFIED_ABBR" = "disq.";
+"TERM_EVENT" = "event";
+"TERM_EVENT_PLURAL" = "events";
 "TERM_FOURBALL" = "Four-Ball";
 "TERM_FOURSOMES" = "Foursomes";
 "TERM_GREENSOMES" = "Greensomes";
@@ -35,12 +38,15 @@
 "TERM_HOLE" = "hole";
 "TERM_HOLE_PLURAL" = "holes";
 "TERM_INDICATE" = "indicate";
+"TERM_INDIVIDUAL" = "individual";	//	The adjective ("individual gross")
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "Irish";
 "TERM_LIMITED" = "limited";
 "TERM_MEDAL" = "medal";
 "TERM_MEDALMATCH" = "Medal Match";
 "TERM_NET" = "net";
+"TERM_NINE" = "nine";
+"TERM_NINE_PLURAL" = "nines";
 "TERM_NINEPT" = "9-Point";
 "TERM_NONE" = "none";
 "TERM_NUMBER" = "number";
@@ -67,6 +73,8 @@
 "TERM_SIXPT" = "6-Point";
 "TERM_STABLEFORD" = "Stableford";
 "TERM_TAP" = "tap";
+"TERM_TEAM" = "team";
+"TERM_TEAM_PLURAL" = "teams";
 "TERM_TEE" = "tee";
 "TERM_TEE_PLURAL" = "tees";
 "TERM_TIEBREAKER" = "tiebreaker";
@@ -234,7 +242,7 @@
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
 "TITLE_TOTAL_POINTS" = "Total Points";
-"TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Total Points v. Quota %d";
+"TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Total Points v. %d Quota";
 
 //	GOLFPlayType Titles & Descriptions
 "PLAY_TYPE_MEDAL_PLAY" = "Medal Play";
@@ -397,6 +405,22 @@
 "ORDINAL_20TH_TO_29TH" = "th,st,nd,rd,th,th,th,th,th,th";	/*	20th, 21st, 22nd, 23rd, 24th, 25th, etc.		*/
 "SCORECARD_EXCEEDS_1_PLAYER" = "Scorecard exceeds maximum 1 player";
 "SCORECARD_EXCEEDS_%ld_PLAYERS" = "Scorecard exceeds maximum %ld players";
+
+//	Unicode Vulgar Fractions
+"VF_1/2" = "½";
+"VF_1/3" = "⅓";
+"VF_2/3" = "⅔";
+"VF_1/4" = "¼";
+"VF_3/4" = "¾";
+"VF_1/5" = "⅕";
+"VF_2/5" = "⅖";
+"VF_3/5" = "⅗";
+"VF_4/5" = "⅘";
+"VF_1/8" = "⅛";
+"VF_3/8" = "⅜";
+"VF_5/8" = "⅝";
+"VF_7/8" = "⅞";
+"VF_1/10" = "⅒";
 
 //	Countries
 "Algeria" = "Algeria";

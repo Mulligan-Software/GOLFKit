@@ -23,10 +23,13 @@
 "TERM_CLICK" = "klicken";
 "TERM_CLUB" = "Club";
 "TERM_CLUB_PLURAL" = "Clubs";
+"TERM_COLOR" = "Farbe";
 "TERM_COURSE" = "Golfplatz";
 "TERM_COURSE_PLURAL" = "Golfplätze";
 "TERM_DISQUALIFIED" = "disqualifiziert";
 "TERM_DISQUALIFIED_ABBR" = "disq.";
+"TERM_EVENT" = "Veranstaltung";
+"TERM_EVENT_PLURAL" = "Veranstaltungen";
 "TERM_FOURBALL" = "Vier-Ball";
 "TERM_FOURSOMES" = "Viererspiel";
 "TERM_GREENSOMES" = "Greensomes";
@@ -35,12 +38,15 @@
 "TERM_HOLE" = "Loch";
 "TERM_HOLE_PLURAL" = "Löcher";
 "TERM_INDICATE" = "zeigen";
+"TERM_INDIVIDUAL" = "Individuell";	//	The adjective ("individual gross")
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "irische";
 "TERM_LIMITED" = "limitiert";
 "TERM_MEDAL" = "medaille";
 "TERM_MEDALMATCH" = "Match Medaille";
 "TERM_NET" = "netto";
+"TERM_NINE" = "Neun";
+"TERM_NINE_PLURAL" = "Neunen";
 "TERM_NINEPT" = "9-Punkte";
 "TERM_NONE" = "keiner";
 "TERM_NUMBER" = "Nummer";
@@ -67,6 +73,8 @@
 "TERM_SIXPT" = "6-Punkte";
 "TERM_STABLEFORD" = "Stableford";
 "TERM_TAP" = "tippen";
+"TERM_TEAM" = "Mannschaft";
+"TERM_TEAM_PLURAL" = "Mannschaften";
 "TERM_TEE" = "Abschlag";
 "TERM_TEE_PLURAL" = "Abschläge";
 "TERM_TIEBREAKER" = "tie-break";
@@ -234,7 +242,7 @@
 "TITLE_SSS" = "Scratch Score genormt";
 "TITLE_SSS_ABBR" = "SSS";
 "TITLE_TOTAL_POINTS" = "Gesamtpunktzahl";
-"TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Gesamtpunkte v. Kontingent %d";
+"TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Gesamtpunkte v. %d Kontingent";
 
 //	GOLFPlayType Titles & Descriptions
 "PLAY_TYPE_MEDAL_PLAY" = "Medaille spielen";
