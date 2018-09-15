@@ -9,6 +9,7 @@
 //	Golf Terminology
 "TERM_ADJUSTED" = "ajustado";
 "TERM_ADJUSTED_ABBR" = "ajus.";
+"TERM_ALLOWANCE" = "asignación";
 "TERM_AVERAGE" = "promedio";
 "TERM_BEST" = "mejor";
 "TERM_BESTBALL" = "Best-Ball";
@@ -164,7 +165,7 @@
 "TIEBREAKING_USGA_DESC" = "Úlitimo 9 hoyos, último 6, último 3, último hoyo";
 
 //	Titles & Abbr.
-"TITLE_ALLOWANCE" = "Asignacíon";
+"TITLE_ALLOWANCE" = "Asignación";
 "TITLE_CANCEL" = "Cancelar";
 "TITLE_CBA" = "Computed Buffer Adjustment";
 "TITLE_CBA_ABBR" = "CBA";
@@ -183,7 +184,7 @@
 "TITLE_HANDICAP_ABBR" = "Hdcp";
 "TITLE_HANDICAP_PLURAL" = "Handicaps";
 "TITLE_HANDICAP_ADJUSTED_GROSS" = "Puntaje Bruto Adjustado";
-"TITLE_HANDICAP_ALLOWANCE" = "Asignacíon de handicap";
+"TITLE_HANDICAP_ALLOWANCE" = "Asignación de handicap";
 "TITLE_HANDICAP_ALLOWANCE_ABBR" = "Asign";
 "TITLE_HANDICAP_CATEGORY" = "Categoría de Handicap";
 "TITLE_HANDICAP_CATEGORY_ABBR" = "Categoría";

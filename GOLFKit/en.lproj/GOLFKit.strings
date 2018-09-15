@@ -9,6 +9,7 @@
 //	Golf Terminology
 "TERM_ADJUSTED" = "adjusted";
 "TERM_ADJUSTED_ABBR" = "adj.";
+"TERM_ALLOWANCE" = "allowance";
 "TERM_AVERAGE" = "average";
 "TERM_BEST" = "best";
 "TERM_BESTBALL" = "Best-Ball";

@@ -9,6 +9,7 @@
 //	Golf Terminology
 "TERM_ADJUSTED" = "ajusté";
 "TERM_ADJUSTED_ABBR" = "ajus.";
+"TERM_ALLOWANCE" = "allocation";
 "TERM_AVERAGE" = "moyenne";
 "TERM_BEST" = "meilleur";
 "TERM_BESTBALL" = "Meilleure Balle";
