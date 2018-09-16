@@ -57,6 +57,7 @@
 //	iOS only
 #if TARGET_OS_IOS
 #import <GOLFKit/GOLFiOSUtilities.h>
+#import <GOLFKit/GOLFCustomTableViewCells.h>
 #endif
 
 //	Watch only

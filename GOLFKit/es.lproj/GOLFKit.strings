@@ -67,6 +67,7 @@
 "TERM_ROUND" = "ronda";
 "TERM_ROUND_PLURAL" = "rondas";
 "TERM_SCHEID" = "Scheid";
+"TERM_SCOREBOARD" = "marcador";
 "TERM_SCORECARD" = "tarjeta";
 "TERM_SCORECARD_PLURAL" = "tarjetas";
 "TERM_SCRAMBLE" = "Scramble";
@@ -233,6 +234,7 @@
 "TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "Índices de Handicap Mundials";
 "TITLE_HOLES_TO_BE_SCORED" = "Hoyos que se Puntúan";
 "TITLE_GRADE" = "Grado";
+"TITLE_KEEPING_SCORE" = "Llevando puntajes desde 1995";
 "TITLE_LAST_HOLE" = "Último Hoyo";
 "TITLE_NEXT_HOLE" = "Próximo Hoyo";
 "TITLE_PREVIOUS_HOLE" = "Hoyo Precedente";
@@ -242,6 +244,7 @@
 "TITLE_SELECTED_HOLES" = "Hoyos Seleccionados";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
+"TITLE_TECHNICAL_SUPPORT" = "Asistencia al Cliente";
 "TITLE_TOTAL_POINTS" = "Puntos Totales";
 "TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Puntos Totales v. %d Cuota";
 

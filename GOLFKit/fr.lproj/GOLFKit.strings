@@ -67,6 +67,7 @@
 "TERM_ROUND" = "tour";
 "TERM_ROUND_PLURAL" = "tours";
 "TERM_SCHEID" = "Scheid";
+"TERM_SCOREBOARD" = "tableau";
 "TERM_SCORECARD" = "carte de score";
 "TERM_SCORECARD_PLURAL" = "cartes de score";
 "TERM_SCRAMBLE" = "Scramble";
@@ -233,6 +234,7 @@
 "TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "Handicap Indexes Mondials";
 "TITLE_HOLES_TO_BE_SCORED" = "Trous à marquer";
 "TITLE_GRADE" = "Classe";
+"TITLE_KEEPING_SCORE" = "Gardant scores depuis 1995";
 "TITLE_LAST_HOLE" = "Dernier Trou";
 "TITLE_NEXT_HOLE" = "Trou Suivant";
 "TITLE_PREVIOUS_HOLE" = "Trou Précédent";
@@ -242,6 +244,7 @@
 "TITLE_SELECTED_HOLES" = "Trous Sélectionnés";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
+"TITLE_TECHNICAL_SUPPORT" = "Support Technique";
 "TITLE_TOTAL_POINTS" = "Points Totaux";
 "TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Points Totaux v. %d Quota";
 

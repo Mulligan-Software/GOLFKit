@@ -89,6 +89,8 @@
 		29A6029220EA95BF006DD2EE /* GOLFiOSUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 29A6029020EA95BF006DD2EE /* GOLFiOSUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29A6029320EA95BF006DD2EE /* GOLFiOSUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 29A6029120EA95BF006DD2EE /* GOLFiOSUtilities.m */; };
 		29B00A7D204AFFE000E10210 /* GOLFTeeMarkerEU.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2907DB982048AB7C00A04B8F /* GOLFTeeMarkerEU.icns */; };
+		29BDD14B214EAEC200446737 /* GOLFCustomTableViewCells.h in Headers */ = {isa = PBXBuildFile; fileRef = 29BDD149214EAEC200446737 /* GOLFCustomTableViewCells.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29BDD14C214EAEC200446737 /* GOLFCustomTableViewCells.m in Sources */ = {isa = PBXBuildFile; fileRef = 29BDD14A214EAEC200446737 /* GOLFCustomTableViewCells.m */; };
 		29C0E38C1F9E90580009E23C /* NSNumber+GOLFExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 29C0E38A1F9E90580009E23C /* NSNumber+GOLFExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29C0E38D1F9E90580009E23C /* NSNumber+GOLFExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 29C0E38A1F9E90580009E23C /* NSNumber+GOLFExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29C0E38E1F9E90580009E23C /* NSNumber+GOLFExtensions.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C0E38B1F9E90580009E23C /* NSNumber+GOLFExtensions.m */; };
@@ -174,6 +176,8 @@
 		29A6028E20EA88F3006DD2EE /* iOSIcons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = iOSIcons.xcassets; sourceTree = "<group>"; };
 		29A6029020EA95BF006DD2EE /* GOLFiOSUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOLFiOSUtilities.h; sourceTree = "<group>"; };
 		29A6029120EA95BF006DD2EE /* GOLFiOSUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOLFiOSUtilities.m; sourceTree = "<group>"; };
+		29BDD149214EAEC200446737 /* GOLFCustomTableViewCells.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOLFCustomTableViewCells.h; sourceTree = "<group>"; };
+		29BDD14A214EAEC200446737 /* GOLFCustomTableViewCells.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOLFCustomTableViewCells.m; sourceTree = "<group>"; };
 		29C0E38A1F9E90580009E23C /* NSNumber+GOLFExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "NSNumber+GOLFExtensions.h"; path = "GOLFKit/NSNumber+GOLFExtensions.h"; sourceTree = SOURCE_ROOT; };
 		29C0E38B1F9E90580009E23C /* NSNumber+GOLFExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "NSNumber+GOLFExtensions.m"; path = "GOLFKit/NSNumber+GOLFExtensions.m"; sourceTree = SOURCE_ROOT; };
 		29C6C41A20471B7E00EF584C /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
@@ -339,6 +343,8 @@
 				29A6029020EA95BF006DD2EE /* GOLFiOSUtilities.h */,
 				29A6029120EA95BF006DD2EE /* GOLFiOSUtilities.m */,
 				29A6028E20EA88F3006DD2EE /* iOSIcons.xcassets */,
+				29BDD149214EAEC200446737 /* GOLFCustomTableViewCells.h */,
+				29BDD14A214EAEC200446737 /* GOLFCustomTableViewCells.m */,
 			);
 			path = "GOLFKit (iOS)";
 			sourceTree = SOURCE_ROOT;
@@ -423,6 +429,7 @@
 				2954DC072050EBC2008A7306 /* GOLFUtilities.h in Headers */,
 				29C0E38C1F9E90580009E23C /* NSNumber+GOLFExtensions.h in Headers */,
 				29A6029220EA95BF006DD2EE /* GOLFiOSUtilities.h in Headers */,
+				29BDD14B214EAEC200446737 /* GOLFCustomTableViewCells.h in Headers */,
 				2912D762204EE40D00649734 /* GOLFHandicapping.h in Headers */,
 				29E888BD1DCE5B0000C4A63A /* GOLFKit.h in Headers */,
 				29290A6A20727B88005A0E3F /* GOLFScoring.h in Headers */,
@@ -627,6 +634,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				29BDD14C214EAEC200446737 /* GOLFCustomTableViewCells.m in Sources */,
 				29A6029320EA95BF006DD2EE /* GOLFiOSUtilities.m in Sources */,
 				2971397F2098D5AE00F482BD /* MulliganScoring.m in Sources */,
 				296411EC204B44CF002A70CB /* GOLFKit.m in Sources */,

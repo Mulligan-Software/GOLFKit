@@ -67,6 +67,7 @@
 "TERM_ROUND" = "Runde";
 "TERM_ROUND_PLURAL" = "Runden";
 "TERM_SCHEID" = "Scheid";
+"TERM_SCOREBOARD" = "Anzeigetafel";
 "TERM_SCORECARD" = "Scorecard";
 "TERM_SCORECARD_PLURAL" = "Scorecards";
 "TERM_SCRAMBLE" = "Gerangel";
@@ -233,6 +234,7 @@
 "TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "Weltweites Handicap Indizes";
 "TITLE_HOLES_TO_BE_SCORED" = "Zu bewertenden Löcher";
 "TITLE_GRADE" = "Klasse";
+"TITLE_KEEPING_SCORE" = "Punkte gesammelt seit 1995";
 "TITLE_LAST_HOLE" = "letztes Loch";
 "TITLE_NEXT_HOLE" = "nächstes Loch";
 "TITLE_PREVIOUS_HOLE" = "vorheriges Loch";
@@ -242,6 +244,7 @@
 "TITLE_SELECTED_HOLES" = "ausgewählte Löcher";
 "TITLE_SSS" = "Scratch Score genormt";
 "TITLE_SSS_ABBR" = "SSS";
+"TITLE_TECHNICAL_SUPPORT" = "Technische Unterstützung";
 "TITLE_TOTAL_POINTS" = "Gesamtpunktzahl";
 "TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Gesamtpunkte v. %d Kontingent";
 
