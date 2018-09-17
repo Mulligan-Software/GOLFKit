@@ -18,6 +18,7 @@
 		29290A6B20727B88005A0E3F /* GOLFScoring.h in Headers */ = {isa = PBXBuildFile; fileRef = 29290A6820727B88005A0E3F /* GOLFScoring.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29290A6C20727B88005A0E3F /* GOLFScoring.m in Sources */ = {isa = PBXBuildFile; fileRef = 29290A6920727B88005A0E3F /* GOLFScoring.m */; };
 		29290A6D20727B88005A0E3F /* GOLFScoring.m in Sources */ = {isa = PBXBuildFile; fileRef = 29290A6920727B88005A0E3F /* GOLFScoring.m */; };
+		29301F3E21500A760020D39D /* GOLFSettingsSwitchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 29301F4021500A760020D39D /* GOLFSettingsSwitchTableViewCell.xib */; };
 		2930CDA31DCFEC4F0089491D /* LittleTeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2930CDA21DCFEC4F0089491D /* LittleTeeMarkers.xcassets */; };
 		2930CDA41DCFEC4F0089491D /* LittleTeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2930CDA21DCFEC4F0089491D /* LittleTeeMarkers.xcassets */; };
 		2941402D1DDA02D700CC9605 /* GOLFTeeMarkerAdd.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2941402C1DDA02D700CC9605 /* GOLFTeeMarkerAdd.icns */; };
@@ -121,6 +122,8 @@
 		29164281204C3B7800E87478 /* GenericTeeMarkers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = GenericTeeMarkers.xcassets; path = GOLFKit/GenericTeeMarkers.xcassets; sourceTree = SOURCE_ROOT; };
 		29290A6820727B88005A0E3F /* GOLFScoring.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOLFScoring.h; sourceTree = "<group>"; };
 		29290A6920727B88005A0E3F /* GOLFScoring.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOLFScoring.m; sourceTree = "<group>"; };
+		29301F4121500A980020D39D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/GOLFSettingsSwitchTableViewCell.xib; sourceTree = "<group>"; };
+		29301F4321500B8D0020D39D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/GOLFSettingsSwitchTableViewCell.strings; sourceTree = "<group>"; };
 		2930CDA21DCFEC4F0089491D /* LittleTeeMarkers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = LittleTeeMarkers.xcassets; path = GOLFKit/LittleTeeMarkers.xcassets; sourceTree = SOURCE_ROOT; };
 		2941402C1DDA02D700CC9605 /* GOLFTeeMarkerAdd.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = GOLFTeeMarkerAdd.icns; path = "GOLFKit (OS X)/TeeMarker icns/GOLFTeeMarkerAdd.icns"; sourceTree = SOURCE_ROOT; };
 		2941402E1DDA03E300CC9605 /* GOLFTeeMarkerAll.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = GOLFTeeMarkerAll.icns; path = "GOLFKit (OS X)/TeeMarker icns/GOLFTeeMarkerAll.icns"; sourceTree = SOURCE_ROOT; };
@@ -345,6 +348,7 @@
 				29A6028E20EA88F3006DD2EE /* iOSIcons.xcassets */,
 				29BDD149214EAEC200446737 /* GOLFCustomTableViewCells.h */,
 				29BDD14A214EAEC200446737 /* GOLFCustomTableViewCells.m */,
+				29301F4021500A760020D39D /* GOLFSettingsSwitchTableViewCell.xib */,
 			);
 			path = "GOLFKit (iOS)";
 			sourceTree = SOURCE_ROOT;
@@ -544,6 +548,7 @@
 				fr,
 				es,
 				de,
+				Base,
 			);
 			mainGroup = 29E888A21DCE5B0000C4A63A;
 			productRefGroup = 29E888AD1DCE5B0000C4A63A /* Products */;
@@ -570,6 +575,7 @@
 				29164282204C3B7800E87478 /* GenericTeeMarkers.xcassets in Resources */,
 				29436C642055B5F90080E0FE /* GOLFCountries.plist in Resources */,
 				29E888C81DCE5E6400C4A63A /* GOLFKit.strings in Resources */,
+				29301F3E21500A760020D39D /* GOLFSettingsSwitchTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -684,6 +690,15 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		29301F4021500A760020D39D /* GOLFSettingsSwitchTableViewCell.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				29301F4121500A980020D39D /* Base */,
+				29301F4321500B8D0020D39D /* en */,
+			);
+			name = GOLFSettingsSwitchTableViewCell.xib;
+			sourceTree = "<group>";
+		};
 		296F4DE41F3A497000781C46 /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
