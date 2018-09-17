@@ -10,6 +10,7 @@
 "TERM_ADJUSTED" = "adjusted";
 "TERM_ADJUSTED_ABBR" = "adj.";
 "TERM_ALLOWANCE" = "allowance";
+"TERM_AUTHORITY" = "authority";
 "TERM_AVERAGE" = "average";
 "TERM_BEST" = "best";
 "TERM_BESTBALL" = "Best-Ball";
@@ -72,6 +73,7 @@
 "TERM_SCORECARD_PLURAL" = "scorecards";
 "TERM_SCRAMBLE" = "Scramble";
 "TERM_SELECTED" = "selected";
+"TERM_SIDE" = "side";
 "TERM_SIXPT" = "6-Point";
 "TERM_STABLEFORD" = "Stableford";
 "TERM_TAP" = "tap";
@@ -84,6 +86,7 @@
 "TERM_TOURNAMENT" = "tournament";
 "TERM_UNKNOWN" = "unknown";
 "TERM_WALTZ" = "Waltz";
+"TERM_YARDAGE" = "yardage";
 "TERM_ZIGZAG" = "Zig-Zag";
 
 //	Standard Tee Colors
@@ -167,6 +170,8 @@
 
 //	Titles & Abbr.
 "TITLE_ALLOWANCE" = "Allowance";
+"TITLE_BACK_NINE" = "Back Nine";
+"TITLE_BACK_SIDE" = "Back Side";
 "TITLE_CANCEL" = "Cancel";
 "TITLE_CBA" = "Computed Buffer Adjustment";
 "TITLE_CBA_ABBR" = "CBA";
@@ -181,6 +186,8 @@
 "TITLE_EVEN" = "Even";
 "TITLE_EVEN_ABBR" = "E";
 "TITLE_FIRST_HOLE" = "First Hole";
+"TITLE_FRONT_NINE" = "Front Nine";
+"TITLE_FRONT_SIDE" = "Front Side";
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
 "TITLE_HANDICAP_PLURAL" = "Handicaps";
@@ -232,21 +239,25 @@
 "TITLE_HANDICAP_WORLD_INDEX" = "World Handicap Index";
 "TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
 "TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "World Handicap Indexes";
+"TITLE_HOLE_HANDICAP" = "Handicap";
 "TITLE_HOLES_TO_BE_SCORED" = "Holes to be Scored";
 "TITLE_GRADE" = "Grade";
 "TITLE_KEEPING_SCORE" = "Keeping score since 1995";
 "TITLE_LAST_HOLE" = "Last Hole";
+"TITLE_MENS_HANDICAP" = "Men’s Handicap";
 "TITLE_NEXT_HOLE" = "Next Hole";
 "TITLE_PREVIOUS_HOLE" = "Previous Hole";
 "TITLE_PRINT_SCORECARD" = "Print Scorecard";
 "TITLE_PRINT_SCORECARDS" = "Print Scorecards";
 "TITLE_REGISTER" = "Register";
+"TITLE_SAVE" = "Save";
 "TITLE_SELECTED_HOLES" = "Selected Holes";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
 "TITLE_TECHNICAL_SUPPORT" = "Technical Support";
 "TITLE_TOTAL_POINTS" = "Total Points";
 "TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Total Points v. %d Quota";
+"TITLE_WOMENS_HANDICAP" = "Women’s Handicap";
 
 //	GOLFPlayType Titles & Descriptions
 "PLAY_TYPE_MEDAL_PLAY" = "Medal Play";

@@ -10,6 +10,7 @@
 "TERM_ADJUSTED" = "ajustado";
 "TERM_ADJUSTED_ABBR" = "ajus.";
 "TERM_ALLOWANCE" = "asignación";
+"TERM_AUTHORITY" = "potestad";
 "TERM_AVERAGE" = "promedio";
 "TERM_BEST" = "mejor";
 "TERM_BESTBALL" = "Best-Ball";
@@ -72,6 +73,7 @@
 "TERM_SCORECARD_PLURAL" = "tarjetas";
 "TERM_SCRAMBLE" = "Scramble";
 "TERM_SELECTED" = "seleccionado";
+"TERM_SIDE" = "lado";
 "TERM_SIXPT" = "6-Puntos";
 "TERM_STABLEFORD" = "Stableford";
 "TERM_TAP" = "pulse";
@@ -84,6 +86,7 @@
 "TERM_TOURNAMENT" = "torneo";
 "TERM_UNKNOWN" = "ignoto";
 "TERM_WALTZ" = "Waltz";
+"TERM_YARDAGE" = "metraje";
 "TERM_ZIGZAG" = "Zig-Zag";
 
 //	Standard Tee Colors
@@ -167,6 +170,8 @@
 
 //	Titles & Abbr.
 "TITLE_ALLOWANCE" = "Asignación";
+"TITLE_BACK_NINE" = "Segundo Nueve";
+"TITLE_BACK_SIDE" = "Segundo Lado";
 "TITLE_CANCEL" = "Cancelar";
 "TITLE_CBA" = "Computed Buffer Adjustment";
 "TITLE_CBA_ABBR" = "CBA";
@@ -181,6 +186,8 @@
 "TITLE_EVEN" = "Igual";
 "TITLE_EVEN_ABBR" = "E";
 "TITLE_FIRST_HOLE" = "Primer Hoyo";
+"TITLE_FRONT_NINE" = "Primero Nueve";
+"TITLE_FRONT_SIDE" = "Primero Lado";
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
 "TITLE_HANDICAP_PLURAL" = "Handicaps";
@@ -232,21 +239,25 @@
 "TITLE_HANDICAP_WORLD_INDEX" = "Índice de Handicap Mundial";
 "TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
 "TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "Índices de Handicap Mundials";
+"TITLE_HOLE_HANDICAP" = "Handicap";
 "TITLE_HOLES_TO_BE_SCORED" = "Hoyos que se Puntúan";
 "TITLE_GRADE" = "Grado";
 "TITLE_KEEPING_SCORE" = "Llevando puntajes desde 1995";
 "TITLE_LAST_HOLE" = "Último Hoyo";
+"TITLE_MENS_HANDICAP" = "Handicap - Caballeros";
 "TITLE_NEXT_HOLE" = "Próximo Hoyo";
 "TITLE_PREVIOUS_HOLE" = "Hoyo Precedente";
 "TITLE_PRINT_SCORECARD" = "Imprimir Tarjeta";
 "TITLE_PRINT_SCORECARDS" = "Imprimir Tarjetas";
 "TITLE_REGISTER" = "Registrar";
+"TITLE_SAVE" = "Guardar";
 "TITLE_SELECTED_HOLES" = "Hoyos Seleccionados";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
 "TITLE_TECHNICAL_SUPPORT" = "Asistencia al Cliente";
 "TITLE_TOTAL_POINTS" = "Puntos Totales";
 "TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Puntos Totales v. %d Cuota";
+"TITLE_WOMENS_HANDICAP" = "Handicap - Damas";
 
 //	GOLFPlayType Titles & Descriptions
 "PLAY_TYPE_MEDAL_PLAY" = "Stroke Play";
