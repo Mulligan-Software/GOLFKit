@@ -72,12 +72,24 @@ typedef NS_ENUM(GOLFTeeColorIndex, teeColorIndexEnumeration) {
 	GOLFTeeColorPGA,					//	Custom tee marker (PGA) (53)
 	GOLFTeeColorUSGA,					//	Custom tee marker (USGA) (54)
 	GOLFTeeColorLastSpecial = GOLFTeeColorUSGA,
+	GOLFTeeColorCombo = 80,				//	Combo tee color (80)
 	GOLFTeeColorGeneric = 98,			//	Generic tee color (98)
 	GOLFTeeColorUnknown = 99,			//	Unknown tee color
 	GOLFTeeColorAdd = 998,				//	"Add" tee color
 	GOLFTeeColorAll = 999				//	"All" tee color
 };
 
+#if !defined(IS_ANY_SOLID_TEE_COLOR_INDEX)
+	#define IS_ANY_SOLID_TEE_COLOR_INDEX(_index)	((((_index) >= GOLFTeeColorFirstSolid) && ((_index) <= GOLFTeeColorLastSolid)) ? YES : NO)
+#endif
+
+#if !defined(IS_ANY_COMBO_TEE_COLOR_INDEX)
+	#define IS_ANY_COMBO_TEE_COLOR_INDEX(_index)	((((_index) >= GOLFTeeColorFirstCombo) && ((_index) <= GOLFTeeColorLastCombo)) ? YES : NO)
+#endif
+
+#if !defined(IS_ANY_STANDARD_TEE_COLOR_INDEX)
+	#define IS_ANY_STANDARD_TEE_COLOR_INDEX(_index)	((IS_ANY_SOLID_TEE_COLOR_INDEX(_index) || IS_ANY_COMBO_TEE_COLOR_INDEX(_index)) ? YES : NO)
+#endif
 
 @interface GOLFColor (GOLFColorCategories)
 

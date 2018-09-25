@@ -60,29 +60,29 @@ GOLFTeeColorIndex GOLFTeeColorIndexFromTeeColor(GOLFColor *teeColor);
 
 NSString * GOLFTeeColorNameFromTeeColorIndex(GOLFTeeColorIndex proposedColorIndex);
 //	Returns the localized name of the tee whose colorIndex matches proposedColorIndex, like "Blue", "Rouge et Blanc", etc.
-//	Can also return "Custom", "Unknown", "Add" and "All" for special cases
+//	Can also return "Custom", "Unknown", "Combo", "Add" and "All" for special cases
 
 GOLFTeeImage * GOLFTeeMarkerImageFromSpecs(GOLFTeeColorIndex teeColorIndex, GOLFTeeMarkerImageSize imageSize, GOLFColor *teeColor);
 //	Returns a tee marker image of the specified size associated with the teeColorIndex provided
-//	When teeColorIndex is GOLFTeeColorAdd, returns the special "Add" tee icon
+//	When teeColorIndex is GOLFTeeColorCombo, GOLFTeeColorAdd or GOLFTeeColorAll, returns the special tee icon
 //	When teeColorIndex is GOLFTeeColorCustom, returns a custom-colored (teeColor) tee icon
 //	If teeColorIndex is not any of the above, returns the special "Generic" tee icon
 //	if imageSize is GOLFTeeMarkerImageSizeDefault or not any of the above GOLFTeeMarkerImageSize options, returns a 32pt. image
 
 GOLFTeeImage * GOLFTeeMarkerImageFromTeeColorIndex(GOLFTeeColorIndex teeColorIndex, GOLFColor *teeColor);
 //	Returns a standard (32x32 pt.) tee marker image associated with the teeColorIndex provided
-//	When teeColorIndex is GOLFTeeColorAdd, returns the special "Add" tee icon
+//	When teeColorIndex is GOLFTeeColorCombo, GOLFTeeColorAdd or GOLFTeeColorAll, returns the special tee icon
 //	When teeColorIndex is GOLFTeeColorCustom, returns a custom-colored (teeColor) tee icon
 //	If teeColorIndex is not any of the above, returns the special "Generic" tee icon
 
 GOLFTeeImage * GOLFLittleTeeMarkerImageFromTeeColorIndex(GOLFTeeColorIndex teeColorIndex, GOLFColor *teeColor);
 //	Returns a small (16x16 pt.) tee marker image associated with the teeColorIndex provided
-//	When teeColorIndex is GOLFTeeColorAdd, returns the special "Add" tee icon
+//	When teeColorIndex is GOLFTeeColorCombo, GOLFTeeColorAdd or GOLFTeeColorAll, returns the special tee icon
 //	When teeColorIndex is GOLFTeeColorCustom, returns a custom-colored (teeColor) tee icon
 //	If teeColorIndex is not any of the above, returns the special "Generic" tee icon
 
 GOLFTeeImage * GOLFLargeTeeMarkerImageFromTeeColorIndex(GOLFTeeColorIndex teeColorIndex, GOLFColor *teeColor);
 //	Returns a large (64x64 pt.) tee marker image associated with the teeColorIndex provided
-//	When teeColorIndex is GOLFTeeColorAdd, returns the special "Add" tee icon
+//	When teeColorIndex is GOLFTeeColorCombo, GOLFTeeColorAdd or GOLFTeeColorAll, returns the special tee icon
 //	When teeColorIndex is GOLFTeeColorCustom, returns a custom-colored (teeColor) tee icon
 //	If teeColorIndex is not any of the above, returns the special "Generic" tee icon

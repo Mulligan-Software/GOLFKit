@@ -30,6 +30,7 @@
 "TERM_COURSE_PLURAL" = "courses";
 "TERM_DISQUALIFIED" = "disqualified";
 "TERM_DISQUALIFIED_ABBR" = "disq.";
+"TERM_DISQUALIFIED_ACRONYM" = "DQ";
 "TERM_EVENT" = "event";
 "TERM_EVENT_PLURAL" = "events";
 "TERM_FOURBALL" = "Four-Ball";
@@ -37,6 +38,7 @@
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "gross";
 "TERM_HANDICAP" = "handicap";
+"TERM_HANDICAP_ABBR" = "hdcp";
 "TERM_HOLE" = "hole";
 "TERM_HOLE_PLURAL" = "holes";
 "TERM_INDICATE" = "indicate";
@@ -46,10 +48,12 @@
 "TERM_LIMITED" = "limited";
 "TERM_MEDAL" = "medal";
 "TERM_MEDALMATCH" = "Medal Match";
+"TERM_METER_PLURAL_ABBR" = "Mtr.";
 "TERM_NET" = "net";
 "TERM_NINE" = "nine";
 "TERM_NINE_PLURAL" = "nines";
 "TERM_NINEPT" = "9-Point";
+"TERM_NO" = "no";
 "TERM_NONE" = "none";
 "TERM_NUMBER" = "number";
 "TERM_NUMBER_ABBR" = "no.";
@@ -86,7 +90,9 @@
 "TERM_TOURNAMENT" = "tournament";
 "TERM_UNKNOWN" = "unknown";
 "TERM_WALTZ" = "Waltz";
+"TERM_YARD_PLURAL_ABBR" = "Yds.";
 "TERM_YARDAGE" = "yardage";
+"TERM_YES" = "yes";
 "TERM_ZIGZAG" = "Zig-Zag";
 
 //	Standard Tee Colors
@@ -120,6 +126,7 @@
 "GOLF_TEE_COLOR_NAME_EU" = "E.U.";		//	Custom tee
 "GOLF_TEE_COLOR_NAME_PGA" = "PGA Tour";	//	Custom tee
 "GOLF_TEE_COLOR_NAME_USGA" = "USGA";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_COMBO" = "Combo";
 "GOLF_TEE_COLOR_NAME_GENERIC" = "A Tee";
 "GOLF_TEE_COLOR_NAME_UNKNOWN" = "Unknown";
 "GOLF_TEE_COLOR_NAME_ADD" = "Add";
@@ -257,6 +264,7 @@
 "TITLE_TECHNICAL_SUPPORT" = "Technical Support";
 "TITLE_TOTAL_POINTS" = "Total Points";
 "TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Total Points v. %d Quota";
+"TITLE_UNLOCK_ENTIRE_EVENT" = "Unlock all Event Scorecards";
 "TITLE_WOMENS_HANDICAP" = "Women’s Handicap";
 
 //	GOLFPlayType Titles & Descriptions

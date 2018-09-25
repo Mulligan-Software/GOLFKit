@@ -210,7 +210,7 @@ typedef NS_OPTIONS(NSUInteger, GOLFRoundProcessingStatus) {
 	GOLFRoundProcessingStatusOption13						= 1 << 13,		//	(8192)
 	GOLFRoundProcessingStatusOption14						= 1 << 14,		//	(16384)
 	GOLFRoundProcessingStatusOption15						= 1 << 15,		//	(32768)
-	GOLFRoundProcessingStatusNeedsCourseHandicapUpdate		= 1 << 16,		//	(65536)
+	GOLFRoundProcessingStatusNeedsPlayingHandicapUpdate		= 1 << 16,		//	(65536)
 	GOLFRoundProcessingStatusNeedsHandicapAllowanceUpdate	= 1 << 17		//	(131072)
 };
 
@@ -257,6 +257,19 @@ typedef NS_OPTIONS(NSUInteger, GOLFRoundHoleStatus) {
 	GOLFRoundHoleStatusOption9				= 1 << 9,		//	(512)
 	GOLFRoundHoleStatusOption10				= 1 << 10,		//	(1024)
 	GOLFRoundHoleStatusHigherIsBetter		= 1 << 11		//	(2048)		Comp scoring is in points (higher is better)
+};
+
+typedef NS_OPTIONS(NSUInteger, GOLFMembershipStatus) {
+	GOLFMembershipStatusNone							= 0,			//	(0)
+	GOLFMembershipStatusOption0							= 1 << 0,		//	(1)
+	GOLFMembershipStatusOption1							= 1 << 1,		//	(2)
+	GOLFMembershipStatusHandicapIndexIsOverridden		= 1 << 2,		//	(4)			Handicap Index applied to this membership has been overridden
+	GOLFMembershipStatusPlayingHandicapIsOverridden		= 1 << 3,		//	(8)			Playing Handicap applied to this membership has been overridden
+	GOLFMembershipStatusHas9HoleHandicapIndex			= 1 << 4,		//	(16)		Handicap Index is a 9-hole value
+	GOLFMembershipStatusHas9HolePlayingHandicap			= 1 << 5,		//	(32)		Playing Handicap is a 9-hole value
+	GOLFMembershipStatusHandicapIndexIsLimited			= 1 << 6,		//	(64)		Handicap Index applied to this membership has been overridden
+	GOLFMembershipStatusPlayingHandicapIsLimited		= 1 << 7,		//	(128)		Playing Handicap applied to this membership has been limited
+	GOLFMembershipStatusHandicapAllowanceIsAdjusted		= 1 << 8		//	(256)		Handicap Allowance has been adjusted for ratings (etc.)
 };
 
 
