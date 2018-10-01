@@ -173,23 +173,32 @@ typedef NS_ENUM(NSUInteger, GOLFFairwayStatus) {
 //	Status Masks
 
 typedef NS_OPTIONS(NSUInteger, GOLFRoundStatus) {
-	GOLFRoundStatusNone						= 0,			//	(0)
-	GOLFRoundStatusNoFairways				= 1 << 0,		//	(1)			No fairways hit (not the same as all fairways unknown)
-	GOLFRoundStatusIgnoreForHandicapping	= 1 << 1,		//	(2)			Ignored for stats and handicapping
-	GOLFRoundStatusIsPenaltyRound			= 1 << 2,		//	(4)			Penalty Round
-	GOLFRoundStatusUsesMultipleTees			= 1 << 3,		//	(8)			Round is contested on more than 1 tee
-	GOLFRoundStatusUsesSSS					= 1 << 4,		//	(16)		Round's course rated with a Standard Scratch Score
-	GOLFRoundStatusNetScoreInTenths			= 1 << 5,		//	(32)		Net scores report to a tenth
-	GOLFRoundStatusIsDisqualified			= 1 << 6,		//	(64)		Competitor's round disqualified
-	GOLFRoundStatusUses9HoleOverrides		= 1 << 7,		//	(128)		Override handicaps are 9-hole values
-	GOLFRoundStatusIsInternetPostedRound	= 1 << 8,		//	(256)		Round has been posted via the internet
-	GOLFRoundStatusIsHandicapPostedRound	= 1 << 9,		//	(512)		Round has been posted for handicapping
-	GOLFRoundStatusIsMatchRound				= 1 << 10,		//	(1024)		Round was played during Match Play
-	GOLFRoundStatusHigherIsBetter			= 1 << 11,		//	(2048)		Comp scoring is in points (higher is better)
-	GOLFRoundStatusOptedOutOfSkins			= 1 << 12,		//	(4096)		Competitor has opted out of skins competition in this round
-	GOLFRoundStatus13						= 1 << 13,		//	(8192)
-	GOLFRoundStatus14						= 1 << 14,		//	(16384)
-	GOLFRoundStatusIsMissingCompetitor		= 1 << 15		//	(32768)		Core Data fault on access
+	GOLFRoundStatusNone								= 0,			//	(0)
+	GOLFRoundStatusNoFairways						= 1 << 0,		//	(1)			No fairways hit (not the same as all fairways unknown)
+	GOLFRoundStatusIgnoreForHandicapping			= 1 << 1,		//	(2)			Ignored for stats and handicapping
+	GOLFRoundStatusIsPenaltyRound					= 1 << 2,		//	(4)			Penalty Round
+	GOLFRoundStatusUsesMultipleTees					= 1 << 3,		//	(8)			Round is contested on more than 1 tee
+	GOLFRoundStatusUsesSSS							= 1 << 4,		//	(16)		Round's course rated with a Standard Scratch Score
+	GOLFRoundStatusNetScoreInTenths					= 1 << 5,		//	(32)		Net scores report to a tenth
+	GOLFRoundStatusIsDisqualified					= 1 << 6,		//	(64)		Competitor's round disqualified
+	GOLFRoundStatusUses9HoleOverrides				= 1 << 7,		//	(128)		Override handicaps are 9-hole values
+	GOLFRoundStatusIsInternetPostedRound			= 1 << 8,		//	(256)		Round has been posted via the internet
+	GOLFRoundStatusIsHandicapPostedRound			= 1 << 9,		//	(512)		Round has been posted for handicapping
+	GOLFRoundStatusIsMatchRound						= 1 << 10,		//	(1024)		Round was played during Match Play
+	GOLFRoundStatusHigherIsBetter					= 1 << 11,		//	(2048)		Comp scoring is in points (higher is better)
+	GOLFRoundStatusOptedOutOfSkins					= 1 << 12,		//	(4096)		Competitor has opted out of skins competition in this round
+	GOLFRoundStatusOption13							= 1 << 13,		//	(8192)
+	GOLFRoundStatusOption14							= 1 << 14,		//	(16384)
+	GOLFRoundStatusIsMissingCompetitor				= 1 << 15,		//	(32768)		Core Data fault on access
+	GOLFRoundStatusOfficialHandicapIsOverridden		= 1 << 16,		//	(65536)
+	GOLFRoundStatusOfficialHandicapIsLimited		= 1 << 17,		//	(131072)
+	GOLFRoundStatusPlayingHandicapIsOverridden		= 1 << 18,		//	(262144)
+	GOLFRoundStatusPlayingHandicapIsLimited			= 1 << 19,		//	(524288)
+	GOLFRoundStatusHandicapAllowanceIsAdjusted		= 1 << 20,		//	(1048576)
+	GOLFRoundStatusOption21							= 1 << 21,		//	(2097152)
+	GOLFRoundStatusOption22							= 1 << 22,		//	(4194304)
+	GOLFRoundStatusOption23							= 1 << 23,		//	(8388608)
+	GOLFRoundStatusOption24							= 1 << 24		//	(16777216)
 };
 
 typedef NS_OPTIONS(NSUInteger, GOLFRoundProcessingStatus) {
@@ -263,13 +272,25 @@ typedef NS_OPTIONS(NSUInteger, GOLFMembershipStatus) {
 	GOLFMembershipStatusNone							= 0,			//	(0)
 	GOLFMembershipStatusOption0							= 1 << 0,		//	(1)
 	GOLFMembershipStatusOption1							= 1 << 1,		//	(2)
-	GOLFMembershipStatusHandicapIndexIsOverridden		= 1 << 2,		//	(4)			Handicap Index applied to this membership has been overridden
-	GOLFMembershipStatusPlayingHandicapIsOverridden		= 1 << 3,		//	(8)			Playing Handicap applied to this membership has been overridden
+	GOLFMembershipStatusOption2							= 1 << 2,		//	(4)
+	GOLFMembershipStatusOption3							= 1 << 3,		//	(8)
 	GOLFMembershipStatusHas9HoleHandicapIndex			= 1 << 4,		//	(16)		Handicap Index is a 9-hole value
 	GOLFMembershipStatusHas9HolePlayingHandicap			= 1 << 5,		//	(32)		Playing Handicap is a 9-hole value
-	GOLFMembershipStatusHandicapIndexIsLimited			= 1 << 6,		//	(64)		Handicap Index applied to this membership has been overridden
-	GOLFMembershipStatusPlayingHandicapIsLimited		= 1 << 7,		//	(128)		Playing Handicap applied to this membership has been limited
-	GOLFMembershipStatusHandicapAllowanceIsAdjusted		= 1 << 8		//	(256)		Handicap Allowance has been adjusted for ratings (etc.)
+	GOLFMembershipStatusOption6							= 1 << 6,		//	(64)
+	GOLFMembershipStatusOption7							= 1 << 7,		//	(128)
+	GOLFMembershipStatusOption8							= 1 << 8,		//	(256)
+	GOLFMembershipStatusOption9							= 1 << 9,		//	(512)
+	GOLFMembershipStatusOption10						= 1 << 10,		//	(1024)
+	GOLFMembershipStatusOption11						= 1 << 11,		//	(2048)
+	GOLFMembershipStatusOption12						= 1 << 12,		//	(4096)
+	GOLFMembershipStatusOption13						= 1 << 13,		//	(8192)
+	GOLFMembershipStatusOption14						= 1 << 14,		//	(16384)
+	GOLFMembershipStatusOption15						= 1 << 15,		//	(32768)
+	GOLFMembershipStatusOfficialHandicapIsOverridden	= 1 << 16,		//	(65536)		Handicap Index applied to this membership has been overridden
+	GOLFMembershipStatusOfficialHandicapIsLimited		= 1 << 17,		//	(131072)	Handicap Index applied to this membership has been limited
+	GOLFMembershipStatusPlayingHandicapIsOverridden		= 1 << 18,		//	(262144)	Playing Handicap applied to this membership has been overridden
+	GOLFMembershipStatusPlayingHandicapIsLimited		= 1 << 19,		//	(524288)	Playing Handicap applied to this membership has been limited
+	GOLFMembershipStatusHandicapAllowanceIsAdjusted		= 1 << 20		//	(1048576)	Handicap Allowance has been adjusted for ratings (etc.)
 };
 
 
