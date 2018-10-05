@@ -80,6 +80,8 @@
 "TERM_SIDE" = "Seite";
 "TERM_SIXPT" = "6-Punkte";
 "TERM_STABLEFORD" = "Stableford";
+"TERM_STROKE" = "Schlag";
+"TERM_STROKE_PLURAL" = "Schläge";
 "TERM_TAP" = "tippen";
 "TERM_TEAM" = "Mannschaft";
 "TERM_TEAM_PLURAL" = "Mannschaften";
@@ -176,6 +178,7 @@
 "TIEBREAKING_USGA_DESC" = "letzen 9 Löcher, letzen 6, letzen 3, letzte Loch";
 
 //	Titles & Abbr.
+"TITLE_ADJUSTED_FOR_RATINGS" = "bereinigt um Unterschiede in de Course Ratings";
 "TITLE_ALLOWANCE" = "Zustimmung";
 "TITLE_BACK_NINE" = "Rückneun";
 "TITLE_BACK_SIDE" = "Rückseite";
@@ -253,6 +256,7 @@
 "TITLE_LAST_HOLE" = "letztes Loch";
 "TITLE_MENS_HANDICAP" = "Handicap der Herren";
 "TITLE_NEXT_HOLE" = "nächstes Loch";
+"TITLE_NO_STROKES" = "keine Schläge";
 "TITLE_PREVIOUS_HOLE" = "vorheriges Loch";
 "TITLE_PRINT_SCORECARD" = "Drucken Scorecard";
 "TITLE_PRINT_SCORECARDS" = "Drucken Scorecards";

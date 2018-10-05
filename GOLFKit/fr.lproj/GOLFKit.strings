@@ -80,6 +80,8 @@
 "TERM_SIDE" = "côté";
 "TERM_SIXPT" = "6-Points";
 "TERM_STABLEFORD" = "Stableford";
+"TERM_STROKE" = "coup";
+"TERM_STROKE_PLURAL" = "coups";
 "TERM_TAP" = "toucher";
 "TERM_TEAM" = "équipe";
 "TERM_TEAM_PLURAL" = "équipes";
@@ -176,13 +178,14 @@
 "TIEBREAKING_USGA_DESC" = "Dernier 9 trous, dernier 6, dernier 3, trou ultime";
 
 //	Titles & Abbr.
+"TITLE_ADJUSTED_FOR_RATINGS" = "ajusté pour les différences dans les évaluations parcours";
 "TITLE_ALLOWANCE" = "Allocation";
 "TITLE_BACK_NINE" = "Deuxième Neuf";
 "TITLE_BACK_SIDE" = "Deuxième Côté";
 "TITLE_CANCEL" = "Annuler";
 "TITLE_CBA" = "Computed Buffer Adjustment";
 "TITLE_CBA_ABBR" = "CBA";
-"TITLE_CCR" = "Calculated Course Rating";
+"TITLE_CCR" = "Évaluation Parcours Calculée";
 "TITLE_CCR_ABBR" = "CCR";
 "TITLE_CHOOSE_HOLE" = "Choisissez un trou";
 "TITLE_CSS" = "Scratch Score de Compétition";
@@ -253,6 +256,7 @@
 "TITLE_LAST_HOLE" = "Dernier Trou";
 "TITLE_MENS_HANDICAP" = "Handicap - Hommes";
 "TITLE_NEXT_HOLE" = "Trou Suivant";
+"TITLE_NO_STROKES" = "aucun coups";
 "TITLE_PREVIOUS_HOLE" = "Trou Précédent";
 "TITLE_PRINT_SCORECARD" = "Imprimer Carte de Score";
 "TITLE_PRINT_SCORECARDS" = "Imprimer Cartes de Score";

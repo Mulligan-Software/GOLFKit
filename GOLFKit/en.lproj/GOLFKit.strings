@@ -80,6 +80,8 @@
 "TERM_SIDE" = "side";
 "TERM_SIXPT" = "6-Point";
 "TERM_STABLEFORD" = "Stableford";
+"TERM_STROKE" = "stroke";
+"TERM_STROKE_PLURAL" = "strokes";
 "TERM_TAP" = "tap";
 "TERM_TEAM" = "team";
 "TERM_TEAM_PLURAL" = "teams";
@@ -176,6 +178,7 @@
 "TIEBREAKING_USGA_DESC" = "Last 9 holes, last 6, last 3, last hole";
 
 //	Titles & Abbr.
+"TITLE_ADJUSTED_FOR_RATINGS" = "adjusted for Course Rating differences";
 "TITLE_ALLOWANCE" = "Allowance";
 "TITLE_BACK_NINE" = "Back Nine";
 "TITLE_BACK_SIDE" = "Back Side";
@@ -253,6 +256,7 @@
 "TITLE_LAST_HOLE" = "Last Hole";
 "TITLE_MENS_HANDICAP" = "Men’s Handicap";
 "TITLE_NEXT_HOLE" = "Next Hole";
+"TITLE_NO_STROKES" = "no strokes";
 "TITLE_PREVIOUS_HOLE" = "Previous Hole";
 "TITLE_PRINT_SCORECARD" = "Print Scorecard";
 "TITLE_PRINT_SCORECARDS" = "Print Scorecards";
