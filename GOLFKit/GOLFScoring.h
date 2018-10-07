@@ -107,6 +107,10 @@ typedef NS_ENUM(NSUInteger, GOLFPlayType) {
 	#define IS_ANY_PLAYER_PLAY_TYPE(_type)	((((_type) >= MedalPlayType) && ((_type) <= LastPlayerPlayType)) ? YES : NO)
 #endif
 
+#if !defined(IS_NON_MEDAL_PLAYER_PLAY_TYPE)
+	#define IS_NON_MEDAL_PLAYER_PLAY_TYPE(_type)	((((_type) >= SelectedHolesPlayType) && ((_type) <= LastPlayerPlayType)) ? YES : NO)
+#endif
+
 #if !defined(IS_MEDAL_OR_STABLEFORD_PLAY_TYPE)
 	#define IS_MEDAL_OR_STABLEFORD_PLAY_TYPE(_type)	((((_type) >= MedalPlayType) && ((_type) <= LastStablefordPlayType)) ? YES : NO)
 #endif
@@ -220,7 +224,8 @@ typedef NS_OPTIONS(NSUInteger, GOLFRoundProcessingStatus) {
 	GOLFRoundProcessingStatusOption14						= 1 << 14,		//	(16384)
 	GOLFRoundProcessingStatusOption15						= 1 << 15,		//	(32768)
 	GOLFRoundProcessingStatusNeedsPlayingHandicapUpdate		= 1 << 16,		//	(65536)
-	GOLFRoundProcessingStatusNeedsHandicapAllowanceUpdate	= 1 << 17		//	(131072)
+	GOLFRoundProcessingStatusNeedsHandicapAllowanceUpdate	= 1 << 17,		//	(131072)
+	GOLFRoundProcessingStatusNeedsAllowedStrokesUpdate		= 1 << 18		//	(262144)
 };
 
 typedef NS_OPTIONS(NSUInteger, GOLFRoundSideStatus) {

@@ -9,6 +9,7 @@
 //	Golf Terminology
 "TERM_ADJUSTED" = "angepasst";
 "TERM_ADJUSTED_ABBR" = "ange.";
+"TERM_ADJUSTED_FOR_RATINGS" = "bereinigt um Unterschiede der Course Ratings";
 "TERM_ALLOWANCE" = "Zustimmung";
 "TERM_AUTHORITY" = "Autorität";
 "TERM_AVERAGE" = "mittlere";
@@ -64,9 +65,11 @@
 "TERM_PEORIA" = "Peoria";
 "TERM_PLAYER" = "Spieler";
 "TERM_PLAYER_PLURAL" = "Spieler";
-"TERM_POINTS" = "Punkte";
-"TERM_POINTS_ABBR" = "Pte.";
-"TERM_QUOTA" = "quote";
+"TERM_POINT" = "Punkt";
+"TERM_POINT_ABBR" = "Pt.";
+"TERM_POINT_PLURAL" = "Punkte";
+"TERM_POINT_PLURAL_ABBR" = "Pte.";
+"TERM_QUOTA" = "Quote";
 "TERM_REVERSERITZ" = "Ritz Rückwärts";
 "TERM_RITZ" = "Ritz";
 "TERM_ROUND" = "Runde";
@@ -91,6 +94,7 @@
 "TERM_TOTAL" = "gesamt";
 "TERM_TOURNAMENT" = "Turnier";
 "TERM_UNKNOWN" = "unbekannt";
+"TERM_VERSUS_ABBR" = "vs.";
 "TERM_WALTZ" = "Waltzer";
 "TERM_YARD_PLURAL_ABBR" = "Yds.";
 "TERM_YARDAGE" = "Meterzahl";
@@ -178,7 +182,6 @@
 "TIEBREAKING_USGA_DESC" = "letzen 9 Löcher, letzen 6, letzen 3, letzte Loch";
 
 //	Titles & Abbr.
-"TITLE_ADJUSTED_FOR_RATINGS" = "bereinigt um Unterschiede in de Course Ratings";
 "TITLE_ALLOWANCE" = "Zustimmung";
 "TITLE_BACK_NINE" = "Rückneun";
 "TITLE_BACK_SIDE" = "Rückseite";
@@ -260,6 +263,7 @@
 "TITLE_PREVIOUS_HOLE" = "vorheriges Loch";
 "TITLE_PRINT_SCORECARD" = "Drucken Scorecard";
 "TITLE_PRINT_SCORECARDS" = "Drucken Scorecards";
+"TITLE_QUOTA_POINTS_GAINED" = "Quotenpunkte gewonnen";
 "TITLE_REGISTER" = "Registrieren";
 "TITLE_SAVE" = "Sichern";
 "TITLE_SELECTED_HOLES" = "ausgewählte Löcher";
@@ -431,6 +435,7 @@
 "ORDINAL_20TH_TO_29TH" = ".,.,.,.,.,.,.,.,.,.";
 "SCORECARD_EXCEEDS_1_PLAYER" = "Scorecard überschreitet maximal 1 Spieler";
 "SCORECARD_EXCEEDS_%ld_PLAYERS" = "Scorecard überschreitet maximal %ld Spieler";
+"WITH_CHARACTER" = "c̅";		//	Special character
 
 //	Countries
 "Algeria" = "Algerien";
