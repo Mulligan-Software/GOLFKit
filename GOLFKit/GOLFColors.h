@@ -96,6 +96,7 @@ typedef NS_ENUM(GOLFTeeColorIndex, teeColorIndexEnumeration) {
 #endif
 
 @interface GOLFColor (GOLFColorCategories)
++ (BOOL)dark;	//	When a dark-themed NSAppearance is active on the current thread or in the App
 
 + (id)GOLFFactoryEagleScoreColor;
 + (id)GOLFFactoryBirdieScoreColor;
@@ -104,4 +105,23 @@ typedef NS_ENUM(GOLFTeeColorIndex, teeColorIndexEnumeration) {
 + (id)GOLFFactoryUnderParScoreColor;
 + (id)GOLFFactoryOverParScoreColor;
 
++ (id)GOLFFactoryDarkEagleScoreColor;
++ (id)GOLFFactoryDarkBirdieScoreColor;
++ (id)GOLFFactoryDarkParScoreColor;
++ (id)GOLFFactoryDarkBogeyScoreColor;
+
+//	From GOLFColors.xcassets (Appearance sensitive)
++ (id)GOLFFactoryBirdieColor API_AVAILABLE(macosx(10.10),ios(9.0));
++ (id)GOLFFactoryBogeyColor API_AVAILABLE(macosx(10.10),ios(9.0));
++ (id)GOLFFactoryEagleColor API_AVAILABLE(macosx(10.10),ios(9.0));
++ (id)GOLFFactoryErrorHighlightColor API_AVAILABLE(macosx(10.10),ios(9.0));
++ (id)GOLFFactoryMatchAColor API_AVAILABLE(macosx(10.10),ios(9.0));
++ (id)GOLFFactoryMatchBColor API_AVAILABLE(macosx(10.10),ios(9.0));
++ (id)GOLFFactoryParColor API_AVAILABLE(macosx(10.10),ios(9.0));
++ (id)GOLFFactoryPeoriaBackgroundColor API_AVAILABLE(macosx(10.10),ios(9.0));
++ (id)GOLFFactoryPlottingPrimaryColor API_AVAILABLE(macosx(10.10),ios(9.0));
++ (id)GOLFFactoryPlottingSecondaryColor API_AVAILABLE(macosx(10.10),ios(9.0));
++ (id)GOLFFactorySkinsBackgroundColor API_AVAILABLE(macosx(10.10),ios(9.0));
+
 @end
+

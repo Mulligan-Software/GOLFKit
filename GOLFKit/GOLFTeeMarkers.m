@@ -585,7 +585,6 @@ GOLFTeeImage * GOLFTeeMarkerImageFromSpecs(GOLFTeeColorIndex teeColorIndex, GOLF
 	//	Finalize the image name…
 	if (teeColorIndex != GOLFTeeColorGeneric) {
 		if (IS_ANY_STANDARD_TEE_COLOR_INDEX(teeColorIndex)) {
-//		if ((teeColorIndex >= GOLFTeeColorFirstSolid) && (teeColorIndex <= GOLFTeeColorLastCombo)) {
 			for (NSDictionary *colorDict in GOLFStandardTeeColorArray()) {
 				if ([[colorDict objectForKey:@"teeColorIndex"] integerValue] == teeColorIndex) {
 					workingTeeImageName = [colorDict objectForKey:@"teeImageName"];
@@ -660,7 +659,6 @@ GOLFTeeImage * GOLFTeeMarkerImageFromSpecs(GOLFTeeColorIndex teeColorIndex, GOLF
 		//	Finalize the icon name…
 		if (teeColorIndex != GOLFTeeColorGeneric) {
 			if (IS_ANY_STANDARD_TEE_COLOR_INDEX(teeColorIndex)) {
-//			if ((teeColorIndex >= GOLFTeeColorFirstSolid) && (teeColorIndex <= GOLFTeeColorLastCombo)) {
 				for (NSDictionary *colorDict in GOLFStandardTeeColorArray()) {
 					if ([[colorDict objectForKey:@"teeColorIndex"] integerValue] == teeColorIndex) {
 						workingTeeIconName = [colorDict objectForKey:@"teeIconName"];
@@ -683,7 +681,6 @@ GOLFTeeImage * GOLFTeeMarkerImageFromSpecs(GOLFTeeColorIndex teeColorIndex, GOLF
 				workingTeeIconName = @"GOLFTeeMarkerUSGA";
 			}
 		}
-//		workingTeeMarkerImage = [GOLFTeeImage imageNamed:workingTeeIconName];	//	The icon as pulled from the bundle
 		workingTeeMarkerImage = (GOLFTeeImage *)[ourBundle imageForResource:workingTeeIconName];	//	The icon as pulled from the bundle
 	}
 

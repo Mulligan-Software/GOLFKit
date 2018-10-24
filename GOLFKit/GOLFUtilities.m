@@ -125,7 +125,6 @@ NSDictionary * GOLFHomeCountryInfo(void) {
 	//	states			NSArray *				Optional array of states dictionaries for this country - postalCode, stateName
 	
 	NSLocale *ourLocale = [NSLocale autoupdatingCurrentLocale];
-//	NSString *localeIdentifier = [ourLocale localeIdentifier];
 	NSString *countryCode = @"US";
 	if (@available(macOS 10.12, iOS 10.0, *)) {
 		countryCode = ourLocale.countryCode;
@@ -148,6 +147,21 @@ NSString * GOLFLocalizedString(NSString *key) {
 	return key;
 }
 
+GOLFImage * GOLFImageWithName(NSString *imageName) {
+	GOLFImage *prospectiveImage = nil;
+	if (imageName && (imageName.length > 0)) {
+		NSBundle *ourBundle = GOLFKitBundle();
+#if TARGET_OS_IOS || TARGET_OS_WATCH
+		prospectiveImage = [GOLFTeeImage imageNamed:imageName inBundle:ourBundle compatibleWithTraitCollection:nil];
+#elif TARGET_OS_MAC
+		prospectiveImage = [ourBundle imageForResource:imageName];
+		if (prospectiveImage == nil) {
+			prospectiveImage = [[NSBundle mainBundle] imageForResource:imageName];
+		}
+#endif
+	}
+	return prospectiveImage;
+}
 
 #pragma mark NSStringFrom… Utilities
 

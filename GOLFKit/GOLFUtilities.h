@@ -9,6 +9,21 @@
 @import Foundation;
 #import "GOLFKitTypes.h"
 
+#if TARGET_OS_IOS || TARGET_OS_WATCH
+
+@import UIKit;
+
+#define GOLFImage UIImage
+
+#elif TARGET_OS_MAC
+
+@import Cocoa;
+
+#define GOLFImage NSImage
+
+#endif
+
+
 //	No-value constants
 #define kNotAnIntegerValue			-999		//	No-value for misc. NSInteger-based value storage
 #define kNotAFloatValue				-999.0		//	No-value for misc. float-based value storage
@@ -40,6 +55,9 @@ NSDictionary * GOLFHomeCountryInfo(void);
 
 NSString * GOLFLocalizedString(NSString *key);
 //	Localized NSString from a) GOLFKit.strings or b) the app's Localizable.strings
+
+GOLFImage * GOLFImageWithName(NSString *name);
+//	An NSImage or UIImage available in GOLFKit by name
 
 #pragma mark NSStringFrom… Utilities
 
