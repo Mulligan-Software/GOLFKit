@@ -56,7 +56,7 @@ NSDictionary * GOLFHomeCountryInfo(void);
 NSString * GOLFLocalizedString(NSString *key);
 //	Localized NSString from a) GOLFKit.strings or b) the app's Localizable.strings
 
-GOLFImage * GOLFImageWithName(NSString *name);
+GOLFImage * GOLFImageWithName(NSString *imageName);
 //	An NSImage or UIImage available in GOLFKit by name
 
 #pragma mark NSStringFrom… Utilities

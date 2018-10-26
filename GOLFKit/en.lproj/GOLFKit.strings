@@ -56,6 +56,7 @@
 "TERM_NINEPT" = "9-Point";
 "TERM_NO" = "no";
 "TERM_NONE" = "none";
+"TERM_NORMAL" = "normal";
 "TERM_NUMBER" = "number";
 "TERM_NUMBER_ABBR" = "no.";
 "TERM_NUMBER_PLURAL" = "numbers";
@@ -90,9 +91,12 @@
 "TERM_TEAM_PLURAL" = "teams";
 "TERM_TEE" = "tee";
 "TERM_TEE_PLURAL" = "tees";
+"TERM_THEME" = "theme";
 "TERM_TIEBREAKER" = "tiebreaker";
+"TERM_TIPS" = "tips";
 "TERM_TOTAL" = "total";
 "TERM_TOURNAMENT" = "tournament";
+"TERM_TRAINING" = "training";
 "TERM_UNKNOWN" = "unknown";
 "TERM_VERSUS_ABBR" = "vs.";
 "TERM_WALTZ" = "Waltz";
@@ -193,6 +197,7 @@
 "TITLE_CHOOSE_HOLE" = "Choose a Hole";
 "TITLE_CSS" = "Competition Scratch Score";
 "TITLE_CSS_ABBR" = "CSS";
+"TITLE_DARK" = "Dark";
 "TITLE_DONE" = "Done";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
@@ -201,6 +206,9 @@
 "TITLE_FIRST_HOLE" = "First Hole";
 "TITLE_FRONT_NINE" = "Front Nine";
 "TITLE_FRONT_SIDE" = "Front Side";
+"TITLE_GRAPHING_COLORS" = "Graphing Colors";
+"TITLE_PRIMARY" = "Primary";
+"TITLE_SECONDARY" = "Secondary";
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
 "TITLE_HANDICAP_PLURAL" = "Handicaps";
@@ -257,6 +265,7 @@
 "TITLE_GRADE" = "Grade";
 "TITLE_KEEPING_SCORE" = "Keeping score since 1995";
 "TITLE_LAST_HOLE" = "Last Hole";
+"TITLE_LIGHT" = "Light";
 "TITLE_MENS_HANDICAP" = "Men’s Handicap";
 "TITLE_NEXT_HOLE" = "Next Hole";
 "TITLE_NO_STROKES" = "no strokes";
@@ -269,11 +278,15 @@
 "TITLE_SELECTED_HOLES" = "Selected Holes";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
+"TITLE_SYSTEM" = "System";
 "TITLE_TECHNICAL_SUPPORT" = "Technical Support";
 "TITLE_TOTAL_POINTS" = "Total Points";
 "TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Total Points v. %d Quota";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Unlock all Event Scorecards";
 "TITLE_WOMENS_HANDICAP" = "Women’s Handicap";
+
+"DESCRIPTION_THEME_APPEARANCE" = "Light - Eagle always uses classic Aqua appearance\nDark - Eagle always uses Dark Mode appearance\nSystem - Eagle uses the appearance selected in System Preferences";
+"DESCRIPTION_THEME_PRE_MOJAVE" = "Prior to macOS 10.14 Mojave, Eagle uses the system's standard Aqua appearance style.";
 
 //	GOLFPlayType Titles & Descriptions
 "PLAY_TYPE_MEDAL_PLAY" = "Medal Play";

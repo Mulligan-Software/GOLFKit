@@ -23,7 +23,7 @@
 #import <GOLFKit/GOLFKitTypes.h>
 #import <GOLFKit/GOLFUtilities.h>
 
-//	Categories
+//	Categories - all targets
 #import <GOLFKit/GOLFExtensions.h>
 
 //	Documents (Scoring, Standings, etc.)
@@ -37,11 +37,9 @@
 #import <GOLFKit/GOLFHandicapping.h>
 #import <GOLFKit/MulliganScoring.h>
 
-//	Common category extensions
-#import <GOLFKit/NSNumber+GOLFExtensions.h>
-
 //	User Interface (Colors, text, localization, etc.)
 #import <GOLFKit/GOLFColors.h>
+#import <GOLFKit/GOLFDynamicColor.h>
 #import <GOLFKit/GOLFTeeMarkers.h>
 
 //	Custom Drawing (not available on the Watch)
@@ -65,9 +63,9 @@
 //	#import <GOLFKit/GOLFWatch.h>
 #endif
 
-//	OS X (not embedded, no iOS, no Watch)
+//	macOS (not embedded, no iOS, no Watch)
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
-//	#import <GOLFKit/GOLFMac.h>
+#import <GOLFKit/GOLFmacOSUtilities.h>
 #endif
 
 #define GOLFKIT_BUNDLE_ID			@"com.mulligansoftware.GOLFKit"

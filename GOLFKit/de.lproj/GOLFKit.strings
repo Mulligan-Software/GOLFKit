@@ -56,6 +56,7 @@
 "TERM_NINEPT" = "9-Punkte";
 "TERM_NO" = "Nein";
 "TERM_NONE" = "keiner";
+"TERM_NORMAL" = "üblich";
 "TERM_NUMBER" = "Nummer";
 "TERM_NUMBER_ABBR" = "nr.";
 "TERM_NUMBER_PLURAL" = "Nummern";
@@ -90,9 +91,12 @@
 "TERM_TEAM_PLURAL" = "Mannschaften";
 "TERM_TEE" = "Abschlag";
 "TERM_TEE_PLURAL" = "Abschläge";
+"TERM_THEME" = "Thema";
 "TERM_TIEBREAKER" = "tie-break";
+"TERM_TIPS" = "Hinweise";
 "TERM_TOTAL" = "gesamt";
 "TERM_TOURNAMENT" = "Turnier";
+"TERM_TRAINING" = "Schulung";
 "TERM_UNKNOWN" = "unbekannt";
 "TERM_VERSUS_ABBR" = "vs.";
 "TERM_WALTZ" = "Waltzer";
@@ -193,6 +197,7 @@
 "TITLE_CHOOSE_HOLE" = "Wählen ein Golfloch";
 "TITLE_CSS" = "Wettbewerbs-Scratch-Score";
 "TITLE_CSS_ABBR" = "CSS";
+"TITLE_DARK" = "Dunkel";
 "TITLE_DONE" = "Fertig";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
@@ -201,6 +206,7 @@
 "TITLE_FIRST_HOLE" = "erstes Loch";
 "TITLE_FRONT_NINE" = "Vorderneun";
 "TITLE_FRONT_SIDE" = "Vorderseite";
+"TITLE_GRAPHING_COLORS" = "Graphenfarben";
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
 "TITLE_HANDICAP_PLURAL" = "Handicapen";
@@ -257,23 +263,30 @@
 "TITLE_GRADE" = "Klasse";
 "TITLE_KEEPING_SCORE" = "Punkte gesammelt seit 1995";
 "TITLE_LAST_HOLE" = "letztes Loch";
+"TITLE_LIGHT" = "Helle";
 "TITLE_MENS_HANDICAP" = "Handicap der Herren";
 "TITLE_NEXT_HOLE" = "nächstes Loch";
 "TITLE_NO_STROKES" = "keine Schläge";
 "TITLE_PREVIOUS_HOLE" = "vorheriges Loch";
+"TITLE_PRIMARY" = "Primär";
 "TITLE_PRINT_SCORECARD" = "Drucken Scorecard";
 "TITLE_PRINT_SCORECARDS" = "Drucken Scorecards";
 "TITLE_QUOTA_POINTS_GAINED" = "Quotenpunkte gewonnen";
 "TITLE_REGISTER" = "Registrieren";
 "TITLE_SAVE" = "Sichern";
+"TITLE_SECONDARY" = "Sekundär";
 "TITLE_SELECTED_HOLES" = "ausgewählte Löcher";
 "TITLE_SSS" = "Scratch Score genormt";
 "TITLE_SSS_ABBR" = "SSS";
+"TITLE_SYSTEM" = "System";
 "TITLE_TECHNICAL_SUPPORT" = "Technische Unterstützung";
 "TITLE_TOTAL_POINTS" = "Gesamtpunktzahl";
 "TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Gesamtpunkte v. %d Kontingent";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Schalte alle Scorecards der Veranstaltung";
 "TITLE_WOMENS_HANDICAP" = "Handicap der Damen";
+
+"DESCRIPTION_THEME_APPEARANCE" = "Helle - Eagle verwendet immer den klassischen Aqua-Thema\nDunkel - Eagle verwendet immer den dunklen Modus\nSystem - Eagle verwendet das in den Systemeinstellungen ausgewählte Thema";
+"DESCRIPTION_THEME_PRE_MOJAVE" = "Vor macOS 10.14 Mojave, Eagle verwendet den standardmäßigen Aqua-Thema des Systems.";
 
 //	GOLFPlayType Titles & Descriptions
 "PLAY_TYPE_MEDAL_PLAY" = "Medaille spielen";

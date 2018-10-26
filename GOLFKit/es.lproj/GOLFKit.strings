@@ -56,6 +56,7 @@
 "TERM_NINEPT" = "9-Puntos";
 "TERM_NO" = "no";
 "TERM_NONE" = "nada";
+"TERM_NORMAL" = "normal";
 "TERM_NUMBER" = "número";
 "TERM_NUMBER_ABBR" = "no.";
 "TERM_NUMBER_PLURAL" = "números";
@@ -90,9 +91,12 @@
 "TERM_TEAM_PLURAL" = "equipos";
 "TERM_TEE" = "tee";
 "TERM_TEE_PLURAL" = "tees";
+"TERM_THEME" = "tema";
 "TERM_TIEBREAKER" = "desempate";
+"TERM_TIPS" = "consejos";
 "TERM_TOTAL" = "total";
 "TERM_TOURNAMENT" = "torneo";
+"TERM_TRAINING" = "entrenamiento";
 "TERM_UNKNOWN" = "ignoto";
 "TERM_VERSUS_ABBR" = "vs.";
 "TERM_WALTZ" = "Waltz";
@@ -193,6 +197,7 @@
 "TITLE_CHOOSE_HOLE" = "Elige un hoyo";
 "TITLE_CSS" = "Scratch Score de Competencia";
 "TITLE_CSS_ABBR" = "CSS";
+"TITLE_DARK" = "Oscuro";
 "TITLE_DONE" = "Aceptar";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
@@ -201,6 +206,7 @@
 "TITLE_FIRST_HOLE" = "Primer Hoyo";
 "TITLE_FRONT_NINE" = "Primero Nueve";
 "TITLE_FRONT_SIDE" = "Primero Lado";
+"TITLE_GRAPHING_COLORS" = "Colores gráphicos";
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
 "TITLE_HANDICAP_PLURAL" = "Handicaps";
@@ -257,23 +263,30 @@
 "TITLE_GRADE" = "Grado";
 "TITLE_KEEPING_SCORE" = "Llevando puntajes desde 1995";
 "TITLE_LAST_HOLE" = "Último Hoyo";
+"TITLE_LIGHT" = "Claro";
 "TITLE_MENS_HANDICAP" = "Handicap - Caballeros";
 "TITLE_NEXT_HOLE" = "Próximo Hoyo";
 "TITLE_NO_STROKES" = "sin golpes";
 "TITLE_PREVIOUS_HOLE" = "Hoyo Precedente";
+"TITLE_PRIMARY" = "Primero";
 "TITLE_PRINT_SCORECARD" = "Imprimir Tarjeta";
 "TITLE_PRINT_SCORECARDS" = "Imprimir Tarjetas";
 "TITLE_QUOTA_POINTS_GAINED" = "Puntos de Cuota Ganados";
 "TITLE_REGISTER" = "Registrar";
 "TITLE_SAVE" = "Guardar";
+"TITLE_SECONDARY" = "Secundario";
 "TITLE_SELECTED_HOLES" = "Hoyos Seleccionados";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
+"TITLE_SYSTEM" = "Sistema";
 "TITLE_TECHNICAL_SUPPORT" = "Asistencia al Cliente";
 "TITLE_TOTAL_POINTS" = "Puntos Totales";
 "TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Puntos Totales v. %d Cuota";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Desbloquea todas Tarjetas del Evento";
 "TITLE_WOMENS_HANDICAP" = "Handicap - Damas";
+
+"DESCRIPTION_THEME_APPEARANCE" = "Claro - Eagle siempre usa la apariencia clásico de Aqua\nOscuro - Eagle siempre usa la apariencia del Modo Oscuro\nSistema - Eagle usa la apariencia seleccionada en Preferencias del Sistema";
+"DESCRIPTION_THEME_PRE_MOJAVE" = "Antes de macOS 10.14 Mojave, Eagle utiliza el estilo de apariencia Aqua estándar del sistema.";
 
 //	GOLFPlayType Titles & Descriptions
 "PLAY_TYPE_MEDAL_PLAY" = "Stroke Play";

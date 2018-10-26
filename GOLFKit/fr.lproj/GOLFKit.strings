@@ -56,6 +56,7 @@
 "TERM_NINEPT" = "9-Points";
 "TERM_NO" = "non";
 "TERM_NONE" = "aucun";
+"TERM_NORMAL" = "normal";
 "TERM_NUMBER" = "número";
 "TERM_NUMBER_ABBR" = "no.";
 "TERM_NUMBER_PLURAL" = "números";
@@ -90,9 +91,12 @@
 "TERM_TEAM_PLURAL" = "équipes";
 "TERM_TEE" = "jalon";
 "TERM_TEE_PLURAL" = "jalons";
+"TERM_THEME" = "thème";
 "TERM_TIEBREAKER" = "tie-break";
+"TERM_TIPS" = "astuces";
 "TERM_TOTAL" = "total";
 "TERM_TOURNAMENT" = "tournoi";
+"TERM_TRAINING" = "formation";
 "TERM_UNKNOWN" = "inconnu";
 "TERM_VERSUS_ABBR" = "vs";
 "TERM_WALTZ" = "Waltz";
@@ -193,14 +197,16 @@
 "TITLE_CHOOSE_HOLE" = "Choisissez un trou";
 "TITLE_CSS" = "Scratch Score de Compétition";
 "TITLE_CSS_ABBR" = "CSS";
+"TITLE_DARK" = "Sombre";
 "TITLE_DONE" = "Terminé";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
 "TITLE_EVEN" = "Égal";
 "TITLE_EVEN_ABBR" = "E";
-"TITLE_FIRST_HOLE" = "Premier Trou";
-"TITLE_FRONT_NINE" = "Premier Neuf";
-"TITLE_FRONT_SIDE" = "Premier Côté";
+"TITLE_FIRST_HOLE" = "Premier Trou";	//	m.
+"TITLE_FRONT_NINE" = "Premier Neuf";	//	m.
+"TITLE_FRONT_SIDE" = "Premier Côté";	//	m.
+"TITLE_GRAPHING_COLORS" = "Couleurs graphique";
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
 "TITLE_HANDICAP_PLURAL" = "Handicaps";
@@ -257,23 +263,30 @@
 "TITLE_GRADE" = "Classe";
 "TITLE_KEEPING_SCORE" = "Gardant scores depuis 1995";
 "TITLE_LAST_HOLE" = "Dernier Trou";
+"TITLE_LIGHT" = "Claire";
 "TITLE_MENS_HANDICAP" = "Handicap - Hommes";
 "TITLE_NEXT_HOLE" = "Trou Suivant";
 "TITLE_NO_STROKES" = "aucun coups";
 "TITLE_PREVIOUS_HOLE" = "Trou Précédent";
+"TITLE_PRIMARY" = "Première";
 "TITLE_PRINT_SCORECARD" = "Imprimer Carte de Score";
 "TITLE_PRINT_SCORECARDS" = "Imprimer Cartes de Score";
 "TITLE_QUOTA_POINTS_GAINED" = "Points de Quota Gagnés";
 "TITLE_REGISTER" = "Inscrire";
 "TITLE_SAVE" = "Enregistrer";
+"TITLE_SECONDARY" = "Secondaire";
 "TITLE_SELECTED_HOLES" = "Trous Sélectionnés";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
+"TITLE_SYSTEM" = "Système";
 "TITLE_TECHNICAL_SUPPORT" = "Support Technique";
 "TITLE_TOTAL_POINTS" = "Points Totaux";
 "TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Points Totaux v. %d Quota";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Débloquer tous Cartes d’Événement";
 "TITLE_WOMENS_HANDICAP" = "Handicap - Femmes";
+
+"DESCRIPTION_THEME_APPEARANCE" = "Claire - Eagle utilise toujours l’apperance classique de l’Aqua\nSombre - Eagle utilise toujours l’apperance du Mode Sombre\nSystème - Eagle utilise l’apperance sélectionnée dans les Préférences Système";
+"DESCRIPTION_THEME_PRE_MOJAVE" = "Avant macOS 10.14 Mojave, Eagle utilisait le style d’apperance Aqua standard du système.";
 
 //	GOLFPlayType Titles & Descriptions
 "PLAY_TYPE_MEDAL_PLAY" = "Partie par coups";
