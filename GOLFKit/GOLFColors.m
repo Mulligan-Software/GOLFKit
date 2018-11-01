@@ -88,7 +88,7 @@
 
 + (id)GOLFFactoryDarkEagleScoreColor {
 	if (@available (macOS 10.13, *)) {
-		return [GOLFColor GOLFFactoryBogeyColor];
+		return [GOLFColor GOLFFactoryEagleColor];
 	}
 	
 	if (@available (macOS 10.10, *)) {
@@ -177,9 +177,29 @@
 	return [GOLFDynamicColor dynamicColorWithAquaColor:[NSColor blueColor] darkAquaColor:nil];
 }
 
++ (id)GOLFFactoryDarkMatchAColor {
+	if (@available(macOS 10.13, *)) {
+		return [GOLFColor GOLFFactoryMatchAColor];
+	}
+	if (@available (macOS 10.10, *)) {
+		return (GOLFColor *)[NSColor systemBlueColor];
+	}
+	return [GOLFDynamicColor dynamicColorWithAquaColor:[NSColor blueColor] darkAquaColor:nil];
+}
+
 + (id)GOLFFactoryMatchBColor {
 	if (@available(macOS 10.13, *)) {
 		return [GOLFColor colorNamed:@"GOLFFactoryMatchBColor" bundle:GOLFKitBundle()];
+	}
+	if (@available (macOS 10.10, *)) {
+		return (GOLFColor *)[NSColor systemRedColor];
+	}
+	return [GOLFDynamicColor dynamicColorWithAquaColor:[NSColor redColor] darkAquaColor:nil];
+}
+
++ (id)GOLFFactoryDarkMatchBColor {
+	if (@available(macOS 10.13, *)) {
+		return [GOLFColor GOLFFactoryMatchBColor];
 	}
 	if (@available (macOS 10.10, *)) {
 		return (GOLFColor *)[NSColor systemRedColor];

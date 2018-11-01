@@ -306,6 +306,7 @@
 "TITLE_KEEPING_SCORE" = "Llevando puntajes desde 1995";
 "TITLE_LAST_HOLE" = "Último Hoyo";
 "TITLE_LIGHT" = "Claro";
+"TITLE_LINK_DROPBOX" = "Enlazar Dropbox";
 "TITLE_LOCAL_COUNTRY" = "País Local";
 "TITLE_LOCK_CLUBS" = "Bloquear los Clubes";
 "TITLE_LOCK_EVENTS" = "Bloquear los Eventos";
@@ -346,11 +347,27 @@
 "TITLE_TECHNICAL_SUPPORT" = "Asistencia al Cliente";
 "TITLE_TOTAL_POINTS" = "Puntos Totales";
 "TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Puntos Totales v. %d Cuota";
+"TITLE_UNLINK_DROPBOX" = "Desenlazar Dropbox";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Desbloquea todas Tarjetas del Evento";
 "TITLE_UP_AND_DOWN" = "Alto y bajo";
 "TITLE_USE_LAST" = "Utilizar últimos";
 "TITLE_WITH_SCORE" = "con resultado";
 "TITLE_WOMENS_HANDICAP" = "Handicap - Damas";
+
+"SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
+"SAMPLE_LOOSELY_ALPHABETIC_NAMES" = "Al Czervik / Elihu & Vivian Smails / Beeper, Czervik, Smails & Webb";
+"SAMPLE_ORDER_BY_POSITION_NAMES" = "Czervik, Al / A Player & B Player / A Player, B Player & C Player";
+"SAMPLE_ORDER_BY_SKILL_NAMES" = "Czervik, Al / Webb, Ty & Czervik, Al / Webb, Smails, Beeper & Czervik";
+"SAMPLE_STRICTLY_ALPHABETIC_NAMES" = "Czervik, Al / Smails, Elihu & Vivian / Beeper, Czervik, Smails & Webb";
+
+"UNDO_EAGLES_COLOR_CHANGE" = "Cambio de Eagles Color";
+"UNDO_BIRDIES_COLOR_CHANGE" = "Cambio de Birdies Color";
+"UNDO_PARS_COLOR_CHANGE" = "Cambio de Pars Color";
+"UNDO_BOGEYS_COLOR_CHANGE" = "Cambio de Bogeys Color";
+"UNDO_MATCH_A_COLOR_CHANGE" = "Cambio de Competidor ‘A’ Color";
+"UNDO_MATCH_B_COLOR_CHANGE" = "Cambio de Competidor ‘B’ Color";
+"UNDO_GRAPHING_PRIMARY_COLOR_CHANGE" = "Cambio de Gráphicos Color Primario";
+"UNDO_GRAPHING_SECONDARY_COLOR_CHANGE" = "Cambio de Gráphicos Color Secondario";
 
 "MENU_ALPHABETICALLY" = "alfabéticamente";
 "MENU_LOOSELY_ALPHABETIC" = "vagamente alfabético";
@@ -447,7 +464,7 @@
 "PLAY_TYPE_TEAM_BEST_ROUND" = "Mejor Ronda";
 "PLAY_TYPE_TEAM_BEST_ROUNDS" = "Mejores Rondas";	//	Preceded by "N "
 "PLAY_TYPE_TEAM_FOURBALL_COMBO" = "Four-Ball Combo";
-"PLAY_TYPE_TEAM_FOURBALL_COMBO_DESC" = "Four-Ball teams of scorecard co-competitors";
+"PLAY_TYPE_TEAM_FOURBALL_COMBO_DESC" = "Equipos Four-Ball de co-competidores del tarjeta";
 "PLAY_TYPE_NO_TEAM_PLAY" = "No juego del equipo";
 "PLAY_TYPE_NO_TEAM_PLAY_DESC" = "Sólo que puntajes de los jugadores";
 "PLAY_TYPE_NO_PLAYER_SCORES" = "Sin puntajes de jugadores";

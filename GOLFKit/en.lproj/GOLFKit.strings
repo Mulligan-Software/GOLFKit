@@ -306,6 +306,7 @@
 "TITLE_KEEPING_SCORE" = "Keeping score since 1995";
 "TITLE_LAST_HOLE" = "Last Hole";
 "TITLE_LIGHT" = "Light";
+"TITLE_LINK_DROPBOX" = "Link Dropbox";
 "TITLE_LOCAL_COUNTRY" = "Local Country";
 "TITLE_LOCK_CLUBS" = "Lock Clubs";
 "TITLE_LOCK_EVENTS" = "Lock Events";
@@ -346,11 +347,27 @@
 "TITLE_TECHNICAL_SUPPORT" = "Technical Support";
 "TITLE_TOTAL_POINTS" = "Total Points";
 "TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Total Points v. %d Quota";
+"TITLE_UNLINK_DROPBOX" = "Unlink Dropbox";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Unlock all Event Scorecards";
 "TITLE_UP_AND_DOWN" = "Up & Down";
 "TITLE_USE_LAST" = "Use last";
 "TITLE_WITH_SCORE" = "with score";
 "TITLE_WOMENS_HANDICAP" = "Women’s Handicap";
+
+"SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
+"SAMPLE_LOOSELY_ALPHABETIC_NAMES" = "Al Czervik / Elihu & Vivian Smails / Beeper, Czervik, Smails & Webb";
+"SAMPLE_ORDER_BY_POSITION_NAMES" = "Czervik, Al / A Player & B Player / A Player, B Player & C Player";
+"SAMPLE_ORDER_BY_SKILL_NAMES" = "Czervik, Al / Webb, Ty & Czervik, Al / Webb, Smails, Beeper & Czervik";
+"SAMPLE_STRICTLY_ALPHABETIC_NAMES" = "Czervik, Al / Smails, Elihu & Vivian / Beeper, Czervik, Smails & Webb";
+
+"UNDO_EAGLES_COLOR_CHANGE" = "Eagles Color Change";
+"UNDO_BIRDIES_COLOR_CHANGE" = "Birdies Color Change";
+"UNDO_PARS_COLOR_CHANGE" = "Pars Color Change";
+"UNDO_BOGEYS_COLOR_CHANGE" = "Bogeys Color Change";
+"UNDO_MATCH_A_COLOR_CHANGE" = "Competitor ‘A’ Color Change";
+"UNDO_MATCH_B_COLOR_CHANGE" = "Competitor ‘B’ Color Change";
+"UNDO_GRAPHING_PRIMARY_COLOR_CHANGE" = "Graphing Primary Color Change";
+"UNDO_GRAPHING_SECONDARY_COLOR_CHANGE" = "Graphing Secondary Color Change";
 
 "MENU_ALPHABETICALLY" = "alphabetically";
 "MENU_LOOSELY_ALPHABETIC" = "loosely alphabetic";

@@ -239,7 +239,7 @@
 "TITLE_FLAG_TOURNAMENT_SCORES" = "Signalez les scores de tournoi";
 "TITLE_FRONT_NINE" = "Premier Neuf";	//	m.
 "TITLE_FRONT_SIDE" = "Premier Côté";	//	m.
-"TITLE_GRAPHING_COLORS" = "Couleurs graphique";
+"TITLE_GRAPHING_COLORS" = "Couleurs d’Infographie";
 "TITLE_GREEN_IN_REGULATION" = "Green régulementaire";
 "TITLE_GREENSIDE_BUNKER_HIT" = "Bunker au bord du green atteint";
 "TITLE_HANDICAP" = "Handicap";
@@ -306,6 +306,7 @@
 "TITLE_KEEPING_SCORE" = "Gardant scores depuis 1995";
 "TITLE_LAST_HOLE" = "Dernier Trou";
 "TITLE_LIGHT" = "Claire";
+"TITLE_LINK_DROPBOX" = "Lier Dropbox";
 "TITLE_LOCAL_COUNTRY" = "Pays Local";
 "TITLE_LOCK_CLUBS" = "Verrouriller les Clubs";
 "TITLE_LOCK_EVENTS" = "Verrouriller les Événements";
@@ -346,11 +347,27 @@
 "TITLE_TECHNICAL_SUPPORT" = "Support Technique";
 "TITLE_TOTAL_POINTS" = "Points Totaux";
 "TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Points Totaux v. %d Quota";
+"TITLE_UNLINK_DROPBOX" = "Délier Dropbox";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Débloquer tous Cartes d’Événement";
 "TITLE_UP_AND_DOWN" = "En haut et en bas";
 "TITLE_USE_LAST" = "Utilizez dernières";
 "TITLE_WITH_SCORE" = "avec score";
 "TITLE_WOMENS_HANDICAP" = "Handicap - Femmes";
+
+"SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
+"SAMPLE_LOOSELY_ALPHABETIC_NAMES" = "Al Czervik / Elihu & Vivian Smails / Beeper, Czervik, Smails & Webb";
+"SAMPLE_ORDER_BY_POSITION_NAMES" = "Czervik, Al / A Player & B Player / A Player, B Player & C Player";
+"SAMPLE_ORDER_BY_SKILL_NAMES" = "Czervik, Al / Webb, Ty & Czervik, Al / Webb, Smails, Beeper & Czervik";
+"SAMPLE_STRICTLY_ALPHABETIC_NAMES" = "Czervik, Al / Smails, Elihu & Vivian / Beeper, Czervik, Smails & Webb";
+
+"UNDO_EAGLES_COLOR_CHANGE" = "Changement de Couleur des Eagles";
+"UNDO_BIRDIES_COLOR_CHANGE" = "Changement de Couleur des Birdies";
+"UNDO_PARS_COLOR_CHANGE" = "Changement de Couleur des Pars";
+"UNDO_BOGEYS_COLOR_CHANGE" = "Changement de Couleur des Bogeys";
+"UNDO_MATCH_A_COLOR_CHANGE" = "Changement de Couleur de Competitor ‘A’";
+"UNDO_MATCH_B_COLOR_CHANGE" = "Changement de Couleur de Competitor ‘B’";
+"UNDO_GRAPHING_PRIMARY_COLOR_CHANGE" = "Changement de l’Infographie Couleur Primaire";
+"UNDO_GRAPHING_SECONDARY_COLOR_CHANGE" = "Changement de l’Infographie Couleur Secondaire";
 
 "MENU_ALPHABETICALLY" = "alphabétiquement";
 "MENU_LOOSELY_ALPHABETIC" = "vaguement alphabétique";

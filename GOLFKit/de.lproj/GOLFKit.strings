@@ -239,7 +239,7 @@
 "TITLE_FLAG_TOURNAMENT_SCORES" = "Bestimmen Turnier-Scores";
 "TITLE_FRONT_NINE" = "Vorderneun";
 "TITLE_FRONT_SIDE" = "Vorderseite";
-"TITLE_GRAPHING_COLORS" = "Graphenfarben";
+"TITLE_GRAPHING_COLORS" = "Kartierenfarben";
 "TITLE_GREEN_IN_REGULATION" = "Grün-in-Regulierung";
 "TITLE_GREENSIDE_BUNKER_HIT" = "Grünbunker erreicht";
 "TITLE_HANDICAP" = "Handicap";
@@ -306,6 +306,7 @@
 "TITLE_KEEPING_SCORE" = "Punkte gesammelt seit 1995";
 "TITLE_LAST_HOLE" = "letztes Loch";
 "TITLE_LIGHT" = "Helle";
+"TITLE_LINK_DROPBOX" = "Verknüpfen Dropbox aufheben";
 "TITLE_LOCAL_COUNTRY" = "Lokales Land";
 "TITLE_LOCK_CLUBS" = "Clubs schützen";
 "TITLE_LOCK_EVENTS" = "Veranstaltungen schützen";
@@ -346,11 +347,27 @@
 "TITLE_TECHNICAL_SUPPORT" = "Technische Unterstützung";
 "TITLE_TOTAL_POINTS" = "Gesamtpunktzahl";
 "TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Gesamtpunkte v. %d Kontingent";
+"TITLE_UNLINK_DROPBOX" = "Link Dropbox";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Schalte alle Scorecards der Veranstaltung";
 "TITLE_UP_AND_DOWN" = "Auf und ab";
 "TITLE_USE_LAST" = "Benutze die letzten";
 "TITLE_WITH_SCORE" = "mit Punktzahl";
 "TITLE_WOMENS_HANDICAP" = "Handicap der Damen";
+
+"SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
+"SAMPLE_LOOSELY_ALPHABETIC_NAMES" = "Al Czervik / Elihu & Vivian Smails / Beeper, Czervik, Smails & Webb";
+"SAMPLE_ORDER_BY_POSITION_NAMES" = "Czervik, Al / A Player & B Player / A Player, B Player & C Player";
+"SAMPLE_ORDER_BY_SKILL_NAMES" = "Czervik, Al / Webb, Ty & Czervik, Al / Webb, Smails, Beeper & Czervik";
+"SAMPLE_STRICTLY_ALPHABETIC_NAMES" = "Czervik, Al / Smails, Elihu & Vivian / Beeper, Czervik, Smails & Webb";
+
+"UNDO_EAGLES_COLOR_CHANGE" = "Eagles Farbwechsel";
+"UNDO_BIRDIES_COLOR_CHANGE" = "Birdies Farbwechsel";
+"UNDO_PARS_COLOR_CHANGE" = "Pars Farbwechsel";
+"UNDO_BOGEYS_COLOR_CHANGE" = "Bogeys Farbwechsel";
+"UNDO_MATCH_A_COLOR_CHANGE" = "Mitbewerber ‘A’ Farbwechsel";
+"UNDO_MATCH_B_COLOR_CHANGE" = "Mitbewerber ‘B’ Farbwechsel";
+"UNDO_GRAPHING_PRIMARY_COLOR_CHANGE" = "Kartierend Primärfarbwechsel";
+"UNDO_GRAPHING_SECONDARY_COLOR_CHANGE" = "Kartierend Secondärfarbwechsel";
 
 "MENU_ALPHABETICALLY" = "alphabetisch";
 "MENU_LOOSELY_ALPHABETIC" = "locker alphabetisch";
