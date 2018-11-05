@@ -31,6 +31,9 @@
 		NSAppearance *appearance = [NSAppearance currentAppearance] ?: [NSApp effectiveAppearance];
 		NSAppearanceName appearanceName = [appearance bestMatchFromAppearancesWithNames:@[NSAppearanceNameAqua, NSAppearanceNameDarkAqua]];
 		
+#ifdef DEBUG
+	NSLog(@"%@ -%@ returns: %@", [self className], NSStringFromSelector(_cmd), (([appearanceName isEqualToString:NSAppearanceNameDarkAqua]) ? @"YES" : @"NO"));
+#endif
 		return [appearanceName isEqualToString:NSAppearanceNameDarkAqua];
 	}
 	return NO;	

@@ -138,11 +138,28 @@ NSDictionary * GOLFHomeCountryInfo(void) {
 
 NSString * GOLFLocalizedString(NSString *key) {
 	if (key && (key.length > 0)) {
+		//	[NSBundle localizedStringForKey:key value:value table:table] returns the following when key is nil or not found in table:
+		//	•	If key is nil and value is nil, returns an empty string.	(We simply return nil or zero-length key)
+		//	•	If key is nil and value is non-nil, returns value.	(We simply return nil or zero-length key)
+		//	•	If key is not found and value is nil or an empty string, returns key.
+		//	•	If key is not found and value is non-nil and not empty, return value.	(our technique looking to 2 places)
+		
 		NSString *notFound = @"*-*";
 		NSString *prospectiveLocalization = [GOLFKitBundle() localizedStringForKey:key value:notFound table:@"GOLFKit"];
 		if (![prospectiveLocalization isEqualToString:notFound]) { return prospectiveLocalization; }
 		prospectiveLocalization = [[NSBundle mainBundle] localizedStringForKey:key value:notFound table:@"Localizable"];
 		if (![prospectiveLocalization isEqualToString:notFound]) { return prospectiveLocalization; }
+		
+		//	We didn't find a localization…
+#if TARGET_OS_IOS || TARGET_OS_WATCH
+	#ifdef DEBUG
+		NSLog(@"%@ -%@ Can't localize: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), key);
+	#endif
+#elif TARGET_OS_MAC
+	#ifdef DEBUG
+		NSLog(@"%@ -%@ Can't localize: %@", [self className], NSStringFromSelector(_cmd), key);
+	#endif
+#endif
 	}
 	return key;
 }
@@ -152,11 +169,25 @@ GOLFImage * GOLFImageWithName(NSString *imageName) {
 	if (imageName && (imageName.length > 0)) {
 		NSBundle *ourBundle = GOLFKitBundle();
 #if TARGET_OS_IOS || TARGET_OS_WATCH
-		prospectiveImage = [GOLFTeeImage imageNamed:imageName inBundle:ourBundle compatibleWithTraitCollection:nil];
+		//	imageName should include file extension, except for PNG images
+		prospectiveImage = [GOLFImage imageNamed:imageName inBundle:ourBundle compatibleWithTraitCollection:nil];
+		if (prospectiveImage == nil) {
+			prospectiveImage = [GOLFImage imageNamed:imageName inBundle:nil compatibleWithTraitCollection:nil];	//	nil NSBundle searches main bundle
+		}
+		if (prospectiveImage == nil) {
+	#ifdef DEBUG
+		NSLog(@"%@ -%@ Can't find UIImage named: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), imageName);
+	#endif
+		}
 #elif TARGET_OS_MAC
 		prospectiveImage = [ourBundle imageForResource:imageName];
 		if (prospectiveImage == nil) {
 			prospectiveImage = [[NSBundle mainBundle] imageForResource:imageName];
+		}
+		if (prospectiveImage == nil) {
+	#ifdef DEBUG
+		NSLog(@"%@ -%@ Can't find NSImage named: %@", [self className], NSStringFromSelector(_cmd), imageName);
+	#endif
 		}
 #endif
 	}
