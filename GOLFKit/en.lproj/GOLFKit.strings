@@ -90,6 +90,8 @@
 "TERM_POINT_PLURAL" = "points";
 "TERM_POINT_PLURAL_ABBR" = "pts.";
 "TERM_PURCHASE" = "purchase";
+"TERM_PUTT" = "putt";
+"TERM_PUTT_PLURAL" = "putts";
 "TERM_QUIT" = "quit";
 "TERM_QUOTA" = "quota";
 "TERM_REVERSERITZ" = "Reverse Ritz";
@@ -129,6 +131,7 @@
 "TERM_YARD_PLURAL_ABBR" = "Yds.";
 "TERM_YARDAGE" = "yardage";
 "TERM_YES" = "yes";
+"TERM_ZERO" = "zero";
 "TERM_ZIGZAG" = "Zig-Zag";
 
 //	Standard Tee Colors
@@ -259,6 +262,7 @@
 "TITLE_FRONT_SIDE" = "Front Side";
 "TITLE_GRAPHING_COLORS" = "Graphing Colors";
 "TITLE_GREEN_IN_REGULATION" = "Green in Regulation";
+"TITLE_GREEN_IN_REGULATION_PLURAL" = "Greens in Regulation";
 "TITLE_GREENSIDE_BUNKER_HIT" = "Greenside Bunker Hit";
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
@@ -344,6 +348,7 @@
 "TITLE_OPEN_3_%@" = "Open 3 %@";
 "TITLE_OK_BUTTON" = "OK";
 "TITLE_PENALTY_STROKE" = "Penalty Stroke";
+"TITLE_PENALTY_STROKE_PLURAL" = "Penalty Strokes";
 "TITLE_PERSONAL_HANDICAPPING" = "Personal Handicapping";
 "TITLE_PLAYING_HANDICAP_DETERMINATION" = "Playing Handicap determination";
 "TITLE_PREFERENCES" = "Preferences";
@@ -356,6 +361,7 @@
 "TITLE_REGISTER" = "Register";
 "TITLE_REVIEW_BUTTON" = "Review";
 "TITLE_ROUNDS_HIGHLIGHT" = "Rounds Highlight";
+"TITLE_SAND_SAVES_PER_TRY" = "Sand Saves/Tries";
 "TITLE_SAVE" = "Save";
 "TITLE_SCORING_COLORS" = "Scoring Colors";
 "TITLE_SCORING_SHORTHAND" = "Scoring Shorthand";
@@ -379,6 +385,14 @@
 "TITLE_USE_LAST" = "Use last";
 "TITLE_WITH_SCORE" = "with score";
 "TITLE_WOMENS_HANDICAP" = "Women’s Handicap";
+
+"TITLE_SCORECARD_IN" = "In";		//	As it appears in Scorecard total headers ("In")
+"TITLE_SCORECARD_LENGTH_IMPERIAL" = "Ydg";
+"TITLE_SCORECARD_LENGTH_METRIC" = "M.";
+"TITLE_SCORECARD_OUT" = "Out";		//	As it appears in Scorecard total headers ("Out")
+"TITLE_SCORECARD_TOTAL" = "Tot";	//	As it appears in Scorecard total headers
+"TERM_METER_PLURAL" = "meters";
+"TERM_YARD_PLURAL" = "yards";
 
 "SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
 "SAMPLE_LOOSELY_ALPHABETIC_NAMES" = "Al Czervik / Elihu & Vivian Smails / Beeper, Czervik, Smails & Webb";

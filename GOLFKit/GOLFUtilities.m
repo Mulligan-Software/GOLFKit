@@ -151,14 +151,8 @@ NSString * GOLFLocalizedString(NSString *key) {
 		if (![prospectiveLocalization isEqualToString:notFound]) { return prospectiveLocalization; }
 		
 		//	We didn't find a localization…
-#if TARGET_OS_IOS || TARGET_OS_WATCH
-	#ifdef DEBUG
-		NSLog(@"%@ -%@ Can't localize: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), key);
-	#endif
-#elif TARGET_OS_MAC
-	#ifdef DEBUG
-		NSLog(@"%@ -%@ Can't localize: %@", [self className], NSStringFromSelector(_cmd), key);
-	#endif
+#ifdef DEBUG
+		NSLog(@"GOLFLocalizedString() can't localize: \"%@\"", key);
 #endif
 	}
 	return key;
@@ -176,7 +170,7 @@ GOLFImage * GOLFImageWithName(NSString *imageName) {
 		}
 		if (prospectiveImage == nil) {
 	#ifdef DEBUG
-		NSLog(@"%@ -%@ Can't find UIImage named: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), imageName);
+		NSLog(@"GOLFImageWithName() can't find UIImage named: \"%@\"", imageName);
 	#endif
 		}
 #elif TARGET_OS_MAC
@@ -186,7 +180,7 @@ GOLFImage * GOLFImageWithName(NSString *imageName) {
 		}
 		if (prospectiveImage == nil) {
 	#ifdef DEBUG
-		NSLog(@"%@ -%@ Can't find NSImage named: %@", [self className], NSStringFromSelector(_cmd), imageName);
+		NSLog(@"GOLFImageWithName() can't find NSImage named: \"%@\"", imageName);
 	#endif
 		}
 #endif

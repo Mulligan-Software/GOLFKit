@@ -90,6 +90,8 @@
 "TERM_POINT_PLURAL" = "points";
 "TERM_POINT_PLURAL_ABBR" = "pts.";
 "TERM_PURCHASE" = "acheter";
+"TERM_PUTT" = "putt";
+"TERM_PUTT_PLURAL" = "putts";
 "TERM_QUIT" = "quitter";
 "TERM_QUOTA" = "quota";
 "TERM_REVERSERITZ" = "Ritz Inverse";
@@ -129,6 +131,7 @@
 "TERM_YARD_PLURAL_ABBR" = "Yds.";
 "TERM_YARDAGE" = "métrage";
 "TERM_YES" = "oui";
+"TERM_ZERO" = "zéro";
 "TERM_ZIGZAG" = "Zig-Zag";
 
 //	Standard Tee Colors
@@ -258,7 +261,8 @@
 "TITLE_FRONT_NINE" = "Premier Neuf";	//	m.
 "TITLE_FRONT_SIDE" = "Premier Côté";	//	m.
 "TITLE_GRAPHING_COLORS" = "Couleurs d’Infographie";
-"TITLE_GREEN_IN_REGULATION" = "Green régulementaire";
+"TITLE_GREEN_IN_REGULATION" = "Green réglementaire";
+"TITLE_GREEN_IN_REGULATION_PLURAL" = "Greens réglementaires";
 "TITLE_GREENSIDE_BUNKER_HIT" = "Bunker au bord du green atteint";
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
@@ -344,6 +348,7 @@
 "TITLE_OPEN_3_%@" = "Ouvrir 3 %@";
 "TITLE_OK_BUTTON" = "OK";
 "TITLE_PENALTY_STROKE" = "Coup de pénalité";
+"TITLE_PENALTY_STROKE_PLURAL" = "Coups de pénalité";
 "TITLE_PERSONAL_HANDICAPPING" = "Handicapant Individuel";
 "TITLE_PLAYING_HANDICAP_DETERMINATION" = "Détermination de handicap jouer";
 "TITLE_PREFERENCES" = "Préférences";
@@ -356,6 +361,7 @@
 "TITLE_REGISTER" = "Inscrire";
 "TITLE_REVIEW_BUTTON" = "Revoir";
 "TITLE_ROUNDS_HIGHLIGHT" = "Marquage des Tours";
+"TITLE_SAND_SAVES_PER_TRY" = "Sable Sauvetage/Essai";
 "TITLE_SAVE" = "Enregistrer";
 "TITLE_SCORING_COLORS" = "Couleurs pour Marquer";
 "TITLE_SCORING_SHORTHAND" = "Raccourcis pour Marquer";
@@ -379,6 +385,14 @@
 "TITLE_USE_LAST" = "Utilizez dernières";
 "TITLE_WITH_SCORE" = "avec score";
 "TITLE_WOMENS_HANDICAP" = "Handicap - Femmes";
+
+"TITLE_SCORECARD_IN" = "Ret";		//	As it appears in Scorecard total headers ("Retour" - Canada: "Entrée")
+"TITLE_SCORECARD_LENGTH_IMPERIAL" = "Ydg";
+"TITLE_SCORECARD_LENGTH_METRIC" = "M.";
+"TITLE_SCORECARD_OUT" = "Aller";	//	As it appears in Scorecard total headers ("Aller" - Canada: "Sortie")
+"TITLE_SCORECARD_TOTAL" = "Tot";	//	As it appears in Scorecard total headers
+"TERM_METER_PLURAL" = "mètres";
+"TERM_YARD_PLURAL" = "yards";
 
 "SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
 "SAMPLE_LOOSELY_ALPHABETIC_NAMES" = "Al Czervik / Elihu & Vivian Smails / Beeper, Czervik, Smails & Webb";

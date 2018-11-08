@@ -90,6 +90,8 @@
 "TERM_POINT_PLURAL" = "Punkte";
 "TERM_POINT_PLURAL_ABBR" = "Pte.";
 "TERM_PURCHASE" = "kauf";
+"TERM_PUTT" = "Putt";
+"TERM_PUTT_PLURAL" = "Putts";
 "TERM_QUIT" = "beenden";
 "TERM_QUOTA" = "Quote";
 "TERM_REVERSERITZ" = "Ritz Rückwärts";
@@ -101,8 +103,8 @@
 "TERM_SCHEID" = "Scheid";
 "TERM_SCORE_PLURAL" = "Scores";
 "TERM_SCOREBOARD" = "Anzeigetafel";
-"TERM_SCORECARD" = "Scorecard";
-"TERM_SCORECARD_PLURAL" = "Scorecards";
+"TERM_SCORECARD" = "Scorekarte";
+"TERM_SCORECARD_PLURAL" = "Scorekarten";
 "TERM_SCRAMBLE" = "Gerangel";
 "TERM_SELECTED" = "ausgewält";
 "TERM_SIDE" = "Seite";
@@ -129,6 +131,7 @@
 "TERM_YARD_PLURAL_ABBR" = "Yds.";
 "TERM_YARDAGE" = "Meterzahl";
 "TERM_YES" = "Ja";
+"TERM_ZERO" = "null";
 "TERM_ZIGZAG" = "Zig-Zag";
 
 //	Standard Tee Colors
@@ -208,7 +211,7 @@
 "TIEBREAKING_HOLE_FORWARD_DESC" = "Loch nr. 1, nr. 2, etc.";
 "TIEBREAKING_LOW_HANDICAP" = "das kleinere Handicap gewinnt";
 "TIEBREAKING_NONE" = "Keiner";
-"TIEBREAKING_USGA" = "USGA scorecard Vergleich";
+"TIEBREAKING_USGA" = "USGA Scorekarte Vergleich";
 "TIEBREAKING_USGA_DESC" = "letzen 9 Löcher, letzen 6, letzen 3, letzte Loch";
 
 //	Titles & Abbr.
@@ -258,8 +261,9 @@
 "TITLE_FRONT_NINE" = "Vorderneun";
 "TITLE_FRONT_SIDE" = "Vorderseite";
 "TITLE_GRAPHING_COLORS" = "Kartierenfarben";
-"TITLE_GREEN_IN_REGULATION" = "Grün-in-Regulierung";
-"TITLE_GREENSIDE_BUNKER_HIT" = "Grünbunker erreicht";
+"TITLE_GREEN_IN_REGULATION" = "Green in Regulation";
+"TITLE_GREEN_IN_REGULATION_PLURAL" = "Greens in Regulation";
+"TITLE_GREENSIDE_BUNKER_HIT" = "Grün-Bunker erreicht";
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
 "TITLE_HANDICAP_PLURAL" = "Handicapen";
@@ -331,38 +335,40 @@
 "TITLE_LOCK_CLUBS" = "Clubs schützen";
 "TITLE_LOCK_EVENTS" = "Veranstaltungen schützen";
 "TITLE_LOCK_PLAYERS" = "Spieler schützen";
-"TITLE_LOCK_SCORECARDS" = "Scorecards schützen";
+"TITLE_LOCK_SCORECARDS" = "Scorekarten schützen";
 "TITLE_MAX_HANDICAP_MEN" = "Maximal Standard-Handicap für Herren";
 "TITLE_MAXIMUM_SCORE" = "Höchste Punktzahl";
 "TITLE_MENS_HANDICAP" = "Handicap der Herren";
-"TITLE_NAME_SCORECARDS" = "Benennen Scorecards";
+"TITLE_NAME_SCORECARDS" = "Benennen Scorekarten";
 "TITLE_NAME_TEAMS" = "Benennen Teams";
 "TITLE_NEXT_HOLE" = "nächstes Loch";
 "TITLE_NO_STROKES" = "keine Schläge";
-"TITLE_OPEN_SCORECARD" = "Scorecard öffnen";
+"TITLE_OPEN_SCORECARD" = "Scorekarte öffnen";
 "TITLE_OPEN_%@" = "Öffne %@";
 "TITLE_OPEN_3_%@" = "Öffne 3 %@";
 "TITLE_OK_BUTTON" = "OK";
 "TITLE_PENALTY_STROKE" = "Strafschlag";
+"TITLE_PENALTY_STROKE_PLURAL" = "Strafschlage";
 "TITLE_PERSONAL_HANDICAPPING" = "Persönliche Handicapend";
 "TITLE_PLAYING_HANDICAP_DETERMINATION" = "Spielen-Handicap Bestimmung";
 "TITLE_PREFERENCES" = "Einstellungen";
 "TITLE_PREVIOUS_HOLE" = "vorheriges Loch";
 "TITLE_PRIMARY" = "Primär";
-"TITLE_PRINT_SCORECARD" = "Drucken Scorecard";
-"TITLE_PRINT_SCORECARDS" = "Drucken Scorecards";
+"TITLE_PRINT_SCORECARD" = "Drucken Scorekarte";
+"TITLE_PRINT_SCORECARDS" = "Drucken Scorekarten";
 "TITLE_QUOTA_POINTS_GAINED" = "Quotenpunkte gewonnen";
-"TITLE_RECENT_PLAYERS_ETC" = "Aktuelle Spieler, Vereine, Scorecards, usw.";
+"TITLE_RECENT_PLAYERS_ETC" = "Aktuelle Spieler, Vereine, Scorekarten, usw.";
 "TITLE_REGISTER" = "Registrieren";
 "TITLE_REVIEW_BUTTON" = "Überprüfen";
 "TITLE_ROUNDS_HIGHLIGHT" = "Runden Akzentuierung";
+"TITLE_SAND_SAVES_PER_TRY" = "Sand-Bergungen/Versuche";
 "TITLE_SAVE" = "Sichern";
 "TITLE_SCORING_COLORS" = "Farben für Golfwertung";
 "TITLE_SCORING_SHORTHAND" = "Kurzschrift für Golfwertung";
 "TITLE_SECONDARY" = "Sekundär";
 "TITLE_SELECTED_HOLES" = "ausgewählte Löcher";
 "TITLE_SERIAL_NUMBER" = "Seriennummer";
-"TITLE_SHOW_MEMBER_NUMBERS" = "Zeige Clubmitgliedsnummern auf Scorecards";
+"TITLE_SHOW_MEMBER_NUMBERS" = "Zeige Clubmitgliedsnummern auf Scorekarten";
 "TITLE_SHOW_REPORT" = "Bericht zeigen";
 "TITLE_SHOW_REPORTS" = "Berichte anzeigen";
 "TITLE_SHOW_SCORES_AT_STARTUP" = "Zeige Spielergebnise beim Start";
@@ -374,11 +380,19 @@
 "TITLE_TOTAL_POINTS" = "Gesamtpunktzahl";
 "TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Gesamtpunkte v. %d Kontingent";
 "TITLE_UNLINK_DROPBOX" = "Link Dropbox";
-"TITLE_UNLOCK_ENTIRE_EVENT" = "Schalte alle Scorecards der Veranstaltung";
+"TITLE_UNLOCK_ENTIRE_EVENT" = "Schalte alle Scorekarten der Veranstaltung";
 "TITLE_UP_AND_DOWN" = "Auf und ab";
 "TITLE_USE_LAST" = "Benutze die letzten";
 "TITLE_WITH_SCORE" = "mit Punktzahl";
 "TITLE_WOMENS_HANDICAP" = "Handicap der Damen";
+
+"TITLE_SCORECARD_IN" = "In";		//	As it appears in Scorecard total headers
+"TITLE_SCORECARD_LENGTH_IMPERIAL" = "Ydg";
+"TITLE_SCORECARD_LENGTH_METRIC" = "M.";
+"TITLE_SCORECARD_OUT" = "Out";		//	As it appears in Scorecard total headers
+"TITLE_SCORECARD_TOTAL" = "Tot";	//	As it appears in Scorecard total headers
+"TERM_METER_PLURAL" = "Meter";
+"TERM_YARD_PLURAL" = "Yards";
 
 "SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
 "SAMPLE_LOOSELY_ALPHABETIC_NAMES" = "Al Czervik / Elihu & Vivian Smails / Beeper, Czervik, Smails & Webb";
@@ -449,7 +463,7 @@
 "PLAY_TYPE_6_POINT" = "6-Point Game";
 "PLAY_TYPE_6_POINT_DESC" = "3 Spieler teilen sich 6 Punkt pro Loch";
 "PLAY_TYPE_MEDAL_MATCH" = "Medaille Lochspiel";
-"PLAY_TYPE_MEDAL_MATCH_DESC" = "2 Punkte pro Loch vs. jeder Scorecard Wettbewerber";
+"PLAY_TYPE_MEDAL_MATCH_DESC" = "2 Punkte pro Loch vs. jeder Scorekarte Wettbewerber";
 "PLAY_TYPE_TEAM_BETTER_BALL" = "best-Ball";
 "PLAY_TYPE_TEAM_BETTER_BALL_DESC" = "geringe Punktzahl von Partnern oder Mitspieler";
 "PLAY_TYPE_TEAM_TWO_BEST_BALLS" = "zwei beste Bälle";
@@ -490,7 +504,7 @@
 "PLAY_TYPE_TEAM_BEST_ROUND" = "beste Golfrunde";
 "PLAY_TYPE_TEAM_BEST_ROUNDS" = "besten Golfrunden";	//	Preceded by "N "
 "PLAY_TYPE_TEAM_FOURBALL_COMBO" = "Vier-Ball Kombination";
-"PLAY_TYPE_TEAM_FOURBALL_COMBO_DESC" = "Vier-Ball-Teams von Scorecard-Mitbewerbern";
+"PLAY_TYPE_TEAM_FOURBALL_COMBO_DESC" = "Vier-Ball-Teams von Scorekarte-Mitbewerbern";
 "PLAY_TYPE_NO_TEAM_PLAY" = "kein Teamspiel";
 "PLAY_TYPE_NO_TEAM_PLAY_DESC" = "nur individuell Punktzahlen";
 "PLAY_TYPE_NO_PLAYER_SCORES" = "kein Spieler punktet";
@@ -588,8 +602,8 @@
 "ORDINAL_FIRST" = ".";
 "ORDINAL_NTH" = ".";
 "ORDINAL_20TH_TO_29TH" = ".,.,.,.,.,.,.,.,.,.";
-"SCORECARD_EXCEEDS_1_PLAYER" = "Scorecard überschreitet maximal 1 Spieler";
-"SCORECARD_EXCEEDS_%ld_PLAYERS" = "Scorecard überschreitet maximal %ld Spieler";
+"SCORECARD_EXCEEDS_1_PLAYER" = "Scorekarte überschreitet maximal 1 Spieler";
+"SCORECARD_EXCEEDS_%ld_PLAYERS" = "Scorekarte überschreitet maximal %ld Spieler";
 "WITH_CHARACTER" = "c̅";		//	Special character
 
 //	Countries
