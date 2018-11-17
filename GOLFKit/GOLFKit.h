@@ -83,22 +83,22 @@ NSString * GOLFKitBundleVersion(void);
 //	The handicap authority used for handicapping - usually available from events or rounds
 //	return NSString*, nil if none or using a default
 
-- (NSNumber *)handicapIndexForWomen:(BOOL *)women for9Holes:(BOOL *)nineHoles;
+- (NSNumber *)handicapIndexForWomen:(nullable BOOL *)women for9Holes:(nullable BOOL *)nineHoles;
 //	A previously determined handicapIndex - usually available from rounds
 //	Non-nil *women, *nineHoles pre-set TRUE if ladies or nineHole response required - change if response requires
 //	return float equivalent, nil for no data, *women = TRUE for ladies, *nineHoles = TRUE for 9-hole index
 
-- (NSNumber *)teeSLOPERatingForWomen:(BOOL *)women for9Holes:(BOOL *)nineHoles;
+- (NSNumber *)teeSLOPERatingForWomen:(nullable BOOL *)women for9Holes:(nullable BOOL *)nineHoles;
 //	A previously determined SLOPE Rating - usually available from rounds, sides or tees
 //	Non-nil *women, *nineHoles pre-set TRUE if women's or nineHole's response required - change if response requires
 //	return NSInteger equivalent, nil for no data, *women = TRUE for ladies, *for9Holes = TRUE for 9-hole rating
 
-- (NSNumber *)teeCourseRatingForWomen:(BOOL *)women for9Holes:(BOOL *)nineHoles;
+- (NSNumber *)teeCourseRatingForWomen:(nullable BOOL *)women for9Holes:(nullable BOOL *)nineHoles;
 //	A previously determined Course Rating - usually available from rounds, sides or tees
 //	Non-nil *women, *nineHoles pre-set TRUE if women's or nineHole's response required - change if response requires
 //	return float equivalent, nil for no data, *women = TRUE for ladies, *for9Holes = TRUE for 9-hole rating
 
-- (NSNumber *)teeParForWomen:(BOOL *)women for9Holes:(BOOL *)nineHoles;
+- (NSNumber *)teeParForWomen:(nullable BOOL *)women for9Holes:(nullable BOOL *)nineHoles;
 //	Previously determined par - usually available from rounds, sides or tees
 //	Non-nil *women, *nineHoles pre-set TRUE if women's or nineHole's response required - change if response requires
 //	return NSInteger equivalent, nil for no data, *women = TRUE for ladies, *for9Holes = TRUE for 9-hole par
