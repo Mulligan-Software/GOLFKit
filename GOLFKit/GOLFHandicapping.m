@@ -1356,7 +1356,7 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 	BOOL needWomensResult = ((options & GOLFHandicapCalculationOptionNeedWomensResult) != 0);
 	if (info) {
 		//	A possible dataSource…
-		referenceSource = [info objectForKey:@"referenceObject"];
+		referenceSource = (id <GOLFHandicapDataSource>)[info objectForKey:@"referenceObject"];
 		
 		//	Override of a couple parameter options
 		NSNumber *needSomething = [info objectForKey:@"need9HoleHandicap"];
@@ -1372,7 +1372,7 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 	//	Determine the correct handicapping authority for calculation…
 	GOLFHandicapAuthority *localAuthority = nil;
 	if (referenceSource && [referenceSource respondsToSelector:@selector(handicapAuthority)]) {
-		localAuthority = [referenceSource handicapAuthority];	//	First choice - our referenceSource knows the handicapping authority
+		localAuthority = [(id <GOLFHandicapDataSource>)referenceSource handicapAuthority];	//	First choice - our referenceSource knows the handicapping authority
 	}
 	if (localAuthority == nil) {
 		localAuthority = authority;	//	Second choice - it's been provided as a parameter
@@ -1395,8 +1395,8 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 	if (referenceSource && [referenceSource respondsToSelector:@selector(handicapIndexForWomen:for9Holes:)]) {
 		BOOL for9Holes = need9HoleResult;
 		BOOL forWomen = needWomensResult;
-		NSNumber *indexValue = [referenceSource handicapIndexForWomen:&forWomen for9Holes:&for9Holes];
-		if (indexValue) {
+		NSNumber *indexValue = [(id <GOLFHandicapDataSource>)referenceSource handicapIndexForWomen:&forWomen for9Holes:&for9Holes];
+		if (indexValue != nil) {
 			localIndex = [indexValue floatValue];
 			have9HoleIndex = for9Holes;
 			isWomensResult = forWomen;
@@ -1413,14 +1413,14 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 			if (referenceSource && [referenceSource respondsToSelector:@selector(teeSLOPERatingForWomen:for9Holes:)]) {
 				BOOL for9Holes = need9HoleResult;
 				BOOL forWomen = needWomensResult;
-				NSNumber *slopeValue = [referenceSource teeSLOPERatingForWomen:&forWomen for9Holes:&for9Holes];
-				if (slopeValue) {
+				NSNumber *slopeValue = [(id <GOLFHandicapDataSource>)referenceSource teeSLOPERatingForWomen:&forWomen for9Holes:&for9Holes];
+				if (slopeValue != nil) {
 					localSlope = [slopeValue teeSLOPERatingValue];
 					have9HoleSlope = for9Holes;
 					haveWomensSlope = forWomen;
 				}
 				if (localSlope == kNotASLOPERating) {
-					id extraSource = [info objectForKey:@"round"];
+					id <GOLFHandicapDataSource> extraSource = [info objectForKey:@"round"];
 					if (extraSource == nil) {
 						extraSource = [info objectForKey:@"roundSide"];
 					}
@@ -1430,7 +1430,7 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 					if (extraSource && [extraSource respondsToSelector:@selector(teeSLOPERatingForWomen:for9Holes:)]) {
 						for9Holes = need9HoleResult;
 						forWomen = needWomensResult;
-						slopeValue = [extraSource teeSLOPERatingForWomen:&forWomen for9Holes:&for9Holes];
+						slopeValue = [(id <GOLFHandicapDataSource>)extraSource teeSLOPERatingForWomen:&forWomen for9Holes:&for9Holes];
 						if (slopeValue) {
 							localSlope = [slopeValue teeSLOPERatingValue];
 							have9HoleSlope = for9Holes;
@@ -1453,14 +1453,14 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 			if (referenceSource && [referenceSource respondsToSelector:@selector(teeCourseRatingForWomen:for9Holes:)]) {
 				BOOL for9Holes = need9HoleResult;
 				BOOL forWomen = needWomensResult;
-				NSNumber *ratingNumber = [referenceSource teeCourseRatingForWomen:&forWomen for9Holes:&for9Holes];
+				NSNumber *ratingNumber = [(id <GOLFHandicapDataSource>)referenceSource teeCourseRatingForWomen:&forWomen for9Holes:&for9Holes];
 				if (ratingNumber) {
 					localRating = [ratingNumber teeCourseRatingValue];
 					have9HoleRating = for9Holes;
 					haveWomensRating = forWomen;
 				}
 				if (localRating == kNotACourseRating) {
-					id extraSource = [info objectForKey:@"round"];
+					id <GOLFHandicapDataSource> extraSource = [info objectForKey:@"round"];
 					if (extraSource == nil) {
 						extraSource = [info objectForKey:@"roundSide"];
 					}
@@ -1470,7 +1470,7 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 					if (extraSource && [extraSource respondsToSelector:@selector(teeCourseRatingForWomen:for9Holes:)]) {
 						for9Holes = need9HoleResult;
 						forWomen = needWomensResult;
-						ratingNumber = [extraSource teeCourseRatingForWomen:&forWomen for9Holes:&for9Holes];
+						ratingNumber = [(id <GOLFHandicapDataSource>)extraSource teeCourseRatingForWomen:&forWomen for9Holes:&for9Holes];
 						if (ratingNumber) {
 							localRating = [ratingNumber teeCourseRatingValue];
 							have9HoleRating = for9Holes;
@@ -1491,14 +1491,14 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 			if (referenceSource && [referenceSource respondsToSelector:@selector(teeParForWomen:for9Holes:)]) {
 				BOOL for9Holes = need9HoleResult;
 				BOOL forWomen = needWomensResult;
-				NSNumber *parValue = [referenceSource teeParForWomen:&forWomen for9Holes:&for9Holes];
+				NSNumber *parValue = [(id <GOLFHandicapDataSource>)referenceSource teeParForWomen:&forWomen for9Holes:&for9Holes];
 				if (parValue) {
 					localPar = [parValue parValue];
 					have9HolePar = for9Holes;
 					haveWomensPar = forWomen;
 				}
 				if (localPar == kNotAPar) {
-					id extraSource = [info objectForKey:@"round"];
+					id <GOLFHandicapDataSource> extraSource = [info objectForKey:@"round"];
 					if (extraSource == nil) {
 						extraSource = [info objectForKey:@"roundSide"];
 					}
@@ -1508,7 +1508,7 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 					if (extraSource && [extraSource respondsToSelector:@selector(teeParForWomen:for9Holes:)]) {
 						for9Holes = need9HoleResult;
 						forWomen = needWomensResult;
-						parValue = [extraSource teeParForWomen:&forWomen for9Holes:&for9Holes];
+						parValue = [(id <GOLFHandicapDataSource>)extraSource teeParForWomen:&forWomen for9Holes:&for9Holes];
 						if (parValue) {
 							localPar = [parValue parValue];
 							have9HolePar = for9Holes;

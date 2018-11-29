@@ -48,6 +48,8 @@
 "TERM_EVENT_PLURAL" = "événements";
 "TERM_EVERYTHING" = "tout";
 "TERM_FAIRWAY" = "fairway";
+"TERM_FLIGHT" = "vol";
+"TERM_FLIGHT_PLURAL" = "vols";
 "TERM_FOURBALL" = "Quatre-Balle";
 "TERM_FOURSOMES" = "Foursomes";
 "TERM_GREENSOMES" = "Greensomes";
@@ -80,6 +82,7 @@
 "TERM_NUMBER_ABBR" = "no.";
 "TERM_NUMBER_PLURAL" = "números";
 "TERM_NUMBER_PLURAL_ABBR" = "nos.";
+"TERM_OVERALL" = "général";
 "TERM_PAR" = "par";
 "TERM_PAR_PLURAL" = "pars";
 "TERM_PEORIA" = "Peoria";
@@ -118,6 +121,7 @@
 "TERM_TEE" = "jalon";
 "TERM_TEE_PLURAL" = "jalons";
 "TERM_THEME" = "thème";
+"TERM_TIE" = "tie";
 "TERM_TIEBREAKER" = "tie-break";
 "TERM_TIPS" = "astuces";
 "TERM_TOTAL" = "total";
