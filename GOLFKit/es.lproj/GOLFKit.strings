@@ -48,6 +48,7 @@
 "TERM_EVENT_PLURAL" = "eventos";
 "TERM_EVERYTHING" = "todo";
 "TERM_FAIRWAY" = "fairway";
+"TERM_FIND" = "buscar";
 "TERM_FLIGHT" = "flight";
 "TERM_FLIGHT_PLURAL" = "flights";
 "TERM_FOURBALL" = "Four-Ball";
@@ -82,7 +83,10 @@
 "TERM_NUMBER_ABBR" = "no.";
 "TERM_NUMBER_PLURAL" = "números";
 "TERM_NUMBER_PLURAL_ABBR" = "nos.";
+"TERM_OPEN" = "abrir";
 "TERM_OVERALL" = "de conjunto";
+"TERM_PAIRING" = "pareja";
+"TERM_PAIRING_PLURAL" = "parejas";
 "TERM_PAR" = "par";
 "TERM_PAR_PLURAL" = "pars";
 "TERM_PEORIA" = "Peoria";
@@ -248,8 +252,10 @@
 "TITLE_DELETE_ALL" = "Eliminar Todos";
 "TITLE_DIFFERENTIAL_TYPE" = "Tipo de diferencial";
 "TITLE_DONE" = "Aceptar";
+"TITLE_DOWNLOADING_EAGLE_USERS_GUIDE"= "Descargando la Guía del Usuario de Mulligan’s Eagle™…";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
+"TITLE_EAGLE_USERS_GUIDE" = "Guía del usuario de Mulligan’s Eagle";
 "TITLE_EAGLES_OR_BETTER" = "Eagles & mejor";
 "TITLE_EDIT_BUTTON" = "Editar";
 "TITLE_EDIT_EVENT" = "Editar el Evento";
@@ -342,6 +348,7 @@
 "TITLE_LOCK_SCORECARDS" = "Bloquear las Tarjetas";
 "TITLE_MAX_HANDICAP_MEN" = "Máximo handicap estándar para caballeros";
 "TITLE_MAXIMUM_SCORE" = "Resultado máximo";
+"TITLE_MB_DOWNLOADED_%1.1f" = "%1.1fMB descargados";
 "TITLE_MENS_HANDICAP" = "Handicap - Caballeros";
 "TITLE_NAME_SCORECARDS" = "Nombra las Tarjetas";
 "TITLE_NAME_TEAMS" = "Nombra los Equipos";
@@ -387,6 +394,8 @@
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Desbloquea todas Tarjetas del Evento";
 "TITLE_UP_AND_DOWN" = "Alto y Abajo";
 "TITLE_USE_LAST" = "Utilizar últimos";
+"TITLE_USERS_GUIDE_FOUND" = "Guía del Usuario se ha encontrado";
+"TITLE_USERS_GUIDE_NOT_FOUND" = "Ningún archivo Guía del Usuario se ha encontrado";
 "TITLE_WITH_SCORE" = "con resultado";
 "TITLE_WOMENS_HANDICAP" = "Handicap - Damas";
 
@@ -434,6 +443,9 @@
 "MENU_HDCP_ADJUSTED_FULL" = "Completamente Ajustado";
 "MENU_HDCP_ADJUSTED_SLOPE" = "Slope Ajustado";
 
+"ALERT_USERS_GUIDE_ERROR" = "No se puede descargar la Guía del Usuario";
+"ALERT_USERS_GUIDE_ERROR_INFO" = "Asegúrese de que tiene una conexión a Internet.  Inténtelo más tarde.";
+
 "BLURB_DUPLICATE_HOLE_HANDICAPS" = "En los campos con más de un nueve, no permite que los handicaps de hoyo se dupliquen ninguno de los handicaps de hoyo de los otros nueves, a menos que los nueves usen handicaps de 9-hoyos.";
 "BLURB_REMOTE_DROPBOX" = "Los puntajes pueden ser importados o actualizados de archivos de datos sincronizados en la carpeta “Dropbox/Apps/Mulligan Scoring” en este equipo.  Elija “Puntajes de Dropbox…” en el menú Archivo / Importar para revisar puntajes entrantes.";
 "BLURB_REMOTE_ICLOUD" = "Los puntajes pueden ser importados o actualizados de archivos de datos enviados a iCloud por dispositivos remotos conectado con el mismo ID de Apple usado para iCloud en este equipo.  Elija “Puntajes de iCloud…” en el menú Archivo / Importar para revisar puntajes entrantes.";
@@ -444,6 +456,8 @@
 
 "DESCRIPTION_THEME_APPEARANCE" = "Claro - Eagle siempre usa la apariencia clásico de Aqua\nOscuro - Eagle siempre usa la apariencia del Modo Oscuro\nSistema - Eagle usa la apariencia seleccionada en Preferencias del Sistema";
 "DESCRIPTION_THEME_PRE_MOJAVE" = "Antes de macOS 10.14 Mojave, Eagle utiliza el estilo de apariencia Aqua estándar del sistema.";
+"INFO_EAGLE_USERS_GUIDE_DOWNLOAD" = "la versión mas reciente de la Guía del Usuario del sitio web de Mulligan Software";
+"INFO_EAGLE_USERS_GUIDE_LOCATE" = "una copia de la Guía del Usuario que ya está en su computadora";
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "La configuración presentada no se cambian con un reajuste “Ajustes de fábrica”.";
 
 //	GOLFPlayType Titles & Descriptions
@@ -596,12 +610,14 @@
 "CURRENT_%@_TITLE" = "%@ Actual";
 "CURRENT_%@_TITLE_PLURAL" = "%@ Actuales";
 "DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Determina tu %@ de la derecha encontrando la fila donde aparece tu %@ de la izquierda.";
+"DONT_ASK_ME_AGAIN" = "No volver a preguntar.";
 "DOUBLE_QUOTE_CLOSING" = "”";
 "DOUBLE_QUOTE_OPENING" = "“";
 "ELLIPSIS" = "…";
 "FOOTNOTE_CHARACTER" = "†";		//	Special character
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Una Tabla %@ (%@) es utilizada para convertir un %@, publicado por tu club o asociación autorizada del golf, a un %@ basada en el %@ para un tee.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "Una Tabla %@ (%@) es utilizada para convertir un %@, publicado por tu club o asociación autorizada del golf, a un %@ para un tee.";
+"IN_ENGLISH" = "en inglés";		//	Users' Guide notation
 "NUMBER_%ld_ABBR" = "No. %ld";	/*	No. 3	*/
 "ORDINAL_FIRST" = "ᵉʳ";		/*	1ᵉʳ	*/
 "ORDINAL_NTH" = "º";		/*	nth (like 133º)	*/

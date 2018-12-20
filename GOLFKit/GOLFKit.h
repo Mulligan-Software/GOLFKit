@@ -36,6 +36,7 @@
 #import <GOLFKit/GOLFScoring.h>
 #import <GOLFKit/GOLFHandicapping.h>
 #import <GOLFKit/MulliganScoring.h>
+#import <GOLFKit/USGADataServices.h>
 
 //	User Interface (Colors, text, localization, etc.)
 #import <GOLFKit/GOLFColors.h>

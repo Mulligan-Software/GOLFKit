@@ -19,7 +19,7 @@
 //	Numbers
 #import <GOLFKit/NSNumber+GOLFExtensions.h>
 
-//	OS X (not embedded, no iOS, no Watch)
+//	macOS only (not embedded, no iOS, no Watch)
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 
 #import <GOLFKit/NSColor+GOLFExtensions.h>

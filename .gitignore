@@ -233,3 +233,4 @@ fastlane/screenshots
 #
 
 *.xcuserdatad
+/USGA Data Services

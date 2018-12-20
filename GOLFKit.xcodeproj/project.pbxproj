@@ -113,6 +113,10 @@
 		29C6C41920471B7E00EF584C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29C6C41B20471B7E00EF584C /* InfoPlist.strings */; };
 		29C7847F218362080093857B /* GOLFmacOSUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 29C7847D218362080093857B /* GOLFmacOSUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29C78480218362080093857B /* GOLFmacOSUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C7847E218362080093857B /* GOLFmacOSUtilities.m */; };
+		29DF87AC21C960CB008848D9 /* USGADataServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DF87AA21C960CB008848D9 /* USGADataServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29DF87AD21C960CB008848D9 /* USGADataServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DF87AA21C960CB008848D9 /* USGADataServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		29DF87AE21C960CB008848D9 /* USGADataServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DF87AB21C960CB008848D9 /* USGADataServices.m */; };
+		29DF87AF21C960CB008848D9 /* USGADataServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DF87AB21C960CB008848D9 /* USGADataServices.m */; };
 		29E888BB1DCE5B0000C4A63A /* GOLFKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 29E888BA1DCE5B0000C4A63A /* GOLFKitTests.m */; };
 		29E888BD1DCE5B0000C4A63A /* GOLFKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 29E888AF1DCE5B0000C4A63A /* GOLFKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29E888C81DCE5E6400C4A63A /* GOLFKit.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29E888CA1DCE5E6400C4A63A /* GOLFKit.strings */; };
@@ -213,6 +217,8 @@
 		29C6C4242047576800EF584C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/GOLFKit.strings; sourceTree = "<group>"; };
 		29C7847D218362080093857B /* GOLFmacOSUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOLFmacOSUtilities.h; sourceTree = "<group>"; };
 		29C7847E218362080093857B /* GOLFmacOSUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOLFmacOSUtilities.m; sourceTree = "<group>"; };
+		29DF87AA21C960CB008848D9 /* USGADataServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = USGADataServices.h; path = USGA/USGADataServices.h; sourceTree = "<group>"; };
+		29DF87AB21C960CB008848D9 /* USGADataServices.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = USGADataServices.m; path = USGA/USGADataServices.m; sourceTree = "<group>"; };
 		29E888AC1DCE5B0000C4A63A /* GOLFKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GOLFKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		29E888AF1DCE5B0000C4A63A /* GOLFKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GOLFKit.h; path = GOLFKit/GOLFKit.h; sourceTree = SOURCE_ROOT; };
 		29E888B01DCE5B0000C4A63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "GOLFKit (iOS)/Info.plist"; sourceTree = SOURCE_ROOT; };
@@ -259,6 +265,8 @@
 			children = (
 				2912D761204EE40D00649734 /* GOLFHandicapping.h */,
 				2912D75E204EE3C800649734 /* GOLFHandicapping.m */,
+				29DF87AA21C960CB008848D9 /* USGADataServices.h */,
+				29DF87AB21C960CB008848D9 /* USGADataServices.m */,
 			);
 			name = Handicapping;
 			sourceTree = "<group>";
@@ -479,6 +487,7 @@
 			files = (
 				29A338081DCE81D70074A064 /* GOLFTeeMarkers.h in Headers */,
 				294140631DDB582600CC9605 /* GOLFKitTypes.h in Headers */,
+				29DF87AC21C960CB008848D9 /* USGADataServices.h in Headers */,
 				29443573217E3A5700D4595C /* GOLFDynamicColor.h in Headers */,
 				2988BCFB2078547800C173BE /* GOLFExtensions.h in Headers */,
 				2990FA9420726F7000E7DB45 /* GOLFClubs.h in Headers */,
@@ -500,6 +509,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				29A338091DCE81D70074A064 /* GOLFTeeMarkers.h in Headers */,
+				29DF87AD21C960CB008848D9 /* USGADataServices.h in Headers */,
 				294140641DDB582600CC9605 /* GOLFKitTypes.h in Headers */,
 				2988BCFC2078547800C173BE /* GOLFExtensions.h in Headers */,
 				2990FA9520726F7000E7DB45 /* GOLFClubs.h in Headers */,
@@ -710,6 +720,7 @@
 				296411EC204B44CF002A70CB /* GOLFKit.m in Sources */,
 				29A3380A1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */,
 				29443575217E3A5700D4595C /* GOLFDynamicColor.m in Sources */,
+				29DF87AE21C960CB008848D9 /* USGADataServices.m in Sources */,
 				29C0E38E1F9E90580009E23C /* NSNumber+GOLFExtensions.m in Sources */,
 				29E888D01DCE611600C4A63A /* GOLFColors.m in Sources */,
 				2954DC092050EBC2008A7306 /* GOLFUtilities.m in Sources */,
@@ -736,6 +747,7 @@
 				296411ED204B44CF002A70CB /* GOLFKit.m in Sources */,
 				29A3380B1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */,
 				29C0E38F1F9E90580009E23C /* NSNumber+GOLFExtensions.m in Sources */,
+				29DF87AF21C960CB008848D9 /* USGADataServices.m in Sources */,
 				29A338011DCE745B0074A064 /* GOLFColors.m in Sources */,
 				2954DC0A2050EBC2008A7306 /* GOLFUtilities.m in Sources */,
 				29290A6D20727B88005A0E3F /* GOLFScoring.m in Sources */,
