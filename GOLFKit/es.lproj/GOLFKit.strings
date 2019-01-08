@@ -33,6 +33,7 @@
 "TERM_CODE" = "código";
 "TERM_COLOR" = "color";
 "TERM_COMPETITOR" = "competidor";
+"TERM_COMPLETE" = "completo";
 "TERM_CONTINUE" = "continuar";
 "TERM_COPY" = "copiar";
 "TERM_COURSE" = "campo";
@@ -131,6 +132,7 @@
 "TERM_TOTAL" = "total";
 "TERM_TOURNAMENT" = "torneo";
 "TERM_TRAINING" = "entrenamiento";
+"TERM_TREND" = "tendencia";
 "TERM_UNKNOWN" = "ignoto";
 "TERM_USE" = "usar";
 "TERM_VERSUS_ABBR" = "vs.";

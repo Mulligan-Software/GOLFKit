@@ -106,25 +106,25 @@ typedef NS_ENUM(GOLFTeeColorIndex, teeColorIndexEnumeration) {
 + (id)GOLFFactoryOverParScoreColor;
 
 //	From GOLFColors.xcassets (Appearance sensitive)
-+ (id)GOLFFactoryBirdieColor API_AVAILABLE(macosx(10.10),ios(9.0));
-+ (id)GOLFFactoryBogeyColor API_AVAILABLE(macosx(10.10),ios(9.0));
-+ (id)GOLFFactoryEagleColor API_AVAILABLE(macosx(10.10),ios(9.0));
-+ (id)GOLFFactoryErrorHighlightColor API_AVAILABLE(macosx(10.10),ios(9.0));
-+ (id)GOLFFactoryMatchAColor API_AVAILABLE(macosx(10.10),ios(9.0));
-+ (id)GOLFFactoryMatchBColor API_AVAILABLE(macosx(10.10),ios(9.0));
-+ (id)GOLFFactoryParColor API_AVAILABLE(macosx(10.10),ios(9.0));
-+ (id)GOLFFactoryPeoriaBackgroundColor API_AVAILABLE(macosx(10.10),ios(9.0));
-+ (id)GOLFFactoryPlottingPrimaryColor API_AVAILABLE(macosx(10.10),ios(9.0));
-+ (id)GOLFFactoryPlottingSecondaryColor API_AVAILABLE(macosx(10.10),ios(9.0));
-+ (id)GOLFFactorySkinsBackgroundColor API_AVAILABLE(macosx(10.10),ios(9.0));
++ (id)GOLFFactoryBirdieColor API_AVAILABLE(macos(10.10),ios(9.0));
++ (id)GOLFFactoryBogeyColor API_AVAILABLE(macos(10.10),ios(9.0));
++ (id)GOLFFactoryEagleColor API_AVAILABLE(macos(10.10),ios(9.0));
++ (id)GOLFFactoryErrorHighlightColor API_AVAILABLE(macos(10.10),ios(9.0));
++ (id)GOLFFactoryMatchAColor API_AVAILABLE(macos(10.10),ios(9.0));
++ (id)GOLFFactoryMatchBColor API_AVAILABLE(macos(10.10),ios(9.0));
++ (id)GOLFFactoryParColor API_AVAILABLE(macos(10.10),ios(9.0));
++ (id)GOLFFactoryPeoriaBackgroundColor API_AVAILABLE(macos(10.10),ios(9.0));
++ (id)GOLFFactoryPlottingPrimaryColor API_AVAILABLE(macos(10.10),ios(9.0));
++ (id)GOLFFactoryPlottingSecondaryColor API_AVAILABLE(macos(10.10),ios(9.0));
++ (id)GOLFFactorySkinsBackgroundColor API_AVAILABLE(macos(10.10),ios(9.0));
 
 //	Dark Mode
 + (id)GOLFFactoryDarkEagleScoreColor;
 + (id)GOLFFactoryDarkBirdieScoreColor;
 + (id)GOLFFactoryDarkParScoreColor;
 + (id)GOLFFactoryDarkBogeyScoreColor;
-+ (id)GOLFFactoryDarkMatchAColor API_AVAILABLE(macosx(10.10),ios(9.0));
-+ (id)GOLFFactoryDarkMatchBColor API_AVAILABLE(macosx(10.10),ios(9.0));
++ (id)GOLFFactoryDarkMatchAColor API_AVAILABLE(macos(10.10),ios(9.0));
++ (id)GOLFFactoryDarkMatchBColor API_AVAILABLE(macos(10.10),ios(9.0));
 
 @end
 
