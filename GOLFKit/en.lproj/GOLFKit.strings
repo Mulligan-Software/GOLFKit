@@ -38,6 +38,7 @@
 "TERM_COPY" = "copy";
 "TERM_COURSE" = "course";
 "TERM_COURSE_PLURAL" = "courses";
+"TERM_DATE" = "date";
 "TERM_DELETE" = "delete";
 "TERM_DISQUALIFIED" = "disqualified";
 "TERM_DISQUALIFIED_ABBR" = "disq.";
@@ -71,6 +72,7 @@
 "TERM_MATCH_PLURAL" = "matches";
 "TERM_MEDAL" = "medal";
 "TERM_MEDALMATCH" = "Medal Match";
+"TERM_METER_PLURAL" = "meters";
 "TERM_METER_PLURAL_ABBR" = "Mtr.";
 "TERM_MOVE" = "move";
 "TERM_NET" = "net";
@@ -109,6 +111,7 @@
 "TERM_SAND" = "sand";
 "TERM_SAVE" = "save";
 "TERM_SCHEID" = "Scheid";
+"TERM_SCORE" = "score";
 "TERM_SCORE_PLURAL" = "scores";
 "TERM_SCOREBOARD" = "scoreboard";
 "TERM_SCORECARD" = "scorecard";
@@ -117,6 +120,7 @@
 "TERM_SELECTED" = "selected";
 "TERM_SIDE" = "side";
 "TERM_SIXPT" = "6-Point";
+"TERM_SLOPE" = "slope";
 "TERM_STABLEFORD" = "Stableford";
 "TERM_STROKE" = "stroke";
 "TERM_STROKE_PLURAL" = "strokes";
@@ -138,6 +142,7 @@
 "TERM_VERSUS_ABBR" = "vs.";
 "TERM_WALTZ" = "Waltz";
 "TERM_WOMAN_PLURAL" = "women";
+"TERM_YARD_PLURAL" = "yards";
 "TERM_YARD_PLURAL_ABBR" = "Yds.";
 "TERM_YARDAGE" = "yardage";
 "TERM_YES" = "yes";
@@ -355,15 +360,19 @@
 "TITLE_NAME_SCORECARDS" = "Name Scorecards";
 "TITLE_NAME_TEAMS" = "Name Teams";
 "TITLE_NEXT_HOLE" = "Next Hole";
+"TITLE_NINE_HOLES" = "9 Holes";
 "TITLE_NO_STROKES" = "no strokes";
 "TITLE_OPEN_SCORECARD" = "Open the Scorecard";
 "TITLE_OPEN_%@" = "Open %@";
 "TITLE_OPEN_3_%@" = "Open 3 %@";
 "TITLE_OK_BUTTON" = "OK";
+"TITLE_PENALTY_ROUND" = "Penalty Round";
 "TITLE_PENALTY_STROKE" = "Penalty Stroke";
 "TITLE_PENALTY_STROKE_PLURAL" = "Penalty Strokes";
 "TITLE_PERSONAL_HANDICAPPING" = "Personal Handicapping";
 "TITLE_PLAYING_HANDICAP_DETERMINATION" = "Playing Handicap determination";
+"TITLE_POST" = "Post";
+"TITLE_POST_SCORE_FOR_%@" = "Post a supplementary score for %@";
 "TITLE_PREFERENCES" = "Preferences";
 "TITLE_PREVIOUS_HOLE" = "Previous Hole";
 "TITLE_PRIMARY" = "Primary";
@@ -376,6 +385,11 @@
 "TITLE_ROUNDS_HIGHLIGHT" = "Rounds Highlight";
 "TITLE_SAND_SAVES_PER_TRY" = "Sand Saves/Tries";
 "TITLE_SAVE" = "Save";
+"TITLE_SCORECARD_IN" = "In";		//	As it appears in Scorecard total headers ("In")
+"TITLE_SCORECARD_LENGTH_IMPERIAL" = "Ydg";
+"TITLE_SCORECARD_LENGTH_METRIC" = "M.";
+"TITLE_SCORECARD_OUT" = "Out";		//	As it appears in Scorecard total headers ("Out")
+"TITLE_SCORECARD_TOTAL" = "Tot";	//	As it appears in Scorecard total headers
 "TITLE_SCORING_COLORS" = "Scoring Colors";
 "TITLE_SCORING_SHORTHAND" = "Scoring Shorthand";
 "TITLE_SECONDARY" = "Secondary";
@@ -400,14 +414,6 @@
 "TITLE_USERS_GUIDE_NOT_FOUND" = "No Users’ Guide file found";
 "TITLE_WITH_SCORE" = "with score";
 "TITLE_WOMENS_HANDICAP" = "Women’s Handicap";
-
-"TITLE_SCORECARD_IN" = "In";		//	As it appears in Scorecard total headers ("In")
-"TITLE_SCORECARD_LENGTH_IMPERIAL" = "Ydg";
-"TITLE_SCORECARD_LENGTH_METRIC" = "M.";
-"TITLE_SCORECARD_OUT" = "Out";		//	As it appears in Scorecard total headers ("Out")
-"TITLE_SCORECARD_TOTAL" = "Tot";	//	As it appears in Scorecard total headers
-"TERM_METER_PLURAL" = "meters";
-"TERM_YARD_PLURAL" = "yards";
 
 "SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
 "SAMPLE_LOOSELY_ALPHABETIC_NAMES" = "Al Czervik / Elihu & Vivian Smails / Beeper, Czervik, Smails & Webb";
@@ -627,6 +633,7 @@
 "ORDINAL_20TH_TO_29TH" = "th,st,nd,rd,th,th,th,th,th,th";	/*	20th, 21st, 22nd, 23rd, 24th, 25th, etc.		*/
 "SCORECARD_EXCEEDS_1_PLAYER" = "Scorecard exceeds maximum 1 player";
 "SCORECARD_EXCEEDS_%ld_PLAYERS" = "Scorecard exceeds maximum %ld players";
+"VIA_THE_INTERNET" = "via the Internet";
 "WITH_CHARACTER" = "c̅";		//	Special character
 
 //	Unicode Vulgar Fractions

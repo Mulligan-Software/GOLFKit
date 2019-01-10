@@ -38,6 +38,7 @@
 "TERM_COPY" = "kopieren";
 "TERM_COURSE" = "Golfplatz";
 "TERM_COURSE_PLURAL" = "Golfplätze";
+"TERM_DATE" = "Datum";
 "TERM_DELETE" = "löschen";
 "TERM_DISQUALIFIED" = "disqualifiziert";
 "TERM_DISQUALIFIED_ABBR" = "disq.";
@@ -71,6 +72,7 @@
 "TERM_MATCH_PLURAL" = "Matches";
 "TERM_MEDAL" = "medaille";
 "TERM_MEDALMATCH" = "Match Medaille";
+"TERM_METER_PLURAL" = "Meter";
 "TERM_METER_PLURAL_ABBR" = "Mtr.";
 "TERM_MOVE" = "bewegen";
 "TERM_NET" = "netto";
@@ -109,6 +111,7 @@
 "TERM_SAND" = "Sand";
 "TERM_SAVE" = "sichern";
 "TERM_SCHEID" = "Scheid";
+"TERM_SCORE" = "Score";
 "TERM_SCORE_PLURAL" = "Scores";
 "TERM_SCOREBOARD" = "Anzeigetafel";
 "TERM_SCORECARD" = "Scorekarte";
@@ -117,6 +120,7 @@
 "TERM_SELECTED" = "ausgewält";
 "TERM_SIDE" = "Seite";
 "TERM_SIXPT" = "6-Punkte";
+"TERM_SLOPE" = "Slope";
 "TERM_STABLEFORD" = "Stableford";
 "TERM_STROKE" = "Schlag";
 "TERM_STROKE_PLURAL" = "Schläge";
@@ -138,6 +142,7 @@
 "TERM_VERSUS_ABBR" = "vs.";
 "TERM_WALTZ" = "Waltzer";
 "TERM_WOMAN_PLURAL" = "Damen";
+"TERM_YARD_PLURAL" = "Yards";
 "TERM_YARD_PLURAL_ABBR" = "Yds.";
 "TERM_YARDAGE" = "Meterzahl";
 "TERM_YES" = "Ja";
@@ -355,15 +360,19 @@
 "TITLE_NAME_SCORECARDS" = "Benennen Scorekarten";
 "TITLE_NAME_TEAMS" = "Benennen Teams";
 "TITLE_NEXT_HOLE" = "nächstes Loch";
+"TITLE_NINE_HOLES" = "9 Löcher";
 "TITLE_NO_STROKES" = "keine Schläge";
 "TITLE_OPEN_SCORECARD" = "Scorekarte öffnen";
 "TITLE_OPEN_%@" = "Öffne %@";
 "TITLE_OPEN_3_%@" = "Öffne 3 %@";
 "TITLE_OK_BUTTON" = "OK";
+"TITLE_PENALTY_ROUND" = "Strafrunde";
 "TITLE_PENALTY_STROKE" = "Strafschlag";
 "TITLE_PENALTY_STROKE_PLURAL" = "Strafschlage";
 "TITLE_PERSONAL_HANDICAPPING" = "Persönliche Handicapend";
 "TITLE_PLAYING_HANDICAP_DETERMINATION" = "Spielen-Handicap Bestimmung";
+"TITLE_POST" = "Posten";
+"TITLE_POST_SCORE_FOR_%@" = "Posten Sie eine zusätzliche Partitur für %@";
 "TITLE_PREFERENCES" = "Einstellungen";
 "TITLE_PREVIOUS_HOLE" = "vorheriges Loch";
 "TITLE_PRIMARY" = "Primär";
@@ -376,6 +385,11 @@
 "TITLE_ROUNDS_HIGHLIGHT" = "Runden Akzentuierung";
 "TITLE_SAND_SAVES_PER_TRY" = "Sand-Bergungen/Versuche";
 "TITLE_SAVE" = "Sichern";
+"TITLE_SCORECARD_IN" = "In";		//	As it appears in Scorecard total headers
+"TITLE_SCORECARD_LENGTH_IMPERIAL" = "Ydg";
+"TITLE_SCORECARD_LENGTH_METRIC" = "M.";
+"TITLE_SCORECARD_OUT" = "Aus";		//	As it appears in Scorecard total headers
+"TITLE_SCORECARD_TOTAL" = "Sum";	//	As it appears in Scorecard total headers
 "TITLE_SCORING_COLORS" = "Farben für Golfwertung";
 "TITLE_SCORING_SHORTHAND" = "Kurzschrift für Golfwertung";
 "TITLE_SECONDARY" = "Sekundär";
@@ -400,14 +414,6 @@
 "TITLE_USERS_GUIDE_NOT_FOUND" = "Benutzerleitfaden nicht gefunden";
 "TITLE_WITH_SCORE" = "mit Punktzahl";
 "TITLE_WOMENS_HANDICAP" = "Handicap der Damen";
-
-"TITLE_SCORECARD_IN" = "In";		//	As it appears in Scorecard total headers
-"TITLE_SCORECARD_LENGTH_IMPERIAL" = "Ydg";
-"TITLE_SCORECARD_LENGTH_METRIC" = "M.";
-"TITLE_SCORECARD_OUT" = "Out";		//	As it appears in Scorecard total headers
-"TITLE_SCORECARD_TOTAL" = "Tot";	//	As it appears in Scorecard total headers
-"TERM_METER_PLURAL" = "Meter";
-"TERM_YARD_PLURAL" = "Yards";
 
 "SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
 "SAMPLE_LOOSELY_ALPHABETIC_NAMES" = "Al Czervik / Elihu & Vivian Smails / Beeper, Czervik, Smails & Webb";
@@ -626,6 +632,7 @@
 "ORDINAL_20TH_TO_29TH" = ".,.,.,.,.,.,.,.,.,.";
 "SCORECARD_EXCEEDS_1_PLAYER" = "Scorekarte überschreitet maximal 1 Spieler";
 "SCORECARD_EXCEEDS_%ld_PLAYERS" = "Scorekarte überschreitet maximal %ld Spieler";
+"VIA_THE_INTERNET" = "über das Internet";
 "WITH_CHARACTER" = "c̅";		//	Special character
 
 //	Countries
