@@ -10,7 +10,9 @@
 "TERM_ADJUSTED" = "adjusted";
 "TERM_ADJUSTED_ABBR" = "adj.";
 "TERM_ADJUSTED_FOR_RATINGS" = "adjusted for Course Rating differences";
+"TERM_ALL" = "all";
 "TERM_ALLOWANCE" = "allowance";
+"TERM_ASSIGN" = "assign";
 "TERM_AUTHORITY" = "authority";
 "TERM_AUTHORIZATION" = "authorization";
 "TERM_AVERAGE" = "average";
@@ -27,6 +29,7 @@
 "TERM_CHAPMAN" = "Chapman";
 "TERM_CHICAGO" = "Chicago";
 "TERM_CHOOSE" = "choose";
+"TERM_CITY" = "city";
 "TERM_CLICK" = "click";
 "TERM_CLUB" = "club";
 "TERM_CLUB_PLURAL" = "clubs";
@@ -236,6 +239,8 @@
 "TITLE_ADVANCED_9_HOLE_HANDICAPS" = "Require 9-hole handicaps";
 "TITLE_ADVANCED_REFERENCE_TEES" = "Allow rating “Reference” Tees";
 "TITLE_ALLOWANCE" = "Allowance";
+"TITLE_ASSIGN_ROUND_TO" = "Assign a round to";
+"TITLE_ASSIGN_%ld_ROUNDS_TO" = "Assign %ld rounds to";
 "TITLE_ASSIGN_TEES" = "Assign Starting Tees";
 "TITLE_ASSIGN_TIMES" = "Assign Tee Times";
 "TITLE_BACK_NINE" = "Back Nine";

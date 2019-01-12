@@ -10,7 +10,9 @@
 "TERM_ADJUSTED" = "ajustado";
 "TERM_ADJUSTED_ABBR" = "ajus.";
 "TERM_ADJUSTED_FOR_RATINGS" = "ajustado por diferencias de Clasificaciones del Campo";
+"TERM_ALL" = "todo";
 "TERM_ALLOWANCE" = "asignación";
+"TERM_ASSIGN" = "asignar";
 "TERM_AUTHORITY" = "potestad";
 "TERM_AUTHORIZATION" = "autorización";
 "TERM_AVERAGE" = "promedio";
@@ -27,6 +29,7 @@
 "TERM_CHAPMAN" = "Chapman";
 "TERM_CHICAGO" = "Chicago";
 "TERM_CHOOSE" = "seleccionar";
+"TERM_CITY" = "ciudad";
 "TERM_CLICK" = "clic";
 "TERM_CLUB" = "club";
 "TERM_CLUB_PLURAL" = "clubes";
@@ -236,6 +239,8 @@
 "TITLE_ADVANCED_9_HOLE_HANDICAPS" = "Requerir handicaps 9-hoyos";
 "TITLE_ADVANCED_REFERENCE_TEES" = "Permitir Clasificación Tees “Referencia”";
 "TITLE_ALLOWANCE" = "Asignación";
+"TITLE_ASSIGN_ROUND_TO" = "Asignar una ronda a";
+"TITLE_ASSIGN_%ld_ROUNDS_TO" = "Asignar %ld rondas a";
 "TITLE_ASSIGN_TEES" = "Asignar Tees Iniciales";
 "TITLE_ASSIGN_TIMES" = "Asignar Tiempos de Inicio";
 "TITLE_BACK_NINE" = "Segundo Nueve";

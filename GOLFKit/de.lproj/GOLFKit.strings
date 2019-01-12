@@ -10,7 +10,9 @@
 "TERM_ADJUSTED" = "angepasst";
 "TERM_ADJUSTED_ABBR" = "ange.";
 "TERM_ADJUSTED_FOR_RATINGS" = "bereinigt um Unterschiede der Course Ratings";
+"TERM_ALL" = "alle";
 "TERM_ALLOWANCE" = "Zustimmung";
+"TERM_ASSIGN" = "zuweisen";
 "TERM_AUTHORITY" = "Autorität";
 "TERM_AUTHORIZATION" = "Autorisierung";
 "TERM_AVERAGE" = "mittlere";
@@ -27,6 +29,7 @@
 "TERM_CHAPMAN" = "Chapman";
 "TERM_CHICAGO" = "Chicago";
 "TERM_CHOOSE" = "auswählen";
+"TERM_CITY" = "Stadt";
 "TERM_CLICK" = "klicken";
 "TERM_CLUB" = "Club";
 "TERM_CLUB_PLURAL" = "Clubs";
@@ -236,6 +239,8 @@
 "TITLE_ADVANCED_9_HOLE_HANDICAPS" = "Erfordert 9-Loch Handicaps";
 "TITLE_ADVANCED_REFERENCE_TEES" = "Zulassen Rating „Referenz“ Abschläge";
 "TITLE_ALLOWANCE" = "Zustimmung";
+"TITLE_ASSIGN_ROUND_TO" = "Zuweisen eine Runde";
+"TITLE_ASSIGN_%ld_ROUNDS_TO" = "%ld Runden zuweisen an";
 "TITLE_ASSIGN_TEES" = "Zuweisen Start-Abschläge";
 "TITLE_ASSIGN_TIMES" = "Zuweisen Anfangszeit";
 "TITLE_BACK_NINE" = "Rückneun";

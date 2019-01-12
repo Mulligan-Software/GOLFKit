@@ -10,7 +10,9 @@
 "TERM_ADJUSTED" = "ajusté";
 "TERM_ADJUSTED_ABBR" = "ajus.";
 "TERM_ADJUSTED_FOR_RATINGS" = "ajusté pour les différences d’Évaluations Parcours";
+"TERM_ALL" = "toutes";
 "TERM_ALLOWANCE" = "allocation";
+"TERM_ASSIGN" = "attribuer";
 "TERM_AUTHORITY" = "autorité";
 "TERM_AUTHORIZATION" = "autorisation";
 "TERM_AVERAGE" = "moyenne";
@@ -27,6 +29,7 @@
 "TERM_CHAPMAN" = "Chapman";
 "TERM_CHICAGO" = "Chicago";
 "TERM_CHOOSE" = "choisir";
+"TERM_CITY" = "ville";
 "TERM_CLICK" = "cliquez";
 "TERM_CLUB" = "club";
 "TERM_CLUB_PLURAL" = "clubs";
@@ -236,6 +239,8 @@
 "TITLE_ADVANCED_9_HOLE_HANDICAPS" = "Requérir handicaps 9-trous";
 "TITLE_ADVANCED_REFERENCE_TEES" = "Permettre évaluation Jalons «Référence»";
 "TITLE_ALLOWANCE" = "Allocation";
+"TITLE_ASSIGN_ROUND_TO" = "Attribuer un tour à";
+"TITLE_ASSIGN_%ld_ROUNDS_TO" = "Attribuer %ld tours à";
 "TITLE_ASSIGN_TEES" = "Assigner Jalons de Départ";
 "TITLE_ASSIGN_TIMES" = "Assigner l’Heures de Départ";
 "TITLE_BACK_NINE" = "Deuxième Neuf";
