@@ -85,6 +85,8 @@
 "TERM_NO" = "no";
 "TERM_NONE" = "nada";
 "TERM_NORMAL" = "normal";
+"TERM_NOTE" = "nota";
+"TERM_NOTE_PLURAL" = "notas";
 "TERM_NUMBER" = "número";
 "TERM_NUMBER_ABBR" = "no.";
 "TERM_NUMBER_PLURAL" = "números";
@@ -419,6 +421,16 @@
 "TITLE_USERS_GUIDE_NOT_FOUND" = "Ningún archivo Guía del Usuario se ha encontrado";
 "TITLE_WITH_SCORE" = "con resultado";
 "TITLE_WOMENS_HANDICAP" = "Handicap - Damas";
+
+"TERM_PRIVATE" = "particular";
+"TERM_STATUS" = "estado";
+"TITLE_STATUS_A" = "Estado A";
+"TITLE_STATUS_B" = "Estado B";
+"TITLE_STATUS_C" = "Estado C";
+"TITLE_STATUS_PAID" = "Pagado";
+"TITLE_STATUS_REGISTERED" = "Registrado";
+"TITLE_STATUS_VERIFIED" = "Verificado";
+"DESCRIPTION_PRINTING_PRIVACY_%@" = "Las categorías de registro de eventos identificadas como “%@” generalmente no se imprimen ni se muestran.";
 
 "SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
 "SAMPLE_LOOSELY_ALPHABETIC_NAMES" = "Al Czervik / Elihu & Vivian Smails / Beeper, Czervik, Smails & Webb";
