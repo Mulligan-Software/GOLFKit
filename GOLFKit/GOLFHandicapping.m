@@ -29,6 +29,11 @@ GOLFHandicapAuthority * const GOLFHandicapAuthorityPersonal		= @"PERSONAL";
 GOLFHandicapAuthority * const GOLFHandicapAuthoritySecondBest	= @"SECONDBEST";
 #endif
 
+//	GOLFLink (www.golf.org.au) constants for Lou Loomis login
+NSString * const GOLFLinkLoggedInGAUserCookieValue = @"212251";
+NSString * const GOLFLink_gaCookieValue = @"GA1.3.1660873617.1546283221";
+NSString * const GOLFLink_gidCookieValue = @"GA1.3.1902797135.1547657519";
+
 static NSArray *cachedGOLFHandicapAuthorities = nil;
 static NSDictionary *cachedGOLFHomeCountryInfo = nil;
 

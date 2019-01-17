@@ -114,6 +114,11 @@ extern GOLFHandicapAuthority * const GOLFHandicapAuthorityPersonal;		//	"PERSONA
 extern GOLFHandicapAuthority * const GOLFHandicapAuthoritySecondBest;	//	"SECONDBEST"
 #endif
 
+//	GOLFLink
+extern NSString * const GOLFLinkLoggedInGAUserCookieValue;
+extern NSString * const GOLFLink_gaCookieValue;
+extern NSString * const GOLFLink_gidCookieValue;
+
 GOLFHandicapAuthority * GOLFDefaultHandicapAuthority(void);
 //	Without any further help, return an appropriate GOLFHandicapAuthority
 //	Last resort is "USGA"
