@@ -40,7 +40,6 @@
 
 //	User Interface (Colors, text, localization, etc.)
 #import <GOLFKit/GOLFColors.h>
-#import <GOLFKit/GOLFDynamicColor.h>
 #import <GOLFKit/GOLFTeeMarkers.h>
 
 //	Custom Drawing (not available on the Watch)
@@ -67,6 +66,7 @@
 //	macOS (not embedded, no iOS, no Watch)
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 #import <GOLFKit/GOLFmacOSUtilities.h>
+#import <GOLFKit/GOLFDynamicColor.h>
 #endif
 
 #define GOLFKIT_BUNDLE_ID			@"com.mulligansoftware.GOLFKit"

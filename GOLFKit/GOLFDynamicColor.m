@@ -32,11 +32,11 @@
 	return YES;
 }
 
-- (instancetype)initWithAquaColor:(NSColor *)aquaColor darkAquaColor:(NSColor *)darkAquaColor {
+- (instancetype)initWithAquaColor:(GOLFColor *)aquaColor darkAquaColor:(GOLFColor *)darkAquaColor {
 	self = [super init];
 	if (self) {
-		_aquaColor = aquaColor;
-		_darkAquaColor = darkAquaColor;
+		self.aquaColor = aquaColor;
+		self.darkAquaColor = darkAquaColor;
 	}
 	return self;
 }
@@ -44,8 +44,8 @@
 - (instancetype)initWithCoder:(NSCoder *)coder {
 	self = [super initWithCoder:coder];
 	if (self) {
-		_aquaColor = [coder decodeObjectOfClass:[GOLFColor class] forKey:@"aquaColor"];
-		_darkAquaColor = [coder decodeObjectOfClass:[GOLFColor class] forKey:@"darkAquaColor"];
+		self.aquaColor = [coder decodeObjectOfClass:[GOLFColor class] forKey:@"aquaColor"];
+		self.darkAquaColor = [coder decodeObjectOfClass:[GOLFColor class] forKey:@"darkAquaColor"];
 	}
 	return self;
 }

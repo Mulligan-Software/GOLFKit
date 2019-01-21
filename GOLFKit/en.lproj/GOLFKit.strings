@@ -104,6 +104,7 @@
 "TERM_POINT_ABBR" = "pt.";
 "TERM_POINT_PLURAL" = "points";
 "TERM_POINT_PLURAL_ABBR" = "pts.";
+"TERM_PRIVATE" = "private";
 "TERM_PURCHASE" = "purchase";
 "TERM_PUTT" = "putt";
 "TERM_PUTT_PLURAL" = "putts";
@@ -127,6 +128,7 @@
 "TERM_SIXPT" = "6-Point";
 "TERM_SLOPE" = "slope";
 "TERM_STABLEFORD" = "Stableford";
+"TERM_STATUS" = "status";
 "TERM_STROKE" = "stroke";
 "TERM_STROKE_PLURAL" = "strokes";
 "TERM_TAP" = "tap";
@@ -409,6 +411,12 @@
 "TITLE_SKILL_ADJUSTMENT" = "Skill Adjustment";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
+"TITLE_STATUS_A" = "Status A";
+"TITLE_STATUS_B" = "Status B";
+"TITLE_STATUS_C" = "Status C";
+"TITLE_STATUS_PAID" = "Paid";
+"TITLE_STATUS_REGISTERED" = "Registered";
+"TITLE_STATUS_VERIFIED" = "Verified";
 "TITLE_SYSTEM" = "System";
 "TITLE_TECHNICAL_SUPPORT" = "Technical Support";
 "TITLE_TOTAL_POINTS" = "Total Points";
@@ -421,16 +429,6 @@
 "TITLE_USERS_GUIDE_NOT_FOUND" = "No Users’ Guide file found";
 "TITLE_WITH_SCORE" = "with score";
 "TITLE_WOMENS_HANDICAP" = "Women’s Handicap";
-
-"TERM_PRIVATE" = "private";
-"TERM_STATUS" = "status";
-"TITLE_STATUS_A" = "Status A";
-"TITLE_STATUS_B" = "Status B";
-"TITLE_STATUS_C" = "Status C";
-"TITLE_STATUS_PAID" = "Paid";
-"TITLE_STATUS_REGISTERED" = "Registered";
-"TITLE_STATUS_VERIFIED" = "Verified";
-"DESCRIPTION_PRINTING_PRIVACY_%@" = "Event registration categories identified as “%@” are generally not printed or displayed.";
 
 "SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
 "SAMPLE_LOOSELY_ALPHABETIC_NAMES" = "Al Czervik / Elihu & Vivian Smails / Beeper, Czervik, Smails & Webb";
@@ -479,11 +477,20 @@
 "BLURB_ALLOW_REFERENCE_TEES" = "When adjusting Playing Handicaps for differences in Course Ratings, allow specification of “reference” tees to be used for calculation of adjustments for men and/or women.";
 "BLURB_REVIEW_HANDICAP_RECORDS" = "Examine previously calculated handicap records in tabular form with capabilities to remove selected data.";
 
+"DESCRIPTION_PRINTING_PRIVACY_%@" = "Event registration categories identified as “%@” are generally not printed or displayed.";
 "DESCRIPTION_THEME_APPEARANCE" = "Light - Eagle always uses classic Aqua appearance\nDark - Eagle always uses Dark Mode appearance\nSystem - Eagle uses the appearance selected in System Preferences";
 "DESCRIPTION_THEME_PRE_MOJAVE" = "Prior to macOS 10.14 Mojave, Eagle uses the system's standard Aqua appearance style.";
 "INFO_EAGLE_USERS_GUIDE_DOWNLOAD" = "the most recent version of the Users‘ Guide from Mulligan Software‘s web site";
 "INFO_EAGLE_USERS_GUIDE_LOCATE" = "a copy of the Users’ Guide that is already on your computer";
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "The Personal Handicapping settings above are not changed with a “Factory Settings” reset.";
+
+//	USGA Data Services
+"NOTICE_USGA_CANCELLED" = "USGA Data Services connection cancelled";
+"NOTICE_USGA_CODE_%ld_DESC_%@" = "USGA Data Services returned code %ld (%@)";
+"NOTICE_USGA_CONNECTED" = "Connected to USGA Data Services";
+"NOTICE_USGA_CONNECTING" = "Connecting to USGA Data Services…";
+"NOTICE_USGA_FAILED" = "USGA Data Services connection failed";
+"NOTICE_USGA_RECEIVING" = "Receiving from USGA Data Services…";
 
 //	GOLFPlayType Titles & Descriptions
 "PLAY_TYPE_MEDAL_PLAY" = "Medal Play";
