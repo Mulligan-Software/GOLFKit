@@ -7,11 +7,17 @@
 //
 
 #import "USGADataServices.h"
-
-#define kUSGADataServicesDeveloperUserName	@"jb@mulligansoftware.com"
-#define kUSGADataServicesDeveloperPassword	@"CqdMM77CUG"
+#import <WebKit/WKWebView.h>
 
 //	Globals
+NSString * const GOLFKitForUSGADataServicesErrorDomain = @"com.mulligansoftware.GOLFKitForUSGADataServices.ErrorDomain";
+
+//	Private definitions
+#define	kDefaultUSGADataServicesAccessTokenExpiration	9000			//	(seconds) 2 1/2 hours
+
+NSString * const USGADataServicesDeveloperUserName	= @"jb@mulligansoftware.com";
+NSString * const USGADataServicesDeveloperPassword	= @"CqdMM77CUG";
+
 NSString * const USGADataServicesGOLFKitAppName		= @"GOLFKit for USGA Data Services";
 NSString * const USGADataServicesGOLFKitAppKey		= @"BOBegvneUAUD6GeVAEHievXPw1C8vUoq";
 NSString * const USGADataServicesGOLFKitAppSecret	= @"aScrZs9kX8r4wPgi";
@@ -19,7 +25,7 @@ NSString * const USGADataServicesGOLFKitAppSecret	= @"aScrZs9kX8r4wPgi";
 NSString * const USGADataServicesiOSIdentifier		= @"iOS";
 #endif
 
-NSString *const GOLFKitForUSGADataServicesErrorDomain = @"com.mulligansoftware.GOLFKitForUSGADataServices.ErrorDomain";
+//	Private functions
 
 //=================================================================
 //	USGADataServicesGOLFKitInfo()
@@ -31,11 +37,14 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 			nil];
 }
 
-@interface USGADataServicesAgent (private)
 
-- (void)requestAccessToken;
+@interface USGADataServicesAgent ()
+
 - (NSURLSessionConfiguration *)USGAQuerySessionConfiguration;
 - (NSString *)USGAAppAuthenticationString;
+
+- (void)TokenPost:(NSInteger)expiresIn;
+- (void)GetGolfer:(NSString *)GolferId token:(NSString *)token;
 
 @end
 
@@ -65,10 +74,6 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
     		self.USGADataServicesProductAppKey = [info objectForKey:@"appKey"];
     		self.USGADataServicesProductAppSecret = [info objectForKey:@"appSecret"];
     	}
-#ifdef DEBUG
-	NSLog(@"%@ -%@ %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), self.USGADataServicesProductAppKey);
-#endif
-		self.startupTimer = [NSTimer scheduledTimerWithTimeInterval:3.0 target:self selector:@selector(requestAccessTokenWithTimer:) userInfo:nil repeats:NO];
 	}
 	return self;
 }
@@ -78,6 +83,53 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 #ifdef DEBUG
 	NSLog(@"%@ -%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
 #endif
+}
+
+- (NSString *)userAgent {
+	if (_userAgent == nil) {
+		NSOperatingSystemVersion systemVersion = [[NSProcessInfo processInfo] operatingSystemVersion];
+		NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
+		NSString *bundleName = [info objectForKey:@"CFBundleName"];	//	"The Scoring Machine"
+		NSString *bundleVersion = [info objectForKey:@"CFBundleVersion"];	//	95
+		NSString *bundleShortVersion = [info objectForKey:@"CFBundleShortVersionString"];	//	"1.4.11"
+		NSString *osVersionString = @"";
+		if (systemVersion.patchVersion > 0) {
+			osVersionString = [NSString stringWithFormat:@"_%ld", (long)systemVersion.patchVersion];
+		}
+		if (([osVersionString length] > 0) || (systemVersion.minorVersion > 0)) {
+			osVersionString = [NSString stringWithFormat:@"_%ld%@", (long)systemVersion.minorVersion, osVersionString];
+		}
+		osVersionString = [NSString stringWithFormat:@"%ld%@", (long)systemVersion.majorVersion, osVersionString];
+
+		NSString *appPart = [NSString stringWithFormat:@"%@/%@(%@)", [[bundleName componentsSeparatedByString:@" "] componentsJoinedByString:@""], bundleShortVersion, bundleVersion];
+		NSString *GOLFKitPart = [NSString stringWithFormat:@"GOLFKit/%@(%@)", GOLFKitBundleShortVersionString(), GOLFKitBundleVersion()];
+		NSString *WebKitPart = [NSString stringWithFormat:@"AppleWebKit/%@ (KHTML, like Gecko)", [[[NSBundle bundleForClass:[WKWebView class]] infoDictionary] objectForKey:@"CFBundleVersion"]];
+		NSString *MozillaPart = @"Mozilla/5.0 ";
+
+#if TARGET_OS_IOS
+
+		if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
+			//	User-Agent: Mozilla/5.0 (iPhone; CPU iPhone OS 12_1_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1
+			_userAgent = [MozillaPart stringByAppendingFormat:@"(iPhone; CPU iPhone OS %@ like Mac OS X) %@ %@ %@", osVersionString, WebKitPart, GOLFKitPart, appPart];
+		} else {
+			//	User-Agent: Mozilla/5.0 (iPad; CPU OS 12_1_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0 Mobile/15E148 Safari/604.1
+			_userAgent = [MozillaPart stringByAppendingFormat:@"(iPad; CPU OS %@ like Mac OS X) %@ %@ %@", osVersionString, WebKitPart, GOLFKitPart, appPart];
+		}
+		
+#endif
+
+#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
+
+		//	User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.2 Safari/605.1.15
+		_userAgent = [MozillaPart stringByAppendingFormat:@"(Macintosh; Intel Mac OS X %@) %@ %@ %@", osVersionString, WebKitPart, GOLFKitPart, appPart];
+	
+#ifdef DEBUG
+	NSLog(@"%@ -%@ returns…\n%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), _userAgent);
+#endif
+
+#endif
+	}
+	return _userAgent;
 }
 
 - (NSURLSessionConfiguration *)USGAQuerySessionConfiguration {
@@ -111,11 +163,18 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 	return _USGAQuerySession;
 }
 
-- (NSMutableData *)USGAAccessTokenData {
-	if (_USGAAccessTokenData == nil) {
-		_USGAAccessTokenData = [[NSMutableData alloc] init];	//	Retained
+- (NSMutableData *)USGATokenPostData {
+	if (_USGATokenPostData == nil) {
+		_USGATokenPostData = [[NSMutableData alloc] init];	//	Retained
 	}
-	return _USGAAccessTokenData;
+	return _USGATokenPostData;
+}
+
+- (NSMutableData *)USGAGetGolferData {
+	if (_USGAGetGolferData == nil) {
+		_USGAGetGolferData = [[NSMutableData alloc] init];	//	Retained
+	}
+	return _USGAGetGolferData;
 }
 
 - (void)invalidateAndClose {
@@ -128,7 +187,7 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 }
 
 - (void)requestAccessTokenWithTimer:(NSTimer *)timer {
-	[self getAccessTokenWithCompletionHandler:^(NSString *accessToken, NSDate *expiresAt, NSError *error) {
+	[self TokenPostWithCompletionHandler:^(NSString *accessToken, NSDate *expiresAt, NSError *error) {
 		if (error) {
 #ifdef DEBUG
 	NSLog(@"%@ -%@ failed to load accessToken - %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), [error userInfo]);
@@ -137,50 +196,54 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 #ifdef DEBUG
 	NSLog(@"%@ -%@ accessToken: %@  expiresAt: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), accessToken, [NSDateFormatter localizedStringFromDate:expiresAt dateStyle:NSDateFormatterMediumStyle timeStyle:NSDateFormatterMediumStyle]);
 #endif
+			self.accessToken = accessToken;
+			self.accessTokenExpiresAt = expiresAt;
 		}
-		self.accessTokenTaskCompletionHandler = nil;
+		self.USGATokenPostTaskCompletionHandler = nil;
 	}];
 }
 
-- (void)getAccessTokenWithCompletionHandler:(void (^)(NSString *accessToken, NSDate *expiresAt, NSError *error))completionHandler {
+- (void)TokenPostWithCompletionHandler:(void (^)(NSString *accessToken, NSDate *expiresAt, NSError *error))completionHandler {
 	NSString *token = self.accessToken;
-	NSDate *expiresAt = (self.accessTokenExpiresAt ?: [NSDate date]);
+	NSDate *expiresAt = ((self.accessTokenExpiresAt == nil) ? [NSDate date] : self.accessTokenExpiresAt);
 	NSDate *needNewTokenDate = [NSDate dateWithTimeInterval:-10 sinceDate:expiresAt];	//	10 seconds before now or expiration
-	if ((self.USGAAccessTokenTask == nil) && (token != nil) && (expiresAt != nil) && ([needNewTokenDate timeIntervalSinceNow] > 0)) {
+	if ((self.USGATokenPostTask == nil) && (token != nil) && (expiresAt != nil) && ([needNewTokenDate timeIntervalSinceNow] > 0)) {
 		//	The current token hasn't (isn't soon to be) expired…
-		self.accessTokenTaskCompletionHandler = nil;
+		self.USGATokenPostTaskCompletionHandler = nil;
 		if (completionHandler) {
 			completionHandler(token, expiresAt, nil);
 		}
 	} else {
-		self.accessTokenTaskCompletionHandler = completionHandler;
-		if (self.USGAAccessTokenTask == nil) {
-			[self requestAccessToken];
+		self.USGATokenPostTaskCompletionHandler = completionHandler;
+		if (self.USGATokenPostTask == nil) {
+			[self TokenPost:(NSInteger)kDefaultUSGADataServicesAccessTokenExpiration];
 		}
 	}
 }
 
-- (void)getGolfer:(id)golfer withGHINNumber:(NSString *)ghinText completionHandler:(void (^)(NSDictionary *golferData, NSError *error))completionHandler {
-#ifdef DEBUG
-	NSLog(@"%@ -%@ %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), ghinText);
-#endif
-	self.getGolferTaskCompletionHandler = completionHandler;
-	if (self.USGAGetGolferTask == nil) {
-		[self requestGetGolfer:golfer withID:(NSString *)ghinText];
-	}
+- (void)GetGolfer:(NSString *)GolferId completionHandler:(void (^)(NSArray *golferArray, NSError *error))completionHandler {
+//#ifdef DEBUG
+//	NSLog(@"%@ -%@ GolferId: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), GolferId);
+//#endif
+
+	[self TokenPostWithCompletionHandler:^(NSString *accessToken, NSDate *expiresAt, NSError *tokenError) {
+		if (tokenError != nil) {
+			self.USGATokenPostTaskCompletionHandler = nil;
+			completionHandler(nil, tokenError);
+		} else {
+			self.accessToken = accessToken;
+			self.accessTokenExpiresAt = expiresAt;
+			self.USGAGetGolferTaskCompletionHandler = completionHandler;
+			if (self.USGAGetGolferTask == nil) {
+				[self GetGolfer:GolferId token:accessToken];
+			}
+		}
+	}];
 }
 
-- (void)requestAccessToken {
-	if (self.USGAAccessTokenTask == nil) {
-		NSString *systemVersion = [[UIDevice currentDevice] systemVersion];
-		
-//		NSError *JSONError = nil;
-//		NSDictionary *bodyDict = [NSDictionary dictionaryWithObjectsAndKeys:
-//				@"client_credentials", @"grant_type",
-//				[NSNumber numberWithInteger:kDefaultUSGAAccessTokenExpiration], @"expires_in",
-//				nil];
-//		NSData *bodyData = [NSJSONSerialization dataWithJSONObject:bodyDict options:0 error:&JSONError];
-		NSString *bodyString = [NSString stringWithFormat:@"grant_type=client_credentials&expires_in=%ld", (long)kDefaultUSGAAccessTokenExpiration];
+- (void)TokenPost:(NSInteger)expiresIn {
+	if (self.USGATokenPostTask == nil) {
+		NSString *bodyString = [NSString stringWithFormat:@"grant_type=client_credentials&expires_in=%ld", (long)expiresIn];
 		NSURL *url = [NSURL URLWithString:@"https://apis.usga.org/api/v1/oauth/token"];
 		
 		NSMutableURLRequest *lookupRequest = [[NSMutableURLRequest alloc] initWithURL:url];
@@ -192,34 +255,53 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 		lookupRequest.HTTPShouldHandleCookies = YES;
 		
 		[lookupRequest setValue:self.USGAAppAuthenticationString forHTTPHeaderField:@"Authorization"];
-		[lookupRequest setValue:[NSString stringWithFormat:@"Mozilla/5.0 (iPad; CPU OS %@ like Mac OS X) GOLFKit/%@", systemVersion, GOLFKitBundleVersion()] forHTTPHeaderField:@"User-Agent"];
+		[lookupRequest setValue:self.userAgent forHTTPHeaderField:@"User-Agent"];
 		[lookupRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
 		[lookupRequest setValue:@"en-us" forHTTPHeaderField:@"Accept-Language"];
 		[lookupRequest setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
 		[lookupRequest setValue:@"keep-alive" forHTTPHeaderField:@"Connection"];
 		[lookupRequest setValue:@"*/*" forHTTPHeaderField:@"Accept"];
-//		[lookupRequest setValue:@"mulligansoftware.com" forHTTPHeaderField:@"Host"];
-//		[lookupRequest setValue:@"https://www.mulligansoftware.com" forHTTPHeaderField:@"Origin"];
 		[lookupRequest setValue:@"XMLHttpRequest" forHTTPHeaderField:@"X-Requested-With"];
-#ifdef DEBUG
-	NSLog(@"%@ -%@ request: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), lookupRequest);
-#endif
 
-		self.USGAAccessTokenTask = [self.USGAQuerySession dataTaskWithRequest:lookupRequest];
-
+		self.USGATokenPostTask = [self.USGAQuerySession dataTaskWithRequest:lookupRequest];
+		self.USGATokenPostData = nil;	//	Start with no data
 		self.needCancel = NO;
 
-//		self.USGAAccessTokenTaskStart = [NSDate date];	//	Now
-		[self.USGAAccessTokenTask resume];	//	Get the download going…
+		[self.USGATokenPostTask resume];	//	Get the download going…
 		
 		self.progressString = GOLFLocalizedString(@"NOTICE_USGA_CONNECTING");
-	}	//	if ((self.USGAQuerySession != nil) && (self.USGAAccessTokenTask == nil))
+	}	//	if (self.USGATokenPostTask == nil)
 }
 
-- (void)requestGetGolfer:(id)golfer withID:(NSString *)ghinText {
-#ifdef DEBUG
-	NSLog(@"%@ -%@ %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), ghinText);
-#endif
+- (void)GetGolfer:(NSString *)GolferId token:(NSString *)token {
+	if (self.USGAGetGolferTask == nil) {
+		NSURL *url = [NSURL URLWithString:[NSString stringWithFormat:@"https://apis.usga.org/api/v1/golfers/%@", GolferId]];
+		
+		NSMutableURLRequest *lookupRequest = [[NSMutableURLRequest alloc] initWithURL:url];
+		lookupRequest.HTTPMethod = @"GET";
+		lookupRequest.HTTPBody = [NSData data];
+		lookupRequest.networkServiceType = NSURLNetworkServiceTypeDefault;
+		lookupRequest.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+		lookupRequest.timeoutInterval = 30.0;
+		lookupRequest.HTTPShouldHandleCookies = YES;
+		
+		[lookupRequest setValue:[NSString stringWithFormat:@"Bearer %@", token] forHTTPHeaderField:@"Authorization"];
+		[lookupRequest setValue:self.userAgent forHTTPHeaderField:@"User-Agent"];
+		[lookupRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+		[lookupRequest setValue:@"en-us" forHTTPHeaderField:@"Accept-Language"];
+		[lookupRequest setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
+		[lookupRequest setValue:@"keep-alive" forHTTPHeaderField:@"Connection"];
+		[lookupRequest setValue:@"*/*" forHTTPHeaderField:@"Accept"];
+		[lookupRequest setValue:@"XMLHttpRequest" forHTTPHeaderField:@"X-Requested-With"];
+
+		self.USGAGetGolferTask = [self.USGAQuerySession dataTaskWithRequest:lookupRequest];
+		self.USGAGetGolferData = nil;	//	Start with no data
+		self.needCancel = NO;
+
+		[self.USGAGetGolferTask resume];	//	Get the download going…
+		
+		self.progressString = GOLFLocalizedString(@"NOTICE_USGA_CONNECTING");
+	}	//	if (self.USGAGetGolferTask == nil)
 }
 
 #pragma mark <NSURLSessionDelegate>
@@ -236,7 +318,8 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 	if (session == self.USGAQuerySession) {
 //		dispatch_async(dispatch_get_main_queue(), ^{
 //			//	Final stuff
-			self.accessTokenTaskCompletionHandler = nil;
+			self.USGATokenPostTaskCompletionHandler = nil;
+			self.USGAGetGolferTaskCompletionHandler = nil;
 			
 			// Remove our references…
 			self.USGAQuerySession = nil;	//	Retained
@@ -271,18 +354,12 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 	//	If you do not implement this method, the session calls its delegate’s URLSession:task:didReceiveChallenge:completionHandler: method instead.
 
 	NSString *authMethod = [[challenge protectionSpace] authenticationMethod];
-#ifdef DEBUG
-	NSLog(@"%@ -%@ %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), authMethod);
-#endif
 	if ([authMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
 		NSURLCredential *credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
 		completionHandler(NSURLSessionAuthChallengeUseCredential, credential);
-//	} else if ([authMethod isEqualToString:NSURLAuthenticationMethodHTTPBasic]) {
-//		NSArray *certificates = nil;
-//		SecIdentityRef identityRef = nil;
-//		NSURLCredential *credential = [NSURLCredential credentialWithIdentity:identityRef certificates:certificates persistence:NSURLCredentialPersistenceNone];
 	} else {
-		NSURLCredential *credential = [NSURLCredential credentialWithUser:kUSGADataServicesDeveloperUserName password:kUSGADataServicesDeveloperPassword persistence:NSURLCredentialPersistenceNone];
+//		NSURLCredential *credential = [NSURLCredential credentialWithUser:kUSGADataServicesDeveloperUserName password:kUSGADataServicesDeveloperPassword persistence:NSURLCredentialPersistenceNone];
+		NSURLCredential *credential = [NSURLCredential credentialWithUser:@"UserName" password:@"Password" persistence:NSURLCredentialPersistenceNone];
 		completionHandler(NSURLSessionAuthChallengeUseCredential, credential);
 	}
 }
@@ -290,9 +367,6 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 #pragma mark <NSURLSessionTaskDelegate>
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didCompleteWithError:(NSError *)error {
-#ifdef DEBUG
-	NSLog(@"%@ -%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
-#endif
 
 	//	session - The session containing the task whose request finished transferring data.
 	//	task - The task whose request finished transferring data.
@@ -301,82 +375,160 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 	//	Discussion - Server errors are not reported through the error parameter. The only errors your delegate receives through the error parameter are client-side errors, such as being unable to resolve the hostname or connect to the host.
 
 	if (session == self.USGAQuerySession) {
-		if (task == self.USGAAccessTokenTask) {
-				if (error != nil) {
-					[self.USGAQuerySession finishTasksAndInvalidate];
-					if (error.code == NSUserCancelledError) {
-						self.progressString = GOLFLocalizedString(@"NOTICE_USGA_CANCELLED");
-					} else {
-						self.progressString = [NSString stringWithFormat:GOLFLocalizedString(@"NOTICE_USGA_CODE_%ld_DESC_%@"), [error code], [error localizedFailureReason]];
-					}
+		if (task == self.USGATokenPostTask) {
+			if (error != nil) {
+				[self.USGAQuerySession finishTasksAndInvalidate];
+				if (error.code == NSUserCancelledError) {
+					self.progressString = GOLFLocalizedString(@"NOTICE_USGA_CANCELLED");
+				} else {
+					self.progressString = [NSString stringWithFormat:GOLFLocalizedString(@"NOTICE_USGA_CODE_%ld_DESC_%@"), [error code], [error localizedFailureReason]];
+				}
 #ifdef DEBUG
 	NSLog(@"%@ -%@ %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), self.progressString);
 #endif
-					self.USGAAccessTokenTask = nil;	//	We don't need the reference
-					self.USGAAccessTokenData = nil;	//	Nor any data we've accumulated
-					if (self.accessTokenTaskCompletionHandler) {
-						self.accessTokenTaskCompletionHandler(nil, nil, error);
-					}
-					return;
+				self.USGATokenPostTask = nil;	//	We don't need the reference
+				self.USGATokenPostData = nil;	//	Nor any data we've accumulated
+				if (self.USGATokenPostTaskCompletionHandler) {
+					self.USGATokenPostTaskCompletionHandler(nil, nil, error);
 				}
-				
-				NSURLResponse *lastResponse = [task response];
-				if ((lastResponse == nil)
-						|| ![lastResponse isKindOfClass:[NSHTTPURLResponse class]]
-						|| ([(NSHTTPURLResponse *)lastResponse statusCode] < 200)
-						|| ([(NSHTTPURLResponse *)lastResponse statusCode] > 299)) {
-					[self.USGAQuerySession finishTasksAndInvalidate];
-					NSInteger code = [(NSHTTPURLResponse *)lastResponse statusCode];
-					self.progressString = [NSString stringWithFormat:GOLFLocalizedString(@"NOTICE_USGA_CODE_%ld_DESC_%@"), code, [NSHTTPURLResponse localizedStringForStatusCode:code]];
+				return;
+			}
+			
+			NSURLResponse *lastResponse = [task response];
+			if ((lastResponse == nil)
+					|| ![lastResponse isKindOfClass:[NSHTTPURLResponse class]]
+					|| ([(NSHTTPURLResponse *)lastResponse statusCode] < 200)
+					|| ([(NSHTTPURLResponse *)lastResponse statusCode] > 299)) {
+				[self.USGAQuerySession finishTasksAndInvalidate];
+				NSInteger code = [(NSHTTPURLResponse *)lastResponse statusCode];
+				self.progressString = [NSString stringWithFormat:GOLFLocalizedString(@"NOTICE_USGA_CODE_%ld_DESC_%@"), code, [NSHTTPURLResponse localizedStringForStatusCode:code]];
 #ifdef DEBUG
 	NSLog(@"%@ -%@ %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), self.progressString);
 #endif
-					NSDictionary *info = ((code > 0)
-							? [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:code], @"statusCode",
-									[NSHTTPURLResponse localizedStringForStatusCode:code], @"localizedDescription",
-									nil]
-							: nil);
-					NSError *responseError = [NSError errorWithDomain:GOLFKitForUSGADataServicesErrorDomain code:GOLFKitForUSGADataServicesAccessTokenError userInfo:info];
-					self.USGAAccessTokenTask = nil;	//	We don't need the reference
-					self.USGAAccessTokenData = nil;	//	Nor any data we've accumulated
-					if (self.accessTokenTaskCompletionHandler) {
-						self.accessTokenTaskCompletionHandler(nil, nil, responseError);
-					}
-					return;
+				NSDictionary *info = ((code > 0)
+						? [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:code], @"statusCode",
+								[NSHTTPURLResponse localizedStringForStatusCode:code], @"localizedDescription",
+								nil]
+						: nil);
+				NSError *responseError = [NSError errorWithDomain:GOLFKitForUSGADataServicesErrorDomain code:GOLFKitForUSGADataServicesTokenPostError userInfo:info];
+				self.USGATokenPostTask = nil;	//	We don't need the reference
+				self.USGATokenPostData = nil;	//	Nor any data we've accumulated
+				if (self.USGATokenPostTaskCompletionHandler) {
+					self.USGATokenPostTaskCompletionHandler(nil, nil, responseError);
 				}
-				
-				NSError *JSONError = nil;
-				if ((self.USGAAccessTokenData != nil) && ([self.USGAAccessTokenData length] > 0)) {
-					id searchDict = [NSJSONSerialization JSONObjectWithData:self.USGAAccessTokenData options:0 error:&JSONError];
-					if ((JSONError == nil) && [searchDict isKindOfClass:[NSDictionary class]]) {
-						//	JSON return data…
-						NSString *workingAccessToken = [(NSDictionary *)searchDict objectForKey:@"access_token"];
-						NSTimeInterval expiresInSeconds = [[(NSDictionary *)searchDict objectForKey:@"expires_in"] floatValue];
-						NSDate *expiresAt = [[NSDate date] dateByAddingTimeInterval:expiresInSeconds];
-						
-						self.accessToken = workingAccessToken;
-						self.accessTokenExpiresAt = expiresAt;
+				return;
+			}
+			
+			NSError *JSONError = nil;
+			if ((self.USGATokenPostData != nil) && ([self.USGATokenPostData length] > 0)) {
+				id searchDict = [NSJSONSerialization JSONObjectWithData:self.USGATokenPostData options:0 error:&JSONError];
+				if ((JSONError == nil) && [searchDict isKindOfClass:[NSDictionary class]]) {
+					//	JSON return data…
+					NSString *workingAccessToken = [(NSDictionary *)searchDict objectForKey:@"access_token"];
+					NSTimeInterval expiresInSeconds = [[(NSDictionary *)searchDict objectForKey:@"expires_in"] floatValue];
+					NSDate *expiresAt = [[NSDate date] dateByAddingTimeInterval:expiresInSeconds];
+					
+					self.accessToken = workingAccessToken;
+					self.accessTokenExpiresAt = expiresAt;
 
-						self.USGAAccessTokenTask = nil;	//	We don't need the reference
-						self.USGAAccessTokenData = nil;	//	Nor any data we've accumulated
-						if (self.accessTokenTaskCompletionHandler) {
-							self.accessTokenTaskCompletionHandler(workingAccessToken, expiresAt, nil);
-						}
-						
-						self.progressString = @"";
-						return;
+					self.USGATokenPostTask = nil;	//	We don't need the reference
+					self.USGATokenPostData = nil;	//	Nor any data we've accumulated
+					if (self.USGATokenPostTaskCompletionHandler) {
+						self.USGATokenPostTaskCompletionHandler(workingAccessToken, expiresAt, nil);
 					}
+					
+					self.progressString = @"";
+					return;
 				}
-				NSError *dataError = ((JSONError != nil)
-						? JSONError
-						: [NSError errorWithDomain:GOLFKitForUSGADataServicesErrorDomain code:GOLFKitForUSGADataServicesAccessTokenError userInfo:nil]);
-				self.progressString = GOLFLocalizedString(@"NOTICE_USGA_FAILED");
-				self.USGAAccessTokenTask = nil;	//	We don't need the reference
-				self.USGAAccessTokenData = nil;	//	Nor any data we've accumulated
-				if (self.accessTokenTaskCompletionHandler) {
-					self.accessTokenTaskCompletionHandler(nil, nil, dataError);
+			}
+			NSError *dataError = ((JSONError != nil)
+					? JSONError
+					: [NSError errorWithDomain:GOLFKitForUSGADataServicesErrorDomain code:GOLFKitForUSGADataServicesTokenPostError userInfo:nil]);
+			self.progressString = GOLFLocalizedString(@"NOTICE_USGA_FAILED");
+#ifdef DEBUG
+	NSLog(@"%@ -%@ %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), self.progressString);
+#endif
+			self.USGATokenPostTask = nil;	//	We don't need the reference
+			self.USGATokenPostData = nil;	//	Nor any data we've accumulated
+			if (self.USGATokenPostTaskCompletionHandler) {
+				self.USGATokenPostTaskCompletionHandler(nil, nil, dataError);
+			}
+		} else if (task == self.USGAGetGolferTask) {
+			if (error != nil) {
+				[self.USGAQuerySession finishTasksAndInvalidate];
+				if (error.code == NSUserCancelledError) {
+					self.progressString = GOLFLocalizedString(@"NOTICE_USGA_CANCELLED");
+				} else {
+					self.progressString = [NSString stringWithFormat:GOLFLocalizedString(@"NOTICE_USGA_CODE_%ld_DESC_%@"), [error code], [error localizedFailureReason]];
 				}
-		}	//	else if (task == self.USGAAccessTokenTask)
+#ifdef DEBUG
+	NSLog(@"%@ -%@ %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), self.progressString);
+#endif
+				self.USGAGetGolferTask = nil;	//	We don't need the reference
+				self.USGAGetGolferData = nil;	//	Nor any data we've accumulated
+				if (self.USGAGetGolferTaskCompletionHandler) {
+					self.USGAGetGolferTaskCompletionHandler(nil, error);
+				}
+				return;
+			}	//	if (error != nil)
+			
+			NSURLResponse *lastResponse = [task response];
+			if ((lastResponse == nil)
+					|| ![lastResponse isKindOfClass:[NSHTTPURLResponse class]]
+					|| ([(NSHTTPURLResponse *)lastResponse statusCode] < 200)
+					|| ([(NSHTTPURLResponse *)lastResponse statusCode] > 299)) {
+				[self.USGAQuerySession finishTasksAndInvalidate];
+				NSInteger code = [(NSHTTPURLResponse *)lastResponse statusCode];
+				self.progressString = [NSString stringWithFormat:GOLFLocalizedString(@"NOTICE_USGA_CODE_%ld_DESC_%@"), code, [NSHTTPURLResponse localizedStringForStatusCode:code]];
+#ifdef DEBUG
+	NSLog(@"%@ -%@ %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), self.progressString);
+#endif
+				NSDictionary *info = ((code > 0)
+						? [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:code], @"statusCode",
+								[NSHTTPURLResponse localizedStringForStatusCode:code], @"localizedDescription",
+								nil]
+						: nil);
+				NSError *responseError = [NSError errorWithDomain:GOLFKitForUSGADataServicesErrorDomain code:GOLFKitForUSGADataServicesGetGolferError userInfo:info];
+				self.USGAGetGolferTask = nil;	//	We don't need the reference
+				self.USGAGetGolferData = nil;	//	Nor any data we've accumulated
+				if (self.USGAGetGolferTaskCompletionHandler) {
+					self.USGAGetGolferTaskCompletionHandler(nil, responseError);
+				}
+				return;
+			}	//	if ((lastResponse == nil)
+			
+			NSError *JSONError = nil;
+			if ((self.USGAGetGolferData != nil) && ([self.USGAGetGolferData length] > 0)) {
+				id golferArray = [NSJSONSerialization JSONObjectWithData:self.USGAGetGolferData options:0 error:&JSONError];
+//#ifdef DEBUG
+//	NSLog(@"%@ -%@ %@: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), NSStringFromClass([golferArray class]), golferArray);
+//#endif
+				if ((JSONError == nil) && [golferArray isKindOfClass:[NSArray class]]) {
+					//	JSON return data…
+					
+					self.USGAGetGolferTask = nil;	//	We don't need the reference
+					self.USGAGetGolferData = nil;	//	Nor any data we've accumulated
+					if (self.USGAGetGolferTaskCompletionHandler) {
+						self.USGAGetGolferTaskCompletionHandler(golferArray, nil);
+					}
+					
+					self.progressString = @"";
+					return;
+				}
+			}
+			NSError *dataError = ((JSONError != nil)
+					? JSONError
+					: [NSError errorWithDomain:GOLFKitForUSGADataServicesErrorDomain code:GOLFKitForUSGADataServicesGetGolferError userInfo:nil]);
+			self.progressString = GOLFLocalizedString(@"NOTICE_USGA_FAILED");
+#ifdef DEBUG
+	NSLog(@"%@ -%@ %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), self.progressString);
+#endif
+			self.USGAGetGolferTask = nil;	//	We don't need the reference
+			self.USGAGetGolferData = nil;	//	Nor any data we've accumulated
+			if (self.USGAGetGolferTaskCompletionHandler) {
+				self.USGAGetGolferTaskCompletionHandler(nil, dataError);
+			}
+		}
 	}	//	if (session == USGAQuerySession)
 }
 
@@ -399,7 +551,7 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 	}
 }
 
-- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend {
+//- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend {
 
 	//	session - The session containing the data task.
 	//	task - The data task.
@@ -413,12 +565,12 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 
 	//	Discussion - The totalBytesSent and totalBytesExpectedToSend parameters are also available as NSURLSessionTask properties countOfBytesSent and countOfBytesExpectedToSend. Or, since NSURLSessionTask supports NSProgressReporting, you can use the task’s progress property instead, which may be more convenient.
 
-	if (session == self.USGAQuerySession) {
-#ifdef DEBUG
-	NSLog(@"%@ -%@ %lld of %lld", NSStringFromClass([self class]), NSStringFromSelector(_cmd), totalBytesSent, totalBytesExpectedToSend);
-#endif
-	}
-}
+//	if (session == self.USGAQuerySession) {
+//#ifdef DEBUG
+//	NSLog(@"%@ -%@ %lld of %lld", NSStringFromClass([self class]), NSStringFromSelector(_cmd), totalBytesSent, totalBytesExpectedToSend);
+//#endif
+//	}
+//}
 
 - (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition disposition, NSURLCredential *credential))completionHandler {
 
@@ -436,14 +588,12 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 
 	if (session == self.USGAQuerySession) {
 		NSString *authMethod = [[challenge protectionSpace] authenticationMethod];
-#ifdef DEBUG
-	NSLog(@"%@ -%@ %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), authMethod);
-#endif
 		if ([authMethod isEqualToString:NSURLAuthenticationMethodServerTrust]) {
 			NSURLCredential *credential = [NSURLCredential credentialForTrust:challenge.protectionSpace.serverTrust];
 			completionHandler(NSURLSessionAuthChallengeUseCredential, credential);
 		} else {
-			NSURLCredential *credential = [NSURLCredential credentialWithUser:kUSGADataServicesDeveloperUserName password:kUSGADataServicesDeveloperPassword persistence:NSURLCredentialPersistenceNone];
+//			NSURLCredential *credential = [NSURLCredential credentialWithUser:kUSGADataServicesDeveloperUserName password:kUSGADataServicesDeveloperPassword persistence:NSURLCredentialPersistenceNone];
+			NSURLCredential *credential = [NSURLCredential credentialWithUser:@"UserName" password:@"Password" persistence:NSURLCredentialPersistenceNone];
 			completionHandler(NSURLSessionAuthChallengeUseCredential, credential);
 		}
 	}
@@ -461,10 +611,8 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 
 	if (@available (macOS 10.13, iOS 11.0, *)) {
 		if (session == self.USGAQuerySession) {
-#ifdef DEBUG
-	NSLog(@"%@ -%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
-#endif
-			completionHandler(NSURLSessionDelayedRequestContinueLoading, nil);
+			NSURLSessionDelayedRequestDisposition disposition = (self.needCancel ? NSURLSessionDelayedRequestCancel : NSURLSessionDelayedRequestContinueLoading);
+			completionHandler(disposition, nil);
 		}
 	}
 }
@@ -478,31 +626,33 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 	//	This method is called, at most, once per task, and only if connectivity is initially unavailable.  It is never called for background sessions because waitsForConnectivity is ignored for those sessions.
 	
 	if (@available (macOS 10.13, iOS 11.0, *)) {
-#ifdef DEBUG
-	NSLog(@"%@ -%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
-#endif
 		if (session == self.USGAQuerySession) {
-			if (task == self.USGAAccessTokenTask) {
+			if (self.needCancel) {
+#ifdef DEBUG
+	NSLog(@"%@ -%@ task cancelled", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+#endif
+				[task cancel];	//	Cancel the task (and report a "User cancelled" error)
+//			} else if (task == self.USGATokenPostTask) {
 //				NSTimeInterval twoMinutesAgo = -120.0;
-//				if ([self.USGAAccessTokenTaskStart timeIntervalSinceNow] < twoMinutesAgo) {
-//					[self.USGAAccessTokenTask cancel];	//	Cancel and report an error
+//				if ([self.USGATokenPostTaskStart timeIntervalSinceNow] < twoMinutesAgo) {
+//					[self.USGATokenPostTask cancel];	//	Cancel and report an error
 //				}
 			}
 		}
 	}
 }
 
-- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didFinishCollectingMetrics:(NSURLSessionTaskMetrics *)metrics API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) {
-	//	session - The session collecting the metrics.
-	//	task - The task whose metrics have been collected.
-	//	metrics - The collected metrics.
-	
-	if (@available (macOS 10.12, iOS 10.0, *)) {
-#ifdef DEBUG
-	NSLog(@"%@ -%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
-#endif
-	}
-}
+//- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didFinishCollectingMetrics:(NSURLSessionTaskMetrics *)metrics API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) {
+//	//	session - The session collecting the metrics.
+//	//	task - The task whose metrics have been collected.
+//	//	metrics - The collected metrics.
+//	
+//	if (@available (macOS 10.12, iOS 10.0, *)) {
+//#ifdef DEBUG
+//	NSLog(@"%@ -%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+//#endif
+//	}
+//}
 
 #pragma mark <NSURLSessionDataDelegate>
 
@@ -523,18 +673,21 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 	//	Each time the URLSession:dataTask:didReceiveResponse:completionHandler: method is called for a part, collect the data received for the previous part (if any) and process the data as needed for your application. This processing can include storing the data to the filesystem, parsing it into custom types, or displaying it to the user. Next, begin receiving the next part by calling the completion handler with the NSURLSessionResponseAllow constant. Finally, if you have also implemented URLSession:task:didCompleteWithError:, the session will call it after sending all the data for the last part.
 
 	if (session == self.USGAQuerySession) {
-#ifdef DEBUG
-	NSLog(@"%@ -%@ %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), (self.needCancel ? @"(needCancel)" : @""));
-#endif
+//#ifdef DEBUG
+//	NSLog(@"%@ -%@ %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), (self.needCancel ? @"(needCancel)" : @""));
+//#endif
 		NSURLSessionResponseDisposition disposition = (self.needCancel ? NSURLSessionResponseCancel : NSURLSessionResponseAllow);
-		if (dataTask == self.USGAAccessTokenTask) {
+		if (dataTask == self.USGATokenPostTask) {
+			self.progressString = GOLFLocalizedString(@"NOTICE_USGA_CONNECTED");
+			completionHandler(disposition);
+		} else if (dataTask == self.USGAGetGolferTask) {
 			self.progressString = GOLFLocalizedString(@"NOTICE_USGA_CONNECTED");
 			completionHandler(disposition);
 		}
 	}
 }
 
-- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didBecomeDownloadTask:(NSURLSessionDownloadTask *)downloadTask {
+//- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didBecomeDownloadTask:(NSURLSessionDownloadTask *)downloadTask {
 
 	//	session - The session containing the task that was replaced by a download task.
 	//	dataTask - The data task that was replaced by a download task.
@@ -542,14 +695,14 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 
 	//	Discussion - When your URLSession:dataTask:didReceiveResponse:completionHandler: delegate method uses the NSURLSessionResponseBecomeDownload disposition to convert the request to use a download, the session calls this delegate method to provide you with the new download task. After this call, the session delegate receives no further delegate method calls related to the original data task.
 
-	if (session == self.USGAQuerySession) {
-#ifdef DEBUG
-	NSLog(@"%@ -%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
-#endif
-	}
-}
+//	if (session == self.USGAQuerySession) {
+//#ifdef DEBUG
+//	NSLog(@"%@ -%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+//#endif
+//	}
+//}
 
-- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didBecomeStreamTask:(NSURLSessionStreamTask *)streamTask {
+//- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didBecomeStreamTask:(NSURLSessionStreamTask *)streamTask {
 
 	//	session - The session containing the task that was replaced by a stream task.
 	//	dataTask - The data task that was replaced by a stream task.
@@ -559,12 +712,12 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 
 	//	For requests that were pipelined, the stream task allows only reading, and the object immediately sends the delegate message URLSession:writeClosedForStreamTask:. You can disable pipelining for all requests in a session by setting the HTTPShouldUsePipelining property on its NSURLSessionConfiguration object, or for individual requests by setting the HTTPShouldUsePipelining property on an NSURLRequest object.
 
-	if (session == self.USGAQuerySession) {
-#ifdef DEBUG
-	NSLog(@"%@ -%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
-#endif
-	}
-}
+//	if (session == self.USGAQuerySession) {
+//#ifdef DEBUG
+//	NSLog(@"%@ -%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+//#endif
+//	}
+//}
 
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
 
@@ -581,11 +734,10 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 	//	since the previous call. The app is responsible for accumulating this data if needed.
 
 	if (session == self.USGAQuerySession) {
-#ifdef DEBUG
-	NSLog(@"%@ -%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
-#endif
-		if (dataTask == self.USGAAccessTokenTask) {
-			[self.USGAAccessTokenData appendData:data];
+		if (dataTask == self.USGATokenPostTask) {
+			[self.USGATokenPostData appendData:data];
+		} else if (dataTask == self.USGAGetGolferTask) {
+			[self.USGAGetGolferData appendData:data];
 		}
 		
 //		dispatch_async(dispatch_get_main_queue(), ^{
@@ -594,7 +746,7 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 	}
 }
 
-- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask willCacheResponse:(NSCachedURLResponse *)proposedResponse completionHandler:(void (^)(NSCachedURLResponse *cachedResponse))completionHandler {
+//- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask willCacheResponse:(NSCachedURLResponse *)proposedResponse completionHandler:(void (^)(NSCachedURLResponse *cachedResponse))completionHandler {
 
 	//	session - The session containing the data (or upload) task.
 	//	dataTask - The data (or upload) task.
@@ -612,12 +764,12 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 	//		The cache-related headers in the server’s response (if present) allow caching.
 	//		The response size is small enough to reasonably fit within the cache. (For example, if you provide a disk cache, the response must be no larger than about 5% of the disk cache size.)
 
-	if (session == self.USGAQuerySession) {
-#ifdef DEBUG
-	NSLog(@"%@ -%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
-#endif
-		completionHandler(nil);	//	Don't cache the response
-	}
-}
+//	if (session == self.USGAQuerySession) {
+//#ifdef DEBUG
+//	NSLog(@"%@ -%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+//#endif
+//		completionHandler(nil);	//	Don't cache the response
+//	}
+//}
 
 @end

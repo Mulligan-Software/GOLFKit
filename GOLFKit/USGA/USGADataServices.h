@@ -10,7 +10,8 @@
 #import "GOLFKit.h"
 
 //	Misc constants
-#define	kDefaultUSGAAccessTokenExpiration		9000			//	NSTimeInterval (seconds)
+#define USGADataServicesDidCompleteHandicapRetrievalNotification @"DidCompleteUSGADataServicesHandicapRetrieval"	//	for Notification
+#define USGADataServicesHandicapRetrievalDidFailNotification @"USGADataServicesHandicapRetrievalDidFail"			//	for Notification
 
 typedef NS_OPTIONS(NSUInteger, USGADataServicesOption) {
 	USGADataServicesOptionNone			= 0,			//	(0)
@@ -28,31 +29,14 @@ typedef NS_ENUM(NSUInteger, USGADataServicesMethod) {
 	USGADataServicesMethodUnknown = 999				//	Unknown handicapping type
 };
 
-extern NSString * const USGADataServicesGOLFKitAppName;
-extern NSString * const USGADataServicesGOLFKitAppKey;
-extern NSString * const USGADataServicesGOLFKitAppSecret;
-#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
-extern NSString * const USGADataServicesiOSIdentifier;		//	"iOS"
-#endif
-
 extern NSString * const GOLFKitForUSGADataServicesErrorDomain;	//	The error domain name
 
 typedef NS_ENUM(NSInteger, GOLFKitForUSGADataServicesErrorDomainError) {
 	GOLFKitForUSGADataServicesDataError					= 10000,	// generic error
 	GOLFKitForUSGADataServicesMultipleErrorsError		= 10010,	// generic message for error containing multiple validation errors
-	GOLFKitForUSGADataServicesDataBaseAccessError		= 10050,	// something wrong with retrieval from or export to USGA Data Services
-	GOLFKitForUSGADataServicesRemoteDataAccessError		= 10100,	// something wrong with reading or writing remote (sync) data to USGA Data Services
-	GOLFKitForUSGADataServicesAccessTokenError			= 10150,	// something wrong with retrieving access token credentials
+	GOLFKitForUSGADataServicesTokenPostError			= 10150,	// something wrong with TokenPost access token retrieval
+	GOLFKitForUSGADataServicesGetGolferError			= 10160,	// something wrong with GetGolfer retrieval
 };
-
-NSDictionary * USGADataServicesGOLFKitInfo(void);
-//	Returns an NSDictionary with information about "GOLFKit for USGA Data Services" app:
-//
-//	Key						Type			Description
-//	----------------------	--------------	---------------------------------
-//	appName					NSString *		Complete name of the Scoring Data Services Product
-//	appKey					NSString *		The appKey required as credential for the app
-//	appSecret				NSString *		The credentialling confidential appKey for the app
 
 
 @protocol USGADataServicesAgentDelegate <NSObject>
@@ -80,23 +64,23 @@ NSDictionary * USGADataServicesGOLFKitInfo(void);
 
 @property (nullable, retain) id <USGADataServicesAgentDelegate> delegate;
 @property (nonatomic, strong, nullable) NSURLSession *USGAQuerySession;
+@property (nonatomic, strong) NSString *userAgent;
 
-//	Access Token
+//	TokenPost
 @property (nonatomic, strong, nullable) NSString *accessToken;
 @property (nonatomic, strong, nullable) NSDate *accessTokenExpiresAt;
 
-@property (nonatomic, strong, nullable) NSURLSessionTask *USGAAccessTokenTask;
-@property (nonatomic, strong, nullable) NSMutableData *USGAAccessTokenData;
-@property (nonatomic, copy) void (^accessTokenTaskCompletionHandler)(NSString *accessToken, NSDate *expiresAt, NSError *error);
-//@property (nonatomic, strong, nullable) NSDate *USGAAccessTokenTaskStart;
+@property (nonatomic, strong, nullable) NSURLSessionTask *USGATokenPostTask;
+@property (nonatomic, strong, nullable) NSMutableData *USGATokenPostData;
+@property (nonatomic, copy) void (^USGATokenPostTaskCompletionHandler)(NSString *accessToken, NSDate *expiresAt, NSError *error);
 
-//	Golfer
+//	GetGolfer
 @property (nonatomic, weak, nullable) id golfer;
 @property (nonatomic, weak, nullable) NSString *ghinNumber;
 
 @property (nonatomic, strong, nullable) NSURLSessionTask *USGAGetGolferTask;
 @property (nonatomic, strong, nullable) NSMutableData *USGAGetGolferData;
-@property (nonatomic, copy) void (^getGolferTaskCompletionHandler)(NSDictionary *golferData, NSError *error);
+@property (nonatomic, copy) void (^USGAGetGolferTaskCompletionHandler)(NSArray *golferArray, NSError *error);
 
 @property (nullable, strong) NSString *progressString;
 @property (nullable, strong) NSTimer *startupTimer;
@@ -109,8 +93,9 @@ NSDictionary * USGADataServicesGOLFKitInfo(void);
 - (void)invalidateAndClose;
 
 - (void)requestAccessTokenWithTimer:(NSTimer *)timer;
-- (void)getAccessTokenWithCompletionHandler:(void (^)(NSString *accessToken, NSDate *expiresAt, NSError *error))completionHandler;
-- (void)getGolfer:(id)golfer withGHINNumber:(NSString *)ghinText completionHandler:(void (^)(NSDictionary *golferData, NSError *error))completionHandler;
-
+- (void)TokenPostWithCompletionHandler:(void (^)(NSString *accessToken, NSDate *expiresAt, NSError *error))completionHandler;
+- (void)GetGolfer:(NSString *)GolferId completionHandler:(void (^)(NSArray *golferArray, NSError *error))completionHandler;
+//- (void)GetHandicapProfileforGolfer:(NSString *)GolferId completionHandler:(void (^)(NSDictionary *profileDictionary, NSError *error))completionHandler;
+//- (void)GetScoresCurrentRevisionByGolfer:(NSString *)GolferId forClub:(NSString *)ClubId completionHandler:(void (^)(NSArray *scoresArray, NSError *error))completionHandler;
 
 @end

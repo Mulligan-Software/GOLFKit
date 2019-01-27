@@ -79,6 +79,7 @@
 "TERM_METER_PLURAL_ABBR" = "Mtr.";
 "TERM_MOVE" = "déplacer";
 "TERM_NET" = "net";
+"TERM_NEXT" = "suivant";
 "TERM_NINE" = "neuf";
 "TERM_NINE_PLURAL" = "neufs";
 "TERM_NINEPT" = "9-Points";
@@ -353,6 +354,8 @@
 "TITLE_KEEP" = "Conserver";
 "TITLE_KEEP_SCORES" = "Garder les Scores";
 "TITLE_KEEPING_SCORE" = "Gardant scores depuis 1995";
+"TITLE_KEY_NEXT" = "suivant";
+"TITLE_KEY_RETURN" = "⮐";
 "TITLE_LAST_HOLE" = "Dernier Trou";
 "TITLE_LICENSED_OWNER" = "Détenteur de licence";
 "TITLE_LIGHT" = "Claire";

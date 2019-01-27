@@ -79,6 +79,7 @@
 "TERM_METER_PLURAL_ABBR" = "Mtr.";
 "TERM_MOVE" = "move";
 "TERM_NET" = "net";
+"TERM_NEXT" = "next";
 "TERM_NINE" = "nine";
 "TERM_NINE_PLURAL" = "nines";
 "TERM_NINEPT" = "9-Point";
@@ -353,6 +354,8 @@
 "TITLE_KEEP" = "Keep";
 "TITLE_KEEP_SCORES" = "Keep the Scores";
 "TITLE_KEEPING_SCORE" = "Keeping score since 1995";
+"TITLE_KEY_NEXT" = "Next";
+"TITLE_KEY_RETURN" = "return";
 "TITLE_LAST_HOLE" = "Last Hole";
 "TITLE_LICENSED_OWNER" = "License Holder";
 "TITLE_LIGHT" = "Light";

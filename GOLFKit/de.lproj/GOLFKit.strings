@@ -79,6 +79,7 @@
 "TERM_METER_PLURAL_ABBR" = "Mtr.";
 "TERM_MOVE" = "bewegen";
 "TERM_NET" = "netto";
+"TERM_NEXT" = "weiter";
 "TERM_NINE" = "Neun";
 "TERM_NINE_PLURAL" = "Neunen";
 "TERM_NINEPT" = "9-Punkte";
@@ -353,6 +354,8 @@
 "TITLE_KEEP" = "Behalten";
 "TITLE_KEEP_SCORES" = "Behalte die Scores";
 "TITLE_KEEPING_SCORE" = "Punkte gesammelt seit 1995";
+"TITLE_KEY_NEXT" = "weiter";
+"TITLE_KEY_RETURN" = "⮐";
 "TITLE_LAST_HOLE" = "letztes Loch";
 "TITLE_LICENSED_OWNER" = "Lizenzinhaber";
 "TITLE_LIGHT" = "Helle";
