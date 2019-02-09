@@ -16,6 +16,7 @@
 "TERM_AUTHORITY" = "Autorität";
 "TERM_AUTHORIZATION" = "Autorisierung";
 "TERM_AVERAGE" = "mittlere";
+"TERM_BACK" = "hinter";		//	As in "back nine" - letzten (last) ?
 "TERM_BEST" = "beste";
 "TERM_BESTBALL" = "Best-Ball";
 "TERM_BET" = "Wette";
@@ -58,6 +59,7 @@
 "TERM_FLIGHT_PLURAL" = "Pulke";
 "TERM_FOURBALL" = "Vier-Ball";
 "TERM_FOURSOMES" = "Viererspiel";
+"TERM_FRONT" = "ersten";
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "brutto";
 "TERM_HANDICAP" = "handicap";
@@ -433,6 +435,10 @@
 "TITLE_WITH_SCORE" = "mit Punktzahl";
 "TITLE_WOMENS_HANDICAP" = "Handicap der Damen";
 
+"TITLE_HOLE_SELECTION" = "Lochauswahl";
+"TITLE_RANDOM_SELECTION" = "Zufällige Auswahl";
+"TITLE_SELECT_ALL" = "Wählen Sie Alle";
+
 "SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
 "SAMPLE_LOOSELY_ALPHABETIC_NAMES" = "Al Czervik / Elihu & Vivian Smails / Beeper, Czervik, Smails & Webb";
 "SAMPLE_ORDER_BY_POSITION_NAMES" = "Czervik, Al / A Player & B Player / A Player, B Player & C Player";
@@ -486,6 +492,7 @@
 "INFO_EAGLE_USERS_GUIDE_DOWNLOAD" = "die aktuellste Version des Benutzerhandbuchs von der Mulligan Software-Website";
 "INFO_EAGLE_USERS_GUIDE_LOCATE" = "eine Kopie des Benutzerhandbuchs, das sich bereits auf dein Computer befindet";
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "Die persönlichen Handicaps Einstellungen oben sind nicht mit einem „Werkseinstellungen“ Reset geändert.";
+"NOTICE_CANCEL_TO_UNDO_CHANGES" = "Breche den Vorgang zu, um widderufen.";
 
 //	USGA Data Services
 "NOTICE_USGA_CANCELLED" = "USGA Data Services-Verbindung abgebrochen";

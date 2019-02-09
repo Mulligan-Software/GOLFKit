@@ -16,6 +16,7 @@
 "TERM_AUTHORITY" = "potestad";
 "TERM_AUTHORIZATION" = "autorización";
 "TERM_AVERAGE" = "promedio";
+"TERM_BACK" = "segundo";
 "TERM_BEST" = "mejor";
 "TERM_BESTBALL" = "Best-Ball";
 "TERM_BET" = "apuesta";
@@ -58,6 +59,7 @@
 "TERM_FLIGHT_PLURAL" = "flights";
 "TERM_FOURBALL" = "Four-Ball";
 "TERM_FOURSOMES" = "Foursomes";
+"TERM_FRONT" = "primero";
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "bruto";
 "TERM_HANDICAP" = "handicap";
@@ -433,6 +435,10 @@
 "TITLE_WITH_SCORE" = "con resultado";
 "TITLE_WOMENS_HANDICAP" = "Handicap - Damas";
 
+"TITLE_HOLE_SELECTION" = "Selección de los Hoyos";
+"TITLE_RANDOM_SELECTION" = "Selección al Azar";
+"TITLE_SELECT_ALL" = "Seleccionar Todo";
+
 "SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
 "SAMPLE_LOOSELY_ALPHABETIC_NAMES" = "Al Czervik / Elihu & Vivian Smails / Beeper, Czervik, Smails & Webb";
 "SAMPLE_ORDER_BY_POSITION_NAMES" = "Czervik, Al / A Player & B Player / A Player, B Player & C Player";
@@ -486,6 +492,7 @@
 "INFO_EAGLE_USERS_GUIDE_DOWNLOAD" = "la versión mas reciente de la Guía del Usuario del sitio web de Mulligan Software";
 "INFO_EAGLE_USERS_GUIDE_LOCATE" = "una copia de la Guía del Usuario que ya está en su computadora";
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "La configuración presentada no se cambian con un reajuste “Ajustes de fábrica”.";
+"NOTICE_CANCEL_TO_UNDO_CHANGES" = "Cancelar para deshacer los cambios.";
 
 //	USGA Data Services
 "NOTICE_USGA_CANCELLED" = "Conexión de USGA Data Services cancelada";
