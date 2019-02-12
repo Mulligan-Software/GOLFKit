@@ -16,7 +16,7 @@
 "TERM_AUTHORITY" = "Autorität";
 "TERM_AUTHORIZATION" = "Autorisierung";
 "TERM_AVERAGE" = "mittlere";
-"TERM_BACK" = "hinter";		//	As in "back nine" - letzten (last) ?
+"TERM_BACK" = "letzte";		//	As in "back nine" - letzte (last) ?
 "TERM_BEST" = "beste";
 "TERM_BESTBALL" = "Best-Ball";
 "TERM_BET" = "Wette";
@@ -71,6 +71,7 @@
 "TERM_INDIVIDUAL" = "individuell";	//	The adjective ("individual gross")
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "irische";
+"TERM_LEADERBOARD" = "Bestenliste";
 "TERM_LIMITED" = "limitiert";
 "TERM_LOCATE" = "suchen";
 "TERM_MATCH" = "Match";
@@ -107,6 +108,7 @@
 "TERM_POINT_ABBR" = "Pt.";
 "TERM_POINT_PLURAL" = "Punkte";
 "TERM_POINT_PLURAL_ABBR" = "Pte.";
+"TERM_PRESS" = "Presse";
 "TERM_PRIVATE" = "privat";
 "TERM_PURCHASE" = "kauf";
 "TERM_PUTT" = "Putt";
@@ -250,8 +252,13 @@
 "TITLE_ASSIGN_%ld_ROUNDS_TO" = "%ld Runden zuweisen an";
 "TITLE_ASSIGN_TEES" = "Zuweisen Start-Abschläge";
 "TITLE_ASSIGN_TIMES" = "Zuweisen Anfangszeit";
-"TITLE_BACK_NINE" = "Rückneun";
-"TITLE_BACK_SIDE" = "Rückseite";
+"TITLE_BACK_NINE" = "Letzteneun";
+"TITLE_BACK_SIDE" = "Letzteseite";
+"TITLE_BET_BACK" = "Letzteseite";
+"TITLE_BET_FRONT" = "Ersteseite";
+"TITLE_BET_HOLES_%ld_%ld" = "Löcher %ld - %ld";
+"TITLE_BET_MATCH" = "Match";
+"TITLE_BET_18_HOLES" = "18 Löcher";
 "TITLE_BOGEYS_OR_WORSE" = "Bogeys & schlimmer";
 "TITLE_CANCEL" = "Abbrechen";
 "TITLE_CBA" = "Computed Buffer Adjustment";
@@ -287,8 +294,8 @@
 "TITLE_FAVORITE_PLAYER" = "Lieblings Spieler";
 "TITLE_FIRST_HOLE" = "erstes Loch";
 "TITLE_FLAG_TOURNAMENT_SCORES" = "Bestimmen Turnier-Scores";
-"TITLE_FRONT_NINE" = "Vorderneun";
-"TITLE_FRONT_SIDE" = "Vorderseite";
+"TITLE_FRONT_NINE" = "Ersteneun";
+"TITLE_FRONT_SIDE" = "Ersteseite";
 "TITLE_GRAPHING_COLORS" = "Kartierenfarben";
 "TITLE_GREEN_IN_REGULATION" = "Green in Regulation";
 "TITLE_GREEN_IN_REGULATION_PLURAL" = "Greens in Regulation";
@@ -348,6 +355,7 @@
 "TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "Weltweites Handicap Indizes";
 "TITLE_HOLE_HANDICAP" = "Handicap";
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Loch-Score-Einstellung";
+"TITLE_HOLE_SELECTION" = "Lochauswahl";
 "TITLE_HOLES_TO_BE_SCORED" = "Zu bewertenden Löcher";
 "TITLE_GRADE" = "Klasse";
 "TITLE_IGNORE_BEST" = "Ignoriere besten";
@@ -367,6 +375,7 @@
 "TITLE_LOCK_EVENTS" = "Veranstaltungen schützen";
 "TITLE_LOCK_PLAYERS" = "Spieler schützen";
 "TITLE_LOCK_SCORECARDS" = "Scorekarten schützen";
+"TITLE_MATCH_PLAY" = "Matchplay";
 "TITLE_MAX_HANDICAP_MEN" = "Maximal Standard-Handicap für Herren";
 "TITLE_MAXIMUM_SCORE" = "Höchste Punktzahl";
 "TITLE_MB_DOWNLOADED_%1.1f" = "%1.1fMB heruntergeladen";
@@ -388,11 +397,15 @@
 "TITLE_POST" = "Posten";
 "TITLE_POST_SCORE_FOR_%@" = "Posten Sie eine zusätzliche Partitur für %@";
 "TITLE_PREFERENCES" = "Einstellungen";
+"TITLE_PRESS_ADDED" = "Presse";
+"TITLE_PRESS_1_DOWN" = "1↓ Presse";
+"TITLE_PRESS_2_DOWN" = "2↓ Presse";
 "TITLE_PREVIOUS_HOLE" = "vorheriges Loch";
 "TITLE_PRIMARY" = "Primär";
 "TITLE_PRINT_SCORECARD" = "Drucken Scorekarte";
 "TITLE_PRINT_SCORECARDS" = "Drucken Scorekarten";
 "TITLE_QUOTA_POINTS_GAINED" = "Quotenpunkte gewonnen";
+"TITLE_RANDOM_SELECTION" = "Zufällige Auswahl";
 "TITLE_RECENT_PLAYERS_ETC" = "Aktuelle Spieler, Vereine, Scorekarten, usw.";
 "TITLE_REGISTER" = "Registrieren";
 "TITLE_REVIEW_BUTTON" = "Überprüfen";
@@ -407,6 +420,7 @@
 "TITLE_SCORING_COLORS" = "Farben für Golfwertung";
 "TITLE_SCORING_SHORTHAND" = "Kurzschrift für Golfwertung";
 "TITLE_SECONDARY" = "Sekundär";
+"TITLE_SELECT_ALL" = "Wählen Sie Alle";
 "TITLE_SELECTED_HOLES" = "ausgewählte Löcher";
 "TITLE_SERIAL_NUMBER" = "Seriennummer";
 "TITLE_SHOW_MEMBER_NUMBERS" = "Zeige Clubmitgliedsnummern auf Scorekarten";
@@ -434,10 +448,6 @@
 "TITLE_USERS_GUIDE_NOT_FOUND" = "Benutzerleitfaden nicht gefunden";
 "TITLE_WITH_SCORE" = "mit Punktzahl";
 "TITLE_WOMENS_HANDICAP" = "Handicap der Damen";
-
-"TITLE_HOLE_SELECTION" = "Lochauswahl";
-"TITLE_RANDOM_SELECTION" = "Zufällige Auswahl";
-"TITLE_SELECT_ALL" = "Wählen Sie Alle";
 
 "SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
 "SAMPLE_LOOSELY_ALPHABETIC_NAMES" = "Al Czervik / Elihu & Vivian Smails / Beeper, Czervik, Smails & Webb";
@@ -486,6 +496,7 @@
 "BLURB_ALLOW_REFERENCE_TEES" = "Wenn Sie Spielen-Handicaps für Unterschiede in den Course Rating anpassen, erlauben Sie die Angabe von „referenz“ Abschläge, die für die Berechnung von Anpassung für Herren und/oder Damen verwendet werden.";
 "BLURB_REVIEW_HANDICAP_RECORDS" = "Untersuchen Sie zuvor berechnete Handicap-Datensätze in Tabellenform mit Funktionen zum Entfernen ausgewählter Daten.";
 
+"DESCRIPTION_MATCH_PLAY" = "Kopf-an-Kopf-Wettbewerb, de durch die Differenz de gewonnenen Löcher erzielt wird.";
 "DESCRIPTION_PRINTING_PRIVACY_%@" = "Veranstaltungsregistrierung Kategorien als „%@“ bezeichnet werden in der Regel nicht gedruckt oder angezeigt.";
 "DESCRIPTION_THEME_APPEARANCE" = "Helle - Eagle verwendet immer den klassischen Aqua-Thema\nDunkel - Eagle verwendet immer den dunklen Modus\nSystem - Eagle verwendet das in den Systemeinstellungen ausgewählte Thema";
 "DESCRIPTION_THEME_PRE_MOJAVE" = "Vor macOS 10.14 Mojave, Eagle verwendet den standardmäßigen Aqua-Thema des Systems.";
@@ -522,7 +533,7 @@
 "PLAY_TYPE_9_POINT_DESC" = "3 oder mehr Spieler teilen 9 (16, 25, 36) Punkt pro Loch";
 "PLAY_TYPE_6_POINT" = "6-Point Game";
 "PLAY_TYPE_6_POINT_DESC" = "3 Spieler teilen sich 6 Punkt pro Loch";
-"PLAY_TYPE_MEDAL_MATCH" = "Medaille Lochspiel";
+"PLAY_TYPE_MEDAL_MATCH" = "Medaille Matchplay";
 "PLAY_TYPE_MEDAL_MATCH_DESC" = "2 Punkte pro Loch vs. jeder Scorekarte Wettbewerber";
 "PLAY_TYPE_TEAM_BETTER_BALL" = "best-Ball";
 "PLAY_TYPE_TEAM_BETTER_BALL_DESC" = "geringe Punktzahl von Partnern oder Mitspieler";
@@ -655,6 +666,7 @@
 "DONT_ASK_ME_AGAIN" = "Fragen Sie mich nicht noch einmal.";
 "DOUBLE_QUOTE_CLOSING" = "“";
 "DOUBLE_QUOTE_OPENING" = "„";
+"DOWNWARD_ARROW" = "↓";
 "ELLIPSIS" = "…";
 "FOOTNOTE_CHARACTER" = "†";		//	Special character
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Ein %@ Tabelle (%@) wird verwendet, um ein %@, ausgestellt von den Golfclub oder ermächtigt Golf Verien, um einen %@ zu konvertieren basierend auf der %@ für eine bestimmte Gruppe von Abschläge.";
@@ -666,6 +678,7 @@
 "ORDINAL_20TH_TO_29TH" = ".,.,.,.,.,.,.,.,.,.";
 "SCORECARD_EXCEEDS_1_PLAYER" = "Scorekarte überschreitet maximal 1 Spieler";
 "SCORECARD_EXCEEDS_%ld_PLAYERS" = "Scorekarte überschreitet maximal %ld Spieler";
+"UPWARD_ARROW" = "↑";
 "VIA_THE_INTERNET" = "über das Internet";
 "WITH_CHARACTER" = "c̅";		//	Special character
 

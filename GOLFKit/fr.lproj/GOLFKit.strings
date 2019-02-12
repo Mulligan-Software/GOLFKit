@@ -71,6 +71,7 @@
 "TERM_INDIVIDUAL" = "individuel";	//	The adjective ("individual gross")
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "Irlandais";
+"TERM_LEADERBOARD" = "leaderboard";
 "TERM_LIMITED" = "limité";
 "TERM_LOCATE" = "localiser";
 "TERM_MATCH" = "match";
@@ -107,6 +108,7 @@
 "TERM_POINT_ABBR" = "pt.";
 "TERM_POINT_PLURAL" = "points";
 "TERM_POINT_PLURAL_ABBR" = "pts.";
+"TERM_PRESS" = "presse";
 "TERM_PRIVATE" = "privé";
 "TERM_PURCHASE" = "acheter";
 "TERM_PUTT" = "putt";
@@ -252,6 +254,11 @@
 "TITLE_ASSIGN_TIMES" = "Assigner l’Heures de Départ";
 "TITLE_BACK_NINE" = "Deuxième Neuf";
 "TITLE_BACK_SIDE" = "Deuxième Côté";
+"TITLE_BET_BACK" = "Deuxième";
+"TITLE_BET_FRONT" = "Premier";
+"TITLE_BET_HOLES_%ld_%ld" = "Trous %ld - %ld";
+"TITLE_BET_MATCH" = "Match";
+"TITLE_BET_18_HOLES" = "18 Trous";
 "TITLE_BOGEYS_OR_WORSE" = "Bogeys & pire";
 "TITLE_CANCEL" = "Annuler";
 "TITLE_CBA" = "Computed Buffer Adjustment";
@@ -348,6 +355,7 @@
 "TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "Handicap Indexes Mondials";
 "TITLE_HOLE_HANDICAP" = "Handicap";
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Trou score ajustement";
+"TITLE_HOLE_SELECTION" = "Sélection de Trou";
 "TITLE_HOLES_TO_BE_SCORED" = "Trous à marquer";
 "TITLE_IGNORE_BEST" = "Ignorez meilleurs";
 "TITLE_IGNORE_WORST" = "Ignorez les pires";
@@ -367,6 +375,7 @@
 "TITLE_LOCK_EVENTS" = "Verrouriller les Événements";
 "TITLE_LOCK_PLAYERS" = "Verrouriller les Joueurs";
 "TITLE_LOCK_SCORECARDS" = "Verrouriller les Cartes de Score";
+"TITLE_MATCH_PLAY" = "Match Play";
 "TITLE_MAX_HANDICAP_MEN" = "Standard handicap maximum - hommes";
 "TITLE_MAXIMUM_SCORE" = "Score maximum";
 "TITLE_MB_DOWNLOADED_%1.1f" = "%1.1fMB téléchargés";
@@ -388,11 +397,15 @@
 "TITLE_POST" = "Publier";
 "TITLE_POST_SCORE_FOR_%@" = "Publiez un score supplémentaire pour %@";
 "TITLE_PREFERENCES" = "Préférences";
+"TITLE_PRESS_ADDED" = "Presse";
+"TITLE_PRESS_1_DOWN" = "1↓ Presse";
+"TITLE_PRESS_2_DOWN" = "2↓ Presse";
 "TITLE_PREVIOUS_HOLE" = "Trou Précédent";
 "TITLE_PRIMARY" = "Première";
 "TITLE_PRINT_SCORECARD" = "Imprimer Carte de Score";
 "TITLE_PRINT_SCORECARDS" = "Imprimer Cartes de Score";
 "TITLE_QUOTA_POINTS_GAINED" = "Points de Quota Gagnés";
+"TITLE_RANDOM_SELECTION" = "Sélection au Hasard";
 "TITLE_RECENT_PLAYERS_ETC" = "Joueurs récents, Clubs, Cartes, etc.";
 "TITLE_REGISTER" = "Inscrire";
 "TITLE_REVIEW_BUTTON" = "Revoir";
@@ -407,6 +420,7 @@
 "TITLE_SCORING_COLORS" = "Couleurs pour Marquer";
 "TITLE_SCORING_SHORTHAND" = "Raccourcis pour Marquer";
 "TITLE_SECONDARY" = "Secondaire";
+"TITLE_SELECT_ALL" = "Tout Sélectionner";
 "TITLE_SELECTED_HOLES" = "Trous Sélectionnés";
 "TITLE_SERIAL_NUMBER" = "Numéro de série";
 "TITLE_SHOW_MEMBER_NUMBERS" = "Afficher numéros des membres du club sur Cartes de Score";
@@ -434,10 +448,6 @@
 "TITLE_USERS_GUIDE_NOT_FOUND" = "Aucun fichier du Guide des Utilisateurs a été trouvé";
 "TITLE_WITH_SCORE" = "avec score";
 "TITLE_WOMENS_HANDICAP" = "Handicap - Femmes";
-
-"TITLE_HOLE_SELECTION" = "Sélection de Trou";
-"TITLE_RANDOM_SELECTION" = "Sélection au Hasard";
-"TITLE_SELECT_ALL" = "Tout Sélectionner";
 
 "SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
 "SAMPLE_LOOSELY_ALPHABETIC_NAMES" = "Al Czervik / Elihu & Vivian Smails / Beeper, Czervik, Smails & Webb";
@@ -486,6 +496,7 @@
 "BLURB_ALLOW_REFERENCE_TEES" = "Lors du réglage de Handicaps Jouer de différences dans les évaluations de parcours, permet la spécification de jalons «référence» pour le calcul de ajustements pour les hommes et/ou femmes.";
 "BLURB_REVIEW_HANDICAP_RECORDS" = "Examinez les données de handicap précedemment calculés sous forme tabulaire avec capacités pour vous supprimez les données selectionnées.";
 
+"DESCRIPTION_MATCH_PLAY" = "Compétition tête à tête marquée par la différence de trous gagnés.";
 "DESCRIPTION_PRINTING_PRIVACY_%@" = "Les catégories d’enregistrement d’événement identifiés comme «%@» ne sont généralement ni imprimés ni affichés.";
 "DESCRIPTION_THEME_APPEARANCE" = "Claire - Eagle utilise toujours l’apperance classique de l’Aqua\nSombre - Eagle utilise toujours l’apperance du Mode Sombre\nSystème - Eagle utilise l’apperance sélectionnée dans les Préférences Système";
 "DESCRIPTION_THEME_PRE_MOJAVE" = "Avant macOS 10.14 Mojave, Eagle utilisait le style d’apperance Aqua standard du système.";
@@ -655,6 +666,7 @@
 "DONT_ASK_ME_AGAIN" = "Ne plus me demander.";
 "DOUBLE_QUOTE_CLOSING" = "»";
 "DOUBLE_QUOTE_OPENING" = "«";
+"DOWNWARD_ARROW" = "↓";
 "ELLIPSIS" = "…";
 "FOOTNOTE_CHARACTER" = "†";		//	Special character
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Le Tableau %@ (%@) a pour but de transformer le %@ émis par un club de golf ou une association de golf autorisée en un %@ tenant compte de l’%@ de chacun des jalons de départ.";
@@ -666,6 +678,7 @@
 "ORDINAL_20TH_TO_29TH" = "ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ";	/*	20ᵉ, 21ᵉ, 22ᵉ, etc.	*/
 "SCORECARD_EXCEEDS_1_PLAYER" = "Carte de score dépasse le maximum de 1 joueur";
 "SCORECARD_EXCEEDS_%ld_PLAYERS" = "Carte de score dépasse le maximum de %ld joueurs";
+"UPWARD_ARROW" = "↑";
 "VIA_THE_INTERNET" = "par Internet";
 "WITH_CHARACTER" = "c̅";		//	Special character
 
