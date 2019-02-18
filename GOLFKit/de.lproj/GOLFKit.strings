@@ -12,6 +12,7 @@
 "TERM_ADJUSTED_FOR_RATINGS" = "bereinigt um Unterschiede der Course Ratings";
 "TERM_ALL" = "alle";
 "TERM_ALLOWANCE" = "Zustimmung";
+"TERM_AND" = "und";
 "TERM_ASSIGN" = "zuweisen";
 "TERM_AUTHORITY" = "Autorität";
 "TERM_AUTHORIZATION" = "Autorisierung";
@@ -50,6 +51,8 @@
 "TERM_DOWNLOAD" = "download";
 "TERM_DUPLICATE" = "duplizieren";
 "TERM_ENTER" = "Nummer eingeben";
+"TERM_EVEN" = "eben";
+"TERM_EVEN_ABBR" = "E";
 "TERM_EVENT" = "Veranstaltung";
 "TERM_EVENT_PLURAL" = "Veranstaltungen";
 "TERM_EVERYTHING" = "alles";
@@ -60,10 +63,12 @@
 "TERM_FOURBALL" = "Vier-Ball";
 "TERM_FOURSOMES" = "Viererspiel";
 "TERM_FRONT" = "ersten";
+"TERM_GOLF" = "Golf";
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "brutto";
 "TERM_HANDICAP" = "handicap";
 "TERM_HANDICAP_ABBR" = "hdcp";
+"TERM_HELP" = "Hilfe";
 "TERM_HOLE" = "Loch";
 "TERM_HOLE_PLURAL" = "Löcher";
 "TERM_IMPORT" = "importieren";
@@ -80,6 +85,7 @@
 "TERM_MEDALMATCH" = "Match Medaille";
 "TERM_METER_PLURAL" = "Meter";
 "TERM_METER_PLURAL_ABBR" = "Mtr.";
+"TERM_MORE" = "Mehr";
 "TERM_MOVE" = "bewegen";
 "TERM_NET" = "netto";
 "TERM_NEXT" = "weiter";
@@ -127,8 +133,10 @@
 "TERM_SCOREBOARD" = "Anzeigetafel";
 "TERM_SCORECARD" = "Scorekarte";
 "TERM_SCORECARD_PLURAL" = "Scorekarten";
+"TERM_SCORECARD_PLURAL_SHORT" = "Scorekarten";
 "TERM_SCRAMBLE" = "Gerangel";
 "TERM_SELECTED" = "ausgewält";
+"TERM_SETTINGS" = "Einstellungen";
 "TERM_SIDE" = "Seite";
 "TERM_SIXPT" = "6-Punkte";
 "TERM_SLOPE" = "Slope";
@@ -143,8 +151,11 @@
 "TERM_TEE_PLURAL" = "Abschläge";
 "TERM_THEME" = "Thema";
 "TERM_TIE" = "Remis";
-"TERM_TIEBREAKER" = "tie-break";
+"TERM_TIEBREAKER" = "Tiebreaker";
+"TERM_TIEBREAKER_PLURAL" = "Tiebreakers";
 "TERM_TIPS" = "Hinweise";
+"TERM_TODAY" = "Heute";
+"TERM_TOMORROW" = "Morgen";
 "TERM_TOTAL" = "gesamt";
 "TERM_TOURNAMENT" = "Turnier";
 "TERM_TRAINING" = "Schulung";
@@ -158,6 +169,7 @@
 "TERM_YARD_PLURAL_ABBR" = "Yds.";
 "TERM_YARDAGE" = "Meterzahl";
 "TERM_YES" = "Ja";
+"TERM_YESTERDAY" = "Gestern";
 "TERM_ZERO" = "null";
 "TERM_ZIGZAG" = "Zig-Zag";
 
@@ -249,14 +261,12 @@
 "TITLE_ADVANCED_REFERENCE_TEES" = "Zulassen Rating „Referenz“ Abschläge";
 "TITLE_ALLOWANCE" = "Zustimmung";
 "TITLE_ASSIGN_ROUND_TO" = "Zuweisen eine Runde";
-"TITLE_ASSIGN_%ld_ROUNDS_TO" = "%ld Runden zuweisen an";
 "TITLE_ASSIGN_TEES" = "Zuweisen Start-Abschläge";
 "TITLE_ASSIGN_TIMES" = "Zuweisen Anfangszeit";
 "TITLE_BACK_NINE" = "Letzteneun";
 "TITLE_BACK_SIDE" = "Letzteseite";
 "TITLE_BET_BACK" = "Letzteseite";
 "TITLE_BET_FRONT" = "Ersteseite";
-"TITLE_BET_HOLES_%ld_%ld" = "Löcher %ld - %ld";
 "TITLE_BET_MATCH" = "Match";
 "TITLE_BET_18_HOLES" = "18 Löcher";
 "TITLE_BOGEYS_OR_WORSE" = "Bogeys & schlimmer";
@@ -285,6 +295,9 @@
 "TITLE_EAGLES_OR_BETTER" = "Eagles & besser";
 "TITLE_EDIT_BUTTON" = "Bearbeiten";
 "TITLE_EDIT_EVENT" = "Ereignis bearbeiten";
+"TITLE_EGO_PULL_TO_SORT" = "Zum Sortieren ziehen…";
+"TITLE_EGO_RELEASE_TO_SORT" = "Zur Sortierung freigeben…";
+"TITLE_EGO_SORTING" = "Sortierung…";
 "TITLE_ESC_LIMIT" = "ESC limit";
 "TITLE_EVEN" = "Eben";
 "TITLE_EVEN_ABBR" = "E";
@@ -378,7 +391,6 @@
 "TITLE_MATCH_PLAY" = "Matchplay";
 "TITLE_MAX_HANDICAP_MEN" = "Maximal Standard-Handicap für Herren";
 "TITLE_MAXIMUM_SCORE" = "Höchste Punktzahl";
-"TITLE_MB_DOWNLOADED_%1.1f" = "%1.1fMB heruntergeladen";
 "TITLE_MENS_HANDICAP" = "Handicap der Herren";
 "TITLE_NAME_SCORECARDS" = "Benennen Scorekarten";
 "TITLE_NAME_TEAMS" = "Benennen Teams";
@@ -386,8 +398,6 @@
 "TITLE_NINE_HOLES" = "9 Löcher";
 "TITLE_NO_STROKES" = "keine Schläge";
 "TITLE_OPEN_SCORECARD" = "Scorekarte öffnen";
-"TITLE_OPEN_%@" = "Öffne %@";
-"TITLE_OPEN_3_%@" = "Öffne 3 %@";
 "TITLE_OK_BUTTON" = "OK";
 "TITLE_PENALTY_ROUND" = "Strafrunde";
 "TITLE_PENALTY_STROKE" = "Strafschlag";
@@ -439,7 +449,6 @@
 "TITLE_SYSTEM" = "System";
 "TITLE_TECHNICAL_SUPPORT" = "Technische Unterstützung";
 "TITLE_TOTAL_POINTS" = "Gesamtpunktzahl";
-"TITLE_TOTAL_POINTS_VS_QUOTA_%d" = "Gesamtpunkte v. %d Kontingent";
 "TITLE_UNLINK_DROPBOX" = "Link Dropbox";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Schalte alle Scorekarten der Veranstaltung";
 "TITLE_UP_AND_DOWN" = "Auf und ab";
@@ -448,6 +457,23 @@
 "TITLE_USERS_GUIDE_NOT_FOUND" = "Benutzerleitfaden nicht gefunden";
 "TITLE_WITH_SCORE" = "mit Punktzahl";
 "TITLE_WOMENS_HANDICAP" = "Handicap der Damen";
+
+//	Formats
+"FORMAT_AND_%@" = " und %@";
+"FORMAT_ASSIGN_%ld_ROUNDS_TO" = "%ld Runden zuweisen an";
+"FORMAT_BEST_%d_ROUNDS" = "besten %d Golfrunden";
+"FORMAT_BET_HOLES_%ld_%ld" = "Löcher %ld - %ld";
+"FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST" = "%@ Sie auf die Nummer, un sie anzupassen";
+"FORMAT_COURSE_HANDICAP_%@_TABLE" = "%@ Tabelle";
+"FORMAT_CURRENT_%@_TITLE" = "aktuelle %@";
+"FORMAT_CURRENT_%@_TITLE_PLURAL" = "aktuellen %@";
+"FORMAT_DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Bestimme Dein %@ auf der rechten Seite indem Sie die Zeile finden, in der Ihre %@ auf der linken Seite steht.";
+"FORMAT_MB_DOWNLOADED_%1.1f" = "%1.1fMB heruntergeladen";
+"FORMAT_NET_%@" = "Netto-%@";
+"FORMAT_NUMBER_%ld_ABBR" = "Nr. %ld";
+"FORMAT_OPEN_%@" = "Öffne %@";
+"FORMAT_OPEN_3_%@" = "Öffne 3 %@";
+"FORMAT_TOTAL_POINTS_VS_QUOTA_%d" = "Gesamtpunkte v. %d Kontingent";
 
 "SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
 "SAMPLE_LOOSELY_ALPHABETIC_NAMES" = "Al Czervik / Elihu & Vivian Smails / Beeper, Czervik, Smails & Webb";
@@ -581,8 +607,6 @@
 "PLAY_TYPE_NO_PLAYER_SCORES" = "kein Spieler punktet";
 "PLAY_TYPE_NO_PLAYER_SCORES_DESC" = "Team zählt nur";
 
-"CLICKORTAP_%@_NUMBER_TO_ADJUST" = "%@ Sie auf die Nummer, un sie anzupassen";
-
 //	GOLFAllowanceType Titles & Descriptions
 "ALLOWANCE_TYPE_STANDARD" = "Standardzulage";
 "ALLOWANCE_TYPE_STANDARD_DESC" = "";
@@ -625,7 +649,6 @@
 "ALLOWANCE_ONE_TIME_PLAYER" = "Einmalig errechnete Spieler Handicap";
 "ALLOWANCE_ONE_TIME_TEAM" = "Einmalig errechnete Team-Handicap";
 "ALLOWANCE_PCT_OF_HANDICAP_%@" = "%% des %@";	//	% des Spielen Handicap
-"BEST_%d_ROUNDS" = "besten %d Golfrunden";
 "%d_PCT_OF_HANDICAP_%@" = "%d%% des %@";
 "OF" = "des";	//	95% des Spielen Handicap
 
@@ -657,12 +680,7 @@
 "TOOLTIP_TEAM_NET_SCORE" = "Die gesamte Netto Punktzahl der Mannschaft";
 "TOOLTIP_TEAM_TOTAL_SCORE" = "Die Gesamtpunktzahl der Mannschaft";
 
-//	Phrases & Formats
-"AND_%@" = " und %@";
-"COURSE_HANDICAP_%@_TABLE" = "%@ Tabelle";
-"CURRENT_%@_TITLE" = "aktuelle %@";
-"CURRENT_%@_TITLE_PLURAL" = "aktuellen %@";
-"DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Bestimme Dein %@ auf der rechten Seite indem Sie die Zeile finden, in der Ihre %@ auf der linken Seite steht.";
+//	Phrases
 "DONT_ASK_ME_AGAIN" = "Fragen Sie mich nicht noch einmal.";
 "DOUBLE_QUOTE_CLOSING" = "“";
 "DOUBLE_QUOTE_OPENING" = "„";
@@ -672,7 +690,6 @@
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Ein %@ Tabelle (%@) wird verwendet, um ein %@, ausgestellt von den Golfclub oder ermächtigt Golf Verien, um einen %@ zu konvertieren basierend auf der %@ für eine bestimmte Gruppe von Abschläge.";
 "HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "Ein %@ Tabelle (%@) wird verwendet, um ein %@, ausgestellt von den Golfclub oder ermächtigt Golf Verien, um einen %@ zu konvertieren für eine bestimmte Gruppe von Abschläge.";
 "IN_ENGLISH" = "auf Englisch";		//	Users' Guide notation
-"NUMBER_%ld_ABBR" = "Nr. %ld";
 "ORDINAL_FIRST" = ".";
 "ORDINAL_NTH" = ".";
 "ORDINAL_20TH_TO_29TH" = ".,.,.,.,.,.,.,.,.,.";

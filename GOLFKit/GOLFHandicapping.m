@@ -260,7 +260,7 @@ NSString * GOLFHandicapIndexTitle(GOLFHandicapMethodIndex handicapMethod, BOOL p
 //=================================================================
 NSString * GOLFHandicapCurrentIndexTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural) {
 	NSString *titleString = GOLFOfficialHandicapTitle(handicapMethod, plural);	//	This and the format string must handle capitalization
-	NSString *currentFormat = GOLFLocalizedString(plural ? @"CURRENT_%@_TITLE_PLURAL" : @"CURRENT_%@_TITLE");
+	NSString *currentFormat = GOLFLocalizedString(plural ? @"FORMAT_CURRENT_%@_TITLE_PLURAL" : @"FORMAT_CURRENT_%@_TITLE");
 	return [NSString stringWithFormat:currentFormat, titleString];
 }
 
@@ -441,7 +441,7 @@ NSString * GOLFHandicapTableBlurb(GOLFHandicapMethodIndex handicapMethod) {
 							//	Use both slope, rating and par to adjust the handicap…
 							NSString *usingPhrase = GOLFLocalizedString(@"TITLE_HANDICAP_COURSE_RATING");
 							usingPhrase = [usingPhrase stringByAppendingFormat:@", %@", GOLFLocalizedString(@"TITLE_HANDICAP_SLOPE_RATING")];
-							usingPhrase = [usingPhrase stringByAppendingFormat:GOLFLocalizedString(@"AND_%@"), GOLFLocalizedString(@"par")];
+							usingPhrase = [usingPhrase stringByAppendingFormat:GOLFLocalizedString(@"FORMAT_AND_%@"), GOLFLocalizedString(@"par")];
 							return [NSString stringWithFormat:GOLFLocalizedString(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@"),
 									playingHandicapTitle,
 									slopeChartTitle,
@@ -474,7 +474,7 @@ NSString * GOLFHandicapTableBlurb(GOLFHandicapMethodIndex handicapMethod) {
   			{
 				NSString *usingPhrase = GOLFLocalizedString(@"TITLE_HANDICAP_SLOPE_RATING");
 				usingPhrase = [usingPhrase stringByAppendingFormat:@", %@", GOLFLocalizedString(@"TITLE_HANDICAP_COURSE_RATING")];
-				usingPhrase = [usingPhrase stringByAppendingFormat:GOLFLocalizedString(@"AND_%@"), GOLFLocalizedString(@"par")];
+				usingPhrase = [usingPhrase stringByAppendingFormat:GOLFLocalizedString(@"FORMAT_AND_%@"), GOLFLocalizedString(@"par")];
 				return [NSString stringWithFormat:GOLFLocalizedString(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@"),
 						playingHandicapTitle,
 						slopeChartTitle,
@@ -510,7 +510,7 @@ NSString * GOLFHandicapTableInstruction(GOLFHandicapMethodIndex handicapMethod) 
 	NSString *playingHandicapTitle = GOLFPlayingHandicapTitle(handicapMethod, NO);	//	Localized
 	NSString *officialHandicapTitle = GOLFOfficialHandicapTitle(handicapMethod, NO);	//	Localized
 
-	return [NSString stringWithFormat:GOLFLocalizedString(@"DETERMINE_YOUR_%@_WITH_YOUR_%@"), playingHandicapTitle, officialHandicapTitle];
+	return [NSString stringWithFormat:GOLFLocalizedString(@"FORMAT_DETERMINE_YOUR_%@_WITH_YOUR_%@"), playingHandicapTitle, officialHandicapTitle];
 }
 
 //=================================================================

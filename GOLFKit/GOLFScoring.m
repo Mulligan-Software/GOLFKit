@@ -165,7 +165,7 @@ NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictiona
 #elif TARGET_OS_MAC
 					NSString *clickOrTap = [GOLFLocalizedString(@"TERM_CLICK") capitalizedString];
 #endif
-					*descriptiveText = [NSString stringWithFormat:GOLFLocalizedString(@"CLICKORTAP_%@_NUMBER_TO_ADJUST"), clickOrTap];
+					*descriptiveText = [NSString stringWithFormat:GOLFLocalizedString(@"FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST"), clickOrTap];
 				}
 				NSNumber *workingNumber = (info ? [info objectForKey:@"allowancePct"] : nil);
 				NSInteger pct = (workingNumber ? [workingNumber integerValue] : GOLFDefaultSpecifiedPercentageAllowance);
@@ -495,9 +495,9 @@ NSString * NSStringFromPlayType(GOLFPlayType playType, NSDictionary *info, NSStr
 			{
 				if (descriptiveText) {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
-					*descriptiveText = [NSString stringWithFormat:GOLFLocalizedString(@"CLICKORTAP_%@_NUMBER_TO_ADJUST"), GOLFLocalizedString(@"TERM_TAP")];
+					*descriptiveText = [NSString stringWithFormat:GOLFLocalizedString(@"FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST"), GOLFLocalizedString(@"TERM_TAP")];
 #elif TARGET_OS_MAC
-					*descriptiveText = [NSString stringWithFormat:GOLFLocalizedString(@"CLICKORTAP_%@_NUMBER_TO_ADJUST"), GOLFLocalizedString(@"TERM_CLICK")];
+					*descriptiveText = [NSString stringWithFormat:GOLFLocalizedString(@"FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST"), GOLFLocalizedString(@"TERM_CLICK")];
 #endif
 				}
 				NSNumber *workingNumber = (info ? [info objectForKey:@"bestRoundsN"] : nil);
