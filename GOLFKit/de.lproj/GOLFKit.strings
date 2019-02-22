@@ -48,6 +48,7 @@
 "TERM_DISQUALIFIED" = "disqualifiziert";
 "TERM_DISQUALIFIED_ABBR" = "disq.";
 "TERM_DISQUALIFIED_ACRONYM" = "DQ";
+"TERM_DOUBLE_TAP" = "zweimal tippen";
 "TERM_DOWNLOAD" = "download";
 "TERM_DUPLICATE" = "duplizieren";
 "TERM_ENTER" = "Nummer eingeben";
@@ -144,7 +145,7 @@
 "TERM_STATUS" = "Status";
 "TERM_STROKE" = "Schlag";
 "TERM_STROKE_PLURAL" = "Schläge";
-"TERM_TAP" = "tippen";
+"TERM_TAP" = "tippe";	//	tippe auf ~
 "TERM_TEAM" = "Mannschaft";
 "TERM_TEAM_PLURAL" = "Mannschaften";
 "TERM_TEE" = "Abschlag";
@@ -458,6 +459,10 @@
 "TITLE_WITH_SCORE" = "mit Punktzahl";
 "TITLE_WOMENS_HANDICAP" = "Handicap der Damen";
 
+"TITLE_THE_SCORING_MACHINE" = "Das Wertung-Apparat";
+"TITLE_FROM_MULLIGAN_SOFTWARE" = "von Mulligan Software";
+"TITLE_GETTING_STARTED" = "Fertig Machen…";
+
 //	Formats
 "FORMAT_AND_%@" = " und %@";
 "FORMAT_ASSIGN_%ld_ROUNDS_TO" = "%ld Runden zuweisen an";
@@ -695,6 +700,7 @@
 "ORDINAL_20TH_TO_29TH" = ".,.,.,.,.,.,.,.,.,.";
 "SCORECARD_EXCEEDS_1_PLAYER" = "Scorekarte überschreitet maximal 1 Spieler";
 "SCORECARD_EXCEEDS_%ld_PLAYERS" = "Scorekarte überschreitet maximal %ld Spieler";
+"TRADEMARK_CHARACTER" = "™";		//	Special character
 "UPWARD_ARROW" = "↑";
 "VIA_THE_INTERNET" = "über das Internet";
 "WITH_CHARACTER" = "c̅";		//	Special character

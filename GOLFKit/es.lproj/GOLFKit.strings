@@ -48,6 +48,7 @@
 "TERM_DISQUALIFIED" = "descalificado";
 "TERM_DISQUALIFIED_ABBR" = "desc.";
 "TERM_DISQUALIFIED_ACRONYM" = "DQ";
+"TERM_DOUBLE_TAP" = "pulsa dos veces";
 "TERM_DOWNLOAD" = "descargar";
 "TERM_DUPLICATE" = "duplicar";
 "TERM_ENTER" = "intro";
@@ -130,7 +131,7 @@
 "TERM_SCHEID" = "Scheid";
 "TERM_SCORE" = "resultado";
 "TERM_SCORE_PLURAL" = "resultados";
-"TERM_SCOREBOARD" = "marcador";
+"TERM_SCOREBOARD" = "marcadore";	//	pizarrón ?
 "TERM_SCORECARD" = "tarjeta";
 "TERM_SCORECARD_PLURAL" = "tarjetas";
 "TERM_SCORECARD_PLURAL_SHORT" = "tarjetas";
@@ -144,7 +145,7 @@
 "TERM_STATUS" = "estado";
 "TERM_STROKE" = "golpe";
 "TERM_STROKE_PLURAL" = "golpes";
-"TERM_TAP" = "pulse";
+"TERM_TAP" = "pulsa";	//	pulsa en ~
 "TERM_TEAM" = "equipo";
 "TERM_TEAM_PLURAL" = "equipos";
 "TERM_TEE" = "tee";
@@ -458,6 +459,10 @@
 "TITLE_WITH_SCORE" = "con resultado";
 "TITLE_WOMENS_HANDICAP" = "Handicap - Damas";
 
+"TITLE_THE_SCORING_MACHINE" = "La Máquina del Puntaje";
+"TITLE_FROM_MULLIGAN_SOFTWARE" = "de Mulligan Software";
+"TITLE_GETTING_STARTED" = "Empezando…";
+
 //	Formats
 "FORMAT_AND_%@" = " y %@";
 "FORMAT_ASSIGN_%ld_ROUNDS_TO" = "Asignar %ld rondas a";
@@ -695,6 +700,7 @@
 "ORDINAL_20TH_TO_29TH" = "º,º,º,º,º,º,º,º,º,º";	/*	20º, 21º, 22º, etc.	*/
 "SCORECARD_EXCEEDS_1_PLAYER" = "Tarjeta excede el máximo de 1 jugador";
 "SCORECARD_EXCEEDS_%ld_PLAYERS" = "Tarjeta excede el máximo de %ld jugadores";
+"TRADEMARK_CHARACTER" = "™";		//	Special character
 "UPWARD_ARROW" = "↑";
 "VIA_THE_INTERNET" = "vía Internet";
 "WITH_CHARACTER" = "c̅";		//	Special character

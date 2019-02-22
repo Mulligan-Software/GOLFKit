@@ -48,6 +48,7 @@
 "TERM_DISQUALIFIED" = "disqualifié";
 "TERM_DISQUALIFIED_ABBR" = "disq.";
 "TERM_DISQUALIFIED_ACRONYM" = "DQ";
+"TERM_DOUBLE_TAP" = "toucher deux fois";
 "TERM_DOWNLOAD" = "télécharger";
 "TERM_DUPLICATE" = "dupliquer";
 "TERM_ENTER" = "entrée";
@@ -144,7 +145,7 @@
 "TERM_STATUS" = "statut";
 "TERM_STROKE" = "coup";
 "TERM_STROKE_PLURAL" = "coups";
-"TERM_TAP" = "toucher";
+"TERM_TAP" = "touchez";	//	touchez ~
 "TERM_TEAM" = "équipe";
 "TERM_TEAM_PLURAL" = "équipes";
 "TERM_TEE" = "jalon";
@@ -458,6 +459,10 @@
 "TITLE_WITH_SCORE" = "avec score";
 "TITLE_WOMENS_HANDICAP" = "Handicap - Femmes";
 
+"TITLE_THE_SCORING_MACHINE" = "La Machine de Marquant";
+"TITLE_FROM_MULLIGAN_SOFTWARE" = "de Mulligan Software";
+"TITLE_GETTING_STARTED" = "Commencer…";
+
 //	Formats
 "FORMAT_AND_%@" = " et %@";
 "FORMAT_ASSIGN_%ld_ROUNDS_TO" = "Attribuer %ld tours à";
@@ -695,6 +700,7 @@
 "ORDINAL_20TH_TO_29TH" = "ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ";	/*	20ᵉ, 21ᵉ, 22ᵉ, etc.	*/
 "SCORECARD_EXCEEDS_1_PLAYER" = "Carte de score dépasse le maximum de 1 joueur";
 "SCORECARD_EXCEEDS_%ld_PLAYERS" = "Carte de score dépasse le maximum de %ld joueurs";
+"TRADEMARK_CHARACTER" = "™";		//	Special character
 "UPWARD_ARROW" = "↑";
 "VIA_THE_INTERNET" = "par Internet";
 "WITH_CHARACTER" = "c̅";		//	Special character

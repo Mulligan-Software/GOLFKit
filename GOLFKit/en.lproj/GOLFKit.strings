@@ -48,6 +48,7 @@
 "TERM_DISQUALIFIED" = "disqualified";
 "TERM_DISQUALIFIED_ABBR" = "disq.";
 "TERM_DISQUALIFIED_ACRONYM" = "DQ";
+"TERM_DOUBLE_TAP" = "double-tap";
 "TERM_DOWNLOAD" = "download";
 "TERM_DUPLICATE" = "duplicate";
 "TERM_ENTER" = "enter";
@@ -458,6 +459,10 @@
 "TITLE_WITH_SCORE" = "with score";
 "TITLE_WOMENS_HANDICAP" = "Women’s Handicap";
 
+"TITLE_THE_SCORING_MACHINE" = "The Scoring Machine";
+"TITLE_FROM_MULLIGAN_SOFTWARE" = "from Mulligan Software";
+"TITLE_GETTING_STARTED" = "Getting Started…";
+
 //	Formats
 "FORMAT_AND_%@" = " and %@";
 "FORMAT_ASSIGN_%ld_ROUNDS_TO" = "Assign %ld rounds to";
@@ -696,6 +701,7 @@
 "ORDINAL_20TH_TO_29TH" = "th,st,nd,rd,th,th,th,th,th,th";	/*	20th, 21st, 22nd, 23rd, 24th, 25th, etc.		*/
 "SCORECARD_EXCEEDS_1_PLAYER" = "Scorecard exceeds maximum 1 player";
 "SCORECARD_EXCEEDS_%ld_PLAYERS" = "Scorecard exceeds maximum %ld players";
+"TRADEMARK_CHARACTER" = "™";		//	Special character
 "UPWARD_ARROW" = "↑";
 "VIA_THE_INTERNET" = "via the Internet";
 "WITH_CHARACTER" = "c̅";		//	Special character
