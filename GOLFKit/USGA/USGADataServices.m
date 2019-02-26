@@ -90,8 +90,8 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 		NSOperatingSystemVersion systemVersion = [[NSProcessInfo processInfo] operatingSystemVersion];
 		NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
 		NSString *bundleName = [info objectForKey:@"CFBundleName"];	//	"The Scoring Machine"
-		NSString *bundleVersion = [info objectForKey:@"CFBundleVersion"];	//	95
-		NSString *bundleShortVersion = [info objectForKey:@"CFBundleShortVersionString"];	//	"1.4.11"
+		NSString *bundleVersion = [info objectForKey:@"CFBundleVersion"];	//	96
+		NSString *bundleShortVersion = [info objectForKey:@"CFBundleShortVersionString"];	//	"1.5"
 		NSString *osVersionString = @"";
 		if (systemVersion.patchVersion > 0) {
 			osVersionString = [NSString stringWithFormat:@"_%ld", (long)systemVersion.patchVersion];

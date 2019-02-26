@@ -308,8 +308,10 @@
 "TITLE_FAVORITE_PLAYER" = "Joueur Préféré";
 "TITLE_FIRST_HOLE" = "Premier Trou";	//	m.
 "TITLE_FLAG_TOURNAMENT_SCORES" = "Signalez les scores de tournoi";
+"TITLE_FROM_MULLIGAN_SOFTWARE" = "de Mulligan Software";
 "TITLE_FRONT_NINE" = "Premier Neuf";	//	m.
 "TITLE_FRONT_SIDE" = "Premier Côté";	//	m.
+"TITLE_GETTING_STARTED" = "Commencer…";
 "TITLE_GRAPHING_COLORS" = "Couleurs d’Infographie";
 "TITLE_GREEN_IN_REGULATION" = "Green réglementaire";
 "TITLE_GREEN_IN_REGULATION_PLURAL" = "Greens réglementaires";
@@ -423,6 +425,7 @@
 "TITLE_ROUNDS_HIGHLIGHT" = "Marquage des Tours";
 "TITLE_SAND_SAVES_PER_TRY" = "Sable Sauvetage/Essai";
 "TITLE_SAVE" = "Enregistrer";
+"TITLE_SCORECARD" = "Carte de Score";
 "TITLE_SCORECARD_IN" = "Ret";		//	As it appears in Scorecard total headers ("Retour" - Canada: "Entrée")
 "TITLE_SCORECARD_LENGTH_IMPERIAL" = "Ydg";
 "TITLE_SCORECARD_LENGTH_METRIC" = "M.";
@@ -449,6 +452,7 @@
 "TITLE_STATUS_VERIFIED" = "Vérifié";
 "TITLE_SYSTEM" = "Système";
 "TITLE_TECHNICAL_SUPPORT" = "Support Technique";
+"TITLE_THE_SCORING_MACHINE" = "La Machine de Marquant";
 "TITLE_TOTAL_POINTS" = "Points Totaux";
 "TITLE_UNLINK_DROPBOX" = "Délier Dropbox";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Débloquer tous Cartes d’Événement";
@@ -458,10 +462,6 @@
 "TITLE_USERS_GUIDE_NOT_FOUND" = "Aucun fichier du Guide des Utilisateurs a été trouvé";
 "TITLE_WITH_SCORE" = "avec score";
 "TITLE_WOMENS_HANDICAP" = "Handicap - Femmes";
-
-"TITLE_THE_SCORING_MACHINE" = "La Machine de Marquant";
-"TITLE_FROM_MULLIGAN_SOFTWARE" = "de Mulligan Software";
-"TITLE_GETTING_STARTED" = "Commencer…";
 
 //	Formats
 "FORMAT_AND_%@" = " et %@";
@@ -516,6 +516,13 @@
 "MENU_HDCP_ADJUSTED_FULL" = "Entièrement Ajusté";
 "MENU_HDCP_ADJUSTED_SLOPE" = "Slope Ajusté";
 
+"ALERT_NO_GOLFERS_COURSES_FOR_EVENT" = "Ni les Joueurs ni les Parcours de golf encore disponible pour créer un Événement.";
+"ALERT_NO_COURSES_FOR_EVENT" = "Pas encore de Parcours de golf disponible pour créer un Événement.";
+"ALERT_NO_GOLFERS_FOR_EVENT" = "Pas encore de Joueur de golf disponible pour créer un Événement.";
+"ALERT_NO_GOLFERS_COURSES_FOR_SCORECARD" = "Ni les Joueurs ni les Parcours de golf encore disponible pour créer une Carte de Score.";
+"ALERT_NO_COURSES_FOR_SCORECARD" = "Pas encore de Parcours de golf disponible pour créer une Carte de Score.";
+"ALERT_NO_GOLFERS_FOR_SCORECARD" = "Pas encore de Joueur de golf disponible pour créer une Carte de Score.";
+"ALERT_TAP_TO_ADD" = "Touchez pour ajouter…";
 "ALERT_USERS_GUIDE_ERROR" = "Impossible de télécharger le Guide des Utilisateurs";
 "ALERT_USERS_GUIDE_ERROR_INFO" = "Assurez vous d’avoir une connexion internet.  Réessayez plus tard.";
 

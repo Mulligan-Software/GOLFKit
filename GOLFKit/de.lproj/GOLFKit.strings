@@ -308,6 +308,7 @@
 "TITLE_FAVORITE_PLAYER" = "Lieblings Spieler";
 "TITLE_FIRST_HOLE" = "erstes Loch";
 "TITLE_FLAG_TOURNAMENT_SCORES" = "Bestimmen Turnier-Scores";
+"TITLE_FROM_MULLIGAN_SOFTWARE" = "von Mulligan Software";
 "TITLE_FRONT_NINE" = "Ersteneun";
 "TITLE_FRONT_SIDE" = "Ersteseite";
 "TITLE_GRAPHING_COLORS" = "Kartierenfarben";
@@ -371,6 +372,7 @@
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Loch-Score-Einstellung";
 "TITLE_HOLE_SELECTION" = "Lochauswahl";
 "TITLE_HOLES_TO_BE_SCORED" = "Zu bewertenden Löcher";
+"TITLE_GETTING_STARTED" = "Fertig Machen…";
 "TITLE_GRADE" = "Klasse";
 "TITLE_IGNORE_BEST" = "Ignoriere besten";
 "TITLE_IGNORE_WORST" = "Ignoriere schlimmsten";
@@ -423,6 +425,7 @@
 "TITLE_ROUNDS_HIGHLIGHT" = "Runden Akzentuierung";
 "TITLE_SAND_SAVES_PER_TRY" = "Sand-Bergungen/Versuche";
 "TITLE_SAVE" = "Sichern";
+"TITLE_SCORECARD" = "Scorekarte";
 "TITLE_SCORECARD_IN" = "In";		//	As it appears in Scorecard total headers
 "TITLE_SCORECARD_LENGTH_IMPERIAL" = "Ydg";
 "TITLE_SCORECARD_LENGTH_METRIC" = "M.";
@@ -449,6 +452,7 @@
 "TITLE_STATUS_VERIFIED" = "Geprüft";
 "TITLE_SYSTEM" = "System";
 "TITLE_TECHNICAL_SUPPORT" = "Technische Unterstützung";
+"TITLE_THE_SCORING_MACHINE" = "Das Wertung-Apparat";
 "TITLE_TOTAL_POINTS" = "Gesamtpunktzahl";
 "TITLE_UNLINK_DROPBOX" = "Link Dropbox";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Schalte alle Scorekarten der Veranstaltung";
@@ -458,10 +462,6 @@
 "TITLE_USERS_GUIDE_NOT_FOUND" = "Benutzerleitfaden nicht gefunden";
 "TITLE_WITH_SCORE" = "mit Punktzahl";
 "TITLE_WOMENS_HANDICAP" = "Handicap der Damen";
-
-"TITLE_THE_SCORING_MACHINE" = "Das Wertung-Apparat";
-"TITLE_FROM_MULLIGAN_SOFTWARE" = "von Mulligan Software";
-"TITLE_GETTING_STARTED" = "Fertig Machen…";
 
 //	Formats
 "FORMAT_AND_%@" = " und %@";
@@ -516,6 +516,13 @@
 "MENU_HDCP_ADJUSTED_FULL" = "Voll eingestellt";
 "MENU_HDCP_ADJUSTED_SLOPE" = "Slope angepasst";
 
+"ALERT_NO_GOLFERS_COURSES_FOR_EVENT" = "Weder Spieler noch Golfplätze sind verfügbar, um eine Veranstaltung zu erstellen.";
+"ALERT_NO_COURSES_FOR_EVENT" = "Es sind noch keine Golfplätze verfügbar, um eine Veranstaltung zu erstellen.";
+"ALERT_NO_GOLFERS_FOR_EVENT" = "Es sind noch keine Spieler verfügbar, um eine Veranstaltung zu erstellen.";
+"ALERT_NO_GOLFERS_COURSES_FOR_SCORECARD" = "Weder Spieler noch Golfplätze sind verfügbar, um eine Scorekarte zu erstellen.";
+"ALERT_NO_COURSES_FOR_SCORECARD" = "Es sind noch keine Golfplätze verfügbar, um eine Scorekarte zu erstellen.";
+"ALERT_NO_GOLFERS_FOR_SCORECARD" = "Es sind noch keine Spieler verfügbar, um eine Scorekarte zu erstellen.";
+"ALERT_TAP_TO_ADD" = "Zum Hinzufügen tippen…";
 "ALERT_USERS_GUIDE_ERROR" = "Benutzerhandbuch kann nicht heruntergeladen werden";
 "ALERT_USERS_GUIDE_ERROR_INFO" = "Stellen Sie sicher, das Sie über eine Internetverbindung verfügen, und versuchen Sie es später erneut.";
 
