@@ -82,6 +82,7 @@
 "TERM_LOCATE" = "suchen";
 "TERM_MATCH" = "Match";
 "TERM_MATCH_PLURAL" = "Matches";
+"TERM_MEASURED" = "gemessen";
 "TERM_MEDAL" = "medaille";
 "TERM_MEDALMATCH" = "Match Medaille";
 "TERM_METER_PLURAL" = "Meter";

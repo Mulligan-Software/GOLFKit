@@ -82,6 +82,7 @@
 "TERM_LOCATE" = "ubicar";
 "TERM_MATCH" = "partido";
 "TERM_MATCH_PLURAL" = "partidos";
+"TERM_MEASURED" = "medido";
 "TERM_MEDAL" = "medalla";
 "TERM_MEDALMATCH" = "Match Medalla";
 "TERM_METER_PLURAL" = "metros";
