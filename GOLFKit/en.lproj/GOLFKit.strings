@@ -546,6 +546,7 @@
 
 //	USGA Data Services
 "NOTICE_USGA_CANCELLED" = "USGA Data Services connection cancelled";
+"NOTICE_USGA_CANCELLING" = "Cancelling USGA Data Services connection…";
 "NOTICE_USGA_CODE_%ld_DESC_%@" = "USGA Data Services returned code %ld (%@)";
 "NOTICE_USGA_CONNECTED" = "Connected to USGA Data Services";
 "NOTICE_USGA_CONNECTING" = "Connecting to USGA Data Services…";
@@ -830,3 +831,18 @@
 "Venezuela" = "Venezuela";
 "Wales" = "Wales";
 "Zimbabwe" = "Zimbabwe";
+
+//	GOLFKit for USGA Data Services
+"USGA_DATA_SERVICES_UNREACHABLE" = "USGA Data Services is unreachable";
+"USGA_GETCOUNTRYCODES_FAIL" = "GetCountryCodes query failed";
+"USGA_GETCOUNTRYCODES_JSON_FAIL" = "GetCountryCodes JSON serialization failed";
+"USGA_GETCOURSEDETAILS_FAIL" = "GetCourseDetails query failed";
+"USGA_GETCOURSEDETAILS_JSON_FAIL" = "GetCourseDetails JSON serialization failed";
+"USGA_GETGOLFER_FAIL" = "GetGolfer query failed";
+"USGA_GETGOLFER_JSON_FAIL" = "GetGolfer JSON serialization failed";
+"USGA_GETSTATECODES_FAIL" = "GetStateCodes query failed";
+"USGA_GETSTATECODES_JSON_FAIL" = "GetStateCodes JSON serialization failed";
+"USGA_SEARCHCOURSES_FAIL" = "SearchCourses failed";
+"USGA_SEARCHCOURSES_JSON_FAIL" = "SearchCourses JSON serialization failed";
+"USGA_TOKENPOST_FAIL" = "TokenPost failed";
+"USGA_TOKENPOST_JSON_FAIL" = "TokenPost JSON serialization failed";

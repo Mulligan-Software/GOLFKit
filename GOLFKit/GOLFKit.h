@@ -9,6 +9,16 @@
 
 @import Foundation;
 
+//	GOLFKit Errors
+extern NSString * const GOLFKitErrorDomain;	//	The error domain name
+
+typedef NS_ENUM(NSInteger, GOLFKitErrorDomainError) {
+	GOLFKitDataError					= 18000,	// generic error
+	GOLFKitMultipleErrorsError			= 18010,	// generic message for error containing multiple validation errors
+	GOLFKitDataBaseAccessError			= 18050,	// something wrong with retrieval from or storage to CoreData
+	GOLFKitReachabilityError			= 18060,	// a service (Dropbox, iCloud, USGA Data Services, etc.) is unreachable
+};
+
 @protocol GOLFHandicapDataSource;
 
 //! Project version number for GOLFKit.

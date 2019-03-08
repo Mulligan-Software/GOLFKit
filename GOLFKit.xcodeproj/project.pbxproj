@@ -403,6 +403,7 @@
 				296F4DE41F3A497000781C46 /* InfoPlist.strings */,
 				29A6029020EA95BF006DD2EE /* GOLFiOSUtilities.h */,
 				29A6029120EA95BF006DD2EE /* GOLFiOSUtilities.m */,
+				29E888DC1DCE65E000C4A63A /* Info.plist */,
 				29A6028E20EA88F3006DD2EE /* iOSIcons.xcassets */,
 				29BDD149214EAEC200446737 /* GOLFCustomTableViewCells.h */,
 				29BDD14A214EAEC200446737 /* GOLFCustomTableViewCells.m */,
@@ -470,7 +471,6 @@
 		29E888DA1DCE65E000C4A63A /* GOLFKit (macOS) */ = {
 			isa = PBXGroup;
 			children = (
-				29E888DC1DCE65E000C4A63A /* Info.plist */,
 				29C6C41B20471B7E00EF584C /* InfoPlist.strings */,
 				29C7847D218362080093857B /* GOLFmacOSUtilities.h */,
 				29C7847E218362080093857B /* GOLFmacOSUtilities.m */,

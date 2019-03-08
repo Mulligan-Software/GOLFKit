@@ -546,6 +546,7 @@
 
 //	USGA Data Services
 "NOTICE_USGA_CANCELLED" = "USGA Data Services-Verbindung abgebrochen";
+"NOTICE_USGA_CANCELLING" = "USGA Data Services-Verbindung wird adgeborchen…";
 "NOTICE_USGA_CODE_%ld_DESC_%@" = "USGA Data Services hat den Code %ld zurückgegeben (%@)";
 "NOTICE_USGA_CONNECTED" = "Verbunden mit USGA Data Services";
 "NOTICE_USGA_CONNECTING" = "Verbindung zu USGA Data Services…";

@@ -546,6 +546,7 @@
 
 //	USGA Data Services
 "NOTICE_USGA_CANCELLED" = "Conexión de USGA Data Services cancelada";
+"NOTICE_USGA_CANCELLING" = "Cancelando la conexión de USGA Data Services…";
 "NOTICE_USGA_CODE_%ld_DESC_%@" = "USGA Data Services devolvió el código %ld (%@)";
 "NOTICE_USGA_CONNECTED" = "Conectado a USGA Data Services";
 "NOTICE_USGA_CONNECTING" = "Conexión a USGA Data Services…";

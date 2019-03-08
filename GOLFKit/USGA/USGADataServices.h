@@ -36,6 +36,10 @@ typedef NS_ENUM(NSInteger, GOLFKitForUSGADataServicesErrorDomainError) {
 	GOLFKitForUSGADataServicesMultipleErrorsError		= 10010,	// generic message for error containing multiple validation errors
 	GOLFKitForUSGADataServicesTokenPostError			= 10150,	// something wrong with TokenPost access token retrieval
 	GOLFKitForUSGADataServicesGetGolferError			= 10160,	// something wrong with GetGolfer retrieval
+	GOLFKitForUSGADataServicesGetCountryCodesError		= 10170,	// something wrong with GetCountryCodes retrieval
+	GOLFKitForUSGADataServicesGetStateCodesError		= 10180,	// something wrong with GetStateCodes retrieval
+	GOLFKitForUSGADataServicesSearchCoursesError		= 10190,	// something wrong with SearchCourses retrieval
+	GOLFKitForUSGADataServicesGetCourseDetailsError		= 10195,	// something wrong with GetCourseDetails retrieval
 };
 
 
@@ -81,6 +85,27 @@ typedef NS_ENUM(NSInteger, GOLFKitForUSGADataServicesErrorDomainError) {
 @property (nonatomic, strong, nullable) NSURLSessionTask *USGAGetGolferTask;
 @property (nonatomic, strong, nullable) NSMutableData *USGAGetGolferData;
 @property (nonatomic, copy) void (^USGAGetGolferTaskCompletionHandler)(id golferInfo, NSError *error);
+
+//	GetCountryCodes
+@property (nonatomic, strong, nullable) NSURLSessionTask *USGAGetCountryCodesTask;
+@property (nonatomic, strong, nullable) NSMutableData *USGAGetCountryCodesData;
+@property (nonatomic, copy) void (^USGAGetCountryCodesTaskCompletionHandler)(NSArray *countryCodes, NSError *error);
+
+//	SearchCourses
+@property (nonatomic, weak, nullable) NSString *courseName;
+@property (nonatomic, weak, nullable) NSString *countryCode;
+@property (nonatomic, weak, nullable) NSString *stateCode;
+
+@property (nonatomic, strong, nullable) NSURLSessionTask *USGASearchCoursesTask;
+@property (nonatomic, strong, nullable) NSMutableData *USGASearchCoursesData;
+@property (nonatomic, copy) void (^USGASearchCoursesTaskCompletionHandler)(NSArray *foundCourses, NSError *error);
+
+//	GetCourseDetails
+@property (nonatomic, assign) NSUInteger courseID;
+
+@property (nonatomic, strong, nullable) NSURLSessionTask *USGAGetCourseDetailsTask;
+@property (nonatomic, strong, nullable) NSMutableData *USGAGetCourseDetailsData;
+@property (nonatomic, copy) void (^USGAGetCourseDetailsTaskCompletionHandler)(NSDictionary *detailsDict, NSError *error);
 
 @property (nullable, strong) NSString *progressString;
 @property (nullable, strong) NSTimer *startupTimer;
@@ -299,6 +324,128 @@ typedef NS_ENUM(NSInteger, GOLFKitForUSGADataServicesErrorDomainError) {
 //	]	(GolferInfo)
 //
 - (void)GetGolfer:(id)golfer withID:(NSString *)GHINString completionHandler:(void (^)(id golferInfo, NSError *error))completionHandler;
+
+//	Call:
+//		[(USGADataServicesAgent *)agent GetCountryCodesWithCompletionHandler:^(NSArray *countryCodes, NSError *error) {
+//			parameters:		none
+//			countryCodes:	nil or NSArray containing valid country codes
+//			error:			nil or POSIX/USGA/GOLFKit error domain NSError resulting from GetCountryCodes request
+//		}];
+//
+- (void)GetCountryCodesWithCompletionHandler:(void (^)(NSArray *countryCodes, NSError *error))completionHandler;
+
+//	Call:
+//		[(USGADataServicesAgent *)agent SearchCourses:courseName country:country state:state completionHandler:^(NSArray *foundCourses, NSError *error) {
+//			parameters:		courseName - name (or partial name) of the course we're searching for
+//							country - a USGA Data Services country code - 'USA' by default
+//							state - a USGA Data Services state code (like US_TX) or a US Postal code that will be formatted
+//			foundCourses:	nil or NSArray of returned course data (NSDictionary) matching search requirements
+//			error:			nil or POSIX/USGA/GOLFKit error domain NSError resulting from SearchCourses request
+//		}];
+//
+//	[
+//		{
+//			"CourseID": 11057,
+//			"CourseName": "Grande Oaks Golf Club",
+//			"FacilityID": 10176,
+//			"FacilityName": "Grande Oaks Golf Club",
+//			"FullName": "Grande Oaks Golf Club",
+//			"City": "Fort Lauderdale",
+//			"State": "US-FL",
+//			"Country": "USA",
+//			"EntCountryCode": 240,
+//			"EntStateCode": 200010,
+//			"LegacyCRPCourseId": 27292
+//		},
+//		{
+//			"CourseID": 23816,
+//			"CourseName": "Grande Oaks Golf Club",
+//			"FacilityID": 21104,
+//			"FacilityName": "Grande Oaks Golf Club",
+//			"FullName": "Grande Oaks Golf Club",
+//			"City": "Davie",
+//			"State": "US-FL",
+//			"Country": "USA",
+//			"EntCountryCode": 240,
+//			"EntStateCode": 200010,
+//			"LegacyCRPCourseId": 45138
+//		}
+//	]
+//
+- (void)SearchCourses:(NSString *)courseName country:(NSString *)country state:(NSString *)state completionHandler:(void (^)(NSArray *foundCourses, NSError *error))completionHandler;
+
+//	Call:
+//		[(USGADataServicesAgent *)agent GetCourseDetails:courseID completionHandler:^(NSDictionary *courseDetails, NSError *error) {
+//			parameter:		courseID - NSUInteger course identifier within USGA Data Services database ("CourseID" from SearchCourses)
+//			courseDetails:	nil or NSDictionary of returned course data, including ratings, hole info, etc.
+//			error:			nil or POSIX/USGA/GOLFKit error domain NSError resulting from GetCourseDetails request
+//		}];
+//
+//	{
+//	  "CourseStatus": "Active",
+//	  "Facility": {
+//		"FacilityId": 4131,
+//		"FacilityName": "Eagle's Bluff Country Club",
+//		"FacilityNumber": "57037"
+//	  },
+//	  "Season": {
+//		"SeasonName": "Year Round",
+//		"SeasonStartDate": "12/15",
+//		"SeasonEndDate": "12/14",
+//		"IsAllYear": true
+//	  },
+//	  "TeeSets": [
+//		{
+//		  "Ratings": [
+//			{
+//			  "RatingType": "Total",
+//			  "CourseRating": 71.7,
+//			  "SlopeRating": 136,
+//			  "BogeyRating": 96.9
+//			},
+//			{
+//			  "RatingType": "Front",
+//			  "CourseRating": 36.1,
+//			  "SlopeRating": 139,
+//			  "BogeyRating": 49
+//			},
+//			{
+//			  "RatingType": "Back",
+//			  "CourseRating": 35.6,
+//			  "SlopeRating": 132,
+//			  "BogeyRating": 47.9
+//			}
+//		  ],
+//		  "Holes": [
+//			{
+//			  "Number": 1,
+//			  "HoleId": 429743,
+//			  "Length": 494,
+//			  "Par": 5
+//			},
+//				...
+//			{
+//			  "Number": 18,
+//			  "HoleId": 429777,
+//			  "Length": 405,
+//			  "Par": 4
+//			}
+//		  ],
+//		  "TeeSetRatingId": 283919,
+//		  "TeeSetRatingName": "Blue",
+//		  "Gender": "Male",
+//		  "HolesNumber": 18,
+//		  "TotalYardage": 6336
+//		}
+//	  ],
+//	  "CourseId": 4422,
+//	  "CourseName": "Eagle's Bluff Country Club",
+//	  "CourseCity": "Bullard",
+//	  "CourseState": "US-TX"
+//	}
+//
+- (void)GetCourseDetails:(NSUInteger)courseID completionHandler:(void (^)(NSDictionary *courseDetails, NSError *error))completionHandler;
+
 
 //- (void)GetHandicapProfileforGolfer:(NSString *)GolferId completionHandler:(void (^)(NSDictionary *profileDictionary, NSError *error))completionHandler;
 //- (void)GetScoresCurrentRevisionByGolfer:(NSString *)GolferId forClub:(NSString *)ClubId completionHandler:(void (^)(NSArray *scoresArray, NSError *error))completionHandler;

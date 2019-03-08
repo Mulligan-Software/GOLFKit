@@ -8,6 +8,9 @@
 
 #import "GOLFKit.h"
 
+//	Errors
+NSString *const GOLFKitErrorDomain = @"com.mulligansoftware.GOLFKit.ErrorDomain";
+
 //	Private Prototypes
 static NSBundle *cachedGolfKitBundle = nil;
 
