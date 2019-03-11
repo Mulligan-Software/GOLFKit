@@ -282,6 +282,8 @@
 "TITLE_CHECK_FOR_SCORES_STARTUP" = "Vérifiez scores au démarrage";
 "TITLE_CHOOSE_HOLE" = "Choisissez un trou";
 "TITLE_CLEAR" = "Effacer";
+"TITLE_CLOSE_OUT" = "«Clôturera»";
+"TITLE_CLOSE_OUT_PLURAL" = "paris «Clôturera»";
 "TITLE_COMPARE_9_HOLE_SCORES" = "Combinez et utilisez les scores 9-trous";
 "TITLE_CSS" = "Scratch Score de Compétition";
 "TITLE_CSS_ABBR" = "CSS";
@@ -707,6 +709,7 @@
 "ORDINAL_FIRST" = "ᵉʳ";		/*	1ᵉʳ	*/
 "ORDINAL_NTH" = "ᵉ";
 "ORDINAL_20TH_TO_29TH" = "ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ";	/*	20ᵉ, 21ᵉ, 22ᵉ, etc.	*/
+"PRESS_LEADER_CHARACTER" = "└";	//	Special character - alternates: "╚" or "‣"
 "SCORECARD_EXCEEDS_1_PLAYER" = "Carte de score dépasse le maximum de 1 joueur";
 "SCORECARD_EXCEEDS_%ld_PLAYERS" = "Carte de score dépasse le maximum de %ld joueurs";
 "TRADEMARK_CHARACTER" = "™";		//	Special character

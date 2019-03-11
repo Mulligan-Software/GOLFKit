@@ -282,6 +282,8 @@
 "TITLE_CHECK_FOR_SCORES_STARTUP" = "Compruebe resultados al inicio";
 "TITLE_CHOOSE_HOLE" = "Elige un hoyo";
 "TITLE_CLEAR" = "Borrar";
+"TITLE_CLOSE_OUT" = "“Cerrará”";
+"TITLE_CLOSE_OUT_PLURAL" = "apuestas “Cerrará”";
 "TITLE_COMPARE_9_HOLE_SCORES" = "Combinar y utilizar resultados 9-hoyos";
 "TITLE_CSS" = "Scratch Score de Competencia";
 "TITLE_CSS_ABBR" = "CSS";
@@ -707,6 +709,7 @@
 "ORDINAL_FIRST" = "ᵉʳ";		/*	1ᵉʳ	*/
 "ORDINAL_NTH" = "º";		/*	nth (like 133º)	*/
 "ORDINAL_20TH_TO_29TH" = "º,º,º,º,º,º,º,º,º,º";	/*	20º, 21º, 22º, etc.	*/
+"PRESS_LEADER_CHARACTER" = "└";	//	Special character - alternates: "╚" or "‣"
 "SCORECARD_EXCEEDS_1_PLAYER" = "Tarjeta excede el máximo de 1 jugador";
 "SCORECARD_EXCEEDS_%ld_PLAYERS" = "Tarjeta excede el máximo de %ld jugadores";
 "TRADEMARK_CHARACTER" = "™";		//	Special character

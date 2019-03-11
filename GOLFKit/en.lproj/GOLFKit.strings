@@ -282,6 +282,8 @@
 "TITLE_CHECK_FOR_SCORES_STARTUP" = "Check for scores at startup";
 "TITLE_CHOOSE_HOLE" = "Choose a Hole";
 "TITLE_CLEAR" = "Clear";
+"TITLE_CLOSE_OUT" = "“Close-Out”";
+"TITLE_CLOSE_OUT_PLURAL" = "“Close-Out” bets";
 "TITLE_COMPARE_9_HOLE_SCORES" = "Combine and use 9-hole scores";
 "TITLE_CSS" = "Competition Scratch Score";
 "TITLE_CSS_ABBR" = "CSS";
@@ -708,6 +710,7 @@
 "ORDINAL_FIRST" = "st";		/*	1st	*/
 "ORDINAL_NTH" = "th";		/*	9th	*/
 "ORDINAL_20TH_TO_29TH" = "th,st,nd,rd,th,th,th,th,th,th";	/*	20th, 21st, 22nd, 23rd, 24th, 25th, etc.		*/
+"PRESS_LEADER_CHARACTER" = "└";	//	Special character - alternates: "╚" or "‣"
 "SCORECARD_EXCEEDS_1_PLAYER" = "Scorecard exceeds maximum 1 player";
 "SCORECARD_EXCEEDS_%ld_PLAYERS" = "Scorecard exceeds maximum %ld players";
 "TRADEMARK_CHARACTER" = "™";		//	Special character
