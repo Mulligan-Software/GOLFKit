@@ -10,6 +10,141 @@
 #import "GOLFExtensions.h"
 #import "GOLFWagering.h"
 
+static NSArray *cachedGOLFWageringMatchStyles = nil;
+static NSArray *cachedGOLFWageringHandicapStyles = nil;
+
+NSArray * GOLFWageringMatchStylesArray(void) {
+	//	GOLFWageringMatchPlayMatchStyle,		//	(0)
+	//	GOLFWageringNassauMatchStyle,			//	(1)
+	//	GOLFWageringFrontAndBackMatchStyle,		//	(2)
+	//	GOLFWageringThreeBySixMatchStyle,		//	(3)
+
+	if (cachedGOLFWageringMatchStyles == nil) {
+		NSMutableArray *workingList = [NSMutableArray arrayWithCapacity:5];
+		
+		//	Match Play
+		NSDictionary *styleDict = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithInteger:GOLFWageringMatchPlayMatchStyle], @"styleCode",
+				GOLFLocalizedString(@"TITLE_MATCH_PLAY"), @"styleName",
+				GOLFLocalizedString(@"DESCRIPTION_MATCH_PLAY"), @"styleDescription", nil];
+		[workingList addObject:styleDict];
+		
+		//	Nassau
+		styleDict = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithInteger:GOLFWageringNassauMatchStyle], @"styleCode",
+				GOLFLocalizedString(@"TITLE_NASSAU"), @"styleName",
+				GOLFLocalizedString(@"DESCRIPTION_NASSAU"), @"styleDescription", nil];
+		[workingList addObject:styleDict];
+		
+		//	Front & Back
+		styleDict = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithInteger:GOLFWageringFrontAndBackMatchStyle], @"styleCode",
+				GOLFLocalizedString(@"TITLE_FRONT_BACK"), @"styleName",
+				GOLFLocalizedString(@"DESCRIPTION_FRONT_BACK"), @"styleDescription", nil];
+		[workingList addObject:styleDict];
+		
+		//	3 x 6
+		styleDict = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithInteger:GOLFWageringThreeBySixMatchStyle], @"styleCode",
+				GOLFLocalizedString(@"TITLE_3_BY_6"), @"styleName",
+				GOLFLocalizedString(@"DESCRIPTION_3_BY_6"), @"styleDescription", nil];
+		[workingList addObject:styleDict];
+				
+		cachedGOLFWageringMatchStyles = [NSArray arrayWithArray:workingList];
+	}
+	return [cachedGOLFWageringMatchStyles copy];
+}
+
+NSString * NSStringFromGOLFWageringMatchStyle(GOLFWageringMatchStyle styleCode, NSString **descriptiveText) {
+	//	GOLFWageringMatchPlayMatchStyle,		//	(0)
+	//	GOLFWageringNassauMatchStyle,			//	(1)
+	//	GOLFWageringFrontAndBackMatchStyle,		//	(2)
+	//	GOLFWageringThreeBySixMatchStyle,		//	(3)
+	
+	if (styleCode > GOLFWageringLastMatchStyle) {
+		if (descriptiveText) {
+			*descriptiveText = @"";
+		}
+		return [GOLFLocalizedString(@"TERM_UNKNOWN") capitalizedString];
+	} else {
+		NSDictionary *styleDict = [GOLFWageringMatchStylesArray() objectAtIndex:styleCode];
+		if (descriptiveText) {
+			*descriptiveText = [styleDict objectForKey:@"styleDescription"];
+		}
+		return [styleDict objectForKey:@"styleName"];
+	}
+}
+
+NSArray * GOLFWageringHandicapStylesArray(void) {
+	//	GOLFWageringFullHandicapStyle,			//	(0)
+	//	GOLFWageringDifferenceHandicapStyle,	//	(1)
+	//	GOLFWageringGrossHandicapStyle = 10,	//	(10)
+
+	if (cachedGOLFWageringHandicapStyles == nil) {
+		NSMutableArray *workingList = [NSMutableArray arrayWithCapacity:5];
+		GOLFHandicapMethodIndex methodIndex = GOLFHandicapBestMethodIndexFromAuthority(GOLFDefaultHandicapAuthority());
+		NSString *hdcpTitle = GOLFPlayingHandicapTitle(methodIndex, NO);
+		
+		//	Full Handicap
+		NSDictionary *styleDict = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithInteger:GOLFWageringFullHandicapStyle], @"styleCode",
+				GOLFLocalizedString(@"ALLOWANCE_TYPE_FULL_HANDICAP"), @"styleName",
+				[NSString stringWithFormat:GOLFLocalizedString(@"FORMAT_%@_OF_EACH_PLAYER"), hdcpTitle], @"styleDescription",
+				nil];
+		[workingList addObject:styleDict];
+		
+		//	Difference
+		styleDict = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithInteger:GOLFWageringDifferenceHandicapStyle], @"styleCode",
+				[NSString stringWithFormat:GOLFLocalizedString(@"FORMAT_%@_DIFFERENCE"), hdcpTitle], @"styleName",
+				GOLFLocalizedString(@"ALLOWANCE_TYPE_DIFFERENCE_DESC"), @"styleDescription",
+				nil];
+		[workingList addObject:styleDict];
+		
+		//	Gross
+		styleDict = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithInteger:GOLFWageringGrossHandicapStyle], @"styleCode",
+				[GOLFLocalizedString(@"ALLOWANCE_TYPE_GROSS") capitalizedString], @"styleName",
+				GOLFLocalizedString(@"ALLOWANCE_TYPE_GROSS_DESC"), @"styleDescription", nil];
+		[workingList addObject:styleDict];
+		
+		cachedGOLFWageringHandicapStyles = [NSArray arrayWithArray:workingList];
+	}
+	return [cachedGOLFWageringHandicapStyles copy];
+}
+
+NSString * NSStringFromGOLFWageringHandicapStyle(GOLFWageringHandicapStyle styleCode, NSString **descriptiveText) {
+	//	GOLFWageringFullHandicapStyle,			//	(0)
+	//	GOLFWageringDifferenceHandicapStyle,	//	(1)
+	//	GOLFWageringGrossHandicapStyle = 10,	//	(10)
+
+	if (styleCode > GOLFWageringGrossHandicapStyle) {
+		if (descriptiveText) {
+			*descriptiveText = @"";
+		}
+		return [GOLFLocalizedString(@"TERM_UNKNOWN") capitalizedString];
+	} else if (styleCode == GOLFWageringFullHandicapStyle) {
+		NSDictionary *styleDict = [GOLFWageringHandicapStylesArray() objectAtIndex:0];
+		if (descriptiveText) {
+			*descriptiveText = [styleDict objectForKey:@"styleDescription"];
+		}
+		return [styleDict objectForKey:@"styleName"];
+	} else if (styleCode == GOLFWageringDifferenceHandicapStyle) {
+		NSDictionary *styleDict = [GOLFWageringHandicapStylesArray() objectAtIndex:1];
+		if (descriptiveText) {
+			*descriptiveText = [styleDict objectForKey:@"styleDescription"];
+		}
+		return [styleDict objectForKey:@"styleName"];
+	} else {
+		NSDictionary *styleDict = [GOLFWageringMatchStylesArray() objectAtIndex:2];
+		if (descriptiveText) {
+			*descriptiveText = [styleDict objectForKey:@"styleDescription"];
+		}
+		return [styleDict objectForKey:@"styleName"];
+	}
+}
+
+
 @implementation GOLFBet
 
 #pragma mark Initialization
@@ -74,12 +209,12 @@
 	//	betInfo NSDictionary supplied to all bottom-level bets…
 	//	key				type			description
 	//	--------------	--------------	----------------------------------------------------------------
-	//	aRound			SCRRound *		A competitor's round (*** tentative ***)
+	//	aRound			SCRRound *		A competitor's round (optional)
 	//	aScores			NSArray *		0, 9, or 18 (NSNumber *) A team competitor scores for match play
-	//	aStrokesString	NSString *		18-character string of strokes given for A competitor (***)
-	//	bRound			SCRRound *		B competitor's round (***)
+	//	aStrokesString	NSString *		18-character string of strokes given for A competitor (optional)
+	//	bRound			SCRRound *		B competitor's round (optional)
 	//	bScores			NSArray *		0, 9, or 18 (NSNumber *) B team competitor scores for match play
-	//	bStrokesString	NSString *		18-character string of strokes given for B competitor (***)
+	//	bStrokesString	NSString *		18-character string of strokes given for B competitor (optional)
 	//	lowHandicap		NSNumber *		GOLFPlayingHandicap for the lowest handicap competitor
 	//	lowName			NSString *		name of the lowest-handicapped competitor
 			
@@ -88,30 +223,6 @@
 	}
 	return _betInfo;
 }
-
-//- (void)setBetInfo:(NSDictionary *)info {
-//	topLevelBetInfo = info;
-//	
-//	id<GOLFWageringDataSource> aRound = [info objectForKey:@"aRound"];
-//	if (aRound) {
-//		self.ARound = aRound;
-//	}
-//
-//	id<GOLFWageringDataSource> bRound = [info objectForKey:@"bRound"];
-//	if (bRound) {
-//		self.BRound = bRound;
-//	}
-//	
-//	NSString *aStrokesString = [info objecctForKey:@"aStrokesString"];
-//	if (aStrokesString) {
-//		self.aStrokesString = aStrokesString;
-//	}
-//	
-//	NSString *bStrokesString = [info objecctForKey:@"bStrokesString"];
-//	if (bStrokesString) {
-//		self.bStrokesString = bStrokesString;
-//	}
-//}
 
 - (NSArray *)aHoleScores {
 	NSDictionary *info = self.betInfo;
@@ -366,56 +477,6 @@
 	return newBet;
 }
 
-//- (BOOL)canAddCloseOutToHoleAt18Index:(NSUInteger)holeIndex {
-//	NSUInteger workingIndex = holeIndex % 18;	//	For close-outs, this must be the hole on which our bet was won (but not the lastHole)
-//	NSInteger lastHoleIndex = self.lastHole - 1;
-//	if (workingIndex < lastHoleIndex) {
-//		NSInteger firstHoleIndex = self.firstHole - 1;
-//		if (workingIndex > firstHoleIndex) {
-//			NSInteger status = holeStatus[workingIndex];	//	Status of proposed hole initiating a close-out
-//			NSInteger precedingStatus = holeStatus[workingIndex - 1];	//	Status of the preceding hole
-//			//	The bet must be over at the proposed hole
-//			if ((status == GOLFBetAWonHoleStatus) || (status == GOLFBetBWonHoleStatus)) {
-//				//	and NOT over at the preceding hole…
-//				if ((status != GOLFBetAWonHoleStatus) && (status != GOLFBetBWonHoleStatus)) {
-//					return YES;
-//				}
-//			}
-//			return NO;
-//			
-//		}
-//	}
-//	return NO;
-//}
-
-//- (GOLFBet *)addCloseOutToHoleAt18Index:(NSUInteger)holeIndex {
-//	NSUInteger fromIndex = holeIndex % 18;	//	The index of the hole ending our bet - we start at the next hole
-//	NSInteger fromHole = fromIndex + 1;
-//	GOLFBet *newBet = nil;
-//	if ([self canAddCloseOutToHoleAt18Index:workingIndex]) {
-//		NSInteger firstIndex = fromIndex + 1;	//	The index of the hole where the close-out starts
-//		NSInteger holeNumber = firstIndex + 1;	//	The hole number (ie: the 17th or earlier)
-//		NSInteger last = self.lastHole;
-//		NSInteger first = MIN(holeNumber, last);
-//		newBet = [GOLFBet betWithName:@"" reason:GOLFBetCloseOutReason startingAt:first endingAt:last];
-//
-//		NSInteger fromStatus = [self holeStatusForHoleAt18Index:fromIndex];	//	Either GOLFBetAWonHoleStatus or GOLFBetBWonHoleStatus
-//		
-//		newBet.handicappingStyle = self.handicappingStyle;	//	Propagates
-//		newBet.does2DownAutomatics = self.does2DownAutomatics;	//	As far as we know, close-outs can be auto-pressed
-//		newBet.does1DownLastHoleAutomatics = self.does1DownLastHoleAutomatics;	//	As far as we know, close-outs can be auto-pressed
-//		newBet.doesCloseOuts = self.doesCloseOuts;
-//		newBet.fromHole = fromHole;
-//		newBet.fromUp = fromStatus;
-//		
-//		[self.presses addObject:newBet];	//	One of our presses
-//		newBet.fromBet = self;
-//		[newBet update];	//	Make sure it's up to date
-//		[newBet updateAutomatics];	//	And that any automatics are added
-//	}
-//	return newBet;
-//}
-
 - (void)update {
 	//	Hole Status
 	//	GOLFBetNoHoleStatus = -999,				//	No hole status (show blank - white background)
@@ -650,12 +711,12 @@
 	NSInteger ourFirstHole = self.firstHole;
 	NSInteger ourLastHole = self.lastHole;
 	NSInteger holePosition;
-	NSInteger status;
+	GOLFBetHoleStatus holeStatus;
 	
 	if (needAutomatic2Downs && (ourFirstHole < ourLastHole)) {
 		for (holePosition = ourFirstHole; ((holePosition < ourLastHole) && (new2Down == nil)); holePosition++) {
-			status = [self holeStatusForHoleAt18Index:(holePosition - 1)];
-			if ((status == GOLFBetA2UpHoleStatus) || (status == GOLFBetA2UpHoleStatus)) {
+			holeStatus = [self holeStatusForHoleAt18Index:(holePosition - 1)];
+			if ((holeStatus == GOLFBetA2UpHoleStatus) || (holeStatus == GOLFBetB2UpHoleStatus)) {
 				if ((old2Down != nil) && ([old2Down fromHole] == holePosition)) {
 					new2Down = old2Down;
 				} else {
@@ -663,9 +724,9 @@
 					new2Down.handicappingStyle = self.handicappingStyle;	//	Propagates
 					new2Down.does2DownAutomatics = needAutomatic2Downs;	//	Propagates
 					new2Down.does1DownLastHoleAutomatics = needAutomaticLastHole1Downs;	//	Propagates
-					//	new2Down.fromBet = self;	//	In a moment…
+//					new2Down.fromBet = self;	//	Done when we addPress:
 					new2Down.fromHole = holePosition;
-					new2Down.fromUp = status;
+					new2Down.fromUp = holeStatus;
 				}
 			}
 		}
@@ -673,8 +734,8 @@
 
 	if (needAutomaticLastHole1Downs && (ourFirstHole < ourLastHole) && (new2Down == nil)) {
 		holePosition = ourLastHole - 1;
-		status = [self holeStatusForHoleAt18Index:(holePosition - 1)];
-		if ((newLastHole1Down == nil) && ((status == GOLFBetA1UpHoleStatus) || (status == GOLFBetB1UpHoleStatus))) {
+		holeStatus = [self holeStatusForHoleAt18Index:(holePosition - 1)];
+		if ((newLastHole1Down == nil) && ((holeStatus == GOLFBetA1UpHoleStatus) || (holeStatus == GOLFBetB1UpHoleStatus))) {
 			if (oldLastHole1Down != nil) {
 				newLastHole1Down = oldLastHole1Down;
 			} else {
@@ -682,31 +743,9 @@
 				newLastHole1Down.handicappingStyle = self.handicappingStyle;	//	Propagates
 				newLastHole1Down.does2DownAutomatics = needAutomatic2Downs;	//	Propagates
 				newLastHole1Down.does1DownLastHoleAutomatics = needAutomaticLastHole1Downs;	//	Propagates
-				//	newLastHole1Down.fromBet = self;	//	In a moment…
+//				newLastHole1Down.fromBet = self;	//	//	Done when we addPress:
 				newLastHole1Down.fromHole = holePosition;
-				newLastHole1Down.fromUp = status;
-			}
-		}
-	}
-	
-	if (needCloseOuts && ((self.fromBet == nil) || [self.fromBet doesCloseOuts]) && (newCloseOut == nil)) {
-		for (holePosition = (ourLastHole - 1); ((holePosition > ourFirstHole) && (newCloseOut == nil)); holePosition--) {
-			status = [self holeStatusForHoleAt18Index:holePosition];
-			NSInteger precedingStatus = [self holeStatusForHoleAt18Index:(holePosition - 1)];
-			if (((status == GOLFBetAWonHoleStatus) && (precedingStatus != GOLFBetAWonHoleStatus))
-					|| ((status == GOLFBetBWonHoleStatus) && (precedingStatus != GOLFBetBWonHoleStatus))) {
-				if ((oldCloseOut != nil) && ([oldCloseOut fromHole] == holePosition)) {
-					newCloseOut = oldCloseOut;
-				} else {
-					newCloseOut = [GOLFBet betWithName:@"" reason:GOLFBetCloseOutReason startingAt:(holePosition + 1) endingAt:ourLastHole];
-					newCloseOut.handicappingStyle = self.handicappingStyle;	//	Propagates
-					newCloseOut.does2DownAutomatics = needAutomatic2Downs;	//	Propagates
-					newCloseOut.does1DownLastHoleAutomatics = needAutomaticLastHole1Downs;	//	Propagates
-					newCloseOut.doesCloseOuts = needCloseOuts;	//	Propagates
-					newCloseOut.fromBet = self;
-					newCloseOut.fromHole = holePosition;
-					newCloseOut.fromUp = status;
-				}
+				newLastHole1Down.fromUp = holeStatus;
 			}
 		}
 	}
@@ -728,6 +767,55 @@
 			[self addPress:newLastHole1Down];	//	Which will update the new press
 		}
 	}
+	
+	if (needCloseOuts && ((self.fromBet == nil) || [self.fromBet doesCloseOuts]) && (newCloseOut == nil)) {
+		for (holePosition = (ourLastHole - 1); ((holePosition > ourFirstHole) && (newCloseOut == nil)); holePosition--) {
+			holeStatus = [self holeStatusForHoleAt18Index:holePosition];
+			NSInteger precedingStatus = [self holeStatusForHoleAt18Index:(holePosition - 1)];
+			if (((holeStatus == GOLFBetAWonHoleStatus) && (precedingStatus != GOLFBetAWonHoleStatus))
+					|| ((holeStatus == GOLFBetBWonHoleStatus) && (precedingStatus != GOLFBetBWonHoleStatus))) {
+				//	We've found the point at which a newCloseOut might start
+				NSInteger startHole = 0;
+				[self.myAutomaticTwoDownPress updateAutomatics];	//	Fully expand 2-down presses
+				[self.myAutomaticLastHoleOneDownPress updateAutomatics];	//	Fully expand 1-down presses
+				//	Starting with the candidate position, find the first hole at which there are no active bets of any kind
+				//	excluding us and oldCloseOut (which will be removed or replaced anyway)
+				for (NSUInteger holeToCheck = (holePosition + 1); (holeToCheck <= ourLastHole); holeToCheck++) {
+					BOOL interference = NO;
+					for (GOLFBet *interferingBet in [self selfAndPresses]) {
+						if ((interferingBet != self) && (interferingBet != oldCloseOut)) {
+							GOLFBetHoleStatus testStatus = [interferingBet holeStatusForHoleAt18Index:(holeToCheck - 1)];
+							if ((testStatus != GOLFBetAWonHoleStatus) && (testStatus != GOLFBetBWonHoleStatus)) {
+								//	Any bet must be won/lost, otherwise it interferes
+								interference = YES;
+								break;	//	Back to try the next hole
+							}
+						}
+					}	//	for (GOLFBet *interferingBet in self.presses)
+					if (!interference) {
+						//	Checked all the bets - found no interference
+						startHole = holeToCheck;
+						break;
+					}
+				}	//	for (NSUInteger holeToCheck = (holePosition + 1); (holeToCheck <= ourLastHole); holeToCheck++)
+				
+				if (startHole > 0) {
+					if ((oldCloseOut != nil) && ([oldCloseOut fromHole] == holePosition)) {
+						newCloseOut = oldCloseOut;
+					} else {
+						newCloseOut = [GOLFBet betWithName:@"" reason:GOLFBetCloseOutReason startingAt:startHole endingAt:ourLastHole];
+						newCloseOut.handicappingStyle = self.handicappingStyle;	//	Propagates
+						newCloseOut.does2DownAutomatics = needAutomatic2Downs;	//	Propagates
+						newCloseOut.does1DownLastHoleAutomatics = needAutomaticLastHole1Downs;	//	Propagates
+						newCloseOut.doesCloseOuts = needCloseOuts;	//	Propagates
+//						newCloseOut.fromBet = self;	//	Done when we addPress:
+						newCloseOut.fromHole = holePosition;
+						newCloseOut.fromUp = holeStatus;	//	Should be GOLFBetAWonHoleStatus or GOLFBetBWonHoleStatus
+					}
+				}
+			}	//	if (((status == GOLFBetAWonHoleStatus) && (precedingStatus != GOLFBetAWonHoleStatus)) || (...)
+		}	//	for (holePosition = (ourLastHole - 1); ((holePosition > ourFirstHole) && (newCloseOut == nil)); holePosition--)
+	}	//	if (needCloseOuts && ((self.fromBet == nil) || [self.fromBet doesCloseOuts]) && (newCloseOut == nil))
 	
 	//	Remove any old and add any new close-out bet
 	if (oldCloseOut != newCloseOut) {
@@ -774,7 +862,14 @@
 }
 
 - (void)setDoesCloseOuts:(BOOL)doesEm {
-	_doesCloseOuts = doesEm;
+	_doesCloseOuts = (((self.fromBet == nil) || (self.reason == GOLFBetCloseOutReason)) ? doesEm : NO);
+
+	//	Now tell all our presses
+	for (GOLFBet *press in [self pressesArray]) {
+		if ((press.fromBet == nil) || (press.reason == GOLFBetCloseOutReason)) { 
+			press.doesCloseOuts = doesEm;
+		}
+	}
 }
 
 @end

@@ -10,7 +10,7 @@
 #import "GOLFKit.h"
 
 //	Misc constants
-#define	kGOLFBetSomething		6			//	description
+//#define	kGOLFWageringSupportsCloseOuts		YES			//	Whether GOLFKit supports "Close-Out" bets
 
 typedef NS_ENUM(NSUInteger, GOLFWageringMatchStyle) {
 	GOLFWageringMatchPlayMatchStyle,		//	(0)
@@ -111,10 +111,52 @@ typedef NS_ENUM(NSUInteger, GOLFBetStatus) {
 @end
 
 
+//=================================================================
+//	GOLFWageringMatchStylesArray()
+//=================================================================
+NSArray * GOLFWageringMatchStylesArray(void);
+//	returns an NSArray of NSDictionarys with info about Handicap styles
+//	used in Match Play and wagering
+//
+//	key					type		description
+//	------------------	----------	--------------------------------------------------
+//	styleCode			NSNumber *	GOLFWageringMatchStyle style identifier
+//	styleName			NSString *	localized name or title of the match style
+//	styleDescription	NSString *	localized additional description of match style
+
+//=================================================================
+//	NSStringFromGOLFWageringMatchStyle(styleCode, &descriptiveText)
+//=================================================================
+NSString * NSStringFromGOLFWageringMatchStyle(GOLFWageringMatchStyle styleCode, NSString **descriptiveText);
+//	returns a localized name or title of a match style designated by styleCode
+//	When an NSString * designated by descriptiveText is supplied, it contains
+//	localized additional descriptive text about the match style
+
+//=================================================================
+//	GOLFWageringHandicapStylesArray()
+//=================================================================
+NSArray * GOLFWageringHandicapStylesArray(void);
+//	returns an NSArray of NSDictionarys with info about Handicap styles
+//	used in Match Play and wagering
+//
+//	key					type		description
+//	------------------	----------	--------------------------------------------------
+//	styleCode			NSNumber *	GOLFWageringHandicapStyle style identifier
+//	styleName			NSString *	localized name or title of the handicap style
+//	styleDescription	NSString *	localized additional description of handicap style
+
+//=================================================================
+//	NSStringFromGOLFWageringHandicapStyle(styleCode, &descriptiveText)
+//=================================================================
+NSString * NSStringFromGOLFWageringHandicapStyle(GOLFWageringHandicapStyle styleCode, NSString **descriptiveText);
+//	returns a localized name or title of a handicap style designated by styleCode
+//	When an NSString * designated by descriptiveText is supplied, it contains
+//	localized additional descriptive text about the handicap style
+
+
 @interface GOLFBet : NSObject
 {
 	NSInteger holeStatus[18];	//	The hole status ("up" status) at each hole (transient data)
-//	NSDictionary *topLevelBetInfo;	//	Bet data for top level bets
 }
 
 @property (nonatomic, weak) id<GOLFWageringDataSource> ARound;
@@ -146,9 +188,6 @@ typedef NS_ENUM(NSUInteger, GOLFBetStatus) {
 #pragma mark Initialization
 + (id)betWithName:(NSString *)newName reason:(NSInteger)reason startingAt:(NSInteger)first endingAt:(NSInteger)last;
 
-//- (NSDictionary *)betInfo;
-//- (void)setBetInfo:(NSDictionary *)betInfo;
-
 - (NSArray *)aHoleScores;	//	from betInfo
 - (NSArray *)bHoleScores;	//	from betInfo
 - (GOLFPlayingHandicap)lowHandicap;	//	from betInfo
@@ -171,8 +210,6 @@ typedef NS_ENUM(NSUInteger, GOLFBetStatus) {
 - (BOOL)canBeDeleted;
 - (BOOL)canAddPressToHoleAt18Index:(NSUInteger)holeIndex;	//	Manual press
 - (GOLFBet *)addPressToHoleAt18Index:(NSUInteger)holeIndex;	//	Manual press
-//- (BOOL)canAddCloseOutToHoleAt18Index:(NSUInteger)holeIndex;
-//- (GOLFBet *)addCloseOutToHoleAt18Index:(NSUInteger)holeIndex;
 - (void)update;
 - (void)updateAutomatics;
 

@@ -282,8 +282,8 @@
 "TITLE_CHECK_FOR_SCORES_STARTUP" = "Check for scores at startup";
 "TITLE_CHOOSE_HOLE" = "Choose a Hole";
 "TITLE_CLEAR" = "Clear";
-"TITLE_CLOSE_OUT" = "“Close-Out”";
-"TITLE_CLOSE_OUT_PLURAL" = "“Close-Out” bets";
+"TITLE_CLOSE_OUT" = "Close-Out";
+"TITLE_CLOSE_OUT_PLURAL" = "Close-Out bets";
 "TITLE_COMPARE_9_HOLE_SCORES" = "Combine and use 9-hole scores";
 "TITLE_CSS" = "Competition Scratch Score";
 "TITLE_CSS_ABBR" = "CSS";
@@ -312,6 +312,7 @@
 "TITLE_FIRST_HOLE" = "First Hole";
 "TITLE_FLAG_TOURNAMENT_SCORES" = "Flag Tournament scores";
 "TITLE_FROM_MULLIGAN_SOFTWARE" = "from Mulligan Software";
+"TITLE_FRONT_BACK" = "Front & Back";
 "TITLE_FRONT_NINE" = "Front Nine";
 "TITLE_FRONT_SIDE" = "Front Side";
 "TITLE_GETTING_STARTED" = "Getting Started…";
@@ -400,6 +401,7 @@
 "TITLE_MENS_HANDICAP" = "Men’s Handicap";
 "TITLE_NAME_SCORECARDS" = "Name Scorecards";
 "TITLE_NAME_TEAMS" = "Name Teams";
+"TITLE_NASSAU" = "Nassau";
 "TITLE_NEXT_HOLE" = "Next Hole";
 "TITLE_NINE_HOLES" = "9 Holes";
 "TITLE_NO_STROKES" = "no strokes";
@@ -465,6 +467,7 @@
 "TITLE_USERS_GUIDE_NOT_FOUND" = "No Users’ Guide file found";
 "TITLE_WITH_SCORE" = "with score";
 "TITLE_WOMENS_HANDICAP" = "Women’s Handicap";
+"TITLE_3_BY_6" = "3 × 6";
 
 //	Formats
 "FORMAT_AND_%@" = " and %@";
@@ -478,10 +481,13 @@
 "FORMAT_DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Determine your %@ on the right by finding the row in which your %@ appears on the left.";
 "FORMAT_MB_DOWNLOADED_%1.1f" = "%1.1fMB downloaded";
 "FORMAT_NET_%@" = "Net %@";
+"FORMAT_NOT_AVAILABLE_WITH_%@" = "not available for %@";
 "FORMAT_NUMBER_%ld_ABBR" = "No. %ld";
 "FORMAT_OPEN_%@" = "Open %@";
 "FORMAT_OPEN_3_%@" = "Open 3 %@";
 "FORMAT_TOTAL_POINTS_VS_QUOTA_%d" = "Total Points v. %d Quota";
+"FORMAT_%@_DIFFERENCE" = "%@ Difference";	//	"COURSE HANDICAP Difference"
+"FORMAT_%@_OF_EACH_PLAYER" = "%@ of each player";	//	"COURSE HANDICAP of each player"
 
 "SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
 "SAMPLE_LOOSELY_ALPHABETIC_NAMES" = "Al Czervik / Elihu & Vivian Smails / Beeper, Czervik, Smails & Webb";
@@ -537,7 +543,11 @@
 "BLURB_ALLOW_REFERENCE_TEES" = "When adjusting Playing Handicaps for differences in Course Ratings, allow specification of “reference” tees to be used for calculation of adjustments for men and/or women.";
 "BLURB_REVIEW_HANDICAP_RECORDS" = "Examine previously calculated handicap records in tabular form with capabilities to remove selected data.";
 
-"DESCRIPTION_MATCH_PLAY" = "Head-to-head competition scored by the difference in holes won.";
+"DESCRIPTION_3_BY_6" = "Holes 1-6, 7-11 and 12-18";
+"DESCRIPTION_CLOSE_OUT" = "Added when no bets or presses are in effect";
+"DESCRIPTION_FRONT_BACK" = "Front side and Back side";
+"DESCRIPTION_MATCH_PLAY" = "Head-to-head competition scored by holes won";
+"DESCRIPTION_NASSAU" = "Front side, Back side and 18 holes";
 "DESCRIPTION_PRINTING_PRIVACY_%@" = "Event registration categories identified as “%@” are generally not printed or displayed.";
 "DESCRIPTION_THEME_APPEARANCE" = "Light - Eagle always uses classic Aqua appearance\nDark - Eagle always uses Dark Mode appearance\nSystem - Eagle uses the appearance selected in System Preferences";
 "DESCRIPTION_THEME_PRE_MOJAVE" = "Prior to macOS 10.14 Mojave, Eagle uses the system's standard Aqua appearance style.";
@@ -629,9 +639,9 @@
 "ALLOWANCE_TYPE_GROSS" = "Gross";
 "ALLOWANCE_TYPE_GROSS_DESC" = "no handicap";
 "ALLOWANCE_TYPE_NET" = "Net";
-"ALLOWANCE_TYPE_NET_DESC" = "Team net score from team members’ net scores";
+"ALLOWANCE_TYPE_NET_DESC" = "Team score from team members’ net scores";
 "ALLOWANCE_TYPE_POINT_QUOTA" = "Point Quota";
-"ALLOWANCE_TYPE_POINT_QUOTA_DESC" = "Gross Stableford points over/under a handicap-based quota";
+"ALLOWANCE_TYPE_POINT_QUOTA_DESC" = "Stableford points over/under a handicap-based quota";
 "ALLOWANCE_TYPE_FULL_HANDICAP" = "Full Handicap";
 "ALLOWANCE_TYPE_MEN_90_WOMEN_95" = "Men 90%, Women 95%";
 "ALLOWANCE_TYPE_MEN_80_WOMEN_90" = "Men 80%, Women 90%";
@@ -696,7 +706,9 @@
 "TOOLTIP_TEAM_NET_SCORE" = "The team’s total net score";
 "TOOLTIP_TEAM_TOTAL_SCORE" = "The team’s total score";
 
-//	Phrases
+//	Phrases & Special characters
+"ALL_SQUARE_CHARACTER" = "―";		//	\U2015 Special character	alt: "–" (En Dash) \U2013
+"DONE_DOT" = "•";		//	Special character
 "DONT_ASK_ME_AGAIN" = "Don’t ask me about this again.";
 "DOUBLE_QUOTE_CLOSING" = "”";
 "DOUBLE_QUOTE_OPENING" = "“";

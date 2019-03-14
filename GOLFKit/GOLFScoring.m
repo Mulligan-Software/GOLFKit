@@ -29,6 +29,24 @@ NSString * GOLFHoleSelectionInstructionsForAllowanceType(GOLFAllowanceType allow
 	}
 }
 
+//=================================================================
+//	GOLFMaxPointQuotaForPlayType(playType, for9Holes)
+//=================================================================
+GOLFHandicapStrokes GOLFMaxPointQuotaForPlayType(GOLFPlayType playType, BOOL for9Holes) {
+	switch (playType) {
+		case HalfStablefordPlayType:
+			return (for9Holes ? 9 : 18);
+			
+		case ChicagoPlayType:
+			return (for9Holes ? 19 : 39);
+			
+		case StablefordPlayType:
+		case ModifiedStablefordPlayType:
+		default:
+			return (for9Holes ? 18 : 36);
+	}
+}
+
 #pragma mark NSStringFrom… Utilities
 
 //=================================================================

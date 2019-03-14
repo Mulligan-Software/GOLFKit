@@ -300,12 +300,42 @@ typedef NS_OPTIONS(NSUInteger, GOLFMembershipStatus) {
 };
 
 
+@protocol GOLFScoringDataSource <NSObject>
+
+@optional
+
+//	Returns a permanent NSString or NSNumber used to identify a Scorecard, round, side, etc. 
+//	from which the object might be reconstituted for re-creating scoring data
+- (id)IDForScoring;
+
+//	Returns an object (weakly retained here) reconstituted in context from the provided wageringID
++ (id)objectForScoringID:(id)scoringID inContext:(NSManagedObjectContext *)context;
+
+//	Returns a gross score  (round, side, hole or others) in strokes
+- (GOLFScore)grossScore;
+
+//	Returns a net score  (round, side, hole or others)
+//	gross less whole or fractional handicap, in strokes
+- (GOLFNetScore)netScore;
+
+//	Returns a comp (competition) score  (round, side, hole or others)
+//	gross less whole or fractional handicap and allowances in strokes or points
+- (GOLFCompScore)compScore;
+
+@end
+
+
 //=================================================================
 //	GOLFHoleSelectionInstructionsForAllowanceType(allowanceType)
 //=================================================================
 NSString * GOLFHoleSelectionInstructionsForAllowanceType(GOLFAllowanceType allowanceType);
 //	Returns an appropriate localized instruction string concerning the selection of the holes associated with the specified GOLFAllowanceType
 
+//=================================================================
+//	GOLFMaxPointQuotaForPlayType(playType, for9Holes)
+//=================================================================
+GOLFHandicapStrokes GOLFMaxPointQuotaForPlayType(GOLFPlayType playType, BOOL for9Holes);
+//	Returns the appropriate quota points assigned to scratch player for the specified playType
 
 #pragma mark NSStringFrom… Utilities
 

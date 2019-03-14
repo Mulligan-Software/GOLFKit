@@ -282,8 +282,8 @@
 "TITLE_CHECK_FOR_SCORES_STARTUP" = "Prüfen Sie ob Scores beim Start";
 "TITLE_CHOOSE_HOLE" = "Wählen ein Golfloch";
 "TITLE_CLEAR" = "Löschen";
-"TITLE_CLOSE_OUT" = "„Schließung“";
-"TITLE_CLOSE_OUT_PLURAL" = "„Schließung“ Wetten";
+"TITLE_CLOSE_OUT" = "Schließung";
+"TITLE_CLOSE_OUT_PLURAL" = "Schließung Wetten";
 "TITLE_COMPARE_9_HOLE_SCORES" = "Kombinieren und verwenden 9-Loch-Scores";
 "TITLE_CSS" = "Wettbewerbs-Scratch-Score";
 "TITLE_CSS_ABBR" = "CSS";
@@ -312,6 +312,7 @@
 "TITLE_FIRST_HOLE" = "erstes Loch";
 "TITLE_FLAG_TOURNAMENT_SCORES" = "Bestimmen Turnier-Scores";
 "TITLE_FROM_MULLIGAN_SOFTWARE" = "von Mulligan Software";
+"TITLE_FRONT_BACK" = "Vorne und Hinten";
 "TITLE_FRONT_NINE" = "Ersteneun";
 "TITLE_FRONT_SIDE" = "Ersteseite";
 "TITLE_GRAPHING_COLORS" = "Kartierenfarben";
@@ -400,6 +401,7 @@
 "TITLE_MENS_HANDICAP" = "Handicap der Herren";
 "TITLE_NAME_SCORECARDS" = "Benennen Scorekarten";
 "TITLE_NAME_TEAMS" = "Benennen Teams";
+"TITLE_NASSAU" = "Nassau";
 "TITLE_NEXT_HOLE" = "nächstes Loch";
 "TITLE_NINE_HOLES" = "9 Löcher";
 "TITLE_NO_STROKES" = "keine Schläge";
@@ -465,6 +467,7 @@
 "TITLE_USERS_GUIDE_NOT_FOUND" = "Benutzerleitfaden nicht gefunden";
 "TITLE_WITH_SCORE" = "mit Punktzahl";
 "TITLE_WOMENS_HANDICAP" = "Handicap der Damen";
+"TITLE_3_BY_6" = "3 × 6";
 
 //	Formats
 "FORMAT_AND_%@" = " und %@";
@@ -478,10 +481,13 @@
 "FORMAT_DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Bestimme Dein %@ auf der rechten Seite indem Sie die Zeile finden, in der Ihre %@ auf der linken Seite steht.";
 "FORMAT_MB_DOWNLOADED_%1.1f" = "%1.1fMB heruntergeladen";
 "FORMAT_NET_%@" = "Netto-%@";
+"FORMAT_NOT_AVAILABLE_WITH_%@" = "nicht für %@ verfügbar";
 "FORMAT_NUMBER_%ld_ABBR" = "Nr. %ld";
 "FORMAT_OPEN_%@" = "Öffne %@";
 "FORMAT_OPEN_3_%@" = "Öffne 3 %@";
 "FORMAT_TOTAL_POINTS_VS_QUOTA_%d" = "Gesamtpunkte v. %d Kontingent";
+"FORMAT_%@_DIFFERENCE" = "Unterschied in der %@";	//	"COURSE HANDICAP Difference"
+"FORMAT_%@_OF_EACH_PLAYER" = "der %@ jedes Spielers";	//	"COURSE HANDICAP of each player"
 
 "SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
 "SAMPLE_LOOSELY_ALPHABETIC_NAMES" = "Al Czervik / Elihu & Vivian Smails / Beeper, Czervik, Smails & Webb";
@@ -537,7 +543,11 @@
 "BLURB_ALLOW_REFERENCE_TEES" = "Wenn Sie Spielen-Handicaps für Unterschiede in den Course Rating anpassen, erlauben Sie die Angabe von „referenz“ Abschläge, die für die Berechnung von Anpassung für Herren und/oder Damen verwendet werden.";
 "BLURB_REVIEW_HANDICAP_RECORDS" = "Untersuchen Sie zuvor berechnete Handicap-Datensätze in Tabellenform mit Funktionen zum Entfernen ausgewählter Daten.";
 
-"DESCRIPTION_MATCH_PLAY" = "Kopf-an-Kopf-Wettbewerb, de durch die Differenz de gewonnenen Löcher erzielt wird.";
+"DESCRIPTION_3_BY_6" = "Löcher 1-6, 7-11 und 12-18";
+"DESCRIPTION_CLOSE_OUT" = "Hinzugefügt wenn keine Wetten oder Pressen in Kraft sind";
+"DESCRIPTION_FRONT_BACK" = "Ersteseite und Letzteseite";
+"DESCRIPTION_MATCH_PLAY" = "Kopf-an-Kopf-Wettbewerb durch gewonnenen Golflöcher";
+"DESCRIPTION_NASSAU" = "Ersteseite, Letzteseite und 18 Löcher";
 "DESCRIPTION_PRINTING_PRIVACY_%@" = "Veranstaltungsregistrierung Kategorien als „%@“ bezeichnet werden in der Regel nicht gedruckt oder angezeigt.";
 "DESCRIPTION_THEME_APPEARANCE" = "Helle - Eagle verwendet immer den klassischen Aqua-Thema\nDunkel - Eagle verwendet immer den dunklen Modus\nSystem - Eagle verwendet das in den Systemeinstellungen ausgewählte Thema";
 "DESCRIPTION_THEME_PRE_MOJAVE" = "Vor macOS 10.14 Mojave, Eagle verwendet den standardmäßigen Aqua-Thema des Systems.";
@@ -629,9 +639,9 @@
 "ALLOWANCE_TYPE_GROSS" = "Brutto";
 "ALLOWANCE_TYPE_GROSS_DESC" = "keine Handicap";
 "ALLOWANCE_TYPE_NET" = "Netto";
-"ALLOWANCE_TYPE_NET_DESC" = "Team-Netto-Punktzahl aus den Netto-Punktzahlen des Mitspeilers";
+"ALLOWANCE_TYPE_NET_DESC" = "Team-Punktzahl aus den Netto-Punktzahlen des Mitspeilers";
 "ALLOWANCE_TYPE_POINT_QUOTA" = "Punktequote";
-"ALLOWANCE_TYPE_POINT_QUOTA_DESC" = "Brutto Stableford Punkte über/unter einem Handicap-basierte Quote";
+"ALLOWANCE_TYPE_POINT_QUOTA_DESC" = "Stableford Punkte über/unter einem Handicap-basierte Quote";
 "ALLOWANCE_TYPE_FULL_HANDICAP" = "Ganz Handicap";
 "ALLOWANCE_TYPE_MEN_90_WOMEN_95" = "Herren 90%, Damen 95%";
 "ALLOWANCE_TYPE_MEN_80_WOMEN_90" = "Herren 80%, Damen 90%";
@@ -696,7 +706,9 @@
 "TOOLTIP_TEAM_NET_SCORE" = "Die gesamte Netto Punktzahl der Mannschaft";
 "TOOLTIP_TEAM_TOTAL_SCORE" = "Die Gesamtpunktzahl der Mannschaft";
 
-//	Phrases
+//	Phrases & Special characters
+"ALL_SQUARE_CHARACTER" = "―";		//	\U2015 Special character	alt: "–" (En Dash) \U2013
+"DONE_DOT" = "•";		//	Special character
 "DONT_ASK_ME_AGAIN" = "Fragen Sie mich nicht noch einmal.";
 "DOUBLE_QUOTE_CLOSING" = "“";
 "DOUBLE_QUOTE_OPENING" = "„";
