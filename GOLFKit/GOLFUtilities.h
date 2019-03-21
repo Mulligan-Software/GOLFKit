@@ -40,14 +40,27 @@ NSDictionary * GOLFCountriesInfo(void);
 NSDictionary * GOLFCountriesInfoForCountryCode(NSString *countryCode);
 //	Country information from GOLFCountries.plist - using the countryCode
 //
-//	Key				Type					Description
-//	-------------	---------------------	--------------------------------------------
-//	countryCode		NSString *				Country code from locale date on this device
-//	countryName		NSString *				The localized name of the country
-//	association		NSString *				The name of the country's golf association
-//	URL				NSString *				The URL of the golf association
-//	authority		GOLFHandicapAuthority	The default golf authority for handicapping in this country
-//	states			NSArray *				Optional array of states dictionaries for this country - postalCode, stateName
+//	Key					Type					Description
+//	-----------------	---------------------	--------------------------------------------
+//	countryCode			NSString *				Country code from locale date on this device
+//	countryName			NSString *				The localized name of the country
+//	association			NSString *				The name of the country's golf association
+//	URL					NSString *				The URL of the golf association
+//	authority			GOLFHandicapAuthority	The default golf authority for handicapping in this country
+//	USGACountryCode		NSNumber *				Integer key to USGA Data Services GetCountryCodes (ie: "240" = U.S.A.)		†
+//	USGADescription		NSString *				Full country name (ie: United States of America)							†
+//	ISOCountryCode		NSString *				ISO-standard alphabetic country identifier (ie: "USA")						†
+//	USGAStringValue		NSString *				String-equivalent country identifier (ie: "USA")							†
+//	states				NSArray *				Optional array of states dictionaries for this country
+//												as follows…
+//	postalCode			NSString *				International 2-3 character postal code  (ie: "TX")
+//	stateName			NSString *				State name  (ie" "Texas")
+//	USGAStateCode		NSNumber *				Integer key to USGA Data Services GetStateCodes (ie: "200008" = Delaware)	†
+//	USGACountryCode		NSNumber *				The related USGA CountryCode for this state (ie: "240" = U.S.A.)			†
+//	ISOStateCode		NSString *				ISO-standard alphabetic state identifier (ie: "US-DE")						†		
+//	USGADescription		NSString *				Full state name (ie: "Delaware")											†
+//	USGAStringValue		NSString *				USGA country_state string (ie: "US_DE")										†
+//	†	derived from USGA GetCountryCodes and GetStateCodes
 
 NSDictionary * GOLFHomeCountryInfo(void);
 //	Localized home country information from GOLFCountries.plist

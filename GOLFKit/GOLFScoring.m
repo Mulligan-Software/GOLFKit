@@ -177,18 +177,19 @@ NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictiona
 
 		case SpecifiedPercentAllowanceType:
 			{
+				NSNumber *workingNumber = (info ? [info objectForKey:@"allowancePct"] : nil);
+				NSInteger pct = (workingNumber ? [workingNumber integerValue] : GOLFDefaultSpecifiedPercentageAllowance);
+				NSString *shortPct = [NSString stringWithFormat:@"%ld%%", (long)pct];
 				if (descriptiveText) {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 					NSString *clickOrTap = [GOLFLocalizedString(@"TERM_TAP") capitalizedString];
 #elif TARGET_OS_MAC
 					NSString *clickOrTap = [GOLFLocalizedString(@"TERM_CLICK") capitalizedString];
 #endif
-					*descriptiveText = [NSString stringWithFormat:GOLFLocalizedString(@"FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST"), clickOrTap];
+					*descriptiveText = [NSString stringWithFormat:GOLFLocalizedString(@"FORMAT_CLICKORTAP_%@_NUMBER_%@_TO_ADJUST"), clickOrTap, shortPct];
 				}
-				NSNumber *workingNumber = (info ? [info objectForKey:@"allowancePct"] : nil);
-				NSInteger pct = (workingNumber ? [workingNumber integerValue] : GOLFDefaultSpecifiedPercentageAllowance);
 				NSString *fullTitle = NSStringFromAllowanceType(FullHandicapAllowanceType, nil, nil);	//	"Full Handicap"
-				return (needShortText ? [NSString stringWithFormat:@"%ld%%", (long)pct] : [NSString stringWithFormat:GOLFLocalizedString(@"%d_PCT_OF_HANDICAP_%@"), pct, fullTitle]);
+				return (needShortText ? shortPct : [NSString stringWithFormat:GOLFLocalizedString(@"%d_PCT_OF_HANDICAP_%@"), pct, fullTitle]);
 			}
 
 		case AverageCombinedAllowanceType:
@@ -299,6 +300,7 @@ NSString * NSStringFromPlayType(GOLFPlayType playType, NSDictionary *info, NSStr
 //	------------------	--------------	-------------------------------------------------------
 //	short				NSNumber *		BOOL indicating need for short (abbreviated?) return (if available)
 //	bestRoundsN			NSNumber *		Integer N of TeamBestNPlayType (Team total of best N rounds) - default: 4
+//	maxScoreMethod		NSNumber *		GOLFMaxScoreMethod identifying MaxScore allowance calculation
 
 //		Play/Competiton Types
 //
@@ -513,10 +515,11 @@ NSString * NSStringFromPlayType(GOLFPlayType playType, NSDictionary *info, NSStr
 			{
 				if (descriptiveText) {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
-					*descriptiveText = [NSString stringWithFormat:GOLFLocalizedString(@"FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST"), GOLFLocalizedString(@"TERM_TAP")];
+					NSString *clickOrTap = [GOLFLocalizedString(@"TERM_TAP") capitalizedString];
 #elif TARGET_OS_MAC
-					*descriptiveText = [NSString stringWithFormat:GOLFLocalizedString(@"FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST"), GOLFLocalizedString(@"TERM_CLICK")];
+					NSString *clickOrTap = [GOLFLocalizedString(@"TERM_CLICK") capitalizedString];
 #endif
+					*descriptiveText = [NSString stringWithFormat:GOLFLocalizedString(@"FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST"), clickOrTap];
 				}
 				NSNumber *workingNumber = (info ? [info objectForKey:@"bestRoundsN"] : nil);
 				if (workingNumber == nil) {

@@ -89,7 +89,7 @@ typedef NS_ENUM(NSInteger, GOLFKitForUSGADataServicesErrorDomainError) {
 //	GetCountryCodes
 @property (nonatomic, strong, nullable) NSURLSessionTask *USGAGetCountryCodesTask;
 @property (nonatomic, strong, nullable) NSMutableData *USGAGetCountryCodesData;
-@property (nonatomic, copy) void (^USGAGetCountryCodesTaskCompletionHandler)(NSArray *countryCodes, NSError *error);
+@property (nonatomic, copy) void (^USGAGetCountryCodesTaskCompletionHandler)(NSDictionary *countryCodes, NSError *error);
 
 //	SearchCourses
 @property (nonatomic, weak, nullable) NSString *courseName;
@@ -326,13 +326,246 @@ typedef NS_ENUM(NSInteger, GOLFKitForUSGADataServicesErrorDomainError) {
 - (void)GetGolfer:(id)golfer withID:(NSString *)GHINString completionHandler:(void (^)(id golferInfo, NSError *error))completionHandler;
 
 //	Call:
-//		[(USGADataServicesAgent *)agent GetCountryCodesWithCompletionHandler:^(NSArray *countryCodes, NSError *error) {
+//		[(USGADataServicesAgent *)agent GetCountryCodesWithCompletionHandler:^(NSDictionary *countryCodes, NSError *error) {
 //			parameters:		none
-//			countryCodes:	nil or NSArray containing valid country codes
+//			countryCodes:	nil or NSDictionary containing valid country coded (as keys) NSDictionarys (ie: "240" = U.S.A.)
+//								key				type		description
+//								--------------	----------	----------------------------------------
+//								Description		NSString *	Full country name (ie: United States of America)
+//								ISOCountryCode	NSString *	ISO-standard alphabetic country identifier (ie: "USA")
+//								StringValue		NSString *	String-equivalent country identifier (ie: "USA")
 //			error:			nil or POSIX/USGA/GOLFKit error domain NSError resulting from GetCountryCodes request
 //		}];
 //
-- (void)GetCountryCodesWithCompletionHandler:(void (^)(NSArray *countryCodes, NSError *error))completionHandler;
+//	{
+//	  "11": {
+//		"ISOCountryCode": "ARG",
+//		"Description": "Argentina",
+//		"StringValue": "ARG"
+//	  },
+//	  "14": {
+//		"ISOCountryCode": "AUS",
+//		"Description": "Australia",
+//		"StringValue": "AUS"
+//	  },
+//	  "15": {
+//		"ISOCountryCode": "AUT",
+//		"Description": "Austria",
+//		"StringValue": "AUT"
+//	  },
+//	  "17": {
+//		"ISOCountryCode": "BHS",
+//		"Description": "Bahamas",
+//		"StringValue": "BHS"
+//	  },
+//	  "19": {
+//		"ISOCountryCode": "BGD",
+//		"Description": "Bangladesh",
+//		"StringValue": "BGD"
+//	  },
+//	  "22": {
+//		"ISOCountryCode": "BEL",
+//		"Description": "Belgium",
+//		"StringValue": "BEL"
+//	  },
+//	  "25": {
+//		"ISOCountryCode": "BMU",
+//		"Description": "Bermuda",
+//		"StringValue": "BMU"
+//	  },
+//	  "27": {
+//		"ISOCountryCode": "BOL",
+//		"Description": "Bolivia",
+//		"StringValue": "BOL"
+//	  },
+//	  "32": {
+//		"ISOCountryCode": "BRA",
+//		"Description": "Brazil",
+//		"StringValue": "BRA"
+//	  },
+//	  "35": {
+//		"ISOCountryCode": "BGR",
+//		"Description": "Bulgaria",
+//		"StringValue": "BGR"
+//	  },
+//	  "40": {
+//		"ISOCountryCode": "CAN",
+//		"Description": "Canada",
+//		"StringValue": "CAN"
+//	  },
+//	  "42": {
+//		"ISOCountryCode": "CYM",
+//		"Description": "Cayman Islands",
+//		"StringValue": "CYM"
+//	  },
+//	  "45": {
+//		"ISOCountryCode": "CHL",
+//		"Description": "Chile",
+//		"StringValue": "CHL"
+//	  },
+//	  "46": {
+//		"ISOCountryCode": "CHN",
+//		"Description": "China",
+//		"StringValue": "CHN"
+//	  },
+//	  "49": {
+//		"ISOCountryCode": "COL",
+//		"Description": "Colombia",
+//		"StringValue": "COL"
+//	  },
+//	  "60": {
+//		"ISOCountryCode": "CZE",
+//		"Description": "Czechia",
+//		"StringValue": "CZE"
+//	  },
+//	  "61": {
+//		"ISOCountryCode": "DNK",
+//		"Description": "Denmark",
+//		"StringValue": "DNK"
+//	  },
+//	  "68": {
+//		"ISOCountryCode": "GBR",
+//		"Description": "England (UK)",
+//		"StringValue": "ENG"
+//	  },
+//	  "76": {
+//		"ISOCountryCode": "FIN",
+//		"Description": "Finland",
+//		"StringValue": "FIN"
+//	  },
+//	  "77": {
+//		"ISOCountryCode": "FRA",
+//		"Description": "France",
+//		"StringValue": "FRA"
+//	  },
+//	  "84": {
+//		"ISOCountryCode": "DEU",
+//		"Description": "Germany",
+//		"StringValue": "DEU"
+//	  },
+//	  "91": {
+//		"ISOCountryCode": "GUM",
+//		"Description": "Guam",
+//		"StringValue": "GUM"
+//	  },
+//	  "104": {
+//		"ISOCountryCode": "IND",
+//		"Description": "India",
+//		"StringValue": "IND"
+//	  },
+//	  "105": {
+//		"ISOCountryCode": "IDN",
+//		"Description": "Indonesia",
+//		"StringValue": "IDN"
+//	  },
+//	  "108": {
+//		"ISOCountryCode": "IRL",
+//		"Description": "Ireland",
+//		"StringValue": "IRL"
+//	  },
+//	  "111": {
+//		"ISOCountryCode": "ITA",
+//		"Description": "Italy",
+//		"StringValue": "ITA"
+//	  },
+//	  "113": {
+//		"ISOCountryCode": "JPN",
+//		"Description": "Japan",
+//		"StringValue": "JPN"
+//	  },
+//	  "119": {
+//		"ISOCountryCode": "PRK",
+//		"Description": "Korea (Democratic People's Republic of)",
+//		"StringValue": "PRK"
+//	  },
+//	  "120": {
+//		"ISOCountryCode": "KOR",
+//		"Description": "Korea (Republic of)",
+//		"StringValue": "KOR"
+//	  },
+//	  "137": {
+//		"ISOCountryCode": "MYS",
+//		"Description": "Malaysia",
+//		"StringValue": "MYS"
+//	  },
+//	  "146": {
+//		"ISOCountryCode": "MEX",
+//		"Description": "Mexico",
+//		"StringValue": "MEX"
+//	  },
+//	  "155": {
+//		"ISOCountryCode": "MMR",
+//		"Description": "Myanmar",
+//		"StringValue": "MMR"
+//	  },
+//	  "159": {
+//		"ISOCountryCode": "NLD",
+//		"Description": "Netherlands",
+//		"StringValue": "NLD"
+//	  },
+//	  "161": {
+//		"ISOCountryCode": "NZL",
+//		"Description": "New Zealand",
+//		"StringValue": "NZL"
+//	  },
+//	  "167": {
+//		"ISOCountryCode": "GBR",
+//		"Description": "Northern Ireland",
+//		"StringValue": "NIR"
+//	  },
+//	  "169": {
+//		"ISOCountryCode": "NOR",
+//		"Description": "Norway",
+//		"StringValue": "NOR"
+//	  },
+//	  "182": {
+//		"ISOCountryCode": "PRI",
+//		"Description": "Puerto Rico",
+//		"StringValue": "PRI"
+//	  },
+//	  "199": {
+//		"ISOCountryCode": "GBR",
+//		"Description": "Scotland (UK)",
+//		"StringValue": "SCO"
+//	  },
+//	  "210": {
+//		"ISOCountryCode": "ZAF",
+//		"Description": "South Africa",
+//		"StringValue": "ZAF"
+//	  },
+//	  "213": {
+//		"ISOCountryCode": "ESP",
+//		"Description": "Spain",
+//		"StringValue": "ESP"
+//	  },
+//	  "219": {
+//		"ISOCountryCode": "SWE",
+//		"Description": "Sweden",
+//		"StringValue": "SWE"
+//	  },
+//	  "225": {
+//		"ISOCountryCode": "THA",
+//		"Description": "Thailand",
+//		"StringValue": "THA"
+//	  },
+//	  "240": {
+//		"ISOCountryCode": "USA",
+//		"Description": "United States of America",
+//		"StringValue": "USA"
+//	  },
+//	  "246": {
+//		"ISOCountryCode": "VGB",
+//		"Description": "Virgin Islands (British)",
+//		"StringValue": "VGB"
+//	  },
+//	  "248": {
+//		"ISOCountryCode": "GBR",
+//		"Description": "Wales (UK)",
+//		"StringValue": "WLS"
+//	  }
+//	}
+//
+- (void)GetCountryCodesWithCompletionHandler:(void (^)(NSDictionary *countryCodes, NSError *error))completionHandler;
 
 //	Call:
 //		[(USGADataServicesAgent *)agent SearchCourses:courseName country:country state:state completionHandler:^(NSArray *foundCourses, NSError *error) {

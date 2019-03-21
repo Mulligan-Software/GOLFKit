@@ -61,6 +61,22 @@ typedef NS_ENUM(NSUInteger, GOLFAllowanceType) {
 	#define IS_ANY_PLAYER_DEPENDENT_TEAM_ALLOWANCE_TYPE(_type)	(((((_type) >= ScrambleA50AllowanceType) && ((_type) <= ScrambleA20B15C10D5AllowanceType)) || ((_type) == A60B40AllowanceType) || ((_type) == A50B20AllowanceType) || ((_type) == AverageCombinedAllowanceType) || ((_type) == AverageCombined80AllowanceType) || ((_type) == Aggregate3EighthsAllowanceType)) ? YES : NO)
 #endif
 
+typedef NS_ENUM(NSUInteger, GOLFMaxScoreMethod) {
+	GOLFMaxScoreNone = 0,				//	Maximum returned score is not limited
+	GOLFMaxScoreBogey,					//	Maximum returned score is bogey (par + 1)
+	GOLFMaxScoreDoubleBogey,			//	Maximum returned score is double-bogey (par + 2)
+	GOLFMaxScoreTripleBogey,			//	Maximum returned score is triple-bogey (par + 3)
+	GOLFMaxScoreQuadrupalBogey,			//	Maximum returned score is quadrupal-bogey (par + 4)
+	GOLFMaxScoreNetBogey = 11,			//	Maximum returned score equivalent to net bogey (par + 1 + strokes)
+	GOLFMaxScoreNetDoubleBogey,			//	Maximum returned score equivalent to net double-bogey (par + 2 + strokes)
+	GOLFMaxScoreNetTripleBogey,			//	Maximum returned score equivalent to net triple-bogey (par + 3 + strokes)
+	GOLFMaxScoreNetQuadrupalBogey,		//	Maximum returned score equivalent to net quadrupal-bogey (par + 4 + strokes)
+	GOLFMaxScoreDoublePar = 21,			//	Maximum returned score is twice par (par x 2)
+	GOLFMaxScoreTriplePar,				//	Maximum returned score is 3 times par (par x 3)
+	GOLFMaxScoreFixed_6_8_10 = 51,		//	Maximum returned score is fixed maximum (6 on par 3, 8 on par 4, 10 on par 5 or higher)
+	GOLFMaxScoreUnknown = 99			//	Maximum returned score unknown
+};
+
 typedef NS_ENUM(NSUInteger, GOLFPlayType) {
 	MedalPlayType = 1,					//	Medal play												(1)
 	SelectedHolesPlayType,				//	Medal play with selected holes							(2)
@@ -376,6 +392,7 @@ NSString * NSStringFromPlayType(GOLFPlayType playType, NSDictionary *info, NSStr
 //	------------------	--------------	-------------------------------------------------------
 //	short				NSNumber *		BOOL indicating need for short (abbreviated?) return (if available)
 //	bestRoundsN			NSNumber *		Integer N of TeamBestNPlayType (Team total of best N rounds) - default: 4
+//	maxScoreMethod		NSNumber *		GOLFMaxScoreMethod identifying MaxScore allowance calculation
 
 
 //=================================================================

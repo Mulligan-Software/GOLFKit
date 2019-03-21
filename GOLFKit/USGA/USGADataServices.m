@@ -267,7 +267,7 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 	}];
 }
 
-- (void)GetCountryCodesWithCompletionHandler:(void (^)(NSArray *countryCodes, NSError *error))completionHandler {
+- (void)GetCountryCodesWithCompletionHandler:(void (^)(NSDictionary *countryCodes, NSError *error))completionHandler {
 	[self TokenPostWithCompletionHandler:^(NSString *accessToken, NSDate *expiresAt, NSError *tokenError) {
 		if (tokenError != nil) {
 			//	TokenPost failure…
@@ -774,14 +774,14 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 			
 			NSError *JSONError = nil;
 			if ((self.USGAGetCountryCodesData != nil) && ([self.USGAGetCountryCodesData length] > 0)) {
-				NSArray *countryCodesArray = [NSJSONSerialization JSONObjectWithData:self.USGAGetCountryCodesData options:0 error:&JSONError];
-				if ((JSONError == nil) && [countryCodesArray isKindOfClass:[NSArray class]]) {
+				NSDictionary *countryCodesDict = [NSJSONSerialization JSONObjectWithData:self.USGAGetCountryCodesData options:0 error:&JSONError];
+				if ((JSONError == nil) && [countryCodesDict isKindOfClass:[NSDictionary class]]) {
 					//	JSON return data…
 					
 					self.USGAGetCountryCodesTask = nil;	//	We don't need the reference
 					self.USGAGetCountryCodesData = nil;	//	Nor any data we've accumulated
 					if (self.USGAGetCountryCodesTaskCompletionHandler) {
-						self.USGAGetCountryCodesTaskCompletionHandler(countryCodesArray, nil);
+						self.USGAGetCountryCodesTaskCompletionHandler(countryCodesDict, nil);
 					}
 					
 					self.progressString = @"";

@@ -6,6 +6,7 @@
 //  Copyright © 2019 Mulligan Software. All rights reserved.
 //
 
+#import "GOLFKit.h"
 #import "GOLFUtilities.h"
 #import "GOLFExtensions.h"
 #import "GOLFWagering.h"
@@ -141,6 +142,104 @@ NSString * NSStringFromGOLFWageringHandicapStyle(GOLFWageringHandicapStyle style
 			*descriptiveText = [styleDict objectForKey:@"styleDescription"];
 		}
 		return [styleDict objectForKey:@"styleName"];
+	}
+}
+
+NSString * NSStringFromTrashOption(GOLFWageringTrashOption trashOption, NSString **descriptiveText) {
+	//	Returns a localized title/name of a Trash/Dots option ("Greenie", "Sandie", "Stobbie", etc.) and
+	//	optionally (when the address of descriptiveText is provided), a localized description of the
+	//	option ("Closest to flagstick in regulation on a par 3", etc.)
+
+	if (trashOption | GOLFWageringTrashCover) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_COVER");
+		}
+		return GOLFLocalizedString(@"TITLE_COVER");
+	} else if (trashOption | GOLFWageringTrashGreenie) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_GREENIE");
+		}
+		return GOLFLocalizedString(@"TITLE_GREENIE");
+	} else if (trashOption | GOLFWageringTrashSandie) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_SANDIE");
+		}
+		return GOLFLocalizedString(@"TITLE_SANDIE");
+	} else if (trashOption | GOLFWageringTrashStobbie) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_STOBBIE");
+		}
+		return GOLFLocalizedString(@"TITLE_STOBBIE");
+	} else if (trashOption | GOLFWageringTrashArnie) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_ARNIE");
+		}
+		return GOLFLocalizedString(@"TITLE_ARNIE");
+	} else if (trashOption | GOLFWageringTrashChipinski) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_DR_CHIPINSKI");
+		}
+		return GOLFLocalizedString(@"TITLE_DR_CHIPINSKI");
+	} else if (trashOption | GOLFWageringTrashHogan) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_HOGAN");
+		}
+		return GOLFLocalizedString(@"TITLE_HOGAN");
+	} else if (trashOption | GOLFWageringTrashSeve) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_SEVE");
+		}
+		return GOLFLocalizedString(@"TITLE_SEVE");
+	} else if (trashOption | GOLFWageringTrashPolie) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_POLIE");
+		}
+		return GOLFLocalizedString(@"TITLE_POLIE");
+	} else if (trashOption | GOLFWageringTrashBingo) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_BINGO");
+		}
+		return GOLFLocalizedString(@"TITLE_BINGO");
+	} else if (trashOption | GOLFWageringTrashBango) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_BANGO");
+		}
+		return GOLFLocalizedString(@"TITLE_BANGO");
+	} else if (trashOption | GOLFWageringTrashBongo) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_BONGO");
+		}
+		return GOLFLocalizedString(@"TITLE_BONGO");
+	} else if (trashOption | GOLFWageringTrashGurglie) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_GURGLIE");
+		}
+		return GOLFLocalizedString(@"TITLE_GURGLIE");
+	} else if (trashOption | GOLFWageringTrashBarkie) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_BARKIE");
+		}
+		return GOLFLocalizedString(@"TITLE_BARKIE");
+	} else if (trashOption | GOLFWageringTrashAsphalt) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_ASPHALT");
+		}
+		return GOLFLocalizedString(@"TITLE_ASPHALT");
+	} else if (trashOption | GOLFWageringTrashSnake) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_SNAKE");
+		}
+		return GOLFLocalizedString(@"TITLE_SNAKE");
+	} else if (trashOption == GOLFWageringTrashNone) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_NO_TRASH");
+		}
+		return [GOLFLocalizedString(@"TERM_NONE") capitalizedString];
+	} else {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"");
+		}
+		return [GOLFLocalizedString(@"TERM_UNKNOWN") capitalizedString];
 	}
 }
 
@@ -422,19 +521,19 @@ NSString * NSStringFromGOLFWageringHandicapStyle(GOLFWageringHandicapStyle style
 			if ((status == GOLFBetAWonHoleStatus) || (status == GOLFBetBWonHoleStatus)) {
 				return NO;
 			}
-			return ([[self addedPresses] count] < 1);
+//			return ([[self addedPresses] count] < 1);
 			
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 			//	At the moment, only Eagle has a setting that allows prohibiting multiple presses at a hole
 			if ([[NSUserDefaults standardUserDefaults] boolForKey:@"ProhibitMultiplePress"]) {
 				//	Can't add if there's a 2-down in front of us…
-				GOLFBet *testPress = [self automaticTwoDownPress];
+				GOLFBet *testPress = [self myAutomaticTwoDownPress];
 				if ((testPress != nil) && ([testPress firstHole] <= holeIndex)) {
 					return NO;
 				}
 				
 				//	or a 1-down in front of us…
-				testPress = [self automaticLastHoleOneDownPress];
+				testPress = [self myAutomaticLastHoleOneDownPress];
 				if ((testPress != nil) && ([testPress firstHole] <= holeIndex)) {
 					return NO;
 				}
@@ -444,6 +543,10 @@ NSString * NSStringFromGOLFWageringHandicapStyle(GOLFWageringHandicapStyle style
 				//	Multiple presses allowed
 				return YES;
 			}
+#else
+			//	At the moment, all iOS apps prohibit multiple presses
+			return ([[self addedPresses] count] < 1);
+
 #endif
 		}
 	}
@@ -868,6 +971,167 @@ NSString * NSStringFromGOLFWageringHandicapStyle(GOLFWageringHandicapStyle style
 	for (GOLFBet *press in [self pressesArray]) {
 		if ((press.fromBet == nil) || (press.reason == GOLFBetCloseOutReason)) { 
 			press.doesCloseOuts = doesEm;
+		}
+	}
+}
+
+#pragma mark Property List Storage
+
+- (NSDictionary *)dictionaryRepresentation {
+	//	A dictionary representation of a GOLFBet
+	//	Top-level bets return an "ARoundIDForWagering" and "BRoundIDForWagering" derived from the original
+	//	<GOLFWageringDataSource> ARound and BRound used in bet handling.
+	NSMutableDictionary *representationDict = [NSMutableDictionary dictionaryWithCapacity:10];
+	
+	//	Main level bets hold the ARound, BRound, aStrokesString, bStrokesString, betInfo
+	if ((self.ARound != nil) && [self.ARound respondsToSelector:@selector(IDForWagering)]) {
+		id IDForWagering = [(id<GOLFWageringDataSource>)self.ARound IDForWagering];
+		if (IDForWagering != nil) {
+			[representationDict setObject:IDForWagering forKey:@"ARoundIDForWagering"];
+		}
+	}
+	
+	if ((self.BRound != nil) && [self.BRound respondsToSelector:@selector(IDForWagering)]) {
+		id IDForWagering = [(id<GOLFWageringDataSource>)self.BRound IDForWagering];
+		if (IDForWagering != nil) {
+			[representationDict setObject:IDForWagering forKey:@"BRoundIDForWagering"];
+		}
+	}
+	
+	NSString *workingString = self.aStrokesString;
+	if (workingString != nil) {
+		[representationDict setObject:workingString forKey:@"AStrokesString"];
+	}
+	workingString = self.bStrokesString;
+	if (workingString != nil) {
+		[representationDict setObject:workingString forKey:@"BStrokesString"];
+	}
+	
+	if (self.betInfo != nil) {
+		NSMutableDictionary *betInfoDict = [NSMutableDictionary dictionaryWithCapacity:6];
+		//	key				type			description
+		//	--------------	--------------	----------------------------------------------------------------
+		//	aRound			SCRRound *		A competitor's round (optional)
+		//	aScores			NSArray *		0, 9, or 18 (NSNumber *) A team competitor scores for match play
+		//	aStrokesString	NSString *		18-character string of strokes given for A competitor (optional)
+		//	bRound			SCRRound *		B competitor's round (optional)
+		//	bScores			NSArray *		0, 9, or 18 (NSNumber *) B team competitor scores for match play
+		//	bStrokesString	NSString *		18-character string of strokes given for B competitor (optional)
+		//	lowHandicap		NSNumber *		GOLFPlayingHandicap for the lowest handicap competitor
+		//	lowName			NSString *		name of the lowest-handicapped competitor
+		NSArray *workingArray = [self.betInfo objectForKey:@"aScores"];
+		if (workingArray != nil) {
+			[betInfoDict setObject:workingArray forKey:@"aScores"];
+		}
+		workingString = [self.betInfo objectForKey:@"aStrokesString"];
+		if (workingString != nil) {
+			[betInfoDict setObject:workingString forKey:@"aStrokesString"];
+		}
+		workingArray = [self.betInfo objectForKey:@"bScores"];
+		if (workingArray != nil) {
+			[betInfoDict setObject:workingArray forKey:@"bScores"];
+		}
+		workingString = [self.betInfo objectForKey:@"bStrokesString"];
+		if (workingString != nil) {
+			[betInfoDict setObject:workingString forKey:@"bStrokesString"];
+		}
+		NSNumber *workingNumber = [self.betInfo objectForKey:@"lowHandicap"];
+		if (workingNumber != nil) {
+			[betInfoDict setObject:workingString forKey:@"lowHandicap"];
+		}
+		workingString = [self.betInfo objectForKey:@"lowName"];
+		if (workingString != nil) {
+			[betInfoDict setObject:workingString forKey:@"lowName"];
+		}
+		[representationDict setObject:[NSDictionary dictionaryWithDictionary:betInfoDict] forKey:@"betInfo"];
+	}
+	
+	workingString = self.betName;
+	if (workingString != nil) {
+		[representationDict setObject:workingString forKey:@"betName"];
+	}
+	[representationDict setObject:[NSNumber numberWithInteger:self.reason] forKey:@"reason"];
+	[representationDict setObject:[NSNumber numberWithUnsignedInteger:self.handicappingStyle] forKey:@"handicappingStyle"];
+	[representationDict setObject:[NSNumber numberWithInteger:self.betStatus] forKey:@"betStatus"];
+	workingString = self.holesStatus;
+	if (workingString != nil) {
+		[representationDict setObject:workingString forKey:@"holesStatus"];
+	}
+	[representationDict setObject:[NSNumber numberWithInteger:self.firstHole] forKey:@"firstHole"];
+	[representationDict setObject:[NSNumber numberWithInteger:self.fromHole] forKey:@"fromHole"];
+	[representationDict setObject:[NSNumber numberWithInteger:self.lastHole] forKey:@"lastHole"];
+	[representationDict setObject:[NSNumber numberWithInteger:self.betUp] forKey:@"betUp"];
+	[representationDict setObject:[NSNumber numberWithInteger:self.betToGo] forKey:@"betToGo"];
+	[representationDict setObject:[NSNumber numberWithBool:self.does2DownAutomatics] forKey:@"does2DownAutomatics"];
+	[representationDict setObject:[NSNumber numberWithBool:self.does1DownLastHoleAutomatics] forKey:@"does1DownLastHoleAutomatics"];
+	[representationDict setObject:[NSNumber numberWithBool:self.doesCloseOuts] forKey:@"doesCloseOuts"];
+	
+	NSMutableArray *presses = [NSMutableArray arrayWithCapacity:2];
+	for (GOLFBet *aPress in self.presses) {
+		[presses addObject:[aPress dictionaryRepresentation]];
+	}
+	[representationDict setObject:[NSArray arrayWithArray:presses] forKey:@"presses"];
+	
+	return [NSDictionary dictionaryWithDictionary:representationDict];
+}
+
+- (void)setDictionaryRepresentation:(NSDictionary *)dictionary {
+	//	Assuming we've just been created and initialized, initialize and create our associated presses…
+	//	Original top-level bets must include (GOLFWageringDataSource> "ARound" and "BRound" from appropriate context
+	if (dictionary != nil) {
+		id<GOLFWageringDataSource> workingRound = [dictionary objectForKey:@"ARound"];
+		if (workingRound) {
+			self.ARound = workingRound;
+		}
+		workingRound = [dictionary objectForKey:@"BRound"];
+		if (workingRound) {
+			self.BRound = workingRound;
+		}
+
+		NSString *workingString = [dictionary objectForKey:@"AStrokesString"];
+		if (workingString != nil) {
+			self.aStrokesString = workingString;
+		}
+		workingString = [dictionary objectForKey:@"BStrokesString"];
+		if (workingString != nil) {
+			self.bStrokesString = workingString;
+		}
+	
+		NSDictionary *workingDict = [dictionary objectForKey:@"betInfo"];
+		if (workingDict != nil) {
+			self.betInfo = workingDict;
+		}
+
+		workingString = [dictionary objectForKey:@"betName"];
+		if (workingString != nil) {
+			self.betName = workingString;
+		}
+		self.reason = ([dictionary objectForKey:@"reason"] ? [[dictionary objectForKey:@"reason"] integerValue] : GOLFBetStandardReason);
+		self.handicappingStyle = ([dictionary objectForKey:@"handicappingStyle"] ? [[dictionary objectForKey:@"handicappingStyle"] unsignedIntegerValue] : GOLFWageringUnknownMatchStyle);
+		self.betStatus = ([dictionary objectForKey:@"betStatus"] ? [[dictionary objectForKey:@"betStatus"] integerValue] : GOLFBetUnknownStatus);
+		
+		workingString = [dictionary objectForKey:@"holesStatus"];
+		if (workingString != nil) {
+			self.holesStatus = workingString;
+		}
+		
+		self.firstHole = [[dictionary objectForKey:@"firstHole"] integerValue];
+		self.fromHole = [[dictionary objectForKey:@"fromHole"] integerValue];
+		self.lastHole = [[dictionary objectForKey:@"lastHole"] integerValue];
+		self.betUp = [[dictionary objectForKey:@"betUp"] integerValue];
+		self.betToGo = [[dictionary objectForKey:@"betToGo"] integerValue];
+		
+		self.does2DownAutomatics = [[dictionary objectForKey:@"does2DownAutomatics"] boolValue];
+		self.does1DownLastHoleAutomatics = [[dictionary objectForKey:@"does1DownLastHoleAutomatics"] boolValue];
+		self.doesCloseOuts = [[dictionary objectForKey:@"doesCloseOuts"] boolValue];
+		
+		NSArray *workingArray = [dictionary objectForKey:@"presses"];
+		if (workingArray != nil) {
+			for (NSDictionary *pressDict in workingArray) {
+				GOLFBet *newPress = [[GOLFBet alloc] init];
+				newPress.fromBet = self;
+				[newPress setDictionaryRepresentation:pressDict];
+			}
 		}
 	}
 }

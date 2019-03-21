@@ -66,6 +66,46 @@ typedef NS_ENUM(NSUInteger, GOLFBetStatus) {
 	GOLFBetUnknownStatus = 99				//	Unknown or error status
 };
 
+typedef NS_ENUM(NSUInteger, GOLFWageringGameStyle) {
+	GOLFWageringGameNone,					//	(0)		No wagering game
+	GOLFWageringGameTrash,					//	(1)		Trash, Dots or Wickers
+	GOLFWageringGameAnimals,				//	(2)		Snake, Camel, Gorilla, etc.
+	GOLFWageringGameHollywood,				//	(3)		Hollywood, Sixes, Round-Robin (6 hole matches)
+	GOLFWageringGameSwing,					//	(4)		Swing Game - 2 vs. 3 or more
+	GOLFWageringGameWolf,					//	(5)		Wolf - 3 or more
+	GOLFWageringGameUnknownStyle = 99		//	Unknown
+};
+
+typedef NS_OPTIONS(NSUInteger, GOLFWageringTrashOption) {
+	GOLFWageringTrashNone				= 0,			//	(0)
+	GOLFWageringTrashCover				= 1 << 0,		//	(1)			Birdie or better covering opponent's completed birdie or better
+	GOLFWageringTrashGreenie			= 1 << 1,		//	(2)			Closest to pin in regulation, par 3 - voided with 3-putt
+	GOLFWageringTrashSandie				= 1 << 2,		//	(4)			Up and down from a greenside bunker
+	GOLFWageringTrashStobbie			= 1 << 3,		//	(8)			Green in regulation within length of the pin
+	GOLFWageringTrashOption4			= 1 << 4,		//	(16)
+	GOLFWageringTrashArnie				= 1 << 5,		//	(32)		Par or better without visiting fairway
+	GOLFWageringTrashChipinski			= 1 << 6,		//	(64)		Chip-in or hole out from off the green
+	GOLFWageringTrashHogan				= 1 << 7,		//	(128)		Par hitting fairway, green in regulation, 2 putts
+	GOLFWageringTrashSeve				= 1 << 8,		//	(256)		Birdie or better missing fairway and green
+	GOLFWageringTrashPolie				= 1 << 9,		//	(512)		Putt made from outside length of flagstick
+	GOLFWageringTrashBingo				= 1 << 10,		//	(1024)		Of three or more, first player to reach the green
+	GOLFWageringTrashBango				= 1 << 11,		//	(2048)		Once all players of three or more have reached the green, the closest to the pin
+	GOLFWageringTrashBongo				= 1 << 12,		//	(4096)		Of three or more, ball away putting, the first to hole their putt
+	GOLFWageringTrashGurglie			= 1 << 13,		//	(8192)		Par or better from, or skipping off, water
+	GOLFWageringTrashBarkie				= 1 << 14,		//	(16384)		Par or better off a tree
+	GOLFWageringTrashAsphalt			= 1 << 15,		//	(32768)		Par or better from a cart path
+	GOLFWageringTrashSnake				= 1 << 16,		//	(65536)		3-putt, last 3-putt, shortest 3-putt
+	GOLFWageringTrashOption17			= 1 << 17,		//	(131072)
+	GOLFWageringTrashOption18			= 1 << 18,		//	(262144)
+	GOLFWageringTrashOption19			= 1 << 19,		//	(524288)
+	GOLFWageringTrashOption20			= 1 << 20,		//	(1048576)
+	GOLFWageringTrashOption21			= 1 << 21,		//	(2097152)
+	GOLFWageringTrashOption22			= 1 << 22,		//	(4194304)
+	GOLFWageringTrashOption23			= 1 << 23,		//	(8388608)
+	GOLFWageringTrashOption24			= 1 << 24		//	(16777216)
+};
+
+
 @protocol GOLFWageringDataSource <NSObject>
 
 @optional
@@ -73,9 +113,6 @@ typedef NS_ENUM(NSUInteger, GOLFBetStatus) {
 //	Returns a permanent NSString or NSNumber used to identify a round, competitor, etc. 
 //	from which the object might be reconstituted for re-creating match and wagering data
 - (id)IDForWagering;
-
-//	Returns an object (weakly retained here) reconstituted in context from the provided wageringID
-+ (id)objectForWageringID:(id)wageringID inContext:(NSManagedObjectContext *)context;
 
 //	Returns YES for rounds (or others) who are eligible (or required) for use in wagering
 - (BOOL)isTeamForWagering;
@@ -154,6 +191,15 @@ NSString * NSStringFromGOLFWageringHandicapStyle(GOLFWageringHandicapStyle style
 //	localized additional descriptive text about the handicap style
 
 
+//=================================================================
+//	NSStringFromTrashOption(trashOption, &descriptiveText)
+//=================================================================
+NSString * NSStringFromTrashOption(GOLFWageringTrashOption trashOption, NSString **descriptiveText);
+//	Returns a localized title/name of a Trash/Dots option ("Greenie", "Sandie", "Stobbie", etc.) and
+//	optionally (when the address of descriptiveText is provided), a localized description of the
+//	option ("Closest to flagstick in regulation on a par 3", etc.)
+
+
 @interface GOLFBet : NSObject
 {
 	NSInteger holeStatus[18];	//	The hole status ("up" status) at each hole (transient data)
@@ -212,5 +258,9 @@ NSString * NSStringFromGOLFWageringHandicapStyle(GOLFWageringHandicapStyle style
 - (GOLFBet *)addPressToHoleAt18Index:(NSUInteger)holeIndex;	//	Manual press
 - (void)update;
 - (void)updateAutomatics;
+
+#pragma mark Property List Storage
+- (NSDictionary *)dictionaryRepresentation;
+- (void)setDictionaryRepresentation:(NSDictionary *)dictionary;
 
 @end

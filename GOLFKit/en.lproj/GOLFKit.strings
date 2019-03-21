@@ -59,6 +59,7 @@
 "TERM_EVERYTHING" = "everything";
 "TERM_FAIRWAY" = "fairway";
 "TERM_FIND" = "find";
+"TERM_FLAGSTICK" = "flagstick";
 "TERM_FLIGHT" = "flight";
 "TERM_FLIGHT_PLURAL" = "flights";
 "TERM_FOURBALL" = "Four-Ball";
@@ -316,6 +317,7 @@
 "TITLE_FRONT_NINE" = "Front Nine";
 "TITLE_FRONT_SIDE" = "Front Side";
 "TITLE_GETTING_STARTED" = "Getting Started…";
+"TITLE_GRADE" = "Grade";
 "TITLE_GRAPHING_COLORS" = "Graphing Colors";
 "TITLE_GREEN_IN_REGULATION" = "Green in Regulation";
 "TITLE_GREEN_IN_REGULATION_PLURAL" = "Greens in Regulation";
@@ -376,7 +378,6 @@
 "TITLE_HOLE_HANDICAP" = "Handicap";
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Hole score adjustment";
 "TITLE_HOLES_TO_BE_SCORED" = "Holes to be Scored";
-"TITLE_GRADE" = "Grade";
 "TITLE_HOLE_SELECTION" = "Hole Selection";
 "TITLE_IGNORE_BEST" = "Ignore best";
 "TITLE_IGNORE_WORST" = "Ignore worst";
@@ -469,12 +470,58 @@
 "TITLE_WOMENS_HANDICAP" = "Women’s Handicap";
 "TITLE_3_BY_6" = "3 × 6";
 
+"TITLE_ARNIE" = "Arnie";
+"TITLE_ASPHALT" = "Asphalt";
+"TITLE_BANGO" = "Bango";
+"TITLE_BARKIE" = "Barkie";
+"TITLE_BINGO" = "Bingo";
+"TITLE_BINGO_BANGO_BONGO" = "Bingo-Bango-Bongo";
+"TITLE_BONGO" = "Bongo";
+"TITLE_COVER" = "Cover, Topper";
+"TITLE_GORILLA" = "Gorilla";
+"TITLE_GREENIE" = "Greenie";
+"TITLE_GURGLIE" = "Gurglie, Fish";
+"TITLE_HOGAN" = "Hogan";
+"TITLE_DR_CHIPINSKI" = "Chip-in, Offner, Dr. Chipinski";
+"TITLE_POLIE" = "Polie";
+"TITLE_SANDIE" = "Sandie";
+"TITLE_SEVE" = "Seve";
+"TITLE_SNAKE" = "Snake";
+"TITLE_STOBBIE" = "Stobbie";
+"TITLE_TRASH" = "Trash, Dots";
+"TITLE_WICKERS" = "Wickers";
+"TITLE_WOLF" = "Wolf";
+
+"DESCRIPTION_ARNIE" = "Par or better without visiting fairway";
+"DESCRIPTION_ASPHALT" = "Par or better from a cart path";
+"DESCRIPTION_BANGO" = "All on green - closest to the hole";
+"DESCRIPTION_BARKIE" = "Par or better off a tree";
+"DESCRIPTION_BINGO" = "First to reach the green";
+"DESCRIPTION_BINGO_BANGO_BONGO" = "First to green, closest to hole, first holed";
+"DESCRIPTION_BONGO" = "Away putting - first holed";
+"DESCRIPTION_COVER" = "Match or better opponent's sub-par score";
+"DESCRIPTION_GORILLA" = "Closest to pin in regulation on par 5";
+"DESCRIPTION_GREENIE" = "Closest to pin in regulation on par 3 - voided with 3-putt";
+"DESCRIPTION_GURGLIE" = "Par or better from, or skipping off, water";
+"DESCRIPTION_HOGAN" = "Hit fairway, green in regulation, 2-putt par";
+"DESCRIPTION_DR_CHIPINSKI" = "Chip-in";
+"DESCRIPTION_NO_TRASH" = "No Trash/Dots category specified";
+"DESCRIPTION_POLIE" = "1-putt longer than flagstick length";
+"DESCRIPTION_SANDIE" = "Up and down from a greenside bunker";
+"DESCRIPTION_SEVE" = "Birdie or better without hitting fairway or green";
+"DESCRIPTION_SNAKE" = "3-putt, last 3-putt or shortest 3-putt";
+"DESCRIPTION_STOBBIE" = "On in regulation within length of the pin";
+"DESCRIPTION_TRASH" = "Points awarded for achievements";
+"DESCRIPTION_WICKERS" = "Trash/Dots value increases with each occurrance";
+"DESCRIPTION_WOLF" = "Player, optional partner vs. rest at each hole";
+
 //	Formats
 "FORMAT_AND_%@" = " and %@";
 "FORMAT_ASSIGN_%ld_ROUNDS_TO" = "Assign %ld rounds to";
 "FORMAT_BEST_%d_ROUNDS" = "Best %d Rounds";
 "FORMAT_BET_HOLES_%ld_%ld" = "Holes %ld - %ld";
 "FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST" = "%@ number to adjust";
+"FORMAT_CLICKORTAP_%@_NUMBER_%@_TO_ADJUST" = "%@ number (%@) to adjust";
 "FORMAT_COURSE_HANDICAP_%@_TABLE" = "%@ Table";
 "FORMAT_CURRENT_%@_TITLE" = "Current %@";
 "FORMAT_CURRENT_%@_TITLE_PLURAL" = "Current %@";
