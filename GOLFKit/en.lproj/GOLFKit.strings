@@ -70,6 +70,7 @@
 "TERM_GROSS" = "gross";
 "TERM_HANDICAP" = "handicap";
 "TERM_HANDICAP_ABBR" = "hdcp";
+"TERM_HANDICAPPING" = "handicapping";
 "TERM_HELP" = "help";
 "TERM_HOLE" = "hole";
 "TERM_HOLE_PLURAL" = "holes";
@@ -165,8 +166,10 @@
 "TERM_TREND" = "trend";
 "TERM_UNKNOWN" = "unknown";
 "TERM_USE" = "use";
+"TERM_VALUE" = "value";
 "TERM_VERSUS_ABBR" = "vs.";
 "TERM_WALTZ" = "Waltz";
+"TERM_WINS" = "wins";
 "TERM_WOMAN_PLURAL" = "women";
 "TERM_YARD_PLURAL" = "yards";
 "TERM_YARD_PLURAL_ABBR" = "Yds.";
@@ -266,6 +269,7 @@
 "TITLE_ASSIGN_ROUND_TO" = "Assign a round to";
 "TITLE_ASSIGN_TEES" = "Assign Starting Tees";
 "TITLE_ASSIGN_TIMES" = "Assign Tee Times";
+"TITLE_AUTOMATIC_PRESSES" = "Automatic Presses";
 "TITLE_BACK_NINE" = "Back Nine";
 "TITLE_BACK_SIDE" = "Back Side";
 "TITLE_BET_BACK" = "Back";
@@ -477,12 +481,14 @@
 "TITLE_BINGO" = "Bingo";
 "TITLE_BINGO_BANGO_BONGO" = "Bingo-Bango-Bongo";
 "TITLE_BONGO" = "Bongo";
+"TITLE_CHIPINSKI" = "Chip-in, Offner, Dr. Chipinski";
 "TITLE_COVER" = "Cover, Topper";
+"TITLE_FULL_HDCP" = "Full Hdcp.";
 "TITLE_GORILLA" = "Gorilla";
 "TITLE_GREENIE" = "Greenie";
 "TITLE_GURGLIE" = "Gurglie, Fish";
 "TITLE_HOGAN" = "Hogan";
-"TITLE_DR_CHIPINSKI" = "Chip-in, Offner, Dr. Chipinski";
+"TITLE_MATCH_TYPE" = "Match Type";
 "TITLE_POLIE" = "Polie";
 "TITLE_SANDIE" = "Sandie";
 "TITLE_SEVE" = "Seve";
@@ -491,6 +497,8 @@
 "TITLE_TRASH" = "Trash, Dots";
 "TITLE_WICKERS" = "Wickers";
 "TITLE_WOLF" = "Wolf";
+"TITLE_2_DOWN" = "2-down";
+"TITLE_1_DOWN_LAST" = "1-down last hole";
 
 "DESCRIPTION_ARNIE" = "Par or better without visiting fairway";
 "DESCRIPTION_ASPHALT" = "Par or better from a cart path";
@@ -499,12 +507,12 @@
 "DESCRIPTION_BINGO" = "First to reach the green";
 "DESCRIPTION_BINGO_BANGO_BONGO" = "First to green, closest to hole, first holed";
 "DESCRIPTION_BONGO" = "Away putting - first holed";
+"DESCRIPTION_CHIPINSKI" = "Chip-in";
 "DESCRIPTION_COVER" = "Match or better opponent's sub-par score";
 "DESCRIPTION_GORILLA" = "Closest to pin in regulation on par 5";
 "DESCRIPTION_GREENIE" = "Closest to pin in regulation on par 3 - voided with 3-putt";
 "DESCRIPTION_GURGLIE" = "Par or better from, or skipping off, water";
 "DESCRIPTION_HOGAN" = "Hit fairway, green in regulation, 2-putt par";
-"DESCRIPTION_DR_CHIPINSKI" = "Chip-in";
 "DESCRIPTION_NO_TRASH" = "No Trash/Dots category specified";
 "DESCRIPTION_POLIE" = "1-putt longer than flagstick length";
 "DESCRIPTION_SANDIE" = "Up and down from a greenside bunker";
@@ -520,6 +528,7 @@
 "FORMAT_ASSIGN_%ld_ROUNDS_TO" = "Assign %ld rounds to";
 "FORMAT_BEST_%d_ROUNDS" = "Best %d Rounds";
 "FORMAT_BET_HOLES_%ld_%ld" = "Holes %ld - %ld";
+"FORMAT_CLICKORTAP_%@_TO_SELECT" = "%@ to select…";
 "FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST" = "%@ number to adjust";
 "FORMAT_CLICKORTAP_%@_NUMBER_%@_TO_ADJUST" = "%@ number (%@) to adjust";
 "FORMAT_COURSE_HANDICAP_%@_TABLE" = "%@ Table";
@@ -749,9 +758,13 @@
 "TOOLTIP_ROUNDS_MODIFIER_CONGU" = "* - used\nT - tournament";
 "TOOLTIP_ROUNDS_MODIFIER_EGA" = "* - used\nT - tournament";
 "TOOLTIP_ROUNDS_MODIFIER_MULLIGAN" = "* - used\nA - away\nT - tournament";
+"TOOLTIP_SHOW_SCORECARD" = "Show competitor’s scorecard.";
+"TOOLTIP_SHOW_SCORECARD_UNAVAILABLE" = "Show competitor’s scorecard.\n\nNot available because no competitor has been selected.";
 "TOOLTIP_TEAM_GROSS_SCORE" = "The team’s total gross score";
 "TOOLTIP_TEAM_NET_SCORE" = "The team’s total net score";
 "TOOLTIP_TEAM_TOTAL_SCORE" = "The team’s total score";
+
+"INSTRUCTION_DRAG_ROUND_HERE" = "… or drag a round here";
 
 //	Phrases & Special characters
 "ALL_SQUARE_CHARACTER" = "―";		//	\U2015 Special character	alt: "–" (En Dash) \U2013
@@ -898,6 +911,8 @@
 "USGA_DATA_SERVICES_UNREACHABLE" = "USGA Data Services is unreachable";
 "USGA_GETCOUNTRYCODES_FAIL" = "GetCountryCodes query failed";
 "USGA_GETCOUNTRYCODES_JSON_FAIL" = "GetCountryCodes JSON serialization failed";
+"USGA_GETSTATECODES_FAIL" = "GetStateCodes query failed";
+"USGA_GETSTATECODES_JSON_FAIL" = "GetStateCodes JSON serialization failed";
 "USGA_GETCOURSEDETAILS_FAIL" = "GetCourseDetails query failed";
 "USGA_GETCOURSEDETAILS_JSON_FAIL" = "GetCourseDetails JSON serialization failed";
 "USGA_GETGOLFER_FAIL" = "GetGolfer query failed";

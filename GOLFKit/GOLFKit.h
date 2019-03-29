@@ -10,7 +10,7 @@
 @import Foundation;
 
 //	GOLFKit Errors
-extern NSString * const GOLFKitErrorDomain;	//	The error domain name
+extern NSString * _Nonnull const GOLFKitErrorDomain;	//	The error domain name
 
 typedef NS_ENUM(NSInteger, GOLFKitErrorDomainError) {
 	GOLFKitDataError					= 18000,	// generic error
@@ -83,39 +83,39 @@ typedef NS_ENUM(NSInteger, GOLFKitErrorDomainError) {
 #define GOLFKIT_BUNDLE_ID			@"com.mulligansoftware.GOLFKit"
 
 //	Bundle identification etc.
-NSBundle * GOLFKitBundle(void);
-NSString * GOLFKitBundleShortVersionString(void);
-NSString * GOLFKitBundleVersion(void);
+NSBundle * _Nonnull GOLFKitBundle(void);
+NSString * _Nonnull GOLFKitBundleShortVersionString(void);
+NSString * _Nonnull GOLFKitBundleVersion(void);
 
 @protocol GOLFHandicapDataSource <NSObject>
 
 @optional
 
-- (NSString *)handicapAuthority;
+- (NSString *_Nullable)handicapAuthority;
 //	The handicap authority used for handicapping - usually available from events or rounds
 //	return NSString*, nil if none or using a default
 
-- (NSNumber *)handicapIndexForWomen:(nullable BOOL *)women for9Holes:(nullable BOOL *)nineHoles;
+- (NSNumber *_Nullable)handicapIndexForWomen:(nullable BOOL *)women for9Holes:(nullable BOOL *)nineHoles;
 //	A previously determined handicapIndex - usually available from rounds
 //	Non-nil *women, *nineHoles pre-set TRUE if ladies or nineHole response required - change if response requires
 //	return float equivalent, nil for no data, *women = TRUE for ladies, *nineHoles = TRUE for 9-hole index
 
-- (NSNumber *)teeSLOPERatingForWomen:(nullable BOOL *)women for9Holes:(nullable BOOL *)nineHoles;
+- (NSNumber *_Nullable)teeSLOPERatingForWomen:(nullable BOOL *)women for9Holes:(nullable BOOL *)nineHoles;
 //	A previously determined SLOPE Rating - usually available from rounds, sides or tees
 //	Non-nil *women, *nineHoles pre-set TRUE if women's or nineHole's response required - change if response requires
 //	return NSInteger equivalent, nil for no data, *women = TRUE for ladies, *for9Holes = TRUE for 9-hole rating
 
-- (NSNumber *)teeCourseRatingForWomen:(nullable BOOL *)women for9Holes:(nullable BOOL *)nineHoles;
+- (NSNumber *_Nullable)teeCourseRatingForWomen:(nullable BOOL *)women for9Holes:(nullable BOOL *)nineHoles;
 //	A previously determined Course Rating - usually available from rounds, sides or tees
 //	Non-nil *women, *nineHoles pre-set TRUE if women's or nineHole's response required - change if response requires
 //	return float equivalent, nil for no data, *women = TRUE for ladies, *for9Holes = TRUE for 9-hole rating
 
-- (NSNumber *)teeParForWomen:(nullable BOOL *)women for9Holes:(nullable BOOL *)nineHoles;
+- (NSNumber *_Nullable)teeParForWomen:(nullable BOOL *)women for9Holes:(nullable BOOL *)nineHoles;
 //	Previously determined par - usually available from rounds, sides or tees
 //	Non-nil *women, *nineHoles pre-set TRUE if women's or nineHole's response required - change if response requires
 //	return NSInteger equivalent, nil for no data, *women = TRUE for ladies, *for9Holes = TRUE for 9-hole par
 
-- (NSDictionary *)strokeControlInfo;
+- (NSDictionary *_Nonnull)strokeControlInfo;
 //	A dictionary of information required to do handicapping stroke control:
 //
 //	Key						Type			Description

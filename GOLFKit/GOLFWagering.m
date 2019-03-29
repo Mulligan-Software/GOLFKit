@@ -177,9 +177,9 @@ NSString * NSStringFromTrashOption(GOLFWageringTrashOption trashOption, NSString
 		return GOLFLocalizedString(@"TITLE_ARNIE");
 	} else if (trashOption | GOLFWageringTrashChipinski) {
 		if (descriptiveText) {
-			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_DR_CHIPINSKI");
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_CHIPINSKI");
 		}
-		return GOLFLocalizedString(@"TITLE_DR_CHIPINSKI");
+		return GOLFLocalizedString(@"TITLE_CHIPINSKI");
 	} else if (trashOption | GOLFWageringTrashHogan) {
 		if (descriptiveText) {
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_HOGAN");

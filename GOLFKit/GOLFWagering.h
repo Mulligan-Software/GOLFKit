@@ -142,6 +142,9 @@ typedef NS_OPTIONS(NSUInteger, GOLFWageringTrashOption) {
 //	Compares two <GOLFWageringDataSource> objects using their own compare methods and returns the result
 - (NSComparisonResult)compareNetScoreForWagering:(id<GOLFWageringDataSource>)otherObject;
 
+//	Compares two <GOLFWageringDataSource> objects net scores calculated from gross score and specified strokes
+- (NSComparisonResult)compareDifferenceNetScoreForWagering:(id<GOLFWageringDataSource>)otherObject;
+
 //	Returns YES if a round or hole is disqualified ("X" for a hole) in betting calculations
 - (BOOL)isDisqualifiedForWagering;
 

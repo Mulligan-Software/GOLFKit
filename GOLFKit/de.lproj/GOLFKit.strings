@@ -70,6 +70,7 @@
 "TERM_GROSS" = "brutto";
 "TERM_HANDICAP" = "handicap";
 "TERM_HANDICAP_ABBR" = "hdcp";
+"TERM_HANDICAPPING" = "Handicapend";
 "TERM_HELP" = "Hilfe";
 "TERM_HOLE" = "Loch";
 "TERM_HOLE_PLURAL" = "Löcher";
@@ -165,8 +166,10 @@
 "TERM_TREND" = "Trend";
 "TERM_UNKNOWN" = "unbekannt";
 "TERM_USE" = "verwenden";
+"TERM_VALUE" = "Wert";
 "TERM_VERSUS_ABBR" = "vs.";
 "TERM_WALTZ" = "Waltzer";
+"TERM_WINS" = "gewinnt";
 "TERM_WOMAN_PLURAL" = "Damen";
 "TERM_YARD_PLURAL" = "Yards";
 "TERM_YARD_PLURAL_ABBR" = "Yds.";
@@ -266,6 +269,7 @@
 "TITLE_ASSIGN_ROUND_TO" = "Zuweisen eine Runde";
 "TITLE_ASSIGN_TEES" = "Zuweisen Start-Abschläge";
 "TITLE_ASSIGN_TIMES" = "Zuweisen Anfangszeit";
+"TITLE_AUTOMATIC_PRESSES" = "Automatische Pressen";
 "TITLE_BACK_NINE" = "Letzteneun";
 "TITLE_BACK_SIDE" = "Letzteseite";
 "TITLE_BET_BACK" = "Letzteseite";
@@ -477,12 +481,14 @@
 "TITLE_BINGO" = "Bingo";
 "TITLE_BINGO_BANGO_BONGO" = "Bingo-Bango-Bongo";
 "TITLE_BONGO" = "Bongo";
+"TITLE_CHIPINSKI" = "Chip-in, Offner, Dr. Chipinski";
 "TITLE_COVER" = "Cover, Topper";
+"TITLE_FULL_HDCP" = "Ganz Hdcp.";
 "TITLE_GORILLA" = "Gorilla";
 "TITLE_GREENIE" = "Greenie";
 "TITLE_GURGLIE" = "Gurglie, Fish";
 "TITLE_HOGAN" = "Hogan";
-"TITLE_DR_CHIPINSKI" = "Chip-in, Offner, Dr. Chipinski";
+"TITLE_MATCH_TYPE" = "Matchtyp";
 "TITLE_POLIE" = "Polie";
 "TITLE_SANDIE" = "Sandie";
 "TITLE_SEVE" = "Seve";
@@ -491,6 +497,8 @@
 "TITLE_TRASH" = "Trash, Dots";
 "TITLE_WICKERS" = "Wickers";
 "TITLE_WOLF" = "Wolf";
+"TITLE_2_DOWN" = "2-down";
+"TITLE_1_DOWN_LAST" = "1-down letztes Loch";
 
 "DESCRIPTION_ARNIE" = "Par oder besser ohne das Fairway zu besuchen";
 "DESCRIPTION_ASPHALT" = "Par oder besser aus einem Wagenpfad";
@@ -499,12 +507,12 @@
 "DESCRIPTION_BINGO" = "Zuerst das Grün erreichen";
 "DESCRIPTION_BINGO_BANGO_BONGO" = "Zuerst das Grün, dem Loch nächsten, ester Putt gemacht";
 "DESCRIPTION_BONGO" = "Wegputten - ester Putt gemacht";
+"DESCRIPTION_CHIPINSKI" = "Chip-in";
 "DESCRIPTION_COVER" = "Krawatte oder Gegner unter Par Score schlagen";
 "DESCRIPTION_GORILLA" = "Am nächsten zum Flaggenstock in Regulierung auf Par 5";
 "DESCRIPTION_GREENIE" = "Am nächsten zum Flaggenstock in Regulierung auf Par 3 - entwertet mit einem 3-Putt";
 "DESCRIPTION_GURGLEY" = "Par oder besser vom, oder überspringen von, Wasser";
 "DESCRIPTION_HOGAN" = "Erlangte das Fairway, Grün in Regulation, 2-Putt par";
-"DESCRIPTION_DR_CHIPINSKI" = "Chip-in";
 "DESCRIPTION_NO_TRASH" = "No Trash/Dots category specified";
 "DESCRIPTION_POLIE" = "1-Putt länger als Flaggenstocklänge";
 "DESCRIPTION_SANDIE" = "Auf und ab von einem Grün-Bunker";
@@ -520,6 +528,7 @@
 "FORMAT_ASSIGN_%ld_ROUNDS_TO" = "%ld Runden zuweisen an";
 "FORMAT_BEST_%d_ROUNDS" = "besten %d Golfrunden";
 "FORMAT_BET_HOLES_%ld_%ld" = "Löcher %ld - %ld";
+"FORMAT_CLICKORTAP_%@_TO_SELECT" = "%@ um auszuwählen…";
 "FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST" = "%@ Sie auf die Nummer, un sie anzupassen";
 "FORMAT_CLICKORTAP_%@_NUMBER_%@_TO_ADJUST" = "%@ Sie auf die Nummer (%@), un sie anzupassen"; 
 "FORMAT_COURSE_HANDICAP_%@_TABLE" = "%@ Tabelle";
@@ -749,9 +758,13 @@
 "TOOLTIP_ROUNDS_MODIFIER_CONGU" = "* - benutzt\nT - Tournier";
 "TOOLTIP_ROUNDS_MODIFIER_EGA" = "* - benutzt\nT - Tournier";
 "TOOLTIP_ROUNDS_MODIFIER_MULLIGAN" = "* - benutzt\nA - entfernt\nT - Tournier";
+"TOOLTIP_SHOW_SCORECARD" = "Wettbewerber-Scorekarte anzeigen.";
+"TOOLTIP_SHOW_SCORECARD_UNAVAILABLE" = "Wettbewerber-Scorekarte anzeigen.\n\nNicht verfügbar, da kein Mitbewerber ausgewählt wurde.";
 "TOOLTIP_TEAM_GROSS_SCORE" = "Die gesamte Brutto Punktzahl der Mannschaft";
 "TOOLTIP_TEAM_NET_SCORE" = "Die gesamte Netto Punktzahl der Mannschaft";
 "TOOLTIP_TEAM_TOTAL_SCORE" = "Die Gesamtpunktzahl der Mannschaft";
+
+"INSTRUCTION_DRAG_ROUND_HERE" = "… oder zeihen Sie eine Runde hierher";
 
 //	Phrases & Special characters
 "ALL_SQUARE_CHARACTER" = "―";		//	\U2015 Special character	alt: "–" (En Dash) \U2013

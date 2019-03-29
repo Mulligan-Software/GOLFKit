@@ -10,10 +10,10 @@
 
 @interface GOLFDynamicColor : GOLFColor
 
-+ (GOLFColor *)dynamicColorWithAquaColor:(GOLFColor *)aquaColor darkAquaColor:(GOLFColor *__nullable)darkAquaColor;
++ (GOLFColor *_Nonnull)dynamicColorWithAquaColor:(GOLFColor *_Nonnull)aquaColor darkAquaColor:(GOLFColor *__nullable)darkAquaColor;
 
-- (instancetype)initWithAquaColor:(GOLFColor *)aquaColor darkAquaColor:(GOLFColor *__nullable)darkAquaColor;
+- (instancetype _Nonnull )initWithAquaColor:(GOLFColor *_Nonnull)aquaColor darkAquaColor:(GOLFColor *__nullable)darkAquaColor;
 
-- (GOLFColor *)effectiveColor;
+- (GOLFColor *_Nonnull)effectiveColor;
 
 @end

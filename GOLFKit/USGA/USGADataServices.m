@@ -46,6 +46,7 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 - (void)TokenPost:(NSInteger)expiresIn;
 - (void)GetGolfer:(NSString *)GHINString usingToken:(NSString *)token;
 - (void)GetCountryCodesUsingToken:(NSString *)token;
+- (void)GetStateCodesUsingToken:(NSString *)token;
 - (void)SearchCourses:(NSString *)courseName country:(NSString *)country state:(NSString *)state usingToken:(NSString *)token;
 - (void)GetCourseDetails:(NSUInteger)courseID usingToken:(NSString *)token;
 
@@ -188,6 +189,13 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 	return _USGAGetCountryCodesData;
 }
 
+- (NSMutableData *)USGAGetStateCodesData {
+	if (_USGAGetStateCodesData == nil) {
+		_USGAGetStateCodesData = [[NSMutableData alloc] init];	//	Retained
+	}
+	return _USGAGetStateCodesData;
+}
+
 - (NSMutableData *)USGASearchCoursesData {
 	if (_USGASearchCoursesData == nil) {
 		_USGASearchCoursesData = [[NSMutableData alloc] init];	//	Retained
@@ -281,6 +289,25 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 			self.USGAGetCountryCodesTaskCompletionHandler = completionHandler;
 			if (self.USGAGetCountryCodesTask == nil) {
 				[self GetCountryCodesUsingToken:accessToken];
+			}
+		}
+	}];
+}
+
+- (void)GetStateCodesWithCompletionHandler:(void (^)(NSDictionary *stateCodes, NSError *error))completionHandler {
+	[self TokenPostWithCompletionHandler:^(NSString *accessToken, NSDate *expiresAt, NSError *tokenError) {
+		if (tokenError != nil) {
+			//	TokenPost failure…
+    		NSLog(@"%@ -%@ TokenPost error: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), tokenError);
+			self.USGATokenPostTaskCompletionHandler = nil;
+			completionHandler(nil, tokenError);
+		} else {
+			//	Success…
+			self.accessToken = accessToken;
+			self.accessTokenExpiresAt = expiresAt;
+			self.USGAGetStateCodesTaskCompletionHandler = completionHandler;
+			if (self.USGAGetStateCodesTask == nil) {
+				[self GetStateCodesUsingToken:accessToken];
 			}
 		}
 	}];
@@ -409,8 +436,10 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 		[lookupRequest setValue:@"*/*" forHTTPHeaderField:@"Accept"];
 		[lookupRequest setValue:@"XMLHttpRequest" forHTTPHeaderField:@"X-Requested-With"];
 		
-		[lookupRequest setValue:self.USGADataServicesProductAppName forHTTPHeaderField:@"USGA-OriginatorId"];
-		[lookupRequest setValue:@"USGA Data Services" forHTTPHeaderField:@"USGA-SystemId"];
+//		[lookupRequest setValue:self.USGADataServicesProductAppName forHTTPHeaderField:@"USGA-OriginatorId"];
+//		[lookupRequest setValue:@"USGA Data Services" forHTTPHeaderField:@"USGA-SystemId"];
+		[lookupRequest setValue:@"null" forHTTPHeaderField:@"USGA-OriginatorId"];
+		[lookupRequest setValue:@"null" forHTTPHeaderField:@"USGA-SystemId"];
 
 		self.USGAGetCountryCodesTask = [self.USGAQuerySession dataTaskWithRequest:lookupRequest];
 		self.USGAGetCountryCodesData = nil;	//	Start with no data
@@ -420,6 +449,42 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 		
 		self.progressString = GOLFLocalizedString(@"NOTICE_USGA_CONNECTING");
 	}	//	if (self.USGAGetCountryCodesTask == nil)
+}
+
+- (void)GetStateCodesUsingToken:(NSString *)token {
+	if (self.USGAGetStateCodesTask == nil) {
+		NSURL *url = [NSURL URLWithString:@"https://apis.usga.org/api/v1/referencedata/statecodes"];
+		
+		NSMutableURLRequest *lookupRequest = [[NSMutableURLRequest alloc] initWithURL:url];
+		lookupRequest.HTTPMethod = @"GET";
+		lookupRequest.HTTPBody = [NSData data];
+		lookupRequest.networkServiceType = NSURLNetworkServiceTypeDefault;
+		lookupRequest.cachePolicy = NSURLRequestReloadIgnoringLocalCacheData;
+		lookupRequest.timeoutInterval = 30.0;
+		lookupRequest.HTTPShouldHandleCookies = YES;
+		
+		[lookupRequest setValue:[NSString stringWithFormat:@"Bearer %@", token] forHTTPHeaderField:@"Authorization"];
+		[lookupRequest setValue:self.userAgent forHTTPHeaderField:@"User-Agent"];
+		[lookupRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+		[lookupRequest setValue:@"en-us" forHTTPHeaderField:@"Accept-Language"];
+		[lookupRequest setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
+		[lookupRequest setValue:@"keep-alive" forHTTPHeaderField:@"Connection"];
+		[lookupRequest setValue:@"*/*" forHTTPHeaderField:@"Accept"];
+		[lookupRequest setValue:@"XMLHttpRequest" forHTTPHeaderField:@"X-Requested-With"];
+		
+//		[lookupRequest setValue:self.USGADataServicesProductAppName forHTTPHeaderField:@"USGA-OriginatorId"];
+//		[lookupRequest setValue:@"USGA Data Services" forHTTPHeaderField:@"USGA-SystemId"];
+		[lookupRequest setValue:@"null" forHTTPHeaderField:@"USGA-OriginatorId"];
+		[lookupRequest setValue:@"null" forHTTPHeaderField:@"USGA-SystemId"];
+
+		self.USGAGetStateCodesTask = [self.USGAQuerySession dataTaskWithRequest:lookupRequest];
+		self.USGAGetStateCodesData = nil;	//	Start with no data
+		self.needCancel = NO;
+
+		[self.USGAGetStateCodesTask resume];	//	Get the download going…
+		
+		self.progressString = GOLFLocalizedString(@"NOTICE_USGA_CONNECTING");
+	}	//	if (self.USGAGetStateCodesTask == nil)
 }
 
 - (void)SearchCourses:(NSString *)courseName country:(NSString *)country state:(NSString *)state usingToken:(NSString *)token {
@@ -513,6 +578,7 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 		self.USGATokenPostTaskCompletionHandler = nil;
 		self.USGAGetGolferTaskCompletionHandler = nil;
 		self.USGAGetCountryCodesTaskCompletionHandler = nil;
+		self.USGAGetStateCodesTaskCompletionHandler = nil;
 		self.USGASearchCoursesTaskCompletionHandler = nil;
 		self.USGAGetCourseDetailsTaskCompletionHandler = nil;
 		
@@ -732,12 +798,18 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 			}
 		} else if (task == self.USGAGetCountryCodesTask) {
 			if (error != nil) {
+#ifdef DEBUG
+    NSLog(@"%@ -%@ (GetCountryCodes) error: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), error);
+#endif
 //				[self.USGAQuerySession finishTasksAndInvalidate];
 				if (error.code == NSUserCancelledError) {
 					self.progressString = GOLFLocalizedString(@"NOTICE_USGA_CANCELLED");
 				} else {
 					self.progressString = [NSString stringWithFormat:GOLFLocalizedString(@"NOTICE_USGA_CODE_%ld_DESC_%@"), [error code], [error localizedFailureReason]];
 				}
+#ifdef DEBUG
+	NSLog(@"%@ -%@ (GetCountryCodes) %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), self.progressString);
+#endif
 				self.USGAGetCountryCodesTask = nil;	//	We don't need the reference
 				self.USGAGetCountryCodesData = nil;	//	Nor any data we've accumulated
 				if (self.USGAGetCountryCodesTaskCompletionHandler) {
@@ -754,7 +826,9 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 //				[self.USGAQuerySession finishTasksAndInvalidate];
 				NSInteger code = [(NSHTTPURLResponse *)lastResponse statusCode];
 				self.progressString = [NSString stringWithFormat:GOLFLocalizedString(@"NOTICE_USGA_CODE_%ld_DESC_%@"), code, [NSHTTPURLResponse localizedStringForStatusCode:code]];
-				
+#ifdef DEBUG
+	NSLog(@"%@ -%@ (GetCountryCodes) %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), self.progressString);
+#endif
 				NSInteger responseCode = GOLFKitForUSGADataServicesGetCountryCodesError;
 				NSString *responseDescription = GOLFLocalizedString(@"USGA_GETCOUNTRYCODES_FAIL");
 				if (code > 0) {
@@ -783,7 +857,6 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 					if (self.USGAGetCountryCodesTaskCompletionHandler) {
 						self.USGAGetCountryCodesTaskCompletionHandler(countryCodesDict, nil);
 					}
-					
 					self.progressString = @"";
 					return;
 				}
@@ -804,6 +877,93 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 			if (self.USGAGetCountryCodesTaskCompletionHandler) {
 				self.USGAGetCountryCodesTaskCompletionHandler(nil, dataError);
 			}
+#ifdef DEBUG
+    NSLog(@"%@ -%@ dataError: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), dataError);
+#endif
+		} else if (task == self.USGAGetStateCodesTask) {
+			if (error != nil) {
+#ifdef DEBUG
+    NSLog(@"%@ -%@ (GetStateCodes) error: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), error);
+#endif
+//				[self.USGAQuerySession finishTasksAndInvalidate];
+				if (error.code == NSUserCancelledError) {
+					self.progressString = GOLFLocalizedString(@"NOTICE_USGA_CANCELLED");
+				} else {
+					self.progressString = [NSString stringWithFormat:GOLFLocalizedString(@"NOTICE_USGA_CODE_%ld_DESC_%@"), [error code], [error localizedFailureReason]];
+				}
+#ifdef DEBUG
+	NSLog(@"%@ -%@ (GetStateCodes) %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), self.progressString);
+#endif
+				self.USGAGetStateCodesTask = nil;	//	We don't need the reference
+				self.USGAGetStateCodesData = nil;	//	Nor any data we've accumulated
+				if (self.USGAGetStateCodesTaskCompletionHandler) {
+					self.USGAGetStateCodesTaskCompletionHandler(nil, error);
+				}
+				return;
+			}	//	if (error != nil)
+			
+			NSURLResponse *lastResponse = [task response];
+			if ((lastResponse == nil)
+					|| ![lastResponse isKindOfClass:[NSHTTPURLResponse class]]
+					|| ([(NSHTTPURLResponse *)lastResponse statusCode] < 200)
+					|| ([(NSHTTPURLResponse *)lastResponse statusCode] > 299)) {
+//				[self.USGAQuerySession finishTasksAndInvalidate];
+				NSInteger code = [(NSHTTPURLResponse *)lastResponse statusCode];
+				self.progressString = [NSString stringWithFormat:GOLFLocalizedString(@"NOTICE_USGA_CODE_%ld_DESC_%@"), code, [NSHTTPURLResponse localizedStringForStatusCode:code]];
+#ifdef DEBUG
+	NSLog(@"%@ -%@ (GetStateCodes) %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), self.progressString);
+#endif
+				NSInteger responseCode = GOLFKitForUSGADataServicesGetStateCodesError;
+				NSString *responseDescription = GOLFLocalizedString(@"USGA_GETSTATECODES_FAIL");
+				if (code > 0) {
+					responseDescription = [responseDescription stringByAppendingFormat:@" - %@ (%ld)", [NSHTTPURLResponse localizedStringForStatusCode:code], (long)code];
+				}
+				NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:responseCode], @"statusCode",
+								responseDescription, @"localizedDescription",
+								nil];
+				NSError *responseError = [NSError errorWithDomain:GOLFKitForUSGADataServicesErrorDomain code:responseCode userInfo:info];
+				self.USGAGetStateCodesTask = nil;	//	We don't need the reference
+				self.USGAGetStateCodesData = nil;	//	Nor any data we've accumulated
+				if (self.USGAGetStateCodesTaskCompletionHandler) {
+					self.USGAGetStateCodesTaskCompletionHandler(nil, responseError);
+				}
+				return;
+			}	//	if ((lastResponse == nil)
+			
+			NSError *JSONError = nil;
+			if ((self.USGAGetStateCodesData != nil) && ([self.USGAGetStateCodesData length] > 0)) {
+				NSDictionary *stateCodesDict = [NSJSONSerialization JSONObjectWithData:self.USGAGetStateCodesData options:0 error:&JSONError];
+				if ((JSONError == nil) && [stateCodesDict isKindOfClass:[NSDictionary class]]) {
+					//	JSON return data…
+					
+					self.USGAGetStateCodesTask = nil;	//	We don't need the reference
+					self.USGAGetStateCodesData = nil;	//	Nor any data we've accumulated
+					if (self.USGAGetStateCodesTaskCompletionHandler) {
+						self.USGAGetStateCodesTaskCompletionHandler(stateCodesDict, nil);
+					}
+					self.progressString = @"";
+					return;
+				}
+			}
+			NSInteger errorCode = GOLFKitForUSGADataServicesGetStateCodesError;
+			NSString *errorDescription = GOLFLocalizedString(@"USGA_GETSTATECODES_JSON_FAIL");
+			if (JSONError) {
+				errorDescription = [errorDescription stringByAppendingFormat:@" - %@ (%ld)", [JSONError localizedDescription], (long)[JSONError code]];
+			}
+			NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:errorCode], @"statusCode",
+							errorDescription, @"localizedDescription",
+							nil];
+			NSError *dataError = [NSError errorWithDomain:GOLFKitForUSGADataServicesErrorDomain code:errorCode userInfo:info];
+			self.progressString = GOLFLocalizedString(@"NOTICE_USGA_FAILED");
+
+			self.USGAGetStateCodesTask = nil;	//	We don't need the reference
+			self.USGAGetStateCodesData = nil;	//	Nor any data we've accumulated
+			if (self.USGAGetStateCodesTaskCompletionHandler) {
+				self.USGAGetStateCodesTaskCompletionHandler(nil, dataError);
+			}
+#ifdef DEBUG
+    NSLog(@"%@ -%@ dataError: %@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), dataError);
+#endif
 		} else if (task == self.USGASearchCoursesTask) {
 			if (error != nil) {
 #ifdef DEBUG
@@ -1128,6 +1288,9 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 //		} else if (dataTask == self.USGAGetCountryCodesTask) {
 //			self.progressString = GOLFLocalizedString(@"NOTICE_USGA_CONNECTED");
 //			completionHandler(disposition);
+//		} else if (dataTask == self.USGAGetStateCodesTask) {
+//			self.progressString = GOLFLocalizedString(@"NOTICE_USGA_CONNECTED");
+//			completionHandler(disposition);
 //		} else if (dataTask == self.USGASearchCoursesTask) {
 //			self.progressString = GOLFLocalizedString(@"NOTICE_USGA_CONNECTED");
 //			completionHandler(disposition);
@@ -1193,6 +1356,8 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 			[self.USGASearchCoursesData appendData:data];
 		} else if (dataTask == self.USGAGetCountryCodesTask) {
 			[self.USGAGetCountryCodesData appendData:data];
+		} else if (dataTask == self.USGAGetStateCodesTask) {
+			[self.USGAGetStateCodesData appendData:data];
 		} else if (dataTask == self.USGAGetCourseDetailsTask) {
 			[self.USGAGetCourseDetailsData appendData:data];
 		}

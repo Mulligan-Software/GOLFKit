@@ -628,7 +628,7 @@
 			};
 			buildConfigurationList = 29E888A61DCE5B0000C4A63A /* Build configuration list for PBXProject "GOLFKit" */;
 			compatibilityVersion = "Xcode 8.0";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,

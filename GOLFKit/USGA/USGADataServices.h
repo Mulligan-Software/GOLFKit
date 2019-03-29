@@ -29,7 +29,7 @@ typedef NS_ENUM(NSUInteger, USGADataServicesMethod) {
 	USGADataServicesMethodUnknown = 999				//	Unknown handicapping type
 };
 
-extern NSString * const GOLFKitForUSGADataServicesErrorDomain;	//	The error domain name
+extern NSString * _Nonnull const GOLFKitForUSGADataServicesErrorDomain;	//	The error domain name
 
 typedef NS_ENUM(NSInteger, GOLFKitForUSGADataServicesErrorDomainError) {
 	GOLFKitForUSGADataServicesDataError					= 10000,	// generic error
@@ -55,7 +55,7 @@ typedef NS_ENUM(NSInteger, GOLFKitForUSGADataServicesErrorDomainError) {
 //	appName					NSString *		Complete name of the Scoring Data Services Product
 //	appKey					NSString *		The appKey required as credential for the app
 //	appSecret				NSString *		The credentialling confidential appKey for the app
-- (NSDictionary *)USGADataServicesAppInfo;
+- (NSDictionary * _Nullable)USGADataServicesAppInfo;
 
 @end
 
@@ -68,7 +68,7 @@ typedef NS_ENUM(NSInteger, GOLFKitForUSGADataServicesErrorDomainError) {
 
 @property (nullable, retain) id <USGADataServicesAgentDelegate> delegate;
 @property (nonatomic, strong, nullable) NSURLSession *USGAQuerySession;
-@property (nonatomic, strong) NSString *userAgent;
+@property (nonatomic, strong) NSString * _Nullable userAgent;
 
 //	TokenPost
 @property (nonatomic, strong, nullable) NSString *accessToken;
@@ -76,7 +76,7 @@ typedef NS_ENUM(NSInteger, GOLFKitForUSGADataServicesErrorDomainError) {
 
 @property (nonatomic, strong, nullable) NSURLSessionTask *USGATokenPostTask;
 @property (nonatomic, strong, nullable) NSMutableData *USGATokenPostData;
-@property (nonatomic, copy) void (^USGATokenPostTaskCompletionHandler)(NSString *accessToken, NSDate *expiresAt, NSError *error);
+@property (nonatomic, copy, nullable) void (^USGATokenPostTaskCompletionHandler)(NSString * _Nullable accessToken, NSDate * _Nullable expiresAt, NSError * _Nullable error);
 
 //	GetGolfer
 @property (nonatomic, weak, nullable) id golfer;
@@ -84,12 +84,17 @@ typedef NS_ENUM(NSInteger, GOLFKitForUSGADataServicesErrorDomainError) {
 
 @property (nonatomic, strong, nullable) NSURLSessionTask *USGAGetGolferTask;
 @property (nonatomic, strong, nullable) NSMutableData *USGAGetGolferData;
-@property (nonatomic, copy) void (^USGAGetGolferTaskCompletionHandler)(id golferInfo, NSError *error);
+@property (nonatomic, copy, nullable) void (^USGAGetGolferTaskCompletionHandler)(id _Nullable golferInfo, NSError * _Nullable error);
 
 //	GetCountryCodes
 @property (nonatomic, strong, nullable) NSURLSessionTask *USGAGetCountryCodesTask;
 @property (nonatomic, strong, nullable) NSMutableData *USGAGetCountryCodesData;
-@property (nonatomic, copy) void (^USGAGetCountryCodesTaskCompletionHandler)(NSDictionary *countryCodes, NSError *error);
+@property (nonatomic, copy, nullable) void (^USGAGetCountryCodesTaskCompletionHandler)(NSDictionary * _Nullable countryCodes, NSError * _Nullable error);
+
+//	GetStateCodes
+@property (nonatomic, strong, nullable) NSURLSessionTask *USGAGetStateCodesTask;
+@property (nonatomic, strong, nullable) NSMutableData *USGAGetStateCodesData;
+@property (nonatomic, copy, nullable) void (^USGAGetStateCodesTaskCompletionHandler)(NSDictionary * _Nullable stateCodes, NSError * _Nullable error);
 
 //	SearchCourses
 @property (nonatomic, weak, nullable) NSString *courseName;
@@ -98,26 +103,26 @@ typedef NS_ENUM(NSInteger, GOLFKitForUSGADataServicesErrorDomainError) {
 
 @property (nonatomic, strong, nullable) NSURLSessionTask *USGASearchCoursesTask;
 @property (nonatomic, strong, nullable) NSMutableData *USGASearchCoursesData;
-@property (nonatomic, copy) void (^USGASearchCoursesTaskCompletionHandler)(NSArray *foundCourses, NSError *error);
+@property (nonatomic, copy, nullable) void (^USGASearchCoursesTaskCompletionHandler)(NSArray * _Nullable foundCourses, NSError * _Nullable error);
 
 //	GetCourseDetails
 @property (nonatomic, assign) NSUInteger courseID;
 
 @property (nonatomic, strong, nullable) NSURLSessionTask *USGAGetCourseDetailsTask;
 @property (nonatomic, strong, nullable) NSMutableData *USGAGetCourseDetailsData;
-@property (nonatomic, copy) void (^USGAGetCourseDetailsTaskCompletionHandler)(NSDictionary *detailsDict, NSError *error);
+@property (nonatomic, copy, nullable) void (^USGAGetCourseDetailsTaskCompletionHandler)(NSDictionary * _Nullable detailsDict, NSError * _Nullable error);
 
 @property (nullable, strong) NSString *progressString;
 @property (nullable, strong) NSTimer *startupTimer;
 
 @property (nonatomic, assign) BOOL needCancel;
 
-+ (USGADataServicesAgent *)agentForDelegate:(id<USGADataServicesAgentDelegate>)delegate appInfo:(NSDictionary *)appInfo;
++ (USGADataServicesAgent * _Nonnull)agentForDelegate:(id<USGADataServicesAgentDelegate> _Nonnull)delegate appInfo:(NSDictionary * _Nullable)appInfo;
 
-- (USGADataServicesAgent *)initWithDelegate:(id<USGADataServicesAgentDelegate>)delegate appInfo:(NSDictionary *)appInfo;
+- (USGADataServicesAgent * _Nonnull)initWithDelegate:(id<USGADataServicesAgentDelegate> _Nonnull)delegate appInfo:(NSDictionary * _Nullable)appInfo;
 - (void)invalidateAndClose;
 
-- (void)requestAccessTokenWithTimer:(NSTimer *)timer;
+- (void)requestAccessTokenWithTimer:(NSTimer * _Nonnull)timer;
 
 //	Call:
 //		[(USGADataServicesAgent *)agent TokenPostWithCompletionHandler:^(NSString *accessToken, NSDate *expiresAt, NSError *error) {
@@ -127,7 +132,7 @@ typedef NS_ENUM(NSInteger, GOLFKitForUSGADataServicesErrorDomainError) {
 //			error:			nil or POSIX/USGA/GOLFKit error domain NSError resulting from TokenPost request
 //		}];
 //
-- (void)TokenPostWithCompletionHandler:(void (^)(NSString *accessToken, NSDate *expiresAt, NSError *error))completionHandler;
+- (void)TokenPostWithCompletionHandler:(void (^ _Nonnull)(NSString * _Nullable accessToken, NSDate * _Nullable expiresAt, NSError * _Nullable error))completionHandler;
 
 //	Call:
 //		[(USGADataServicesAgent *)agent GetGolfer:golfer withID:GHINString completionHandler:^(id golferInfo, NSError *error) {
@@ -323,7 +328,7 @@ typedef NS_ENUM(NSInteger, GOLFKitForUSGADataServicesErrorDomainError) {
 //		]	("LowestHiValues")
 //	]	(GolferInfo)
 //
-- (void)GetGolfer:(id)golfer withID:(NSString *)GHINString completionHandler:(void (^)(id golferInfo, NSError *error))completionHandler;
+- (void)GetGolfer:(id _Nullable)golfer withID:(NSString * _Nonnull)GHINString completionHandler:(void (^ _Nonnull)(id _Nullable golferInfo, NSError * _Nullable error))completionHandler;
 
 //	Call:
 //		[(USGADataServicesAgent *)agent GetCountryCodesWithCompletionHandler:^(NSDictionary *countryCodes, NSError *error) {
@@ -338,234 +343,104 @@ typedef NS_ENUM(NSInteger, GOLFKitForUSGADataServicesErrorDomainError) {
 //		}];
 //
 //	{
-//	  "11": {
-//		"ISOCountryCode": "ARG",
-//		"Description": "Argentina",
-//		"StringValue": "ARG"
-//	  },
-//	  "14": {
-//		"ISOCountryCode": "AUS",
-//		"Description": "Australia",
-//		"StringValue": "AUS"
-//	  },
-//	  "15": {
-//		"ISOCountryCode": "AUT",
-//		"Description": "Austria",
-//		"StringValue": "AUT"
-//	  },
-//	  "17": {
-//		"ISOCountryCode": "BHS",
-//		"Description": "Bahamas",
-//		"StringValue": "BHS"
-//	  },
-//	  "19": {
-//		"ISOCountryCode": "BGD",
-//		"Description": "Bangladesh",
-//		"StringValue": "BGD"
-//	  },
-//	  "22": {
-//		"ISOCountryCode": "BEL",
-//		"Description": "Belgium",
-//		"StringValue": "BEL"
-//	  },
-//	  "25": {
-//		"ISOCountryCode": "BMU",
-//		"Description": "Bermuda",
-//		"StringValue": "BMU"
-//	  },
-//	  "27": {
-//		"ISOCountryCode": "BOL",
-//		"Description": "Bolivia",
-//		"StringValue": "BOL"
-//	  },
-//	  "32": {
-//		"ISOCountryCode": "BRA",
-//		"Description": "Brazil",
-//		"StringValue": "BRA"
-//	  },
-//	  "35": {
-//		"ISOCountryCode": "BGR",
-//		"Description": "Bulgaria",
-//		"StringValue": "BGR"
-//	  },
-//	  "40": {
-//		"ISOCountryCode": "CAN",
-//		"Description": "Canada",
-//		"StringValue": "CAN"
-//	  },
-//	  "42": {
-//		"ISOCountryCode": "CYM",
-//		"Description": "Cayman Islands",
-//		"StringValue": "CYM"
-//	  },
-//	  "45": {
-//		"ISOCountryCode": "CHL",
-//		"Description": "Chile",
-//		"StringValue": "CHL"
-//	  },
-//	  "46": {
-//		"ISOCountryCode": "CHN",
-//		"Description": "China",
-//		"StringValue": "CHN"
-//	  },
-//	  "49": {
-//		"ISOCountryCode": "COL",
-//		"Description": "Colombia",
-//		"StringValue": "COL"
-//	  },
-//	  "60": {
-//		"ISOCountryCode": "CZE",
-//		"Description": "Czechia",
-//		"StringValue": "CZE"
-//	  },
-//	  "61": {
-//		"ISOCountryCode": "DNK",
-//		"Description": "Denmark",
-//		"StringValue": "DNK"
-//	  },
-//	  "68": {
-//		"ISOCountryCode": "GBR",
-//		"Description": "England (UK)",
-//		"StringValue": "ENG"
-//	  },
-//	  "76": {
-//		"ISOCountryCode": "FIN",
-//		"Description": "Finland",
-//		"StringValue": "FIN"
-//	  },
-//	  "77": {
-//		"ISOCountryCode": "FRA",
-//		"Description": "France",
-//		"StringValue": "FRA"
-//	  },
-//	  "84": {
-//		"ISOCountryCode": "DEU",
-//		"Description": "Germany",
-//		"StringValue": "DEU"
-//	  },
-//	  "91": {
-//		"ISOCountryCode": "GUM",
-//		"Description": "Guam",
-//		"StringValue": "GUM"
-//	  },
-//	  "104": {
-//		"ISOCountryCode": "IND",
-//		"Description": "India",
-//		"StringValue": "IND"
-//	  },
-//	  "105": {
-//		"ISOCountryCode": "IDN",
-//		"Description": "Indonesia",
-//		"StringValue": "IDN"
-//	  },
-//	  "108": {
-//		"ISOCountryCode": "IRL",
-//		"Description": "Ireland",
-//		"StringValue": "IRL"
-//	  },
-//	  "111": {
-//		"ISOCountryCode": "ITA",
-//		"Description": "Italy",
-//		"StringValue": "ITA"
-//	  },
-//	  "113": {
-//		"ISOCountryCode": "JPN",
-//		"Description": "Japan",
-//		"StringValue": "JPN"
-//	  },
-//	  "119": {
-//		"ISOCountryCode": "PRK",
-//		"Description": "Korea (Democratic People's Republic of)",
-//		"StringValue": "PRK"
-//	  },
-//	  "120": {
-//		"ISOCountryCode": "KOR",
-//		"Description": "Korea (Republic of)",
-//		"StringValue": "KOR"
-//	  },
-//	  "137": {
-//		"ISOCountryCode": "MYS",
-//		"Description": "Malaysia",
-//		"StringValue": "MYS"
-//	  },
-//	  "146": {
-//		"ISOCountryCode": "MEX",
-//		"Description": "Mexico",
-//		"StringValue": "MEX"
-//	  },
-//	  "155": {
-//		"ISOCountryCode": "MMR",
-//		"Description": "Myanmar",
-//		"StringValue": "MMR"
-//	  },
-//	  "159": {
-//		"ISOCountryCode": "NLD",
-//		"Description": "Netherlands",
-//		"StringValue": "NLD"
-//	  },
-//	  "161": {
-//		"ISOCountryCode": "NZL",
-//		"Description": "New Zealand",
-//		"StringValue": "NZL"
-//	  },
-//	  "167": {
-//		"ISOCountryCode": "GBR",
-//		"Description": "Northern Ireland",
-//		"StringValue": "NIR"
-//	  },
-//	  "169": {
-//		"ISOCountryCode": "NOR",
-//		"Description": "Norway",
-//		"StringValue": "NOR"
-//	  },
-//	  "182": {
-//		"ISOCountryCode": "PRI",
-//		"Description": "Puerto Rico",
-//		"StringValue": "PRI"
-//	  },
-//	  "199": {
-//		"ISOCountryCode": "GBR",
-//		"Description": "Scotland (UK)",
-//		"StringValue": "SCO"
-//	  },
-//	  "210": {
-//		"ISOCountryCode": "ZAF",
-//		"Description": "South Africa",
-//		"StringValue": "ZAF"
-//	  },
-//	  "213": {
-//		"ISOCountryCode": "ESP",
-//		"Description": "Spain",
-//		"StringValue": "ESP"
-//	  },
-//	  "219": {
-//		"ISOCountryCode": "SWE",
-//		"Description": "Sweden",
-//		"StringValue": "SWE"
-//	  },
-//	  "225": {
-//		"ISOCountryCode": "THA",
-//		"Description": "Thailand",
-//		"StringValue": "THA"
-//	  },
-//	  "240": {
-//		"ISOCountryCode": "USA",
-//		"Description": "United States of America",
-//		"StringValue": "USA"
-//	  },
-//	  "246": {
-//		"ISOCountryCode": "VGB",
-//		"Description": "Virgin Islands (British)",
-//		"StringValue": "VGB"
-//	  },
-//	  "248": {
-//		"ISOCountryCode": "GBR",
-//		"Description": "Wales (UK)",
-//		"StringValue": "WLS"
-//	  }
+//		"14": {
+//			"ISOCountryCode": "AUS",
+//			"Description": "Australia",
+//			"StringValue": "AUS"
+//		},
+//		...
+//		"68": {
+//			"ISOCountryCode": "GBR",
+//			"Description": "England (UK)",
+//			"StringValue": "ENG"
+//		},
+//		...
+//		"240": {
+//			"ISOCountryCode": "USA",
+//			"Description": "United States of America",
+//			"StringValue": "USA"
+//		},
+//		...
 //	}
 //
-- (void)GetCountryCodesWithCompletionHandler:(void (^)(NSDictionary *countryCodes, NSError *error))completionHandler;
+- (void)GetCountryCodesWithCompletionHandler:(void (^ _Nonnull)(NSDictionary * _Nullable countryCodes, NSError * _Nullable error))completionHandler;
+
+//	Call:
+//		[(USGADataServicesAgent *)agent GetStateCodesWithCompletionHandler:^(NSDictionary *stateCodes, NSError *error) {
+//			parameters:		none
+//			stateCodes:		nil or NSDictionary containing valid country coded (as keys) NSDictionarys (ie: "240" = Texas)
+//								key				type		description
+//								--------------	----------	----------------------------------------
+//								Description		NSString *	Full country name (ie: United States of America)
+//								ISOCountryCode	NSString *	ISO-standard alphabetic country identifier (ie: "USA")
+//								StringValue		NSString *	String-equivalent country identifier (ie: "USA")
+//			error:			nil or POSIX/USGA/GOLFKit error domain NSError resulting from GetCountryCodes request
+//		}];
+//
+//	{
+//		"200001": {
+//			"CountryCode": "240",
+//			"ISOStateCode": "US-AL",
+//			"Description": "Alabama",
+//			"StringValue": "US_AL"
+//		},
+//		"200002": {
+//			"CountryCode": "240",
+//			"ISOStateCode": "US-AK",
+//			"Description": "Alaska",
+//			"StringValue": "US_AK"
+//		},
+//		...
+//		"200044": {
+//			"CountryCode": "240",
+//			"ISOStateCode": "US-TX",
+//			"Description": "Texas",
+//			"StringValue": "US_TX"
+//		},
+//		...
+//		"200077": {
+//			"CountryCode": "14",
+//			"ISOStateCode": "",
+//			"Description": "Jervis Bay Territory",
+//			"StringValue": "AU_JB"
+//		},
+//		"200078": {
+//			"CountryCode": "14",
+//			"ISOStateCode": "AU-NSW",
+//			"Description": "New South Wales",
+//			"StringValue": "AU_NS"
+// 		 },
+// 		 ...
+//		"200099": {
+//			 "CountryCode": "32",
+//			"ISOStateCode": "BR-AP",
+//			"Description": "Amazonas",
+//			"StringValue": "BR_AM"
+//		},
+//		...
+//		"200238": {
+//			"CountryCode": "68",
+//			"ISOStateCode": "GB-DBY",
+//			"Description": "Derbyshire",
+//			"StringValue": "EN_DB"
+//  		},
+//  		...
+//		"204158": {
+//			"CountryCode": "159",
+//			"ISOStateCode": "NL-SX",
+//			"Description": "Sint Maarten",
+//			"StringValue": "NL_SX"
+//		},
+//		...
+//		"204164": {
+//			"CountryCode": "240",
+//			"ISOStateCode": "US-VI",
+//			"Description": "Virgin Islands, U.S.",
+//			"StringValue": "US_VI"
+//		}
+//	}
+//
+- (void)GetStateCodesWithCompletionHandler:(void (^ _Nonnull)(NSDictionary * _Nullable stateCodes, NSError * _Nullable error))completionHandler;
 
 //	Call:
 //		[(USGADataServicesAgent *)agent SearchCourses:courseName country:country state:state completionHandler:^(NSArray *foundCourses, NSError *error) {
@@ -605,7 +480,7 @@ typedef NS_ENUM(NSInteger, GOLFKitForUSGADataServicesErrorDomainError) {
 //		}
 //	]
 //
-- (void)SearchCourses:(NSString *)courseName country:(NSString *)country state:(NSString *)state completionHandler:(void (^)(NSArray *foundCourses, NSError *error))completionHandler;
+- (void)SearchCourses:(NSString * _Nonnull)courseName country:(NSString * _Nonnull)country state:(NSString * _Nonnull)state completionHandler:(void (^ _Nonnull)(NSArray * _Nullable foundCourses, NSError * _Nullable error))completionHandler;
 
 //	Call:
 //		[(USGADataServicesAgent *)agent GetCourseDetails:courseID completionHandler:^(NSDictionary *courseDetails, NSError *error) {
@@ -677,7 +552,7 @@ typedef NS_ENUM(NSInteger, GOLFKitForUSGADataServicesErrorDomainError) {
 //	  "CourseState": "US-TX"
 //	}
 //
-- (void)GetCourseDetails:(NSUInteger)courseID completionHandler:(void (^)(NSDictionary *courseDetails, NSError *error))completionHandler;
+- (void)GetCourseDetails:(NSUInteger)courseID completionHandler:(void (^ _Nonnull)(NSDictionary * _Nullable courseDetails, NSError * _Nullable error))completionHandler;
 
 
 //- (void)GetHandicapProfileforGolfer:(NSString *)GolferId completionHandler:(void (^)(NSDictionary *profileDictionary, NSError *error))completionHandler;
