@@ -43,6 +43,7 @@
 "TERM_COPY" = "copy";
 "TERM_COURSE" = "course";
 "TERM_COURSE_PLURAL" = "courses";
+"TERM_CUSTOMIZATION" = "customization";
 "TERM_DATE" = "date";
 "TERM_DELETE" = "delete";
 "TERM_DISQUALIFIED" = "disqualified";
@@ -907,7 +908,7 @@
 "Wales" = "Wales";
 "Zimbabwe" = "Zimbabwe";
 
-//	GOLFKit for USGA Data Services
+//	GOLFKit for USGA Data Services (English only at this point)
 "USGA_DATA_SERVICES_UNREACHABLE" = "USGA Data Services is unreachable";
 "USGA_GETCOUNTRYCODES_FAIL" = "GetCountryCodes query failed";
 "USGA_GETCOUNTRYCODES_JSON_FAIL" = "GetCountryCodes JSON serialization failed";
@@ -921,5 +922,6 @@
 "USGA_GETSTATECODES_JSON_FAIL" = "GetStateCodes JSON serialization failed";
 "USGA_SEARCHCOURSES_FAIL" = "SearchCourses failed";
 "USGA_SEARCHCOURSES_JSON_FAIL" = "SearchCourses JSON serialization failed";
+"USGA_NOT_AVAILABLE_FAIL" = "USGA Data Services not available";
 "USGA_TOKENPOST_FAIL" = "TokenPost failed";
 "USGA_TOKENPOST_JSON_FAIL" = "TokenPost JSON serialization failed";

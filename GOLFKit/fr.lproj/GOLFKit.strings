@@ -43,6 +43,7 @@
 "TERM_COPY" = "copier";
 "TERM_COURSE" = "parcours";
 "TERM_COURSE_PLURAL" = "parcours";
+"TERM_CUSTOMIZATION" = "personnalisation";
 "TERM_DATE" = "date";
 "TERM_DELETE" = "supprimer";
 "TERM_DISQUALIFIED" = "disqualifié";

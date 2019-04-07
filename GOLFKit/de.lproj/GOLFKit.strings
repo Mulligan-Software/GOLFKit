@@ -43,6 +43,7 @@
 "TERM_COPY" = "kopieren";
 "TERM_COURSE" = "Golfplatz";
 "TERM_COURSE_PLURAL" = "Golfplätze";
+"TERM_CUSTOMIZATION" = "Anpassung";
 "TERM_DATE" = "Datum";
 "TERM_DELETE" = "löschen";
 "TERM_DISQUALIFIED" = "disqualifiziert";

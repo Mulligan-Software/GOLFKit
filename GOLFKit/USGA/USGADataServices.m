@@ -95,7 +95,7 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 		NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
 		NSString *bundleName = [info objectForKey:@"CFBundleName"];	//	"The Scoring Machine"
 		NSString *bundleVersion = [info objectForKey:@"CFBundleVersion"];	//	97
-		NSString *bundleShortVersion = [info objectForKey:@"CFBundleShortVersionString"];	//	"1.5.1"
+		NSString *bundleShortVersion = [info objectForKey:@"CFBundleShortVersionString"];	//	"1.5.2"
 		NSString *osVersionString = @"";
 		if (systemVersion.patchVersion > 0) {
 			osVersionString = [NSString stringWithFormat:@"_%ld", (long)systemVersion.patchVersion];
@@ -237,19 +237,32 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 }
 
 - (void)TokenPostWithCompletionHandler:(void (^)(NSString *accessToken, NSDate *expiresAt, NSError *error))completionHandler {
-	NSString *token = self.accessToken;
-	NSDate *expiresAt = ((self.accessTokenExpiresAt == nil) ? [NSDate date] : self.accessTokenExpiresAt);
-	NSDate *needNewTokenDate = [NSDate dateWithTimeInterval:-10 sinceDate:expiresAt];	//	10 seconds before now or expiration
-	if ((self.USGATokenPostTask == nil) && (token != nil) && (expiresAt != nil) && ([needNewTokenDate timeIntervalSinceNow] > 0)) {
-		//	The current token hasn't (isn't soon to be) expired…
-		self.USGATokenPostTaskCompletionHandler = nil;
-		if (completionHandler) {
-			completionHandler(token, expiresAt, nil);
+	if (USGADataServicesIsAvailable) {
+		NSString *token = self.accessToken;
+		NSDate *expiresAt = ((self.accessTokenExpiresAt == nil) ? [NSDate date] : self.accessTokenExpiresAt);
+		NSDate *needNewTokenDate = [NSDate dateWithTimeInterval:-10 sinceDate:expiresAt];	//	10 seconds before now or expiration
+		if ((self.USGATokenPostTask == nil) && (token != nil) && (expiresAt != nil) && ([needNewTokenDate timeIntervalSinceNow] > 0)) {
+			//	The current token hasn't (isn't soon to be) expired…
+			self.USGATokenPostTaskCompletionHandler = nil;
+			if (completionHandler) {
+				completionHandler(token, expiresAt, nil);
+			}
+		} else {
+			self.USGATokenPostTaskCompletionHandler = completionHandler;
+			if (self.USGATokenPostTask == nil) {
+				[self TokenPost:(NSInteger)kDefaultUSGADataServicesAccessTokenExpiration];
+			}
 		}
 	} else {
-		self.USGATokenPostTaskCompletionHandler = completionHandler;
-		if (self.USGATokenPostTask == nil) {
-			[self TokenPost:(NSInteger)kDefaultUSGADataServicesAccessTokenExpiration];
+		if (completionHandler) {
+			NSInteger errorCode = GOLFKitForUSGADataServicesNotAvailableError;
+			NSString *errorDescription = GOLFLocalizedString(@"USGA_NOT_AVAILABLE_FAIL");
+			NSDictionary *info = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithInteger:errorCode], @"statusCode",
+							errorDescription, @"localizedDescription",
+							nil];
+			NSError *naError = [NSError errorWithDomain:GOLFKitForUSGADataServicesErrorDomain code:errorCode userInfo:info];
+
+			completionHandler(nil, nil, naError);
 		}
 	}
 }

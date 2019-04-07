@@ -43,6 +43,7 @@
 "TERM_COPY" = "copiar";
 "TERM_COURSE" = "campo";
 "TERM_COURSE_PLURAL" = "campos";
+"TERM_CUSTOMIZATION" = "personalización";
 "TERM_DATE" = "fecha";
 "TERM_DELETE" = "eliminar";
 "TERM_DISQUALIFIED" = "descalificado";

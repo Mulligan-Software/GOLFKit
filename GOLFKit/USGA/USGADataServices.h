@@ -10,6 +10,7 @@
 #import "GOLFKit.h"
 
 //	Misc constants
+#define USGADataServicesIsAvailable 0	//	for testing
 #define USGADataServicesDidCompleteHandicapRetrievalNotification @"DidCompleteUSGADataServicesHandicapRetrieval"	//	for Notification
 #define USGADataServicesHandicapRetrievalDidFailNotification @"USGADataServicesHandicapRetrievalDidFail"			//	for Notification
 
@@ -33,6 +34,7 @@ extern NSString * _Nonnull const GOLFKitForUSGADataServicesErrorDomain;	//	The e
 
 typedef NS_ENUM(NSInteger, GOLFKitForUSGADataServicesErrorDomainError) {
 	GOLFKitForUSGADataServicesDataError					= 10000,	// generic error
+	GOLFKitForUSGADataServicesNotAvailableError			= 10005,	// the flag USGADataServicesIsAvailable (above) is NOT set
 	GOLFKitForUSGADataServicesMultipleErrorsError		= 10010,	// generic message for error containing multiple validation errors
 	GOLFKitForUSGADataServicesTokenPostError			= 10150,	// something wrong with TokenPost access token retrieval
 	GOLFKitForUSGADataServicesGetGolferError			= 10160,	// something wrong with GetGolfer retrieval
