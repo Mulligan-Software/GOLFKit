@@ -243,6 +243,38 @@ NSString * NSStringFromTrashOption(GOLFWageringTrashOption trashOption, NSString
 	}
 }
 
+NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourceCode) {
+//	GOLFWageringScoringSourceGross,				//	(0)		Match Play using gross scores
+//	GOLFWageringScoringSourceNet = 10,			//	(10)	Match Play using full handicap net scores 
+//	GOLFWageringScoringSourceComp = 20,			//	(20)	Match Play using allowance adjusted competition scores
+//	GOLFWageringScoringSourceCalculated = 30,	//	(30)	Match Play using calculated scores
+//	GOLFWageringScoringSourceTeammates = 40,	//	(40)	Match Play using teammate scores
+//	GOLFWageringScoringSourceUnknown = 99		//	Unknown
+
+	switch (sourceCode) {
+		case GOLFWageringScoringSourceGross:
+    		return NSLocalizedString(@"Gross (0)", @"");
+
+		case GOLFWageringScoringSourceNet:
+    		return NSLocalizedString(@"Net (10)", @"");
+
+		case GOLFWageringScoringSourceComp:
+    		return NSLocalizedString(@"Comp (20)", @"");
+
+		case GOLFWageringScoringSourceCalculated:
+    		return NSLocalizedString(@"Calculated (30)", @"");
+
+		case GOLFWageringScoringSourceTeammates:
+    		return NSLocalizedString(@"Teammates (40)", @"");
+
+		case GOLFWageringScoringSourceUnknown:
+    		return NSLocalizedString(@"Unknown (99)", @"");
+
+		default:
+    		return [NSString stringWithFormat:NSLocalizedString(@"Error (%lu)", @""), (unsigned long)sourceCode];
+	}
+}
+
 
 @implementation GOLFBet
 
@@ -316,6 +348,7 @@ NSString * NSStringFromTrashOption(GOLFWageringTrashOption trashOption, NSString
 	//	bStrokesString	NSString *		18-character string of strokes given for B competitor (optional)
 	//	lowHandicap		NSNumber *		GOLFPlayingHandicap for the lowest handicap competitor
 	//	lowName			NSString *		name of the lowest-handicapped competitor
+	//	scoringSource	NSNumber *		GOLFWageringScoringSource for scores (gross, net, comp, etc.)
 			
 	if (self.fromBet) {
 		return [self.fromBet betInfo];
@@ -738,7 +771,10 @@ NSString * NSStringFromTrashOption(GOLFWageringTrashOption trashOption, NSString
 						} else {
 							NSRange strokesRange = NSMakeRange(holeIndex, 1);
 
-							if (!aRoundUsesTeammatesScores && !bRoundUsesTeammatesScores && (self.handicappingStyle == GOLFWageringFullHandicapStyle) && [aHole respondsToSelector:@selector(compareNetScoreForWagering:)]) {
+							if (!aRoundUsesTeammatesScores
+									&& !bRoundUsesTeammatesScores
+									&& (self.handicappingStyle == GOLFWageringFullHandicapStyle)
+									&& [aHole respondsToSelector:@selector(compareNetScoreForWagering:)]) {
 								result = [aHole compareNetScoreForWagering:bHole];
 //								if (aRoundIsTeamOnlyPlayType) {
 //									result = [aHole compareCompScore:bHole];	//	Team only scores always use comp!
@@ -1019,6 +1055,8 @@ NSString * NSStringFromTrashOption(GOLFWageringTrashOption trashOption, NSString
 		//	bStrokesString	NSString *		18-character string of strokes given for B competitor (optional)
 		//	lowHandicap		NSNumber *		GOLFPlayingHandicap for the lowest handicap competitor
 		//	lowName			NSString *		name of the lowest-handicapped competitor
+		//	scoringSource	NSNumber *		GOLFWageringScoringSource for scores
+		
 		NSArray *workingArray = [self.betInfo objectForKey:@"aScores"];
 		if (workingArray != nil) {
 			[betInfoDict setObject:workingArray forKey:@"aScores"];
@@ -1043,6 +1081,10 @@ NSString * NSStringFromTrashOption(GOLFWageringTrashOption trashOption, NSString
 		if (workingString != nil) {
 			[betInfoDict setObject:workingString forKey:@"lowName"];
 		}
+		
+		//	Let the A round control what the source of scores is for the match…
+		[betInfoDict setObject:[NSNumber numberWithUnsignedInteger:[self.ARound scoringSourceForWagering]] forKey:@"scoringSource"];
+		
 		[representationDict setObject:[NSDictionary dictionaryWithDictionary:betInfoDict] forKey:@"betInfo"];
 	}
 	

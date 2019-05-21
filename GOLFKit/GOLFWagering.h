@@ -76,6 +76,15 @@ typedef NS_ENUM(NSUInteger, GOLFWageringGameStyle) {
 	GOLFWageringGameUnknownStyle = 99		//	Unknown
 };
 
+typedef NS_ENUM(NSUInteger, GOLFWageringScoringSource) {
+	GOLFWageringScoringSourceGross,				//	(0)		Match Play using gross scores
+	GOLFWageringScoringSourceNet = 10,			//	(10)	Match Play using full handicap net scores 
+	GOLFWageringScoringSourceComp = 20,			//	(20)	Match Play using allowance adjusted competition scores
+	GOLFWageringScoringSourceCalculated = 30,	//	(30)	Match Play using calculated scores
+	GOLFWageringScoringSourceTeammates = 40,	//	(40)	Match Play using teammate scores
+	GOLFWageringScoringSourceUnknown = 99		//	Unknown
+};
+
 typedef NS_OPTIONS(NSUInteger, GOLFWageringTrashOption) {
 	GOLFWageringTrashNone				= 0,			//	(0)
 	GOLFWageringTrashCover				= 1 << 0,		//	(1)			Birdie or better covering opponent's completed birdie or better
@@ -120,6 +129,9 @@ typedef NS_OPTIONS(NSUInteger, GOLFWageringTrashOption) {
 //	Returns the GOLFPlayType for rounds (or others) for use in wagering
 - (GOLFPlayType)playTypeForWagering;
 
+//	Returns the GOLFWageringScoringSource for rounds (or others) for use in wagering
+- (GOLFWageringScoringSource)scoringSourceForWagering;
+
 //	Returns the object (itself a <GOLFWageringDataSource>) from the provided zero-based holeIndex
 //	Can return nil
 - (id)holeAtIndexForWagering:(NSUInteger)holeIndex;
@@ -136,11 +148,17 @@ typedef NS_OPTIONS(NSUInteger, GOLFWageringTrashOption) {
 //	Returns the score to be used for match play scoring for a hole<GOLFWageringDataSource>
 - (GOLFNetScore)netScoreForWagering;
 
+//	Returns the score to be used for match play scoring for a hole<GOLFWageringDataSource>
+- (GOLFCompScore)compScoreForWagering;
+
 //	Compares two <GOLFWageringDataSource> objects using their own compare methods and returns the result
 - (NSComparisonResult)compareGrossScoreForWagering:(id<GOLFWageringDataSource>)otherObject;
 
 //	Compares two <GOLFWageringDataSource> objects using their own compare methods and returns the result
 - (NSComparisonResult)compareNetScoreForWagering:(id<GOLFWageringDataSource>)otherObject;
+
+//	Compares two <GOLFWageringDataSource> objects using their own compare methods and returns the result
+- (NSComparisonResult)compareCompScoreForWagering:(id<GOLFWageringDataSource>)otherObject;
 
 //	Compares two <GOLFWageringDataSource> objects net scores calculated from gross score and specified strokes
 - (NSComparisonResult)compareDifferenceNetScoreForWagering:(id<GOLFWageringDataSource>)otherObject;
@@ -201,6 +219,15 @@ NSString * NSStringFromTrashOption(GOLFWageringTrashOption trashOption, NSString
 //	Returns a localized title/name of a Trash/Dots option ("Greenie", "Sandie", "Stobbie", etc.) and
 //	optionally (when the address of descriptiveText is provided), a localized description of the
 //	option ("Closest to flagstick in regulation on a par 3", etc.)
+
+
+//=================================================================
+//	NSStringFromGOLFWageringScoringSource(sourceCode)
+//=================================================================
+NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourceCode);
+//	returns a localized name or title of a match style designated by styleCode
+//	When an NSString * designated by descriptiveText is supplied, it contains
+//	localized additional descriptive text about the match style
 
 
 @interface GOLFBet : NSObject
