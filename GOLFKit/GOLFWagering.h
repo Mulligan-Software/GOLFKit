@@ -230,6 +230,26 @@ NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourc
 //	localized additional descriptive text about the match style
 
 
+//=================================================================
+//	NSStringFromGOLFWageringHoleStrokes(strokes)
+//=================================================================
+NSString * NSStringFromGOLFWageringHoleStrokes(GOLFHandicapStrokes holeStrokes);
+//	returns a one-character string representing the number of handicap
+//	strokes used for wagering at a hole.
+//	Generally, a decimal integer character, but negative values (plus handicaps)
+//	represented by alphabetic characters ("A" == -1)
+
+
+//=================================================================
+//	GOLFWageringStrokesFromStringByIndex(strokesString, holeIndex)
+//=================================================================
+GOLFHandicapStrokes GOLFWageringStrokesFromStringByIndex(NSString *strokesString, NSUInteger holeIndex);
+//	returns handicap strokes applied (or to be applied) to determine the
+//	match play score used at a hole.  
+//	Generally strokesString is a 9 or 18 character string of integer characters,
+//	But alphabetic characters indicate negative values (plus handicaps) - ("A" == -1)
+
+
 @interface GOLFBet : NSObject
 {
 	NSInteger holeStatus[18];	//	The hole status ("up" status) at each hole (transient data)
@@ -247,7 +267,7 @@ NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourc
 @property (nonatomic, strong) NSString *betName;
 
 @property (nonatomic, assign) NSInteger reason;
-@property (nonatomic, assign) NSUInteger handicappingStyle;
+@property (nonatomic, assign) GOLFWageringHandicapStyle handicapStyle;
 @property (nonatomic, assign) NSInteger betStatus;
 @property (nonatomic, retain) NSString *holesStatus;
 @property (nonatomic, assign) NSInteger firstHole;
@@ -266,6 +286,10 @@ NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourc
 
 - (NSArray *)aHoleScores;	//	from betInfo
 - (NSArray *)bHoleScores;	//	from betInfo
+- (GOLFScore)aMatchScoreForHoleAt18Index:(NSUInteger)holeIndex;
+- (GOLFScore)bMatchScoreForHoleAt18Index:(NSUInteger)holeIndex;
+- (GOLFHandicapStrokes)aMatchStrokesForHoleAtIndex:(NSUInteger)holeIndex;
+- (GOLFHandicapStrokes)bMatchStrokesForHoleAtIndex:(NSUInteger)holeIndex;
 - (GOLFPlayingHandicap)lowHandicap;	//	from betInfo
 - (NSString *)lowName;	//	from betInfo
 

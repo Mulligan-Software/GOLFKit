@@ -244,12 +244,12 @@ NSString * NSStringFromTrashOption(GOLFWageringTrashOption trashOption, NSString
 }
 
 NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourceCode) {
-//	GOLFWageringScoringSourceGross,				//	(0)		Match Play using gross scores
-//	GOLFWageringScoringSourceNet = 10,			//	(10)	Match Play using full handicap net scores 
-//	GOLFWageringScoringSourceComp = 20,			//	(20)	Match Play using allowance adjusted competition scores
-//	GOLFWageringScoringSourceCalculated = 30,	//	(30)	Match Play using calculated scores
-//	GOLFWageringScoringSourceTeammates = 40,	//	(40)	Match Play using teammate scores
-//	GOLFWageringScoringSourceUnknown = 99		//	Unknown
+	//	GOLFWageringScoringSourceGross,				//	(0)		Match Play using gross scores
+	//	GOLFWageringScoringSourceNet = 10,			//	(10)	Match Play using full handicap net scores 
+	//	GOLFWageringScoringSourceComp = 20,			//	(20)	Match Play using allowance adjusted competition scores
+	//	GOLFWageringScoringSourceCalculated = 30,	//	(30)	Match Play using calculated scores
+	//	GOLFWageringScoringSourceTeammates = 40,	//	(40)	Match Play using teammate scores
+	//	GOLFWageringScoringSourceUnknown = 99		//	Unknown
 
 	switch (sourceCode) {
 		case GOLFWageringScoringSourceGross:
@@ -275,6 +275,44 @@ NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourc
 	}
 }
 
+NSString * NSStringFromGOLFWageringHoleStrokes(GOLFHandicapStrokes holeStrokes) {
+//	returns a one-character string representing the number of handicap
+//	strokes used for wagering at a hole.
+//	Generally, a decimal integer character, but negative values (plus handicaps)
+//	represented by alphabetic characters ("A" == -1)
+	
+	if (holeStrokes != kNotHandicapStrokes) {
+		return ((holeStrokes < 0)
+				? [@"ABCDEFGHIJ" substringWithRange:NSMakeRange(((-holeStrokes - 1) % 10), 1)]
+				: [NSString stringWithFormat:@"%ld", (long)(holeStrokes % 10)]);
+	}
+	return @"0";
+}
+
+GOLFHandicapStrokes GOLFWageringStrokesFromStringByIndex(NSString *strokesString, NSUInteger holeIndex) {
+	//	returns handicap strokes applied (or to be applied) to determine the
+	//	match play score used at a hole designated by its index.  
+	//	Generally strokesString is a 9 or 18 character string of integer strokes,
+	//	But alphabetic characters indicate negative values (plus handicaps)
+	//	("A" == -1)
+	
+	NSString *workingString = (strokesString
+			? [[strokesString stringByAppendingString:@"000000000000000000"] substringToIndex:18]
+			: @"000000000000000000");
+			
+	NSString *strokeItem = [workingString substringWithRange:NSMakeRange((holeIndex % 18), 1)];
+	unichar character = [strokeItem characterAtIndex:0];
+	if ([[NSCharacterSet decimalDigitCharacterSet] characterIsMember:character]) {
+		return (GOLFHandicapStrokes)[strokeItem integerValue];
+	} else {
+		NSRange foundRange = [@"ABCDEFGHIJ" rangeOfString:strokeItem];
+		if (foundRange.location != NSNotFound) {
+			return (GOLFHandicapStrokes)(-(foundRange.location + 1));
+		}
+	}
+	return 0;
+}
+
 
 @implementation GOLFBet
 
@@ -293,7 +331,7 @@ NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourc
 - (id)init {
     if (self = [super init]) {
 		self.presses = [NSMutableSet setWithCapacity:1];
-		self.handicappingStyle = ([[NSUserDefaults standardUserDefaults] boolForKey:@"NetMatchPlay"]
+		self.handicapStyle = ([[NSUserDefaults standardUserDefaults] boolForKey:@"NetMatchPlay"]
 				? [[[NSUserDefaults standardUserDefaults] objectForKey:@"HandicapStyle"] unsignedIntegerValue]
 				: GOLFWageringGrossHandicapStyle);
 		self.betStatus = GOLFBetNoStatus;
@@ -336,16 +374,24 @@ NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourc
 	return _bStrokesString;
 }
 
+- (GOLFHandicapStrokes)aMatchStrokesForHoleAtIndex:(NSUInteger)holeIndex {
+	return GOLFWageringStrokesFromStringByIndex(self.aStrokesString, holeIndex);
+}
+
+- (GOLFHandicapStrokes)bMatchStrokesForHoleAtIndex:(NSUInteger)holeIndex {
+	return GOLFWageringStrokesFromStringByIndex(self.bStrokesString, holeIndex);
+}
+
 - (NSDictionary *)betInfo {
 	//	betInfo NSDictionary supplied to all bottom-level bets…
 	//	key				type			description
 	//	--------------	--------------	----------------------------------------------------------------
 	//	aRound			SCRRound *		A competitor's round (optional)
 	//	aScores			NSArray *		0, 9, or 18 (NSNumber *) A team competitor scores for match play
-	//	aStrokesString	NSString *		18-character string of strokes given for A competitor (optional)
+	//	aStrokesString	NSString *		18-character string of strokes given for A competitor
 	//	bRound			SCRRound *		B competitor's round (optional)
 	//	bScores			NSArray *		0, 9, or 18 (NSNumber *) B team competitor scores for match play
-	//	bStrokesString	NSString *		18-character string of strokes given for B competitor (optional)
+	//	bStrokesString	NSString *		18-character string of strokes given for B competitor
 	//	lowHandicap		NSNumber *		GOLFPlayingHandicap for the lowest handicap competitor
 	//	lowName			NSString *		name of the lowest-handicapped competitor
 	//	scoringSource	NSNumber *		GOLFWageringScoringSource for scores (gross, net, comp, etc.)
@@ -388,6 +434,16 @@ NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourc
 		holeScores = [NSArray arrayWithArray:workingArray];
 	}
 	return holeScores;
+}
+
+- (GOLFScore)aMatchScoreForHoleAt18Index:(NSUInteger)holeIndex {
+	NSNumber *workingNumber = [[self aHoleScores] objectAtIndex:(holeIndex % 18)];
+	return (workingNumber ? [workingNumber scoreValue] : kNotAScore);
+}
+
+- (GOLFScore)bMatchScoreForHoleAt18Index:(NSUInteger)holeIndex {
+	NSNumber *workingNumber = [[self bHoleScores] objectAtIndex:(holeIndex % 18)];
+	return (workingNumber ? [workingNumber scoreValue] : kNotAScore);
 }
 
 - (GOLFPlayingHandicap)lowHandicap {
@@ -599,7 +655,7 @@ NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourc
 		NSInteger fromHole = MAX(first - 1, fromFirst);
 		NSInteger fromStatus = ((first > fromFirst) ? [self holeStatusForHoleAt18Index:(fromHole - 1)] : GOLFBetNoHoleStatus);
 		
-		newBet.handicappingStyle = self.handicappingStyle;	//	Propagates
+		newBet.handicapStyle = self.handicapStyle;	//	Propagates
 		newBet.does2DownAutomatics = self.does2DownAutomatics;
 		newBet.does1DownLastHoleAutomatics = self.does1DownLastHoleAutomatics;
 		newBet.fromHole = fromHole;
@@ -762,7 +818,7 @@ NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourc
 					} else {
 						NSComparisonResult result = NSOrderedSame;
 
-						if ((self.handicappingStyle == GOLFWageringGrossHandicapStyle) && [aHole respondsToSelector:@selector(compareGrossScoreForWagering:)]) {
+						if ((self.handicapStyle == GOLFWageringGrossHandicapStyle) && [aHole respondsToSelector:@selector(compareGrossScoreForWagering:)]) {
 							result = [aHole compareGrossScoreForWagering:bHole];
 						} else if (aHoleDQ) {
 							result = (bHoleDQ ? NSOrderedSame : NSOrderedDescending);
@@ -773,7 +829,7 @@ NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourc
 
 							if (!aRoundUsesTeammatesScores
 									&& !bRoundUsesTeammatesScores
-									&& (self.handicappingStyle == GOLFWageringFullHandicapStyle)
+									&& (self.handicapStyle == GOLFWageringFullHandicapStyle)
 									&& [aHole respondsToSelector:@selector(compareNetScoreForWagering:)]) {
 								result = [aHole compareNetScoreForWagering:bHole];
 //								if (aRoundIsTeamOnlyPlayType) {
@@ -860,7 +916,7 @@ NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourc
 					new2Down = old2Down;
 				} else {
 					new2Down = [GOLFBet betWithName:@"" reason:GOLFBetAutomatic2DownPressReason startingAt:(holePosition + 1) endingAt:ourLastHole];
-					new2Down.handicappingStyle = self.handicappingStyle;	//	Propagates
+					new2Down.handicapStyle = self.handicapStyle;	//	Propagates
 					new2Down.does2DownAutomatics = needAutomatic2Downs;	//	Propagates
 					new2Down.does1DownLastHoleAutomatics = needAutomaticLastHole1Downs;	//	Propagates
 //					new2Down.fromBet = self;	//	Done when we addPress:
@@ -879,7 +935,7 @@ NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourc
 				newLastHole1Down = oldLastHole1Down;
 			} else {
 				newLastHole1Down = [GOLFBet betWithName:@"" reason:GOLFBetAutomatic1DownPressReason startingAt:ourLastHole endingAt:ourLastHole];
-				newLastHole1Down.handicappingStyle = self.handicappingStyle;	//	Propagates
+				newLastHole1Down.handicapStyle = self.handicapStyle;	//	Propagates
 				newLastHole1Down.does2DownAutomatics = needAutomatic2Downs;	//	Propagates
 				newLastHole1Down.does1DownLastHoleAutomatics = needAutomaticLastHole1Downs;	//	Propagates
 //				newLastHole1Down.fromBet = self;	//	//	Done when we addPress:
@@ -943,7 +999,7 @@ NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourc
 						newCloseOut = oldCloseOut;
 					} else {
 						newCloseOut = [GOLFBet betWithName:@"" reason:GOLFBetCloseOutReason startingAt:startHole endingAt:ourLastHole];
-						newCloseOut.handicappingStyle = self.handicappingStyle;	//	Propagates
+						newCloseOut.handicapStyle = self.handicapStyle;	//	Propagates
 						newCloseOut.does2DownAutomatics = needAutomatic2Downs;	//	Propagates
 						newCloseOut.does1DownLastHoleAutomatics = needAutomaticLastHole1Downs;	//	Propagates
 						newCloseOut.doesCloseOuts = needCloseOuts;	//	Propagates
@@ -973,12 +1029,12 @@ NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourc
 
 #pragma mark Helpers
 
-- (void)setHandicappingStyle:(NSUInteger)newStyle {
-	_handicappingStyle = newStyle;
+- (void)setHandicapStyle:(GOLFWageringHandicapStyle)newHandicapStyle {
+	_handicapStyle = newHandicapStyle;
 
 	//	Now tell all our presses
 	for (GOLFBet *press in [self pressesArray]) {
-		press.handicappingStyle = newStyle;
+		press.handicapStyle = newHandicapStyle;
 	}
 }
 
@@ -1093,7 +1149,7 @@ NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourc
 		[representationDict setObject:workingString forKey:@"betName"];
 	}
 	[representationDict setObject:[NSNumber numberWithInteger:self.reason] forKey:@"reason"];
-	[representationDict setObject:[NSNumber numberWithUnsignedInteger:self.handicappingStyle] forKey:@"handicappingStyle"];
+	[representationDict setObject:[NSNumber numberWithUnsignedInteger:self.handicapStyle] forKey:@"handicapStyle"];
 	[representationDict setObject:[NSNumber numberWithInteger:self.betStatus] forKey:@"betStatus"];
 	workingString = self.holesStatus;
 	if (workingString != nil) {
@@ -1149,7 +1205,7 @@ NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourc
 			self.betName = workingString;
 		}
 		self.reason = ([dictionary objectForKey:@"reason"] ? [[dictionary objectForKey:@"reason"] integerValue] : GOLFBetStandardReason);
-		self.handicappingStyle = ([dictionary objectForKey:@"handicappingStyle"] ? [[dictionary objectForKey:@"handicappingStyle"] unsignedIntegerValue] : GOLFWageringUnknownMatchStyle);
+		self.handicapStyle = ([dictionary objectForKey:@"handicapStyle"] ? [[dictionary objectForKey:@"handicapStyle"] unsignedIntegerValue] : GOLFWageringUnknownHandicapStyle);
 		self.betStatus = ([dictionary objectForKey:@"betStatus"] ? [[dictionary objectForKey:@"betStatus"] integerValue] : GOLFBetUnknownStatus);
 		
 		workingString = [dictionary objectForKey:@"holesStatus"];

@@ -57,6 +57,10 @@ typedef NS_ENUM(NSUInteger, GOLFAllowanceType) {
 	#define IS_ANY_ONE_TIME_ALLOWANCE_TYPE(_type)	((IS_ONE_TIME_SCRAMBLE_ALLOWANCE_TYPE(_type) || IS_ONE_TIME_PLAYER_ALLOWANCE_TYPE(_type)) ? YES : NO)
 #endif
 
+#if !defined(IS_ANY_FULL_HANDICAP_ALLOWANCE_TYPE)
+	#define IS_ANY_FULL_HANDICAP_ALLOWANCE_TYPE(_type)	((((_type) == FullHandicapAllowanceType) || ((_type) == NetAllowanceType) || IS_ANY_ONE_TIME_ALLOWANCE_TYPE(_type)) ? YES : NO)
+#endif
+
 #if !defined(IS_ANY_PLAYER_DEPENDENT_TEAM_ALLOWANCE_TYPE)
 	#define IS_ANY_PLAYER_DEPENDENT_TEAM_ALLOWANCE_TYPE(_type)	(((((_type) >= ScrambleA50AllowanceType) && ((_type) <= ScrambleA20B15C10D5AllowanceType)) || ((_type) == A60B40AllowanceType) || ((_type) == A50B20AllowanceType) || ((_type) == AverageCombinedAllowanceType) || ((_type) == AverageCombined80AllowanceType) || ((_type) == Aggregate3EighthsAllowanceType)) ? YES : NO)
 #endif
