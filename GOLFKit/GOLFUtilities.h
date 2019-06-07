@@ -23,6 +23,8 @@
 
 #endif
 
+//	External constants
+extern NSString * const GOLFLocalizedStringNotFound;
 
 //	No-value constants
 #define kNotAnIntegerValue			-999		//	No-value for misc. NSInteger-based value storage

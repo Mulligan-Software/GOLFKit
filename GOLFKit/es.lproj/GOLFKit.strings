@@ -8,7 +8,7 @@
 
 //	Golf Terminology
 "TERM_ADJUSTED" = "ajustado";
-"TERM_ADJUSTED_ABBR" = "ajus.";
+"TERM_ADJUSTED_ABBR" = "aju.";
 "TERM_ADJUSTED_FOR_RATINGS" = "ajustado por diferencias de Clasificaciones del Campo";
 "TERM_ALL" = "todo";
 "TERM_ALLOWANCE" = "asignación";
@@ -531,6 +531,7 @@
 "DESCRIPTION_WOLF" = "Jugador, compañero opcional vs. resto en cada hoyo";
 
 //	Formats
+"FORMAT_ADJUSTED_%@_ABBR" = "%@ Aju.";
 "FORMAT_AND_%@" = " y %@";
 "FORMAT_ASSIGN_%ld_ROUNDS_TO" = "Asignar %ld rondas a";
 "FORMAT_BEST_%d_ROUNDS" = "Mejores %d Rondas";

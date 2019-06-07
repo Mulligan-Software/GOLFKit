@@ -8,7 +8,7 @@
 
 //	Golf Terminology
 "TERM_ADJUSTED" = "angepasst";
-"TERM_ADJUSTED_ABBR" = "ange.";
+"TERM_ADJUSTED_ABBR" = "ang.";
 "TERM_ADJUSTED_FOR_RATINGS" = "bereinigt um Unterschiede der Course Ratings";
 "TERM_ALL" = "alle";
 "TERM_ALLOWANCE" = "Zustimmung";
@@ -531,6 +531,7 @@
 "DESCRIPTION_WOLF" = "Spieler, optionaler Partner vs. der Rest an jedem Loch";
 
 //	Formats
+"FORMAT_ADJUSTED_%@_ABBR" = "Ang. %@";
 "FORMAT_AND_%@" = " und %@";
 "FORMAT_ASSIGN_%ld_ROUNDS_TO" = "%ld Runden zuweisen an";
 "FORMAT_BEST_%d_ROUNDS" = "besten %d Golfrunden";

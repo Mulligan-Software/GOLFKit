@@ -531,6 +531,7 @@
 "DESCRIPTION_WOLF" = "Player, optional partner vs. rest at each hole";
 
 //	Formats
+"FORMAT_ADJUSTED_%@_ABBR" = "Adj. %@";
 "FORMAT_AND_%@" = " and %@";
 "FORMAT_ASSIGN_%ld_ROUNDS_TO" = "Assign %ld rounds to";
 "FORMAT_BEST_%d_ROUNDS" = "Best %d Rounds";

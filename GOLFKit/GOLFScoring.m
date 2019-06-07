@@ -151,16 +151,20 @@ NSString * NSStringFromMixedScore(float score, NSInteger denominatorHint, float 
 			if (error) {
 				*error = bestError;
 			}
-			return (wholeNumber > 0)
+			if ([vulgarFraction isEqualToString:vulgarName]) {
+				//	An error finding an appropriate vulgar fraction using GOLFLocalizedString…
+				return [NSString localizedStringWithFormat:@"%1.0f", score];
+			}
+			return ((wholeNumber > 0)
 					? [NSString stringWithFormat:@"%@%ld%@", (negative ? @"-" : @""), wholeNumber, vulgarFraction]
-					: [NSString stringWithFormat:@"%@%@", (negative ? @"-" : @""), vulgarFraction];
+					: [NSString stringWithFormat:@"%@%@", (negative ? @"-" : @""), vulgarFraction]);
 		} else {
 			if (error) {
 				*error = bestError;
 			}
 			return [NSString localizedStringWithFormat:@"%1.0f", score];	//	Formatting will handle the sign
 		}
-	}
+	}	//	if (score != kNotANetScore)
 	return @"";
 }
 

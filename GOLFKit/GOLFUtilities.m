@@ -10,6 +10,9 @@
 #import "GOLFUtilities.h"
 #import "GOLFHandicapping.h"
 
+//	External constants
+NSString * const GOLFLocalizedStringNotFound = @"*-*";
+
 //=================================================================
 //	GOLFUnlocalizedCurrentCountry
 //=================================================================
@@ -144,7 +147,7 @@ NSString * GOLFLocalizedString(NSString *key) {
 		//	•	If key is not found and value is nil or an empty string, returns key.
 		//	•	If key is not found and value is non-nil and not empty, return value.	(our technique looking to 2 places)
 		
-		NSString *notFound = @"*-*";
+		NSString *notFound = GOLFLocalizedStringNotFound;
 		NSString *prospectiveLocalization = [GOLFKitBundle() localizedStringForKey:key value:notFound table:@"GOLFKit"];
 		if (![prospectiveLocalization isEqualToString:notFound]) { return prospectiveLocalization; }
 		prospectiveLocalization = [[NSBundle mainBundle] localizedStringForKey:key value:notFound table:@"Localizable"];
