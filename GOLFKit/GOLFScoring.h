@@ -368,6 +368,15 @@ NSString * NSStringOrdinalSuffixFromRank(NSUInteger rank);
 
 
 //=================================================================
+//	NSStringFromMixedScore(score, denominatorHint, *error)
+//=================================================================
+NSString * NSStringFromMixedScore(float score, NSInteger denominatorHint, float *error);
+//	Returns a whole or mixed number string from a score - including the whole number followed by its vulgar fraction (if any)
+//	The denominator hint may help decide how precisely to test for fractional parts
+//	If it's not reasonable to be able to return a mixed number, the localized decimal value to a tenth is returned
+
+
+//=================================================================
 //	NSStringFromAllowanceType(allowanceType, info, descriptiveText)
 //=================================================================
 NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictionary *info, NSString **descriptiveText);

@@ -53,8 +53,8 @@ GOLFHandicapStrokes GOLFMaxPointQuotaForPlayType(GOLFPlayType playType, BOOL for
 //	NSStringOrdinalSuffixFromRank(rank)
 //=================================================================
 NSString * NSStringOrdinalSuffixFromRank(NSUInteger rank) {
-//	Returns a localized suffix for a positive integer rank
-//	In English, "st", "nd", "rd", "th", "th", etc.
+	//	Returns a localized suffix for a positive integer rank
+	//	In English, "st", "nd", "rd", "th", "th", etc.
 	
 	if (rank == 1)
 		return GOLFLocalizedString(@"ORDINAL_FIRST");
@@ -65,53 +65,153 @@ NSString * NSStringOrdinalSuffixFromRank(NSUInteger rank) {
 }
 
 //=================================================================
+//	NSStringFromMixedScore(score, denominatorHint)
+//=================================================================
+NSString * NSStringFromMixedScore(float score, NSInteger denominatorHint, float *error) {
+	//	Returns a whole or mixed number string from a score - including the whole number followed by its vulgar fraction (if any)
+	//	A score of kNotANetScore returns an empty string (@"")
+	//	The denominator hint may help decide how precisely to test for fractional parts
+	//	If it's not reasonable to be able to return a mixed number, the localized decimal value to a tenth is returned
+	if (score != kNotANetScore) {
+		BOOL negative = (score < 0.0);
+		float workingScore = (negative ? -score : score);
+		NSInteger wholeNumber = (NSInteger)floorf(workingScore);
+		float remainder = workingScore - (float)wholeNumber;
+		NSInteger bestNumerator = 0;
+		NSInteger bestDenominator = 10;
+		float bestError = 999.0;
+		BOOL halves = YES;
+		BOOL thirds = ((denominatorHint == 2) || (denominatorHint == 4)) ? NO : YES;
+		BOOL quarters = ((denominatorHint == 3) || (denominatorHint == 5)) ? NO : YES;
+		BOOL fifths = (denominatorHint < 5) ? NO : YES;
+		BOOL eighths = (denominatorHint < 8) ? NO : YES;
+		BOOL tenths = NO;
+
+		if (halves) {
+			for (NSInteger numerator = 1; numerator < 2; numerator++) {
+				float error = fabs(fabs((float)numerator / 2.0) - remainder);
+				if (error < bestError) {
+					bestNumerator = numerator;
+					bestDenominator = 2;
+					bestError = error;
+				}
+			}
+		}
+		if (thirds) {
+			for (NSInteger numerator = 1; numerator < 3; numerator++) {
+				float error = fabs(fabs((float)numerator / 3.0) - remainder);
+				if (error < bestError) {
+					bestNumerator = numerator;
+					bestDenominator = 3;
+					bestError = error;
+				}
+			}
+		}
+		if (quarters) {
+			for (NSInteger numerator = 1; numerator < 4; numerator++) {
+				float error = fabs(fabs((float)numerator / 4.0) - remainder);
+				if (error < bestError) {
+					bestNumerator = numerator;
+					bestDenominator = 4;
+					bestError = error;
+				}
+			}
+		}
+		if (fifths) {
+			for (NSInteger numerator = 1; numerator < 5; numerator++) {
+				float error = fabs(fabs((float)numerator / 5.0) - remainder);
+				if (error < bestError) {
+					bestNumerator = numerator;
+					bestDenominator = 5;
+					bestError = error;
+				}
+			}
+		}
+		if (eighths) {
+			for (NSInteger numerator = 1; numerator < 8; numerator++) {
+				float error = fabs(fabs((float)numerator / 8.0) - remainder);
+				if (error < bestError) {
+					bestNumerator = numerator;
+					bestDenominator = 8;
+					bestError = error;
+				}
+			}
+		}
+		for (NSInteger numerator = 0; numerator < (tenths ? 10 : 2); numerator++) {
+			float error = fabs(fabs((float)numerator / 10.0) - remainder);
+			if (error < bestError) {
+				bestNumerator = numerator;
+				bestDenominator = 10;
+				bestError = error;
+			}
+		}
+		if ((bestNumerator > 0) && (bestError <= 0.05)) {
+			NSString *vulgarName = [NSString stringWithFormat:@"VF_%ld/%ld", (long)bestNumerator, (long)bestDenominator];
+			NSString *vulgarFraction = GOLFLocalizedString(vulgarName);
+			if (error) {
+				*error = bestError;
+			}
+			return (wholeNumber > 0)
+					? [NSString stringWithFormat:@"%@%ld%@", (negative ? @"-" : @""), wholeNumber, vulgarFraction]
+					: [NSString stringWithFormat:@"%@%@", (negative ? @"-" : @""), vulgarFraction];
+		} else {
+			if (error) {
+				*error = bestError;
+			}
+			return [NSString localizedStringWithFormat:@"%1.0f", score];	//	Formatting will handle the sign
+		}
+	}
+	return @"";
+}
+
+//=================================================================
 //	NSStringFromAllowanceType(allowanceType, info, descriptiveText)
 //=================================================================
 NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictionary *info, NSString **descriptiveText) {
-//	info (optional):
-//	key					type						description
-//	-----------------	-------------------------	-------------------------------------------------------------------------------------
-//	handicapAuthority	GOLFHandicapAuthority *		The handicap authority associated with this presentation (default provided if missing)
-//	short				NSNumber *					BOOL indicating need for short (abbreviated?) return (if available)
-//	allowancePct		NSNumber *					The allowance percentage (of 100) for the SpecifiedPercentAllowanceType (default provided if missing)
+	//	info (optional):
+	//	key					type						description
+	//	-----------------	-------------------------	-------------------------------------------------------------------------------------
+	//	handicapAuthority	GOLFHandicapAuthority *		The handicap authority associated with this presentation (default provided if missing)
+	//	short				NSNumber *					BOOL indicating need for short (abbreviated?) return (if available)
+	//	allowancePct		NSNumber *					The allowance percentage (of 100) for the SpecifiedPercentAllowanceType (default provided if missing)
 
-//		Allowance Types
-//
-//		Type							  Numeric		Allowance
-//		----------------------------	-------------	-----------------------------------------------------
-//		StandardAllowanceType				0			Regular allowance (for players)
-//		GrossAllowanceType					1			Gross - no handicap
-//		NetAllowanceType					2			Net team allowance
-//
-//		FullHandicapAllowanceType			10			Full handicap (Net stroke play)
-//		Men90Women95AllowanceType			11			Men 90%, Women 95% (Best-Ball of 2, 2 Best Balls of 4)
-//		Men80Women90AllowanceType			12			Men 80%, Women 90% (Best-Ball of 4)
-//		A60B40AllowanceType					13			A player 60%, B player 40% (Chapman/Pinehurst)
-//		A50B20AllowanceType					14			A player 50%, B player 20%
-//		SpecifiedPercentAllowanceType		15			A specified percentage of Playing Handicap
-//
-//		AverageCombinedAllowanceType		20			Average of teammates' Playing Handicaps (Foursomes)
-//		AverageCombined80AllowanceType		21			80% of average teammates' handicap (Greensomes)
-//		Aggregate3EighthsAllowanceType		22			3/8 of aggregate team handicap (American Foursomes)
-//
-//		DifferenceAllowanceType				30			Handicap difference vs. opponent (player or team)
-//		QuotaAllowanceType					31			Point Quota (36 / 38 / 18 less Full Handicap)
-//
-//		ScrambleA50AllowanceType			40			50% of A player (2+ player scramble)
-//		ScrambleA35B15AllowanceType			41			35% A, 15% B (2+ player scramble
-//		ScrambleA25B15C10AllowanceType		42			25% A, 15% B, 10% C (3+ player scramble
-//		ScrambleA20B15C10D5AllowanceType	43			20% A, 15% B, 10% C, 5% D (4+ player scramble)
-//
-//		ScrambleScheidAllowanceType			48			Modifid Scheid Scramble (team 1-time)
-//		ScrambleZigZagAllowanceType			49			ZIG-ZAG (team 1-time)
-//
-//		CallawayAllowanceType				50			"Official" Callaway System (player 1-time)
-//		ScheidAllowanceType					51			Scheid System (player 1-time)
-//		PeoriaAllowanceType					52			Peoria Handicap (player 1-time)
-//		ModifiedPeoriaAllowanceType			53			Modified Peoria Handicap (player 1-time)
-//		System36AllowanceType				54			System 36 Handicap (player 1-time)
-//
-//		UnknownAllowanceType				99			Unknown or error
+	//		Allowance Types
+	//
+	//		Type							  Numeric		Allowance
+	//		----------------------------	-------------	-----------------------------------------------------
+	//		StandardAllowanceType				0			Regular allowance (for players)
+	//		GrossAllowanceType					1			Gross - no handicap
+	//		NetAllowanceType					2			Net team allowance
+	//
+	//		FullHandicapAllowanceType			10			Full handicap (Net stroke play)
+	//		Men90Women95AllowanceType			11			Men 90%, Women 95% (Best-Ball of 2, 2 Best Balls of 4)
+	//		Men80Women90AllowanceType			12			Men 80%, Women 90% (Best-Ball of 4)
+	//		A60B40AllowanceType					13			A player 60%, B player 40% (Chapman/Pinehurst)
+	//		A50B20AllowanceType					14			A player 50%, B player 20%
+	//		SpecifiedPercentAllowanceType		15			A specified percentage of Playing Handicap
+	//
+	//		AverageCombinedAllowanceType		20			Average of teammates' Playing Handicaps (Foursomes)
+	//		AverageCombined80AllowanceType		21			80% of average teammates' handicap (Greensomes)
+	//		Aggregate3EighthsAllowanceType		22			3/8 of aggregate team handicap (American Foursomes)
+	//
+	//		DifferenceAllowanceType				30			Handicap difference vs. opponent (player or team)
+	//		QuotaAllowanceType					31			Point Quota (36 / 38 / 18 less Full Handicap)
+	//
+	//		ScrambleA50AllowanceType			40			50% of A player (2+ player scramble)
+	//		ScrambleA35B15AllowanceType			41			35% A, 15% B (2+ player scramble
+	//		ScrambleA25B15C10AllowanceType		42			25% A, 15% B, 10% C (3+ player scramble
+	//		ScrambleA20B15C10D5AllowanceType	43			20% A, 15% B, 10% C, 5% D (4+ player scramble)
+	//
+	//		ScrambleScheidAllowanceType			48			Modifid Scheid Scramble (team 1-time)
+	//		ScrambleZigZagAllowanceType			49			ZIG-ZAG (team 1-time)
+	//
+	//		CallawayAllowanceType				50			"Official" Callaway System (player 1-time)
+	//		ScheidAllowanceType					51			Scheid System (player 1-time)
+	//		PeoriaAllowanceType					52			Peoria Handicap (player 1-time)
+	//		ModifiedPeoriaAllowanceType			53			Modified Peoria Handicap (player 1-time)
+	//		System36AllowanceType				54			System 36 Handicap (player 1-time)
+	//
+	//		UnknownAllowanceType				99			Unknown or error
 	
 	GOLFHandicapAuthority *authority = (info ? [info objectForKey:@"handicapAuthority"] : nil);
 	BOOL needShortText = (info ? [[info objectForKey:@"short"] boolValue] : NO);	//	Return "short" variation if available
