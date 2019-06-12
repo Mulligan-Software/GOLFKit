@@ -13,6 +13,7 @@
 
 //	Private Prototypes
 static NSArray *cachedStandardTeeColorArray = nil;
+static NSMutableDictionary *cachedLittleTeeColorImages = nil;
 
 //=================================================================
 //	GOLFStandardTeeColorArray()
@@ -704,7 +705,17 @@ GOLFTeeImage * GOLFTeeMarkerImageFromTeeColorIndex(GOLFTeeColorIndex teeColorInd
 //	GOLFLittleTeeMarkerImageFromTeeColorIndex
 //=================================================================
 GOLFTeeImage * GOLFLittleTeeMarkerImageFromTeeColorIndex(GOLFTeeColorIndex teeColorIndex, GOLFColor *teeColor) {
-	return GOLFTeeMarkerImageFromSpecs(teeColorIndex, GOLFTeeMarkerImageSize16pt, teeColor);
+	NSMutableDictionary *imageCache = cachedLittleTeeColorImages ?: [NSMutableDictionary dictionaryWithCapacity:5];
+	NSNumber *imageKey = [NSNumber numberWithTeeColorIndex:teeColorIndex];
+	GOLFTeeImage *cachedImage = [imageCache objectForKey:imageKey];
+	if (cachedImage == nil) {
+		cachedImage = GOLFTeeMarkerImageFromSpecs(teeColorIndex, GOLFTeeMarkerImageSize16pt, teeColor);
+		if (teeColorIndex != kNotATeeColorIndex) {
+			[imageCache setObject:cachedImage forKey:imageKey];
+			cachedLittleTeeColorImages = imageCache;
+		}
+	}
+	return cachedImage;
 }
 
 //=================================================================
