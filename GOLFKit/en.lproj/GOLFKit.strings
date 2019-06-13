@@ -262,6 +262,7 @@
 
 //	Titles & Abbr.
 "TITLE_ABBREVIATED_DATES" = "Abbreviated Dates";
+"TITLE_ACCESSORY_PRINT_INITIALS" = "Players’ Initials";
 "TITLE_ADVANCED_DUPLICATES" = "Prohibit duplicate hole handicaps";
 "TITLE_ADVANCED_MULTIPLE_PRESSES" = "Prohibit multiple presses";
 "TITLE_ADVANCED_9_HOLE_HANDICAPS" = "Require 9-hole handicaps";

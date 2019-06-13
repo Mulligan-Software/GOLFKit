@@ -262,6 +262,7 @@
 
 //	Titles & Abbr.
 "TITLE_ABBREVIATED_DATES" = "Abgekürzte Daten";
+"TITLE_ACCESSORY_PRINT_INITIALS" = "Initialen der Spieler";
 "TITLE_ADVANCED_DUPLICATES" = "Verbieten Sie doppelte Loch-Handicaps";
 "TITLE_ADVANCED_MULTIPLE_PRESSES" = "Verbieten mehrfache Pressen";
 "TITLE_ADVANCED_9_HOLE_HANDICAPS" = "Erfordert 9-Loch Handicaps";
