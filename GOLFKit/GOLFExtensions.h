@@ -17,6 +17,7 @@
 //	Common
 #import <GOLFKit/NSNumber+GOLFExtensions.h>
 #import <GOLFKit/NSDate+GOLFExtensions.h>
+#import <GOLFKit/NSString+GOLFExtensions.h>
 
 //	macOS only (not embedded, no iOS, no Watch)
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)

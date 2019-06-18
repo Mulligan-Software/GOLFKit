@@ -243,39 +243,41 @@ NSString * NSStringFromTrashOption(GOLFWageringTrashOption trashOption, NSString
 	}
 }
 
-NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourceCode) {
-	//	GOLFWageringScoringSourceGross,				//	(0)		Match Play using gross scores
-	//	GOLFWageringScoringSourceNet = 10,			//	(10)	Match Play using full handicap net scores 
-	//	GOLFWageringScoringSourceComp = 20,			//	(20)	Match Play using allowance adjusted competition scores
-	//	GOLFWageringScoringSourceCalculated = 30,	//	(30)	Match Play using calculated scores
-	//	GOLFWageringScoringSourceTeammates = 40,	//	(40)	Match Play using teammate scores
-	//	GOLFWageringScoringSourceUnknown = 99		//	Unknown
-
-	switch (sourceCode) {
-		case GOLFWageringScoringSourceGross:
-    		return NSLocalizedString(@"Gross (0)", @"");
-
-		case GOLFWageringScoringSourceNet:
-    		return NSLocalizedString(@"Net (10)", @"");
-
-		case GOLFWageringScoringSourceComp:
-    		return NSLocalizedString(@"Comp (20)", @"");
-
-		case GOLFWageringScoringSourceCalculated:
-    		return NSLocalizedString(@"Calculated (30)", @"");
-
-		case GOLFWageringScoringSourceTeammates:
-    		return NSLocalizedString(@"Teammates (40)", @"");
-
-		case GOLFWageringScoringSourceUnknown:
-    		return NSLocalizedString(@"Unknown (99)", @"");
-
-		default:
-    		return [NSString stringWithFormat:NSLocalizedString(@"Error (%lu)", @""), (unsigned long)sourceCode];
-	}
-}
+//NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourceCode) {
+//	//	GOLFWageringScoringSourceGross,				//	(0)		Match Play using gross scores
+//	//	GOLFWageringScoringSourceNet = 10,			//	(10)	Match Play using full handicap net scores 
+//	//	GOLFWageringScoringSourceComp = 20,			//	(20)	Match Play using allowance adjusted competition scores
+//	//	GOLFWageringScoringSourceCalculated = 30,	//	(30)	Match Play using calculated scores
+//	//	GOLFWageringScoringSourceTeammates = 40,	//	(40)	Match Play using teammate scores
+//	//	GOLFWageringScoringSourceUnknown = 99		//	Unknown
+//
+//	switch (sourceCode) {
+//		case GOLFWageringScoringSourceGross:
+//    		return NSLocalizedString(@"Gross (0)", @"");
+//
+//		case GOLFWageringScoringSourceNet:
+//    		return NSLocalizedString(@"Net (10)", @"");
+//
+//		case GOLFWageringScoringSourceComp:
+//    		return NSLocalizedString(@"Comp (20)", @"");
+//
+//		case GOLFWageringScoringSourceCalculated:
+//    		return NSLocalizedString(@"Calculated (30)", @"");
+//
+//		case GOLFWageringScoringSourceTeammates:
+//    		return NSLocalizedString(@"Teammates (40)", @"");
+//
+//		case GOLFWageringScoringSourceUnknown:
+//    		return NSLocalizedString(@"Unknown (99)", @"");
+//
+//		default:
+//    		return [NSString stringWithFormat:NSLocalizedString(@"Error (%lu)", @""), (unsigned long)sourceCode];
+//	}
+//}
 
 NSString * NSStringFromGOLFWageringHoleStrokes(GOLFHandicapStrokes holeStrokes) {
+//	See:	NSString  + (id)stringForWageringStrokesAtHole:(GOLFHandicapStrokes)holeStrokes
+
 //	returns a one-character string representing the number of handicap
 //	strokes used for wagering at a hole.
 //	Generally, a decimal integer character, but negative values (plus handicaps)
@@ -290,26 +292,28 @@ NSString * NSStringFromGOLFWageringHoleStrokes(GOLFHandicapStrokes holeStrokes) 
 }
 
 GOLFHandicapStrokes GOLFWageringStrokesFromStringByIndex(NSString *strokesString, NSUInteger holeIndex) {
+	//	See also:  NSString+GOLFExtensions.h --> wageringStrokesAtIndex:
+	
 	//	returns handicap strokes applied (or to be applied) to determine the
 	//	match play score used at a hole designated by its index.  
 	//	Generally strokesString is a 9 or 18 character string of integer strokes,
 	//	But alphabetic characters indicate negative values (plus handicaps)
 	//	("A" == -1)
 	
-	NSString *workingString = (strokesString
-			? [[strokesString stringByAppendingString:@"000000000000000000"] substringToIndex:18]
-			: @"000000000000000000");
-			
-	NSString *strokeItem = [workingString substringWithRange:NSMakeRange((holeIndex % 18), 1)];
-	unichar character = [strokeItem characterAtIndex:0];
-	if ([[NSCharacterSet decimalDigitCharacterSet] characterIsMember:character]) {
-		return (GOLFHandicapStrokes)[strokeItem integerValue];
-	} else {
-		NSRange foundRange = [@"ABCDEFGHIJ" rangeOfString:strokeItem];
-		if (foundRange.location != NSNotFound) {
-			return (GOLFHandicapStrokes)(-(foundRange.location + 1));
+	NSUInteger workingIndex = holeIndex % 18;
+	
+	if (workingIndex < [strokesString length]) {		
+		NSString *strokeItem = [strokesString substringWithRange:NSMakeRange(workingIndex, 1)];
+		unichar character = [strokeItem characterAtIndex:0];
+		if ([[NSCharacterSet decimalDigitCharacterSet] characterIsMember:character]) {
+			return (GOLFHandicapStrokes)[strokeItem integerValue];
+		} else {
+			NSRange foundRange = [@"ABCDEFGHIJ" rangeOfString:strokeItem];
+			if (foundRange.location != NSNotFound) {
+				return (GOLFHandicapStrokes)(-(foundRange.location + 1));
+			}
 		}
-	}
+	}	//	if (workingIndex < [strokesString length])
 	return 0;
 }
 
@@ -375,26 +379,27 @@ GOLFHandicapStrokes GOLFWageringStrokesFromStringByIndex(NSString *strokesString
 }
 
 - (GOLFHandicapStrokes)aMatchStrokesForHoleAtIndex:(NSUInteger)holeIndex {
-	return GOLFWageringStrokesFromStringByIndex(self.aStrokesString, holeIndex);
+	return [self.aStrokesString wageringStrokesAtIndex:holeIndex];
 }
 
 - (GOLFHandicapStrokes)bMatchStrokesForHoleAtIndex:(NSUInteger)holeIndex {
-	return GOLFWageringStrokesFromStringByIndex(self.bStrokesString, holeIndex);
+	return [self.bStrokesString wageringStrokesAtIndex:holeIndex];
 }
 
 - (NSDictionary *)betInfo {
 	//	betInfo NSDictionary supplied to all bottom-level bets…
-	//	key				type			description
-	//	--------------	--------------	----------------------------------------------------------------
-	//	aRound			SCRRound *		A competitor's round (optional)
-	//	aScores			NSArray *		0, 9, or 18 (NSNumber *) A team competitor scores for match play
-	//	aStrokesString	NSString *		18-character string of strokes given for A competitor
-	//	bRound			SCRRound *		B competitor's round (optional)
-	//	bScores			NSArray *		0, 9, or 18 (NSNumber *) B team competitor scores for match play
-	//	bStrokesString	NSString *		18-character string of strokes given for B competitor
-	//	lowHandicap		NSNumber *		GOLFPlayingHandicap for the lowest handicap competitor
-	//	lowName			NSString *		name of the lowest-handicapped competitor
-	//	scoringSource	NSNumber *		GOLFWageringScoringSource for scores (gross, net, comp, etc.)
+	//	key					type			description
+	//	------------------	--------------	----------------------------------------------------------------
+	//	aRound				SCRRound *		A competitor's round
+	//	aScores				NSArray *		0, 9, or 18 (NSNumber *) A competitor hole-by-hole match scores
+	//	aStrokesString		NSString *		18-character string of strokes given for A competitor
+	//	aWageringStrokes	NSNumber *		Adjusted wagering strokes for A competitor (un-diff'd)
+	//	bRound				SCRRound *		B competitor's round
+	//	bScores				NSArray *		0, 9, or 18 (NSNumber *) B competitor hole-by-hole match scores
+	//	bStrokesString		NSString *		18-character string of strokes given for B competitor
+	//	bWageringStrokes	NSNumber *		Adjusted wagering strokes for B competitor (un-diff'd)
+	//	lowHandicap			NSNumber *		GOLFPlayingHandicap for the lowest handicap competitor
+	//	lowName				NSString *		name of the lowest-handicapped competitor
 			
 	if (self.fromBet) {
 		return [self.fromBet betInfo];
@@ -403,16 +408,16 @@ GOLFHandicapStrokes GOLFWageringStrokesFromStringByIndex(NSString *strokesString
 }
 
 - (NSArray *)aHoleScores {
-	NSDictionary *info = self.betInfo;
 	NSArray *holeScores = nil;
-	if (info) {
-		holeScores = [info objectForKey:@"aScores"];
+	if (self.betInfo) {
+		holeScores = [self.betInfo objectForKey:@"aScores"];
 	}
 	if (holeScores == nil) {
 		NSMutableArray *workingArray = [NSMutableArray arrayWithCapacity:18];
-		NSNumber *workingNumber = [NSNumber numberWithInteger:kNotAScore];
-		for (NSUInteger holeIndex = 0; holeIndex < 18; holeIndex++) {
-			[workingArray addObject:workingNumber];
+		for (NSUInteger holeIndex = 0; holeIndex < 19; holeIndex++) {
+			id<GOLFWageringDataSource> aHole = ((self.ARound != nil) ? [self.ARound holeAtIndexForWagering:holeIndex] : nil);
+			GOLFScore holeScore = ((aHole != nil) ? [aHole grossScoreForWagering] : kNotAScore);
+			[workingArray addObject:[NSNumber numberWithScore:holeScore]];
 		}
 		holeScores = [NSArray arrayWithArray:workingArray];
 	}
@@ -420,16 +425,16 @@ GOLFHandicapStrokes GOLFWageringStrokesFromStringByIndex(NSString *strokesString
 }
 
 - (NSArray *)bHoleScores {
-	NSDictionary *info = self.betInfo;
 	NSArray *holeScores = nil;
-	if (info) {
-		holeScores = [info objectForKey:@"bScores"];
+	if (self.betInfo) {
+		holeScores = [self.betInfo objectForKey:@"bScores"];
 	}
 	if (holeScores == nil) {
 		NSMutableArray *workingArray = [NSMutableArray arrayWithCapacity:18];
-		NSNumber *workingNumber = [NSNumber numberWithInteger:kNotAScore];
-		for (NSUInteger holeIndex = 0; holeIndex < 18; holeIndex++) {
-			[workingArray addObject:workingNumber];
+		for (NSUInteger holeIndex = 0; holeIndex < 19; holeIndex++) {
+			id<GOLFWageringDataSource> aHole = ((self.BRound != nil) ? [self.BRound holeAtIndexForWagering:holeIndex] : nil);
+			GOLFScore holeScore = ((aHole != nil) ? [aHole grossScoreForWagering] : kNotAScore);
+			[workingArray addObject:[NSNumber numberWithScore:holeScore]];
 		}
 		holeScores = [NSArray arrayWithArray:workingArray];
 	}
@@ -705,36 +710,36 @@ GOLFHandicapStrokes GOLFWageringStrokesFromStringByIndex(NSString *strokesString
 	NSInteger newBetStatus = GOLFBetNoStatus;
 	NSInteger newBetUp = 0;
 	NSInteger newBetToGo = ourLastHole - ourFirstHole + 1;
-	BOOL aRoundIsTeam = NO;
-	BOOL aRoundIsTeamOnlyPlayType = NO;
-	BOOL aRoundUsesTeammatesScores = NO;
-	BOOL bRoundIsTeam = NO;
-	BOOL bRoundIsTeamOnlyPlayType = NO;
-	BOOL bRoundUsesTeammatesScores = NO;
+//	BOOL aRoundIsTeam = NO;
+//	BOOL aRoundIsTeamOnlyPlayType = NO;
+//	BOOL aRoundUsesTeammatesScores = NO;
+//	BOOL bRoundIsTeam = NO;
+//	BOOL bRoundIsTeamOnlyPlayType = NO;
+//	BOOL bRoundUsesTeammatesScores = NO;
 	
-	if (roundA) {
-		if ([roundA respondsToSelector:@selector(isTeamForWagering)]) {
-			aRoundIsTeam = [roundA isTeamForWagering];
-		}
-		if (aRoundIsTeam) {
-			if ([roundA respondsToSelector:@selector(playTypeForWagering)]) {
-				aRoundIsTeamOnlyPlayType = IS_TEAM_ONLY_PLAY_TYPE([roundA playTypeForWagering]);
-			}
-			aRoundUsesTeammatesScores = !aRoundIsTeamOnlyPlayType;
-		}
-	}
-
-	if (roundB) {
-		if ([roundB respondsToSelector:@selector(isTeamForWagering)]) {
-			bRoundIsTeam = [roundB isTeamForWagering];
-		}
-		if (bRoundIsTeam) {
-			if ([roundB respondsToSelector:@selector(playTypeForWagering)]) {
-				bRoundIsTeamOnlyPlayType = IS_TEAM_ONLY_PLAY_TYPE([roundB playTypeForWagering]);
-			}
-			bRoundUsesTeammatesScores = !bRoundIsTeamOnlyPlayType;
-		}
-	}
+//	if (roundA) {
+//		if ([roundA respondsToSelector:@selector(isTeamForWagering)]) {
+//			aRoundIsTeam = [roundA isTeamForWagering];
+//		}
+//		if (aRoundIsTeam) {
+//			if ([roundA respondsToSelector:@selector(playTypeForWagering)]) {
+//				aRoundIsTeamOnlyPlayType = IS_TEAM_ONLY_PLAY_TYPE([roundA playTypeForWagering]);
+//			}
+//			aRoundUsesTeammatesScores = !aRoundIsTeamOnlyPlayType;
+//		}
+//	}
+//
+//	if (roundB) {
+//		if ([roundB respondsToSelector:@selector(isTeamForWagering)]) {
+//			bRoundIsTeam = [roundB isTeamForWagering];
+//		}
+//		if (bRoundIsTeam) {
+//			if ([roundB respondsToSelector:@selector(playTypeForWagering)]) {
+//				bRoundIsTeamOnlyPlayType = IS_TEAM_ONLY_PLAY_TYPE([roundB playTypeForWagering]);
+//			}
+//			bRoundUsesTeammatesScores = !bRoundIsTeamOnlyPlayType;
+//		}
+//	}
 
 	for (NSUInteger holePosition = 1; holePosition < 19; holePosition++) {
 		NSUInteger holeIndex = holePosition - 1;
@@ -785,27 +790,29 @@ GOLFHandicapStrokes GOLFWageringStrokesFromStringByIndex(NSString *strokesString
 				} else {
 					id<GOLFWageringDataSource> aHole = [roundA holeAtIndexForWagering:holeIndex];
 					id<GOLFWageringDataSource> bHole = [roundB holeAtIndexForWagering:holeIndex];
-					GOLFScore aHoleScore = kNotAScore;
-					GOLFScore bHoleScore = kNotAScore;
-					BOOL aHoleDQ = NO;
-					BOOL bHoleDQ = NO;
-					if (aHole) {
-						if ([aHole respondsToSelector:@selector(grossScoreForWagering)]) {
-							aHoleScore = [aHole grossScoreForWagering];
-						}
-						if ([aHole respondsToSelector:@selector(isDisqualifiedForWagering)]) {
-							aHoleDQ = [aHole isDisqualifiedForWagering];
-						}
-					}
-					if (bHole) {
-						if ([bHole respondsToSelector:@selector(grossScoreForWagering)]) {
-							bHoleScore = [bHole grossScoreForWagering];
-						}
-						if ([bHole respondsToSelector:@selector(isDisqualifiedForWagering)]) {
-							bHoleDQ = [bHole isDisqualifiedForWagering];
-						}
-					}
-					if ((aHole == nil) || (bHole == nil) || (aHoleScore == kNotAScore) || (bHoleScore == kNotAScore)) {
+					GOLFScore aHoleMatchScore = [self aMatchScoreForHoleAt18Index:holeIndex];
+					GOLFScore bHoleMatchScore = [self bMatchScoreForHoleAt18Index:holeIndex];
+//					GOLFScore aHoleScore = kNotAScore;
+//					GOLFScore bHoleScore = kNotAScore;
+//					BOOL aHoleDQ = ([aHole respondsToSelector:@selector(isDisqualifiedForWagering)] ? [aHole isDisqualifiedForWagering] : NO);
+//					BOOL bHoleDQ = ([bHole respondsToSelector:@selector(isDisqualifiedForWagering)] ? [bHole isDisqualifiedForWagering] : NO);
+//					if (aHole) {
+//						if ([aHole respondsToSelector:@selector(grossScoreForWagering)]) {
+//							aHoleScore = [aHole grossScoreForWagering];
+//						}
+//						if ([aHole respondsToSelector:@selector(isDisqualifiedForWagering)]) {
+//							aHoleDQ = [aHole isDisqualifiedForWagering];
+//						}
+//					}
+//					if (bHole) {
+//						if ([bHole respondsToSelector:@selector(grossScoreForWagering)]) {
+//							bHoleScore = [bHole grossScoreForWagering];
+//						}
+//						if ([bHole respondsToSelector:@selector(isDisqualifiedForWagering)]) {
+//							bHoleDQ = [bHole isDisqualifiedForWagering];
+//						}
+//					}
+					if ((aHole == nil) || (bHole == nil) || (aHoleMatchScore == kNotAScore) || (bHoleMatchScore == kNotAScore)) {
 						holeStatus[holeIndex] = GOLFBetNoHoleStatus;
 						newBetStatus = ((newHoleStatus > 0)
 								? GOLFBetAAhead
@@ -816,42 +823,51 @@ GOLFHandicapStrokes GOLFWageringStrokesFromStringByIndex(NSString *strokesString
 												: GOLFBetNoStatus)));
 						precedingHoleStatus = GOLFBetNoHoleStatus;	//	Thereafter
 					} else {
+						BOOL aHoleDQ = ([aHole respondsToSelector:@selector(isDisqualifiedForWagering)] ? [aHole isDisqualifiedForWagering] : NO);
+						BOOL bHoleDQ = ([bHole respondsToSelector:@selector(isDisqualifiedForWagering)] ? [bHole isDisqualifiedForWagering] : NO);
 						NSComparisonResult result = NSOrderedSame;
 
-						if ((self.handicapStyle == GOLFWageringGrossHandicapStyle) && [aHole respondsToSelector:@selector(compareGrossScoreForWagering:)]) {
-							result = [aHole compareGrossScoreForWagering:bHole];
-						} else if (aHoleDQ) {
+//						if ((self.handicapStyle == GOLFWageringGrossHandicapStyle) && [aHole respondsToSelector:@selector(compareGrossScoreForWagering:)]) {
+//							result = [aHole compareGrossScoreForWagering:bHole];
+//						} else
+						if (aHoleDQ) {
 							result = (bHoleDQ ? NSOrderedSame : NSOrderedDescending);
 						} else if (bHoleDQ) {
 							result = NSOrderedAscending;
-						} else {
-							NSRange strokesRange = NSMakeRange(holeIndex, 1);
-
-							if (!aRoundUsesTeammatesScores
-									&& !bRoundUsesTeammatesScores
-									&& (self.handicapStyle == GOLFWageringFullHandicapStyle)
-									&& [aHole respondsToSelector:@selector(compareNetScoreForWagering:)]) {
-								result = [aHole compareNetScoreForWagering:bHole];
-//								if (aRoundIsTeamOnlyPlayType) {
-//									result = [aHole compareCompScore:bHole];	//	Team only scores always use comp!
-//								} else {
-//									result = [aHole compareNetScore:bHole];
-//								}
-							} else {
-								NSInteger aNetScore = (aRoundUsesTeammatesScores
-										? [(NSNumber *)[self.aHoleScores objectAtIndex:holeIndex] integerValue]
-										: (aHoleScore - [[self.aStrokesString substringWithRange:strokesRange] integerValue]));
-								NSInteger bNetScore = (bRoundUsesTeammatesScores
-										? [(NSNumber *)[self.bHoleScores objectAtIndex:holeIndex] integerValue]
-										: (bHoleScore - [[self.bStrokesString substringWithRange:strokesRange] integerValue]));
-								
-								if (aNetScore < bNetScore) {
-									result = NSOrderedAscending;
-								} else if (aNetScore > bNetScore) {
-									result = NSOrderedDescending;
-								}
-							}
+						} else if (aHoleMatchScore < bHoleMatchScore) {
+							result = NSOrderedAscending;
+						} else if (aHoleMatchScore > bHoleMatchScore) {
+							result = NSOrderedDescending;
 						}
+						
+//						} else {
+//							NSRange strokesRange = NSMakeRange(holeIndex, 1);
+//
+//							if (!aRoundUsesTeammatesScores
+//									&& !bRoundUsesTeammatesScores
+//									&& (self.handicapStyle == GOLFWageringFullHandicapStyle)
+//									&& [aHole respondsToSelector:@selector(compareNetScoreForWagering:)]) {
+//								result = [aHole compareNetScoreForWagering:bHole];
+////								if (aRoundIsTeamOnlyPlayType) {
+////									result = [aHole compareCompScore:bHole];	//	Team only scores always use comp!
+////								} else {
+////									result = [aHole compareNetScore:bHole];
+////								}
+//							} else {
+//								NSInteger aNetScore = (aRoundUsesTeammatesScores
+//										? [(NSNumber *)[self.aHoleScores objectAtIndex:holeIndex] integerValue]
+//										: (aHoleScore - [[self.aStrokesString substringWithRange:strokesRange] integerValue]));
+//								NSInteger bNetScore = (bRoundUsesTeammatesScores
+//										? [(NSNumber *)[self.bHoleScores objectAtIndex:holeIndex] integerValue]
+//										: (bHoleScore - [[self.bStrokesString substringWithRange:strokesRange] integerValue]));
+//								
+//								if (aNetScore < bNetScore) {
+//									result = NSOrderedAscending;
+//								} else if (aNetScore > bNetScore) {
+//									result = NSOrderedDescending;
+//								}
+//							}
+//						}
 						
 						if (result == NSOrderedAscending)
 							newHoleStatus++;
@@ -1101,17 +1117,18 @@ GOLFHandicapStrokes GOLFWageringStrokesFromStringByIndex(NSString *strokesString
 	
 	if (self.betInfo != nil) {
 		NSMutableDictionary *betInfoDict = [NSMutableDictionary dictionaryWithCapacity:6];
-		//	key				type			description
-		//	--------------	--------------	----------------------------------------------------------------
-		//	aRound			SCRRound *		A competitor's round (optional)
-		//	aScores			NSArray *		0, 9, or 18 (NSNumber *) A team competitor scores for match play
-		//	aStrokesString	NSString *		18-character string of strokes given for A competitor (optional)
-		//	bRound			SCRRound *		B competitor's round (optional)
-		//	bScores			NSArray *		0, 9, or 18 (NSNumber *) B team competitor scores for match play
-		//	bStrokesString	NSString *		18-character string of strokes given for B competitor (optional)
-		//	lowHandicap		NSNumber *		GOLFPlayingHandicap for the lowest handicap competitor
-		//	lowName			NSString *		name of the lowest-handicapped competitor
-		//	scoringSource	NSNumber *		GOLFWageringScoringSource for scores
+		//	key					type			description
+		//	------------------	--------------	----------------------------------------------------------------
+		//	aRound				SCRRound *		A competitor's round
+		//	aScores				NSArray *		0, 9, or 18 (NSNumber *) A competitor hole-by-hole match scores
+		//	aStrokesString		NSString *		18-character string of strokes given for A competitor
+		//	aWageringStrokes	NSNumber *		Adjusted wagering strokes for A competitor (un-diff'd)
+		//	bRound				SCRRound *		B competitor's round
+		//	bScores				NSArray *		0, 9, or 18 (NSNumber *) B competitor hole-by-hole match scores
+		//	bStrokesString		NSString *		18-character string of strokes given for B competitor
+		//	bWageringStrokes	NSNumber *		Adjusted wagering strokes for B competitor (un-diff'd)
+		//	lowHandicap			NSNumber *		GOLFPlayingHandicap for the lowest handicap competitor
+		//	lowName				NSString *		name of the lowest-handicapped competitor
 		
 		NSArray *workingArray = [self.betInfo objectForKey:@"aScores"];
 		if (workingArray != nil) {
@@ -1139,7 +1156,7 @@ GOLFHandicapStrokes GOLFWageringStrokesFromStringByIndex(NSString *strokesString
 		}
 		
 		//	Let the A round control what the source of scores is for the match…
-		[betInfoDict setObject:[NSNumber numberWithUnsignedInteger:[self.ARound scoringSourceForWagering]] forKey:@"scoringSource"];
+//		[betInfoDict setObject:[NSNumber numberWithUnsignedInteger:[self.ARound scoringSourceForWagering]] forKey:@"scoringSource"];
 		
 		[representationDict setObject:[NSDictionary dictionaryWithDictionary:betInfoDict] forKey:@"betInfo"];
 	}

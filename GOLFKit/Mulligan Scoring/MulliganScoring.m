@@ -46,14 +46,14 @@ NSString * const MulliganScoringRoundIDUniversalTypeIdentifier = @"com.mulligans
 NSString * const MulliganScoringTeamRoundIDUniversalTypeIdentifier = @"com.mulligansoftware.scoring.teamRoundID";
 
 //	iTunes URL's for Mulligan & iOS apps
-NSString * const iTunesEagleURL = @"https://itunes.apple.com/us/app/eagle/id403115926?ls=1&mt=12";
-NSString * const iTunesMulliganAppsURL = @"https://itunes.apple.com/us/artist/mulligan-software/id334049704";
-NSString * const iTunesTeeChartURL = @"https://itunes.apple.com/us/app/teechart/id334049701?ls=1&mt=8";
-NSString * const iTunesiPressURL = @"https://itunes.apple.com/us/app/ipress/id481425041?ls=1&mt=8";
-NSString * const iTunesScoringMachineURL = @"https://itunes.apple.com/us/app/the-scoring-machine/id831912888?ls=1&mt=8";
+NSString * const iTunesEagleURL = @"https://apps.apple.com/us/app/eagle/id403115926?mt=12";
+NSString * const iTunesMulliganAppsURL = @"https://apps.apple.com/us/developer/mulligan-software/id334049704?mt=12";
+NSString * const iTunesTeeChartURL = @"https://apps.apple.com/us/app/teechart/id334049701";
+NSString * const iTunesiPressURL = @"https://apps.apple.com/us/app/ipress/id481425041";
+NSString * const iTunesScoringMachineURL = @"https://apps.apple.com/us/app/the-scoring-machine/id831912888";
 
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
-NSString * const iTunesMacAppStoreForEagleURL = @"https://geo.itunes.apple.com/us/app/eagle/id403115926?mt=12";	//	Not useful from iOS
+NSString * const iTunesMacAppStoreForEagleURL = @"https://apps.apple.com/us/app/eagle/id403115926?mt=12";	//	Not useful from iOS
 #endif
 
 //	Mulligan Software online data URLs

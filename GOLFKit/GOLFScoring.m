@@ -156,7 +156,7 @@ NSString * NSStringFromMixedScore(float score, NSInteger denominatorHint, float 
 				return [NSString localizedStringWithFormat:@"%1.0f", score];
 			}
 			return ((wholeNumber > 0)
-					? [NSString stringWithFormat:@"%@%ld%@", (negative ? @"-" : @""), wholeNumber, vulgarFraction]
+					? [NSString stringWithFormat:@"%@%ld%@", (negative ? @"-" : @""), (long)wholeNumber, vulgarFraction]
 					: [NSString stringWithFormat:@"%@%@", (negative ? @"-" : @""), vulgarFraction]);
 		} else {
 			if (error) {
