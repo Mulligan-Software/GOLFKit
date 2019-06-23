@@ -83,6 +83,7 @@
 "TERM_LEADERBOARD" = "Bestenliste";
 "TERM_LIMITED" = "limitiert";
 "TERM_LOCATE" = "suchen";
+"TERM_LOW" = "klein";	//	As in "low handicap"
 "TERM_MATCH" = "Match";
 "TERM_MATCH_PLURAL" = "Matches";
 "TERM_MEASURED" = "gemessen";
@@ -426,6 +427,7 @@
 "TITLE_MENS_HANDICAP" = "Handicap der Herren";
 "TITLE_MOVE_ROUND_DOWN" = "Bewege die Runde nach unten";
 "TITLE_MOVE_ROUND_UP" = "Bewege die Runde nach oben";
+"TITLE_MULLIGAN_SOFTWARE" = "Mulligan Software";
 "TITLE_NAME_SCORECARDS" = "Benennen Scorekarten";
 "TITLE_NAME_TEAMS" = "Benennen Teams";
 "TITLE_NASSAU" = "Nassau";

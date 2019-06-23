@@ -77,6 +77,7 @@ NSString * NSStringFromMixedScore(float score, NSInteger denominatorHint, float 
 		float workingScore = (negative ? -score : score);
 		NSInteger wholeNumber = (NSInteger)floorf(workingScore);
 		float remainder = workingScore - (float)wholeNumber;
+		BOOL needRemainder = (floorf((fabs(remainder) * 10) + 0.5) > 0.0);
 		NSInteger bestNumerator = 0;
 		NSInteger bestDenominator = 10;
 		float bestError = 999.0;
@@ -153,7 +154,7 @@ NSString * NSStringFromMixedScore(float score, NSInteger denominatorHint, float 
 			}
 			if ([vulgarFraction isEqualToString:vulgarName]) {
 				//	An error finding an appropriate vulgar fraction using GOLFLocalizedString…
-				return [NSString localizedStringWithFormat:@"%1.0f", score];
+				return (needRemainder ? [NSString localizedStringWithFormat:@"%1.1f", score] : [NSString localizedStringWithFormat:@"%1.0f", score]);
 			}
 			return ((wholeNumber > 0)
 					? [NSString stringWithFormat:@"%@%ld%@", (negative ? @"-" : @""), (long)wholeNumber, vulgarFraction]
@@ -162,7 +163,7 @@ NSString * NSStringFromMixedScore(float score, NSInteger denominatorHint, float 
 			if (error) {
 				*error = bestError;
 			}
-			return [NSString localizedStringWithFormat:@"%1.0f", score];	//	Formatting will handle the sign
+			return (needRemainder ? [NSString localizedStringWithFormat:@"%1.1f", score] : [NSString localizedStringWithFormat:@"%1.0f", score]);	//	Formatting will handle the sign
 		}
 	}	//	if (score != kNotANetScore)
 	return @"";

@@ -83,6 +83,7 @@
 "TERM_LEADERBOARD" = "leaderboard";
 "TERM_LIMITED" = "limited";
 "TERM_LOCATE" = "locate";
+"TERM_LOW" = "low";	//	As in "low handicap"
 "TERM_MATCH" = "match";
 "TERM_MATCH_PLURAL" = "matches";
 "TERM_MEASURED" = "measured";
@@ -426,6 +427,7 @@
 "TITLE_MENS_HANDICAP" = "Men’s Handicap";
 "TITLE_MOVE_ROUND_DOWN" = "Move Round Down";
 "TITLE_MOVE_ROUND_UP" = "Move Round Up";
+"TITLE_MULLIGAN_SOFTWARE" = "Mulligan Software";
 "TITLE_NAME_SCORECARDS" = "Name Scorecards";
 "TITLE_NAME_TEAMS" = "Name Teams";
 "TITLE_NASSAU" = "Nassau";
@@ -491,7 +493,7 @@
 "TITLE_STOBBIE" = "Stobbie";
 "TITLE_SYSTEM" = "System";
 "TITLE_TECHNICAL_SUPPORT" = "Technical Support";
-"TITLE_THE_SCORING_MACHINE" = "The Scoring Machine";
+"TITLE_THE_SCORING_MACHINE" = "The Scoring Machine™";
 "TITLE_TOTAL_POINTS" = "Total Points";
 "TITLE_TRASH" = "Trash, Dots";
 "TITLE_UNLINK_DROPBOX" = "Unlink Dropbox";

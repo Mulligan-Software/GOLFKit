@@ -151,6 +151,14 @@ typedef NS_ENUM(NSUInteger, GOLFPlayType) {
 	#define IS_TEAM_ONLY_PLAY_TYPE(_type)	((((_type) >= FirstTeamOnlyPlayType) && ((_type) <= LastTeamOnlyPlayType)) ? YES : NO)
 #endif
 
+#if !defined(IS_VARIABLE_TEAM_BEST_BALL_PLAY_TYPE)
+	#define IS_VARIABLE_TEAM_BEST_BALL_PLAY_TYPE(_type)	((((_type) == WaltzTeamPlayType) || ((_type) == ModifiedWaltzTeamPlayType) || ((_type) == ChaChaChaTeamPlayType) || ((_type) == ChaChaTeamPlayType) || ((_type) == IrishFourBallTeamPlayType) || ((_type) == BowmakerThreeBallTeamPlayType)) ? YES : NO)
+#endif
+
+#if !defined(IS_ANY_TEAM_BEST_BALL_PLAY_TYPE)
+	#define IS_ANY_TEAM_BEST_BALL_PLAY_TYPE(_type)	((((_type) == BetterBallTeamPlayType) || ((_type) == TwoBestBallsTeamPlayType) || ((_type) == ThreeBestBallsTeamPlayType) || ((_type) == FourBallTeamPlayType) || IS_VARIABLE_TEAM_BEST_BALL_PLAY_TYPE(_type)) ? YES : NO)
+#endif
+
 #if !defined(IS_ANY_POINT_QUOTA_PLAY_TYPE)
 	#define IS_ANY_POINT_QUOTA_PLAY_TYPE(_type)	((((_type) >= StablefordPlayType) && ((_type) <= ChicagoPlayType)) ? YES : NO)
 #endif

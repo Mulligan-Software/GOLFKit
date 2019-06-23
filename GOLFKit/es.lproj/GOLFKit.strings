@@ -83,6 +83,7 @@
 "TERM_LEADERBOARD" = "tabla de clasificación";
 "TERM_LIMITED" = "limitado";
 "TERM_LOCATE" = "ubicar";
+"TERM_LOW" = "bajo";	//	As in "low handicap"
 "TERM_MATCH" = "partido";
 "TERM_MATCH_PLURAL" = "partidos";
 "TERM_MEASURED" = "medido";
@@ -426,6 +427,7 @@
 "TITLE_MENS_HANDICAP" = "Handicap - Caballeros";
 "TITLE_MOVE_ROUND_DOWN" = "Mover la ronda hacia abajo";
 "TITLE_MOVE_ROUND_UP" = "Mover la ronda hacia arriba";
+"TITLE_MULLIGAN_SOFTWARE" = "Mulligan Software";
 "TITLE_NAME_SCORECARDS" = "Nombra las Tarjetas";
 "TITLE_NAME_TEAMS" = "Nombra los Equipos";
 "TITLE_NASSAU" = "Nassau";
