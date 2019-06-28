@@ -309,6 +309,7 @@
 "TITLE_DATA_PROTECTION" = "Data Protection";
 "TITLE_DELETE_ALL" = "Delete All";
 "TITLE_DELETE_CONTESTANT" = "Delete Contestant";
+"TITLE_DESIGNATE_CAPTAIN" = "Designate as Captain";
 "TITLE_DIFFERENTIAL_TYPE" = "Differential type";
 "TITLE_DONE" = "Done";
 "TITLE_DOWNLOADING_EAGLE_USERS_GUIDE"= "Downloading the Mulligan’s Eagle™ Users’ Guide…";
@@ -546,6 +547,8 @@
 "FORMAT_CURRENT_%@_TITLE" = "Current %@";
 "FORMAT_CURRENT_%@_TITLE_PLURAL" = "Current %@";
 "FORMAT_DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Determine your %@ on the right by finding the row in which your %@ appears on the left.";
+"FORMAT_%@_IS_DEFAULT_CAPTAIN" = "%@ assigned by handicap as team captain.";
+"FORMAT_%@_IS_DESIGNATED_CAPTAIN" = "%@ is designated as team captain.";
 "FORMAT_MB_DOWNLOADED_%1.1f" = "%1.1fMB downloaded";
 "FORMAT_NET_%@" = "Net %@";
 "FORMAT_NOT_AVAILABLE_WITH_%@" = "not available for %@";

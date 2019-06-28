@@ -309,6 +309,7 @@
 "TITLE_DATA_PROTECTION" = "Datenschutz";
 "TITLE_DELETE_ALL" = "Alles löschen";
 "TITLE_DELETE_CONTESTANT" = "Mitbewerber löschen";
+"TITLE_DESIGNATE_CAPTAIN" = "Als Kapitän bestimmen";
 "TITLE_DIFFERENTIAL_TYPE" = "Differentieller Typ";
 "TITLE_DONE" = "Fertig";
 "TITLE_DOWNLOADING_EAGLE_USERS_GUIDE"= "Mulligan’s Eagle™ Benutzerhandbuch wird heruntergeladen…";
@@ -546,6 +547,8 @@
 "FORMAT_CURRENT_%@_TITLE" = "aktuelle %@";
 "FORMAT_CURRENT_%@_TITLE_PLURAL" = "aktuellen %@";
 "FORMAT_DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Bestimme Dein %@ auf der rechten Seite indem Sie die Zeile finden, in der Ihre %@ auf der linken Seite steht.";
+"FORMAT_%@_IS_DEFAULT_CAPTAIN" = "%@ wird per Handicap zum Mannschaftskapitän ernannt.";
+"FORMAT_%@_IS_DESIGNATED_CAPTAIN" = "%@ wird zum Mannschaftskapitän ernannt.";
 "FORMAT_MB_DOWNLOADED_%1.1f" = "%1.1fMB heruntergeladen";
 "FORMAT_NET_%@" = "Netto-%@";
 "FORMAT_NOT_AVAILABLE_WITH_%@" = "nicht für %@ verfügbar";

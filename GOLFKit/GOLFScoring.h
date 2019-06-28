@@ -219,7 +219,7 @@ typedef NS_OPTIONS(NSUInteger, GOLFRoundStatus) {
 	GOLFRoundStatusIsMatchRound						= 1 << 10,		//	(1024)		Round was played during Match Play
 	GOLFRoundStatusHigherIsBetter					= 1 << 11,		//	(2048)		Comp scoring is in points (higher is better)
 	GOLFRoundStatusOptedOutOfSkins					= 1 << 12,		//	(4096)		Competitor has opted out of skins competition in this round
-	GOLFRoundStatusOption13							= 1 << 13,		//	(8192)
+	GOLFRoundStatusIsDesignatedCaptain				= 1 << 13,		//	(8192)		Competitor should be designated as captain when needed
 	GOLFRoundStatusOption14							= 1 << 14,		//	(16384)
 	GOLFRoundStatusIsMissingCompetitor				= 1 << 15,		//	(32768)		Core Data fault on access
 	GOLFRoundStatusOfficialHandicapIsOverridden		= 1 << 16,		//	(65536)		Official Handicap (Handicap Index) has been overridden
@@ -316,7 +316,7 @@ typedef NS_OPTIONS(NSUInteger, GOLFMembershipStatus) {
 	GOLFMembershipStatusOption10						= 1 << 10,		//	(1024)
 	GOLFMembershipStatusOption11						= 1 << 11,		//	(2048)
 	GOLFMembershipStatusOption12						= 1 << 12,		//	(4096)
-	GOLFMembershipStatusOption13						= 1 << 13,		//	(8192)
+	GOLFMembershipStatusIsDesignatedCaptain				= 1 << 13,		//	(8192)		Team member should be designated as captain when needed
 	GOLFMembershipStatusOption14						= 1 << 14,		//	(16384)
 	GOLFMembershipStatusOption15						= 1 << 15,		//	(32768)
 	GOLFMembershipStatusOfficialHandicapIsOverridden	= 1 << 16,		//	(65536)		Handicap Index applied to this membership has been overridden
