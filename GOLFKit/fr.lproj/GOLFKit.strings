@@ -11,6 +11,7 @@
 "TERM_ADJUSTED_ABBR" = "aju.";
 "TERM_ADJUSTED_FOR_RATINGS" = "ajusté pour les différences d’Évaluations Parcours";
 "TERM_ALL" = "toutes";
+"TERM_ALL_SEARCH" = "tout";
 "TERM_ALLOWANCE" = "allocation";
 "TERM_AND" = "et";
 "TERM_ASSIGN" = "attribuer";
@@ -206,6 +207,7 @@
 "GOLF_TEE_COLOR_NAME_WHITE_AND_GOLD" = "Blanc & Or";
 "GOLF_TEE_COLOR_NAME_BLACK_AND_WHITE" = "Noir & Blanc";
 "GOLF_TEE_COLOR_NAME_BLUE_AND_GREEN" = "Bleue & Vert";
+"GOLF_TEE_COLOR_NAME_GREEN_AND_RED" = "Vert & Rouge";
 "GOLF_TEE_COLOR_NAME_GREEN_AND_WHITE" = "Vert & Blanc";
 "GOLF_TEE_COLOR_NAME_CUSTOM" = "Personnalisé";
 "GOLF_TEE_COLOR_NAME_USA" = "USA";		//	Custom tee
@@ -264,6 +266,8 @@
 //	Titles & Abbr.
 "TITLE_ABBREVIATED_DATES" = "Dates Abrégées";
 "TITLE_ACCESSORY_PRINT_INITIALS" = "Initiales des Joueurs";
+"TITLE_ADD_A_ROUND" = "Ajoutez un tour";
+"TITLE_ADD_BUTTON" = "Ajouter";
 "TITLE_ADVANCED_DUPLICATES" = "Prohibir les handicaps de trou dupliqués";
 "TITLE_ADVANCED_MULTIPLE_PRESSES" = "Prohibir les presses multiple";
 "TITLE_ADVANCED_9_HOLE_HANDICAPS" = "Requérir handicaps 9-trous";
@@ -442,6 +446,7 @@
 "TITLE_PENALTY_STROKE" = "Coup de pénalité";
 "TITLE_PENALTY_STROKE_PLURAL" = "Coups de pénalité";
 "TITLE_PERSONAL_HANDICAPPING" = "Handicapant Individuel";
+"TITLE_PLAYER(S)" = "Joueur(s)";
 "TITLE_PLAYING_HANDICAP_DETERMINATION" = "Détermination de handicap jouer";
 "TITLE_POLIE" = "Polie";
 "TITLE_POST" = "Publier";
