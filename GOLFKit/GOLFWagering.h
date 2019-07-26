@@ -76,15 +76,6 @@ typedef NS_ENUM(NSUInteger, GOLFWageringGameStyle) {
 	GOLFWageringGameUnknownStyle = 99		//	Unknown
 };
 
-//typedef NS_ENUM(NSUInteger, GOLFWageringScoringSource) {
-//	GOLFWageringScoringSourceGross,				//	(0)		Match Play using gross scores
-//	GOLFWageringScoringSourceNet = 10,			//	(10)	Match Play using full handicap net scores 
-//	GOLFWageringScoringSourceComp = 20,			//	(20)	Match Play using allowance adjusted competition scores
-//	GOLFWageringScoringSourceCalculated = 30,	//	(30)	Match Play using calculated scores
-//	GOLFWageringScoringSourceTeammates = 40,	//	(40)	Match Play using teammate scores
-//	GOLFWageringScoringSourceUnknown = 99		//	Unknown
-//};
-
 typedef NS_OPTIONS(NSUInteger, GOLFWageringTrashOption) {
 	GOLFWageringTrashNone				= 0,			//	(0)
 	GOLFWageringTrashCover				= 1 << 0,		//	(1)			Birdie or better covering opponent's completed birdie or better
@@ -102,7 +93,7 @@ typedef NS_OPTIONS(NSUInteger, GOLFWageringTrashOption) {
 	GOLFWageringTrashBongo				= 1 << 12,		//	(4096)		Of three or more, ball away putting, the first to hole their putt
 	GOLFWageringTrashGurglie			= 1 << 13,		//	(8192)		Par or better from, or skipping off, water
 	GOLFWageringTrashBarkie				= 1 << 14,		//	(16384)		Par or better off a tree
-	GOLFWageringTrashAsphalt			= 1 << 15,		//	(32768)		Par or better from a cart path
+	GOLFWageringTrashAsphalt			= 1 << 15,		//	(32768)		Par or better from, or skipping off, a cart path
 	GOLFWageringTrashSnake				= 1 << 16,		//	(65536)		3-putt, last 3-putt, shortest 3-putt
 	GOLFWageringTrashOption17			= 1 << 17,		//	(131072)
 	GOLFWageringTrashOption18			= 1 << 18,		//	(262144)
@@ -128,9 +119,6 @@ typedef NS_OPTIONS(NSUInteger, GOLFWageringTrashOption) {
 
 //	Returns the GOLFPlayType for rounds (or others) for use in wagering
 - (GOLFPlayType)playTypeForWagering;
-
-//	Returns the GOLFWageringScoringSource for rounds (or others) for use in wagering
-//- (GOLFWageringScoringSource)scoringSourceForWagering;
 
 //	Returns the object (itself a <GOLFWageringDataSource>) from the provided zero-based holeIndex
 //	Can return nil

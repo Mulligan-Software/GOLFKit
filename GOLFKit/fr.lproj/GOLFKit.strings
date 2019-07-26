@@ -45,6 +45,7 @@
 "TERM_COURSE" = "parcours";
 "TERM_COURSE_PLURAL" = "parcours";
 "TERM_CUSTOMIZATION" = "personnalisation";
+"TERM_CUSTOMIZATION_PLURAL" = "personnalisations";
 "TERM_DATE" = "date";
 "TERM_DELETE" = "supprimer";
 "TERM_DISQUALIFIED" = "disqualifié";
@@ -141,6 +142,7 @@
 "TERM_SCORECARD" = "carte de score";
 "TERM_SCORECARD_PLURAL" = "cartes de score";
 "TERM_SCORECARD_PLURAL_SHORT" = "cartes";
+"TERM_SCORING" = "notation";
 "TERM_SCRAMBLE" = "Scramble";
 "TERM_SELECTED" = "choisi";
 "TERM_SETTINGS" = "réglages";
@@ -154,6 +156,8 @@
 "TERM_TAP" = "touchez";	//	touchez ~
 "TERM_TEAM" = "équipe";
 "TERM_TEAM_PLURAL" = "équipes";
+"TERM_TEAMMATE" = "coéquipier";
+"TERM_TEAMMATE_PLURAL" = "coéquipiers";
 "TERM_TEE" = "jalon";
 "TERM_TEE_PLURAL" = "jalons";
 "TERM_THEME" = "thème";
@@ -171,6 +175,7 @@
 "TERM_USE" = "utiliser";
 "TERM_VALUE" = "valeur";
 "TERM_VERSUS_ABBR" = "vs";
+"TERM_WAGERING" = "parier";
 "TERM_WALTZ" = "Waltz";
 "TERM_WINS" = "gagne";
 "TERM_WOMAN_PLURAL" = "femmes";
@@ -342,6 +347,7 @@
 "TITLE_FRONT_SIDE" = "Premier Côté";	//	m.
 "TITLE_FULL_HDCP" = "Hdcp. Complète";
 "TITLE_GETTING_STARTED" = "Commencer…";
+"TITLE_GOLF_GLOSSARY" = "Glossaire de Golf";
 "TITLE_GORILLA" = "Gorilla";
 "TITLE_GRADE" = "Classe";
 "TITLE_GRAPHING_COLORS" = "Couleurs d’Infographie";

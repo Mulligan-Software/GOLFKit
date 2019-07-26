@@ -243,38 +243,6 @@ NSString * NSStringFromTrashOption(GOLFWageringTrashOption trashOption, NSString
 	}
 }
 
-//NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourceCode) {
-//	//	GOLFWageringScoringSourceGross,				//	(0)		Match Play using gross scores
-//	//	GOLFWageringScoringSourceNet = 10,			//	(10)	Match Play using full handicap net scores 
-//	//	GOLFWageringScoringSourceComp = 20,			//	(20)	Match Play using allowance adjusted competition scores
-//	//	GOLFWageringScoringSourceCalculated = 30,	//	(30)	Match Play using calculated scores
-//	//	GOLFWageringScoringSourceTeammates = 40,	//	(40)	Match Play using teammate scores
-//	//	GOLFWageringScoringSourceUnknown = 99		//	Unknown
-//
-//	switch (sourceCode) {
-//		case GOLFWageringScoringSourceGross:
-//    		return NSLocalizedString(@"Gross (0)", @"");
-//
-//		case GOLFWageringScoringSourceNet:
-//    		return NSLocalizedString(@"Net (10)", @"");
-//
-//		case GOLFWageringScoringSourceComp:
-//    		return NSLocalizedString(@"Comp (20)", @"");
-//
-//		case GOLFWageringScoringSourceCalculated:
-//    		return NSLocalizedString(@"Calculated (30)", @"");
-//
-//		case GOLFWageringScoringSourceTeammates:
-//    		return NSLocalizedString(@"Teammates (40)", @"");
-//
-//		case GOLFWageringScoringSourceUnknown:
-//    		return NSLocalizedString(@"Unknown (99)", @"");
-//
-//		default:
-//    		return [NSString stringWithFormat:NSLocalizedString(@"Error (%lu)", @""), (unsigned long)sourceCode];
-//	}
-//}
-
 NSString * NSStringFromGOLFWageringHoleStrokes(GOLFHandicapStrokes holeStrokes) {
 //	See:	NSString  + (id)stringForWageringStrokesAtHole:(GOLFHandicapStrokes)holeStrokes
 

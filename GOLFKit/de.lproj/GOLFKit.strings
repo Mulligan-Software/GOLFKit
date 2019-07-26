@@ -45,6 +45,7 @@
 "TERM_COURSE" = "Golfplatz";
 "TERM_COURSE_PLURAL" = "Golfplätze";
 "TERM_CUSTOMIZATION" = "Anpassung";
+"TERM_CUSTOMIZATION_PLURAL" = "Anpassungen";
 "TERM_DATE" = "Datum";
 "TERM_DELETE" = "löschen";
 "TERM_DISQUALIFIED" = "disqualifiziert";
@@ -141,6 +142,7 @@
 "TERM_SCORECARD" = "Scorekarte";
 "TERM_SCORECARD_PLURAL" = "Scorekarten";
 "TERM_SCORECARD_PLURAL_SHORT" = "Scorekarten";
+"TERM_SCORING" = "Wertung";
 "TERM_SCRAMBLE" = "Gerangel";
 "TERM_SELECTED" = "ausgewält";
 "TERM_SETTINGS" = "Einstellungen";
@@ -154,6 +156,8 @@
 "TERM_TAP" = "tippe";	//	tippe auf ~
 "TERM_TEAM" = "Mannschaft";
 "TERM_TEAM_PLURAL" = "Mannschaften";
+"TERM_TEAMMATE" = "Mannschaftskamerad";
+"TERM_TEAMMATE_PLURAL" = "Teamkollegen";
 "TERM_TEE" = "Abschlag";
 "TERM_TEE_PLURAL" = "Abschläge";
 "TERM_THEME" = "Thema";
@@ -171,6 +175,7 @@
 "TERM_USE" = "verwenden";
 "TERM_VALUE" = "Wert";
 "TERM_VERSUS_ABBR" = "vs.";
+"TERM_WAGERING" = "Wetten";
 "TERM_WALTZ" = "Waltzer";
 "TERM_WINS" = "gewinnt";
 "TERM_WOMAN_PLURAL" = "Damen";
@@ -342,6 +347,7 @@
 "TITLE_FRONT_SIDE" = "Ersteseite";
 "TITLE_FULL_HDCP" = "Ganz Hdcp.";
 "TITLE_GETTING_STARTED" = "Fertig Machen…";
+"TITLE_GOLF_GLOSSARY" = "Golf Glossar";
 "TITLE_GORILLA" = "Gorilla";
 "TITLE_GRADE" = "Klasse";
 "TITLE_GRAPHING_COLORS" = "Kartierenfarben";
