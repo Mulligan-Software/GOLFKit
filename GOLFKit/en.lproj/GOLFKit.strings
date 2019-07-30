@@ -103,6 +103,7 @@
 "TERM_NO" = "no";
 "TERM_NONE" = "none";
 "TERM_NORMAL" = "normal";
+"TERM_NOT_AVAILABLE_ABBR" = "n/a";
 "TERM_NOTE" = "note";
 "TERM_NOTE_PLURAL" = "notes";
 "TERM_NUMBER" = "number";
@@ -563,6 +564,7 @@
 "FORMAT_MB_DOWNLOADED_%1.1f" = "%1.1fMB downloaded";
 "FORMAT_NET_%@" = "Net %@";
 "FORMAT_NOT_AVAILABLE_WITH_%@" = "not available for %@";
+"FORMAT_NOTIFY_%@_ABOUT_%@" = "Please notify %@ about:\n%@";
 "FORMAT_NUMBER_%ld_ABBR" = "No. %ld";
 "FORMAT_OPEN_%@" = "Open %@";
 "FORMAT_OPEN_3_%@" = "Open 3 %@";
@@ -807,6 +809,7 @@
 "ORDINAL_FIRST" = "st";		/*	1st	*/
 "ORDINAL_NTH" = "th";		/*	9th	*/
 "ORDINAL_20TH_TO_29TH" = "th,st,nd,rd,th,th,th,th,th,th";	/*	20th, 21st, 22nd, 23rd, 24th, 25th, etc.		*/
+"PERCENT_CHARACTER" = "%";
 "PRESS_LEADER_CHARACTER" = "└";	//	Special character - alternates: "╚" or "‣"
 "SCORECARD_EXCEEDS_1_PLAYER" = "Scorecard exceeds maximum 1 player";
 "SCORECARD_EXCEEDS_%ld_PLAYERS" = "Scorecard exceeds maximum %ld players";

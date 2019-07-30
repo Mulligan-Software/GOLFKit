@@ -65,3 +65,5 @@ NSString * const MulliganSoftwareCountriesDictionaryURL = @"https://www.mulligan
 NSString * const MulliganSoftwareForEagleURL = @"https://www.mulligansoftware.com/responsive/mulligans-eagle.html";
 NSString * const MulliganSoftwareForiPressURL = @"https://www.mulligansoftware.com/responsive/ipress.html";
 
+//	Mulligan Software related data
+NSString * const MulliganSoftwareSupportEMailAddress = @"support@mulligansoftware.com";

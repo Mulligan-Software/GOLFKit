@@ -64,3 +64,6 @@ extern NSString * const MulliganSoftwareClubsListDictionaryURL;
 extern NSString * const MulliganSoftwareCountriesDictionaryURL;
 extern NSString * const MulliganSoftwareForEagleURL;
 extern NSString * const MulliganSoftwareForiPressURL;
+
+//	Mulligan Software related data
+extern NSString * const MulliganSoftwareSupportEMailAddress;

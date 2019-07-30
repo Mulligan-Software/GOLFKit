@@ -103,6 +103,7 @@
 "TERM_NO" = "non";
 "TERM_NONE" = "aucun";
 "TERM_NORMAL" = "normal";
+"TERM_NOT_AVAILABLE_ABBR" = "n/a";
 "TERM_NOTE" = "mémo";
 "TERM_NOTE_PLURAL" = "mémos";
 "TERM_NUMBER" = "número";
@@ -563,6 +564,7 @@
 "FORMAT_MB_DOWNLOADED_%1.1f" = "%1.1fMB téléchargés";
 "FORMAT_NET_%@" = "%@ Net";
 "FORMAT_NOT_AVAILABLE_WITH_%@" = "non disponible pour %@";
+"FORMAT_NOTIFY_%@_ABOUT_%@" = "S’il vous plaît informer %@ à propos de:\n%@";
 "FORMAT_NUMBER_%ld_ABBR" = "No. %ld";
 "FORMAT_OPEN_%@" = "Ouvrir %@";
 "FORMAT_OPEN_3_%@" = "Ouvrir 3 %@";
@@ -806,6 +808,7 @@
 "ORDINAL_FIRST" = "ᵉʳ";		/*	1ᵉʳ	*/
 "ORDINAL_NTH" = "ᵉ";
 "ORDINAL_20TH_TO_29TH" = "ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ,ᵉ";	/*	20ᵉ, 21ᵉ, 22ᵉ, etc.	*/
+"PERCENT_CHARACTER" = "%";
 "PRESS_LEADER_CHARACTER" = "└";	//	Special character - alternates: "╚" or "‣"
 "SCORECARD_EXCEEDS_1_PLAYER" = "Carte de score dépasse le maximum de 1 joueur";
 "SCORECARD_EXCEEDS_%ld_PLAYERS" = "Carte de score dépasse le maximum de %ld joueurs";
