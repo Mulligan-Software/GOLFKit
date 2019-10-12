@@ -807,9 +807,7 @@ NSString * GOLFHandicapLocalIndexModifierForAuthority(GOLFHandicapAuthority *aut
 //=================================================================
 NSString * GOLFHandicapNineHoleModifierForAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
-		if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
-			return @"N";
-		} else if ([authority isEqualToString:GOLFHandicapAuthorityUSGA] || [authority isEqualToString:GOLFHandicapAuthorityRCGA]) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityUSGA] || [authority isEqualToString:GOLFHandicapAuthorityRCGA]) {
 			return @"N";
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityEGA]) {
 			return @"N";
@@ -821,6 +819,8 @@ NSString * GOLFHandicapNineHoleModifierForAuthority(GOLFHandicapAuthority *autho
 #endif
 		}
 	}
+	//	AGU (Golf Australia) and WHS (World Handicap System) don't produce 9-hole handicap indexes
+	
 	return @"N";
 }
 
@@ -891,6 +891,9 @@ BOOL GOLFHandicap9HoleHandicapsSupported(GOLFHandicapAuthority *authority) {
 		if ([authority isEqualToString:GOLFHandicapAuthorityAGU]) {
 			//	Golf Australia doesn't calculate 9-hole indexes
 			return NO;
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
+			//	World Handicap System doesn't calculate 9-hole indexes
+			return NO;
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
 			return NO;
@@ -948,6 +951,12 @@ BOOL GOLFHandicapCCRUsedForAuthority(GOLFHandicapAuthority *authority, BOOL *req
 	if (authority) {
 		if ([authority isEqualToString:GOLFHandicapAuthorityAGU]) {
 			//	CSS-based differential calculation (CSS = Competition Scratch Score) since 2016
+			if (required) {
+				*required = NO;
+			}
+			return YES;
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
+			//	Weather-based differential adjustment
 			if (required) {
 				*required = NO;
 			}

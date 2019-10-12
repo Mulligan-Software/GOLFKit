@@ -48,6 +48,8 @@
 "TERM_CUSTOMIZATION_PLURAL" = "personnalisations";
 "TERM_DATE" = "date";
 "TERM_DELETE" = "supprimer";
+"TERM_DIFFERENTIAL" = "différentiel";
+"TERM_DIFFERENTIAL_ABBR" = "diff.";
 "TERM_DISQUALIFIED" = "disqualifié";
 "TERM_DISQUALIFIED_ABBR" = "disq.";
 "TERM_DISQUALIFIED_ACRONYM" = "DQ";
@@ -65,6 +67,7 @@
 "TERM_FLAGSTICK" = "drapeau";
 "TERM_FLIGHT" = "vol";
 "TERM_FLIGHT_PLURAL" = "vols";
+"TERM_FOR_ABOUT" = "de";
 "TERM_FOURBALL" = "Quatre-Balle";
 "TERM_FOURSOMES" = "Foursomes";
 "TERM_FRONT" = "premier";
@@ -130,6 +133,8 @@
 "TERM_PUTT_PLURAL" = "putts";
 "TERM_QUIT" = "quitter";
 "TERM_QUOTA" = "quota";
+"TERM_RATINGS" = "évaluations";
+"TERM_RATINGS_ABBR" = "éval.";
 "TERM_REVERSERITZ" = "Ritz Inverse";
 "TERM_RITZ" = "Ritz";
 "TERM_ROUND" = "tour";
@@ -138,6 +143,7 @@
 "TERM_SAVE" = "enregistrer";
 "TERM_SCHEID" = "Scheid";
 "TERM_SCORE" = "score";
+"TERM_SCORE_ABBR" = "scr.";
 "TERM_SCORE_PLURAL" = "scores";
 "TERM_SCOREBOARD" = "tableau";
 "TERM_SCORECARD" = "carte de score";
@@ -162,6 +168,7 @@
 "TERM_TEE" = "jalon";
 "TERM_TEE_PLURAL" = "jalons";
 "TERM_THEME" = "thème";
+"TERM_THROUGH" = "à travers";
 "TERM_TIE" = "tie";
 "TERM_TIEBREAKER" = "jouant la belle";
 "TERM_TIEBREAKER_PLURAL" = "jouant la belle";
@@ -172,8 +179,11 @@
 "TERM_TOURNAMENT" = "tournoi";
 "TERM_TRAINING" = "formation";
 "TERM_TREND" = "tendance";
+"TERM_TYPE" = "type";
 "TERM_UNKNOWN" = "inconnu";
 "TERM_USE" = "utiliser";
+"TERM_USED" = "utilisé";
+"TERM_USED_ABBR" = "util.";
 "TERM_VALUE" = "valeur";
 "TERM_VERSUS_ABBR" = "vs";
 "TERM_WAGERING" = "parier";
@@ -476,9 +486,11 @@
 "TITLE_SANDIE" = "Sandie";
 "TITLE_SAVE" = "Enregistrer";
 "TITLE_SCORECARD" = "Carte de Score";
+"TITLE_SCORECARD_HANDICAP" = "Hcp";		//	As it appears in Scorecard headers ("Hcp")
 "TITLE_SCORECARD_IN" = "Ret";		//	As it appears in Scorecard total headers ("Retour" - Canada: "Entrée")
 "TITLE_SCORECARD_LENGTH_IMPERIAL" = "Ydg";
 "TITLE_SCORECARD_LENGTH_METRIC" = "M.";
+"TITLE_SCORECARD_NET" = "Net";		//	As it appears in Scorecard total headers ("Net")
 "TITLE_SCORECARD_OUT" = "Aller";	//	As it appears in Scorecard total headers ("Aller" - Canada: "Sortie")
 "TITLE_SCORECARD_TOTAL" = "Tot";	//	As it appears in Scorecard total headers
 "TITLE_SCORING_COLORS" = "Couleurs pour Marquer";
@@ -489,6 +501,7 @@
 "TITLE_SERIAL_NUMBER" = "Numéro de série";
 "TITLE_SEVE" = "Seve";
 "TITLE_SHOW_ALLOWANCE_DOTS" = "Afficher les taches d’allocation";
+"TITLE_SHOW_ME" = "Montre moi";
 "TITLE_SHOW_MEMBER_NUMBERS" = "Afficher numéros des membres du club sur Cartes de Score";
 "TITLE_SHOW_REPORT" = "Afficher le Rapport";
 "TITLE_SHOW_REPORTS" = "Afficher les Rapports";

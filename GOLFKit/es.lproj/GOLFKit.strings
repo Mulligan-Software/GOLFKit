@@ -48,6 +48,8 @@
 "TERM_CUSTOMIZATION_PLURAL" = "personalizaciones";
 "TERM_DATE" = "fecha";
 "TERM_DELETE" = "eliminar";
+"TERM_DIFFERENTIAL" = "diferencial";
+"TERM_DIFFERENTIAL_ABBR" = "dif.";
 "TERM_DISQUALIFIED" = "descalificado";
 "TERM_DISQUALIFIED_ABBR" = "desc.";
 "TERM_DISQUALIFIED_ACRONYM" = "DQ";
@@ -65,6 +67,7 @@
 "TERM_FLAGSTICK" = "flagstick";
 "TERM_FLIGHT" = "flight";
 "TERM_FLIGHT_PLURAL" = "flights";
+"TERM_FOR_ABOUT" = "por";
 "TERM_FOURBALL" = "Four-Ball";
 "TERM_FOURSOMES" = "Foursomes";
 "TERM_FRONT" = "primero";
@@ -130,6 +133,8 @@
 "TERM_PUTT_PLURAL" = "putts";
 "TERM_QUIT" = "salir";
 "TERM_QUOTA" = "cuota";
+"TERM_RATINGS" = "calificaciones";
+"TERM_RATINGS_ABBR" = "calif.";
 "TERM_REVERSERITZ" = "Ritz Reversa";
 "TERM_RITZ" = "Ritz";
 "TERM_ROUND" = "ronda";
@@ -138,6 +143,7 @@
 "TERM_SAVE" = "guardar";
 "TERM_SCHEID" = "Scheid";
 "TERM_SCORE" = "resultado";
+"TERM_SCORE_ABBR" = "res.";
 "TERM_SCORE_PLURAL" = "resultados";
 "TERM_SCOREBOARD" = "marcadore";	//	pizarrón ?
 "TERM_SCORECARD" = "tarjeta";
@@ -162,6 +168,7 @@
 "TERM_TEE" = "tee";
 "TERM_TEE_PLURAL" = "tees";
 "TERM_THEME" = "tema";
+"TERM_THROUGH" = "hasta";
 "TERM_TIE" = "empate";
 "TERM_TIEBREAKER" = "desempate";
 "TERM_TIEBREAKER_PLURAL" = "desempates";
@@ -172,8 +179,11 @@
 "TERM_TOURNAMENT" = "torneo";
 "TERM_TRAINING" = "entrenamiento";
 "TERM_TREND" = "tendencia";
+"TERM_TYPE" = "tipo";
 "TERM_UNKNOWN" = "ignoto";
 "TERM_USE" = "usar";
+"TERM_USED" = "utilizado";
+"TERM_USED_ABBR" = "util.";
 "TERM_VALUE" = "valor";
 "TERM_VERSUS_ABBR" = "vs.";
 "TERM_WAGERING" = "apostando";
@@ -476,9 +486,11 @@
 "TITLE_SANDIE" = "Sandie";
 "TITLE_SAVE" = "Guardar";
 "TITLE_SCORECARD" = "Tarjeta";
+"TITLE_SCORECARD_HANDICAP" = "Hcp";		//	As it appears in Scorecard headers ("Hcp")
 "TITLE_SCORECARD_IN" = "Vta";		//	As it appears in Scorecard total headers ("Vuelta")
 "TITLE_SCORECARD_LENGTH_IMPERIAL" = "Ydj";
 "TITLE_SCORECARD_LENGTH_METRIC" = "M.";
+"TITLE_SCORECARD_NET" = "Net";		//	As it appears in Scorecard total headers ("Net")
 "TITLE_SCORECARD_OUT" = "Ida";		//	As it appears in Scorecard total headers ("Ida")
 "TITLE_SCORECARD_TOTAL" = "Tot";	//	As it appears in Scorecard total headers
 "TITLE_SCORING_COLORS" = "Colores de Resultados";
@@ -489,6 +501,7 @@
 "TITLE_SERIAL_NUMBER" = "Número de serie";
 "TITLE_SEVE" = "Seve";
 "TITLE_SHOW_ALLOWANCE_DOTS" = "Mostrar puntos de asignación";
+"TITLE_SHOW_ME" = "Muéstrame";
 "TITLE_SHOW_MEMBER_NUMBERS" = "Mostrar números de miembros del club en Tarjetas";
 "TITLE_SHOW_REPORT" = "Mostrar el Informe";
 "TITLE_SHOW_REPORTS" = "Mostrar los Informes";

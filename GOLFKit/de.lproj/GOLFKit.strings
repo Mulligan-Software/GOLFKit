@@ -48,6 +48,8 @@
 "TERM_CUSTOMIZATION_PLURAL" = "Anpassungen";
 "TERM_DATE" = "Datum";
 "TERM_DELETE" = "löschen";
+"TERM_DIFFERENTIAL" = "Differential";
+"TERM_DIFFERENTIAL_ABBR" = "Diff.";
 "TERM_DISQUALIFIED" = "disqualifiziert";
 "TERM_DISQUALIFIED_ABBR" = "disq.";
 "TERM_DISQUALIFIED_ACRONYM" = "DQ";
@@ -65,6 +67,7 @@
 "TERM_FLAGSTICK" = "Flaggenstock";
 "TERM_FLIGHT" = "Pulk";
 "TERM_FLIGHT_PLURAL" = "Pulke";
+"TERM_FOR_ABOUT" = "über";
 "TERM_FOURBALL" = "Vier-Ball";
 "TERM_FOURSOMES" = "Viererspiel";
 "TERM_FRONT" = "ersten";
@@ -130,6 +133,8 @@
 "TERM_PUTT_PLURAL" = "Putts";
 "TERM_QUIT" = "beenden";
 "TERM_QUOTA" = "Quote";
+"TERM_RATINGS" = "Bewertungen";
+"TERM_RATINGS_ABBR" = "Bewer.";
 "TERM_REVERSERITZ" = "Ritz Rückwärts";
 "TERM_RITZ" = "Ritz";
 "TERM_ROUND" = "Runde";
@@ -138,6 +143,7 @@
 "TERM_SAVE" = "sichern";
 "TERM_SCHEID" = "Scheid";
 "TERM_SCORE" = "Score";
+"TERM_SCORE_ABBR" = "Scr.";
 "TERM_SCORE_PLURAL" = "Scores";
 "TERM_SCOREBOARD" = "Anzeigetafel";
 "TERM_SCORECARD" = "Scorekarte";
@@ -162,6 +168,7 @@
 "TERM_TEE" = "Abschlag";
 "TERM_TEE_PLURAL" = "Abschläge";
 "TERM_THEME" = "Thema";
+"TERM_THROUGH" = "während";
 "TERM_TIE" = "Remis";
 "TERM_TIEBREAKER" = "Tiebreaker";
 "TERM_TIEBREAKER_PLURAL" = "Tiebreakers";
@@ -172,8 +179,11 @@
 "TERM_TOURNAMENT" = "Turnier";
 "TERM_TRAINING" = "Schulung";
 "TERM_TREND" = "Trend";
+"TERM_TYPE" = "Art";
 "TERM_UNKNOWN" = "unbekannt";
 "TERM_USE" = "verwenden";
+"TERM_USED" = "benutzt";
+"TERM_USED_ABBR" = "benu.";
 "TERM_VALUE" = "Wert";
 "TERM_VERSUS_ABBR" = "vs.";
 "TERM_WAGERING" = "Wetten";
@@ -476,9 +486,11 @@
 "TITLE_SANDIE" = "Sandie";
 "TITLE_SAVE" = "Sichern";
 "TITLE_SCORECARD" = "Scorekarte";
+"TITLE_SCORECARD_HANDICAP" = "Hcp";		//	As it appears in Scorecard headers ("Hcp")
 "TITLE_SCORECARD_IN" = "In";		//	As it appears in Scorecard total headers
 "TITLE_SCORECARD_LENGTH_IMPERIAL" = "Ydg";
 "TITLE_SCORECARD_LENGTH_METRIC" = "M.";
+"TITLE_SCORECARD_NET" = "Net";		//	As it appears in Scorecard total headers ("Net")
 "TITLE_SCORECARD_OUT" = "Aus";		//	As it appears in Scorecard total headers
 "TITLE_SCORECARD_TOTAL" = "Sum";	//	As it appears in Scorecard total headers
 "TITLE_SCORING_COLORS" = "Farben für Golfwertung";
@@ -489,6 +501,7 @@
 "TITLE_SERIAL_NUMBER" = "Seriennummer";
 "TITLE_SEVE" = "Seve";
 "TITLE_SHOW_ALLOWANCE_DOTS" = "Punkte für Handicap-Zustimmung anzeigen";
+"TITLE_SHOW_ME" = "Zeig es mir";
 "TITLE_SHOW_MEMBER_NUMBERS" = "Zeige Clubmitgliedsnummern auf Scorekarten";
 "TITLE_SHOW_REPORT" = "Bericht zeigen";
 "TITLE_SHOW_REPORTS" = "Berichte anzeigen";

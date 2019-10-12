@@ -48,6 +48,8 @@
 "TERM_CUSTOMIZATION_PLURAL" = "customizations";
 "TERM_DATE" = "date";
 "TERM_DELETE" = "delete";
+"TERM_DIFFERENTIAL" = "differential";
+"TERM_DIFFERENTIAL_ABBR" = "diff.";
 "TERM_DISQUALIFIED" = "disqualified";
 "TERM_DISQUALIFIED_ABBR" = "disq.";
 "TERM_DISQUALIFIED_ACRONYM" = "DQ";
@@ -65,6 +67,7 @@
 "TERM_FLAGSTICK" = "flagstick";
 "TERM_FLIGHT" = "flight";
 "TERM_FLIGHT_PLURAL" = "flights";
+"TERM_FOR_ABOUT" = "for";
 "TERM_FOURBALL" = "Four-Ball";
 "TERM_FOURSOMES" = "Foursomes";
 "TERM_FRONT" = "front";
@@ -130,6 +133,8 @@
 "TERM_PUTT_PLURAL" = "putts";
 "TERM_QUIT" = "quit";
 "TERM_QUOTA" = "quota";
+"TERM_RATINGS" = "ratings";
+"TERM_RATINGS_ABBR" = "ratings";
 "TERM_REVERSERITZ" = "Reverse Ritz";
 "TERM_RITZ" = "Ritz";
 "TERM_ROUND" = "round";
@@ -138,6 +143,7 @@
 "TERM_SAVE" = "save";
 "TERM_SCHEID" = "Scheid";
 "TERM_SCORE" = "score";
+"TERM_SCORE_ABBR" = "scr.";
 "TERM_SCORE_PLURAL" = "scores";
 "TERM_SCOREBOARD" = "scoreboard";
 "TERM_SCORECARD" = "scorecard";
@@ -162,6 +168,7 @@
 "TERM_TEE" = "tee";
 "TERM_TEE_PLURAL" = "tees";
 "TERM_THEME" = "theme";
+"TERM_THROUGH" = "through";
 "TERM_TIE" = "tie";
 "TERM_TIEBREAKER" = "tiebreaker";
 "TERM_TIEBREAKER_PLURAL" = "tiebreakers";
@@ -172,8 +179,11 @@
 "TERM_TOURNAMENT" = "tournament";
 "TERM_TRAINING" = "training";
 "TERM_TREND" = "trend";
+"TERM_TYPE" = "type";
 "TERM_UNKNOWN" = "unknown";
 "TERM_USE" = "use";
+"TERM_USED" = "used";
+"TERM_USED_ABBR" = "used";
 "TERM_VALUE" = "value";
 "TERM_VERSUS_ABBR" = "vs.";
 "TERM_WAGERING" = "wagering";
@@ -476,11 +486,13 @@
 "TITLE_SANDIE" = "Sandie";
 "TITLE_SAVE" = "Save";
 "TITLE_SCORECARD" = "Scorecard";
+"TITLE_SCORECARD_HANDICAP" = "Hcp";		//	As it appears in Scorecard headers ("Hcp")
 "TITLE_SCORECARD_IN" = "In";		//	As it appears in Scorecard total headers ("In")
 "TITLE_SCORECARD_LENGTH_IMPERIAL" = "Ydg";
 "TITLE_SCORECARD_LENGTH_METRIC" = "M.";
 "TITLE_SCORECARD_OUT" = "Out";		//	As it appears in Scorecard total headers ("Out")
-"TITLE_SCORECARD_TOTAL" = "Tot";	//	As it appears in Scorecard total headers
+"TITLE_SCORECARD_NET" = "Net";		//	As it appears in Scorecard total headers ("Net")
+"TITLE_SCORECARD_TOTAL" = "Tot";	//	As it appears in Scorecard total headers ("Tot"
 "TITLE_SCORING_COLORS" = "Scoring Colors";
 "TITLE_SCORING_SHORTHAND" = "Scoring Shorthand";
 "TITLE_SECONDARY" = "Secondary";
@@ -489,6 +501,7 @@
 "TITLE_SERIAL_NUMBER" = "Serial number";
 "TITLE_SEVE" = "Seve";
 "TITLE_SHOW_ALLOWANCE_DOTS" = "Show Handicap Allowance Dots";
+"TITLE_SHOW_ME" = "Show Me";
 "TITLE_SHOW_MEMBER_NUMBERS" = "Show club member numbers on Scorecards";
 "TITLE_SHOW_REPORT" = "Show Report";
 "TITLE_SHOW_REPORTS" = "Show Reports";
