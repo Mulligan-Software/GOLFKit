@@ -642,11 +642,11 @@ GOLFTeeImage * GOLFTeeMarkerImageFromSpecs(GOLFTeeColorIndex teeColorIndex, GOLF
 		 
 		//	We need to draw an icon and a color dot in the graphics context
 		if (teeColor == nil) {
-			[(GOLFTeeImage *)[ourBundle imageForResource:@"GOLFTeeMarkerGeneric"] drawAtPoint:offscreenRect.origin fromRect:NSZeroRect operation:NSCompositeCopy fraction:1.0];
+			[(GOLFTeeImage *)[ourBundle imageForResource:@"GOLFTeeMarkerGeneric"] drawAtPoint:offscreenRect.origin fromRect:NSZeroRect operation:NSCompositingOperationCopy fraction:1.0];
 		} else {
 			//	Draw the white icon into the context
 			GOLFColor *localTintingColor = [teeColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
-			[(GOLFTeeImage *)[ourBundle imageForResource:@"GOLFTeeMarkerWhite"] drawAtPoint:offscreenRect.origin fromRect:NSZeroRect operation:NSCompositeCopy fraction:1.0];
+			[(GOLFTeeImage *)[ourBundle imageForResource:@"GOLFTeeMarkerWhite"] drawAtPoint:offscreenRect.origin fromRect:NSZeroRect operation:NSCompositingOperationCopy fraction:1.0];
 			//	The actual colored circle of the 128x128 image is 100 pixels wide, 14px left, 7 px top, 14 px right, 21 px bottom
 			
 			NSGradient *colorGradient = [[NSGradient alloc] initWithColorsAndLocations:
