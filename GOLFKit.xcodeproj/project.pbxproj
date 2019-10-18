@@ -84,6 +84,7 @@
 		297C860F204BA5D000A40BDB /* LargeTeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297C860D204BA5D000A40BDB /* LargeTeeMarkers.xcassets */; };
 		2988BCFB2078547800C173BE /* GOLFExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2988BCFA2078547800C173BE /* GOLFExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2988BCFC2078547800C173BE /* GOLFExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2988BCFA2078547800C173BE /* GOLFExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		298EFB912354BAAE009F1F81 /* GOLFColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2944356C217E1CA500D4595C /* GOLFColors.xcassets */; };
 		2990FA9420726F7000E7DB45 /* GOLFClubs.h in Headers */ = {isa = PBXBuildFile; fileRef = 2990FA9220726F7000E7DB45 /* GOLFClubs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2990FA9520726F7000E7DB45 /* GOLFClubs.h in Headers */ = {isa = PBXBuildFile; fileRef = 2990FA9220726F7000E7DB45 /* GOLFClubs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2990FA9620726F7000E7DB45 /* GOLFClubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2990FA9320726F7000E7DB45 /* GOLFClubs.m */; };
@@ -186,7 +187,7 @@
 		294140471DDA03E300CC9605 /* GOLFTeeMarkerYellowAndBlue.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = GOLFTeeMarkerYellowAndBlue.icns; path = "GOLFKit (OS X)/TeeMarker icns/GOLFTeeMarkerYellowAndBlue.icns"; sourceTree = SOURCE_ROOT; };
 		294140621DDB582600CC9605 /* GOLFKitTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLFKitTypes.h; path = GOLFKit/GOLFKitTypes.h; sourceTree = "<group>"; };
 		29436C632055B5F90080E0FE /* GOLFCountries.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GOLFCountries.plist; sourceTree = "<group>"; };
-		2944356C217E1CA500D4595C /* GOLFColors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = GOLFColors.xcassets; path = ../GOLFKit/GOLFColors.xcassets; sourceTree = "<group>"; };
+		2944356C217E1CA500D4595C /* GOLFColors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = GOLFColors.xcassets; sourceTree = "<group>"; };
 		29443571217E3A5700D4595C /* GOLFDynamicColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GOLFDynamicColor.h; path = ../GOLFKit/GOLFDynamicColor.h; sourceTree = "<group>"; };
 		29443572217E3A5700D4595C /* GOLFDynamicColor.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = GOLFDynamicColor.m; path = ../GOLFKit/GOLFDynamicColor.m; sourceTree = "<group>"; };
 		2954A56722B7C9FE00F03FAE /* NSString+GOLFExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+GOLFExtensions.h"; sourceTree = "<group>"; };
@@ -310,7 +311,6 @@
 			children = (
 				29443571217E3A5700D4595C /* GOLFDynamicColor.h */,
 				29443572217E3A5700D4595C /* GOLFDynamicColor.m */,
-				2944356C217E1CA500D4595C /* GOLFColors.xcassets */,
 				29C7847B21835CFF0093857B /* Other icns */,
 				294140291DD8E30800CC9605 /* TeeMarker icns */,
 			);
@@ -474,6 +474,7 @@
 				29E888CE1DCE611600C4A63A /* GOLFColors.m */,
 				29A338061DCE81D70074A064 /* GOLFTeeMarkers.h */,
 				29A338071DCE81D70074A064 /* GOLFTeeMarkers.m */,
+				2944356C217E1CA500D4595C /* GOLFColors.xcassets */,
 				293EC97A217FD3B10031A2EA /* Dropbox.xcassets */,
 				29A338031DCE76E30074A064 /* TeeMarkers.xcassets */,
 				2930CDA21DCFEC4F0089491D /* LittleTeeMarkers.xcassets */,
@@ -674,6 +675,7 @@
 				29A6028F20EA88F3006DD2EE /* iOSIcons.xcassets in Resources */,
 				29164282204C3B7800E87478 /* GenericTeeMarkers.xcassets in Resources */,
 				29436C642055B5F90080E0FE /* GOLFCountries.plist in Resources */,
+				298EFB912354BAAE009F1F81 /* GOLFColors.xcassets in Resources */,
 				29E888C81DCE5E6400C4A63A /* GOLFKit.strings in Resources */,
 				299249A3223563F200504569 /* GOLFSettingsSwitchTableViewCell.xib in Resources */,
 				293EC97B217FD3B10031A2EA /* Dropbox.xcassets in Resources */,

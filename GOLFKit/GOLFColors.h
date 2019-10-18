@@ -97,7 +97,7 @@ typedef NS_ENUM(GOLFTeeColorIndex, teeColorIndexEnumeration) {
 #endif
 
 @interface GOLFColor (GOLFColorCategories)
-+ (BOOL)dark;	//	When a dark-themed NSAppearance is active on the current thread or in the App
++ (BOOL)darkMode;	//	When a dark-themed NSAppearance is active on the current thread or in the App
 
 + (id)GOLFFactoryEagleScoreColor;
 + (id)GOLFFactoryBirdieScoreColor;

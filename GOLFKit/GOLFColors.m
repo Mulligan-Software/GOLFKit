@@ -26,9 +26,13 @@
 
 @implementation GOLFColor (GOLFColorCategories)
 
-+ (BOOL)dark {
++ (BOOL)darkMode {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
+	if (@available(iOS 13.0, *)) {
+		UITraitCollection *currentTraits = [UITraitCollection currentTraitCollection];
+		return ([currentTraits userInterfaceStyle] == UIUserInterfaceStyleDark);
+	}
 	return NO;
 
 #elif TARGET_OS_MAC
@@ -47,6 +51,9 @@
 + (id)GOLFFactoryEagleScoreColor {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
+	if (@available(iOS 9.0, *)) {
+		return (GOLFColor *)[UIColor systemPurpleColor];
+	}
 	return [GOLFColor purpleColor];
 
 #elif TARGET_OS_MAC
@@ -65,6 +72,9 @@
 + (id)GOLFFactoryBirdieScoreColor {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
+	if (@available(iOS 7.0, *)) {
+		return (GOLFColor *)[UIColor systemRedColor];
+	}
 	return [GOLFColor redColor];
 
 #elif TARGET_OS_MAC
@@ -83,6 +93,9 @@
 + (id)GOLFFactoryParScoreColor {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
+	if (@available(iOS 7.0, *)) {
+		return (GOLFColor *)[UIColor systemBlueColor];
+	}
 	return [GOLFColor blueColor];
 
 #elif TARGET_OS_MAC
@@ -101,7 +114,10 @@
 + (id)GOLFFactoryBogeyScoreColor {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
-	return [GOLFColor blackColor];
+	if (@available(iOS 13.0, *)) {
+		return (GOLFColor *)[UIColor labelColor];
+	}
+	return [GOLFColor darkTextColor];
 
 #elif TARGET_OS_MAC
 
@@ -122,62 +138,23 @@
 }
 
 + (id)GOLFFactoryDarkEagleScoreColor {
-#if TARGET_OS_IOS || TARGET_OS_WATCH
-
-	return [GOLFColor purpleColor];
-
-#elif TARGET_OS_MAC
-
-	if (@available (macOS 10.13, *)) {
-		return [GOLFColor GOLFFactoryEagleColor];
-	}
-	if (@available (macOS 10.10, *)) {
-		return (GOLFColor *)[[NSColor systemPurpleColor] colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
-	}
-	return [GOLFColor purpleColor];
-	
-#endif
+	return [GOLFColor GOLFFactoryEagleScoreColor];
 }
 
 + (id)GOLFFactoryDarkBirdieScoreColor {
-#if TARGET_OS_IOS || TARGET_OS_WATCH
-
-	return [GOLFColor redColor];
-
-#elif TARGET_OS_MAC
-
-	if (@available (macOS 10.13, *)) {
-		return [GOLFColor GOLFFactoryBirdieColor];
-	}
-	if (@available (macOS 10.10, *)) {
-		return (GOLFColor *)[[NSColor systemRedColor] colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
-	}
-	return [GOLFColor redColor];
-	
-#endif
+	return [GOLFColor GOLFFactoryBirdieScoreColor];
 }
 
 + (id)GOLFFactoryDarkParScoreColor {
-#if TARGET_OS_IOS || TARGET_OS_WATCH
-
-	return [GOLFColor blueColor];
-
-#elif TARGET_OS_MAC
-
-	if (@available (macOS 10.13, *)) {
-		return [GOLFColor GOLFFactoryParColor];
-	}
-	if (@available (macOS 10.10, *)) {
-		return (GOLFColor *)[[NSColor systemBlueColor] colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
-	}
-	return [GOLFColor blueColor];
-	
-#endif
+	return [GOLFColor GOLFFactoryParScoreColor];
 }
 
 + (id)GOLFFactoryDarkBogeyScoreColor {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
+	if (@available(iOS 13.0, *)) {
+		return (GOLFColor *)[UIColor labelColor];
+	}
 	return [GOLFColor whiteColor];
 
 #elif TARGET_OS_MAC
@@ -194,6 +171,12 @@
 + (id)GOLFFactoryBirdieColor {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
+	if (@available(iOS 13.0, *)) {
+		return [GOLFColor colorNamed:@"GOLFFactoryBirdieColor" inBundle:GOLFKitBundle() compatibleWithTraitCollection:[UITraitCollection currentTraitCollection]];
+	}
+	if (@available(iOS 7.0, *)) {
+		return (GOLFColor *)[UIColor systemRedColor];
+	}
 	return [GOLFColor redColor];
 
 #elif TARGET_OS_MAC
@@ -212,7 +195,10 @@
 + (id)GOLFFactoryBogeyColor {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
-	return [GOLFColor blackColor];
+	if (@available(iOS 13.0, *)) {
+		return (GOLFColor *)[UIColor labelColor];
+	}
+	return [GOLFColor darkTextColor];
 
 #elif TARGET_OS_MAC
 
@@ -230,6 +216,12 @@
 + (id)GOLFFactoryEagleColor {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
+	if (@available(iOS 13.0, *)) {
+		return [GOLFColor colorNamed:@"GOLFFactoryEagleColor" inBundle:GOLFKitBundle() compatibleWithTraitCollection:[UITraitCollection currentTraitCollection]];
+	}
+	if (@available(iOS 9.0, *)) {
+		return (GOLFColor *)[UIColor systemPurpleColor];
+	}
 	return [GOLFColor purpleColor];
 
 #elif TARGET_OS_MAC
@@ -248,6 +240,12 @@
 + (id)GOLFFactoryErrorHighlightColor {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
+	if (@available(iOS 13.0, *)) {
+		return [GOLFColor colorNamed:@"GOLFFactoryErrorHighlightColor" inBundle:GOLFKitBundle() compatibleWithTraitCollection:[UITraitCollection currentTraitCollection]];
+	}
+	if (@available(iOS 7.0, *)) {
+		return (GOLFColor *)[UIColor systemYellowColor];
+	}
 	return [GOLFColor yellowColor];
 
 #elif TARGET_OS_MAC
@@ -266,6 +264,12 @@
 + (id)GOLFFactoryMatchAColor {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
+	if (@available(iOS 13.0, *)) {
+		return [GOLFColor colorNamed:@"GOLFFactoryMatchAColor" inBundle:GOLFKitBundle() compatibleWithTraitCollection:[UITraitCollection currentTraitCollection]];
+	}
+	if (@available(iOS 7.0, *)) {
+		return (GOLFColor *)[UIColor systemBlueColor];
+	}
 	return [GOLFColor blueColor];
 
 #elif TARGET_OS_MAC
@@ -283,6 +287,12 @@
 + (id)GOLFFactoryDarkMatchAColor {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
+	if (@available(iOS 13.0, *)) {
+		return [GOLFColor colorNamed:@"GOLFFactoryMatchAColor" inBundle:GOLFKitBundle() compatibleWithTraitCollection:[UITraitCollection currentTraitCollection]];
+	}
+	if (@available(iOS 7.0, *)) {
+		return (GOLFColor *)[UIColor systemBlueColor];
+	}
 	return [GOLFColor blueColor];
 
 #elif TARGET_OS_MAC
@@ -301,6 +311,12 @@
 + (id)GOLFFactoryMatchBColor {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
+	if (@available(iOS 13.0, *)) {
+		return [GOLFColor colorNamed:@"GOLFFactoryMatchBColor" inBundle:GOLFKitBundle() compatibleWithTraitCollection:[UITraitCollection currentTraitCollection]];
+	}
+	if (@available(iOS 7.0, *)) {
+		return (GOLFColor *)[UIColor systemRedColor];
+	}
 	return [GOLFColor redColor];
 
 #elif TARGET_OS_MAC
@@ -319,6 +335,12 @@
 + (id)GOLFFactoryDarkMatchBColor {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
+	if (@available(iOS 13.0, *)) {
+		return [GOLFColor colorNamed:@"GOLFFactoryMatchBColor" inBundle:GOLFKitBundle() compatibleWithTraitCollection:[UITraitCollection currentTraitCollection]];
+	}
+	if (@available(iOS 7.0, *)) {
+		return (GOLFColor *)[UIColor systemRedColor];
+	}
 	return [GOLFColor redColor];
 
 #elif TARGET_OS_MAC
@@ -337,6 +359,12 @@
 + (id)GOLFFactoryParColor {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
+	if (@available(iOS 13.0, *)) {
+		return [GOLFColor colorNamed:@"GOLFFactoryParColor" inBundle:GOLFKitBundle() compatibleWithTraitCollection:[UITraitCollection currentTraitCollection]];
+	}
+	if (@available(iOS 7.0, *)) {
+		return (GOLFColor *)[UIColor systemBlueColor];
+	}
 	return [GOLFColor blueColor];
 
 #elif TARGET_OS_MAC
@@ -355,6 +383,12 @@
 + (id)GOLFFactoryPeoriaBackgroundColor {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
+	if (@available(iOS 13.0, *)) {
+		return [GOLFColor colorNamed:@"GOLFFactoryPeoriaBackgroundColor" inBundle:GOLFKitBundle() compatibleWithTraitCollection:[UITraitCollection currentTraitCollection]];
+	}
+	if (@available(iOS 7.0, *)) {
+		return (GOLFColor *)[UIColor systemBlueColor];
+	}
 	return [GOLFColor blueColor];
 
 #elif TARGET_OS_MAC
@@ -373,6 +407,9 @@
 + (id)GOLFFactoryPlottingPrimaryColor {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
+	if (@available(iOS 13.0, *)) {
+		return [GOLFColor colorNamed:@"GOLFFactoryPlottingPrimaryColor" inBundle:GOLFKitBundle() compatibleWithTraitCollection:[UITraitCollection currentTraitCollection]];
+	}
 	return [GOLFColor colorWithRed:0.0 green:0.5 blue:0.0 alpha:1.0];
 
 #elif TARGET_OS_MAC
@@ -391,7 +428,10 @@
 + (id)GOLFFactoryPlottingSecondaryColor {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
-	return [GOLFColor blackColor];
+	if (@available(iOS 13.0, *)) {
+		return [GOLFColor colorNamed:@"GOLFFactoryPlottingSecondaryColor" inBundle:GOLFKitBundle() compatibleWithTraitCollection:[UITraitCollection currentTraitCollection]];
+	}
+	return [GOLFColor darkTextColor];
 
 #elif TARGET_OS_MAC
 
@@ -409,6 +449,12 @@
 + (id)GOLFFactorySkinsBackgroundColor {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
+	if (@available(iOS 13.0, *)) {
+		return [GOLFColor colorNamed:@"GOLFFactorySkinsBackgroundColor" inBundle:GOLFKitBundle() compatibleWithTraitCollection:[UITraitCollection currentTraitCollection]];
+	}
+	if (@available(iOS 7.0, *)) {
+		return (GOLFColor *)[UIColor systemGreenColor];
+	}
 	return [GOLFColor greenColor];
 
 #elif TARGET_OS_MAC
