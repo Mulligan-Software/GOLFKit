@@ -410,13 +410,25 @@ GOLFHandicapStrokes GOLFWageringStrokesFromStringByIndex(NSString *strokesString
 }
 
 - (GOLFScore)aMatchScoreForHoleAt18Index:(NSUInteger)holeIndex {
-	NSNumber *workingNumber = [[self aHoleScores] objectAtIndex:(holeIndex % 18)];
-	return (workingNumber ? [workingNumber scoreValue] : kNotAScore);
+	NSArray *holeScores = [self aHoleScores];
+	if (holeScores) {
+		NSUInteger workingIndex = (holeIndex % 18);
+		if (workingIndex < [holeScores count]) {
+			return [[holeScores objectAtIndex:workingIndex] scoreValue];
+		}
+	}
+	return kNotAScore;
 }
 
 - (GOLFScore)bMatchScoreForHoleAt18Index:(NSUInteger)holeIndex {
-	NSNumber *workingNumber = [[self bHoleScores] objectAtIndex:(holeIndex % 18)];
-	return (workingNumber ? [workingNumber scoreValue] : kNotAScore);
+	NSArray *holeScores = [self bHoleScores];
+	if (holeScores) {
+		NSUInteger workingIndex = (holeIndex % 18);
+		if (workingIndex < [holeScores count]) {
+			return [[holeScores objectAtIndex:workingIndex] scoreValue];
+		}
+	}
+	return kNotAScore;
 }
 
 - (GOLFPlayingHandicap)lowHandicap {
