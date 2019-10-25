@@ -14,6 +14,7 @@
 "TERM_ALL_SEARCH" = "todo";
 "TERM_ALLOWANCE" = "asignación";
 "TERM_AND" = "y";
+"TERM_APPEARANCE" = "apariencia";
 "TERM_ASSIGN" = "asignar";
 "TERM_AUTHORITY" = "potestad";
 "TERM_AUTHORIZATION" = "autorización";
@@ -85,6 +86,7 @@
 "TERM_INDIVIDUAL" = "individual";	//	The adjective ("individual gross")
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "Irlandesa";
+"TERM_KEYBOARD" = "teclado";
 "TERM_LEADERBOARD" = "tabla de clasificación";
 "TERM_LIMITED" = "limitado";
 "TERM_LOCATE" = "ubicar";
@@ -289,6 +291,8 @@
 "TITLE_ADVANCED_9_HOLE_HANDICAPS" = "Requerir handicaps 9-hoyos";
 "TITLE_ADVANCED_REFERENCE_TEES" = "Permitir Clasificación Tees “Referencia”";
 "TITLE_ALLOWANCE" = "Asignación";
+"TITLE_ALWAYS_DARK" = "Siempre Oscuro";
+"TITLE_ALWAYS_LIGHT" = "Siempre Claro";
 "TITLE_ARNIE" = "Arnie";
 "TITLE_ASPHALT" = "Asphalt";
 "TITLE_ASSIGN_ROUND_TO" = "Asignar una ronda a";
@@ -525,6 +529,7 @@
 "TITLE_UNLINK_DROPBOX" = "Desenlazar Dropbox";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Desbloquea todas Tarjetas del Evento";
 "TITLE_UP_AND_DOWN" = "Alto y Abajo";
+"TITLE_USE_IOS_APPEARANCE" = "Usar la configuración Apariencia de iOS";
 "TITLE_USE_LAST" = "Utilizar últimos";
 "TITLE_USERS_GUIDE_FOUND" = "Guía del Usuario se ha encontrado";
 "TITLE_USERS_GUIDE_NOT_FOUND" = "Ningún archivo Guía del Usuario se ha encontrado";
@@ -562,6 +567,9 @@
 //	Formats
 "FORMAT_ADJUSTED_%@_ABBR" = "%@ Aju.";
 "FORMAT_AND_%@" = " y %@";
+"FORMAT_APPEARANCE_%@_DEVICE_%@_SYSTEM" = "%@ ajustará su pantalla para acomodar la Configuración de apariencia de pantalla en su %@.";
+"FORMAT_APPEARANCE_%@_DEVICE_%@_LIGHT" = "%@ ajustará su pantalla para el Modo Claro, independientemente de la configuración de iOS para su %@, aunque puede aplicar un Tema Oscuro para el teclado.";
+"FORMAT_APPEARANCE_%@_DEVICE_%@_DARK" = "%@ ajustará su pantalla para el Modo Oscuro, independientemente de la configuración de iOS para su %@.";
 "FORMAT_ASSIGN_%ld_ROUNDS_TO" = "Asignar %ld rondas a";
 "FORMAT_BEST_%d_ROUNDS" = "Mejores %d Rondas";
 "FORMAT_BET_HOLES_%ld_%ld" = "Hoyos %ld - %ld";

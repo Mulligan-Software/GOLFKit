@@ -14,6 +14,7 @@
 "TERM_ALL_SEARCH" = "all";
 "TERM_ALLOWANCE" = "allowance";
 "TERM_AND" = "and";
+"TERM_APPEARANCE" = "appearance";
 "TERM_ASSIGN" = "assign";
 "TERM_AUTHORITY" = "authority";
 "TERM_AUTHORIZATION" = "authorization";
@@ -85,6 +86,7 @@
 "TERM_INDIVIDUAL" = "individual";	//	The adjective ("individual gross")
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "Irish";
+"TERM_KEYBOARD" = "keyboard";
 "TERM_LEADERBOARD" = "leaderboard";
 "TERM_LIMITED" = "limited";
 "TERM_LOCATE" = "locate";
@@ -289,6 +291,8 @@
 "TITLE_ADVANCED_9_HOLE_HANDICAPS" = "Require 9-hole handicaps";
 "TITLE_ADVANCED_REFERENCE_TEES" = "Allow rating “Reference” Tees";
 "TITLE_ALLOWANCE" = "Allowance";
+"TITLE_ALWAYS_DARK" = "Always Dark";
+"TITLE_ALWAYS_LIGHT" = "Always Light";
 "TITLE_ARNIE" = "Arnie";
 "TITLE_ASPHALT" = "Asphalt";
 "TITLE_ASSIGN_ROUND_TO" = "Assign a round to";
@@ -525,6 +529,7 @@
 "TITLE_UNLINK_DROPBOX" = "Unlink Dropbox";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Unlock all Event Scorecards";
 "TITLE_UP_AND_DOWN" = "Up & Down";
+"TITLE_USE_IOS_APPEARANCE" = "Use the iOS Appearance setting";
 "TITLE_USE_LAST" = "Use last";
 "TITLE_USERS_GUIDE_FOUND" = "Users’ Guide found";
 "TITLE_USERS_GUIDE_NOT_FOUND" = "No Users’ Guide file found";
@@ -562,6 +567,9 @@
 //	Formats
 "FORMAT_ADJUSTED_%@_ABBR" = "Adj. %@";
 "FORMAT_AND_%@" = " and %@";
+"FORMAT_APPEARANCE_%@_DEVICE_%@_SYSTEM" = "%@ will adjust its display to accommodate the Display Appearance Settings on your %@.";
+"FORMAT_APPEARANCE_%@_DEVICE_%@_LIGHT" = "%@ will adjust its display for Light Mode, regardless of the iOS setting for your %@, though you may enforce a Dark Theme for the keyboard.";
+"FORMAT_APPEARANCE_%@_DEVICE_%@_DARK" = "%@ will adjust its display for Dark Mode, regardless of the iOS setting for your %@.";
 "FORMAT_ASSIGN_%ld_ROUNDS_TO" = "Assign %ld rounds to";
 "FORMAT_BEST_%d_ROUNDS" = "Best %d Rounds";
 "FORMAT_BET_HOLES_%ld_%ld" = "Holes %ld - %ld";

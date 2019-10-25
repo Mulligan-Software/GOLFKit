@@ -14,6 +14,7 @@
 "TERM_ALL_SEARCH" = "alle";
 "TERM_ALLOWANCE" = "Zustimmung";
 "TERM_AND" = "und";
+"TERM_APPEARANCE" = "Erscheinungsbild";
 "TERM_ASSIGN" = "zuweisen";
 "TERM_AUTHORITY" = "Autorität";
 "TERM_AUTHORIZATION" = "Autorisierung";
@@ -85,6 +86,7 @@
 "TERM_INDIVIDUAL" = "individuell";	//	The adjective ("individual gross")
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "irische";
+"TERM_KEYBOARD" = "Tastatur";
 "TERM_LEADERBOARD" = "Bestenliste";
 "TERM_LIMITED" = "limitiert";
 "TERM_LOCATE" = "suchen";
@@ -289,6 +291,8 @@
 "TITLE_ADVANCED_9_HOLE_HANDICAPS" = "Erfordert 9-Loch Handicaps";
 "TITLE_ADVANCED_REFERENCE_TEES" = "Zulassen Rating „Referenz“ Abschläge";
 "TITLE_ALLOWANCE" = "Zustimmung";
+"TITLE_ALWAYS_DARK" = "Immer Dunkel";
+"TITLE_ALWAYS_LIGHT" = "Immer Leicht";
 "TITLE_ARNIE" = "Arnie";
 "TITLE_ASPHALT" = "Asphalt";
 "TITLE_ASSIGN_ROUND_TO" = "Zuweisen eine Runde";
@@ -525,6 +529,7 @@
 "TITLE_UNLINK_DROPBOX" = "Link Dropbox";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Schalte alle Scorekarten der Veranstaltung";
 "TITLE_UP_AND_DOWN" = "Auf und ab";
+"TITLE_USE_IOS_APPEARANCE" = "Verwenden die iOS-Darstellungseinstellung";
 "TITLE_USE_LAST" = "Benutze die letzten";
 "TITLE_USERS_GUIDE_FOUND" = "Benutzerleitfaden gefunden";
 "TITLE_USERS_GUIDE_NOT_FOUND" = "Benutzerleitfaden nicht gefunden";
@@ -562,6 +567,9 @@
 //	Formats
 "FORMAT_ADJUSTED_%@_ABBR" = "Ang. %@";
 "FORMAT_AND_%@" = " und %@";
+"FORMAT_APPEARANCE_%@_DEVICE_%@_SYSTEM" = "%@ passt das Display an die Anzeigeeinstellungen Ihres %@s an.";
+"FORMAT_APPEARANCE_%@_DEVICE_%@_LIGHT" = "%@ passt die Anzeige für den Leichten Modus an, unabhängig von der iOS-Einstellung für Ihr %@, obwohl Sie möglicherweise ein Dunkles Design für die Tastatur erzwingen.";
+"FORMAT_APPEARANCE_%@_DEVICE_%@_DARK" = "%@ passt die Anzeige für den Dunklen Modus an, unabhängig von der iOS-EInstellung für Ihr %@.";
 "FORMAT_ASSIGN_%ld_ROUNDS_TO" = "%ld Runden zuweisen an";
 "FORMAT_BEST_%d_ROUNDS" = "besten %d Golfrunden";
 "FORMAT_BET_HOLES_%ld_%ld" = "Löcher %ld - %ld";
