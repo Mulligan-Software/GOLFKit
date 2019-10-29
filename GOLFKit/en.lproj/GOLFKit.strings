@@ -523,7 +523,8 @@
 "TITLE_STOBBIE" = "Stobbie";
 "TITLE_SYSTEM" = "System";
 "TITLE_TECHNICAL_SUPPORT" = "Technical Support";
-"TITLE_THE_SCORING_MACHINE" = "The Scoring Machine™";
+"TITLE_THE_SCORING_MACHINE" = "The Scoring Machine";
+"TITLE_THE_SCORING_MACHINE_TM" = "The Scoring Machine™";
 "TITLE_TOTAL_POINTS" = "Total Points";
 "TITLE_TRASH" = "Trash, Dots";
 "TITLE_UNLINK_DROPBOX" = "Unlink Dropbox";

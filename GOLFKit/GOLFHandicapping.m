@@ -23,11 +23,9 @@ GOLFHandicapAuthority * const GOLFHandicapAuthorityAGU			= @"AGU";
 GOLFHandicapAuthority * const GOLFHandicapAuthorityEGA			= @"EGA";
 GOLFHandicapAuthority * const GOLFHandicapAuthorityCONGU		= @"CONGU";
 GOLFHandicapAuthority * const GOLFHandicapAuthorityWHS			= @"WHS";
-#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 GOLFHandicapAuthority * const GOLFHandicapAuthorityMulligan		= @"MULLIGAN";
-GOLFHandicapAuthority * const GOLFHandicapAuthorityPersonal		= @"PERSONAL";
 GOLFHandicapAuthority * const GOLFHandicapAuthoritySecondBest	= @"SECONDBEST";
-#endif
+GOLFHandicapAuthority * const GOLFHandicapAuthorityPersonal		= @"PERSONAL";
 
 //	GOLFLink (www.golf.org.au) constants for Lou Loomis login
 NSString * const GOLFLinkLoggedInGAUserCookieValue = @"212251";
@@ -88,7 +86,6 @@ GOLFHandicapAuthority * GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodI
   		case GOLFHandicapMethodWHS:
     		return (GOLFHandicapAuthority *)GOLFHandicapAuthorityWHS;
 
-#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
   		case GOLFHandicapMethodMulligan:
     		return (GOLFHandicapAuthority *)GOLFHandicapAuthorityMulligan;
 
@@ -97,7 +94,6 @@ GOLFHandicapAuthority * GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodI
 
   		case GOLFHandicapMethodSecondBest:
     		return (GOLFHandicapAuthority *)GOLFHandicapAuthoritySecondBest;
-#endif
 
   		case GOLFHandicapMethodNone:
   		case GOLFHandicapMethodUnknown:
@@ -123,14 +119,12 @@ GOLFHandicapMethodIndex GOLFHandicapBestMethodIndexFromAuthority(GOLFHandicapAut
 			return GOLFHandicapMethodCONGU;
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
 			return GOLFHandicapMethodWHS;
-#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
 			return GOLFHandicapMethodMulligan;
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityPersonal]) {
 			return GOLFHandicapMethodPersonal;
 		} else if ([authority isEqualToString:GOLFHandicapAuthoritySecondBest]) {
 			return GOLFHandicapMethodSecondBest;
-#endif
 		}
 	}
 	return GOLFHandicapMethodUSGA;
@@ -212,6 +206,8 @@ NSArray * GOLFHandicapAuthorities(void) {
 				nil];
 		
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
+		//	In iOS, we allow use of incoming GOLFHandicapMethodMulligan and GOLFHandicapMethodSecondBest, but
+		//	we don't include them in this list as selectable types of handicapping
 		[workingArray addObject:[NSDictionary dictionaryWithObjectsAndKeys:
 					[NSNumber numberWithUnsignedInteger:GOLFHandicapMethodMulligan], @"methodIndex",
 					GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodMulligan), @"handicapAuthority",
@@ -284,7 +280,7 @@ NSString * GOLFOfficialHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOO
   		case GOLFHandicapMethodCONGU:
     		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_EXACT_PLURAL" : @"TITLE_HANDICAP_EXACT");
 
-#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
+//#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
   		case GOLFHandicapMethodMulligan:
     		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_ESTIMATED_PLURAL" : @"TITLE_HANDICAP_ESTIMATED");
 
@@ -293,7 +289,7 @@ NSString * GOLFOfficialHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOO
 
   		case GOLFHandicapMethodSecondBest:
     		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_INDEX_PLURAL" : @"TITLE_HANDICAP_INDEX");
-#endif
+//#endif
 
   		case GOLFHandicapMethodWHS:
     		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_WORLD_INDEX_PLURAL" : @"TITLE_HANDICAP_WORLD_INDEX");
@@ -312,9 +308,9 @@ NSString * GOLFPlayingHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOOL
      		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_COURSE_TM_PLURAL" : @"TITLE_HANDICAP_COURSE_TM");
 
  		case GOLFHandicapMethodRCGA:
-#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
+//#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
   		case GOLFHandicapMethodSecondBest:
-#endif
+//#endif
     		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_COURSE_PLURAL" : @"TITLE_HANDICAP_COURSE");
 
   		case GOLFHandicapMethodAGU:
@@ -325,10 +321,10 @@ NSString * GOLFPlayingHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOOL
 
   		case GOLFHandicapMethodCONGU:
   		case GOLFHandicapMethodWHS:
-#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
+//#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
   		case GOLFHandicapMethodMulligan:
   		case GOLFHandicapMethodPersonal:
-#endif
+//#endif
   		default:
     		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_PLAYING_PLURAL" : @"TITLE_HANDICAP_PLAYING");
 	}
@@ -406,18 +402,11 @@ NSString * GOLFHandicapTableBlurb(GOLFHandicapMethodIndex handicapMethod) {
 	NSString *officialHandicapTitle = GOLFOfficialHandicapTitle(handicapMethod, NO);	//	Localized
 
 	switch (handicapMethod) {
-#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
-  		case GOLFHandicapMethodMulligan:
-    		return [NSString stringWithFormat:GOLFLocalizedString(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@"),
-    				playingHandicapTitle,
-    				slopeChartTitle,
-    				officialHandicapTitle,
-    				playingHandicapTitle];
-
   		case GOLFHandicapMethodPersonal:
   			{
 				GOLFPlayingHandicapType playingHandicapType = [[[NSUserDefaults standardUserDefaults] objectForKey:@"PHPlayingHandicapType"] integerValue];
 				switch (playingHandicapType) {
+#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 					case GOLFPlayingHandicapTypeRatingAdjusted:
 						//	Use just the rating to adjust the handicap…
 						return [NSString stringWithFormat:GOLFLocalizedString(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@"),
@@ -451,6 +440,7 @@ NSString * GOLFHandicapTableBlurb(GOLFHandicapMethodIndex handicapMethod) {
 						}
 
 					case GOLFPlayingHandicapTypeUnadjusted:
+#endif
 					default:
 						//	The playing handicap is the rounded handicap
 						return [NSString stringWithFormat:GOLFLocalizedString(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@"),
@@ -460,14 +450,6 @@ NSString * GOLFHandicapTableBlurb(GOLFHandicapMethodIndex handicapMethod) {
 								playingHandicapTitle];
 				}	//	switch (playingHandicapType)
 			}
-
-  		case GOLFHandicapMethodSecondBest:
-    		return [NSString stringWithFormat:GOLFLocalizedString(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@"),
-    				playingHandicapTitle,
-    				slopeChartTitle,
-    				officialHandicapTitle,
-    				playingHandicapTitle];
-#endif
 
   		case GOLFHandicapMethodEGA:
   		case GOLFHandicapMethodWHS:
@@ -494,6 +476,8 @@ NSString * GOLFHandicapTableBlurb(GOLFHandicapMethodIndex handicapMethod) {
     				GOLFLocalizedString(@"TITLE_HANDICAP_SLOPE_RATING")];
 
   		case GOLFHandicapMethodCONGU:
+  		case GOLFHandicapMethodMulligan:
+		case GOLFHandicapMethodSecondBest:
   		default:
     		return [NSString stringWithFormat:GOLFLocalizedString(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@"),
     				playingHandicapTitle,
@@ -536,7 +520,6 @@ GOLFHandicapIndex GOLFHandicapMaximumNonLocalIndexForAuthority(GOLFHandicapAutho
 				return (for9Holes ? 18.0 : 36.0);
 			else
 				return (for9Holes ? 14.0 : 28.0);
-#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
 			//	Gender-independent
 			return (for9Holes ? 20.0 : 40.0);
@@ -546,10 +529,13 @@ GOLFHandicapIndex GOLFHandicapMaximumNonLocalIndexForAuthority(GOLFHandicapAutho
 			else
 				return (for9Holes ? 18.0 : 36.0);
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityPersonal]) {
+#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 			float max = (playerIsFemale
 					? [[[NSUserDefaults standardUserDefaults] objectForKey:@"PHMaximumWomensStandard"] floatValue]
 					: [[[NSUserDefaults standardUserDefaults] objectForKey:@"PHMaximumMensStandard"] floatValue]);
 			return (for9Holes ? floorf((max * 5.0) + 0.5) / 10.0 : max);
+#else
+			return (for9Holes ? 27.0 : 54.0);	//	Return WHS limit in iOS
 #endif
 		}
 	}
@@ -559,7 +545,6 @@ GOLFHandicapIndex GOLFHandicapMaximumNonLocalIndexForAuthority(GOLFHandicapAutho
 //=================================================================
 //	GOLFHandicapStrokeControlLimitForAuthority(authority, playingHandicap, options, info)
 //=================================================================
-//GOLFScore GOLFHandicapStrokeControlLimitForAuthority(GOLFHandicapAuthority *authority, GOLFPlayingHandicap playingHandicap, BOOL for9Holes, NSObject *anObject) {
 GOLFScore GOLFHandicapStrokeControlLimitForAuthority(GOLFHandicapAuthority *authority, GOLFPlayingHandicap playingHandicap, GOLFHandicapCalculationOption options, NSDictionary *info) {
 
 	//	GOLFHandicapAuthority *			authority		required		Handicap authority
@@ -613,7 +598,7 @@ GOLFScore GOLFHandicapStrokeControlLimitForAuthority(GOLFHandicapAuthority *auth
 			strokes = [workingNumber handicapStrokesValue];
 		}
 		
-		if ([authority isEqualToString:GOLFHandicapAuthorityUSGA]) {
+		if (([authority isEqualToString:GOLFHandicapAuthorityUSGA]) || ([authority isEqualToString:GOLFHandicapAuthoritySecondBest])) {
 
 			//	USGA Equitable Stroke Control
 			//	Course Handicap			Maximum Number on Any Hole
@@ -706,7 +691,6 @@ GOLFScore GOLFHandicapStrokeControlLimitForAuthority(GOLFHandicapAuthority *auth
 			limit = ((2 * numberOfHoles) + par + (playingHandicap == kNotAPlayingHandicap ? (4 * numberOfHoles) : strokes));
 			
 		}
-#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 		else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
 			//	Mulligan Stroke Control
 			//	Limit is net double-bogey (two over par + strokes)
@@ -724,6 +708,7 @@ GOLFScore GOLFHandicapStrokeControlLimitForAuthority(GOLFHandicapAuthority *auth
 			//	GOLFHandicapStrokeControlNetTripleBogey,	//	Limit to net triple-bogey							(5)
 			//	GOLFHandicapStrokeControlESC = 10,			//	Equitable Stroke Control (ESC) limit				(10)
 
+#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 			GOLFHandicapStrokeControl adjustmentType = [[[NSUserDefaults standardUserDefaults] objectForKey:@"PHStrokeAdjustmentType"] integerValue];
 
 			switch (adjustmentType) {
@@ -770,8 +755,8 @@ GOLFScore GOLFHandicapStrokeControlLimitForAuthority(GOLFHandicapAuthority *auth
 				default:
 					break;
 			}	//	switch (adjustmentType)
-		}
 #endif
+		}
 	}
 	return limit;
 }
@@ -791,9 +776,9 @@ NSString * GOLFHandicapLocalIndexModifierForAuthority(GOLFHandicapAuthority *aut
 			return @"C";	//	"Club"
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityCONGU]) {
 			return @"C";	//	"Club"
-#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
 			return @"L";	//	"Local"
+#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityPersonal]) {
 			return [[NSUserDefaults standardUserDefaults] objectForKey:@"PHNonStandardModifier"];
 #endif
@@ -869,14 +854,14 @@ NSString * GOLFRoundModifierTooltip(GOLFHandicapAuthority *authority) {
 			return GOLFLocalizedString(@"TOOLTIP_ROUNDS_MODIFIER_CONGU");
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityEGA]) {
 			return GOLFLocalizedString(@"TOOLTIP_ROUNDS_MODIFIER_EGA");
-#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
+//#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityPersonal]) {
 			return GOLFLocalizedString(@"TOOLTIP_ROUNDS_MODIFIER_USGA");
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
 			return GOLFLocalizedString(@"TOOLTIP_ROUNDS_MODIFIER_MULLIGAN");
 		} else if ([authority isEqualToString:GOLFHandicapAuthoritySecondBest]) {
-			return GOLFLocalizedString(@"TOOLTIP_ROUNDS_MODIFIER_EGA");
-#endif
+			return GOLFLocalizedString(@"TOOLTIP_ROUNDS_MODIFIER_USGA");
+//#endif
 		}
 	}
 	return @"";
@@ -894,10 +879,10 @@ BOOL GOLFHandicap9HoleHandicapsSupported(GOLFHandicapAuthority *authority) {
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
 			//	World Handicap System doesn't calculate 9-hole indexes
 			return NO;
-#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
+//#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
 			return NO;
-#endif
+//#endif
 		}
 	}
 	return YES;	//	default
@@ -915,10 +900,6 @@ BOOL GOLFHandicapStablefordRequiredForAuthority(GOLFHandicapAuthority *authority
 			return NO;	//	Since Sep 2011
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityCONGU]) {
 			return YES;	//	Since 2016
-#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
-		} else if ([authority isEqualToString:GOLFHandicapAuthorityPersonal]) {
-			return NO;
-#endif
 		}
 	}
 	return NO;
@@ -995,10 +976,10 @@ GOLFHandicapStrokes GOLFHandicapDefaultLimitsDifferenceForAuthority(GOLFHandicap
 			difference = (NSInteger)8;
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityUSGA]) {
 			difference = (NSInteger)8;
-#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
+//#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
 			difference = (NSInteger)10;
-#endif
+//#endif
 		}
 	}
 	return difference;
@@ -1014,10 +995,10 @@ float GOLFHandicapDefaultLimitsPctAdjForAuthority(GOLFHandicapAuthority *authori
 			adjustment = (float)10.0;
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityUSGA]) {
 			adjustment = (float)10.0;
-#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
+//#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
 			adjustment = (float)12.0;
-#endif
+//#endif
 		}
 	}
 	return adjustment;
@@ -1681,7 +1662,6 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 				playingHandicap = (GOLFPlayingHandicap)floorf(((halfIndex * localSlope / unratedSLOPERating) + adjust) + 0.5);
 				is9HoleResult = YES;
 			}
-#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 		} else if ([localAuthority isEqualToString:GOLFHandicapAuthorityMulligan]) {
 			//	Method 3 Course Handicap calculation
 
@@ -1709,6 +1689,7 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 				is9HoleResult = YES;
 			}
 		} else if ([localAuthority isEqualToString:GOLFHandicapAuthorityPersonal]) {
+#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 			GOLFPlayingHandicapType playingHandicapType = [[[NSUserDefaults standardUserDefaults] objectForKey:@"PHPlayingHandicapType"] integerValue];
 			switch (playingHandicapType) {
 				case GOLFPlayingHandicapTypeUnadjusted:
@@ -1784,6 +1765,18 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 				default:
 					break;
 			}	//	switch (playingHandicapType)
+#else
+			//	The playing handicap is the rounded exact handicap
+			if (have9HoleIndex == need9HoleResult) {
+				playingHandicap = (GOLFPlayingHandicap)floorf(localIndex + 0.5);
+				is9HoleResult = have9HoleIndex;
+			} else if (have9HoleIndex) {
+				playingHandicap = (GOLFPlayingHandicap)floorf((localIndex * 2.0) + 0.5);
+				is9HoleResult = NO;
+			} else {
+				playingHandicap = (GOLFPlayingHandicap)floorf((localIndex / 2) + 0.5);
+				is9HoleResult = YES;
+			}
 #endif
 		}	//	else if ([localAuthority isEqualToString:GOLFHandicapAuthorityPersonal])
 	}	//	if (localIndex != kNotAHandicapIndex)

@@ -66,12 +66,11 @@ typedef NS_ENUM(NSUInteger, GOLFHandicapMethodIndex) {
 	GOLFHandicapMethodEGA,						//	EGA (European Golf Association) Handicap System (4)
 	GOLFHandicapMethodCONGU,					//	CONGU Unified Handicap System (5)
 	GOLFHandicapMethodWHS,						//	World Handicap System (6)
-#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
-	GOLFHandicapMethodMulligan = 20,			//	Mulligan Handicap System (20)
-	GOLFHandicapMethodPersonal,					//	Personalized Handicap System (21)
-	GOLFHandicapMethodSecondBest,				//	Second-Best Score Handicap System (22)
-#endif
+	GOLFHandicapMethodMulligan = 20,			//	Mulligan Handicap System (20)			*
+	GOLFHandicapMethodPersonal = 21,			//	Personalized Handicap System (21)		*
+	GOLFHandicapMethodSecondBest = 22,			//	Second-Best Score Handicap System (22)	*
 	GOLFHandicapMethodUnknown = 999				//	Unknown handicapping type
+	//	* - created only on macOS - used without alteration in iOS	
 };
 
 typedef NS_ENUM(NSUInteger, GOLFHandicapStrokeControl) {
@@ -108,11 +107,9 @@ extern GOLFHandicapAuthority * const GOLFHandicapAuthorityAGU;			//	"AGU"
 extern GOLFHandicapAuthority * const GOLFHandicapAuthorityEGA;			//	"EGA"
 extern GOLFHandicapAuthority * const GOLFHandicapAuthorityCONGU;		//	"CONGU"
 extern GOLFHandicapAuthority * const GOLFHandicapAuthorityWHS;			//	"WHS"
-#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 extern GOLFHandicapAuthority * const GOLFHandicapAuthorityMulligan;		//	"MULLIGAN"
-extern GOLFHandicapAuthority * const GOLFHandicapAuthorityPersonal;		//	"PERSONAL"
 extern GOLFHandicapAuthority * const GOLFHandicapAuthoritySecondBest;	//	"SECONDBEST"
-#endif
+extern GOLFHandicapAuthority * const GOLFHandicapAuthorityPersonal;		//	"PERSONAL"
 
 //	GOLFLink
 extern NSString * const GOLFLinkLoggedInGAUserCookieValue;
