@@ -590,6 +590,7 @@
 "FORMAT_NUMBER_%ld_ABBR" = "Nr. %ld";
 "FORMAT_OPEN_%@" = "Öffne %@";
 "FORMAT_OPEN_3_%@" = "Öffne 3 %@";
+"FORMAT_THROUGH_HOLE_%@" = "bis %@";
 "FORMAT_TOTAL_POINTS_VS_QUOTA_%d" = "Gesamtpunkte v. %d Kontingent";
 "FORMAT_%@_DIFFERENCE" = "Unterschied in der %@";	//	"COURSE HANDICAP Difference"
 "FORMAT_%@_OF_EACH_PLAYER" = "der %@ jedes Spielers";	//	"COURSE HANDICAP of each player"
