@@ -650,7 +650,7 @@
 "BLURB_REVIEW_HANDICAP_RECORDS" = "Untersuchen Sie zuvor berechnete Handicap-Datensätze in Tabellenform mit Funktionen zum Entfernen ausgewählter Daten.";
 
 "DESCRIPTION_3_BY_6" = "Löcher 1-6, 7-11 und 12-18";
-"DESCRIPTION_CLOSE_OUT" = "Hinzugefügt wenn keine Wetten oder Pressen in Kraft sind";
+"DESCRIPTION_CLOSE_OUT" = "(wenn keine Wetten in Kraft sind)";
 "DESCRIPTION_FRONT_BACK" = "Ersteseite und Letzteseite";
 "DESCRIPTION_MATCH_PLAY" = "Kopf-an-Kopf-Wettbewerb durch gewonnenen Golflöcher";
 "DESCRIPTION_NASSAU" = "Ersteseite, Letzteseite und 18 Löcher";

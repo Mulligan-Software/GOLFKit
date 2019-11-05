@@ -650,7 +650,7 @@
 "BLURB_REVIEW_HANDICAP_RECORDS" = "Examinez les données de handicap précedemment calculés sous forme tabulaire avec capacités pour vous supprimez les données selectionnées.";
 
 "DESCRIPTION_3_BY_6" = "Trous 1-6, 7-11 et 12-18";
-"DESCRIPTION_CLOSE_OUT" = "Ajouté lorsque aucune pari ou presse n'est en vigueur";
+"DESCRIPTION_CLOSE_OUT" = "(lorsque aucune pari n'est en vigueur)";
 "DESCRIPTION_FRONT_BACK" = "Premier côté et deuxième côté";
 "DESCRIPTION_MATCH_PLAY" = "Compétition face à face marquée par les trous gagnés.";
 "DESCRIPTION_NASSAU" = "Premier côté, deuxième côté et 18 trous";

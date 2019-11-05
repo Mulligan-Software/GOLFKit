@@ -650,7 +650,7 @@
 "BLURB_REVIEW_HANDICAP_RECORDS" = "Examine previously calculated handicap records in tabular form with capabilities to remove selected data.";
 
 "DESCRIPTION_3_BY_6" = "Holes 1-6, 7-11 and 12-18";
-"DESCRIPTION_CLOSE_OUT" = "Added when no bets or presses are in effect";
+"DESCRIPTION_CLOSE_OUT" = "(when no bets or presses are in effect)";
 "DESCRIPTION_FRONT_BACK" = "Front side and Back side";
 "DESCRIPTION_MATCH_PLAY" = "Head-to-head competition scored by holes won";
 "DESCRIPTION_NASSAU" = "Front side, Back side and 18 holes";
