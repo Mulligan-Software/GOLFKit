@@ -463,6 +463,8 @@
 "TITLE_OPEN_SCORECARD" = "Open the Scorecard";
 "TITLE_OPTIONS" = "Options";
 "TITLE_OK_BUTTON" = "OK";
+"TITLE_PCC" = "Playing Conditions Calculation";
+"TITLE_PCC_ABBR" = "PCC";
 "TITLE_PENALTY_ROUND" = "Penalty Round";
 "TITLE_PENALTY_STROKE" = "Penalty Stroke";
 "TITLE_PENALTY_STROKE_PLURAL" = "Penalty Strokes";
@@ -801,7 +803,7 @@
 "TOOLTIP_ROUND_GROSS_SCORE" = "Gross score";
 "TOOLTIP_ROUND_NET_SCORE" = "Net score";
 "TOOLTIP_ROUND_TOTAL_SCORE" = "Total score";
-"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - used\nA - away\nC - combined\nT - tournament\nP - penalty";
+"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - used\nA - away\nC - combined\nE - exceptional\nP - penalty";
 "TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - used\nA - away\nC - combined\nT - tournament\nP - penalty";
 "TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - used\nA - away\nC - combined\nT - tournament\nP - penalty";
 "TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - used\nA - away\nC - combined";

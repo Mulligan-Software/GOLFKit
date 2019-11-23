@@ -463,6 +463,8 @@
 "TITLE_OPEN_SCORECARD" = "Abrir la Tarjeta";
 "TITLE_OPTIONS" = "Opciones";
 "TITLE_OK_BUTTON" = "OK";
+"TITLE_PCC" = "Cálculo de Condiciones de Juego";
+"TITLE_PCC_ABBR" = "CCJ";
 "TITLE_PENALTY_ROUND" = "Ronda Penalidad";
 "TITLE_PENALTY_STROKE" = "Golpe de Penalidad";
 "TITLE_PENALTY_STROKE_PLURAL" = "Golpes de Penalidad";
@@ -801,7 +803,7 @@
 "TOOLTIP_ROUND_GROSS_SCORE" = "Puntaje bruto";
 "TOOLTIP_ROUND_NET_SCORE" = "Puntaje neto";
 "TOOLTIP_ROUND_TOTAL_SCORE" = "Puntaje total";
-"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - utilizado\nA - allá\nC - combinado\nT - torneo\nP - pena";
+"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - utilizado\nA - allá\nC - combinado\nE - excepcional\nP - pena";
 "TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - utilizado\nA - allá\nC - combinado\nT - torneo\nP - pena";
 "TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - utilizado\nA - allá\nC - combinado\nT - torneo\nP - pena";
 "TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - utilizado\nA - allá\nC - combinado";

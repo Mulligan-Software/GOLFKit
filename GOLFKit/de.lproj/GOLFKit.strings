@@ -463,6 +463,8 @@
 "TITLE_OPEN_SCORECARD" = "Scorekarte öffnen";
 "TITLE_OPTIONS" = "Optionen";
 "TITLE_OK_BUTTON" = "OK";
+"TITLE_PCC" = "Berechnung der Speilbedingungen";
+"TITLE_PCC_ABBR" = "PCC";
 "TITLE_PENALTY_ROUND" = "Strafrunde";
 "TITLE_PENALTY_STROKE" = "Strafschlag";
 "TITLE_PENALTY_STROKE_PLURAL" = "Strafschlage";
@@ -801,7 +803,7 @@
 "TOOLTIP_ROUND_GROSS_SCORE" = "Brutto Punktzahl";
 "TOOLTIP_ROUND_NET_SCORE" = "Netto Punktzahl";
 "TOOLTIP_ROUND_TOTAL_SCORE" = "Gesamtpunktzahl";
-"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - benutzt\nA - entfernt\nC - kombiniert\nT - Tournier\nP - Strafe";
+"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - benutzt\nA - entfernt\nC - kombiniert\nE - außergewöhnlich\nP - Strafe";
 "TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - benutzt\nA - entfernt\nC - kombiniert\nT - Tournier\nP - Strafe";
 "TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - benutzt\nA - entfernt\nC - kombiniert\nT - Tournier\nP - Strafe";
 "TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - benutzt\nA - entfernt\nC - kombiniert";

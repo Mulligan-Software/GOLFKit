@@ -463,6 +463,8 @@
 "TITLE_OPEN_SCORECARD" = "Ouvrir la Carte";
 "TITLE_OPTIONS" = "Options";
 "TITLE_OK_BUTTON" = "OK";
+"TITLE_PCC" = "Calcul des Conditions de Jeu";
+"TITLE_PCC_ABBR" = "CCJ";
 "TITLE_PENALTY_ROUND" = "Tour de pénalité";
 "TITLE_PENALTY_STROKE" = "Coup de pénalité";
 "TITLE_PENALTY_STROKE_PLURAL" = "Coups de pénalité";
@@ -801,7 +803,7 @@
 "TOOLTIP_ROUND_GROSS_SCORE" = "Score brut";
 "TOOLTIP_ROUND_NET_SCORE" = "Score net";
 "TOOLTIP_ROUND_TOTAL_SCORE" = "Score total";
-"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - utilisé\nA - loin\nC - combiné\nT - tournoi\nP - pénalité";
+"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - utilisé\nA - loin\nC - combiné\nE - exceptionnel\nP - pénalité";
 "TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - utilisé\nA - loin\nC - combiné\nT - tournoi\nP - pénalité";
 "TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - utilisé\nA - loin\nC - combiné\nT - tournoi\nP - pénalité";
 "TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - utilisé\nA - loin\nC - combiné";

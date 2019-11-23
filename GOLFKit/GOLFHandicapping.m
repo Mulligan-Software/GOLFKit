@@ -198,9 +198,9 @@ NSArray * GOLFHandicapAuthorities(void) {
 				[NSDictionary dictionaryWithObjectsAndKeys:
 						[NSNumber numberWithUnsignedInteger:GOLFHandicapMethodWHS], @"methodIndex",
 						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodWHS), @"handicapAuthority",
-						[NSString string], @"authorityDisplay",		//	Temporary?
-						GOLFLocalizedString(@"HANDICAP_METHOD_WHS"), @"association",	//	Temporary?
-						@"http://www.usga.org/content/usga/home-page/Handicapping/world-handicap-system/WHS-resources.html", @"URL",
+						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodWHS), @"authorityDisplay",
+						GOLFLocalizedString(@"HANDICAP_ASSOCIATION_USGA"), @"association",
+						@"http://www.usga.org/content/dam/usga/pdf/Handicap/Rules-of-Handicapping_USGA_Final.pdf", @"URL",
 						GOLFLocalizedString(@"HANDICAP_METHOD_WHS"), @"methodName",
 						nil],
 				nil];
@@ -292,7 +292,7 @@ NSString * GOLFOfficialHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOO
 //#endif
 
   		case GOLFHandicapMethodWHS:
-    		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_WORLD_INDEX_PLURAL" : @"TITLE_HANDICAP_WORLD_INDEX");
+    		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_WORLD_INDEX_PLURAL" : @"TITLE_HANDICAP_WORLD_INDEX");	//	"World Handicap Index(es)"
 
   		default:
     		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_PLURAL" : @"TITLE_HANDICAP");
@@ -319,8 +319,10 @@ NSString * GOLFPlayingHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOOL
   		case GOLFHandicapMethodEGA:
     		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_EGA_PLAYING_PLURAL" : @"TITLE_HANDICAP_EGA_PLAYING");
 
+		case GOLFHandicapMethodWHS:
+    		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_COURSE_PLURAL" : @"TITLE_HANDICAP_COURSE");
+
   		case GOLFHandicapMethodCONGU:
-  		case GOLFHandicapMethodWHS:
 //#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
   		case GOLFHandicapMethodMulligan:
   		case GOLFHandicapMethodPersonal:
@@ -334,7 +336,21 @@ NSString * GOLFPlayingHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOOL
 //	GOLFHandicapAllowanceTitle(handicapMethod)
 //=================================================================
 NSString * GOLFHandicapAllowanceTitle(GOLFHandicapMethodIndex handicapMethod) {
-	return GOLFLocalizedString(@"TITLE_HANDICAP_ALLOWANCE");
+	switch (handicapMethod) {
+		case GOLFHandicapMethodWHS:
+    		return GOLFLocalizedString(@"TITLE_HANDICAP_PLAYING");
+
+		case GOLFHandicapMethodUSGA:
+		case GOLFHandicapMethodRCGA:
+		case GOLFHandicapMethodSecondBest:
+		case GOLFHandicapMethodAGU:
+		case GOLFHandicapMethodEGA:
+		case GOLFHandicapMethodCONGU:
+		case GOLFHandicapMethodMulligan:
+		case GOLFHandicapMethodPersonal:
+		default:
+			return GOLFLocalizedString(@"TITLE_HANDICAP_ALLOWANCE");
+	}
 }
 
 //=================================================================
@@ -372,8 +388,10 @@ NSString * GOLFHandicapCCRTitle(GOLFHandicapMethodIndex handicapMethod, BOOL abb
 		return GOLFLocalizedString(abbreviated ? @"TITLE_DSR_ABBR" : @"TITLE_DSR");	//	Daily Scratch Rating
 	} else if (handicapMethod == GOLFHandicapMethodCONGU) {
 		return GOLFLocalizedString(abbreviated ? @"TITLE_CSS_ABBR" : @"TITLE_CSS");	//	Competition Scratch Score
-	} else if ((handicapMethod == GOLFHandicapMethodEGA) || (handicapMethod == GOLFHandicapMethodWHS)) {
+	} else if (handicapMethod == GOLFHandicapMethodEGA) {
 		return GOLFLocalizedString(abbreviated ? @"TITLE_CBA_ABBR" : @"TITLE_CBA");	//	Computed Buffer Adjustment
+	} else if (handicapMethod == GOLFHandicapMethodWHS) {
+		return GOLFLocalizedString(abbreviated ? @"TITLE_PCC_ABBR" : @"TITLE_PCC");	//	Playing Conditions Calculation
 	}
 	return GOLFLocalizedString(abbreviated ? @"TITLE_CCR_ABBR" : @"TITLE_CCR");	//	Calculated Course Rating
 }
@@ -382,7 +400,10 @@ NSString * GOLFHandicapCCRTitle(GOLFHandicapMethodIndex handicapMethod, BOOL abb
 //	GOLFHandicapCSSTitle(handicapMethod, abbreviated)
 //=================================================================
 NSString * GOLFHandicapCSSTitle(GOLFHandicapMethodIndex handicapMethod, BOOL abbreviated) {
-	return GOLFLocalizedString(abbreviated ? @"TITLE_CSS_ABBR" : @"TITLE_CSS");
+	if (handicapMethod == GOLFHandicapMethodWHS) {
+		return GOLFLocalizedString(abbreviated ? @"TITLE_PCC_ABBR" : @"TITLE_PCC");	//	Playing Conditions Calculation
+	}
+	return GOLFLocalizedString(abbreviated ? @"TITLE_CSS_ABBR" : @"TITLE_CSS");	//	Competition Scratch Score
 }
 
 //=================================================================
@@ -502,7 +523,7 @@ NSString * GOLFHandicapTableInstruction(GOLFHandicapMethodIndex handicapMethod) 
 //=================================================================
 GOLFHandicapIndex GOLFHandicapMaximumNonLocalIndexForAuthority(GOLFHandicapAuthority *authority, BOOL playerIsFemale, BOOL for9Holes) {
 	if (authority) {
-		if ([authority isEqualToString:GOLFHandicapAuthorityWHS] || [authority isEqualToString:GOLFHandicapAuthorityEGA]) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityEGA]) {
 			//	Gender-independent
 			return (for9Holes ? 27.0 : 54.0);
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityUSGA] || [authority isEqualToString:GOLFHandicapAuthorityRCGA]) {
@@ -520,6 +541,9 @@ GOLFHandicapIndex GOLFHandicapMaximumNonLocalIndexForAuthority(GOLFHandicapAutho
 				return (for9Holes ? 18.0 : 36.0);
 			else
 				return (for9Holes ? 14.0 : 28.0);
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
+			//	Gender-independent - (WHS doesn't support 9-hole indexes)
+			return (for9Holes ? 27.0 : 54.0);
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
 			//	Gender-independent
 			return (for9Holes ? 20.0 : 40.0);
@@ -691,6 +715,12 @@ GOLFScore GOLFHandicapStrokeControlLimitForAuthority(GOLFHandicapAuthority *auth
 			limit = ((2 * numberOfHoles) + par + (playingHandicap == kNotAPlayingHandicap ? (4 * numberOfHoles) : strokes));
 			
 		}
+		else if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
+			//	World Handicap System limits scores for handicapping to net double-bogey
+			
+			limit = ((2 * numberOfHoles) + par + (playingHandicap == kNotAPlayingHandicap ? (4 * numberOfHoles) : strokes));
+			
+		}
 		else if ([authority isEqualToString:GOLFHandicapAuthorityMulligan]) {
 			//	Mulligan Stroke Control
 			//	Limit is net double-bogey (two over par + strokes)
@@ -767,7 +797,7 @@ GOLFScore GOLFHandicapStrokeControlLimitForAuthority(GOLFHandicapAuthority *auth
 NSString * GOLFHandicapLocalIndexModifierForAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
 		if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
-			return @"L";	//	"Local"
+			return @"L";	//	"Local" (current WHS specs don't identify "local" indexes)
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityUSGA] || [authority isEqualToString:GOLFHandicapAuthorityRCGA]) {
 			return @"L";	//	"Local"
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityAGU]) {
@@ -830,6 +860,8 @@ NSString * GOLFHandicapExceptionalScoringModifierForAuthority(GOLFHandicapAuthor
 	if (authority) {
 		if (([authority isEqualToString:GOLFHandicapAuthorityUSGA]) || ([authority isEqualToString:GOLFHandicapAuthorityRCGA])) {
 			return @"R";	//	"Restricted"
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
+			return @"";	//	Handicaps based on exceptional scores aren't tagged in WHS (though exceptional rounds might be) - an exceptional score adjusts the most recent differentials
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityCONGU]) {
 			return @"E";	//	"Exceptional Scoring Reduction"
 		}
@@ -911,7 +943,7 @@ BOOL GOLFHandicapStablefordRequiredForAuthority(GOLFHandicapAuthority *authority
 BOOL GOLFDoesTournamentAdjustmentForAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
 		if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
-			return YES;
+			return YES;	//	Exceptional Score Reduction (all rounds)
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityUSGA]) {
 			return YES;
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityRCGA]) {
@@ -1091,7 +1123,7 @@ NSInteger GOLFHandicapDifferentialsToUseForAuthority(GOLFHandicapAuthority *auth
 //=================================================================
 GOLFHandicapDifferential GOLFHandicapExceptionalScoringReductionForAuthority(GOLFHandicapAuthority *authority, GOLFHandicapIndex excessIndex, NSInteger eligibleScores) {
 	if (authority) {
-		if ([authority isEqualToString:GOLFHandicapAuthorityUSGA] || [authority isEqualToString:GOLFHandicapAuthorityRCGA] || [authority isEqualToString:GOLFHandicapAuthorityWHS]) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityUSGA] || [authority isEqualToString:GOLFHandicapAuthorityRCGA]) {
 			//
 			//                     USGA Handicap Reduction Table
 			//

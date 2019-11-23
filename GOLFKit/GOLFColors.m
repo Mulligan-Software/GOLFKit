@@ -23,6 +23,8 @@
 
 //	#undef GOLFColor
 
+//	Globals
+CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 
 @implementation GOLFColor (GOLFColorCategories)
 
@@ -468,6 +470,27 @@
 	return [GOLFDynamicColor dynamicColorWithAquaColor:[NSColor greenColor] darkAquaColor:nil];
 	
 #endif
+}
+
+- (CGFloat)colorimetricDistanceToGOLFColor:(GOLFColor *)compareColor {
+	//	Determining a colorimetric difference (contrast) between our color and compareColor
+	//	Formula is: diff = sqrt( (kR x (red1 - red2)^2) + (kG x (green1 - green2)^2) + (kB x (blue1 - blue2)^2) )
+	//	where kR = 0.299, kG = 0.587, kB = 0.114
+
+	CGFloat ourRed, ourGreen, ourBlue;
+	CGFloat otherRed, otherGreen, otherBlue;
+
+#if TARGET_OS_IOS || TARGET_OS_WATCH
+	BOOL converted = [self getRed:&ourRed green:&ourGreen blue:&ourBlue alpha:nil];
+	converted = [compareColor getRed:&otherRed green:&otherGreen blue:&otherBlue alpha:nil];
+#elif TARGET_OS_MAC
+	NSColor *ourColor = [self colorUsingColorSpaceName:NSCalibratedRGBColorSpace];;
+	NSColor *otherColor = [compareColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+	[ourColor getRed:&ourRed green:&ourGreen blue:&ourBlue alpha:nil];
+	[otherColor getRed:&otherRed green:&otherGreen blue:&otherBlue alpha:nil];
+#endif
+
+	return sqrtf((0.299 * powf((ourRed - otherRed), 2.0)) + (0.587 * powf((ourGreen - otherGreen), 2.0)) + (0.114 * powf((ourBlue - otherBlue), 2.0)));
 }
 
 @end

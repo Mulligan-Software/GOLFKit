@@ -26,6 +26,9 @@
 
 //	#undef GOLFAppColor
 
+//	Globals
+extern CGFloat GOLFColorDefaultYardageContrast;	//	Somewhere around 0.35
+
 //	Misc constants
 #define	kGOLFTeeColorsNumberOfSolid		16		//	Black (0) through Azure (15), total of 16
 #define	kGOLFTeeColorsNumberOfCombo		10		//	Blue & White (20) through Green & Red (29), total of 10
@@ -96,6 +99,7 @@ typedef NS_ENUM(GOLFTeeColorIndex, teeColorIndexEnumeration) {
 	#define IS_ANY_STANDARD_TEE_COLOR_INDEX(_index)	((IS_ANY_SOLID_TEE_COLOR_INDEX(_index) || IS_ANY_COMBO_TEE_COLOR_INDEX(_index) || IS_ANY_SPECIAL_TEE_COLOR_INDEX(_index)) ? YES : NO)
 #endif
 
+
 @interface GOLFColor (GOLFColorCategories)
 + (BOOL)darkMode;	//	When a dark-themed NSAppearance is active on the current thread or in the App
 
@@ -126,6 +130,9 @@ typedef NS_ENUM(GOLFTeeColorIndex, teeColorIndexEnumeration) {
 + (id)GOLFFactoryDarkBogeyScoreColor;
 + (id)GOLFFactoryDarkMatchAColor API_AVAILABLE(macos(10.10),ios(9.0));
 + (id)GOLFFactoryDarkMatchBColor API_AVAILABLE(macos(10.10),ios(9.0));
+
+//	Color difference (colorimetric distance)
+- (CGFloat)colorimetricDistanceToGOLFColor:(GOLFColor *)compareColor;
 
 @end
 
