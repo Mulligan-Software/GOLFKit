@@ -154,7 +154,7 @@ NSString * GOLFOfficialHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOO
 //	Returns a localized title for an "official" calculated handicap ("Handicap Index®", "Índice de Handicap", "Exakt Handicapen", etc.)
 
 NSString * GOLFPlayingHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural);
-//	Returns a localized title for the handicap strokes for play ("Playing Handicap", "Handicap de Campo", "EGA Handicap Jouer", etc.)
+//	Returns a localized title for the handicap strokes for play ("Course Handicap", "Handicap de Campo", "EGA Handicap Jouer", etc.)
 
 NSString * GOLFHandicapAllowanceTitle(GOLFHandicapMethodIndex handicapMethod);
 //	Returns a localized title for the allowed handicap strokes in competition ("Handicap Allowance", "Allocation de Handicap", etc.)

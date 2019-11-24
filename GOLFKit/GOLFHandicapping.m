@@ -280,7 +280,6 @@ NSString * GOLFOfficialHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOO
   		case GOLFHandicapMethodCONGU:
     		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_EXACT_PLURAL" : @"TITLE_HANDICAP_EXACT");
 
-//#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
   		case GOLFHandicapMethodMulligan:
     		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_ESTIMATED_PLURAL" : @"TITLE_HANDICAP_ESTIMATED");
 
@@ -289,7 +288,6 @@ NSString * GOLFOfficialHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOO
 
   		case GOLFHandicapMethodSecondBest:
     		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_INDEX_PLURAL" : @"TITLE_HANDICAP_INDEX");
-//#endif
 
   		case GOLFHandicapMethodWHS:
     		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_WORLD_INDEX_PLURAL" : @"TITLE_HANDICAP_WORLD_INDEX");	//	"World Handicap Index(es)"
@@ -308,9 +306,7 @@ NSString * GOLFPlayingHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOOL
      		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_COURSE_TM_PLURAL" : @"TITLE_HANDICAP_COURSE_TM");
 
  		case GOLFHandicapMethodRCGA:
-//#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
   		case GOLFHandicapMethodSecondBest:
-//#endif
     		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_COURSE_PLURAL" : @"TITLE_HANDICAP_COURSE");
 
   		case GOLFHandicapMethodAGU:
@@ -323,10 +319,8 @@ NSString * GOLFPlayingHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOOL
     		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_COURSE_PLURAL" : @"TITLE_HANDICAP_COURSE");
 
   		case GOLFHandicapMethodCONGU:
-//#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
   		case GOLFHandicapMethodMulligan:
   		case GOLFHandicapMethodPersonal:
-//#endif
   		default:
     		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_PLAYING_PLURAL" : @"TITLE_HANDICAP_PLAYING");
 	}

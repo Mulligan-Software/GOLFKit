@@ -587,6 +587,7 @@
 "FORMAT_%@_IS_DESIGNATED_CAPTAIN" = "%@ es designado capitán del equipo.";
 "FORMAT_MB_DOWNLOADED_%1.1f" = "%1.1fMB descargados";
 "FORMAT_NET_%@" = "%@ Neto";
+"FORMAT_NO_%@" = "sin %@";	//	"no strokes", "no players"
 "FORMAT_NOT_AVAILABLE_WITH_%@" = "no disponible para %@";
 "FORMAT_NOTIFY_%@_ABOUT_%@" = "Por favor notifique a %@ sobre:\n%@";
 "FORMAT_NUMBER_%ld_ABBR" = "No. %ld";	/*	No. 3	*/
