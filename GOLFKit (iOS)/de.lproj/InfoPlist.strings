@@ -8,5 +8,5 @@
 
 CFBundleName = "GOLFKit";
 CFBundleShortVersionString = "10.0";
-CFBundleGetInfoString = "GOLFKit 10.0, Copyright © 2019 Mulligan Software";
-NSHumanReadableCopyright = "© Copyright 2018-2019 Mulligan Software.  Alle Rechte vorbehalten.";
+CFBundleGetInfoString = "GOLFKit 10.0, Copyright © 2020 Mulligan Software";
+NSHumanReadableCopyright = "© Copyright 2018-2020 Mulligan Software.  Alle Rechte vorbehalten.";

@@ -754,10 +754,10 @@
 "ALLOWANCE_TYPE_FULL_HANDICAP" = "Full Handicap";
 "ALLOWANCE_TYPE_MEN_90_WOMEN_95" = "Men 90%, Women 95%";
 "ALLOWANCE_TYPE_MEN_80_WOMEN_90" = "Men 80%, Women 90%";
-"ALLOWANCE_TYPE_A_PLAYER_50_B_40" = "50% A player + 40% B player";
-"ALLOWANCE_TYPE_A_PLAYER_50_B_40_DESC" = "Low handicap player 50% + partner 40%";
 "ALLOWANCE_TYPE_A_PLAYER_50_B_20" = "50% A player + 20% B player";
 "ALLOWANCE_TYPE_A_PLAYER_50_B_20_DESC" = "Low handicap player 50% + partner 20%";
+"ALLOWANCE_TYPE_A_PLAYER_60_B_40" = "60% A player + 40% B player";
+"ALLOWANCE_TYPE_A_PLAYER_60_B_40_DESC" = "Low handicap player 60% + partner 40%";
 "ALLOWANCE_TYPE_TEAMMATES_100_AVG" = "Average of Teammates";
 "ALLOWANCE_TYPE_TEAMMATES_80_AVG" = "80% Avg. of Teammates";
 "ALLOWANCE_TYPE_AGGREGATE_3_8" = "3/8 of Aggregate";

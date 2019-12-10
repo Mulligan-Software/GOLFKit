@@ -754,10 +754,10 @@
 "ALLOWANCE_TYPE_FULL_HANDICAP" = "Handicap Completo";
 "ALLOWANCE_TYPE_MEN_90_WOMEN_95" = "Caballeros 90%, Damas 95%";
 "ALLOWANCE_TYPE_MEN_80_WOMEN_90" = "Caballeros 80%, Damas 90%";
-"ALLOWANCE_TYPE_A_PLAYER_50_B_40" = "50% jugador A + 40% jugador B";
-"ALLOWANCE_TYPE_A_PLAYER_50_B_40_DESC" = "Compañero con handicap menor 50% + compañero 40%";
 "ALLOWANCE_TYPE_A_PLAYER_50_B_20" = "50% jugador A + 20% jugador B";
 "ALLOWANCE_TYPE_A_PLAYER_50_B_20_DESC" = "Compañero con handicap menor 50% + compañero 20%";
+"ALLOWANCE_TYPE_A_PLAYER_60_B_40" = "60% jugador A + 40% jugador B";
+"ALLOWANCE_TYPE_A_PLAYER_60_B_40_DESC" = "Compañero con handicap menor 60% + compañero 40%";
 "ALLOWANCE_TYPE_TEAMMATES_100_AVG" = "Promedio de Compañeros";
 "ALLOWANCE_TYPE_TEAMMATES_80_AVG" = "80% Promedio de Compañeros";
 "ALLOWANCE_TYPE_AGGREGATE_3_8" = "3/8 del agregado";

@@ -270,9 +270,9 @@ NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictiona
 
 		case A60B40AllowanceType:
 			if (descriptiveText) {
-				*descriptiveText = GOLFLocalizedString(@"ALLOWANCE_TYPE_A_PLAYER_50_B_40_DESC");
+				*descriptiveText = GOLFLocalizedString(@"ALLOWANCE_TYPE_A_PLAYER_60_B_40_DESC");
 			}
-			return GOLFLocalizedString(@"ALLOWANCE_TYPE_A_PLAYER_50_B_40");
+			return GOLFLocalizedString(@"ALLOWANCE_TYPE_A_PLAYER_60_B_40");
 
 		case A50B20AllowanceType:
 			if (descriptiveText) {
