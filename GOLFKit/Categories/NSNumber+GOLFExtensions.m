@@ -131,6 +131,14 @@
 	return (GOLFRoundCCR)[self integerValue];
 }
 
++ (id)numberWithPlayingConditionAdjustment:(GOLFPlayingConditionAdjustment)pcc {
+	return [NSNumber numberWithFloat:pcc];
+}
+
+- (GOLFPlayingConditionAdjustment)pccValue {
+	return (GOLFPlayingConditionAdjustment)[self floatValue];
+}
+
 + (id)numberWithScore:(GOLFScore)score {
     return [NSNumber numberWithInteger:(NSInteger)score];
 }

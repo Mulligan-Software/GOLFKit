@@ -200,7 +200,7 @@ NSArray * GOLFHandicapAuthorities(void) {
 						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodWHS), @"handicapAuthority",
 						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodWHS), @"authorityDisplay",
 						GOLFLocalizedString(@"HANDICAP_ASSOCIATION_USGA"), @"association",
-						@"http://www.usga.org/content/dam/usga/pdf/Handicap/Rules-of-Handicapping_USGA_Final.pdf", @"URL",
+						@"https://www.usga.org/content/dam/usga/pdf/Handicap/Rules-of-Handicapping_USGA_Final.pdf", @"URL",
 						GOLFLocalizedString(@"HANDICAP_METHOD_WHS"), @"methodName",
 						nil],
 				nil];
@@ -839,7 +839,7 @@ NSString * GOLFHandicapNineHoleModifierForAuthority(GOLFHandicapAuthority *autho
 NSString * GOLFHandicapGradeTitleForAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
 		if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
-			return GOLFLocalizedString(@"TITLE_HANDICAP_GRADE_ABBR");
+			return GOLFLocalizedString(@"TITLE_HANDICAP_ADJUSTED_ABBR");	//	Grade is used to report integral adjustments
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityEGA] || [authority isEqualToString:GOLFHandicapAuthorityCONGU]) {
 			return GOLFLocalizedString(@"TITLE_HANDICAP_CATEGORY_ABBR");
 		}
@@ -861,6 +861,30 @@ NSString * GOLFHandicapExceptionalScoringModifierForAuthority(GOLFHandicapAuthor
 		}
 	}
 	return @"R";
+}
+
+//=================================================================
+//	GOLFHandicapCombinedScoresModifierForAuthority(authority)
+//=================================================================
+NSString * GOLFHandicapCombinedScoresModifierForAuthority(GOLFHandicapAuthority *authority) {
+	if (authority) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
+			return @"N";	//	Not clear, but WHS examples show combined scores with an "N"
+		}
+	}
+	return @"C";	//	"Combined"
+}
+
+//=================================================================
+//	GOLFHandicapTournamentScoreModifierForAuthority(authority)
+//=================================================================
+NSString * GOLFHandicapTournamentScoreModifierForAuthority(GOLFHandicapAuthority *authority) {
+	if (authority) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
+			return @"C";	// "Competition"
+		}
+	}
+	return @"T";	//	"Tournament"
 }
 
 //=================================================================
@@ -937,7 +961,7 @@ BOOL GOLFHandicapStablefordRequiredForAuthority(GOLFHandicapAuthority *authority
 BOOL GOLFDoesTournamentAdjustmentForAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
 		if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
-			return YES;	//	Exceptional Score Reduction (all rounds)
+			return YES;	//	Exceptional Score Reduction (ESR - all rounds)
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityUSGA]) {
 			return YES;
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityRCGA]) {
@@ -963,7 +987,7 @@ BOOL GOLFHandicapCCRUsedForAuthority(GOLFHandicapAuthority *authority, BOOL *req
 			}
 			return YES;
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
-			//	Weather-based differential adjustment
+			//	Weather-based differential adjustment (PCC - Playing Conditions Calculation)
 			if (required) {
 				*required = NO;
 			}
@@ -990,6 +1014,42 @@ BOOL GOLFHandicapCCRUsedForAuthority(GOLFHandicapAuthority *authority, BOOL *req
 		}
 	}
 	return NO;
+}
+
+//=================================================================
+//	GOLFHandicapPCCMinimumAdjustmentForAuthority(authority)
+//=================================================================
+GOLFPlayingConditionAdjustment GOLFHandicapPCCMinimumAdjustmentForAuthority(GOLFHandicapAuthority *authority) {
+	if (authority) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
+			//	WHS minimum of -1.0 to +3.0  (optional)
+			return -1.0;
+#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityPersonal]) {
+			//	return ([[[NSUserDefaults standardUserDefaults] objectForKey:@"PHMinimumPCC"] roundCCRValue]);
+			return kNotAPlayingConditionAdjustment;
+#endif
+		}
+	}
+	return kNotARoundCCR;
+}
+
+//=================================================================
+//	GOLFHandicapPCCMaximumAdjustmentForAuthority(authority)
+//=================================================================
+GOLFPlayingConditionAdjustment GOLFHandicapPCCMaximumAdjustmentForAuthority(GOLFHandicapAuthority *authority) {
+	if (authority) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
+			//	WHS minimum of -1.0 to +3.0  (optional)
+			return 3.0;
+#if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
+		} else if ([authority isEqualToString:GOLFHandicapAuthorityPersonal]) {
+			//	return ([[[NSUserDefaults standardUserDefaults] objectForKey:@"PHMaximumPCC"] roundCCRValue]);
+			return kNotAPlayingConditionAdjustment;
+#endif
+		}
+	}
+	return kNotAPlayingConditionAdjustment;
 }
 
 //=================================================================
@@ -1033,7 +1093,8 @@ float GOLFHandicapDefaultLimitsPctAdjForAuthority(GOLFHandicapAuthority *authori
 //=================================================================
 //	GOLFHandicapDifferentialsToUseForAuthority(authority, numberOfScores)
 //=================================================================
-NSInteger GOLFHandicapDifferentialsToUseForAuthority(GOLFHandicapAuthority *authority, NSInteger numberOfScores) {
+NSInteger GOLFHandicapDifferentialsToUseForAuthority(GOLFHandicapAuthority *authority, NSInteger numberOfScores, float *newHandicapAdj) {
+	float adjustment = 0.0;
 	if (authority) {
 		if ([authority isEqualToString:GOLFHandicapAuthorityUSGA] || [authority isEqualToString:GOLFHandicapAuthorityRCGA]) {
 		
@@ -1078,25 +1139,63 @@ NSInteger GOLFHandicapDifferentialsToUseForAuthority(GOLFHandicapAuthority *auth
 			else
 				return ((NSInteger)((numberOfScores + 1) / 2) - 2);
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
-		
-			//	Scores				Differentials
-			//	----------------------------------
-			//	less than 3			None
-			//	3 to 6				Lowest 1
-			//	7 or 8				Lowest 2
-			//	9 or 10				Lowest 3
-			//	11 or 12			Lowest 4
-			//	13 or 14			Lowest 5
-			//	15 or 16			Lowest 6
-			//	17 or 18			Lowest 7
-			//	19 or 20			Lowest 8
+			NSInteger diffs = 0;
+			//	Scores			Differentials		Adjustment
+			//	-----------------------------------------------
+			//	less than 3		None					
+			//	3				Lowest 1				-2.0
+			//	4				Lowest 1				-1.0
+			//	5				Lowest 1				0.0
+			//	6				Lowest 2				-1.0
+			//	7 or 8			Lowest 2				0.0
+			//	9 to 11			Lowest 3				0.0
+			//	12 to 14		Lowest 4				0.0
+			//	15 or 16		Lowest 5				0.0
+			//	17 or 18		Lowest 6				0.0
+			//	19				Lowest 7				0.0
+			//	20				Lowest 8				0.0
 			
-			if (numberOfScores < 3)
-				return 0;
-			else if (numberOfScores < 7)
-				return 1;
-			else
-				return ((NSInteger)((numberOfScores + 1) / 2) - 2);
+			if (numberOfScores < 3) {
+				//	0, 1, 2
+				diffs = 0;
+			} else if (numberOfScores < 6) {
+				//	3, 4, 5
+				diffs = 1;
+				adjustment = ((numberOfScores < 4)
+						? -2.0
+						: ((numberOfScores < 5) ? -1.0 : 0.0));
+			} else if (numberOfScores < 9) {
+				//	6, 7, 8
+				diffs = 2;
+				adjustment = ((numberOfScores < 7)
+						? -1.0
+						: 0.0);
+			} else if (numberOfScores < 12) {
+				//	9, 10, 11
+				diffs = 3;
+			} else if (numberOfScores < 15) {
+				//	12, 13, 14
+				diffs = 4;
+			} else if (numberOfScores < 17) {
+				//	15, 16
+				diffs = 5;
+			} else if (numberOfScores < 19) {
+				//	17, 18
+				diffs = 6;
+			} else if (numberOfScores < 20) {
+				//	19
+				diffs = 7;
+			} else {
+				//	20
+				diffs = 8;
+			}
+			
+			if (newHandicapAdj) {
+				*newHandicapAdj = adjustment;
+			}
+			
+			return diffs;
+			
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityPersonal]) {
 			NSInteger useLastNScores = [[[NSUserDefaults standardUserDefaults] objectForKey:@"PHUseLastNScores"] integerValue];
@@ -1109,6 +1208,11 @@ NSInteger GOLFHandicapDifferentialsToUseForAuthority(GOLFHandicapAuthority *auth
 #endif
 		}
 	}
+	
+	if (newHandicapAdj) {
+		*newHandicapAdj = adjustment;
+	}
+	
 	return numberOfScores;
 }
 

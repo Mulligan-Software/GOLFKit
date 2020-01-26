@@ -57,6 +57,9 @@
 + (id)numberWithRoundCCR:(GOLFRoundCCR)roundCCR;
 - (GOLFRoundCCR)roundCCRValue;
 
++ (id)numberWithPlayingConditionAdjustment:(GOLFPlayingConditionAdjustment)pcc;
+- (GOLFPlayingConditionAdjustment)pccValue;
+
 + (id)numberWithScore:(GOLFScore)score;
 - (GOLFScore)scoreValue;
 

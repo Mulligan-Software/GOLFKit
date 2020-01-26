@@ -26,7 +26,8 @@
 #define kNotHandicapStrokes							-999		//	No-value for GOLFHandicapStrokes
 #define kNotAHandicapAllowance						-999.0		//	No-value for GOLFHandicapAllowance
 #define kNotAHandicapDifferential					-999.0		//	No-value for GOLFHandicapDIfferential
-#define kMaximumStrokeControlLimit					999			//	HIghest limit for stroke control of a GOLFScore
+#define kMaximumStrokeControlLimit					999			//	Highest limit for stroke control of a GOLFScore
+#define kNotAPlayingConditionAdjustment				-999.0		//	No-value for GOLFPlayingConditionAdjustment
 
 typedef NS_OPTIONS(NSUInteger, GOLFHandicapCalculationOption) {
 	GOLFHandicapCalculationOptionNone				= 0,			//	(0)
@@ -37,8 +38,11 @@ typedef NS_OPTIONS(NSUInteger, GOLFHandicapCalculationOption) {
 	GOLFHandicapCalculationOption9HoleRating		= 1 << 3,		//	(8)		Provided GOLFTeeCourseRating is for 9 holes
 	GOLFHandicapCalculationOption9HoleSLOPE			= 1 << 4,		//	(16)	Provided GOLFTeeSLOPERating is for 9 holes
 	GOLFHandicapCalculationOption9HolePar			= 1 << 5,		//	(32)	Provided GOLFPar is for 9 holes
-	GOLFHandicapCalculationOptionSpare1				= 1 << 6,		//	(64)
-	GOLFHandicapCalculationOptionSpare2				= 1 << 7		//	(128)
+	GOLFHandicapCalculationOptionSpare6				= 1 << 6,		//	(64)
+	GOLFHandicapCalculationOptionSpare7				= 1 << 7,		//	(128)
+	GOLFHandicapCalculationOptionSpare8				= 1 << 8,		//	(256)
+	GOLFHandicapCalculationOptionSpare9				= 1 << 9,		//	(512)
+	GOLFHandicapCalculationOptionSpare10			= 1 << 10		//	(1024)
 };
 
 //	For handicap records
@@ -47,15 +51,33 @@ typedef NS_OPTIONS(NSUInteger, GOLFRoundHandicapOption) {
 	GOLFRoundHandicapOptionsNone					= GOLFRoundHandicapOptionNone,
 	GOLFRoundHandicapOptionUsed						= 1 << 0,		//	(1)		Round used in handicap latest calculation (ie: one of the best n of last n+)
 	GOLFRoundHandicapOptionEligible					= 1 << 1,		//	(2)		Round is identified as eligible for use/review in calculations (stats and handicapping)
-	GOLFRoundHandicapOptionTournament				= 1 << 2,		//	(4)		Round identified as a "tournament" round
+	GOLFRoundHandicapOptionTournament				= 1 << 2,		//	(4)		Round identified as a "tournament" or "competition" (vs. "general play") round
 	GOLFRoundHandicapOptionCombined					= 1 << 3,		//	(8)		18-hole round constructed from two 9-hole rounds
 	GOLFRoundHandicapOption9Holes					= 1 << 4,		//	(16)	9-hole round
 	GOLFRoundHandicapOptionAway						= 1 << 5,		//	(32)	Round identified as played "away" - not at home course
 	GOLFRoundHandicapOptionHome						= 1 << 6,		//	(64)	Round identified as played at home course (not exclusive of GOLFRoundHandicapOptionAway)
-	GOLFRoundHandicapOption7						= 1 << 7,		//	(128)
-	GOLFRoundHandicapOption8						= 1 << 8,		//	(256)
+	GOLFRoundHandicapOptionMatchPlay				= 1 << 7,		//	(128)	Round contested under Match Play
+	GOLFRoundHandicapOptionExceptional				= 1 << 8,		//	(256)	Round identified as "exceptional" per handicapping technique
 	GOLFRoundHandicapOptionInternet					= 1 << 9,		//	(512)	Round recorded/entered via the internet
-	GOLFRoundHandicapOptionPenalty					= 1 << 10		//	(1024)	Round identified as a "penalty" round - may have adjusted handicap
+	GOLFRoundHandicapOptionPenalty					= 1 << 10,		//	(1024)	Round identified as a "penalty" round - may have adjusted handicap
+	GOLFRoundHandicapOptionDiffAdjusted				= 1 << 11,		//	(2048)	Round differential has been adjusted (reduced or increased)
+	GOLFRoundHandicapOptionSpare12					= 1 << 12,		//	(4096)
+	GOLFRoundHandicapOptionSpare13					= 1 << 13		//	(8192)
+};
+
+typedef NS_OPTIONS(NSUInteger, GOLFHandicapRecordStatus) {
+	GOLFHandicapRecordStatusNone					= 0,			//	(0)
+	GOLFHandicapRecordStatusSpare0					= 1 << 0,		//	(1)
+	GOLFHandicapRecordStatusLookedUp				= 1 << 1,		//	(2)		Handicap record was constructed from data looked up on the internet
+	GOLFHandicapRecordStatusManualAdjustment		= 1 << 2,		//	(4)		Handicap record reflects data for a manually initiated handicap adjustment
+	GOLFHandicapRecordStatusSpare3					= 1 << 3,		//	(8)
+	GOLFHandicapRecordStatusSpare4					= 1 << 4,		//	(16)
+	GOLFHandicapRecordStatusSpare5					= 1 << 5,		//	(32)
+	GOLFHandicapRecordStatusSpare6					= 1 << 6,		//	(64)
+	GOLFHandicapRecordStatusSpare7					= 1 << 7,		//	(128)
+	GOLFHandicapRecordStatusSpare8					= 1 << 8,		//	(256)
+	GOLFHandicapRecordStatusSpare9					= 1 << 9,		//	(512)
+	GOLFHandicapRecordStatusSpare10					= 1 << 10		//	(1024)
 };
 
 typedef NS_ENUM(NSUInteger, GOLFHandicapMethodIndex) {
@@ -65,7 +87,7 @@ typedef NS_ENUM(NSUInteger, GOLFHandicapMethodIndex) {
 	GOLFHandicapMethodAGU,						//	AGU (Golf Australia) Handicap System (3)
 	GOLFHandicapMethodEGA,						//	EGA (European Golf Association) Handicap System (4)
 	GOLFHandicapMethodCONGU,					//	CONGU Unified Handicap System (5)
-	GOLFHandicapMethodWHS,						//	World Handicap System (6)
+	GOLFHandicapMethodWHS,						//	World Handicap System (USGA/Generic) (6)
 	GOLFHandicapMethodMulligan = 20,			//	Mulligan Handicap System (20)			*
 	GOLFHandicapMethodPersonal = 21,			//	Personalized Handicap System (21)		*
 	GOLFHandicapMethodSecondBest = 22,			//	Second-Best Score Handicap System (22)	*
@@ -85,12 +107,13 @@ typedef NS_ENUM(NSUInteger, GOLFHandicapStrokeControl) {
 };
 
 typedef NS_ENUM(NSUInteger, GOLFHandicapDifferentialType) {
-	GOLFHandicapDifferentialTypeOverPar = 0,			//	Strokes over par					(0)
-	GOLFHandicapDifferentialTypeOverRating,				//	Strokes over course rating			(1)
-	GOLFHandicapDifferentialTypeOverCCR,				//	Strokes over CCR or CSS				(2)
-	GOLFHandicapDifferentialTypeStableford,				//	Relationship to Stableford points	(3)
-	GOLFHandicapDifferentialTypeSlopeAndRating = 10,	//	Slope & Rating based				(10)
-	GOLFHandicapDifferentialTypeUnknown = 99			//	Unknown stroke control technique
+	GOLFHandicapDifferentialTypeOverPar = 0,			//	Strokes over par						(0)
+	GOLFHandicapDifferentialTypeOverRating,				//	Strokes over course rating				(1)
+	GOLFHandicapDifferentialTypeOverCCR,				//	Strokes over CCR or CSS					(2)
+	GOLFHandicapDifferentialTypeStableford,				//	Relationship to Stableford points		(3)
+	GOLFHandicapDifferentialTypeSlopeAndRating = 10,	//	Slope & Rating based					(10)
+	GOLFHandicapDifferentialTypeAdjustedSlopeAndRating,	//	Slope & Rating par adjusted (like WHS)	(11)
+	GOLFHandicapDifferentialTypeUnknown = 99			//	Unknown differential type
 };
 
 typedef NS_ENUM(NSUInteger, GOLFPlayingHandicapType) {
@@ -141,7 +164,7 @@ NSArray * GOLFHandicapAuthorities(void);	//	An array of dictionaries
 //	authorityDisplay		NSString *		A mnemonic for display identifying the handicapping authority
 //	association				NSString *		The localized name of the handicapping association (authority)
 //	URL						NSString *		The URL of the handicapping association (authority) web site
-//	methodName				NSString *		The localized name of the handicap system supported by the authority
+//	methodName				NSString *		The localized name of the handicap SYSTEM supported by the authority
 //	certifiable				NSNumber *		A BOOL indicating whether the handicap method requires certification for use
 
 NSString * GOLFHandicapIndexTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural);
@@ -205,6 +228,12 @@ NSString * GOLFHandicapGradeTitleForAuthority(GOLFHandicapAuthority *authority);
 NSString * GOLFHandicapExceptionalScoringModifierForAuthority(GOLFHandicapAuthority *authority);
 //	Returns the short (1 character) modified used to indicate that a handicap has been adjusted for exceptional scores in a player's scoring record ("R", etc.)
 
+NSString * GOLFHandicapCombinedScoresModifierForAuthority(GOLFHandicapAuthority *authority);
+//	Returns the short (1 character) modified used to indicate that a round is composed from the consolidation of 2 9-hole rounds ("C", etc.)
+
+NSString * GOLFHandicapTournamentScoreModifierForAuthority(GOLFHandicapAuthority *authority);
+//	Returns the short (1 character) modified used to indicate that a round was contested in a tournament or designated competition ("T", etc.)
+
 NSString * GOLFRoundModifierTooltip(GOLFHandicapAuthority *authority);
 //	Returns the appropriate tooltip (with line feeds) tabulating the description of round modifiers ("* - used", "T - Torneo", "E - Estimado", etc.
 
@@ -220,6 +249,12 @@ BOOL GOLFDoesTournamentAdjustmentForAuthority(GOLFHandicapAuthority *authority);
 BOOL GOLFHandicapCCRUsedForAuthority(GOLFHandicapAuthority *authority, BOOL *required);
 //	Indicates whether the handicapping method for this authority uses (or requires) a conditions-dependent CCR or CSS returned for scores used for handicapping
 
+GOLFPlayingConditionAdjustment GOLFHandicapPCCMinimumAdjustmentForAuthority(GOLFHandicapAuthority *authority);
+//	Returns the minimum legal PCC (Playing Condition Calculation) adjustment for this authority (usually a WHS authority)
+
+GOLFPlayingConditionAdjustment GOLFHandicapPCCMaximumAdjustmentForAuthority(GOLFHandicapAuthority *authority);
+//	Returns the maximum legal PCC (Playing Condition Calculation) adjustment for this authority (usually a WHS authority)
+
 GOLFHandicapStrokes GOLFHandicapDefaultLimitsDifferenceForAuthority(GOLFHandicapAuthority *authority);
 //	In foursomes or partners competitions which limit the difference between partners' handicaps, the limit of that difference,
 //	usually resulting in the adjustment (reduction) of the higher-handicapped partner's handicap allowance.
@@ -228,9 +263,9 @@ float GOLFHandicapDefaultLimitsPctAdjForAuthority(GOLFHandicapAuthority *authori
 //	In foursomes or partners competitions which limit the difference between partners' handicaps, the percentage reduction (0.0 - 100.0)
 //	of BOTH partner's, or ALL teammates' handicap allowances.
 
-NSInteger GOLFHandicapDifferentialsToUseForAuthority(GOLFHandicapAuthority *authority, NSInteger numberOfScores);
+NSInteger GOLFHandicapDifferentialsToUseForAuthority(GOLFHandicapAuthority *authority, NSInteger numberOfScores, float *newHandicapAdj);
 //	In handicapping methods based on the calculation of Handicap Differentials, the number of those "best" differentials to be used for handicap calculation
-//	USGA - best 10 of last 20 differentials, WHS - best 8 of last 20 differentials, etc.
+//	USGA - best 10 of last 20 differentials, WHS - best 8 of last 20 differentials with adjustment, etc.
 
 GOLFHandicapDifferential GOLFHandicapExceptionalScoringReductionForAuthority(GOLFHandicapAuthority *authority, GOLFHandicapIndex excessIndex, NSInteger eligibleScores);
 //	In handicapping methods with adjustments for exceptional scoring, the amount of that adjustment based on the number of eligible scores and the amount

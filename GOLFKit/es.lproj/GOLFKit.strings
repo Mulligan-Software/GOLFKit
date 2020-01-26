@@ -254,7 +254,7 @@
 "HANDICAP_ASSOCIATION_EGA" = "Asociación Europea de Golf";
 "HANDICAP_ASSOCIATION_RCGA" = "Golf Canada";
 "HANDICAP_ASSOCIATION_USGA" = "Asociación de Golf de Estados Unidos";
-"HANDICAP_ASSOCIATION_WHS" = "Sistema Handicap Mundial";	//	Temporary?
+"HANDICAP_ASSOCIATION_WHS" = "Asociación de Golf de Estados Unidos";	//	Temporary?
 
 "TIEBREAKER_HOLE_NO_%d" = "hoyo no. %d";
 "TIEBREAKER_OUTCOME_TIED" = "empate";
@@ -374,7 +374,8 @@
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
 "TITLE_HANDICAP_PLURAL" = "Handicaps";
-"TITLE_HANDICAP_ADJUSTED_GROSS" = "Puntaje Bruto Adjustado";
+"TITLE_HANDICAP_ADJUSTED_ABBR" = "Aju";
+"TITLE_HANDICAP_ADJUSTED_GROSS" = "Puntaje Bruto Ajustado";
 "TITLE_HANDICAP_ALLOWANCE" = "Asignación de handicap";
 "TITLE_HANDICAP_ALLOWANCE_ABBR" = "Asign";
 "TITLE_HANDICAP_CATEGORY" = "Categoría de Handicap";
@@ -446,6 +447,7 @@
 "TITLE_LOCK_EVENTS" = "Bloquear los Eventos";
 "TITLE_LOCK_PLAYERS" = "Bloquear los Jugadores";
 "TITLE_LOCK_SCORECARDS" = "Bloquear las Tarjetas";
+"TITLE_LOW_INDEX" = "Bajo Indice de Handicap";
 "TITLE_MATCH_PLAY" = "Match Play";
 "TITLE_MATCH_TYPE" = "Tipo de Partido";
 "TITLE_MAX_HANDICAP_MEN" = "Máximo handicap estándar para caballeros";
@@ -577,8 +579,8 @@
 "FORMAT_BEST_%d_ROUNDS" = "Mejores %d Rondas";
 "FORMAT_BET_HOLES_%ld_%ld" = "Hoyos %ld - %ld";
 "FORMAT_CLICKORTAP_%@_TO_SELECT" = "%@ para seleccionar…";
-"FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST" = "%@ el número para adjustarlo";
-"FORMAT_CLICKORTAP_%@_NUMBER_%@_TO_ADJUST" = "%@ el número (%@) para adjustarlo";
+"FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST" = "%@ el número para ajustarlo";
+"FORMAT_CLICKORTAP_%@_NUMBER_%@_TO_ADJUST" = "%@ el número (%@) para ajustarlo";
 "FORMAT_COURSE_HANDICAP_%@_TABLE" = "Tabla %@";
 "FORMAT_CURRENT_%@_TITLE" = "%@ Actual";
 "FORMAT_CURRENT_%@_TITLE_PLURAL" = "%@ Actuales";
@@ -804,7 +806,7 @@
 "TOOLTIP_ROUND_GROSS_SCORE" = "Puntaje bruto";
 "TOOLTIP_ROUND_NET_SCORE" = "Puntaje neto";
 "TOOLTIP_ROUND_TOTAL_SCORE" = "Puntaje total";
-"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - utilizado\nA - allá\nC - combinado\nE - excepcional\nP - pena";
+"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - utilizado\nH - a casa\nA - allá\nC - competencia\nN - ronda 9-hoyos\nS - stroke play\nM - match play\nI - incompleta\nE - excepcional\nP - pena";
 "TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - utilizado\nA - allá\nC - combinado\nT - torneo\nP - pena";
 "TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - utilizado\nA - allá\nC - combinado\nT - torneo\nP - pena";
 "TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - utilizado\nA - allá\nC - combinado";

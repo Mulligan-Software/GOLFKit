@@ -145,7 +145,7 @@
 "TERM_SAVE" = "enregistrer";
 "TERM_SCHEID" = "Scheid";
 "TERM_SCORE" = "score";
-"TERM_SCORE_ABBR" = "scr.";
+"TERM_SCORE_ABBR" = "score";
 "TERM_SCORE_PLURAL" = "scores";
 "TERM_SCOREBOARD" = "tableau";
 "TERM_SCORECARD" = "carte de score";
@@ -254,7 +254,7 @@
 "HANDICAP_ASSOCIATION_EGA" = "Association Européenne de Golf";
 "HANDICAP_ASSOCIATION_RCGA" = "Golf Canada";
 "HANDICAP_ASSOCIATION_USGA" = "Association de Golf des États-Unis";
-"HANDICAP_ASSOCIATION_WHS" = "Système de Handicap Mondial";	//	Temporary?
+"HANDICAP_ASSOCIATION_WHS" = "Association de Golf des États-Unis";	//	Temporary?
 
 "TIEBREAKER_HOLE_NO_%d" = "trou no. %d";
 "TIEBREAKER_OUTCOME_TIED" = "égalité";
@@ -374,6 +374,7 @@
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
 "TITLE_HANDICAP_PLURAL" = "Handicaps";
+"TITLE_HANDICAP_ADJUSTED_ABBR" = "Adj";
 "TITLE_HANDICAP_ADJUSTED_GROSS" = "Score Brut Adjusté";
 "TITLE_HANDICAP_ALLOWANCE" = "Allocation de Handicap";
 "TITLE_HANDICAP_ALLOWANCE_ABBR" = "Alloc";
@@ -446,6 +447,7 @@
 "TITLE_LOCK_EVENTS" = "Verrouriller les Événements";
 "TITLE_LOCK_PLAYERS" = "Verrouriller les Joueurs";
 "TITLE_LOCK_SCORECARDS" = "Verrouriller les Cartes de Score";
+"TITLE_LOW_INDEX" = "Handicap Index le plus bas";
 "TITLE_MATCH_PLAY" = "Match Play";
 "TITLE_MATCH_TYPE" = "Type de Match";
 "TITLE_MAX_HANDICAP_MEN" = "Standard handicap maximum - hommes";
@@ -804,7 +806,7 @@
 "TOOLTIP_ROUND_GROSS_SCORE" = "Score brut";
 "TOOLTIP_ROUND_NET_SCORE" = "Score net";
 "TOOLTIP_ROUND_TOTAL_SCORE" = "Score total";
-"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - utilisé\nA - loin\nC - combiné\nE - exceptionnel\nP - pénalité";
+"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - utilisé\nH - d‘accueil\nA - loin\nC - compétition\nN - tour 9-trous\nS - jeu de médaille\nM - jeu de match\nI - incomplet\nE - exceptionnel\nP - pénalité";
 "TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - utilisé\nA - loin\nC - combiné\nT - tournoi\nP - pénalité";
 "TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - utilisé\nA - loin\nC - combiné\nT - tournoi\nP - pénalité";
 "TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - utilisé\nA - loin\nC - combiné";

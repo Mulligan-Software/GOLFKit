@@ -145,7 +145,7 @@
 "TERM_SAVE" = "sichern";
 "TERM_SCHEID" = "Scheid";
 "TERM_SCORE" = "Score";
-"TERM_SCORE_ABBR" = "Scr.";
+"TERM_SCORE_ABBR" = "Score";
 "TERM_SCORE_PLURAL" = "Scores";
 "TERM_SCOREBOARD" = "Anzeigetafel";
 "TERM_SCORECARD" = "Scorekarte";
@@ -254,7 +254,7 @@
 "HANDICAP_ASSOCIATION_EGA" = "Europäischer Golfverband";
 "HANDICAP_ASSOCIATION_RCGA" = "Golf Kanada";
 "HANDICAP_ASSOCIATION_USGA" = "Vereinigten Staaten Golfverband";
-"HANDICAP_ASSOCIATION_WHS" = "Weltweites Handicap-System";	//	Temporary?
+"HANDICAP_ASSOCIATION_WHS" = "Vereinigten Staaten Golfverband";	//	Temporary?
 
 "TIEBREAKER_HOLE_NO_%d" = "Loch nr. %d";
 "TIEBREAKER_OUTCOME_TIED" = "unentschieden";
@@ -374,7 +374,8 @@
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
 "TITLE_HANDICAP_PLURAL" = "Handicapen";
-"TITLE_HANDICAP_ADJUSTED_GROSS" = "Bruto-Score korrigierend";
+"TITLE_HANDICAP_ADJUSTED_ABBR" = "ber.";
+"TITLE_HANDICAP_ADJUSTED_GROSS" = "bereinigtes Brutoscore";
 "TITLE_HANDICAP_ALLOWANCE" = "Handicap Zustimmung";
 "TITLE_HANDICAP_ALLOWANCE_ABBR" = "Zust";
 "TITLE_HANDICAP_CATEGORY" = "Handicapklasse";
@@ -446,6 +447,7 @@
 "TITLE_LOCK_EVENTS" = "Veranstaltungen schützen";
 "TITLE_LOCK_PLAYERS" = "Spieler schützen";
 "TITLE_LOCK_SCORECARDS" = "Scorekarten schützen";
+"TITLE_LOW_INDEX" = "Niedriger Handicap Index";
 "TITLE_MATCH_PLAY" = "Matchplay";
 "TITLE_MATCH_TYPE" = "Matchtyp";
 "TITLE_MAX_HANDICAP_MEN" = "Maximal Standard-Handicap für Herren";
@@ -804,7 +806,7 @@
 "TOOLTIP_ROUND_GROSS_SCORE" = "Brutto Punktzahl";
 "TOOLTIP_ROUND_NET_SCORE" = "Netto Punktzahl";
 "TOOLTIP_ROUND_TOTAL_SCORE" = "Gesamtpunktzahl";
-"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - benutzt\nA - entfernt\nC - kombiniert\nE - außergewöhnlich\nP - Strafe";
+"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - benutzt\nH - heimisch\nA - entfernt\nC - Wettkampf\nN - 9-Loch Runde\nS - Schlag-Spiel\nM - Match-Spiel\nI - unfertig\nE - außergewöhnlich\nP - Strafe";
 "TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - benutzt\nA - entfernt\nC - kombiniert\nT - Tournier\nP - Strafe";
 "TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - benutzt\nA - entfernt\nC - kombiniert\nT - Tournier\nP - Strafe";
 "TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - benutzt\nA - entfernt\nC - kombiniert";

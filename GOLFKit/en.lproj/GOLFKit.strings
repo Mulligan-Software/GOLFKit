@@ -145,7 +145,7 @@
 "TERM_SAVE" = "save";
 "TERM_SCHEID" = "Scheid";
 "TERM_SCORE" = "score";
-"TERM_SCORE_ABBR" = "scr.";
+"TERM_SCORE_ABBR" = "score";
 "TERM_SCORE_PLURAL" = "scores";
 "TERM_SCOREBOARD" = "scoreboard";
 "TERM_SCORECARD" = "scorecard";
@@ -254,7 +254,7 @@
 "HANDICAP_ASSOCIATION_EGA" = "European Golf Association";
 "HANDICAP_ASSOCIATION_RCGA" = "Golf Canada";
 "HANDICAP_ASSOCIATION_USGA" = "United States Golf Association";
-"HANDICAP_ASSOCIATION_WHS" = "World Golf Handicap System";	//	Temporary?
+"HANDICAP_ASSOCIATION_WHS" = "United States Golf Association";	//	Temporary?
 
 "TIEBREAKER_HOLE_NO_%d" = "hole no. %d";
 "TIEBREAKER_OUTCOME_TIED" = "tied";
@@ -374,6 +374,7 @@
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
 "TITLE_HANDICAP_PLURAL" = "Handicaps";
+"TITLE_HANDICAP_ADJUSTED_ABBR" = "Adj";
 "TITLE_HANDICAP_ADJUSTED_GROSS" = "Adjusted Gross Score";
 "TITLE_HANDICAP_ALLOWANCE" = "Handicap Allowance";
 "TITLE_HANDICAP_ALLOWANCE_ABBR" = "Allow";
@@ -446,6 +447,7 @@
 "TITLE_LOCK_EVENTS" = "Lock Events";
 "TITLE_LOCK_PLAYERS" = "Lock Players";
 "TITLE_LOCK_SCORECARDS" = "Lock Scorecards";
+"TITLE_LOW_INDEX" = "Low Handicap Index";
 "TITLE_MATCH_PLAY" = "Match Play";
 "TITLE_MATCH_TYPE" = "Match Type";
 "TITLE_MAX_HANDICAP_MEN" = "Maximum standard handicap for men";
@@ -804,7 +806,7 @@
 "TOOLTIP_ROUND_GROSS_SCORE" = "Gross score";
 "TOOLTIP_ROUND_NET_SCORE" = "Net score";
 "TOOLTIP_ROUND_TOTAL_SCORE" = "Total score";
-"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - used\nA - away\nC - combined\nE - exceptional\nP - penalty";
+"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - used\nH - home\nA - away\nC - competition\nN - 9-hole round\nS - stroke play\nM - match play\nI - incomplete\nE - exceptional\nP - penalty";
 "TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - used\nA - away\nC - combined\nT - tournament\nP - penalty";
 "TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - used\nA - away\nC - combined\nT - tournament\nP - penalty";
 "TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - used\nA - away\nC - combined";
