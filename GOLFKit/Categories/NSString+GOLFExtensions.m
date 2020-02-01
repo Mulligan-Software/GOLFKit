@@ -11,6 +11,20 @@
 
 @implementation NSString (GOLFExtensions)
 
+NSString *ETagLetters = @"abcdefghijklmnopqrstuvwxyz0123456789";
+
++ (id)randomETagStringOfLength:(NSUInteger)length {
+	//	returns a string of length "length" containing random lowercase alphabetic and numeric characters
+	//	appropriate for creating HTTP ETags or similar random character strings
+	NSMutableString *randomETagString = [NSMutableString stringWithCapacity:length];
+	unsigned int bound = (unsigned int)[ETagLetters length];
+	for (NSUInteger i = 0; i < length; i++) {
+		[randomETagString appendFormat:@"%C", [ETagLetters characterAtIndex:arc4random_uniform(bound)]];
+	}
+	
+	return [NSString stringWithString:randomETagString];
+}
+
 + (id)stringForWageringStrokesAtHole:(GOLFHandicapStrokes)holeStrokes {
 	//	returns a one-character string representing the number of handicap strokes used for wagering at a hole.
 	//	Generally, a decimal integer character, but negative values (plus handicaps)

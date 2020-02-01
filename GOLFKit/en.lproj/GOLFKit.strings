@@ -98,6 +98,7 @@
 "TERM_MEDALMATCH" = "Medal Match";
 "TERM_METER_PLURAL" = "meters";
 "TERM_METER_PLURAL_ABBR" = "Mtr.";
+"TERM_MODIFIER" = "modifier";
 "TERM_MORE" = "more";
 "TERM_MOVE" = "move";
 "TERM_NET" = "net";
@@ -254,7 +255,7 @@
 "HANDICAP_ASSOCIATION_EGA" = "European Golf Association";
 "HANDICAP_ASSOCIATION_RCGA" = "Golf Canada";
 "HANDICAP_ASSOCIATION_USGA" = "United States Golf Association";
-"HANDICAP_ASSOCIATION_WHS" = "United States Golf Association";	//	Temporary?
+"HANDICAP_ASSOCIATION_WHS" = "USGA and The R&A";	//	Temporary?
 
 "TIEBREAKER_HOLE_NO_%d" = "hole no. %d";
 "TIEBREAKER_OUTCOME_TIED" = "tied";
@@ -344,6 +345,7 @@
 "TITLE_EDIT_BUTTON" = "Edit";
 "TITLE_EDIT_EVENT" = "Edit the Event";
 "TITLE_EDIT_PLAYER" = "Edit Player";
+"TITLE_EFFECTIVE_DATE" = "Effective Date";
 "TITLE_EGO_PULL_TO_SORT" = "Pull to sort…";
 "TITLE_EGO_RELEASE_TO_SORT" = "Release to sort…";
 "TITLE_EGO_SORTING" = "Sorting…";
@@ -422,9 +424,10 @@
 "TITLE_HANDICAP_SLOPE_RATING" = "Slope Rating";
 "TITLE_HANDICAP_STABLEFORD_SCORE" = "Stableford Score";
 "TITLE_HANDICAP_TABLE" = "Handicap Table";
-"TITLE_HANDICAP_WORLD_INDEX" = "World Handicap Index";
+"TITLE_HANDICAP_WORLD_INDEX" = "Handicap Index";
 "TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
-"TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "World Handicap Indexes";
+"TITLE_HANDICAP_WORLD_INDEX_RTM" = "Handicap Index®";
+"TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "Handicap Indexes";
 "TITLE_HOGAN" = "Hogan";
 "TITLE_HOLE_HANDICAP" = "Handicap";
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Hole score adjustment";
@@ -448,6 +451,7 @@
 "TITLE_LOCK_PLAYERS" = "Lock Players";
 "TITLE_LOCK_SCORECARDS" = "Lock Scorecards";
 "TITLE_LOW_INDEX" = "Low Handicap Index";
+"TITLE_MASS_UPDATE" = "Update Players";
 "TITLE_MATCH_PLAY" = "Match Play";
 "TITLE_MATCH_TYPE" = "Match Type";
 "TITLE_MAX_HANDICAP_MEN" = "Maximum standard handicap for men";
@@ -487,8 +491,10 @@
 "TITLE_QUOTA_POINTS_GAINED" = "Quota Points Gained";
 "TITLE_RANDOM_SELECTION" = "Random Selection";
 "TITLE_RECENT_PLAYERS_ETC" = "Recent Players, Clubs, Scorecards, etc.";
+"TITLE_REFRESH" = "Refresh";
 "TITLE_REGISTER" = "Register";
 "TITLE_REVIEW_BUTTON" = "Review";
+"TITLE_REVISION_DATE" = "Revision Date";
 "TITLE_ROUNDS_HIGHLIGHT" = "Rounds Highlight";
 "TITLE_SAND_SAVES_PER_TRY" = "Sand Saves/Tries";
 "TITLE_SANDIE" = "Sandie";
@@ -800,6 +806,8 @@
 "TOOLTIP_18HOLE_BEGINNING_INDEX" = "Starting handicap";
 "TOOLTIP_18HOLE_BEGINNING_INDEX_%@" = "Starting %@";
 "TOOLTIP_BEGINNING_INDEX_EXTRA" = "for use until a valid handicap record is available";
+"TOOLTIP_HANDICAP_DELETE_RECORDS" = "Click to permanently remove selected handicap records.";
+"TOOLTIP_MASS_UPDATE_BUTTON_%@" = "Click to convert players to %@.";
 "TOOLTIP_PLAYER_GROSS_SCORE" = "The player’s total gross score";
 "TOOLTIP_PLAYER_NET_SCORE" = "The player’s total net score";
 "TOOLTIP_PLAYER_TOTAL_SCORE" = "The player’s total score";

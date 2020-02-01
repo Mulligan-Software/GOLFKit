@@ -98,6 +98,7 @@
 "TERM_MEDALMATCH" = "Match Medaille";
 "TERM_METER_PLURAL" = "Meter";
 "TERM_METER_PLURAL_ABBR" = "Mtr.";
+"TERM_MODIFIER" = "Modifikator";
 "TERM_MORE" = "Mehr";
 "TERM_MOVE" = "bewegen";
 "TERM_NET" = "netto";
@@ -344,6 +345,7 @@
 "TITLE_EDIT_BUTTON" = "Bearbeiten";
 "TITLE_EDIT_EVENT" = "Ereignis bearbeiten";
 "TITLE_EDIT_PLAYER" = "Spieler bearbeiten";
+"TITLE_EFFECTIVE_DATE" = "Datum des Inkrafttretens";
 "TITLE_EGO_PULL_TO_SORT" = "Zum Sortieren ziehen…";
 "TITLE_EGO_RELEASE_TO_SORT" = "Zur Sortierung freigeben…";
 "TITLE_EGO_SORTING" = "Sortierung…";
@@ -422,9 +424,10 @@
 "TITLE_HANDICAP_SLOPE_RATING" = "Slope Rating";
 "TITLE_HANDICAP_STABLEFORD_SCORE" = "Stableford Score";
 "TITLE_HANDICAP_TABLE" = "Handicap-Tabelle";
-"TITLE_HANDICAP_WORLD_INDEX" = "Weltweites Handicap Index";
+"TITLE_HANDICAP_WORLD_INDEX" = "Handicap Index";
 "TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
-"TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "Weltweites Handicap Indizes";
+"TITLE_HANDICAP_WORLD_INDEX_RTM" = "Handicap Index®";
+"TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "Handicap Indizes";
 "TITLE_HOGAN" = "Hogan";
 "TITLE_HOLE_HANDICAP" = "Handicap";
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Loch-Score-Einstellung";
@@ -448,6 +451,7 @@
 "TITLE_LOCK_PLAYERS" = "Spieler schützen";
 "TITLE_LOCK_SCORECARDS" = "Scorekarten schützen";
 "TITLE_LOW_INDEX" = "Niedriger Handicap Index";
+"TITLE_MASS_UPDATE" = "Spieler aktualisieren";
 "TITLE_MATCH_PLAY" = "Matchplay";
 "TITLE_MATCH_TYPE" = "Matchtyp";
 "TITLE_MAX_HANDICAP_MEN" = "Maximal Standard-Handicap für Herren";
@@ -487,8 +491,10 @@
 "TITLE_QUOTA_POINTS_GAINED" = "Quotenpunkte gewonnen";
 "TITLE_RANDOM_SELECTION" = "Zufällige Auswahl";
 "TITLE_RECENT_PLAYERS_ETC" = "Aktuelle Spieler, Vereine, Scorekarten, usw.";
+"TITLE_REFRESH" = "Aktualisieren";
 "TITLE_REGISTER" = "Registrieren";
 "TITLE_REVIEW_BUTTON" = "Überprüfen";
+"TITLE_REVISION_DATE" = "Änderungsdatum";
 "TITLE_ROUNDS_HIGHLIGHT" = "Runden Akzentuierung";
 "TITLE_SAND_SAVES_PER_TRY" = "Sand-Bergungen/Versuche";
 "TITLE_SANDIE" = "Sandie";
@@ -800,6 +806,8 @@
 "TOOLTIP_18HOLE_BEGINNING_INDEX" = "Anfänglich Handicap";
 "TOOLTIP_18HOLE_BEGINNING_INDEX_%@" = "Anfänglich %@";
 "TOOLTIP_BEGINNING_INDEX_EXTRA" = "zur Verwendung, bis ein gültiger Handicap-Datensatz verfügbar ist.";
+"TOOLTIP_HANDICAP_DELETE_RECORDS" = "Klicken Sie hier, um ausgewählte Handicap-Datensätze dauerhaft zu entfernen.";
+"TOOLTIP_MASS_UPDATE_BUTTON_%@" = "Klicken Sie, um Spieler zu %@ zu konvertieren.";
 "TOOLTIP_PLAYER_GROSS_SCORE" = "Die gesamte Brutto Punktzahl des Spielers";
 "TOOLTIP_PLAYER_NET_SCORE" = "Die gesamte Netto Punktzahl des Spielers";
 "TOOLTIP_PLAYER_TOTAL_SCORE" = "Die Gesamtpunktzahl des Speilers";

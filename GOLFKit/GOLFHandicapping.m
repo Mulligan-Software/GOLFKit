@@ -135,9 +135,12 @@ GOLFHandicapMethodIndex GOLFHandicapBestMethodIndexFromAuthority(GOLFHandicapAut
 //=================================================================
 BOOL GOLFHandicapCertifiableAuthority(GOLFHandicapAuthority *authority) {
 	if (authority) {
-		if ([authority isEqualToString:GOLFHandicapAuthorityUSGA] || [authority isEqualToString:GOLFHandicapAuthorityRCGA]
-				|| [authority isEqualToString:GOLFHandicapAuthorityAGU] || [authority isEqualToString:GOLFHandicapAuthorityCONGU]
-				|| [authority isEqualToString:GOLFHandicapAuthorityEGA]) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityUSGA]
+				|| [authority isEqualToString:GOLFHandicapAuthorityRCGA]
+				|| [authority isEqualToString:GOLFHandicapAuthorityAGU]
+				|| [authority isEqualToString:GOLFHandicapAuthorityCONGU]
+				|| [authority isEqualToString:GOLFHandicapAuthorityEGA]
+				|| [authority isEqualToString:GOLFHandicapAuthorityWHS]) {
 			return YES;
 		}
 	}
@@ -202,6 +205,7 @@ NSArray * GOLFHandicapAuthorities(void) {
 						GOLFLocalizedString(@"HANDICAP_ASSOCIATION_USGA"), @"association",
 						@"https://www.usga.org/content/dam/usga/pdf/Handicap/Rules-of-Handicapping_USGA_Final.pdf", @"URL",
 						GOLFLocalizedString(@"HANDICAP_METHOD_WHS"), @"methodName",
+						[NSNumber numberWithBool:YES], @"certifiable",
 						nil],
 				nil];
 		
