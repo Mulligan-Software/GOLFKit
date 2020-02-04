@@ -71,6 +71,7 @@
 "TERM_FOR_ABOUT" = "über";
 "TERM_FOURBALL" = "Vier-Ball";
 "TERM_FOURSOMES" = "Viererspiel";
+"TERM_FROM" = "von";
 "TERM_FRONT" = "ersten";
 "TERM_GOLF" = "Golf";
 "TERM_GREENSOMES" = "Greensomes";
@@ -188,6 +189,7 @@
 "TERM_USED" = "benutzt";
 "TERM_USED_ABBR" = "benu.";
 "TERM_VALUE" = "Wert";
+"TERM_VERSION" = "Version";
 "TERM_VERSUS_ABBR" = "vs.";
 "TERM_WAGERING" = "Wetten";
 "TERM_WALTZ" = "Waltzer";
@@ -254,8 +256,8 @@
 "HANDICAP_ASSOCIATION_CONGU" = "Rat der Nationalen Golf-Verien";
 "HANDICAP_ASSOCIATION_EGA" = "Europäischer Golfverband";
 "HANDICAP_ASSOCIATION_RCGA" = "Golf Kanada";
-"HANDICAP_ASSOCIATION_USGA" = "Vereinigten Staaten Golfverband";
-"HANDICAP_ASSOCIATION_WHS" = "Vereinigten Staaten Golfverband";	//	Temporary?
+"HANDICAP_ASSOCIATION_USGA" = "United States Golf Association";
+"HANDICAP_ASSOCIATION_WHS" = "United States Golf Association und Die R&A";
 
 "TIEBREAKER_HOLE_NO_%d" = "Loch nr. %d";
 "TIEBREAKER_OUTCOME_TIED" = "unentschieden";
@@ -299,6 +301,7 @@
 "TITLE_ASSIGN_ROUND_TO" = "Zuweisen eine Runde";
 "TITLE_ASSIGN_TEES" = "Zuweisen Start-Abschläge";
 "TITLE_ASSIGN_TIMES" = "Zuweisen Anfangszeit";
+"TITLE_AUTHORITY_OR_METHOD" = "Behörde / System";
 "TITLE_AUTOMATIC_PRESSES" = "Automatische Pressen";
 "TITLE_BACK_NINE" = "Letzteneun";
 "TITLE_BACK_SIDE" = "Letzteseite";
@@ -350,6 +353,8 @@
 "TITLE_EGO_RELEASE_TO_SORT" = "Zur Sortierung freigeben…";
 "TITLE_EGO_SORTING" = "Sortierung…";
 "TITLE_ESC_LIMIT" = "ESC limit";
+"TITLE_EULA" = "Endbenutzer-Lizenzvereinbarung";
+"TITLE_EULA_ABBR" = "EULA";
 "TITLE_EVEN" = "Eben";
 "TITLE_EVEN_ABBR" = "E";
 "TITLE_EVENT_REGISTRATION" = "Veranstaltungsanmeldung";
@@ -424,6 +429,7 @@
 "TITLE_HANDICAP_SLOPE_RATING" = "Slope Rating";
 "TITLE_HANDICAP_STABLEFORD_SCORE" = "Stableford Score";
 "TITLE_HANDICAP_TABLE" = "Handicap-Tabelle";
+"TITLE_HANDICAP_UPDATED_OR_EFFECTIVE" = "Aktualisiert";	//	Latest handicap lookup date / time - "last lookup"
 "TITLE_HANDICAP_WORLD_INDEX" = "Handicap Index";
 "TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
 "TITLE_HANDICAP_WORLD_INDEX_RTM" = "Handicap Index®";
@@ -605,6 +611,7 @@
 "FORMAT_TOTAL_POINTS_VS_QUOTA_%d" = "Gesamtpunkte v. %d Kontingent";
 "FORMAT_%@_DIFFERENCE" = "Unterschied in der %@";	//	"COURSE HANDICAP Difference"
 "FORMAT_%@_OF_EACH_PLAYER" = "der %@ jedes Spielers";	//	"COURSE HANDICAP of each player"
+"FORMAT_%@_ TO _%@" = "%@  bis  %@";	//	Range of: "13.5  to  14.6" (spaces important!)
 
 "SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
 "SAMPLE_LOOSELY_ALPHABETIC_NAMES" = "Al Czervik / Elihu & Vivian Smails / Beeper, Czervik, Smails & Webb";

@@ -71,6 +71,7 @@
 "TERM_FOR_ABOUT" = "for";
 "TERM_FOURBALL" = "Four-Ball";
 "TERM_FOURSOMES" = "Foursomes";
+"TERM_FROM" = "from";
 "TERM_FRONT" = "front";
 "TERM_GOLF" = "golf";
 "TERM_GREENSOMES" = "Greensomes";
@@ -188,6 +189,7 @@
 "TERM_USED" = "used";
 "TERM_USED_ABBR" = "used";
 "TERM_VALUE" = "value";
+"TERM_VERSION" = "version";
 "TERM_VERSUS_ABBR" = "vs.";
 "TERM_WAGERING" = "wagering";
 "TERM_WALTZ" = "Waltz";
@@ -255,7 +257,7 @@
 "HANDICAP_ASSOCIATION_EGA" = "European Golf Association";
 "HANDICAP_ASSOCIATION_RCGA" = "Golf Canada";
 "HANDICAP_ASSOCIATION_USGA" = "United States Golf Association";
-"HANDICAP_ASSOCIATION_WHS" = "USGA and The R&A";	//	Temporary?
+"HANDICAP_ASSOCIATION_WHS" = "United States Golf Association and The R&A";
 
 "TIEBREAKER_HOLE_NO_%d" = "hole no. %d";
 "TIEBREAKER_OUTCOME_TIED" = "tied";
@@ -299,6 +301,7 @@
 "TITLE_ASSIGN_ROUND_TO" = "Assign a round to";
 "TITLE_ASSIGN_TEES" = "Assign Starting Tees";
 "TITLE_ASSIGN_TIMES" = "Assign Tee Times";
+"TITLE_AUTHORITY_OR_METHOD" = "Authority / System";
 "TITLE_AUTOMATIC_PRESSES" = "Automatic Presses";
 "TITLE_BACK_NINE" = "Back Nine";
 "TITLE_BACK_SIDE" = "Back Side";
@@ -350,6 +353,8 @@
 "TITLE_EGO_RELEASE_TO_SORT" = "Release to sort…";
 "TITLE_EGO_SORTING" = "Sorting…";
 "TITLE_ESC_LIMIT" = "ESC limit";
+"TITLE_EULA" = "End User License Agreement";
+"TITLE_EULA_ABBR" = "EULA";
 "TITLE_EVEN" = "Even";
 "TITLE_EVEN_ABBR" = "E";
 "TITLE_EVENT_REGISTRATION" = "Event Registration";
@@ -424,6 +429,7 @@
 "TITLE_HANDICAP_SLOPE_RATING" = "Slope Rating";
 "TITLE_HANDICAP_STABLEFORD_SCORE" = "Stableford Score";
 "TITLE_HANDICAP_TABLE" = "Handicap Table";
+"TITLE_HANDICAP_UPDATED_OR_EFFECTIVE" = "Updated";
 "TITLE_HANDICAP_WORLD_INDEX" = "Handicap Index";
 "TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
 "TITLE_HANDICAP_WORLD_INDEX_RTM" = "Handicap Index®";
@@ -605,7 +611,7 @@
 "FORMAT_TOTAL_POINTS_VS_QUOTA_%d" = "Total Points v. %d Quota";
 "FORMAT_%@_DIFFERENCE" = "%@ Difference";	//	"COURSE HANDICAP Difference"
 "FORMAT_%@_OF_EACH_PLAYER" = "%@ of each player";	//	"COURSE HANDICAP of each player"
-
+"FORMAT_%@_ TO _%@" = "%@  to  %@";	//	Range of: "13.5  to  14.6" (spaces important!)
 "SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
 "SAMPLE_LOOSELY_ALPHABETIC_NAMES" = "Al Czervik / Elihu & Vivian Smails / Beeper, Czervik, Smails & Webb";
 "SAMPLE_ORDER_BY_POSITION_NAMES" = "Czervik, Al / A Player & B Player / A Player, B Player & C Player";
