@@ -27,6 +27,7 @@
 "TERM_BIRDIE" = "Birdie";
 "TERM_BIRDIE_PLURAL" = "Birdies";
 "TERM_BOWMAKER" = "Bowmaker";
+"TERM_CALCULATES" = "berechnet";
 "TERM_CALLAWAY" = "Callaway";
 "TERM_CHACHA" = "Cha-Cha";
 "TERM_CHACHACHA" = "Cha-Cha-Cha";
@@ -321,6 +322,8 @@
 "TITLE_CCR" = "Course Rating berechnet";
 "TITLE_CCR_ABBR" = "CCR";
 "TITLE_CERTIFY_BUTTON" = "Bestätigen";
+"TITLE_CHANGE" = "Ändern";
+"TITLE_CHANGES?" = "Änderungen?";
 "TITLE_CHECK_FOR_SCORES_NOW" = "Prüfen ob Scores jetzt";
 "TITLE_CHECK_FOR_SCORES_STARTUP" = "Prüfen Sie ob Scores beim Start";
 "TITLE_CHIPINSKI" = "Chip-in, Offner, Dr. Chipinski";
@@ -330,6 +333,7 @@
 "TITLE_CLOSE_OUT" = "Schließung";
 "TITLE_CLOSE_OUT_PLURAL" = "Schließung Wetten";
 "TITLE_COMPARE_9_HOLE_SCORES" = "Kombinieren und verwenden 9-Loch-Scores";
+"TITLE_CONVERT" = "Konvertieren";
 "TITLE_COVER" = "Cover, Topper";
 "TITLE_CSS" = "Wettbewerbs-Scratch-Score";
 "TITLE_CSS_ABBR" = "CSS";
@@ -358,6 +362,7 @@
 "TITLE_EVEN" = "Eben";
 "TITLE_EVEN_ABBR" = "E";
 "TITLE_EVENT_REGISTRATION" = "Veranstaltungsanmeldung";
+"TITLE_EXCLUDE_GUESTS" = "Gäste ausschließen";
 "TITLE_FACTORY_SETTINGS" = "Werkseinstellungen";
 "TITLE_FAIRWAY_HIT" = "Fairway erreicht";
 "TITLE_FAVORITE_PLAYER" = "Lieblings Spieler";
@@ -439,6 +444,7 @@
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Loch-Score-Einstellung";
 "TITLE_HOLE_SELECTION" = "Lochauswahl";
 "TITLE_HOLES_TO_BE_SCORED" = "Zu bewertenden Löcher";
+"TITLE_HOME_CLUB" = "Heimverein";
 "TITLE_IGNORE_BEST" = "Ignoriere besten";
 "TITLE_IGNORE_WORST" = "Ignoriere schlimmsten";
 "TITLE_INCOMPLETE_HOLE" = "Unvollständiges Loch";
@@ -457,7 +463,7 @@
 "TITLE_LOCK_PLAYERS" = "Spieler schützen";
 "TITLE_LOCK_SCORECARDS" = "Scorekarten schützen";
 "TITLE_LOW_INDEX" = "Niedriger Handicap Index";
-"TITLE_MASS_UPDATE" = "Spieler aktualisieren";
+"TITLE_MASS_CONVERT_%@" = "Handicap-Methode der Spieler ändern - %@";
 "TITLE_MATCH_PLAY" = "Matchplay";
 "TITLE_MATCH_TYPE" = "Matchtyp";
 "TITLE_MAX_HANDICAP_MEN" = "Maximal Standard-Handicap für Herren";
@@ -608,6 +614,7 @@
 "FORMAT_OPEN_%@" = "Öffne %@";
 "FORMAT_OPEN_3_%@" = "Öffne 3 %@";
 "FORMAT_THROUGH_HOLE_%@" = "bis %@";
+"FORMAT_TO_PROMPT_%@" = "in: %@";	//	Convert to: WHS
 "FORMAT_TOTAL_POINTS_VS_QUOTA_%d" = "Gesamtpunkte v. %d Kontingent";
 "FORMAT_%@_DIFFERENCE" = "Unterschied in der %@";	//	"COURSE HANDICAP Difference"
 "FORMAT_%@_OF_EACH_PLAYER" = "der %@ jedes Spielers";	//	"COURSE HANDICAP of each player"
@@ -813,11 +820,13 @@
 "TOOLTIP_18HOLE_BEGINNING_INDEX" = "Anfänglich Handicap";
 "TOOLTIP_18HOLE_BEGINNING_INDEX_%@" = "Anfänglich %@";
 "TOOLTIP_BEGINNING_INDEX_EXTRA" = "zur Verwendung, bis ein gültiger Handicap-Datensatz verfügbar ist.";
+"TOOLTIP_EXCLUDE_GUESTS" = "Aktivieren Sie das Kontrollkästchen, um „Gastspieler“ von Änderungen auszuschließen.";
 "TOOLTIP_HANDICAP_DELETE_RECORDS" = "Klicken Sie hier, um ausgewählte Handicap-Datensätze dauerhaft zu entfernen.";
-"TOOLTIP_MASS_UPDATE_BUTTON_%@" = "Klicken Sie, um Spieler zu %@ zu konvertieren.";
+"TOOLTIP_MASS_CONVERT_BUTTON_%@" = "Klicken Sie, um Spieler zu %@ zu konvertieren.";
 "TOOLTIP_PLAYER_GROSS_SCORE" = "Die gesamte Brutto Punktzahl des Spielers";
 "TOOLTIP_PLAYER_NET_SCORE" = "Die gesamte Netto Punktzahl des Spielers";
 "TOOLTIP_PLAYER_TOTAL_SCORE" = "Die Gesamtpunktzahl des Speilers";
+"TOOLTIP_PLAYERS_MASS_CONVERT_%@" = "Klicken Sie hier, um die Handicap-Methode ausgewählter Spieler auf %@ zu ändern.";
 "TOOLTIP_ROUND_GROSS_SCORE" = "Brutto Punktzahl";
 "TOOLTIP_ROUND_NET_SCORE" = "Netto Punktzahl";
 "TOOLTIP_ROUND_TOTAL_SCORE" = "Gesamtpunktzahl";
