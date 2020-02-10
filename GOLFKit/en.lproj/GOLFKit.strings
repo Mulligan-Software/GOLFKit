@@ -480,6 +480,7 @@
 "TITLE_NO_STROKES" = "no strokes";
 "TITLE_OPEN_SCORECARD" = "Open the Scorecard";
 "TITLE_OPTIONS" = "Options";
+"TITLE_ORGANIZED_COMPETITION" = "Organized Competition";	//	The WHS phrase for "Tournament" play
 "TITLE_OK_BUTTON" = "OK";
 "TITLE_PCC" = "Playing Conditions Calculation";
 "TITLE_PCC_ABBR" = "PCC";
