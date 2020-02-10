@@ -210,6 +210,9 @@ NSString * GOLFHandicapTableInstruction(GOLFHandicapMethodIndex handicapMethod);
 BOOL GOLFHandicapCertifiableAuthority(GOLFHandicapAuthority *authority);
 //	Indicates whether the use of the handicapping method of this authority requires certification
 
+BOOL GOLFHandicapValidAuthority(GOLFHandicapAuthority *authority);
+//	Indicates whether this authority is (still?) valid for use
+
 NSString * GOLFHandicapMethodNameForAuthority(GOLFHandicapAuthority *authority);
 //	Returns the localized name of the handicapping method administered by this authority
 

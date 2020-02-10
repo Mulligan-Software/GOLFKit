@@ -127,7 +127,7 @@ GOLFHandicapMethodIndex GOLFHandicapBestMethodIndexFromAuthority(GOLFHandicapAut
 			return GOLFHandicapMethodSecondBest;
 		}
 	}
-	return GOLFHandicapMethodUSGA;
+	return GOLFHandicapMethodWHS;
 }
 
 //=================================================================
@@ -142,6 +142,21 @@ BOOL GOLFHandicapCertifiableAuthority(GOLFHandicapAuthority *authority) {
 				|| [authority isEqualToString:GOLFHandicapAuthorityEGA]
 				|| [authority isEqualToString:GOLFHandicapAuthorityWHS]) {
 			return YES;
+		}
+	}
+	return NO;
+}
+
+//=================================================================
+//	GOLFHandicapValidAuthority(authority)
+//=================================================================
+BOOL GOLFHandicapValidAuthority(GOLFHandicapAuthority *authority) {
+	if (authority && ([authority length] > 0)) {
+		for (NSDictionary *authDict in GOLFHandicapAuthorities()) {
+			NSString *candidate = [authDict objectForKey:@"handicapAuthority"];
+			if (candidate && [candidate isEqualToString:authority]) {
+				return YES;
+			}
 		}
 	}
 	return NO;
