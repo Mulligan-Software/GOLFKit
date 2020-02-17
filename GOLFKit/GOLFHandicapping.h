@@ -213,6 +213,10 @@ BOOL GOLFHandicapCertifiableAuthority(GOLFHandicapAuthority *authority);
 BOOL GOLFHandicapValidAuthority(GOLFHandicapAuthority *authority);
 //	Indicates whether this authority is (still?) valid for use
 
+NSDictionary * GOLFHandicapInfoForAuthority(GOLFHandicapAuthority *authority);
+//	Returns the entry in GOLFHandicapAuthorities() with information about the handicapping authority and the
+//	handicapping system used by its golfers.  Returns nil if there is no such authority.
+
 NSString * GOLFHandicapMethodNameForAuthority(GOLFHandicapAuthority *authority);
 //	Returns the localized name of the handicapping method administered by this authority
 

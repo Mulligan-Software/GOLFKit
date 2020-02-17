@@ -39,27 +39,21 @@ static NSDictionary *cachedGOLFHomeCountryInfo = nil;
 //	GOLFDefaultHandicapAuthority()
 //=================================================================
 GOLFHandicapAuthority * GOLFDefaultHandicapAuthority() {
-//	GOLFHandicapAuthority *prospectiveAuthority = [[NSUserDefaults standardUserDefaults] objectForKey:@"DefaultHandicapAuthority"];
-//	BOOL saveDefault = NO;
-//	if (prospectiveAuthority == nil) {
-//		saveDefault = YES;
-		if (cachedGOLFHomeCountryInfo == nil) {
-			cachedGOLFHomeCountryInfo = GOLFHomeCountryInfo();	//	This might take a bit, so we just get it once
-		}
-		GOLFHandicapAuthority *prospectiveAuthority = [cachedGOLFHomeCountryInfo objectForKey:@"authority"];
-		if (prospectiveAuthority == nil) {
-			prospectiveAuthority = [[NSUserDefaults standardUserDefaults] objectForKey:@"HandicapAuthority"];
-			if (prospectiveAuthority == nil) {
-				prospectiveAuthority = [[NSUserDefaults standardUserDefaults] objectForKey:@"LastSelectedHandicapAuthority"];
-				if (prospectiveAuthority == nil) {
-					prospectiveAuthority = GOLFHandicapAuthorityUSGA;
-				}
+	if (cachedGOLFHomeCountryInfo == nil) {
+		cachedGOLFHomeCountryInfo = GOLFHomeCountryInfo();	//	This might take a bit, so we just get it once
+	}
+	
+	GOLFHandicapAuthority *prospectiveAuthority = [cachedGOLFHomeCountryInfo objectForKey:@"authority"];
+	if (!GOLFHandicapValidAuthority(prospectiveAuthority)) {
+		prospectiveAuthority = [[NSUserDefaults standardUserDefaults] objectForKey:@"HandicapAuthority"];
+		if (!GOLFHandicapValidAuthority(prospectiveAuthority)) {
+			prospectiveAuthority = [[NSUserDefaults standardUserDefaults] objectForKey:@"LastSelectedHandicapAuthority"];
+			if (!GOLFHandicapValidAuthority(prospectiveAuthority)) {
+				prospectiveAuthority = GOLFHandicapAuthorityWHS;
 			}
 		}
-//	}
-//	if (saveDefault) {
-//		[[NSUserDefaults standardUserDefaults] setObject:prospectiveAuthority forKey:@"DefaultHandicapAuthority"];
-//	}
+	}
+
 	return prospectiveAuthority;
 }
 
@@ -160,6 +154,34 @@ BOOL GOLFHandicapValidAuthority(GOLFHandicapAuthority *authority) {
 		}
 	}
 	return NO;
+}
+
+//=================================================================
+//	GOLFHandicapInfoForAuthority(authority)
+//=================================================================
+NSDictionary * GOLFHandicapInfoForAuthority(GOLFHandicapAuthority *authority) {
+	//	Returns an NSDictionary, with information about a handicapping authority and the
+	//	handicapping system used by its golfers:
+	//
+	//	Key						Type			Description
+	//	----------------------	--------------	---------------------------------
+	//	methodIndex				NSNumber *		GOLFHandicapMethodIndex identifying the handicapping authority
+	//	handicapAuthority		NSString *		A mnemonic identifying the handicapping authority - used in most handicapping function calls
+	//	authorityDisplay		NSString *		A mnemonic for display identifying the handicapping authority
+	//	association				NSString *		The localized name of the handicapping association (authority)
+	//	URL						NSString *		The URL of the handicapping association (authority) web site
+	//	methodName				NSString *		The localized name of the handicap SYSTEM supported by the authority
+	//	certifiable				NSNumber *		A BOOL indicating whether the handicap method requires certification for use
+	
+	if (authority && ([authority length] > 0)) {
+		for (NSDictionary *authDict in GOLFHandicapAuthorities()) {
+			NSString *candidate = [authDict objectForKey:@"handicapAuthority"];
+			if (candidate && [candidate isEqualToString:authority]) {
+				return authDict;
+			}
+		}
+	}
+	return nil;
 }
 
 //=================================================================
@@ -1518,17 +1540,17 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 	if (referenceSource && [referenceSource respondsToSelector:@selector(handicapAuthority)]) {
 		localAuthority = [(id <GOLFHandicapDataSource>)referenceSource handicapAuthority];	//	First choice - our referenceSource knows the handicapping authority
 	}
-	if (localAuthority == nil) {
+	if (!GOLFHandicapValidAuthority(localAuthority)) {
 		localAuthority = authority;	//	Second choice - it's been provided as a parameter
 		
-		if (localAuthority == nil) {
+		if (!GOLFHandicapValidAuthority(localAuthority)) {
 			localAuthority = [[NSUserDefaults standardUserDefaults] objectForKey:@"LastSelectedHandicapAuthority"];	//	Third choice - last authority selected
 
-			if (localAuthority == nil) {
+			if (!GOLFHandicapValidAuthority(localAuthority)) {
 				localAuthority = GOLFDefaultHandicapAuthority();	//	Fourth choice - a default authority setting
 
-				if (localAuthority == nil) {
-					localAuthority = GOLFHandicapAuthorityUSGA;	//	Last choice - USGA
+				if (!GOLFHandicapValidAuthority(localAuthority)) {
+					localAuthority = GOLFHandicapAuthorityWHS;	//	Last choice - WHS
 				}
 			}
 		}
@@ -1966,13 +1988,13 @@ CGPoint GOLFLowHighIndexesAsPointFor(GOLFHandicapAuthority *authority, GOLFPlayi
 	if (referenceSource && [referenceSource respondsToSelector:@selector(handicapAuthority)]) {
 		localAuthority = [referenceSource handicapAuthority];
 	}
-	if (localAuthority == nil) {
+	if (!GOLFHandicapValidAuthority(localAuthority)) {
 		localAuthority = authority;
 		
-		if (localAuthority == nil) {
+		if (!GOLFHandicapValidAuthority(localAuthority)) {
 			localAuthority = [[NSUserDefaults standardUserDefaults] objectForKey:@"HandicapAuthority"];
 			
-			if (localAuthority == nil) {
+			if (!GOLFHandicapValidAuthority(localAuthority)) {
 				localAuthority = GOLFDefaultHandicapAuthority();
 			}
 		}
@@ -2129,13 +2151,13 @@ GOLFPlayingHandicap GOLFFirstLocalHandicapForAuthority(GOLFHandicapAuthority *au
 	if (referenceSource && [referenceSource respondsToSelector:@selector(handicapAuthority)]) {
 		localAuthority = [referenceSource handicapAuthority];
 	}
-	if (localAuthority == nil) {
+	if (!GOLFHandicapValidAuthority(localAuthority)) {
 		localAuthority = authority;
 		
-		if (localAuthority == nil) {
+		if (!GOLFHandicapValidAuthority(localAuthority)) {
 			localAuthority = [[NSUserDefaults standardUserDefaults] objectForKey:@"HandicapAuthority"];
 			
-			if (localAuthority == nil) {
+			if (!GOLFHandicapValidAuthority(localAuthority)) {
 				localAuthority = GOLFDefaultHandicapAuthority();
 			}
 		}

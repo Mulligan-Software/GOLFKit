@@ -221,7 +221,7 @@ NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictiona
 	GOLFHandicapAuthority *authority = (info ? [info objectForKey:@"handicapAuthority"] : nil);
 	BOOL needShortText = (info ? [[info objectForKey:@"short"] boolValue] : NO);	//	Return "short" variation if available
 
-	if (authority == nil) authority = GOLFDefaultHandicapAuthority();
+	if (!GOLFHandicapValidAuthority(authority)) authority = GOLFDefaultHandicapAuthority();
 	
 	GOLFHandicapMethodIndex methodIndex = GOLFHandicapBestMethodIndexFromAuthority(authority);
 	

@@ -10,6 +10,8 @@
 "TERM_ADJUSTED" = "ajusté";
 "TERM_ADJUSTED_ABBR" = "aju.";
 "TERM_ADJUSTED_FOR_RATINGS" = "ajusté pour les différences d’Évaluations Parcours";
+"TERM_AGGREGATION" = "agrégation";
+"TERM_AGGREGATION_PLURAL" = "agrégations";
 "TERM_ALL" = "toutes";
 "TERM_ALL_SEARCH" = "tout";
 "TERM_ALLOWANCE" = "allocation";
@@ -41,6 +43,7 @@
 "TERM_CODE" = "code";
 "TERM_COLOR" = "couleur";
 "TERM_COMPETITOR" = "concurrent";
+"TERM_COMPETITOR_PLURAL" = "concurrents";
 "TERM_COMPLETE" = "complet";
 "TERM_CONTINUE" = "continuer";
 "TERM_COPY" = "copier";
@@ -78,6 +81,7 @@
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "brut";
 "TERM_HANDICAP" = "handicap";
+"TERM_HANDICAP_PLURAL" = "handicaps";
 "TERM_HANDICAP_ABBR" = "hdcp";
 "TERM_HANDICAPPING" = "handicapant";
 "TERM_HELP" = "aide";
@@ -356,6 +360,7 @@
 "TITLE_EGO_PULL_TO_SORT" = "Maintenez enfoncée pour trier…";
 "TITLE_EGO_RELEASE_TO_SORT" = "Relâchez pour trier…";
 "TITLE_EGO_SORTING" = "Tirent…";
+"TITLE_ENFORCE_EXTINCT_HANDICAPS" = "Imposer l’arrêt des méthodes de handicap";
 "TITLE_ESC_LIMIT" = "limite ESC";
 "TITLE_EULA" = "Contrat de License de l’Utilisateur Final";
 "TITLE_EULA_ABBR" = "EULA";
@@ -363,6 +368,7 @@
 "TITLE_EVEN_ABBR" = "E";
 "TITLE_EVENT_REGISTRATION" = "Inscription à l’Événement";
 "TITLE_EXCLUDE_GUESTS" = "Exclure les Invités";
+"TITLE_EXTENDED_SCORING" = "Marquant Avancée";
 "TITLE_FACTORY_SETTINGS" = "Réglages par défaut";
 "TITLE_FAIRWAY_HIT" = "Fairway atteint";
 "TITLE_FAVORITE_PLAYER" = "Joueur Préféré";
@@ -604,6 +610,7 @@
 "FORMAT_CURRENT_%@_TITLE" = "%@ Actuelle";
 "FORMAT_CURRENT_%@_TITLE_PLURAL" = "%@ Actuelles";
 "FORMAT_DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Déterminez votre %@ à droite en repérant la rangée ou apparaît votre %@ de gauche.";
+"FORMAT_DISCONTINUED_HANDICAP_METHOD_%@_PLAYER_%@" = "Le %@ n’est plus disponible.  Si vous sélectionnez une autre méthode pour %@ et enregistrez la modification, vous ne pourrez pas restaurer le réglage précédent.";
 "FORMAT_%@_IS_DEFAULT_CAPTAIN" = "%@ assigné par handicap en tant que capitaine d’équipe.";
 "FORMAT_%@_IS_DESIGNATED_CAPTAIN" = "%@ est désigné capitaine d’équipe.";
 "FORMAT_MB_DOWNLOADED_%1.1f" = "%1.1fMB téléchargés";
@@ -677,6 +684,7 @@
 
 "DESCRIPTION_3_BY_6" = "Trous 1-6, 7-11 et 12-18";
 "DESCRIPTION_CLOSE_OUT" = "(lorsque aucune pari n'est en vigueur)";
+"DESCRIPTION_EXTENDED_SCORING" = "Marquant Avancée comprends les scores “X”, les scores maximaux (contrôlés par les coups), les scores de  Compétition/Tournoi, les fairways et bunkers touchés.";
 "DESCRIPTION_FRONT_BACK" = "Premier côté et deuxième côté";
 "DESCRIPTION_MATCH_PLAY" = "Compétition face à face marquée par les trous gagnés.";
 "DESCRIPTION_NASSAU" = "Premier côté, deuxième côté et 18 trous";
@@ -687,6 +695,7 @@
 "INFO_EAGLE_USERS_GUIDE_LOCATE" = "une copie du Guide des Utilisateurs déjà installée sur votre ordinateur";
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "Ces réglages ci-dessus ne sont pas modifiés par une réinitialisation «Réglages par défaut».";
 "NOTICE_CANCEL_TO_UNDO_CHANGES" = "Annuler pour défaire vos modifications.";
+"NOTICE_DISCONTINUED_HANDICAP_METHOD" = "Cette méthode de handicap n’est plus en vigueur.  Veuillez en sélectionner un autre.";
 
 //	USGA Data Services
 "NOTICE_USGA_CANCELLED" = "Connexion USGA Data Services annulée";

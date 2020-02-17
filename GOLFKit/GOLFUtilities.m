@@ -76,8 +76,9 @@ NSDictionary * GOLFCountriesInfoForCountryCode(NSString *countryCode) {
 	//	authority		GOLFHandicapAuthority *		The default golf authority for handicapping in this country
 	//	states			NSArray *					Optional array of states dictionaries for this country - postalCode, stateName
 	
-	NSDictionary *rootDict = [NSDictionary dictionaryWithContentsOfFile:[GOLFKitBundle() pathForResource:@"GOLFCountries" ofType:@"plist"]];
-	NSMutableDictionary *workingDict = [[rootDict objectForKey:countryCode] mutableCopy];
+//	NSDictionary *rootDict = [NSDictionary dictionaryWithContentsOfFile:[GOLFKitBundle() pathForResource:@"GOLFCountries" ofType:@"plist"]];
+	NSDictionary *rootDict = GOLFCountriesInfo();
+	NSMutableDictionary *workingDict = (rootDict ? [[rootDict objectForKey:countryCode] mutableCopy] : [NSMutableDictionary dictionaryWithCapacity:6]);
 	BOOL returnStates = YES;	//	Include the 'states' part of the country dictionary
 	NSString *countryName = [workingDict objectForKey:@"countryName"];	//	Pick it up (might be nil)
 	GOLFHandicapAuthority * authority = [workingDict objectForKey:@"authority"];
