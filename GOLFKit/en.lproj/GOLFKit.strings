@@ -42,6 +42,7 @@
 "TERM_CLUB_PLURAL" = "clubs";
 "TERM_CODE" = "code";
 "TERM_COLOR" = "color";
+"TERM_COMPETITION" = "competition";
 "TERM_COMPETITOR" = "competitor";
 "TERM_COMPETITOR_PLURAL" = "competitors";
 "TERM_COMPLETE" = "complete";
@@ -96,6 +97,7 @@
 "TERM_LEADERBOARD" = "leaderboard";
 "TERM_LIMITED" = "limited";
 "TERM_LOCATE" = "locate";
+"TERM_LOOKUP" = "lookup";
 "TERM_LOW" = "low";	//	As in "low handicap"
 "TERM_MATCH" = "match";
 "TERM_MATCH_PLURAL" = "matches";
@@ -118,6 +120,7 @@
 "TERM_NOT_AVAILABLE_ABBR" = "n/a";
 "TERM_NOTE" = "note";
 "TERM_NOTE_PLURAL" = "notes";
+"TERM_NOTICE" = "notice";
 "TERM_NUMBER" = "number";
 "TERM_NUMBER_ABBR" = "no.";
 "TERM_NUMBER_PLURAL" = "numbers";
@@ -142,6 +145,7 @@
 "TERM_PUTT_PLURAL" = "putts";
 "TERM_QUIT" = "quit";
 "TERM_QUOTA" = "quota";
+"TERM_RANK" = "rank";
 "TERM_RATINGS" = "ratings";
 "TERM_RATINGS_ABBR" = "ratings";
 "TERM_REVERSERITZ" = "Reverse Ritz";
@@ -169,6 +173,7 @@
 "TERM_STATUS" = "status";
 "TERM_STROKE" = "stroke";
 "TERM_STROKE_PLURAL" = "strokes";
+"TERM_SUPERSEDED" = "superseded";
 "TERM_TAP" = "tap";
 "TERM_TEAM" = "team";
 "TERM_TEAM_PLURAL" = "teams";
@@ -343,6 +348,7 @@
 "TITLE_CSS_ABBR" = "CSS";
 "TITLE_DARK" = "Dark";
 "TITLE_DATA_PROTECTION" = "Data Protection";
+"TITLE_DECERTIFY" = "Decertify";
 "TITLE_DELETE_ALL" = "Delete All";
 "TITLE_DELETE_CONTESTANT" = "Delete Contestant";
 "TITLE_DESIGNATE_CAPTAIN" = "Designate as Captain";
@@ -380,6 +386,7 @@
 "TITLE_FRONT_SIDE" = "Front Side";
 "TITLE_FULL_HDCP" = "Full Hdcp.";
 "TITLE_GETTING_STARTED" = "Getting Started…";
+"TITLE_GHIN_NUMBER" = "GHIN Number";
 "TITLE_GOLF_GLOSSARY" = "Golf Glossary";
 "TITLE_GORILLA" = "Gorilla";
 "TITLE_GRADE" = "Grade";
@@ -424,6 +431,7 @@
 "TITLE_HANDICAP_GA_PLURAL" = "G.A. Handicaps";
 "TITLE_HANDICAP_GRADE" = "Handicap Grade";
 "TITLE_HANDICAP_GRADE_ABBR" = "Grade";
+"TITLE_HANDICAP_ID" = "Handicap ID";
 "TITLE_HANDICAP_INDEX" = "Handicap Index";
 "TITLE_HANDICAP_INDEX_ABBR" = "Index";
 "TITLE_HANDICAP_INDEX_PLURAL" = "Handicap Indexes";
@@ -436,15 +444,18 @@
 "TITLE_HANDICAP_PLAYING" = "Playing Handicap";
 "TITLE_HANDICAP_PLAYING_PLURAL" = "Playing Handicaps";
 "TITLE_HANDICAP_RECORDS" = "Handicap Records";
+"TITLE_HANDICAP_SERVICE" = "Download…";
 "TITLE_HANDICAP_SLOPE_CHART" = "Slope Chart";
 "TITLE_HANDICAP_SLOPE_RATING" = "Slope Rating";
 "TITLE_HANDICAP_STABLEFORD_SCORE" = "Stableford Score";
 "TITLE_HANDICAP_TABLE" = "Handicap Table";
+"TITLE_HANDICAP_UPDATE" = "Handicap Update";
 "TITLE_HANDICAP_UPDATED_OR_EFFECTIVE" = "Updated";
 "TITLE_HANDICAP_WORLD_INDEX" = "Handicap Index";
 "TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
 "TITLE_HANDICAP_WORLD_INDEX_RTM" = "Handicap Index®";
 "TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "Handicap Indexes";
+"TITLE_HANDICAPPING_NUMBER" = "Handicapping number";
 "TITLE_HOGAN" = "Hogan";
 "TITLE_HOLE_HANDICAP" = "Handicap";
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Hole score adjustment";
@@ -541,6 +552,7 @@
 "TITLE_SHOW_SCORES_AT_STARTUP" = "Show scores at startup";
 "TITLE_SKILL_ADJUSTMENT" = "Skill Adjustment";
 "TITLE_SNAKE" = "Snake";
+"TITLE_SPECIAL_PREFERENCES" = "Special Settings";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
 "TITLE_STATUS_A" = "Status A";
@@ -559,6 +571,7 @@
 "TITLE_UNLINK_DROPBOX" = "Unlink Dropbox";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Unlock all Event Scorecards";
 "TITLE_UP_AND_DOWN" = "Up & Down";
+"TITLE_UPDATES_UNAVAILABLE" = "Updates unavailable";
 "TITLE_USE_IOS_APPEARANCE" = "Use the iOS Appearance setting";
 "TITLE_USE_LAST" = "Use last";
 "TITLE_USERS_GUIDE_FOUND" = "Users’ Guide found";
@@ -690,8 +703,13 @@
 "DESCRIPTION_PRINTING_PRIVACY_%@" = "Event registration categories identified as “%@” are generally not printed or displayed.";
 "DESCRIPTION_THEME_APPEARANCE" = "Light - Eagle always uses classic Aqua appearance\nDark - Eagle always uses Dark Mode appearance\nSystem - Eagle uses the appearance selected in System Preferences";
 "DESCRIPTION_THEME_PRE_MOJAVE" = "Prior to macOS 10.14 Mojave, Eagle uses the system's standard Aqua appearance style.";
+"INFO_AUTHORITY_%@_NOT_CERTIFIED" = "The %@ handicapping method is not currently certified for use.";
+"INFO_DECERTIFY_AUTHORITY_%@" = "De-authorize the %@ as a handicapping method certified for use in Mulligan’s Eagle.";
 "INFO_EAGLE_USERS_GUIDE_DOWNLOAD" = "the most recent version of the Users‘ Guide from Mulligan Software‘s web site";
 "INFO_EAGLE_USERS_GUIDE_LOCATE" = "a copy of the Users’ Guide that is already on your computer";
+"INFO_ENFORCE_EXTINCT_HANDICAPS" = "Checked: Handicap authority requirements obeyed even if it hurts.\nUnchecked: Otherwise.";
+"INFO_USGA_EXTINCTION_WARNING" = "The USGA Handicap System has been superseded and will not be supported or available in future versions of Mulligan’s Eagle.  We recommend you choose another handicapping method.";
+
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "The Personal Handicapping settings above are not changed with a “Factory Settings” reset.";
 "NOTICE_CANCEL_TO_UNDO_CHANGES" = "Cancel to undo changes.";
 "NOTICE_DISCONTINUED_HANDICAP_METHOD" = "This handicapping method is no longer in effect.  Please select another.";

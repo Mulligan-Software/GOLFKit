@@ -189,14 +189,15 @@ NSDictionary * GOLFHandicapInfoForAuthority(GOLFHandicapAuthority *authority) {
 //=================================================================
 NSArray * GOLFHandicapAuthorities(void) {
 	if (cachedGOLFHandicapAuthorities == nil) {
+		BOOL enforceExtinctHandicaps = [[[NSUserDefaults standardUserDefaults] objectForKey:@"EnforceExtinctHandicaps"] boolValue];
 		NSMutableArray *workingArray = [NSMutableArray arrayWithObjects:
 				[NSDictionary dictionaryWithObjectsAndKeys:
-						[NSNumber numberWithUnsignedInteger:GOLFHandicapMethodUSGA], @"methodIndex",
-						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodUSGA), @"handicapAuthority",
-						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodUSGA), @"authorityDisplay",
-						GOLFLocalizedString(@"HANDICAP_ASSOCIATION_USGA"), @"association",
-						@"https://www.usga.org", @"URL",
-						GOLFLocalizedString(@"HANDICAP_METHOD_USGA"), @"methodName",
+						[NSNumber numberWithUnsignedInteger:GOLFHandicapMethodWHS], @"methodIndex",
+						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodWHS), @"handicapAuthority",
+						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodWHS), @"authorityDisplay",
+						GOLFLocalizedString(@"HANDICAP_ASSOCIATION_WHS"), @"association",
+						@"https://www.usga.org/content/dam/usga/pdf/Handicap/Rules-of-Handicapping_USGA_Final.pdf", @"URL",
+						GOLFLocalizedString(@"HANDICAP_METHOD_WHS"), @"methodName",
 						[NSNumber numberWithBool:YES], @"certifiable",
 						nil],
 				[NSDictionary dictionaryWithObjectsAndKeys:
@@ -236,13 +237,15 @@ NSArray * GOLFHandicapAuthorities(void) {
 						[NSNumber numberWithBool:YES], @"certifiable",
 						nil],
 				[NSDictionary dictionaryWithObjectsAndKeys:
-						[NSNumber numberWithUnsignedInteger:GOLFHandicapMethodWHS], @"methodIndex",
-						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodWHS), @"handicapAuthority",
-						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodWHS), @"authorityDisplay",
-						GOLFLocalizedString(@"HANDICAP_ASSOCIATION_WHS"), @"association",
-						@"https://www.usga.org/content/dam/usga/pdf/Handicap/Rules-of-Handicapping_USGA_Final.pdf", @"URL",
-						GOLFLocalizedString(@"HANDICAP_METHOD_WHS"), @"methodName",
-						[NSNumber numberWithBool:YES], @"certifiable",
+						[NSNumber numberWithUnsignedInteger:GOLFHandicapMethodUSGA], @"methodIndex",
+						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodUSGA), @"handicapAuthority",
+						GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodUSGA), @"authorityDisplay",
+						GOLFLocalizedString(@"HANDICAP_ASSOCIATION_USGA"), @"association",
+						@"https://www.usga.org", @"URL",
+						(enforceExtinctHandicaps
+								? [NSString stringWithFormat:@"%@ (%@)", GOLFLocalizedString(@"HANDICAP_METHOD_USGA"), GOLFLocalizedString(@"TERM_SUPERSEDED")]
+								: GOLFLocalizedString(@"HANDICAP_METHOD_USGA")), @"methodName",
+						[NSNumber numberWithBool:(enforceExtinctHandicaps ? NO : YES)], @"certifiable",
 						nil],
 				nil];
 		
@@ -385,6 +388,29 @@ NSString * GOLFHandicapAllowanceTitle(GOLFHandicapMethodIndex handicapMethod) {
 		case GOLFHandicapMethodPersonal:
 		default:
 			return GOLFLocalizedString(@"TITLE_HANDICAP_ALLOWANCE");
+	}
+}
+
+//=================================================================
+//	GOLFHandicapAccountNumberTitle(handicapMethod)
+//=================================================================
+NSString * GOLFHandicapAccountNumberTitle(GOLFHandicapMethodIndex handicapMethod) {
+	switch (handicapMethod) {
+		case GOLFHandicapMethodWHS:
+			return GOLFLocalizedString(@"TITLE_HANDICAP_ID");
+
+		case GOLFHandicapMethodUSGA:
+			return GOLFLocalizedString(@"TITLE_GHIN_NUMBER");
+			
+		case GOLFHandicapMethodRCGA:
+		case GOLFHandicapMethodSecondBest:
+		case GOLFHandicapMethodAGU:
+		case GOLFHandicapMethodEGA:
+		case GOLFHandicapMethodCONGU:
+		case GOLFHandicapMethodMulligan:
+		case GOLFHandicapMethodPersonal:
+		default:
+			return GOLFLocalizedString(@"TITLE_HANDICAPPING_NUMBER");
 	}
 }
 
@@ -926,6 +952,21 @@ NSString * GOLFHandicapTournamentScoreModifierForAuthority(GOLFHandicapAuthority
 		}
 	}
 	return @"T";	//	"Tournament"
+}
+
+//=================================================================
+//	GOLFHandicapTournamentTitleForAuthority(authority)
+//=================================================================
+NSString * GOLFHandicapTournamentTitleForAuthority(GOLFHandicapAuthority *authority) {
+	if (authority) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
+			return GOLFLocalizedString(@"TITLE_ORGANIZED_COMPETITION");	// "Organized Competition"
+		}
+		else if ([authority isEqualToString:GOLFHandicapAuthorityUSGA]) {
+			return [GOLFLocalizedString(@"TERM_TOURNAMENT") capitalizedString];	// "Tournament"
+		}
+	}
+	return [GOLFLocalizedString(@"TERM_COMPETITION") capitalizedString];	//	"Competition"
 }
 
 //=================================================================

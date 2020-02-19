@@ -42,6 +42,7 @@
 "TERM_CLUB_PLURAL" = "clubs";
 "TERM_CODE" = "code";
 "TERM_COLOR" = "couleur";
+"TERM_COMPETITION" = "compétition";
 "TERM_COMPETITOR" = "concurrent";
 "TERM_COMPETITOR_PLURAL" = "concurrents";
 "TERM_COMPLETE" = "complet";
@@ -96,6 +97,7 @@
 "TERM_LEADERBOARD" = "leaderboard";
 "TERM_LIMITED" = "limité";
 "TERM_LOCATE" = "localiser";
+"TERM_LOOKUP" = "chercher";
 "TERM_LOW" = "moins";	//	As in "low handicap"
 "TERM_MATCH" = "match";
 "TERM_MATCH_PLURAL" = "matches";
@@ -118,6 +120,7 @@
 "TERM_NOT_AVAILABLE_ABBR" = "n/a";
 "TERM_NOTE" = "mémo";
 "TERM_NOTE_PLURAL" = "mémos";
+"TERM_NOTICE" = "remarquer";	//	v. note, remark, observe
 "TERM_NUMBER" = "número";
 "TERM_NUMBER_ABBR" = "no.";
 "TERM_NUMBER_PLURAL" = "números";
@@ -142,6 +145,7 @@
 "TERM_PUTT_PLURAL" = "putts";
 "TERM_QUIT" = "quitter";
 "TERM_QUOTA" = "quota";
+"TERM_RANK" = "rang";
 "TERM_RATINGS" = "évaluations";
 "TERM_RATINGS_ABBR" = "éval.";
 "TERM_REVERSERITZ" = "Ritz Inverse";
@@ -169,6 +173,7 @@
 "TERM_STATUS" = "statut";
 "TERM_STROKE" = "coup";
 "TERM_STROKE_PLURAL" = "coups";
+"TERM_SUPERSEDED" = "remplacé";
 "TERM_TAP" = "touchez";	//	touchez ~
 "TERM_TEAM" = "équipe";
 "TERM_TEAM_PLURAL" = "équipes";
@@ -343,6 +348,7 @@
 "TITLE_CSS_ABBR" = "CSS";
 "TITLE_DARK" = "Sombre";
 "TITLE_DATA_PROTECTION" = "Protection des Données";
+"TITLE_DECERTIFY" = "Décertifier";
 "TITLE_DELETE_ALL" = "Effacer Tout";
 "TITLE_DELETE_CONTESTANT" = "Supprimer le compétiteur";
 "TITLE_DESIGNATE_CAPTAIN" = "Désigner comme capitaine";
@@ -380,6 +386,7 @@
 "TITLE_FRONT_SIDE" = "Premier Côté";	//	m.
 "TITLE_FULL_HDCP" = "Hdcp. Complète";
 "TITLE_GETTING_STARTED" = "Commencer…";
+"TITLE_GHIN_NUMBER" = "Numéro de compte GHIN";
 "TITLE_GOLF_GLOSSARY" = "Glossaire de Golf";
 "TITLE_GORILLA" = "Gorilla";
 "TITLE_GRADE" = "Classe";
@@ -424,6 +431,7 @@
 "TITLE_HANDICAP_GA_PLURAL" = "G.A. Handicaps";
 "TITLE_HANDICAP_GRADE" = "Handicap Classe";
 "TITLE_HANDICAP_GRADE_ABBR" = "Classe";
+"TITLE_HANDICAP_ID" = "ID de Handicap";
 "TITLE_HANDICAP_INDEX" = "Handicap Index";
 "TITLE_HANDICAP_INDEX_ABBR" = "Index";
 "TITLE_HANDICAP_INDEX_PLURAL" = "Handicap Indexes";
@@ -436,15 +444,18 @@
 "TITLE_HANDICAP_PLAYING" = "Handicap Jouer";
 "TITLE_HANDICAP_PLAYING_PLURAL" = "Handicaps Jouer";
 "TITLE_HANDICAP_RECORDS" = "Données de Handicap";
+"TITLE_HANDICAP_SERVICE" = "Télécharger…";
 "TITLE_HANDICAP_SLOPE_CHART" = "Diagramme Slope";
 "TITLE_HANDICAP_SLOPE_RATING" = "Évaluation Slope";
 "TITLE_HANDICAP_STABLEFORD_SCORE" = "Stableford Score";
 "TITLE_HANDICAP_TABLE" = "Table de Handicap";
+"TITLE_HANDICAP_UPDATE" = "Mettre à jour handicaps";
 "TITLE_HANDICAP_UPDATED_OR_EFFECTIVE" = "Mis à jour";
 "TITLE_HANDICAP_WORLD_INDEX" = "Handicap Index";
 "TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
 "TITLE_HANDICAP_WORLD_INDEX_RTM" = "Handicap Index®";
 "TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "Handicap Indexes";
+"TITLE_HANDICAPPING_NUMBER" = "Numéro de compte Handicap";
 "TITLE_HOGAN" = "Hogan";
 "TITLE_HOLE_HANDICAP" = "Handicap";
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Trou score ajustement";
@@ -541,6 +552,7 @@
 "TITLE_SHOW_SCORES_AT_STARTUP" = "Afficher les scores au démarrage";
 "TITLE_SKILL_ADJUSTMENT" = "Ajustement habileté";
 "TITLE_SNAKE" = "Snake";
+"TITLE_SPECIAL_PREFERENCES" = "Réglages Spéciaux";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
 "TITLE_STATUS_A" = "Statut A";
@@ -559,6 +571,7 @@
 "TITLE_UNLINK_DROPBOX" = "Délier Dropbox";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Débloquer tous Cartes d’Événement";
 "TITLE_UP_AND_DOWN" = "En haut et en bas";
+"TITLE_UPDATES_UNAVAILABLE" = "Mises à jour non disponibles";
 "TITLE_USE_IOS_APPEARANCE" = "Utiliser le paramètre Apparence de iOS";
 "TITLE_USE_LAST" = "Utilizez dernières";
 "TITLE_USERS_GUIDE_FOUND" = "Guide des Utilisateurs a été trouvé";
@@ -691,8 +704,14 @@
 "DESCRIPTION_PRINTING_PRIVACY_%@" = "Les catégories d’enregistrement d’événement identifiés comme «%@» ne sont généralement ni imprimés ni affichés.";
 "DESCRIPTION_THEME_APPEARANCE" = "Claire - Eagle utilise toujours l’apperance classique de l’Aqua\nSombre - Eagle utilise toujours l’apperance du Mode Sombre\nSystème - Eagle utilise l’apperance sélectionnée dans les Préférences Système";
 "DESCRIPTION_THEME_PRE_MOJAVE" = "Avant macOS 10.14 Mojave, Eagle utilisait le style d’apperance Aqua standard du système.";
+
+"INFO_AUTHORITY_%@_NOT_CERTIFIED" = "La méthode de handicap %@ n’est pas actuellement certifiée pour une utilisation.";
+"INFO_DECERTIFY_AUTHORITY_%@" = "Annuler l’autorisation du %@ en tant que méthode de handicap certifiée pour une utilisation dans Mulligan’s Eagle.";
 "INFO_EAGLE_USERS_GUIDE_DOWNLOAD" = "la version plus récente du Guide des Utilisateurs du site web de Mulligan Software";
 "INFO_EAGLE_USERS_GUIDE_LOCATE" = "une copie du Guide des Utilisateurs déjà installée sur votre ordinateur";
+"INFO_ENFORCE_EXTINCT_HANDICAPS" = "Cochée: Les exigences de l’autorité de handicap sont respectées même si cela fait mal.\nDécochée: Sinon.";
+"INFO_USGA_EXTINCTION_WARNING" = "Le Système de Handicap USGA a été remplacé et ne sera plus pris en charge ni disponible dans les futures versions de Mulligan’s Eagle.  Nous vous recommandons de choisir une autre méthode de handicap.";
+
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "Ces réglages ci-dessus ne sont pas modifiés par une réinitialisation «Réglages par défaut».";
 "NOTICE_CANCEL_TO_UNDO_CHANGES" = "Annuler pour défaire vos modifications.";
 "NOTICE_DISCONTINUED_HANDICAP_METHOD" = "Cette méthode de handicap n’est plus en vigueur.  Veuillez en sélectionner un autre.";

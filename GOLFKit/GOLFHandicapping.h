@@ -179,6 +179,9 @@ NSString * GOLFOfficialHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOO
 NSString * GOLFPlayingHandicapTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural);
 //	Returns a localized title for the handicap strokes for play ("Course Handicap", "Handicap de Campo", "EGA Handicap Jouer", etc.)
 
+NSString * GOLFHandicapAccountNumberTitle(GOLFHandicapMethodIndex handicapMethod);
+//	Returns a localized title describing the handicapping account number name ("GHIN Number", "Handicap ID", etc.)
+
 NSString * GOLFHandicapAllowanceTitle(GOLFHandicapMethodIndex handicapMethod);
 //	Returns a localized title for the allowed handicap strokes in competition ("Handicap Allowance", "Allocation de Handicap", etc.)
 
@@ -240,6 +243,9 @@ NSString * GOLFHandicapCombinedScoresModifierForAuthority(GOLFHandicapAuthority 
 
 NSString * GOLFHandicapTournamentScoreModifierForAuthority(GOLFHandicapAuthority *authority);
 //	Returns the short (1 character) modified used to indicate that a round was contested in a tournament or designated competition ("T", etc.)
+
+NSString * GOLFHandicapTournamentTitleForAuthority(GOLFHandicapAuthority *authority);
+//	Returns a localized title used to identify a tournament or designated competition round ("Tournament", "Designate Competition", etc.)
 
 NSString * GOLFRoundModifierTooltip(GOLFHandicapAuthority *authority);
 //	Returns the appropriate tooltip (with line feeds) tabulating the description of round modifiers ("* - used", "T - Torneo", "E - Estimado", etc.
