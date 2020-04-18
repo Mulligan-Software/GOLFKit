@@ -413,6 +413,7 @@ NSString * NSStringFromPlayType(GOLFPlayType playType, NSDictionary *info, NSStr
 //		----------------------------	-------------	-----------------------------------------------------
 //		MedalPlayType						1			Medal play
 //		SelectedHolesPlayType,				2			Medal play with selected holes
+//		MaximumScorePlayType,				3			Medal play with limited hole scores	(WHS)
 //		StablefordPlayType					10			Stableford												(FirstStablefordPlayType)
 //		ModifiedStablefordPlayType			11			Modified Stableford
 //		HalfStablefordPlayType				12			Half-Stableford
@@ -459,6 +460,12 @@ NSString * NSStringFromPlayType(GOLFPlayType playType, NSDictionary *info, NSStr
 				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_SELECTED_HOLES_DESC");
 			}
 			return (needShortText ? [GOLFLocalizedString(@"TERM_SELECTED") capitalizedString] : GOLFLocalizedString(@"PLAY_TYPE_SELECTED_HOLES"));
+
+		case MaximumScorePlayType:
+			if (descriptiveText) {
+				*descriptiveText = GOLFLocalizedString(@"PLAY_TYPE_MAXIMUM_SCORE_DESC");
+			}
+			return (needShortText ? GOLFLocalizedString(@"PLAY_TYPE_MAXIMUM_SCORE_ABBR") : GOLFLocalizedString(@"PLAY_TYPE_MAXIMUM_SCORE"));
 
 		case StablefordPlayType:
 			if (descriptiveText) {
@@ -799,6 +806,135 @@ NSString * NSStringFromTiebreakerOutcome(GOLFTiebreakerOutcome outcome, NSNumber
 			return GOLFLocalizedString(@"TIEBREAKER_OUTCOME_BY_LOT");
 
 		default:
+			return [GOLFLocalizedString(@"TERM_UNKNOWN") capitalizedString];
+	}
+}
+
+//=================================================================
+//	NSStringFromMaxScoreType(type, descriptiveText)
+//=================================================================
+NSString * NSStringFromMaxScoreType(GOLFMaxScoreType type, NSString **descriptiveText) {
+
+//		Max Score Type
+//
+//		Type									Value		Description
+//		------------------------------------	--------	-----------------------------------
+//		GOLFMaxScoreTypeNone						0		Maximum score is unlimited
+//		GOLFMaxScoreTypeBogey						1		Maximum returned score is bogey (par + 1)
+//		GOLFMaxScoreTypeDoubleBogey					2		Maximum returned score is double-bogey (par + 2)
+//		GOLFMaxScoreTypeTripleBogey					3		Maximum returned score is triple-bogey (par + 3)
+//		GOLFMaxScoreTypeQuadrupleBogey				4		Maximum returned score is quadruple-bogey (par + 4)
+//		GOLFMaxScoreTypeQuintupleBogey				5		Maximum returned score is quintuple-bogey (par + 5)
+//		GOLFMaxScoreTypeWithoutHandicap				5		GOLFMaxScoreTypeQuintupleBogey for players without a handicap
+//		GOLFMaxScoreTypeSextupleBogey				6		Maximum returned score is sextuple-bogey (par + 6)
+//		GOLFMaxScoreTypeNetBogey					11      Maximum returned score equivalent to net bogey (par + 1 + strokes)
+//		GOLFMaxScoreTypeNetDoubleBogey				12		Maximum returned score equivalent to net double-bogey (par + 2 + strokes)
+//		GOLFMaxScoreTypeNetTripleBogey				13		Maximum returned score equivalent to net triple-bogey (par + 3 + strokes)
+//		GOLFMaxScoreTypeNetQuadrupleBogey			14		Maximum returned score equivalent to net quadruple-bogey (par + 4 + strokes)
+//		GOLFMaxScoreTypeDoublePar					21		Maximum returned score is twice par (par x 2)
+//		GOLFMaxScoreTypeTriplePar					22		Maximum returned score is 3 times par (par x 3)
+//		GOLFMaxScoreTypeFixedLimit					51		Maximum returned score is fixed maximum (WHSMaxScoreFixedLimitScore)
+//		GOLFMaxScoreTypeFixed_6_9_12				52		Maximum returned score is fixed maximum (6 on par 3, 9 on par 4, 12 on par 5 or higher)
+//		GOLFMaxScoreTypeUnknown						99		Maximum returned score unknown
+	
+	switch(type) {
+		case GOLFMaxScoreTypeNone:
+			if (descriptiveText) {
+				*descriptiveText = @"";
+			}
+			return GOLFLocalizedString(@"MAX_SCORE_NONE");
+			
+		case GOLFMaxScoreTypeBogey:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"MAX_SCORE_BOGEY_DESC");
+			}
+			return GOLFLocalizedString(@"MAX_SCORE_BOGEY");
+			
+		case GOLFMaxScoreTypeDoubleBogey:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"MAX_SCORE_DOUBLE_BOGEY_DESC");
+			}
+			return GOLFLocalizedString(@"MAX_SCORE_DOUBLE_BOGEY");
+			
+		case GOLFMaxScoreTypeTripleBogey:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"MAX_SCORE_TRIPLE_BOGEY_DESC");
+			}
+			return GOLFLocalizedString(@"MAX_SCORE_TRIPLE_BOGEY");
+			
+		case GOLFMaxScoreTypeQuadrupleBogey:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"MAX_SCORE_QUADRUPLE_BOGEY_DESC");
+			}
+			return GOLFLocalizedString(@"MAX_SCORE_QUADRUPLE_BOGEY");
+			
+		case GOLFMaxScoreTypeQuintupleBogey:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"MAX_SCORE_QUINTUPLE_BOGEY_DESC");
+			}
+			return GOLFLocalizedString(@"MAX_SCORE_QUINTUPLE_BOGEY");
+			
+		case GOLFMaxScoreTypeSextupleBogey:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"MAX_SCORE_SEXTUPLE_BOGEY_DESC");
+			}
+			return GOLFLocalizedString(@"MAX_SCORE_SEXTUPLE_BOGEY");
+			
+		case GOLFMaxScoreTypeNetBogey:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"MAX_SCORE_NET_BOGEY_DESC");
+			}
+			return GOLFLocalizedString(@"MAX_SCORE_NET_BOGEY");
+
+		case GOLFMaxScoreTypeNetDoubleBogey:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"MAX_SCORE_NET_DOUBLE_BOGEY_DESC");
+			}
+			return GOLFLocalizedString(@"MAX_SCORE_NET_DOUBLE_BOGEY");
+
+		case GOLFMaxScoreTypeNetTripleBogey:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"MAX_SCORE_NET_TRIPLE_BOGEY_DESC");
+			}
+			return GOLFLocalizedString(@"MAX_SCORE_NET_TRIPLE_BOGEY");
+		
+		case GOLFMaxScoreTypeNetQuadrupleBogey:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"MAX_SCORE_NET_QUADRUPLE_BOGEY_DESC");
+			}
+			return GOLFLocalizedString(@"MAX_SCORE_NET_QUADRUPLE_BOGEY");
+		
+		case GOLFMaxScoreTypeDoublePar:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"MAX_SCORE_DOUBLE_PAR_DESC");
+			}
+			return GOLFLocalizedString(@"MAX_SCORE_DOUBLE_PAR");
+		
+		case GOLFMaxScoreTypeTriplePar:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"MAX_SCORE_TRIPLE_PAR_DESC");
+			}
+			return GOLFLocalizedString(@"MAX_SCORE_TRIPLE_PAR");
+		
+		case GOLFMaxScoreTypeFixedLimit:
+			{
+				GOLFScore limit = [[[NSUserDefaults standardUserDefaults] objectForKey:@"WHSMaxScoreFixedLimitScore"] scoreValue];
+				if (descriptiveText != nil) {
+					*descriptiveText = [NSString stringWithFormat:GOLFLocalizedString(@"MAX_SCORE_FIXED_LIMIT_%ld_DESC"), limit];
+				}
+				return [NSString stringWithFormat:GOLFLocalizedString(@"MAX_SCORE_FIXED_LIMIT_%ld"), limit];
+			}
+		
+		case GOLFMaxScoreTypeFixed_6_9_12:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"MAX_SCORE_FIXED_6_9_12_DESC");
+			}
+			return GOLFLocalizedString(@"MAX_SCORE_FIXED_6_9_12");
+		
+		default:
+			if (descriptiveText != nil) {
+				*descriptiveText = ((type == GOLFMaxScoreTypeUnknown) ? @"" : [NSString stringWithFormat:@"(%lu)", (unsigned long)type]);
+			}
 			return [GOLFLocalizedString(@"TERM_UNKNOWN") capitalizedString];
 	}
 }

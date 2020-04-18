@@ -48,6 +48,8 @@
 "TERM_COMPLETE" = "complete";
 "TERM_CONTINUE" = "continue";
 "TERM_COPY" = "copy";
+"TERM_COUNTRY_ADJ" = "country";
+"TERM_COUNTRY_NOUN" = "country";
 "TERM_COURSE" = "course";
 "TERM_COURSE_PLURAL" = "courses";
 "TERM_CUSTOMIZATION" = "customization";
@@ -69,6 +71,8 @@
 "TERM_EVENT_PLURAL" = "events";
 "TERM_EVERYTHING" = "everything";
 "TERM_FAIRWAY" = "fairway";
+"TERM_FEMALE" = "female";
+"TERM_FEMALE_ABBR" = "F";
 "TERM_FIND" = "find";
 "TERM_FLAGSTICK" = "flagstick";
 "TERM_FLIGHT" = "flight";
@@ -78,6 +82,7 @@
 "TERM_FOURSOMES" = "Foursomes";
 "TERM_FROM" = "from";
 "TERM_FRONT" = "front";
+"TERM_GENDER" = "gender";
 "TERM_GOLF" = "golf";
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "gross";
@@ -99,6 +104,8 @@
 "TERM_LOCATE" = "locate";
 "TERM_LOOKUP" = "lookup";
 "TERM_LOW" = "low";	//	As in "low handicap"
+"TERM_MALE" = "male";
+"TERM_MALE_ABBR" = "M";
 "TERM_MATCH" = "match";
 "TERM_MATCH_PLURAL" = "matches";
 "TERM_MEASURED" = "measured";
@@ -195,6 +202,7 @@
 "TERM_TREND" = "trend";
 "TERM_TYPE" = "type";
 "TERM_UNKNOWN" = "unknown";
+"TERM_UNNAMED" = "unnamed";
 "TERM_USE" = "use";
 "TERM_USED" = "used";
 "TERM_USED_ABBR" = "used";
@@ -473,6 +481,7 @@
 "TITLE_LAST_HOLE" = "Last Hole";
 "TITLE_LICENSED_OWNER" = "License Holder";
 "TITLE_LIGHT" = "Light";
+"TITLE_LIMIT_SCORE" = "Hole Score Limit";
 "TITLE_LINK_DROPBOX" = "Link Dropbox";
 "TITLE_LOCAL_COUNTRY" = "Local Country";
 "TITLE_LOCK_CLUBS" = "Lock Clubs";
@@ -626,6 +635,7 @@
 "FORMAT_DISCONTINUED_HANDICAP_METHOD_%@_PLAYER_%@" = "The %@ is no longer available.  If you select another method for %@ and save the change, you will be unable to restore the previous setting.";
 "FORMAT_%@_IS_DEFAULT_CAPTAIN" = "%@ assigned by handicap as team captain.";
 "FORMAT_%@_IS_DESIGNATED_CAPTAIN" = "%@ is designated as team captain.";
+"FORMAT_MAXIMUM_%@_ABBR" = "Max. %@";
 "FORMAT_MB_DOWNLOADED_%1.1f" = "%1.1fMB downloaded";
 "FORMAT_NET_%@" = "Net %@";
 "FORMAT_NO_%@" = "no %@";	//	"no strokes", "no players"
@@ -723,6 +733,37 @@
 "NOTICE_USGA_FAILED" = "USGA Data Services connection failed";
 "NOTICE_USGA_RECEIVING" = "Receiving from USGA Data Services…";
 
+//	GOLFMaxScore Titles & Descriptions
+"MAX_SCORE_NONE" = "no maximum";
+"MAX_SCORE_BOGEY" = "Bogey";
+"MAX_SCORE_BOGEY_DESC" = "par + 1";
+"MAX_SCORE_DOUBLE_BOGEY" = "Double-Bogey";
+"MAX_SCORE_DOUBLE_BOGEY_DESC" = "par + 2";
+"MAX_SCORE_TRIPLE_BOGEY" = "Triple-Bogey";
+"MAX_SCORE_TRIPLE_BOGEY_DESC" = "par + 3";
+"MAX_SCORE_QUADRUPLE_BOGEY" = "Quadruple-Bogey";
+"MAX_SCORE_QUADRUPLE_BOGEY_DESC" = "par + 4";
+"MAX_SCORE_QUINTUPLE_BOGEY" = "Quintuple-Bogey";
+"MAX_SCORE_QUINTUPLE_BOGEY_DESC" = "par + 5";
+"MAX_SCORE_SEXTUPLE_BOGEY" = "Sextuple-Bogey";
+"MAX_SCORE_SEXTUPLE_BOGEY_DESC" = "par + 6";
+"MAX_SCORE_NET_BOGEY" = "Net Bogey";
+"MAX_SCORE_NET_BOGEY_DESC" = "par + 1 + handicap strokes";
+"MAX_SCORE_NET_DOUBLE_BOGEY" = "Net Double-Bogey";
+"MAX_SCORE_NET_DOUBLE_BOGEY_DESC" = "par + 2 + handicap strokes";
+"MAX_SCORE_NET_TRIPLE_BOGEY" = "Net Triple-Bogey";
+"MAX_SCORE_NET_TRIPLE_BOGEY_DESC" = "par + 3 + handicap strokes";
+"MAX_SCORE_NET_QUADRUPLE_BOGEY" = "Net Quadruple-Bogey";
+"MAX_SCORE_NET_QUADRUPLE_BOGEY_DESC" = "par + 4 + handicap strokes";
+"MAX_SCORE_DOUBLE_PAR" = "Double Par";
+"MAX_SCORE_DOUBLE_PAR_DESC" = "2 x par";
+"MAX_SCORE_TRIPLE_PAR" = "Triple Par";
+"MAX_SCORE_TRIPLE_PAR_DESC" = "3 x par";
+"MAX_SCORE_FIXED_LIMIT_%ld" = "Fixed Limit (%ld)";
+"MAX_SCORE_FIXED_LIMIT_%ld_DESC" = "%ld strokes at each hole";
+"MAX_SCORE_FIXED_6_9_12" = "6/9/12 Strokes";
+"MAX_SCORE_FIXED_6_9_12_DESC" = "par 3’s - 6 strokes, par 4’s - 9, par 5’s - 12";
+
 //	GOLFPlayType Titles & Descriptions
 "PLAY_TYPE_MEDAL_PLAY" = "Medal Play";
 "PLAY_TYPE_MEDAL_PLAY_DESC" = "Individual stroke play";
@@ -743,6 +784,9 @@
 "PLAY_TYPE_9_POINT_DESC" = "3 or more players share 9 (16, 25, 36) points per hole";
 "PLAY_TYPE_6_POINT" = "6-Point Game";
 "PLAY_TYPE_6_POINT_DESC" = "3 players share 6 points per hole";
+"PLAY_TYPE_MAXIMUM_SCORE" = "Maximum Score";
+"PLAY_TYPE_MAXIMUM_SCORE_ABBR" = "Max Score";
+"PLAY_TYPE_MAXIMUM_SCORE_DESC" = "Stroke play with hole limits";
 "PLAY_TYPE_MEDAL_MATCH" = "Medal Match Play";
 "PLAY_TYPE_MEDAL_MATCH_DESC" = "2 points per hole vs. each scorecard co-competitor";
 "PLAY_TYPE_TEAM_BETTER_BALL" = "Best-Ball";
@@ -849,7 +893,11 @@
 "TOOLTIP_BEGINNING_INDEX_EXTRA" = "for use until a valid handicap record is available";
 "TOOLTIP_EXCLUDE_GUESTS" = "Check to exclude “Guest” players from changes.";
 "TOOLTIP_HANDICAP_DELETE_RECORDS" = "Click to permanently remove selected handicap records.";
+"TOOLTIP_LIMIT_SCORE" = "The hole score limit for a fixed WHS Maximum Score.";
+"TOOLTIP_LIMIT_SCORE_TRAINING" = "The fixed hole score limit used for all holes in a “Maximum Score” competition.  Scores entered over that limit will be reduced.";
 "TOOLTIP_MASS_CONVERT_BUTTON_%@" = "Click to convert players to %@.";
+"TOOLTIP_MAX_SCORE" = "The method used to determine a WHS Maximum Score limit.";
+"TOOLTIP_MAX_SCORE_TRAINING" = "For a “Maximum Score” competition using the World Handicap System, specify how the maximum score limit for a hole is determined.";
 "TOOLTIP_PLAYER_GROSS_SCORE" = "The player’s total gross score";
 "TOOLTIP_PLAYER_NET_SCORE" = "The player’s total net score";
 "TOOLTIP_PLAYER_TOTAL_SCORE" = "The player’s total score";

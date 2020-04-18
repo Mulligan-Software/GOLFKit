@@ -48,6 +48,8 @@
 "TERM_COMPLETE" = "completo";
 "TERM_CONTINUE" = "continuar";
 "TERM_COPY" = "copiar";
+"TERM_COUNTRY_ADJ" = "campo";
+"TERM_COUNTRY_NOUN" = "país";
 "TERM_COURSE" = "campo";
 "TERM_COURSE_PLURAL" = "campos";
 "TERM_CUSTOMIZATION" = "personalización";
@@ -69,6 +71,8 @@
 "TERM_EVENT_PLURAL" = "eventos";
 "TERM_EVERYTHING" = "todo";
 "TERM_FAIRWAY" = "fairway";
+"TERM_FEMALE" = "femenino";
+"TERM_FEMALE_ABBR" = "F";
 "TERM_FIND" = "buscar";
 "TERM_FLAGSTICK" = "flagstick";
 "TERM_FLIGHT" = "flight";
@@ -78,6 +82,7 @@
 "TERM_FOURSOMES" = "Foursomes";
 "TERM_FROM" = "de";
 "TERM_FRONT" = "primero";
+"TERM_GENDER" = "género";
 "TERM_GOLF" = "golf";
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "bruto";
@@ -99,6 +104,8 @@
 "TERM_LOCATE" = "ubicar";
 "TERM_LOOKUP" = "buscar";
 "TERM_LOW" = "bajo";	//	As in "low handicap"
+"TERM_MALE" = "masculino";
+"TERM_MALE_ABBR" = "M";
 "TERM_MATCH" = "partido";
 "TERM_MATCH_PLURAL" = "partidos";
 "TERM_MEASURED" = "medido";
@@ -195,6 +202,7 @@
 "TERM_TREND" = "tendencia";
 "TERM_TYPE" = "tipo";
 "TERM_UNKNOWN" = "ignoto";
+"TERM_UNNAMED" = "sin nobre";
 "TERM_USE" = "usar";
 "TERM_USED" = "utilizado";
 "TERM_USED_ABBR" = "util.";
@@ -473,6 +481,7 @@
 "TITLE_LAST_HOLE" = "Último Hoyo";
 "TITLE_LICENSED_OWNER" = "Titular de la licencia";
 "TITLE_LIGHT" = "Claro";
+"TITLE_LIMIT_SCORE" = "Score Limite de Hoyo";
 "TITLE_LINK_DROPBOX" = "Enlazar Dropbox";
 "TITLE_LOCAL_COUNTRY" = "País Local";
 "TITLE_LOCK_CLUBS" = "Bloquear los Clubes";
@@ -626,6 +635,7 @@
 "FORMAT_DISCONTINUED_HANDICAP_METHOD_%@_PLAYER_%@" = "El %@ ya no está disponible.  Si selecciona otro método para %@ y guarda el cambio, no podrá retaurar la configuración previa.";
 "FORMAT_%@_IS_DEFAULT_CAPTAIN" = "%@ asignado por handicap como capitán del equipo.";
 "FORMAT_%@_IS_DESIGNATED_CAPTAIN" = "%@ es designado capitán del equipo.";
+"FORMAT_MAXIMUM_%@_ABBR" = "Max. %@";
 "FORMAT_MB_DOWNLOADED_%1.1f" = "%1.1fMB descargados";
 "FORMAT_NET_%@" = "%@ Neto";
 "FORMAT_NO_%@" = "sin %@";	//	"no strokes", "no players"
@@ -725,6 +735,37 @@
 "NOTICE_USGA_FAILED" = "Conexión de USGA Data Services falló";
 "NOTICE_USGA_RECEIVING" = "Recibiendo de USGA Data Services…";
 
+//	GOLFMaxScore Titles & Descriptions
+"MAX_SCORE_NONE" = "No máximo";
+"MAX_SCORE_BOGEY" = "Bogey";
+"MAX_SCORE_BOGEY_DESC" = "par + 1";
+"MAX_SCORE_DOUBLE_BOGEY" = "Doble Bogey";
+"MAX_SCORE_DOUBLE_BOGEY_DESC" = "par + 2";
+"MAX_SCORE_TRIPLE_BOGEY" = "Triple Bogey";
+"MAX_SCORE_TRIPLE_BOGEY_DESC" = "par + 3";
+"MAX_SCORE_QUADRUPLE_BOGEY" = "Cuádruple Bogey";
+"MAX_SCORE_QUADRUPLE_BOGEY_DESC" = "par + 4";
+"MAX_SCORE_QUINTUPLE_BOGEY" = "Quintuple Bogey";
+"MAX_SCORE_QUINTUPLE_BOGEY_DESC" = "par + 5";
+"MAX_SCORE_SEXTUPLE_BOGEY" = "Sextuple Bogey";
+"MAX_SCORE_SEXTUPLE_BOGEY_DESC" = "par + 6";
+"MAX_SCORE_NET_BOGEY" = "Bogey Neto";
+"MAX_SCORE_NET_BOGEY_DESC" = "par + 1 + golpes de handicap";
+"MAX_SCORE_NET_DOUBLE_BOGEY" = "Doble Bogey Neto";
+"MAX_SCORE_NET_DOUBLE_BOGEY_DESC" = "par + 2 + golpes de handicap";
+"MAX_SCORE_NET_TRIPLE_BOGEY" = "Triple Bogey Neto";
+"MAX_SCORE_NET_TRIPLE_BOGEY_DESC" = "par + 3 + golpes de handicap";
+"MAX_SCORE_NET_QUADRUPLE_BOGEY" = "Cuádruple Bogey Neto";
+"MAX_SCORE_NET_QUADRUPLE_BOGEY_DESC" = "par + 4 + golpes de handicap";
+"MAX_SCORE_DOUBLE_PAR" = "Doble Par";
+"MAX_SCORE_DOUBLE_PAR_DESC" = "2 x par";
+"MAX_SCORE_TRIPLE_PAR" = "Triple Par";
+"MAX_SCORE_TRIPLE_PAR_DESC" = "3 x par";
+"MAX_SCORE_FIXED_LIMIT_%ld" = "Límite Fijo (%ld)";
+"MAX_SCORE_FIXED_LIMIT_%ld_DESC" = "%ld golpes en cada hoyo";
+"MAX_SCORE_FIXED_6_9_12" = "6/9/12 Golpes";
+"MAX_SCORE_FIXED_6_9_12_DESC" = "par 3’s - 6 golpes, par 4’s - 9, par 5’s - 12";
+
 //	GOLFPlayType Titles & Descriptions
 "PLAY_TYPE_MEDAL_PLAY" = "Stroke Play";
 "PLAY_TYPE_MEDAL_PLAY_DESC" = "Stroke Play individual";
@@ -745,6 +786,9 @@
 "PLAY_TYPE_9_POINT_DESC" = "3 o más jugadores dividen 9 (16, 25, 36) puntos por hoyo";
 "PLAY_TYPE_6_POINT" = "Juego 6-Puntos";
 "PLAY_TYPE_6_POINT_DESC" = "3 jugadores dividen 6 puntos por hoyo";
+"PLAY_TYPE_MAXIMUM_SCORE" = "Puntajes Máximos";
+"PLAY_TYPE_MAXIMUM_SCORE_ABBR" = "Puntajes Máx";
+"PLAY_TYPE_MAXIMUM_SCORE_DESC" = "Stroke play con límites de hoyo";
 "PLAY_TYPE_MEDAL_MATCH" = "Match Play por los Puntos";
 "PLAY_TYPE_MEDAL_MATCH_DESC" = "2 puntos por hoyo vs. cada competidor en la tarjeta";
 "PLAY_TYPE_TEAM_BETTER_BALL" = "Best-Ball";
@@ -851,7 +895,11 @@
 "TOOLTIP_BEGINNING_INDEX_EXTRA" = "para usar hasta que esté disponible un registro válido de handicap.";
 "TOOLTIP_EXCLUDE_GUESTS" = "Check to exclude “Guest” players from changes.";
 "TOOLTIP_HANDICAP_DELETE_RECORDS" = "Marque la casilla para excluir a los jugadores “Invitados” de los cambios.";
+"TOOLTIP_LIMIT_SCORE" = "El límite de score de hoyo para una Score Máxima fija de WHS.";
+"TOOLTIP_LIMIT_SCORE_TRAINING" = "El límite de puntaje de hoyo fijo utilizado para todos los hoyos en una competencia de “Score Máximo”.  Los puntajes ingresados por encima de ese limite se reducirán.";
 "TOOLTIP_MASS_CONVERT_BUTTON_%@" = "Haga clic para convertir jugadores a %@.";
+"TOOLTIP_MAX_SCORE" = "El método utilizado para determinar un limite de Score Máxima de WHS.";
+"TOOLTIP_MAX_SCORE_TRAINING" = "Para una competencia de “Score Máximo” usando el Sistema Mundial de Handicap, especifique cómo se determina el limite de puntaje máximo para un hoyo.";
 "TOOLTIP_PLAYER_GROSS_SCORE" = "El puntaje bruto total del jugador";
 "TOOLTIP_PLAYER_NET_SCORE" = "El puntaje neto total del jugador";
 "TOOLTIP_PLAYER_TOTAL_SCORE" = "El puntaje total del jugador";

@@ -65,25 +65,30 @@ typedef NS_ENUM(NSUInteger, GOLFAllowanceType) {
 	#define IS_ANY_PLAYER_DEPENDENT_TEAM_ALLOWANCE_TYPE(_type)	(((((_type) >= ScrambleA50AllowanceType) && ((_type) <= ScrambleA20B15C10D5AllowanceType)) || ((_type) == A60B40AllowanceType) || ((_type) == A50B20AllowanceType) || ((_type) == AverageCombinedAllowanceType) || ((_type) == AverageCombined80AllowanceType) || ((_type) == Aggregate3EighthsAllowanceType)) ? YES : NO)
 #endif
 
-typedef NS_ENUM(NSUInteger, GOLFMaxScoreMethod) {
-	GOLFMaxScoreNone = 0,				//	Maximum returned score is not limited
-	GOLFMaxScoreBogey,					//	Maximum returned score is bogey (par + 1)
-	GOLFMaxScoreDoubleBogey,			//	Maximum returned score is double-bogey (par + 2)
-	GOLFMaxScoreTripleBogey,			//	Maximum returned score is triple-bogey (par + 3)
-	GOLFMaxScoreQuadrupalBogey,			//	Maximum returned score is quadrupal-bogey (par + 4)
-	GOLFMaxScoreNetBogey = 11,			//	Maximum returned score equivalent to net bogey (par + 1 + strokes)
-	GOLFMaxScoreNetDoubleBogey,			//	Maximum returned score equivalent to net double-bogey (par + 2 + strokes)
-	GOLFMaxScoreNetTripleBogey,			//	Maximum returned score equivalent to net triple-bogey (par + 3 + strokes)
-	GOLFMaxScoreNetQuadrupalBogey,		//	Maximum returned score equivalent to net quadrupal-bogey (par + 4 + strokes)
-	GOLFMaxScoreDoublePar = 21,			//	Maximum returned score is twice par (par x 2)
-	GOLFMaxScoreTriplePar,				//	Maximum returned score is 3 times par (par x 3)
-	GOLFMaxScoreFixed_6_8_10 = 51,		//	Maximum returned score is fixed maximum (6 on par 3, 8 on par 4, 10 on par 5 or higher)
-	GOLFMaxScoreUnknown = 99			//	Maximum returned score unknown
+typedef NS_ENUM(NSUInteger, GOLFMaxScoreType) {
+	GOLFMaxScoreTypeNone = 0,				//	Maximum returned score is not limited
+	GOLFMaxScoreTypeBogey,					//	Maximum returned score is bogey (par + 1)
+	GOLFMaxScoreTypeDoubleBogey,			//	Maximum returned score is double-bogey (par + 2)
+	GOLFMaxScoreTypeTripleBogey,			//	Maximum returned score is triple-bogey (par + 3)
+	GOLFMaxScoreTypeQuadrupleBogey,			//	Maximum returned score is quadruple-bogey (par + 4)
+	GOLFMaxScoreTypeQuintupleBogey,			//	Maximum returned score is quintuple-bogey (par + 5)
+	GOLFMaxScoreTypeWithoutHandicap = GOLFMaxScoreTypeQuintupleBogey,
+	GOLFMaxScoreTypeSextupleBogey,			//	Maximum returned score is sextuple-bogey (par + 6)
+	GOLFMaxScoreTypeNetBogey = 11,			//	Maximum returned score equivalent to net bogey (par + 1 + strokes)
+	GOLFMaxScoreTypeNetDoubleBogey,			//	Maximum returned score equivalent to net double-bogey (par + 2 + strokes)
+	GOLFMaxScoreTypeNetTripleBogey,			//	Maximum returned score equivalent to net triple-bogey (par + 3 + strokes)
+	GOLFMaxScoreTypeNetQuadrupleBogey,		//	Maximum returned score equivalent to net quadruple-bogey (par + 4 + strokes)
+	GOLFMaxScoreTypeDoublePar = 21,			//	Maximum returned score is twice par (par x 2)
+	GOLFMaxScoreTypeTriplePar,				//	Maximum returned score is 3 times par (par x 3)
+	GOLFMaxScoreTypeFixedLimit = 51,		//	Maximum returned score is a fixed specified number (10)
+	GOLFMaxScoreTypeFixed_6_9_12,			//	Maximum returned score is fixed maximum (6 on par 3, 9 on par 4, 12 on par 5 or higher)
+	GOLFMaxScoreTypeUnknown = 99			//	Maximum returned score unknown
 };
 
 typedef NS_ENUM(NSUInteger, GOLFPlayType) {
 	MedalPlayType = 1,					//	Medal play												(1)
 	SelectedHolesPlayType,				//	Medal play with selected holes							(2)
+	MaximumScorePlayType,				//	Medal play with limited hole scores	(WHS)				(3)
 	StablefordPlayType = 10,			//	Stableford												(10)
 	FirstStablefordPlayType = StablefordPlayType,
 	ModifiedStablefordPlayType,			//	Modified Stableford										(11)
@@ -432,3 +437,11 @@ NSString * NSStringFromTiebreakerOutcome(GOLFTiebreakerOutcome outcome, NSNumber
 //	Returns a localized description of the reason a tiebreaker was invoked ("last 6 holes", "complete round", etc.)
 //	If available, provide a numeric result that identifies the hole (or handicap, etc.) involved in the tiebreak.
 
+
+//=================================================================
+//	NSStringFromMaxScoreType(type, descriptiveText)
+//=================================================================
+NSString * NSStringFromMaxScoreType(GOLFMaxScoreType type, NSString **descriptiveText);
+//	Returns a localized title/name of a WHS Maximum Score method ("Net Double Bogey", "Triple Par", etc.) and
+//	optionally (when the address of descriptiveText is provided), a localized description of the technique
+//	("par plus 2 plus your strokes", "three times par at the hole", etc.)
