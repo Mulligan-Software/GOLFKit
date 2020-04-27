@@ -407,7 +407,7 @@ NSString * NSStringFromPlayType(GOLFPlayType playType, NSDictionary *info, NSStr
 //	bestRoundsN			NSNumber *		Integer N of TeamBestNPlayType (Team total of best N rounds) - default: 4
 //	maxScoreMethod		NSNumber *		GOLFMaxScoreMethod identifying MaxScore allowance calculation
 
-//		Play/Competiton Types
+//		Play/Competition Types
 //
 //		Type							  Numeric		Play Type
 //		----------------------------	-------------	-----------------------------------------------------

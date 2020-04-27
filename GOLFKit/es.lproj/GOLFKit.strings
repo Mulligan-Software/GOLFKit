@@ -77,6 +77,7 @@
 "TERM_FLAGSTICK" = "flagstick";
 "TERM_FLIGHT" = "flight";
 "TERM_FLIGHT_PLURAL" = "flights";
+"TERM_FOR" = "para";	// Net FOR Best-Ball
 "TERM_FOR_ABOUT" = "por";
 "TERM_FOURBALL" = "Four-Ball";
 "TERM_FOURSOMES" = "Foursomes";
@@ -113,6 +114,7 @@
 "TERM_MEDALMATCH" = "Match Medalla";
 "TERM_METER_PLURAL" = "metros";
 "TERM_METER_PLURAL_ABBR" = "Mtr.";
+"TERM_METHOD" = "método";
 "TERM_MODIFIER" = "modificador";
 "TERM_MORE" = "más";
 "TERM_MOVE" = "trasladar";
@@ -171,10 +173,13 @@
 "TERM_SCORECARD_PLURAL_SHORT" = "tarjetas";
 "TERM_SCORING" = "puntuación";
 "TERM_SCRAMBLE" = "Scramble";
+"TERM_SECOND" = "segundo";
+"TERM_SECOND_PLURAL" = "segundos";
 "TERM_SELECTED" = "seleccionado";
 "TERM_SETTINGS" = "ajustes";
 "TERM_SIDE" = "lado";
 "TERM_SIXPT" = "6-Puntos";
+"TERM_SKIN_PLURAL" = "skins";
 "TERM_SLOPE" = "slope";
 "TERM_STABLEFORD" = "Stableford";
 "TERM_STATUS" = "estado";
@@ -492,8 +497,9 @@
 "TITLE_MASS_CONVERT_%@" = "Cambiar el Método de Handicap de los Jugadores - %@";
 "TITLE_MATCH_PLAY" = "Match Play";
 "TITLE_MATCH_TYPE" = "Tipo de Partido";
+"TITLE_MAX_SCORE_HOLE_LIMIT/2" = "Puntaje Max\nLimite de Hoyo";
 "TITLE_MAX_HANDICAP_MEN" = "Máximo handicap estándar para caballeros";
-"TITLE_MAXIMUM_SCORE" = "Resultado máximo";
+"TITLE_MAXIMUM_SCORE" = "Puntaje Máximo";
 "TITLE_MENS_HANDICAP" = "Handicap - Caballeros";
 "TITLE_MOVE_ROUND_DOWN" = "Mover la ronda hacia abajo";
 "TITLE_MOVE_ROUND_UP" = "Mover la ronda hacia arriba";

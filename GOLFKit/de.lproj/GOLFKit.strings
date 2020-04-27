@@ -77,6 +77,7 @@
 "TERM_FLAGSTICK" = "Flaggenstock";
 "TERM_FLIGHT" = "Pulk";
 "TERM_FLIGHT_PLURAL" = "Pulke";
+"TERM_FOR" = "für";	// Net FOR Best-Ball
 "TERM_FOR_ABOUT" = "über";
 "TERM_FOURBALL" = "Vier-Ball";
 "TERM_FOURSOMES" = "Viererspiel";
@@ -113,6 +114,7 @@
 "TERM_MEDALMATCH" = "Match Medaille";
 "TERM_METER_PLURAL" = "Meter";
 "TERM_METER_PLURAL_ABBR" = "Mtr.";
+"TERM_METHOD" = "Methode";
 "TERM_MODIFIER" = "Modifikator";
 "TERM_MORE" = "Mehr";
 "TERM_MOVE" = "bewegen";
@@ -171,10 +173,13 @@
 "TERM_SCORECARD_PLURAL_SHORT" = "Scorekarten";
 "TERM_SCORING" = "Wertung";
 "TERM_SCRAMBLE" = "Gerangel";
+"TERM_SECOND" = "Sekunde";
+"TERM_SECOND_PLURAL" = "Sekunden";
 "TERM_SELECTED" = "ausgewält";
 "TERM_SETTINGS" = "Einstellungen";
 "TERM_SIDE" = "Seite";
 "TERM_SIXPT" = "6-Punkte";
+"TERM_SKIN_PLURAL" = "Skins";
 "TERM_SLOPE" = "Slope";
 "TERM_STABLEFORD" = "Stableford";
 "TERM_STATUS" = "Status";
@@ -492,6 +497,7 @@
 "TITLE_MASS_CONVERT_%@" = "Handicap-Methode der Spieler ändern - %@";
 "TITLE_MATCH_PLAY" = "Matchplay";
 "TITLE_MATCH_TYPE" = "Matchtyp";
+"TITLE_MAX_SCORE_HOLE_LIMIT/2" = "Punktzahl\nMax Lochlimit";
 "TITLE_MAX_HANDICAP_MEN" = "Maximal Standard-Handicap für Herren";
 "TITLE_MAXIMUM_SCORE" = "Höchste Punktzahl";
 "TITLE_MENS_HANDICAP" = "Handicap der Herren";

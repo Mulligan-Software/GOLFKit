@@ -164,8 +164,7 @@ typedef NS_OPTIONS(NSUInteger, GOLFWageringTrashOption) {
 //	GOLFWageringMatchStylesArray()
 //=================================================================
 NSArray * GOLFWageringMatchStylesArray(void);
-//	returns an NSArray of NSDictionarys with info about Handicap styles
-//	used in Match Play and wagering
+//	returns an NSArray of NSDictionarys with info about Handicap styles used in Match Play and wagering
 //
 //	key					type		description
 //	------------------	----------	--------------------------------------------------
@@ -213,15 +212,6 @@ NSString * NSStringFromTrashOption(GOLFWageringTrashOption trashOption, NSString
 
 
 //=================================================================
-//	NSStringFromGOLFWageringScoringSource(sourceCode)
-//=================================================================
-//NSString * NSStringFromGOLFWageringScoringSource(GOLFWageringScoringSource sourceCode);
-//	returns a localized name or title of a match style designated by styleCode
-//	When an NSString * designated by descriptiveText is supplied, it contains
-//	localized additional descriptive text about the match style
-
-
-//=================================================================
 //	NSStringFromGOLFWageringHoleStrokes(holeStrokes)
 //=================================================================
 NSString * NSStringFromGOLFWageringHoleStrokes(GOLFHandicapStrokes holeStrokes);
@@ -235,8 +225,7 @@ NSString * NSStringFromGOLFWageringHoleStrokes(GOLFHandicapStrokes holeStrokes);
 //	GOLFWageringStrokesFromStringByIndex(strokesString, holeIndex)
 //=================================================================
 GOLFHandicapStrokes GOLFWageringStrokesFromStringByIndex(NSString *strokesString, NSUInteger holeIndex);
-//	returns handicap strokes applied (or to be applied) to determine the
-//	match play score used at a hole.  
+//	returns handicap strokes applied (or to be applied) to determine the match play score used at a hole.  
 //	Generally strokesString is a 9 or 18 character string of integer characters,
 //	But alphabetic characters indicate negative values (plus handicaps) - ("A" == -1)
 

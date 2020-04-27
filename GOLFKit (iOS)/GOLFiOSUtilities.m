@@ -20,3 +20,12 @@ UIImage * GOLFActivitiesPrintScorecardIcon(void) {
 	return scorecardIcon;
 }
 
+//=================================================================
+//	GOLFShareButtonIcon()
+//=================================================================
+UIImage * GOLFShareButtonIcon(void) {
+	NSBundle *ourBundle = GOLFKitBundle();
+	UIImage *shareButtonIcon = [UIImage imageNamed:@"GOLFShareButton" inBundle:ourBundle compatibleWithTraitCollection:nil];
+
+	return shareButtonIcon;
+}

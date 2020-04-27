@@ -62,6 +62,10 @@ NSString * _Nonnull GOLFTeeColorNameFromTeeColorIndex(GOLFTeeColorIndex proposed
 //	Returns the localized name of the tee whose colorIndex matches proposedColorIndex, like "Blue", "Rouge et Blanc", etc.
 //	Can also return "Custom", "Unknown", "Combo", "Add" and "All" for special cases
 
+NSRange GOLFLongestRangeOfAnyTeeColorNameInTeeName(NSString * _Nonnull teeName);
+//	Returns the longest occurrance of any standard tee color name within the provided teeName string.
+//	Returns NSNotFound in range.location if no tee color name is found in the string.
+
 GOLFTeeImage * _Nonnull GOLFTeeMarkerImageFromSpecs(GOLFTeeColorIndex teeColorIndex, GOLFTeeMarkerImageSize imageSize, GOLFColor * _Nullable teeColor);
 //	Returns a tee marker image of the specified size associated with the teeColorIndex provided
 //	When teeColorIndex is GOLFTeeColorCombo, GOLFTeeColorAdd or GOLFTeeColorAll, returns the special tee icon

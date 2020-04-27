@@ -534,7 +534,7 @@ GOLFTeeColorIndex GOLFTeeColorIndexFromTeeColor(GOLFColor *teeColor) {
 }
 
 //=================================================================
-//	GOLFTeeColorNameFromTeeColorIndex
+//	GOLFTeeColorNameFromTeeColorIndex(colorIndex)
 //=================================================================
 NSString * GOLFTeeColorNameFromTeeColorIndex(GOLFTeeColorIndex proposedColorIndex) {
 	if ((proposedColorIndex < 0) || (proposedColorIndex == kNotATeeColorIndex) || (proposedColorIndex == GOLFTeeColorUnknown))
@@ -570,6 +570,26 @@ NSString * GOLFTeeColorNameFromTeeColorIndex(GOLFTeeColorIndex proposedColorInde
 	}
 
 	return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_UNKNOWN");
+}
+
+//=================================================================
+//	GOLFLongestRangeOfAnyTeeColorNameInTeeName(teeName)
+//=================================================================
+NSRange GOLFLongestRangeOfAnyTeeColorNameInTeeName(NSString * _Nonnull teeName) {
+	NSRange longestRange = NSMakeRange(NSNotFound, 0);
+	NSString *testName = [teeName stringByAppendingString:@" "];	//	Pad with a space
+	
+	for (NSDictionary *colorDict in GOLFStandardTeeColorArray()) {
+		NSString *teeColorName = [[colorDict objectForKey:@"teeColorName"] stringByAppendingString:@" "];	//	Pad with trailing space
+		NSRange testRange = [testName rangeOfString:teeColorName options:NSCaseInsensitiveSearch];
+		if (testRange.location != NSNotFound) {
+			NSUInteger foundLength = testRange.length - 1;	//	less the matching ending space
+			if (foundLength > longestRange.length) {
+				longestRange = NSMakeRange(testRange.location, foundLength);
+			}
+		}
+	}
+	return longestRange;	//	No tee color name found
 }
 
 //=================================================================

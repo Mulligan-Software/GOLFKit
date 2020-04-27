@@ -77,6 +77,7 @@
 "TERM_FLAGSTICK" = "flagstick";
 "TERM_FLIGHT" = "flight";
 "TERM_FLIGHT_PLURAL" = "flights";
+"TERM_FOR" = "for";	// Net FOR Best-Ball
 "TERM_FOR_ABOUT" = "for";
 "TERM_FOURBALL" = "Four-Ball";
 "TERM_FOURSOMES" = "Foursomes";
@@ -113,6 +114,7 @@
 "TERM_MEDALMATCH" = "Medal Match";
 "TERM_METER_PLURAL" = "meters";
 "TERM_METER_PLURAL_ABBR" = "Mtr.";
+"TERM_METHOD" = "method";
 "TERM_MODIFIER" = "modifier";
 "TERM_MORE" = "more";
 "TERM_MOVE" = "move";
@@ -171,10 +173,13 @@
 "TERM_SCORECARD_PLURAL_SHORT" = "scorecards";
 "TERM_SCORECARD" = "scorecard";
 "TERM_SCORING" = "scoring";
+"TERM_SECOND" = "second";
+"TERM_SECOND_PLURAL" = "seconds";
 "TERM_SELECTED" = "selected";
 "TERM_SETTINGS" = "settings";
 "TERM_SIDE" = "side";
 "TERM_SIXPT" = "6-Point";
+"TERM_SKIN_PLURAL" = "skins";
 "TERM_SLOPE" = "slope";
 "TERM_STABLEFORD" = "Stableford";
 "TERM_STATUS" = "status";
@@ -493,6 +498,7 @@
 "TITLE_MATCH_PLAY" = "Match Play";
 "TITLE_MATCH_TYPE" = "Match Type";
 "TITLE_MAX_HANDICAP_MEN" = "Maximum standard handicap for men";
+"TITLE_MAX_SCORE_HOLE_LIMIT/2" = "Max Score\nHole Limit";
 "TITLE_MAXIMUM_SCORE" = "Maximum Score";
 "TITLE_MENS_HANDICAP" = "Men’s Handicap";
 "TITLE_MOVE_ROUND_DOWN" = "Move Round Down";

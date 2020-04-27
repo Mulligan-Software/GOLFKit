@@ -13,3 +13,6 @@
 UIImage * GOLFActivitiesPrintScorecardIcon(void);
 //	The icon to appear in an iOS Share sheet for a Scorecard printing action
 
+UIImage * GOLFShareButtonIcon(void);
+//	A substitute for UIApplicationShortcutIconTypeShare
+
