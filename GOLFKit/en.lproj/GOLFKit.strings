@@ -83,6 +83,7 @@
 "TERM_FOURSOMES" = "Foursomes";
 "TERM_FROM" = "from";
 "TERM_FRONT" = "front";
+"TERM_GAIN" = "gain";
 "TERM_GENDER" = "gender";
 "TERM_GOLF" = "golf";
 "TERM_GREENSOMES" = "Greensomes";
@@ -135,6 +136,7 @@
 "TERM_NUMBER_PLURAL" = "numbers";
 "TERM_NUMBER_PLURAL_ABBR" = "nos.";
 "TERM_OPEN" = "open";
+"TERM_OPT_OUT" = "opt out";
 "TERM_OVERALL" = "overall";
 "TERM_PAIRING" = "pairing";
 "TERM_PAIRING_PLURAL" = "pairings";
@@ -155,8 +157,9 @@
 "TERM_QUIT" = "quit";
 "TERM_QUOTA" = "quota";
 "TERM_RANK" = "rank";
-"TERM_RATINGS" = "ratings";
-"TERM_RATINGS_ABBR" = "ratings";
+"TERM_RATING" = "rating";
+"TERM_RATING_PLURAL" = "ratings";
+"TERM_RATING_PLURAL_ABBR" = "ratings";
 "TERM_REVERSERITZ" = "Reverse Ritz";
 "TERM_RITZ" = "Ritz";
 "TERM_ROUND" = "round";
@@ -178,6 +181,7 @@
 "TERM_SELECTED" = "selected";
 "TERM_SETTINGS" = "settings";
 "TERM_SIDE" = "side";
+"TERM_SIDE_PLURAL" = "sides";
 "TERM_SIXPT" = "6-Point";
 "TERM_SKIN_PLURAL" = "skins";
 "TERM_SLOPE" = "slope";
@@ -196,6 +200,7 @@
 "TERM_THEME" = "theme";
 "TERM_THROUGH" = "through";
 "TERM_TIE" = "tie";
+"TERM_TIE_ABBR" = "T";
 "TERM_TIEBREAKER" = "tiebreaker";
 "TERM_TIEBREAKER_PLURAL" = "tiebreakers";
 "TERM_TIPS" = "tips";
@@ -511,6 +516,7 @@
 "TITLE_NINE_HOLES" = "9 Holes";
 "TITLE_NO_STROKES" = "no strokes";
 "TITLE_OPEN_SCORECARD" = "Open the Scorecard";
+"TITLE_OPT_OUT_SKINS" = "Opt Out of Skins";
 "TITLE_OPTIONS" = "Options";
 "TITLE_ORGANIZED_COMPETITION" = "Organized Competition";	//	The WHS phrase for "Tournament" play
 "TITLE_OK_BUTTON" = "OK";

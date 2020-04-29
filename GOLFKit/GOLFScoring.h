@@ -132,9 +132,13 @@ typedef NS_ENUM(NSUInteger, GOLFPlayType) {
 	#define IS_ANY_PLAYER_PLAY_TYPE(_type)	((((_type) >= MedalPlayType) && ((_type) <= LastPlayerPlayType)) ? YES : NO)
 #endif
 
-#if !defined(IS_NON_MEDAL_PLAYER_PLAY_TYPE)
-	#define IS_NON_MEDAL_PLAYER_PLAY_TYPE(_type)	((((_type) >= SelectedHolesPlayType) && ((_type) <= LastPlayerPlayType)) ? YES : NO)
+#if !defined(IS_ANY_MEDAL_PLAYER_PLAY_TYPE)
+	#define IS_ANY_MEDAL_PLAYER_PLAY_TYPE(_type)	((((_type) >= MedalPlayType) && ((_type) <= MaximumScorePlayType)) ? YES : NO)
 #endif
+
+//#if !defined(IS_NON_MEDAL_PLAYER_PLAY_TYPE)
+//	#define IS_NON_MEDAL_PLAYER_PLAY_TYPE(_type)	((((_type) >= SelectedHolesPlayType) && ((_type) <= LastPlayerPlayType)) ? YES : NO)
+//#endif
 
 #if !defined(IS_MEDAL_OR_STABLEFORD_PLAY_TYPE)
 	#define IS_MEDAL_OR_STABLEFORD_PLAY_TYPE(_type)	((((_type) >= MedalPlayType) && ((_type) <= LastStablefordPlayType)) ? YES : NO)
