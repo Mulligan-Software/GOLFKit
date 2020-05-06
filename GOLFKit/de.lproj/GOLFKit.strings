@@ -104,6 +104,7 @@
 "TERM_LEADERBOARD" = "Bestenliste";
 "TERM_LIMITED" = "limitiert";
 "TERM_LOCATE" = "suchen";
+"TERM_LOCKED" = "gesperrt";
 "TERM_LOOKUP" = "nachsehen";
 "TERM_LOW" = "klein";	//	As in "low handicap"
 "TERM_MALE" = "männlich";
@@ -195,8 +196,8 @@
 "TERM_TEAM_PLURAL" = "Mannschaften";
 "TERM_TEAMMATE" = "Mannschaftskamerad";
 "TERM_TEAMMATE_PLURAL" = "Teamkollegen";
-"TERM_TEE" = "Abschlag";
-"TERM_TEE_PLURAL" = "Abschläge";
+"TERM_TEE" = "Tee";
+"TERM_TEE_PLURAL" = "Tees";
 "TERM_THEME" = "Thema";
 "TERM_THROUGH" = "während";
 "TERM_TIE" = "Remis";
@@ -212,6 +213,7 @@
 "TERM_TREND" = "Trend";
 "TERM_TYPE" = "Art";
 "TERM_UNKNOWN" = "unbekannt";
+"TERM_UNLOCKED" = "entsperrt";
 "TERM_UNNAMED" = "namenlos";
 "TERM_USE" = "verwenden";
 "TERM_USED" = "benutzt";
@@ -264,7 +266,7 @@
 "GOLF_TEE_COLOR_NAME_PGA" = "PGA Tour";	//	Custom tee
 "GOLF_TEE_COLOR_NAME_USGA" = "USGA";	//	Custom tee
 "GOLF_TEE_COLOR_NAME_COMBO" = "Combo";
-"GOLF_TEE_COLOR_NAME_GENERIC" = "Ein Abschlag";
+"GOLF_TEE_COLOR_NAME_GENERIC" = "Ein Tee";
 "GOLF_TEE_COLOR_NAME_UNKNOWN" = "unbekannte";
 "GOLF_TEE_COLOR_NAME_ADD" = "ergänzen";
 "GOLF_TEE_COLOR_NAME_ALL" = "alle";
@@ -320,14 +322,14 @@
 "TITLE_ADVANCED_DUPLICATES" = "Verbieten Sie doppelte Loch-Handicaps";
 "TITLE_ADVANCED_MULTIPLE_PRESSES" = "Verbieten mehrfache Pressen";
 "TITLE_ADVANCED_9_HOLE_HANDICAPS" = "Erfordert 9-Loch Handicaps";
-"TITLE_ADVANCED_REFERENCE_TEES" = "Zulassen Rating „Referenz“ Abschläge";
+"TITLE_ADVANCED_REFERENCE_TEES" = "Zulassen Rating „Referenz“ Tees";
 "TITLE_ALLOWANCE" = "Zustimmung";
 "TITLE_ALWAYS_DARK" = "Immer Dunkel";
 "TITLE_ALWAYS_LIGHT" = "Immer Leicht";
 "TITLE_ARNIE" = "Arnie";
 "TITLE_ASPHALT" = "Asphalt";
 "TITLE_ASSIGN_ROUND_TO" = "Zuweisen eine Runde";
-"TITLE_ASSIGN_TEES" = "Zuweisen Start-Abschläge";
+"TITLE_ASSIGN_TEES" = "Zuweisen Start-Tees";
 "TITLE_ASSIGN_TIMES" = "Zuweisen Anfangszeit";
 "TITLE_AUTHORITY_OR_METHOD" = "Behörde / System";
 "TITLE_AUTOMATIC_PRESSES" = "Automatische Pressen";
@@ -640,6 +642,7 @@
 "FORMAT_CLICKORTAP_%@_TO_SELECT" = "%@ um auszuwählen…";
 "FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST" = "%@ Sie auf die Nummer, un sie anzupassen";
 "FORMAT_CLICKORTAP_%@_NUMBER_%@_TO_ADJUST" = "%@ Sie auf die Nummer (%@), un sie anzupassen"; 
+"FORMAT_COLOR_%@_TEES" = "%@ Tees";
 "FORMAT_COURSE_HANDICAP_%@_TABLE" = "%@ Tabelle";
 "FORMAT_CURRENT_%@_TITLE" = "aktuelle %@";
 "FORMAT_CURRENT_%@_TITLE_PLURAL" = "aktuellen %@";
@@ -714,7 +717,7 @@
 "BLURB_REMOTE_ICLOUD" = "Scores können aus Scoring-Datendateien importiert oder aktualisiert werden, die von Geräten, die mit derselben Apple ID wie für iCloud auf diesem Computer verwendet werden, an iCloud gesendet werden.  Wählen Sie „Scores von iCloud…“ im Menü Ablage / Importieren, um die eingehenden Scores zu überprüfen.";
 "BLURB_REQUIRE_9_HOLE_HANDICAPS" = "Auf GolfPlätzen mit 3 oder mehr Neunen ist es erforderlich, dass Loch-Handicaps für jeweils Neun einzigartige Werte von 1 bis 9 sind.";
 "BLURB_PROHIBIT_MULTIPLE_PRESSES" = "Wenn in Spielen eine Wette zuvor (manuell oder automatisch) gepresst wurde, verbieten Sie das Hinzufügen einer manuellen Presse zu dieser Wette.";
-"BLURB_ALLOW_REFERENCE_TEES" = "Wenn Sie Spielen-Handicaps für Unterschiede in den Course Rating anpassen, erlauben Sie die Angabe von „referenz“ Abschläge, die für die Berechnung von Anpassung für Herren und/oder Damen verwendet werden.";
+"BLURB_ALLOW_REFERENCE_TEES" = "Wenn Sie Spielen-Handicaps für Unterschiede in den Course Rating anpassen, erlauben Sie die Angabe von „referenz“ Tees, die für die Berechnung von Anpassung für Herren und/oder Damen verwendet werden.";
 "BLURB_REVIEW_HANDICAP_RECORDS" = "Untersuchen Sie zuvor berechnete Handicap-Datensätze in Tabellenform mit Funktionen zum Entfernen ausgewählter Daten.";
 
 "DESCRIPTION_3_BY_6" = "Löcher 1-6, 7-11 und 12-18";
@@ -943,8 +946,8 @@
 "DOWNWARD_ARROW" = "↓";
 "ELLIPSIS" = "…";
 "FOOTNOTE_CHARACTER" = "†";		//	Special character
-"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Ein %@ Tabelle (%@) wird verwendet, um ein %@, ausgestellt von den Golfclub oder ermächtigt Golf Verien, um einen %@ zu konvertieren basierend auf der %@ für eine bestimmte Gruppe von Abschläge.";
-"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "Ein %@ Tabelle (%@) wird verwendet, um ein %@, ausgestellt von den Golfclub oder ermächtigt Golf Verien, um einen %@ zu konvertieren für eine bestimmte Gruppe von Abschläge.";
+"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@" = "Ein %@ Tabelle (%@) wird verwendet, um ein %@, ausgestellt von den Golfclub oder ermächtigt Golf Verien, um einen %@ zu konvertieren basierend auf der %@ für eine bestimmte Gruppe von Tees.";
+"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@" = "Ein %@ Tabelle (%@) wird verwendet, um ein %@, ausgestellt von den Golfclub oder ermächtigt Golf Verien, um einen %@ zu konvertieren für eine bestimmte Gruppe von Tees.";
 "IN_ENGLISH" = "auf Englisch";		//	Users' Guide notation
 "ORDINAL_FIRST" = ".";
 "ORDINAL_NTH" = ".";

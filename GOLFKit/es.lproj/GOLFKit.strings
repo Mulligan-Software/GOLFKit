@@ -104,6 +104,7 @@
 "TERM_LEADERBOARD" = "tabla de clasificación";
 "TERM_LIMITED" = "limitado";
 "TERM_LOCATE" = "ubicar";
+"TERM_LOCKED" = "bloqueado";
 "TERM_LOOKUP" = "buscar";
 "TERM_LOW" = "bajo";	//	As in "low handicap"
 "TERM_MALE" = "masculino";
@@ -212,6 +213,7 @@
 "TERM_TREND" = "tendencia";
 "TERM_TYPE" = "tipo";
 "TERM_UNKNOWN" = "ignoto";
+"TERM_UNLOCKED" = "desbloqueado";
 "TERM_UNNAMED" = "sin nobre";
 "TERM_USE" = "usar";
 "TERM_USED" = "utilizado";
@@ -640,6 +642,7 @@
 "FORMAT_CLICKORTAP_%@_TO_SELECT" = "%@ para seleccionar…";
 "FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST" = "%@ el número para ajustarlo";
 "FORMAT_CLICKORTAP_%@_NUMBER_%@_TO_ADJUST" = "%@ el número (%@) para ajustarlo";
+"FORMAT_COLOR_%@_TEES" = "Tees %@";
 "FORMAT_COURSE_HANDICAP_%@_TABLE" = "Tabla %@";
 "FORMAT_CURRENT_%@_TITLE" = "%@ Actual";
 "FORMAT_CURRENT_%@_TITLE_PLURAL" = "%@ Actuales";

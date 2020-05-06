@@ -29,7 +29,7 @@ typedef NS_ENUM(NSUInteger, GOLFAllowanceType) {
 	AverageCombinedAllowanceType = 20,	//	Average team handicap  (Foursomes)
 	AverageCombined80AllowanceType,		//	80% of average team handicap  (Foursomes w/ selected drive, Scramble)
 	Aggregate3EighthsAllowanceType,		//	3/8 of aggregate (37.5% of average) team handicap  (American Foursomes)
-	DifferenceAllowanceType = 30,		//	Handicap Difference vs Opponent  (Single Player or Team)
+	DifferenceAllowanceType = 30,		//	Handicap Difference vs Opponent  (Single Player or Teammates intra-Scorecard)
 	QuotaAllowanceType,					//	Point Quota (36 / 38 / 18 less Full handicap)		(31)
 	ScrambleA50AllowanceType = 40,		//	50% of A Player  (2+ Player Scramble)
 	ScrambleA35B15AllowanceType,		//	35% of A Player + 15% of B Player  (2+ Player Scramble)
@@ -136,9 +136,9 @@ typedef NS_ENUM(NSUInteger, GOLFPlayType) {
 	#define IS_ANY_MEDAL_PLAYER_PLAY_TYPE(_type)	((((_type) >= MedalPlayType) && ((_type) <= MaximumScorePlayType)) ? YES : NO)
 #endif
 
-//#if !defined(IS_NON_MEDAL_PLAYER_PLAY_TYPE)
-//	#define IS_NON_MEDAL_PLAYER_PLAY_TYPE(_type)	((((_type) >= SelectedHolesPlayType) && ((_type) <= LastPlayerPlayType)) ? YES : NO)
-//#endif
+#if !defined(IS_NON_MEDAL_PLAYER_PLAY_TYPE)
+	#define IS_NON_MEDAL_PLAYER_PLAY_TYPE(_type)	((((_type) > MedalPlayType) && ((_type) <= LastPlayerPlayType)) ? YES : NO)
+#endif
 
 #if !defined(IS_MEDAL_OR_STABLEFORD_PLAY_TYPE)
 	#define IS_MEDAL_OR_STABLEFORD_PLAY_TYPE(_type)	((((_type) >= MedalPlayType) && ((_type) <= LastStablefordPlayType)) ? YES : NO)

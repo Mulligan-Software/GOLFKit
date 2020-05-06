@@ -200,6 +200,8 @@ GOLFImage * GOLFImageWithName(NSString *imageName) {
 NSString * NSStringFromPlayingHandicap(GOLFPlayingHandicap playingHandicap) {
 	if (playingHandicap == kNotAPlayingHandicap) {
 		return @"kNotAPlayingHandicap";
+	} else if (playingHandicap < 0) {
+		return [NSString stringWithFormat:@"+%ld", (long)-playingHandicap];
 	} else {
 		return [NSString stringWithFormat:@"%ld", (long)playingHandicap];
 	}
@@ -211,8 +213,10 @@ NSString * NSStringFromPlayingHandicap(GOLFPlayingHandicap playingHandicap) {
 NSString * NSStringFromHandicapIndex(GOLFHandicapIndex handicapIndex) {
 	if (handicapIndex == kNotAHandicapIndex) {
 		return @"kNotAHandicapIndex";
+	} else if (handicapIndex >= 0.0) {
+		return [NSString localizedStringWithFormat:@"%1.1f", handicapIndex];
 	} else {
-		return [NSString stringWithFormat:@"%1.1f", handicapIndex];
+		return [NSString localizedStringWithFormat:@"+%1.1f", -handicapIndex];
 	}
 }
 

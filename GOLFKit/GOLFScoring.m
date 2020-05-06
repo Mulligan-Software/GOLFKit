@@ -179,6 +179,7 @@ NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictiona
 	//	handicapAuthority	GOLFHandicapAuthority *		The handicap authority associated with this presentation (default provided if missing)
 	//	short				NSNumber *					BOOL indicating need for short (abbreviated?) return (if available)
 	//	allowancePct		NSNumber *					The allowance percentage (of 100) for the SpecifiedPercentAllowanceType (default provided if missing)
+	//	lowHandicap			NSNumber *					GOLFPlayingHandicap for the base (low) handicap player used for DifferenceAllowanceType
 
 	//		Allowance Types
 	//
@@ -316,10 +317,20 @@ NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictiona
 			return GOLFLocalizedString(@"ALLOWANCE_TYPE_AGGREGATE_3_8");
 
 		case DifferenceAllowanceType:
-			if (descriptiveText) {
-				*descriptiveText = GOLFLocalizedString(@"ALLOWANCE_TYPE_DIFFERENCE_DESC");
+			{
+				if (descriptiveText) {
+					*descriptiveText = GOLFLocalizedString(@"ALLOWANCE_TYPE_DIFFERENCE_DESC");
+				}
+				NSString *fullTitle = GOLFLocalizedString(@"ALLOWANCE_TYPE_DIFFERENCE");
+				NSNumber *workingNumber = (info ? [info objectForKey:@"lowHandicap"] : nil);
+				if (workingNumber) {
+					GOLFPlayingHandicap lowHdcp = [workingNumber playingHandicapValue];
+					if (lowHdcp != kNotAPlayingHandicap) {
+						return [fullTitle stringByAppendingString:[NSString stringWithFormat:@" (v. %@)", NSStringFromPlayingHandicap(lowHdcp)]];
+					}
+				}
+				return fullTitle;
 			}
-			return GOLFLocalizedString(@"ALLOWANCE_TYPE_DIFFERENCE");
 
 		case ScrambleA50AllowanceType:
 			if (descriptiveText) {
