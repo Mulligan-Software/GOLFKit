@@ -261,31 +261,31 @@ NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictiona
 			if (descriptiveText) {
 				*descriptiveText = [NSString stringWithFormat:@"%@ %@", [GOLFLocalizedString(@"OF") lowercaseString], GOLFPlayingHandicapTitle(methodIndex, NO)];
 			}
-			return GOLFLocalizedString(@"ALLOWANCE_TYPE_MEN_90_WOMEN_95");
+			return (needShortText ? GOLFLocalizedString(@"ALLOWANCE_TYPE_MEN_90_WOMEN_95_ABBR") : GOLFLocalizedString(@"ALLOWANCE_TYPE_MEN_90_WOMEN_95"));
 
 		case Men80Women90AllowanceType:
 			if (descriptiveText) {
 				*descriptiveText = [NSString stringWithFormat:@"%@ %@", [GOLFLocalizedString(@"OF") lowercaseString], GOLFPlayingHandicapTitle(methodIndex, NO)];
 			}
-			return GOLFLocalizedString(@"ALLOWANCE_TYPE_MEN_80_WOMEN_90");
+			return (needShortText ? GOLFLocalizedString(@"ALLOWANCE_TYPE_MEN_80_WOMEN_90_ABBR") : GOLFLocalizedString(@"ALLOWANCE_TYPE_MEN_80_WOMEN_90"));
 
 		case A60B40AllowanceType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"ALLOWANCE_TYPE_A_PLAYER_60_B_40_DESC");
 			}
-			return GOLFLocalizedString(@"ALLOWANCE_TYPE_A_PLAYER_60_B_40");
+			return (needShortText ? GOLFLocalizedString(@"ALLOWANCE_TYPE_A_PLAYER_60_B_40_ABBR") : GOLFLocalizedString(@"ALLOWANCE_TYPE_A_PLAYER_60_B_40"));
 
 		case A50B20AllowanceType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"ALLOWANCE_TYPE_A_PLAYER_50_B_20_DESC");
 			}
-			return GOLFLocalizedString(@"ALLOWANCE_TYPE_A_PLAYER_50_B_20");
+			return (needShortText ? GOLFLocalizedString(@"ALLOWANCE_TYPE_A_PLAYER_50_B_20_ABBR") : GOLFLocalizedString(@"ALLOWANCE_TYPE_A_PLAYER_50_B_20"));
 
 		case SpecifiedPercentAllowanceType:
 			{
 				NSNumber *workingNumber = (info ? [info objectForKey:@"allowancePct"] : nil);
 				NSInteger pct = (workingNumber ? [workingNumber integerValue] : GOLFDefaultSpecifiedPercentageAllowance);
-				NSString *shortPct = [NSString stringWithFormat:@"%ld%%", (long)pct];
+				NSString *shortPct = [NSString stringWithFormat:@"%ld%% %@", (long)pct, GOLFLocalizedString(@"TITLE_HANDICAP_ABBR")];
 				if (descriptiveText) {
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 					NSString *clickOrTap = [GOLFLocalizedString(@"TERM_TAP") capitalizedString];
@@ -302,19 +302,19 @@ NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictiona
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"ALLOWANCE_CALCULATED_TEAM_HANDICAP");
 			}
-			return GOLFLocalizedString(@"ALLOWANCE_TYPE_TEAMMATES_100_AVG");
+			return (needShortText ? GOLFLocalizedString(@"ALLOWANCE_TYPE_TEAMMATES_100_AVG_ABBR") : GOLFLocalizedString(@"ALLOWANCE_TYPE_TEAMMATES_100_AVG"));
 
 		case AverageCombined80AllowanceType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"ALLOWANCE_CALCULATED_TEAM_HANDICAP");
 			}
-			return GOLFLocalizedString(@"ALLOWANCE_TYPE_TEAMMATES_80_AVG");
+			return (needShortText ? GOLFLocalizedString(@"ALLOWANCE_TYPE_TEAMMATES_80_AVG_ABBR") : GOLFLocalizedString(@"ALLOWANCE_TYPE_TEAMMATES_80_AVG"));
 
 		case Aggregate3EighthsAllowanceType:
 			if (descriptiveText) {
 				*descriptiveText = GOLFLocalizedString(@"ALLOWANCE_TYPE_AGGREGATE_3_8_DESC");
 			}
-			return GOLFLocalizedString(@"ALLOWANCE_TYPE_AGGREGATE_3_8");
+			return (needShortText ? GOLFLocalizedString(@"ALLOWANCE_TYPE_AGGREGATE_3_8_ABBR") : GOLFLocalizedString(@"ALLOWANCE_TYPE_AGGREGATE_3_8"));
 
 		case DifferenceAllowanceType:
 			{

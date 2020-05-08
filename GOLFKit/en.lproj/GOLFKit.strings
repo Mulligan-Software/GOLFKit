@@ -631,6 +631,7 @@
 "DESCRIPTION_WOLF" = "Player, optional partner vs. rest at each hole";
 
 //	Formats
+"FORMAT_ADJECTIVE_%@_NOUN_%@" = "%1$@ %2$@";	//	In English, the adjective usually precedes the noun - "sunny day"
 "FORMAT_ADJUSTED_%@_ABBR" = "Adj. %@";
 "FORMAT_AND_%@" = " and %@";
 "FORMAT_APPEARANCE_%@_DEVICE_%@_SYSTEM" = "%@ will adjust its display to accommodate the Display Appearance Settings on your %@.";
@@ -861,14 +862,21 @@
 "ALLOWANCE_TYPE_POINT_QUOTA_DESC" = "Stableford points over/under a handicap-based quota";
 "ALLOWANCE_TYPE_FULL_HANDICAP" = "Full Handicap";
 "ALLOWANCE_TYPE_MEN_90_WOMEN_95" = "Men 90%, Women 95%";
+"ALLOWANCE_TYPE_MEN_90_WOMEN_95_ABBR" = "M 90%/W 95%";
 "ALLOWANCE_TYPE_MEN_80_WOMEN_90" = "Men 80%, Women 90%";
+"ALLOWANCE_TYPE_MEN_80_WOMEN_90_ABBR" = "M 80%/W 90%";
 "ALLOWANCE_TYPE_A_PLAYER_50_B_20" = "50% A player + 20% B player";
+"ALLOWANCE_TYPE_A_PLAYER_50_B_20_ABBR" = "A 50% + B 20%";
 "ALLOWANCE_TYPE_A_PLAYER_50_B_20_DESC" = "Low handicap player 50% + partner 20%";
 "ALLOWANCE_TYPE_A_PLAYER_60_B_40" = "60% A player + 40% B player";
+"ALLOWANCE_TYPE_A_PLAYER_60_B_40_ABBR" = "A 60% + B 40%";
 "ALLOWANCE_TYPE_A_PLAYER_60_B_40_DESC" = "Low handicap player 60% + partner 40%";
 "ALLOWANCE_TYPE_TEAMMATES_100_AVG" = "Average of Teammates";
+"ALLOWANCE_TYPE_TEAMMATES_100_AVG_ABBR" = "Average";
 "ALLOWANCE_TYPE_TEAMMATES_80_AVG" = "80% Avg. of Teammates";
+"ALLOWANCE_TYPE_TEAMMATES_80_AVG_ABBR" = "80% Avg.";
 "ALLOWANCE_TYPE_AGGREGATE_3_8" = "3/8 of Aggregate";
+"ALLOWANCE_TYPE_AGGREGATE_3_8_ABBR" = "3/8 Aggr.";
 "ALLOWANCE_TYPE_AGGREGATE_3_8_DESC" = "3/8 of partners’ total handicaps";
 "ALLOWANCE_TYPE_DIFFERENCE" = "Difference";
 "ALLOWANCE_TYPE_DIFFERENCE_DESC" = "Low handicap competitor plays at scratch";
@@ -892,6 +900,7 @@
 "ALLOWANCE_ONE_TIME_PLAYER" = "One-time calculated player’s handicap";
 "ALLOWANCE_ONE_TIME_TEAM" = "One-time calculated team handicap";
 "ALLOWANCE_PCT_OF_HANDICAP_%@" = "%% of %@";
+
 "%d_PCT_OF_HANDICAP_%@" = "%d%% of %@";
 "OF" = "of";	//	95% of Playing Handicap or "of Course Handicap™"
 

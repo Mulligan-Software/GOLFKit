@@ -631,6 +631,7 @@
 "DESCRIPTION_WOLF" = "Spieler, optionaler Partner vs. der Rest an jedem Loch";
 
 //	Formats
+"FORMAT_ADJECTIVE_%@_NOUN_%@" = "%1$@ %2$@";	//	In German, the adjective usually precedes the noun - "sonniger Tag"
 "FORMAT_ADJUSTED_%@_ABBR" = "Ang. %@";
 "FORMAT_AND_%@" = " und %@";
 "FORMAT_APPEARANCE_%@_DEVICE_%@_SYSTEM" = "%@ passt das Display an die Anzeigeeinstellungen Ihres %@s an.";
@@ -863,14 +864,21 @@
 "ALLOWANCE_TYPE_POINT_QUOTA_DESC" = "Stableford Punkte über/unter einem Handicap-basierte Quote";
 "ALLOWANCE_TYPE_FULL_HANDICAP" = "Ganz Handicap";
 "ALLOWANCE_TYPE_MEN_90_WOMEN_95" = "Herren 90%, Damen 95%";
+"ALLOWANCE_TYPE_MEN_90_WOMEN_95_ABBR" = "H 90%/D 95%";
 "ALLOWANCE_TYPE_MEN_80_WOMEN_90" = "Herren 80%, Damen 90%";
+"ALLOWANCE_TYPE_MEN_80_WOMEN_90_ABBR" = "H 80%/D 90%";
 "ALLOWANCE_TYPE_A_PLAYER_50_B_20" = "50% A Spieler + 20% B Spieler";
+"ALLOWANCE_TYPE_A_PLAYER_50_B_20_ABBR" = "A 50% + B 20%";
 "ALLOWANCE_TYPE_A_PLAYER_50_B_20_DESC" = "Spieler mit niedrigem Handicap 50% + Partner 20%";
 "ALLOWANCE_TYPE_A_PLAYER_60_B_40" = "60% A Spieler + 40% B Spieler";
+"ALLOWANCE_TYPE_A_PLAYER_60_B_40_ABBR" = "A 60% + B 40%";
 "ALLOWANCE_TYPE_A_PLAYER_60_B_40_DESC" = "Spieler mit niedrigem Handicap 60% + Partner 40%";
 "ALLOWANCE_TYPE_TEAMMATES_100_AVG" = "Durchschnitt des Mitspielers";
+"ALLOWANCE_TYPE_TEAMMATES_100_AVG_ABBR" = "Durchschnitt";
 "ALLOWANCE_TYPE_TEAMMATES_80_AVG" = "80% der Durchschnitt des Mitspielers";
+"ALLOWANCE_TYPE_TEAMMATES_80_AVG_ABBR" = "80% Durch.";
 "ALLOWANCE_TYPE_AGGREGATE_3_8" = "3/8 des Aggregats";
+"ALLOWANCE_TYPE_AGGREGATE_3_8_ABBR" = "3/8 Aggr.";
 "ALLOWANCE_TYPE_AGGREGATE_3_8_DESC" = "3/8 der Partner insgesamt Handicaps";
 "ALLOWANCE_TYPE_DIFFERENCE" = "Unterschied";
 "ALLOWANCE_TYPE_DIFFERENCE_DESC" = "Teilnehmer mit dem niedrigen Handicap speilt bei scratch";
@@ -894,6 +902,7 @@
 "ALLOWANCE_ONE_TIME_PLAYER" = "Einmalig errechnete Spieler Handicap";
 "ALLOWANCE_ONE_TIME_TEAM" = "Einmalig errechnete Team-Handicap";
 "ALLOWANCE_PCT_OF_HANDICAP_%@" = "%% des %@";	//	% des Spielen Handicap
+
 "%d_PCT_OF_HANDICAP_%@" = "%d%% des %@";
 "OF" = "des";	//	95% des Spielen Handicap
 
