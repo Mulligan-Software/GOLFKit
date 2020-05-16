@@ -73,6 +73,7 @@
 "TERM_FAIRWAY" = "Fairway";
 "TERM_FEMALE" = "weiblich";
 "TERM_FEMALE_ABBR" = "F";
+"TERM_FEMALE_PLAYER_PLURAL" = "Damen";
 "TERM_FIND" = "suchen";
 "TERM_FLAGSTICK" = "Flaggenstock";
 "TERM_FLIGHT" = "Pulk";
@@ -109,6 +110,7 @@
 "TERM_LOW" = "klein";	//	As in "low handicap"
 "TERM_MALE" = "männlich";
 "TERM_MALE_ABBR" = "M";
+"TERM_MALE_PLAYER_PLURAL" = "Herren";
 "TERM_MATCH" = "Match";
 "TERM_MATCH_PLURAL" = "Matches";
 "TERM_MEASURED" = "gemessen";
@@ -165,6 +167,7 @@
 "TERM_RITZ" = "Ritz";
 "TERM_ROUND" = "Runde";
 "TERM_ROUND_PLURAL" = "Runden";
+"TERM_ROUNDED" = "aufgerundet";	//	mathematically rounded, like 1.6 --> 2.0
 "TERM_SAND" = "Sand";
 "TERM_SAVE" = "sichern";
 "TERM_SCHEID" = "Scheid";
@@ -363,6 +366,8 @@
 "TITLE_CLOSE_OUT_PLURAL" = "Schließung Wetten";
 "TITLE_COMPARE_9_HOLE_SCORES" = "Kombinieren und verwenden 9-Loch-Scores";
 "TITLE_CONVERT" = "Konvertieren";
+"TITLE_COURSE_HANDICAP_TABLE" = "Golfplatz Handicapen Tabelle";
+"TITLE_COURSE_HANDICAP_TABLES" = "Golfplatz Handicapen Tabellen";
 "TITLE_COVER" = "Cover, Topper";
 "TITLE_CSS" = "Wettbewerbs-Scratch-Score";
 "TITLE_CSS_ABBR" = "CSS";
@@ -573,6 +578,7 @@
 "TITLE_SHOW_REPORT" = "Bericht zeigen";
 "TITLE_SHOW_REPORTS" = "Berichte anzeigen";
 "TITLE_SHOW_SCORES_AT_STARTUP" = "Zeige Spielergebnise beim Start";
+"TITLE_SHOW_TABLES" = "Tabellen anzeigen";
 "TITLE_SKILL_ADJUSTMENT" = "Anpassung für Fähigkeiten";
 "TITLE_SNAKE" = "Snake";
 "TITLE_SPECIAL_PREFERENCES" = "Spezielle Einstellungen";
@@ -665,6 +671,7 @@
 "FORMAT_TOTAL_POINTS_VS_QUOTA_%d" = "Gesamtpunkte v. %d Kontingent";
 "FORMAT_%@_DIFFERENCE" = "Unterschied in der %@";	//	"COURSE HANDICAP Difference"
 "FORMAT_%@_OF_EACH_PLAYER" = "der %@ jedes Spielers";	//	"COURSE HANDICAP of each player"
+"FORMAT_%@_TO_%@" = "%@ nach %@";	//	Front Nine to Back Nine
 "FORMAT_%@_ TO _%@" = "%@  bis  %@";	//	Range of: "13.5  to  14.6" (spaces important!)
 
 "SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
@@ -714,6 +721,7 @@
 "ALERT_USERS_GUIDE_ERROR_INFO" = "Stellen Sie sicher, das Sie über eine Internetverbindung verfügen, und versuchen Sie es später erneut.";
 
 "BLURB_DUPLICATE_HOLE_HANDICAPS" = "Lassen Sie auf GolfPlätzen mit mehr als einer Neun keine Loch-Handicaps zu, die Loch-Handicaps auf Neun wiederholen, es sei denn, die Neunen verwenden 9-Loch-Handicaps.";
+"BLURB_ESTIMATED_RATINGS_NOTICE" = "Hinweis: Einige Golfplatz-Handicapen können geschätzt werden. Erwägen Sie, der Definition dieses Golfplätze 9-Loch-Bewertungen hinzuzufügen.";
 "BLURB_REMOTE_DROPBOX" = "Scores können aus Scoring-Datendateien importiert oder aktualisiert werden, die mit dem „Dropbox/Apps/Mulligan Scoring“ Ordner auf diesem Computer synchronisiert sind.  Wählen Sie „Scores von Dropbox…“ im Menü Ablage / Importieren, um die eingehenden Scores zu überprüfen.";
 "BLURB_REMOTE_ICLOUD" = "Scores können aus Scoring-Datendateien importiert oder aktualisiert werden, die von Geräten, die mit derselben Apple ID wie für iCloud auf diesem Computer verwendet werden, an iCloud gesendet werden.  Wählen Sie „Scores von iCloud…“ im Menü Ablage / Importieren, um die eingehenden Scores zu überprüfen.";
 "BLURB_REQUIRE_9_HOLE_HANDICAPS" = "Auf GolfPlätzen mit 3 oder mehr Neunen ist es erforderlich, dass Loch-Handicaps für jeweils Neun einzigartige Werte von 1 bis 9 sind.";
@@ -931,7 +939,7 @@
 "TOOLTIP_ROUND_GROSS_SCORE" = "Brutto Punktzahl";
 "TOOLTIP_ROUND_NET_SCORE" = "Netto Punktzahl";
 "TOOLTIP_ROUND_TOTAL_SCORE" = "Gesamtpunktzahl";
-"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - benutzt\nH - heimisch\nA - entfernt\nC - Wettkampf\nN - 9-Loch Runde\nS - Schlag-Spiel\nM - Match-Spiel\nI - unfertig\nE - außergewöhnlich\nP - Strafe";
+"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - benutzt\nH - heimisch\nA - entfernt\nC - Wettkampf\nN - 9-Löcher kombiniert\nS - Schlag-Spiel\nM - Match-Spiel\nI - unfertig\nE - außergewöhnlich\nP - Strafe";
 "TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - benutzt\nA - entfernt\nC - kombiniert\nT - Tournier\nP - Strafe";
 "TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - benutzt\nA - entfernt\nC - kombiniert\nT - Tournier\nP - Strafe";
 "TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - benutzt\nA - entfernt\nC - kombiniert";

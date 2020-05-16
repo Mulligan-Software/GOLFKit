@@ -580,6 +580,38 @@ NSString * GOLFHandicapTableInstruction(GOLFHandicapMethodIndex handicapMethod) 
 }
 
 //=================================================================
+//	GOLFHandicapCalculationFormula(handicapMethod)
+//=================================================================
+NSString * GOLFHandicapCalculationFormula(GOLFHandicapMethodIndex handicapMethod) {
+	NSString *indexText = GOLFHandicapIndexTitle(handicapMethod, NO /* plural */);
+	NSString *courseHdcpText = GOLFPlayingHandicapTitle(handicapMethod, NO /* plural */);
+	NSString *slopeText = GOLFLocalizedString(@"TITLE_HANDICAP_SLOPE_RATING");
+
+	switch (handicapMethod) {
+  		case GOLFHandicapMethodEGA:
+  		case GOLFHandicapMethodWHS:
+  			{
+				NSString *courseRatingText = GOLFLocalizedString(@"TITLE_HANDICAP_COURSE_RATING");
+				NSString *parText = [GOLFLocalizedString(@"TERM_PAR") capitalizedString];
+				return [NSString stringWithFormat:@"%@ = %@ x %@ / %ld + (%@ - %@) %@", courseHdcpText, indexText, slopeText, (GOLFTeeSLOPERating)GOLFDefaultUnratedTeeSLOPERating, courseRatingText, parText, GOLFLocalizedString(@"TERM_ROUNDED")];
+  			}
+  		
+   		case GOLFHandicapMethodUSGA:
+  		case GOLFHandicapMethodRCGA:
+			return [NSString stringWithFormat:@"%@ = %@ x %@ / %ld %@", courseHdcpText, indexText, slopeText, (GOLFTeeSLOPERating)GOLFDefaultUnratedTeeSLOPERating, GOLFLocalizedString(@"TERM_ROUNDED")];
+
+
+ 		case GOLFHandicapMethodPersonal:
+  		case GOLFHandicapMethodAGU:
+  		case GOLFHandicapMethodCONGU:
+  		case GOLFHandicapMethodMulligan:
+		case GOLFHandicapMethodSecondBest:
+  		default:
+			return [NSString stringWithFormat:@"%@ = %@ %@", courseHdcpText, indexText, GOLFLocalizedString(@"TERM_ROUNDED")];
+	}
+}
+
+//=================================================================
 //	GOLFHandicapMaximumNonLocalIndexForAuthority(authority, playerIsFemale, for9Holes)
 //=================================================================
 GOLFHandicapIndex GOLFHandicapMaximumNonLocalIndexForAuthority(GOLFHandicapAuthority *authority, BOOL playerIsFemale, BOOL for9Holes) {

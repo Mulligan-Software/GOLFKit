@@ -73,6 +73,7 @@
 "TERM_FAIRWAY" = "fairway";
 "TERM_FEMALE" = "femenino";
 "TERM_FEMALE_ABBR" = "F";
+"TERM_FEMALE_PLAYER_PLURAL" = "damas";
 "TERM_FIND" = "buscar";
 "TERM_FLAGSTICK" = "flagstick";
 "TERM_FLIGHT" = "flight";
@@ -109,6 +110,7 @@
 "TERM_LOW" = "bajo";	//	As in "low handicap"
 "TERM_MALE" = "masculino";
 "TERM_MALE_ABBR" = "M";
+"TERM_MALE_PLAYER_PLURAL" = "caballeros";
 "TERM_MATCH" = "partido";
 "TERM_MATCH_PLURAL" = "partidos";
 "TERM_MEASURED" = "medido";
@@ -165,6 +167,7 @@
 "TERM_RITZ" = "Ritz";
 "TERM_ROUND" = "ronda";
 "TERM_ROUND_PLURAL" = "rondas";
+"TERM_ROUNDED" = "redondeado";	//	mathematically rounded, like 1.6 --> 2.0
 "TERM_SAND" = "arena";
 "TERM_SAVE" = "guardar";
 "TERM_SCHEID" = "Scheid";
@@ -363,6 +366,8 @@
 "TITLE_CLOSE_OUT_PLURAL" = "apuestas Cerrará";
 "TITLE_COMPARE_9_HOLE_SCORES" = "Combinar y utilizar resultados 9-hoyos";
 "TITLE_CONVERT" = "Convertir";
+"TITLE_COURSE_HANDICAP_TABLE" = "Lista de Handicaps de Campo";
+"TITLE_COURSE_HANDICAP_TABLES" = "Las Listas Handicaps de Campo";
 "TITLE_COVER" = "Cover, Topper";
 "TITLE_CSS" = "Scratch Score de Competencia";
 "TITLE_CSS_ABBR" = "CSS";
@@ -573,6 +578,7 @@
 "TITLE_SHOW_REPORT" = "Mostrar el Informe";
 "TITLE_SHOW_REPORTS" = "Mostrar los Informes";
 "TITLE_SHOW_SCORES_AT_STARTUP" = "Mostrar los puntajes al inicio";
+"TITLE_SHOW_TABLES" = "Mostrar tablas";
 "TITLE_SKILL_ADJUSTMENT" = "Ajuste por habilidad";
 "TITLE_SNAKE" = "Snake";
 "TITLE_SPECIAL_PREFERENCES" = "Ajustes Especiales";
@@ -665,6 +671,7 @@
 "FORMAT_TOTAL_POINTS_VS_QUOTA_%d" = "Puntos Totales v. %d Cuota";
 "FORMAT_%@_DIFFERENCE" = "Diferencia en %@";	//	"COURSE HANDICAP Difference"
 "FORMAT_%@_OF_EACH_PLAYER" = "%@ de cada jugador";	//	"COURSE HANDICAP of each player"
+"FORMAT_%@_TO_%@" = "%@ a %@";	//	Front Nine to Back Nine
 "FORMAT_%@_ TO _%@" = "%@  a  %@";	//	Range of: "13.5  to  14.6" (spaces important!)
 
 "SAMPLE_ALPHABETIC_NAMES" = "Al Czervik / Al Czervik & Ty Webb / Beeper, Czervik, Smails & Webb";
@@ -714,6 +721,7 @@
 "ALERT_USERS_GUIDE_ERROR_INFO" = "Asegúrese de que tiene una conexión a Internet.  Inténtelo más tarde.";
 
 "BLURB_DUPLICATE_HOLE_HANDICAPS" = "En los campos con más de un nueve, no permite que los handicaps de hoyo se dupliquen ninguno de los handicaps de hoyo de los otros nueves, a menos que los nueves usen handicaps de 9-hoyos.";
+"BLURB_ESTIMATED_RATINGS_NOTICE" = "Nota: Se puiden estimar algunes handicaps de campo. Considere agregar calificaciones de 9-hoyos a la definición de este campo.";
 "BLURB_REMOTE_DROPBOX" = "Los puntajes pueden ser importados o actualizados de archivos de datos sincronizados en la carpeta “Dropbox/Apps/Mulligan Scoring” en este equipo.  Elija “Puntajes de Dropbox…” en el menú Archivo / Importar para revisar puntajes entrantes.";
 "BLURB_REMOTE_ICLOUD" = "Los puntajes pueden ser importados o actualizados de archivos de datos enviados a iCloud por dispositivos remotos conectado con el mismo ID de Apple usado para iCloud en este equipo.  Elija “Puntajes de iCloud…” en el menú Archivo / Importar para revisar puntajes entrantes.";
 "BLURB_REQUIRE_9_HOLE_HANDICAPS" = "En los campos con 3 nueves o más, requiere que los handicaps de hoyo de cada nueve sean valores únicos entre 1 y 9.";
@@ -931,7 +939,7 @@
 "TOOLTIP_ROUND_GROSS_SCORE" = "Puntaje bruto";
 "TOOLTIP_ROUND_NET_SCORE" = "Puntaje neto";
 "TOOLTIP_ROUND_TOTAL_SCORE" = "Puntaje total";
-"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - utilizado\nH - a casa\nA - allá\nC - competencia\nN - ronda 9-hoyos\nS - stroke play\nM - match play\nI - incompleta\nE - excepcional\nP - pena";
+"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - utilizado\nH - a casa\nA - allá\nC - competencia\nN - 9-hoyos combinados\nS - stroke play\nM - match play\nI - incompleta\nE - excepcional\nP - pena";
 "TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - utilizado\nA - allá\nC - combinado\nT - torneo\nP - pena";
 "TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - utilizado\nA - allá\nC - combinado\nT - torneo\nP - pena";
 "TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - utilizado\nA - allá\nC - combinado";
