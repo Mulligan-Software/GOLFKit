@@ -84,6 +84,10 @@
 		297C860F204BA5D000A40BDB /* LargeTeeMarkers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 297C860D204BA5D000A40BDB /* LargeTeeMarkers.xcassets */; };
 		2988BCFB2078547800C173BE /* GOLFExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2988BCFA2078547800C173BE /* GOLFExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2988BCFC2078547800C173BE /* GOLFExtensions.h in Headers */ = {isa = PBXBuildFile; fileRef = 2988BCFA2078547800C173BE /* GOLFExtensions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		298DB4A62470EA63003D6F55 /* GOLFTeeMarkerOne.icns in Resources */ = {isa = PBXBuildFile; fileRef = 298DB4A22470EA62003D6F55 /* GOLFTeeMarkerOne.icns */; };
+		298DB4A72470EA63003D6F55 /* GOLFTeeMarkerTwo.icns in Resources */ = {isa = PBXBuildFile; fileRef = 298DB4A32470EA62003D6F55 /* GOLFTeeMarkerTwo.icns */; };
+		298DB4A82470EA63003D6F55 /* GOLFTeeMarkerFour.icns in Resources */ = {isa = PBXBuildFile; fileRef = 298DB4A42470EA63003D6F55 /* GOLFTeeMarkerFour.icns */; };
+		298DB4A92470EA63003D6F55 /* GOLFTeeMarkerThree.icns in Resources */ = {isa = PBXBuildFile; fileRef = 298DB4A52470EA63003D6F55 /* GOLFTeeMarkerThree.icns */; };
 		298EFB912354BAAE009F1F81 /* GOLFColors.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2944356C217E1CA500D4595C /* GOLFColors.xcassets */; };
 		2990FA9420726F7000E7DB45 /* GOLFClubs.h in Headers */ = {isa = PBXBuildFile; fileRef = 2990FA9220726F7000E7DB45 /* GOLFClubs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2990FA9520726F7000E7DB45 /* GOLFClubs.h in Headers */ = {isa = PBXBuildFile; fileRef = 2990FA9220726F7000E7DB45 /* GOLFClubs.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -206,6 +210,10 @@
 		29750D6320ADEB8B0082266D /* GOLFTeeMarkerGreenAndWhite.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = GOLFTeeMarkerGreenAndWhite.icns; sourceTree = "<group>"; };
 		297C860D204BA5D000A40BDB /* LargeTeeMarkers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = LargeTeeMarkers.xcassets; path = GOLFKit/LargeTeeMarkers.xcassets; sourceTree = SOURCE_ROOT; };
 		2988BCFA2078547800C173BE /* GOLFExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOLFExtensions.h; sourceTree = "<group>"; };
+		298DB4A22470EA62003D6F55 /* GOLFTeeMarkerOne.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = GOLFTeeMarkerOne.icns; sourceTree = "<group>"; };
+		298DB4A32470EA62003D6F55 /* GOLFTeeMarkerTwo.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = GOLFTeeMarkerTwo.icns; sourceTree = "<group>"; };
+		298DB4A42470EA63003D6F55 /* GOLFTeeMarkerFour.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = GOLFTeeMarkerFour.icns; sourceTree = "<group>"; };
+		298DB4A52470EA63003D6F55 /* GOLFTeeMarkerThree.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = GOLFTeeMarkerThree.icns; sourceTree = "<group>"; };
 		2990FA9220726F7000E7DB45 /* GOLFClubs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOLFClubs.h; sourceTree = "<group>"; };
 		2990FA9320726F7000E7DB45 /* GOLFClubs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOLFClubs.m; sourceTree = "<group>"; };
 		2992499A2235559500504569 /* GOLFWagering.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOLFWagering.h; sourceTree = "<group>"; };
@@ -332,12 +340,14 @@
 				294140341DDA03E300CC9605 /* GOLFTeeMarkerBrown.icns */,
 				29279F792152DD7E0025325D /* GOLFTeeMarkerCombo.icns */,
 				2907DB982048AB7C00A04B8F /* GOLFTeeMarkerEU.icns */,
+				298DB4A42470EA63003D6F55 /* GOLFTeeMarkerFour.icns */,
 				294140351DDA03E300CC9605 /* GOLFTeeMarkerGeneric.icns */,
 				294140361DDA03E300CC9605 /* GOLFTeeMarkerGold.icns */,
 				294140371DDA03E300CC9605 /* GOLFTeeMarkerGreen.icns */,
 				29031E5B22D8EB340080C7F3 /* GOLFTeeMarkerGreenAndRed.icns */,
 				29750D6320ADEB8B0082266D /* GOLFTeeMarkerGreenAndWhite.icns */,
 				294140381DDA03E300CC9605 /* GOLFTeeMarkerMaroon.icns */,
+				298DB4A22470EA62003D6F55 /* GOLFTeeMarkerOne.icns */,
 				294140391DDA03E300CC9605 /* GOLFTeeMarkerOrange.icns */,
 				296896BB2049AFFF0030630C /* GOLFTeeMarkerPGA.icns */,
 				2941403A1DDA03E300CC9605 /* GOLFTeeMarkerPink.icns */,
@@ -349,6 +359,8 @@
 				294140401DDA03E300CC9605 /* GOLFTeeMarkerSilver.icns */,
 				294140411DDA03E300CC9605 /* GOLFTeeMarkerTan.icns */,
 				294140421DDA03E300CC9605 /* GOLFTeeMarkerTeal.icns */,
+				298DB4A52470EA63003D6F55 /* GOLFTeeMarkerThree.icns */,
+				298DB4A32470EA62003D6F55 /* GOLFTeeMarkerTwo.icns */,
 				294140431DDA03E300CC9605 /* GOLFTeeMarkerUSA.icns */,
 				299AC8BB204E027F0035FFF8 /* GOLFTeeMarkerUSGA.icns */,
 				294140441DDA03E300CC9605 /* GOLFTeeMarkerWhite.icns */,
@@ -698,6 +710,7 @@
 				2941404E1DDA03E300CC9605 /* GOLFTeeMarkerBrown.icns in Resources */,
 				297C860F204BA5D000A40BDB /* LargeTeeMarkers.xcassets in Resources */,
 				29031E5C22D8EB340080C7F3 /* GOLFTeeMarkerGreenAndRed.icns in Resources */,
+				298DB4A82470EA63003D6F55 /* GOLFTeeMarkerFour.icns in Resources */,
 				29B00A7D204AFFE000E10210 /* GOLFTeeMarkerEU.icns in Resources */,
 				294140501DDA03E300CC9605 /* GOLFTeeMarkerGold.icns in Resources */,
 				2941404F1DDA03E300CC9605 /* GOLFTeeMarkerGeneric.icns in Resources */,
@@ -705,6 +718,8 @@
 				294140611DDA03E300CC9605 /* GOLFTeeMarkerYellowAndBlue.icns in Resources */,
 				294140511DDA03E300CC9605 /* GOLFTeeMarkerGreen.icns in Resources */,
 				2941402D1DDA02D700CC9605 /* GOLFTeeMarkerAdd.icns in Resources */,
+				298DB4A62470EA63003D6F55 /* GOLFTeeMarkerOne.icns in Resources */,
+				298DB4A72470EA63003D6F55 /* GOLFTeeMarkerTwo.icns in Resources */,
 				294140491DDA03E300CC9605 /* GOLFTeeMarkerBlack.icns in Resources */,
 				2930CDA41DCFEC4F0089491D /* LittleTeeMarkers.xcassets in Resources */,
 				2941404D1DDA03E300CC9605 /* GOLFTeeMarkerBlueAndWhite.icns in Resources */,
@@ -721,6 +736,7 @@
 				294140571DDA03E300CC9605 /* GOLFTeeMarkerRed.icns in Resources */,
 				294140481DDA03E300CC9605 /* GOLFTeeMarkerAll.icns in Resources */,
 				294140531DDA03E300CC9605 /* GOLFTeeMarkerOrange.icns in Resources */,
+				298DB4A92470EA63003D6F55 /* GOLFTeeMarkerThree.icns in Resources */,
 				29436C652055B5F90080E0FE /* GOLFCountries.plist in Resources */,
 				29164283204C3BB700E87478 /* GenericTeeMarkers.xcassets in Resources */,
 				294140551DDA03E300CC9605 /* GOLFTeeMarkerPurple.icns in Resources */,

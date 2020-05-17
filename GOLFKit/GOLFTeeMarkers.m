@@ -339,6 +339,46 @@ NSArray * GOLFStandardTeeColorArray(void) {
 				[NSNumber numberWithBool:NO], @"isComboColor", nil];
 		[workingList addObject:colorDict];
 		
+		//	One (I)
+		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithUnsignedInteger:GOLFTeeColorOne], @"teeColorIndex",
+				[GOLFColor colorWithRed:(183 / 255.0) green:(147 / 255.0) blue:(118 / 255.0) alpha:1.0], @"teeColor",	//	Pantone 729 UP
+				GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_ONE"), @"teeColorName",
+				@"GOLFTeeMarkerOne", @"teeIconName",
+				@"tee_marker_one", @"teeImageName",
+				[NSNumber numberWithBool:NO], @"isComboColor", nil];
+		[workingList addObject:colorDict];
+		
+		//	Two (II)
+		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithUnsignedInteger:GOLFTeeColorTwo], @"teeColorIndex",
+				[GOLFColor colorWithRed:(198 / 255.0) green:(161 / 255.0) blue:(129 / 255.0) alpha:1.0], @"teeColor",	//	Pantone 728 UP
+				GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_TWO"), @"teeColorName",
+				@"GOLFTeeMarkerTwo", @"teeIconName",
+				@"tee_marker_two", @"teeImageName",
+				[NSNumber numberWithBool:NO], @"isComboColor", nil];
+		[workingList addObject:colorDict];
+		
+		//	Three (III)
+		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithUnsignedInteger:GOLFTeeColorThree], @"teeColorIndex",
+				[GOLFColor colorWithRed:(217 / 255.0) green:(181 / 255.0) blue:(145 / 255.0) alpha:1.0], @"teeColor",	//	Pantone 727 UP
+				GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_THREE"), @"teeColorName",
+				@"GOLFTeeMarkerThree", @"teeIconName",
+				@"tee_marker_three", @"teeImageName",
+				[NSNumber numberWithBool:NO], @"isComboColor", nil];
+		[workingList addObject:colorDict];
+		
+		//	Four (IV)
+		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithUnsignedInteger:GOLFTeeColorFour], @"teeColorIndex",
+				[GOLFColor colorWithRed:(231 / 255.0) green:(198 / 255.0) blue:(161 / 255.0) alpha:1.0], @"teeColor",	//	Pantone 726 UP
+				GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_FOUR"), @"teeColorName",
+				@"GOLFTeeMarkerFour", @"teeIconName",
+				@"tee_marker_four", @"teeImageName",
+				[NSNumber numberWithBool:NO], @"isComboColor", nil];
+		[workingList addObject:colorDict];
+		
 		//	NOT INCLUDED in this table:
 		//	GOLFTeeColorCustom (50)
 		//	GOLFTeeColorCombo (80)

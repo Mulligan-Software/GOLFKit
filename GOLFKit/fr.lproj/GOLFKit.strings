@@ -268,6 +268,10 @@
 "GOLF_TEE_COLOR_NAME_EU" = "UE.";		//	Custom tee
 "GOLF_TEE_COLOR_NAME_PGA" = "PGA Tour";	//	Custom tee
 "GOLF_TEE_COLOR_NAME_USGA" = "USGA";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_ONE" = "Un";		//	Custom tee
+"GOLF_TEE_COLOR_NAME_TWO" = "Deux";		//	Custom tee
+"GOLF_TEE_COLOR_NAME_THREE" = "Trois";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_FOUR" = "Quatre";	//	Custom tee
 "GOLF_TEE_COLOR_NAME_COMBO" = "Combo";
 "GOLF_TEE_COLOR_NAME_GENERIC" = "Un Jalon";
 "GOLF_TEE_COLOR_NAME_UNKNOWN" = "Inconnu";
