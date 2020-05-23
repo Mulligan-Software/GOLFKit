@@ -207,6 +207,7 @@
 "TERM_TIE_ABBR" = "T";
 "TERM_TIEBREAKER" = "tiebreaker";
 "TERM_TIEBREAKER_PLURAL" = "tiebreakers";
+"TERM_TIME" = "time";
 "TERM_TIPS" = "tips";
 "TERM_TODAY" = "today";
 "TERM_TOMORROW" = "tomorrow";
@@ -725,7 +726,7 @@
 "ALERT_USERS_GUIDE_ERROR_INFO" = "Make sure you have an internet connection and try again later.";
 
 "BLURB_DUPLICATE_HOLE_HANDICAPS" = "On courses with more than one nine, don’t allow hole handicaps that duplicate any of the hole handicaps on another nine unless the nines use 9-hole handicaps).";
-"BLURB_ESTIMATED_RATINGS_NOTICE" = "Note: Some Course Handicaps may be estimated. Consider adding 9-hole ratings to the definition of this course.";
+"BLURB_MISSING_RATINGS_NOTICE" = "Note: Missing ratings may prevent the display of some Course Handicap Tables. Consider adding 9-hole ratings to the definition of this course.";
 "BLURB_REMOTE_DROPBOX" = "Scores can be imported or updated from scoring data files synchronized to the “Dropbox/Apps/Mulligan Scoring” folder on this computer.  Choose “Scores from Dropbox…” in the File / Import menu to review incoming scores.";
 "BLURB_REMOTE_ICLOUD" = "Scores can be imported or updated from scoring data files sent to iCloud by remote devices logged in using the same Apple ID used for iCloud on this computer.  Choose “Scores from iCloud…” in the File/Import menu to review incoming scores.";
 "BLURB_REQUIRE_9_HOLE_HANDICAPS" = "On courses with 3 or more nines, require that hole handicaps on each nine be unique values from 1 through 9.";
@@ -892,6 +893,7 @@
 "ALLOWANCE_TYPE_AGGREGATE_3_8_ABBR" = "3/8 Aggr.";
 "ALLOWANCE_TYPE_AGGREGATE_3_8_DESC" = "3/8 of partners’ total handicaps";
 "ALLOWANCE_TYPE_DIFFERENCE" = "Difference";
+"ALLOWANCE_TYPE_DIFFERENCE_ABBR" = "Diff.";
 "ALLOWANCE_TYPE_DIFFERENCE_DESC" = "Low handicap competitor plays at scratch";
 "ALLOWANCE_TYPE_A_PLAYER_50" = "50% of A player’s handicap";
 "ALLOWANCE_TYPE_A_PLAYER_35_B_15" = "35% A player + 15% B player";

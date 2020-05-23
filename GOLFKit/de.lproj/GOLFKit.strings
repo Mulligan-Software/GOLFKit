@@ -207,6 +207,7 @@
 "TERM_TIE_ABBR" = "T";
 "TERM_TIEBREAKER" = "Tiebreaker";
 "TERM_TIEBREAKER_PLURAL" = "Tiebreakers";
+"TERM_TIME" = "Zeit";
 "TERM_TIPS" = "Hinweise";
 "TERM_TODAY" = "Heute";
 "TERM_TOMORROW" = "Morgen";
@@ -370,8 +371,8 @@
 "TITLE_CLOSE_OUT_PLURAL" = "Schließung Wetten";
 "TITLE_COMPARE_9_HOLE_SCORES" = "Kombinieren und verwenden 9-Loch-Scores";
 "TITLE_CONVERT" = "Konvertieren";
-"TITLE_COURSE_HANDICAP_TABLE" = "Golfplatz Handicapen Tabelle";
-"TITLE_COURSE_HANDICAP_TABLES" = "Golfplatz Handicapen Tabellen";
+"TITLE_COURSE_HANDICAP_TABLE" = "Golfplatz-Handicap-Tabelle";
+"TITLE_COURSE_HANDICAP_TABLES" = "Golfplatz-Handicap-Tabellen";
 "TITLE_COVER" = "Cover, Topper";
 "TITLE_CSS" = "Wettbewerbs-Scratch-Score";
 "TITLE_CSS_ABBR" = "CSS";
@@ -673,7 +674,7 @@
 "FORMAT_THROUGH_HOLE_%@" = "bis %@";
 "FORMAT_TO_PROMPT_%@" = "in: %@";	//	Convert to: WHS
 "FORMAT_TOTAL_POINTS_VS_QUOTA_%d" = "Gesamtpunkte v. %d Kontingent";
-"FORMAT_%@_DIFFERENCE" = "Unterschied in der %@";	//	"COURSE HANDICAP Difference"
+"FORMAT_%@_DIFFERENCE" = "Differenz in der %@";	//	"COURSE HANDICAP Difference"
 "FORMAT_%@_OF_EACH_PLAYER" = "der %@ jedes Spielers";	//	"COURSE HANDICAP of each player"
 "FORMAT_%@_TO_%@" = "%@ nach %@";	//	Front Nine to Back Nine
 "FORMAT_%@_ TO _%@" = "%@  bis  %@";	//	Range of: "13.5  to  14.6" (spaces important!)
@@ -725,7 +726,7 @@
 "ALERT_USERS_GUIDE_ERROR_INFO" = "Stellen Sie sicher, das Sie über eine Internetverbindung verfügen, und versuchen Sie es später erneut.";
 
 "BLURB_DUPLICATE_HOLE_HANDICAPS" = "Lassen Sie auf GolfPlätzen mit mehr als einer Neun keine Loch-Handicaps zu, die Loch-Handicaps auf Neun wiederholen, es sei denn, die Neunen verwenden 9-Loch-Handicaps.";
-"BLURB_ESTIMATED_RATINGS_NOTICE" = "Hinweis: Einige Golfplatz-Handicapen können geschätzt werden. Erwägen Sie, der Definition dieses Golfplätze 9-Loch-Bewertungen hinzuzufügen.";
+"BLURB_MISSING_RATINGS_NOTICE" = "Hinweis: Fehlende Bewertungen können die Anzeige einiger Golfplatz-Handicap-Tabellen verhindern. Erwägen Sie, der Definition dieses Golfplätze 9-Loch-Bewertungen hinzuzufügen.";
 "BLURB_REMOTE_DROPBOX" = "Scores können aus Scoring-Datendateien importiert oder aktualisiert werden, die mit dem „Dropbox/Apps/Mulligan Scoring“ Ordner auf diesem Computer synchronisiert sind.  Wählen Sie „Scores von Dropbox…“ im Menü Ablage / Importieren, um die eingehenden Scores zu überprüfen.";
 "BLURB_REMOTE_ICLOUD" = "Scores können aus Scoring-Datendateien importiert oder aktualisiert werden, die von Geräten, die mit derselben Apple ID wie für iCloud auf diesem Computer verwendet werden, an iCloud gesendet werden.  Wählen Sie „Scores von iCloud…“ im Menü Ablage / Importieren, um die eingehenden Scores zu überprüfen.";
 "BLURB_REQUIRE_9_HOLE_HANDICAPS" = "Auf GolfPlätzen mit 3 oder mehr Neunen ist es erforderlich, dass Loch-Handicaps für jeweils Neun einzigartige Werte von 1 bis 9 sind.";
@@ -892,7 +893,8 @@
 "ALLOWANCE_TYPE_AGGREGATE_3_8" = "3/8 des Aggregats";
 "ALLOWANCE_TYPE_AGGREGATE_3_8_ABBR" = "3/8 Aggr.";
 "ALLOWANCE_TYPE_AGGREGATE_3_8_DESC" = "3/8 der Partner insgesamt Handicaps";
-"ALLOWANCE_TYPE_DIFFERENCE" = "Unterschied";
+"ALLOWANCE_TYPE_DIFFERENCE" = "Differenz";
+"ALLOWANCE_TYPE_DIFFERENCE_ABBR" = "Diff.";
 "ALLOWANCE_TYPE_DIFFERENCE_DESC" = "Teilnehmer mit dem niedrigen Handicap speilt bei scratch";
 "ALLOWANCE_TYPE_A_PLAYER_50" = "50% des Handicap des A Spieler";
 "ALLOWANCE_TYPE_A_PLAYER_35_B_15" = "35% A Spieler + 15% B Spieler";

@@ -207,6 +207,7 @@
 "TERM_TIE_ABBR" = "T";
 "TERM_TIEBREAKER" = "desempate";
 "TERM_TIEBREAKER_PLURAL" = "desempates";
+"TERM_TIME" = "hora";
 "TERM_TIPS" = "consejos";
 "TERM_TODAY" = "hoy";
 "TERM_TOMORROW" = "mañana";
@@ -725,7 +726,7 @@
 "ALERT_USERS_GUIDE_ERROR_INFO" = "Asegúrese de que tiene una conexión a Internet.  Inténtelo más tarde.";
 
 "BLURB_DUPLICATE_HOLE_HANDICAPS" = "En los campos con más de un nueve, no permite que los handicaps de hoyo se dupliquen ninguno de los handicaps de hoyo de los otros nueves, a menos que los nueves usen handicaps de 9-hoyos.";
-"BLURB_ESTIMATED_RATINGS_NOTICE" = "Nota: Se puiden estimar algunes handicaps de campo. Considere agregar calificaciones de 9-hoyos a la definición de este campo.";
+"BLURB_MISSING_RATINGS_NOTICE" = "Nota: Las calificaciones faltantes pueden impedir visualización de algunas Listas de Handicaps de Campo. Considere agregar calificaciones de 9-hoyos a la definición de este campo.";
 "BLURB_REMOTE_DROPBOX" = "Los puntajes pueden ser importados o actualizados de archivos de datos sincronizados en la carpeta “Dropbox/Apps/Mulligan Scoring” en este equipo.  Elija “Puntajes de Dropbox…” en el menú Archivo / Importar para revisar puntajes entrantes.";
 "BLURB_REMOTE_ICLOUD" = "Los puntajes pueden ser importados o actualizados de archivos de datos enviados a iCloud por dispositivos remotos conectado con el mismo ID de Apple usado para iCloud en este equipo.  Elija “Puntajes de iCloud…” en el menú Archivo / Importar para revisar puntajes entrantes.";
 "BLURB_REQUIRE_9_HOLE_HANDICAPS" = "En los campos con 3 nueves o más, requiere que los handicaps de hoyo de cada nueve sean valores únicos entre 1 y 9.";
@@ -893,6 +894,7 @@
 "ALLOWANCE_TYPE_AGGREGATE_3_8_ABBR" = "3/8 agreg.";
 "ALLOWANCE_TYPE_AGGREGATE_3_8_DESC" = "3/8 de total handicaps de compañeros";
 "ALLOWANCE_TYPE_DIFFERENCE" = "Diferencia";
+"ALLOWANCE_TYPE_DIFFERENCE_ABBR" = "Dif.";
 "ALLOWANCE_TYPE_DIFFERENCE_DESC" = "Handicap menor juega scratch";
 "ALLOWANCE_TYPE_A_PLAYER_50" = "50% de la handicap de jugador A";
 "ALLOWANCE_TYPE_A_PLAYER_35_B_15" = "35% jugador A + 15% jugador B";

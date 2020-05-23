@@ -321,7 +321,7 @@ NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictiona
 				if (descriptiveText) {
 					*descriptiveText = GOLFLocalizedString(@"ALLOWANCE_TYPE_DIFFERENCE_DESC");
 				}
-				NSString *fullTitle = GOLFLocalizedString(@"ALLOWANCE_TYPE_DIFFERENCE");
+				NSString *fullTitle = (needShortText ? GOLFLocalizedString(@"ALLOWANCE_TYPE_DIFFERENCE_ABBR") : GOLFLocalizedString(@"ALLOWANCE_TYPE_DIFFERENCE"));
 				NSNumber *workingNumber = (info ? [info objectForKey:@"lowHandicap"] : nil);
 				if (workingNumber) {
 					GOLFPlayingHandicap lowHdcp = [workingNumber playingHandicapValue];

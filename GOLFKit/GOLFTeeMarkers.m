@@ -342,7 +342,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		//	One (I)
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorOne], @"teeColorIndex",
-				[GOLFColor colorWithRed:(183 / 255.0) green:(147 / 255.0) blue:(118 / 255.0) alpha:1.0], @"teeColor",	//	Pantone 729 UP
+				[GOLFColor colorWithRed:(231 / 255.0) green:(198 / 255.0) blue:(161 / 255.0) alpha:1.0], @"teeColor",	//	Pantone 726 UP (icon 0% Pantone 729)
 				GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_ONE"), @"teeColorName",
 				@"GOLFTeeMarkerOne", @"teeIconName",
 				@"tee_marker_one", @"teeImageName",
@@ -352,7 +352,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		//	Two (II)
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorTwo], @"teeColorIndex",
-				[GOLFColor colorWithRed:(198 / 255.0) green:(161 / 255.0) blue:(129 / 255.0) alpha:1.0], @"teeColor",	//	Pantone 728 UP
+				[GOLFColor colorWithRed:(217 / 255.0) green:(181 / 255.0) blue:(145 / 255.0) alpha:1.0], @"teeColor",	//	Pantone 727 UP (icon 20% Pantone 729)
 				GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_TWO"), @"teeColorName",
 				@"GOLFTeeMarkerTwo", @"teeIconName",
 				@"tee_marker_two", @"teeImageName",
@@ -362,7 +362,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		//	Three (III)
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorThree], @"teeColorIndex",
-				[GOLFColor colorWithRed:(217 / 255.0) green:(181 / 255.0) blue:(145 / 255.0) alpha:1.0], @"teeColor",	//	Pantone 727 UP
+				[GOLFColor colorWithRed:(198 / 255.0) green:(161 / 255.0) blue:(129 / 255.0) alpha:1.0], @"teeColor",	//	Pantone 728 UP (icon 40% Pantone 729)
 				GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_THREE"), @"teeColorName",
 				@"GOLFTeeMarkerThree", @"teeIconName",
 				@"tee_marker_three", @"teeImageName",
@@ -372,7 +372,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		//	Four (IV)
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorFour], @"teeColorIndex",
-				[GOLFColor colorWithRed:(231 / 255.0) green:(198 / 255.0) blue:(161 / 255.0) alpha:1.0], @"teeColor",	//	Pantone 726 UP
+				[GOLFColor colorWithRed:(183 / 255.0) green:(147 / 255.0) blue:(118 / 255.0) alpha:1.0], @"teeColor",	//	Pantone 729 UP (icon 60% Pantone 729)
 				GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_FOUR"), @"teeColorName",
 				@"GOLFTeeMarkerFour", @"teeIconName",
 				@"tee_marker_four", @"teeImageName",
@@ -399,7 +399,7 @@ GOLFColor * GOLFTeeColorFromTeeColorIndex(GOLFTeeColorIndex proposedColorIndex) 
 	if (proposedColorIndex != kNotATeeColorIndex) {
 		if (IS_ANY_STANDARD_TEE_COLOR_INDEX(proposedColorIndex)) {
 //		if ((proposedColorIndex >= GOLFTeeColorFirstSolid) && (proposedColorIndex <= GOLFTeeColorLastCombo)) {
-			//	All GOLFTeeColorIndexes for solid and combo tee colors…
+			//	All GOLFTeeColorIndexes for solid, combo and special tee colors…
 			for (NSDictionary *colorDict in GOLFStandardTeeColorArray()) {
 				if ([[colorDict objectForKey:@"teeColorIndex"] teeColorIndexValue] == proposedColorIndex)
 					return [colorDict objectForKey:@"teeColor"];
@@ -422,25 +422,25 @@ GOLFColor * GOLFTeeColorFromTeeColorIndex(GOLFTeeColorIndex proposedColorIndex) 
 #endif
 		}
 		
-		if (proposedColorIndex == GOLFTeeColorUSA) {
-			//	Special USA tee marker - we'll pass back the proper "Old Glory" red…
-			return [GOLFColor colorWithRed:0.698 green:0.132 blue:0.203 alpha:1.0];
-		}
+//		if (proposedColorIndex == GOLFTeeColorUSA) {
+//			//	Special USA tee marker - we'll pass back the proper "Old Glory" red…
+//			return [GOLFColor colorWithRed:0.698 green:0.132 blue:0.203 alpha:1.0];
+//		}
 		
-		if (proposedColorIndex == GOLFTeeColorEU) {
-			//	Special EU tee marker - we'll pass back the proper "EU blue"…
-			return [GOLFColor colorWithRed:0.0 green:(51 / 255.0) blue:(153 / 255.0) alpha:1.0];
-		}
+//		if (proposedColorIndex == GOLFTeeColorEU) {
+//			//	Special EU tee marker - we'll pass back the proper "EU blue"…
+//			return [GOLFColor colorWithRed:0.0 green:(51 / 255.0) blue:(153 / 255.0) alpha:1.0];
+//		}
 		
-		if (proposedColorIndex == GOLFTeeColorPGA) {
-			//	Special PGA tee marker - we'll pass back the proper "PGA purple"…
-			return [GOLFColor colorWithRed:(34 / 255.0) green:(36 / 255.0) blue:(108 / 255.0) alpha:1.0];
-		}
+//		if (proposedColorIndex == GOLFTeeColorPGA) {
+//			//	Special PGA tee marker - we'll pass back the proper "PGA purple"…
+//			return [GOLFColor colorWithRed:(34 / 255.0) green:(36 / 255.0) blue:(108 / 255.0) alpha:1.0];
+//		}
 		
-		if (proposedColorIndex == GOLFTeeColorUSGA) {
-			//	Special PGA tee marker - we'll pass back the proper "USGA Pantone 280 blue"…
-			return [GOLFColor colorWithRed:0.0 green:(73 / 255.0) blue:(144 / 255.0) alpha:1.0];
-		}
+//		if (proposedColorIndex == GOLFTeeColorUSGA) {
+//			//	Special PGA tee marker - we'll pass back the proper "USGA Pantone 280 blue"…
+//			return [GOLFColor colorWithRed:0.0 green:(73 / 255.0) blue:(144 / 255.0) alpha:1.0];
+//		}
 	}
 	
 	//	Last resort - return the generic tee color…
@@ -473,7 +473,7 @@ GOLFTeeColorIndex GOLFTeeColorIndexFromTeeColor(GOLFColor *teeColor) {
 		greenComponent = [rgb greenComponent];
 		blueComponent = [rgb blueComponent];
 #endif
-		//	Check for a standard color…
+		//	Check for a standard color (solid, combo, special)…
 		GOLFColor *testColor;
 		for (NSDictionary *colorDict in GOLFStandardTeeColorArray()) {
 			GOLFTeeColorIndex testColorIndex = [[colorDict objectForKey:@"teeColorIndex"] teeColorIndexValue];
@@ -508,65 +508,65 @@ GOLFTeeColorIndex GOLFTeeColorIndexFromTeeColor(GOLFColor *teeColor) {
 			return GOLFTeeColorCombo;
 		}
 		
-		//	USA Tee…
-		GOLFColor *oldGloryRed = [GOLFColor colorWithRed:0.698 green:0.132 blue:0.203 alpha:1.0];
-#if TARGET_OS_IOS || TARGET_OS_WATCH
-		testColor = oldGloryRed;
-		[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
-#elif TARGET_OS_MAC
-		testColor = [oldGloryRed colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
-		redTestComponent = [testColor redComponent];
-		greenTestComponent = [testColor greenComponent];
-		blueTestComponent = [testColor blueComponent];
-#endif
-		if ((redTestComponent == redComponent) && (greenTestComponent == greenComponent) && (blueTestComponent == blueComponent)) {
-			return GOLFTeeColorUSA;
-		}
+//		//	USA Tee…
+//		GOLFColor *oldGloryRed = [GOLFColor colorWithRed:0.698 green:0.132 blue:0.203 alpha:1.0];
+//#if TARGET_OS_IOS || TARGET_OS_WATCH
+//		testColor = oldGloryRed;
+//		[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
+//#elif TARGET_OS_MAC
+//		testColor = [oldGloryRed colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+//		redTestComponent = [testColor redComponent];
+//		greenTestComponent = [testColor greenComponent];
+//		blueTestComponent = [testColor blueComponent];
+//#endif
+//		if ((redTestComponent == redComponent) && (greenTestComponent == greenComponent) && (blueTestComponent == blueComponent)) {
+//			return GOLFTeeColorUSA;
+//		}
 
-		//	EU Tee…
-		GOLFColor *euBlue = [GOLFColor colorWithRed:0.0 green:(51 / 255.0) blue:(153 / 255.0) alpha:1.0];
-#if TARGET_OS_IOS || TARGET_OS_WATCH
-		testColor = euBlue;
-		[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
-#elif TARGET_OS_MAC
-		testColor = [euBlue colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
-		redTestComponent = [testColor redComponent];
-		greenTestComponent = [testColor greenComponent];
-		blueTestComponent = [testColor blueComponent];
-#endif
-		if ((redTestComponent == redComponent) && (greenTestComponent == greenComponent) && (blueTestComponent == blueComponent)) {
-			return GOLFTeeColorEU;
-		}
+//		//	EU Tee…
+//		GOLFColor *euBlue = [GOLFColor colorWithRed:0.0 green:(51 / 255.0) blue:(153 / 255.0) alpha:1.0];
+//#if TARGET_OS_IOS || TARGET_OS_WATCH
+//		testColor = euBlue;
+//		[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
+//#elif TARGET_OS_MAC
+//		testColor = [euBlue colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+//		redTestComponent = [testColor redComponent];
+//		greenTestComponent = [testColor greenComponent];
+//		blueTestComponent = [testColor blueComponent];
+//#endif
+//		if ((redTestComponent == redComponent) && (greenTestComponent == greenComponent) && (blueTestComponent == blueComponent)) {
+//			return GOLFTeeColorEU;
+//		}
 
-		//	PGA Tour Tee…
-		GOLFColor *pgaPurple = [GOLFColor colorWithRed:(34 / 255.0) green:(36 / 255.0) blue:(108 / 255.0) alpha:1.0];
-#if TARGET_OS_IOS || TARGET_OS_WATCH
-		testColor = pgaPurple;
-		[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
-#elif TARGET_OS_MAC
-		testColor = [pgaPurple colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
-		redTestComponent = [testColor redComponent];
-		greenTestComponent = [testColor greenComponent];
-		blueTestComponent = [testColor blueComponent];
-#endif
-		if ((redTestComponent == redComponent) && (greenTestComponent == greenComponent) && (blueTestComponent == blueComponent)) {
-			return GOLFTeeColorPGA;
-		}
+//		//	PGA Tour Tee…
+//		GOLFColor *pgaPurple = [GOLFColor colorWithRed:(34 / 255.0) green:(36 / 255.0) blue:(108 / 255.0) alpha:1.0];
+//#if TARGET_OS_IOS || TARGET_OS_WATCH
+//		testColor = pgaPurple;
+//		[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
+//#elif TARGET_OS_MAC
+//		testColor = [pgaPurple colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+//		redTestComponent = [testColor redComponent];
+//		greenTestComponent = [testColor greenComponent];
+//		blueTestComponent = [testColor blueComponent];
+//#endif
+//		if ((redTestComponent == redComponent) && (greenTestComponent == greenComponent) && (blueTestComponent == blueComponent)) {
+//			return GOLFTeeColorPGA;
+//		}
 		
-		//	USGA Tee…
-		GOLFColor *usgaBlue = [GOLFColor colorWithRed:0.0 green:(73 / 255.0) blue:(144.0 / 255.0) alpha:1.0];
-#if TARGET_OS_IOS || TARGET_OS_WATCH
-		testColor = usgaBlue;
-		[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
-#elif TARGET_OS_MAC
-		testColor = [usgaBlue colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
-		redTestComponent = [testColor redComponent];
-		greenTestComponent = [testColor greenComponent];
-		blueTestComponent = [testColor blueComponent];
-#endif
-		if ((redTestComponent == redComponent) && (greenTestComponent == greenComponent) && (blueTestComponent == blueComponent)) {
-			return GOLFTeeColorUSGA;
-		}
+//		//	USGA Tee…
+//		GOLFColor *usgaBlue = [GOLFColor colorWithRed:0.0 green:(73 / 255.0) blue:(144.0 / 255.0) alpha:1.0];
+//#if TARGET_OS_IOS || TARGET_OS_WATCH
+//		testColor = usgaBlue;
+//		[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
+//#elif TARGET_OS_MAC
+//		testColor = [usgaBlue colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+//		redTestComponent = [testColor redComponent];
+//		greenTestComponent = [testColor greenComponent];
+//		blueTestComponent = [testColor blueComponent];
+//#endif
+//		if ((redTestComponent == redComponent) && (greenTestComponent == greenComponent) && (blueTestComponent == blueComponent)) {
+//			return GOLFTeeColorUSGA;
+//		}
 		
 		return GOLFTeeColorCustom;	//	Any color we don't recognize is a custom color!
 	}
@@ -596,18 +596,18 @@ NSString * GOLFTeeColorNameFromTeeColorIndex(GOLFTeeColorIndex proposedColorInde
 		}
 	}
 	
-	if (proposedColorIndex == GOLFTeeColorUSA) {
-		return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_USA");
-	}
-	if (proposedColorIndex == GOLFTeeColorEU) {
-		return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_EU");
-	}
-	if (proposedColorIndex == GOLFTeeColorPGA) {
-		return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_PGA");
-	}
-	if (proposedColorIndex == GOLFTeeColorUSGA) {
-		return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_USGA");
-	}
+//	if (proposedColorIndex == GOLFTeeColorUSA) {
+//		return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_USA");
+//	}
+//	if (proposedColorIndex == GOLFTeeColorEU) {
+//		return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_EU");
+//	}
+//	if (proposedColorIndex == GOLFTeeColorPGA) {
+//		return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_PGA");
+//	}
+//	if (proposedColorIndex == GOLFTeeColorUSGA) {
+//		return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_USGA");
+//	}
 
 	return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_UNKNOWN");
 }
@@ -633,154 +633,162 @@ NSRange GOLFLongestRangeOfAnyTeeColorNameInTeeName(NSString * _Nonnull teeName) 
 }
 
 //=================================================================
-//	GOLFTeeMarkerImageFromSpecs
+//	GOLFTeeMarkerImageFromSpecs(teeColorIndex, imageSize, teeColor)
 //=================================================================
 GOLFTeeImage * GOLFTeeMarkerImageFromSpecs(GOLFTeeColorIndex teeColorIndex, GOLFTeeMarkerImageSize imageSize, GOLFColor *teeColor) {
+#ifdef DEBUG
+	NSLog(@"GOLFTeeMarkerImageFromSpecs(%@, %@, %@)", GOLFTeeColorNameFromTeeColorIndex(teeColorIndex), NSStringFromSize(imageSize), teeColor);
+#endif
 	NSBundle *ourBundle = GOLFKitBundle();
-
-	//	Starting with defaults…
-	NSUInteger workingSize = imageSize;
+	if (ourBundle) {
+		//	Starting with defaults…
+		NSUInteger workingSize = imageSize;
 
 #if TARGET_OS_IOS || TARGET_OS_WATCH
-	NSString *workingTeeImageName = @"tee_marker_generic";
-	
-	//	Finalize the image size…
-	switch (imageSize) {
-  		case GOLFTeeMarkerImageSize16pt:
-  		case GOLFTeeMarkerImageSize64pt:
-    		break;
-
-  		default:
-  			workingSize = GOLFTeeMarkerImageSizeDefault;
-    		break;
-	}
-	
-	//	Finalize the image name…
-	if (teeColorIndex != GOLFTeeColorGeneric) {
-		if (IS_ANY_STANDARD_TEE_COLOR_INDEX(teeColorIndex)) {
-			for (NSDictionary *colorDict in GOLFStandardTeeColorArray()) {
-				if ([[colorDict objectForKey:@"teeColorIndex"] integerValue] == teeColorIndex) {
-					workingTeeImageName = [colorDict objectForKey:@"teeImageName"];
-					break;	//	Out of "for (NSDictionary *colorDict" loop
-				}
-			}
-		} else if (teeColorIndex == GOLFTeeColorCombo) {
-			workingTeeImageName = @"tee_marker_combo";
-		} else if (teeColorIndex == GOLFTeeColorAdd) {
-			workingTeeImageName = @"tee_marker_add";
-		} else if (teeColorIndex == GOLFTeeColorAll) {
-			workingTeeImageName = @"tee_marker_all";
-		} else if (teeColorIndex == GOLFTeeColorUSA) {
-			workingTeeImageName = @"tee_marker_usa";
-		} else if (teeColorIndex == GOLFTeeColorEU) {
-			workingTeeImageName = @"tee_marker_eu";
-		} else if (teeColorIndex == GOLFTeeColorPGA) {
-			workingTeeImageName = @"tee_marker_pga";
-		} else if (teeColorIndex == GOLFTeeColorUSGA) {
-			workingTeeImageName = @"tee_marker_usga";
-		}
-	}
-	return [GOLFTeeImage imageNamed:[workingTeeImageName stringByAppendingFormat:@"_%lu", (unsigned long)workingSize] inBundle:ourBundle compatibleWithTraitCollection:nil];
-	
-#elif TARGET_OS_MAC
-	NSString *workingTeeIconName = @"GOLFTeeMarkerGeneric";
-	GOLFTeeImage *workingTeeMarkerImage = nil;
-	
-	//	We can live with the requested size…
-	
-	if (teeColorIndex == GOLFTeeColorCustom) {
-		NSRect offscreenRect = NSMakeRect(0.0, 0.0, 128.0, 128.0);
-		NSBitmapImageRep *offscreenRep = [[NSBitmapImageRep alloc] initWithBitmapDataPlanes:nil
-				pixelsWide:offscreenRect.size.width pixelsHigh:offscreenRect.size.height 
-				bitsPerSample:8 samplesPerPixel:4 
-				hasAlpha:YES isPlanar:NO 
-				colorSpaceName:NSCalibratedRGBColorSpace bitmapFormat:0 
-				bytesPerRow:(4 * offscreenRect.size.width) bitsPerPixel:32];
-		 
-		[NSGraphicsContext saveGraphicsState];
-		[NSGraphicsContext setCurrentContext:[NSGraphicsContext graphicsContextWithBitmapImageRep:offscreenRep]];
-		 
-		//	We need to draw an icon and a color dot in the graphics context
-		if (teeColor == nil) {
-			[(GOLFTeeImage *)[ourBundle imageForResource:@"GOLFTeeMarkerGeneric"] drawAtPoint:offscreenRect.origin fromRect:NSZeroRect operation:NSCompositingOperationCopy fraction:1.0];
-		} else {
-			//	Draw the white icon into the context
-			GOLFColor *localTintingColor = [teeColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
-			[(GOLFTeeImage *)[ourBundle imageForResource:@"GOLFTeeMarkerWhite"] drawAtPoint:offscreenRect.origin fromRect:NSZeroRect operation:NSCompositingOperationCopy fraction:1.0];
-			//	The actual colored circle of the 128x128 image is 100 pixels wide, 14px left, 7 px top, 14 px right, 21 px bottom
-			
-			NSGradient *colorGradient = [[NSGradient alloc] initWithColorsAndLocations:
-					[GOLFColor whiteColor], 0.0,
-					[GOLFColor colorWithDeviceRed:[localTintingColor redComponent] green:[localTintingColor greenComponent] blue:[localTintingColor blueComponent] alpha:0.60], 0.2,
-					[GOLFColor colorWithDeviceRed:[localTintingColor redComponent] green:[localTintingColor greenComponent] blue:[localTintingColor blueComponent] alpha:0.85], 0.5,
-					localTintingColor, 0.9,
-					[GOLFColor darkGrayColor], 1.0,
-					nil];
-			NSRect colorRect = NSMakeRect(offscreenRect.origin.x + 14.0, offscreenRect.origin.y + 21.0, offscreenRect.size.width - 28.0, offscreenRect.size.height - 28.0);
-			NSBezierPath *circle = [NSBezierPath bezierPathWithOvalInRect:colorRect];
-			[colorGradient drawInBezierPath:circle angle:-90.0];
-			
-//			[colorGradient ah_release];
-		}
-		 
-		[NSGraphicsContext restoreGraphicsState];
+		NSString *workingTeeImageName = @"tee_marker_generic";
 		
-		workingTeeMarkerImage = [[GOLFTeeImage alloc] initWithSize:offscreenRect.size];
-		[workingTeeMarkerImage addRepresentation:offscreenRep];	//	Add the image representation to the image
-//		[offscreenRep ah_release];	//	The image will retain the rep
-	} else {
-		//	Finalize the icon name…
+		//	Finalize the image size…
+		switch (imageSize) {
+			case GOLFTeeMarkerImageSize16pt:
+			case GOLFTeeMarkerImageSize64pt:
+				break;
+
+			default:
+				workingSize = GOLFTeeMarkerImageSizeDefault;
+				break;
+		}
+		
+		//	Finalize the image name…
 		if (teeColorIndex != GOLFTeeColorGeneric) {
 			if (IS_ANY_STANDARD_TEE_COLOR_INDEX(teeColorIndex)) {
 				for (NSDictionary *colorDict in GOLFStandardTeeColorArray()) {
 					if ([[colorDict objectForKey:@"teeColorIndex"] integerValue] == teeColorIndex) {
-						workingTeeIconName = [colorDict objectForKey:@"teeIconName"];
+						workingTeeImageName = [colorDict objectForKey:@"teeImageName"];
 						break;	//	Out of "for (NSDictionary *colorDict" loop
 					}
 				}
 			} else if (teeColorIndex == GOLFTeeColorCombo) {
-				workingTeeIconName = @"GOLFTeeMarkerCombo";
+				workingTeeImageName = @"tee_marker_combo";
 			} else if (teeColorIndex == GOLFTeeColorAdd) {
-				workingTeeIconName = @"GOLFTeeMarkerAdd";
+				workingTeeImageName = @"tee_marker_add";
 			} else if (teeColorIndex == GOLFTeeColorAll) {
-				workingTeeIconName = @"GOLFTeeMarkerAll";
-			} else if (teeColorIndex == GOLFTeeColorUSA) {
-				workingTeeIconName = @"GOLFTeeMarkerUSA";
-			} else if (teeColorIndex == GOLFTeeColorEU) {
-				workingTeeIconName = @"GOLFTeeMarkerEU";
-			} else if (teeColorIndex == GOLFTeeColorPGA) {
-				workingTeeIconName = @"GOLFTeeMarkerPGA";
-			} else if (teeColorIndex == GOLFTeeColorUSGA) {
-				workingTeeIconName = @"GOLFTeeMarkerUSGA";
+				workingTeeImageName = @"tee_marker_all";
+	//		} else if (teeColorIndex == GOLFTeeColorUSA) {
+	//			workingTeeImageName = @"tee_marker_usa";
+	//		} else if (teeColorIndex == GOLFTeeColorEU) {
+	//			workingTeeImageName = @"tee_marker_eu";
+	//		} else if (teeColorIndex == GOLFTeeColorPGA) {
+	//			workingTeeImageName = @"tee_marker_pga";
+	//		} else if (teeColorIndex == GOLFTeeColorUSGA) {
+	//			workingTeeImageName = @"tee_marker_usga";
 			}
 		}
-		workingTeeMarkerImage = (GOLFTeeImage *)[ourBundle imageForResource:workingTeeIconName];	//	The icon as pulled from the bundle
-	}
+		return [GOLFTeeImage imageNamed:[workingTeeImageName stringByAppendingFormat:@"_%lu", (unsigned long)workingSize] inBundle:ourBundle compatibleWithTraitCollection:nil];
+	
+#elif TARGET_OS_MAC
+		NSString *workingTeeIconName = @"GOLFTeeMarkerGeneric";
+		GOLFTeeImage *workingTeeMarkerImage = nil;
+		
+		//	We can live with the requested size…
+		
+		if (teeColorIndex == GOLFTeeColorCustom) {
+			NSRect offscreenRect = NSMakeRect(0.0, 0.0, 128.0, 128.0);
+			NSBitmapImageRep *offscreenRep = [[NSBitmapImageRep alloc] initWithBitmapDataPlanes:nil
+					pixelsWide:offscreenRect.size.width pixelsHigh:offscreenRect.size.height 
+					bitsPerSample:8 samplesPerPixel:4 
+					hasAlpha:YES isPlanar:NO 
+					colorSpaceName:NSCalibratedRGBColorSpace bitmapFormat:0 
+					bytesPerRow:(4 * offscreenRect.size.width) bitsPerPixel:32];
+			 
+			[NSGraphicsContext saveGraphicsState];
+			[NSGraphicsContext setCurrentContext:[NSGraphicsContext graphicsContextWithBitmapImageRep:offscreenRep]];
+			 
+			//	We need to draw an icon and a color dot in the graphics context
+			if (teeColor == nil) {
+				//	Requesting a GOLFTeeColorCustom icon, but the color hasn't been specified!
+				[(GOLFTeeImage *)[ourBundle imageForResource:@"GOLFTeeMarkerGeneric"] drawAtPoint:offscreenRect.origin fromRect:NSZeroRect operation:NSCompositingOperationCopy fraction:1.0];
+			} else {
+				//	Draw the white icon into the context
+				GOLFColor *localTintingColor = [teeColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+				[(GOLFTeeImage *)[ourBundle imageForResource:@"GOLFTeeMarkerWhite"] drawAtPoint:offscreenRect.origin fromRect:NSZeroRect operation:NSCompositingOperationCopy fraction:1.0];
+				//	The actual colored circle of the 128x128 image is 100 pixels wide, 14px left, 7 px top, 14 px right, 21 px bottom
+				
+				NSGradient *colorGradient = [[NSGradient alloc] initWithColorsAndLocations:
+						[GOLFColor whiteColor], 0.0,
+						[GOLFColor colorWithDeviceRed:[localTintingColor redComponent] green:[localTintingColor greenComponent] blue:[localTintingColor blueComponent] alpha:0.60], 0.2,
+						[GOLFColor colorWithDeviceRed:[localTintingColor redComponent] green:[localTintingColor greenComponent] blue:[localTintingColor blueComponent] alpha:0.85], 0.5,
+						localTintingColor, 0.9,
+						[GOLFColor darkGrayColor], 1.0,
+						nil];
+				NSRect colorRect = NSMakeRect(offscreenRect.origin.x + 14.0, offscreenRect.origin.y + 21.0, offscreenRect.size.width - 28.0, offscreenRect.size.height - 28.0);
+				NSBezierPath *circle = [NSBezierPath bezierPathWithOvalInRect:colorRect];
+				[colorGradient drawInBezierPath:circle angle:-90.0];
+				
+	//			[colorGradient ah_release];
+			}
+			 
+			[NSGraphicsContext restoreGraphicsState];
+			
+			workingTeeMarkerImage = [[GOLFTeeImage alloc] initWithSize:offscreenRect.size];
+			[workingTeeMarkerImage addRepresentation:offscreenRep];	//	Add the image representation to the image
+	//		[offscreenRep ah_release];	//	The image will retain the rep
+		} else {
+			//	Finalize the icon name…
+			if (teeColorIndex != GOLFTeeColorGeneric) {
+				if (IS_ANY_STANDARD_TEE_COLOR_INDEX(teeColorIndex)) {
+					for (NSDictionary *colorDict in GOLFStandardTeeColorArray()) {
+						if ([[colorDict objectForKey:@"teeColorIndex"] integerValue] == teeColorIndex) {
+							workingTeeIconName = [colorDict objectForKey:@"teeIconName"];
+							break;	//	Out of "for (NSDictionary *colorDict" loop
+						}
+					}
+				} else if (teeColorIndex == GOLFTeeColorCombo) {
+					workingTeeIconName = @"GOLFTeeMarkerCombo";
+				} else if (teeColorIndex == GOLFTeeColorAdd) {
+					workingTeeIconName = @"GOLFTeeMarkerAdd";
+				} else if (teeColorIndex == GOLFTeeColorAll) {
+					workingTeeIconName = @"GOLFTeeMarkerAll";
+	//			} else if (teeColorIndex == GOLFTeeColorUSA) {
+	//				workingTeeIconName = @"GOLFTeeMarkerUSA";
+	//			} else if (teeColorIndex == GOLFTeeColorEU) {
+	//				workingTeeIconName = @"GOLFTeeMarkerEU";
+	//			} else if (teeColorIndex == GOLFTeeColorPGA) {
+	//				workingTeeIconName = @"GOLFTeeMarkerPGA";
+	//			} else if (teeColorIndex == GOLFTeeColorUSGA) {
+	//				workingTeeIconName = @"GOLFTeeMarkerUSGA";
+				}
+			}
+			workingTeeMarkerImage = (GOLFTeeImage *)[ourBundle imageForResource:workingTeeIconName];	//	The icon as pulled from the bundle
+		}
 
-	NSImageRep *imageRep = [workingTeeMarkerImage bestRepresentationForRect:NSMakeRect(0.0, 0.0, workingSize, workingSize) context:[NSGraphicsContext currentContext] hints:nil];
-	GOLFTeeImage *sizedImage = [[NSImage alloc] initWithSize:NSMakeSize(workingSize, workingSize)];
-	[sizedImage addRepresentation:imageRep];
-	return sizedImage;
+#ifdef DEBUG
+	NSLog(@"GOLFTeeMarkerImageFromSpecs() teeColorIndex: %@ (%d)", GOLFTeeColorNameFromTeeColorIndex(teeColorIndex), teeColorIndex);
+#endif
+		NSImageRep *imageRep = [workingTeeMarkerImage bestRepresentationForRect:NSMakeRect(0.0, 0.0, workingSize, workingSize) context:[NSGraphicsContext currentContext] hints:nil];
+		GOLFTeeImage *sizedImage = [[NSImage alloc] initWithSize:NSMakeSize(workingSize, workingSize)];
+		[sizedImage addRepresentation:imageRep];
+		return sizedImage;
 	
 #endif
-
+	}	//	if (ourBundle)
+	return nil;
 }
 
 //=================================================================
-//	GOLFTeeMarkerImageFromTeeColorIndex
+//	GOLFTeeMarkerImageFromTeeColorIndex(teeColorIndex, teeColor)
 //=================================================================
 GOLFTeeImage * GOLFTeeMarkerImageFromTeeColorIndex(GOLFTeeColorIndex teeColorIndex, GOLFColor *teeColor) {
 	return GOLFTeeMarkerImageFromSpecs(teeColorIndex, GOLFTeeMarkerImageSizeDefault, teeColor);
 }
 
 //=================================================================
-//	GOLFLittleTeeMarkerImageFromTeeColorIndex
+//	GOLFLittleTeeMarkerImageFromTeeColorIndex(teeColorIndex, teeColor)
 //=================================================================
 GOLFTeeImage * GOLFLittleTeeMarkerImageFromTeeColorIndex(GOLFTeeColorIndex teeColorIndex, GOLFColor *teeColor) {
 	NSMutableDictionary *imageCache = cachedLittleTeeColorImages ?: [NSMutableDictionary dictionaryWithCapacity:5];
 	NSNumber *imageKey = [NSNumber numberWithTeeColorIndex:teeColorIndex];
 	GOLFTeeImage *cachedImage = [imageCache objectForKey:imageKey];
-	if (cachedImage == nil) {
+	if ((cachedImage == nil) || (teeColorIndex == GOLFTeeColorCustom)) {
 		cachedImage = GOLFTeeMarkerImageFromSpecs(teeColorIndex, GOLFTeeMarkerImageSize16pt, teeColor);
 		if (teeColorIndex != kNotATeeColorIndex) {
 			[imageCache setObject:cachedImage forKey:imageKey];
@@ -791,7 +799,7 @@ GOLFTeeImage * GOLFLittleTeeMarkerImageFromTeeColorIndex(GOLFTeeColorIndex teeCo
 }
 
 //=================================================================
-//	GOLFLargeTeeMarkerImageFromTeeColorIndex
+//	GOLFLargeTeeMarkerImageFromTeeColorIndex(teeColorIndex, teeColor)
 //=================================================================
 GOLFTeeImage * GOLFLargeTeeMarkerImageFromTeeColorIndex(GOLFTeeColorIndex teeColorIndex, GOLFColor *teeColor) {
 	return GOLFTeeMarkerImageFromSpecs(teeColorIndex, GOLFTeeMarkerImageSize64pt, teeColor);

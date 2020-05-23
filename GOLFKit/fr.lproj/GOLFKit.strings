@@ -207,6 +207,7 @@
 "TERM_TIE_ABBR" = "T";
 "TERM_TIEBREAKER" = "jouant la belle";
 "TERM_TIEBREAKER_PLURAL" = "jouant la belle";
+"TERM_TIME" = "heure";
 "TERM_TIPS" = "astuces";
 "TERM_TODAY" = "aujourd’hui";
 "TERM_TOMORROW" = "demain";
@@ -725,7 +726,7 @@
 "ALERT_USERS_GUIDE_ERROR_INFO" = "Assurez vous d’avoir une connexion internet.  Réessayez plus tard.";
 
 "BLURB_DUPLICATE_HOLE_HANDICAPS" = "Sur les parcours avec plus d’un neuf, ne permettez pas handicaps de trou qui dupliquent les handicaps de trou d’un autre neuf (à moins que les neufs utilisent handicaps 9-trous).";
-"BLURB_ESTIMATED_RATINGS_NOTICE" = "Remarque: Certain handicaps de parcours peuvent être estimés. Envisagez d’ajouter des évaluations de 9-trous à la définition de ce parcours.";
+"BLURB_MISSING_RATINGS_NOTICE" = "Remarque: Des évaluations manquantes peuvent empêcher l’affichage de certains Tableaux des Handicaps de Parcours. Envisagez d’ajouter des évaluations de 9-trous à la définition de ce parcours.";
 "BLURB_REMOTE_DROPBOX" = "Les scores peuvent être importées ou mises à jour de les fiches de données synchronisés dans le dossier «Dropbox/Apps/Mulligan Scoring» sur cet ordinateur.  Choisissez «Scores du Dropbox…» dans la menu Ficher / Importer pour commenter scores entrants.";
 "BLURB_REMOTE_ICLOUD" = "Les scores peuvent être importées ou mises à jour de les fichiers de données anvoyés à iCloud par des dispositifs distant connectés en utilisant le même Apple ID utilisé pour iCloud sur cet ordinateur.  Choisissez «Scores du iCloud…» dans la menu Fichier / Importer pour commenter scores entrants.";
 "BLURB_REQUIRE_9_HOLE_HANDICAPS" = "Surs les parcours avec 3 ou plus neufs, obligez que les handicaps de trou pour chaque neuf soit des valeurs uniques de 1 à 9.";
@@ -893,6 +894,7 @@
 "ALLOWANCE_TYPE_AGGREGATE_3_8_ABBR" = "3/8 agrégat";
 "ALLOWANCE_TYPE_AGGREGATE_3_8_DESC" = "3/8 de handicaps total des partenaires";
 "ALLOWANCE_TYPE_DIFFERENCE" = "Différence";
+"ALLOWANCE_TYPE_DIFFERENCE_ABBR" = "Diff.";
 "ALLOWANCE_TYPE_DIFFERENCE_DESC" = "Concurrent avec plus bas handicap joue de zéro";
 "ALLOWANCE_TYPE_A_PLAYER_50" = "50% du handicap du joueur A";
 "ALLOWANCE_TYPE_A_PLAYER_35_B_15" = "35% joueur A + 15% joueur B";

@@ -80,7 +80,7 @@ GOLFTeeImage * _Nonnull GOLFTeeMarkerImageFromTeeColorIndex(GOLFTeeColorIndex te
 //	If teeColorIndex is not any of the above, returns the special "Generic" tee icon
 
 GOLFTeeImage * _Nonnull GOLFLittleTeeMarkerImageFromTeeColorIndex(GOLFTeeColorIndex teeColorIndex, GOLFColor * _Nullable teeColor);
-//	Returns a small (16x16 pt.) tee marker image associated with the teeColorIndex provided
+//	Returns a small (16x16 pt.) tee marker image associated with a standard teeColorIndex provided
 //	When teeColorIndex is GOLFTeeColorCombo, GOLFTeeColorAdd or GOLFTeeColorAll, returns the special tee icon
 //	When teeColorIndex is GOLFTeeColorCustom, returns a custom-colored (teeColor) tee icon
 //	If teeColorIndex is not any of the above, returns the special "Generic" tee icon
