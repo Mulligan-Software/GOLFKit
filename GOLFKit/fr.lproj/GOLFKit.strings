@@ -146,6 +146,7 @@
 "TERM_PAR" = "par";
 "TERM_PAR_PLURAL" = "pars";
 "TERM_PEORIA" = "Peoria";
+"TERM_PLACE" = "place";	//	like "first place" or "placement"
 "TERM_PLAYER" = "joueur";
 "TERM_PLAYER_PLURAL" = "joueurs";
 "TERM_POINT" = "point";
@@ -189,6 +190,7 @@
 "TERM_SIXPT" = "6-Points";
 "TERM_SKIN_PLURAL" = "skins";
 "TERM_SLOPE" = "slope";
+"TERM_SORT" = "trier";
 "TERM_STABLEFORD" = "Stableford";
 "TERM_STATUS" = "statut";
 "TERM_STROKE" = "coup";
@@ -367,6 +369,7 @@
 "TITLE_CHOOSE_HOLE" = "Choisissez un trou";
 "TITLE_CLEAR" = "Effacer";
 "TITLE_CLEAR_SCORES" = "Effacer les scores";
+"TITLE_CLOSE" = "Fermer";
 "TITLE_CLOSE_OUT" = "Clôturera";
 "TITLE_CLOSE_OUT_PLURAL" = "paris Clôturera";
 "TITLE_COMPARE_9_HOLE_SCORES" = "Combinez et utilisez les scores 9-trous";

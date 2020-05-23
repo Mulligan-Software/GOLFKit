@@ -17,32 +17,32 @@
 #define kNotARoundCCR					-999		//	No-value for round's calculated course rating - GOLFRoundCCR
 
 typedef NS_ENUM(NSUInteger, GOLFAllowanceType) {
-	StandardAllowanceType = 0,			//	Regular allowance (for players)
-	GrossAllowanceType,					//	Gross - no handicap
-	NetAllowanceType,					//	Net team allowance - use team members compScores
-	FullHandicapAllowanceType = 10,		//	Full handicap  (Total stroke play)
-	Men90Women95AllowanceType,			//	Men 90%, Women 95%  (Best-ball of 2, 2 Best-balls of 4)
-	Men80Women90AllowanceType,			//	Men 80%, Women 90%	(Best-ball of 4)
-	A60B40AllowanceType,				//	A player 60%, B player 40%	(Chapman/Pinehurst)
-	A50B20AllowanceType,				//	A player 50%, B player 20%
-	SpecifiedPercentAllowanceType,		//	A specified percentage of course handicap
-	AverageCombinedAllowanceType = 20,	//	Average team handicap  (Foursomes)
-	AverageCombined80AllowanceType,		//	80% of average team handicap  (Foursomes w/ selected drive, Scramble)
-	Aggregate3EighthsAllowanceType,		//	3/8 of aggregate (37.5% of average) team handicap  (American Foursomes)
-	DifferenceAllowanceType = 30,		//	Handicap Difference vs Opponent  (Single Player or Teammates intra-Scorecard)
-	QuotaAllowanceType,					//	Point Quota (36 / 38 / 18 less Full handicap)		(31)
-	ScrambleA50AllowanceType = 40,		//	50% of A Player  (2+ Player Scramble)
-	ScrambleA35B15AllowanceType,		//	35% of A Player + 15% of B Player  (2+ Player Scramble)
-	ScrambleA25B15C10AllowanceType,		//	25% of A Player + 15% of B Player + 10% of C Player  (3+ Player Scramble)
-	ScrambleA20B15C10D5AllowanceType,	//	20% of A Player + 15% of B Player + 10% of C Player + 5% of D Player  (4+ Player Scramble)
-	ScrambleScheidAllowanceType = 48,	//	Modified Scheid Scramble  (Single Team 1-time)
-	ScrambleZigZagAllowanceType = 49,	//	ZIG-ZAG  (Single Team 1-time)
-	CallawayAllowanceType = 50,			//	"Official" Callaway handicap  (Single Player 1-time)
-	ScheidAllowanceType,				//	Scheid handicap  (Single Player 1-time)
-	PeoriaAllowanceType,				//	Peoria handicap  (Single Player 1-time)
-	ModifiedPeoriaAllowanceType,		//	Modified Peoria handicap  (Single Player 1-time)
-	System36AllowanceType,				//	System 36 handicap  (Single Player 1-time)
-	UnknownAllowanceType = 99			//	Unknown or error allowance type
+	StandardAllowanceType = 0,			//	Regular allowance (for players)							(0)
+	GrossAllowanceType,					//	Gross - no handicap										(1)
+	NetAllowanceType,					//	Net team allowance - use team members compScores		(2)
+	FullHandicapAllowanceType = 10,		//	Full handicap  (Total stroke play)						(3)
+	Men90Women95AllowanceType,			//	Men 90%, Women 95%  (Best-ball of 2, 2 Best-balls of 4)	(10)
+	Men80Women90AllowanceType,			//	Men 80%, Women 90%	(Best-ball of 4)					(11)
+	A60B40AllowanceType,				//	A player 60%, B player 40%	(Chapman/Pinehurst)			(12)
+	A50B20AllowanceType,				//	A player 50%, B player 20%								(13)
+	SpecifiedPercentAllowanceType,		//	A specified percentage of course handicap				(14)
+	AverageCombinedAllowanceType = 20,	//	Average team handicap  (Foursomes)						(20)
+	AverageCombined80AllowanceType,		//	80% of average team handicap  (Foursomes w/ selected drive, Scramble)	(21)
+	Aggregate3EighthsAllowanceType,		//	3/8 of aggregate (37.5% of average) team handicap  (American Foursomes)	(22)
+	DifferenceAllowanceType = 30,		//	Handicap Difference vs Opponent  (Single Player or Teammates intra-Scorecard)	(30)
+	QuotaAllowanceType,					//	Point Quota (36 / 38 / 18 less Full handicap)			(31)
+	ScrambleA50AllowanceType = 40,		//	50% of A Player  (2+ Player Scramble)					(40)
+	ScrambleA35B15AllowanceType,		//	35% of A Player + 15% of B Player  (2+ Player Scramble)	(41)
+	ScrambleA25B15C10AllowanceType,		//	25% of A Player + 15% of B Player + 10% of C Player  (3+ Player Scramble)	(42)
+	ScrambleA20B15C10D5AllowanceType,	//	20% of A Player + 15% of B Player + 10% of C Player + 5% of D Player  (4+ Player Scramble)	(43)
+	ScrambleScheidAllowanceType = 48,	//	Modified Scheid Scramble  (Single Team 1-time)			(48)
+	ScrambleZigZagAllowanceType = 49,	//	ZIG-ZAG  (Single Team 1-time)							(49)
+	CallawayAllowanceType = 50,			//	"Official" Callaway handicap  (Single Player 1-time)	(50)
+	ScheidAllowanceType,				//	Scheid handicap  (Single Player 1-time)					(51)
+	PeoriaAllowanceType,				//	Peoria handicap  (Single Player 1-time)					(52)
+	ModifiedPeoriaAllowanceType,		//	Modified Peoria handicap  (Single Player 1-time)		(53)
+	System36AllowanceType,				//	System 36 handicap  (Single Player 1-time)				(54)
+	UnknownAllowanceType = 99			//	Unknown or error allowance type							(99)
 };
 
 #if !defined(IS_ONE_TIME_SCRAMBLE_ALLOWANCE_TYPE)
@@ -233,10 +233,10 @@ typedef NS_OPTIONS(NSUInteger, GOLFRoundStatus) {
 	GOLFRoundStatusIsMissingCompetitor				= 1 << 15,		//	(32768)		Core Data fault on access
 	GOLFRoundStatusOfficialHandicapIsOverridden		= 1 << 16,		//	(65536)		Official Handicap (Handicap Index) has been overridden
 	GOLFRoundStatusOfficialHandicapIsLimited		= 1 << 17,		//	(131072)	Official Handicap (Handicap Index) has been limited
-	GOLFRoundStatusPlayingHandicapIsOverridden		= 1 << 18,		//	(262144)
-	GOLFRoundStatusPlayingHandicapIsLimited			= 1 << 19,		//	(524288)
-	GOLFRoundStatusHandicapAllowanceIsAdjusted		= 1 << 20,		//	(1048576)
-	GOLFRoundStatusHandicapAllowanceIsOverridden	= 1 << 21,		//	(2097152)
+	GOLFRoundStatusPlayingHandicapIsOverridden		= 1 << 18,		//	(262144)	Playing Handicap has been overridden
+	GOLFRoundStatusPlayingHandicapIsLimited			= 1 << 19,		//	(524288)	Playing Handicap has been limited
+	GOLFRoundStatusHandicapAllowanceIsAdjusted		= 1 << 20,		//	(1048576)	Handicap Allowance has been adjusted
+	GOLFRoundStatusHandicapAllowanceIsOverridden	= 1 << 21,		//	(2097152)	Handicap Allowance has been overridden
 	GOLFRoundStatusOption22							= 1 << 22,		//	(4194304)
 	GOLFRoundStatusOption23							= 1 << 23,		//	(8388608)
 	GOLFRoundStatusOption24							= 1 << 24		//	(16777216)
@@ -260,9 +260,9 @@ typedef NS_OPTIONS(NSUInteger, GOLFRoundProcessingStatus) {
 	GOLFRoundProcessingStatusOption13						= 1 << 13,		//	(8192)
 	GOLFRoundProcessingStatusOption14						= 1 << 14,		//	(16384)
 	GOLFRoundProcessingStatusOption15						= 1 << 15,		//	(32768)
-	GOLFRoundProcessingStatusNeedsPlayingHandicapUpdate		= 1 << 16,		//	(65536)
-	GOLFRoundProcessingStatusNeedsHandicapAllowanceUpdate	= 1 << 17,		//	(131072)
-	GOLFRoundProcessingStatusNeedsAllowedStrokesUpdate		= 1 << 18		//	(262144)
+	GOLFRoundProcessingStatusNeedsPlayingHandicapUpdate		= 1 << 16,		//	(65536)		Need to recalculate Playing Handicap
+	GOLFRoundProcessingStatusNeedsHandicapAllowanceUpdate	= 1 << 17,		//	(131072)	Need to recalculate Handicap Allowance
+	GOLFRoundProcessingStatusNeedsAllowedStrokesUpdate		= 1 << 18		//	(262144)	Need to recalculate allowed strokes
 };
 
 typedef NS_OPTIONS(NSUInteger, GOLFRoundSideStatus) {
@@ -407,6 +407,7 @@ NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictiona
 //	handicapAuthority	GOLFHandicapAuthority *		The handicap authority associated with this presentation (default provided if missing)
 //	short				NSNumber *					BOOL indicating need for short (abbreviated?) return (if available)
 //	allowancePct		NSNumber *					The allowance percentage (of 100) for the SpecifiedPercentAllowanceType (default provided if missing)
+//	lowHandicap			NSNumber *					GOLFPlayingHandicap for the base (low) handicap player used for DifferenceAllowanceType
 
 
 //=================================================================

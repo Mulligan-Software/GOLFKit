@@ -146,6 +146,7 @@
 "TERM_PAR" = "Par";
 "TERM_PAR_PLURAL" = "Pars";
 "TERM_PEORIA" = "Peoria";
+"TERM_PLACE" = "Platz";	//	like "first place" or "placement"
 "TERM_PLAYER" = "Spieler";
 "TERM_PLAYER_PLURAL" = "Spieler";
 "TERM_POINT" = "Punkt";
@@ -189,6 +190,7 @@
 "TERM_SIXPT" = "6-Punkte";
 "TERM_SKIN_PLURAL" = "Skins";
 "TERM_SLOPE" = "Slope";
+"TERM_SORT" = "sortieren";
 "TERM_STABLEFORD" = "Stableford";
 "TERM_STATUS" = "Status";
 "TERM_STROKE" = "Schlag";
@@ -367,6 +369,7 @@
 "TITLE_CHOOSE_HOLE" = "Wählen ein Golfloch";
 "TITLE_CLEAR" = "Löschen";
 "TITLE_CLEAR_SCORES" = "Scores löschen";
+"TITLE_CLOSE" = "Schließen";
 "TITLE_CLOSE_OUT" = "Schließung";
 "TITLE_CLOSE_OUT_PLURAL" = "Schließung Wetten";
 "TITLE_COMPARE_9_HOLE_SCORES" = "Kombinieren und verwenden 9-Loch-Scores";
