@@ -636,9 +636,6 @@ NSRange GOLFLongestRangeOfAnyTeeColorNameInTeeName(NSString * _Nonnull teeName) 
 //	GOLFTeeMarkerImageFromSpecs(teeColorIndex, imageSize, teeColor)
 //=================================================================
 GOLFTeeImage * GOLFTeeMarkerImageFromSpecs(GOLFTeeColorIndex teeColorIndex, GOLFTeeMarkerImageSize imageSize, GOLFColor *teeColor) {
-#ifdef DEBUG
-	NSLog(@"GOLFTeeMarkerImageFromSpecs(%@, %@, %@)", GOLFTeeColorNameFromTeeColorIndex(teeColorIndex), NSStringFromSize(imageSize), teeColor);
-#endif
 	NSBundle *ourBundle = GOLFKitBundle();
 	if (ourBundle) {
 		//	Starting with defaults…
@@ -760,10 +757,6 @@ GOLFTeeImage * GOLFTeeMarkerImageFromSpecs(GOLFTeeColorIndex teeColorIndex, GOLF
 			}
 			workingTeeMarkerImage = (GOLFTeeImage *)[ourBundle imageForResource:workingTeeIconName];	//	The icon as pulled from the bundle
 		}
-
-#ifdef DEBUG
-	NSLog(@"GOLFTeeMarkerImageFromSpecs() teeColorIndex: %@ (%d)", GOLFTeeColorNameFromTeeColorIndex(teeColorIndex), teeColorIndex);
-#endif
 		NSImageRep *imageRep = [workingTeeMarkerImage bestRepresentationForRect:NSMakeRect(0.0, 0.0, workingSize, workingSize) context:[NSGraphicsContext currentContext] hints:nil];
 		GOLFTeeImage *sizedImage = [[NSImage alloc] initWithSize:NSMakeSize(workingSize, workingSize)];
 		[sizedImage addRepresentation:imageRep];
