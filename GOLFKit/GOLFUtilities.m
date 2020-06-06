@@ -51,10 +51,10 @@ NSDictionary * GOLFCountriesInfo(void) {
 	//	Each country dictionary is indexed by its universal country code (US, UK, JP, etc.) or sub-code (UK-EN, UK-SC, etc.)
 	//	Key				Type						Description
 	//	-------------	-------------------------	------------------------------------------
-	//	countryCode		NSString *					Universal country postal code or sub-code
-	//	countryName		NSString *					unlocalized (en) country name
-	//	authority		GOLFHandicapAuthority *		Handicapping authority mnemonic
-	//	association		NSString *					Localized name of the national golf association
+	//	countryCode	NSString *					Universal country postal code or sub-code
+	//	countryName	NSString *					unlocalized (en) country name
+	//	authority		GOLFHandicapAuthority *	Handicapping authority mnemonic
+	//	association	NSString *					Localized name of the national golf association
 	//	URL				NSString *					Web site URL of national golf association
 	
 	return [NSDictionary dictionaryWithContentsOfFile:[GOLFKitBundle() pathForResource:@"GOLFCountries" ofType:@"plist"]];
@@ -69,11 +69,11 @@ NSDictionary * GOLFCountriesInfoForCountryCode(NSString *countryCode) {
 	
 	//	Key				Type						Description
 	//	-------------	-------------------------	--------------------------------------------
-	//	countryCode		NSString *					Country code from locale date on this device
-	//	countryName		NSString *					The localized name of the country
-	//	association		NSString *					The name of the country's golf association
+	//	countryCode	NSString *					Country code from locale date on this device
+	//	countryName	NSString *					The localized name of the country
+	//	association	NSString *					The name of the country's golf association
 	//	URL				NSString *					The URL of the golf association
-	//	authority		GOLFHandicapAuthority *		The default golf authority for handicapping in this country
+	//	authority		GOLFHandicapAuthority *	The default golf authority for handicapping in this country
 	//	states			NSArray *					Optional array of states dictionaries for this country - postalCode, stateName
 	
 //	NSDictionary *rootDict = [NSDictionary dictionaryWithContentsOfFile:[GOLFKitBundle() pathForResource:@"GOLFCountries" ofType:@"plist"]];
@@ -121,9 +121,9 @@ NSDictionary * GOLFHomeCountryInfo(void) {
 	
 	//	Key				Type					Description
 	//	-------------	---------------------	--------------------------------------------
-	//	countryCode		NSString *				Country code from locale date on this device
-	//	countryName		NSString *				The localized name of the country
-	//	association		NSString *				The name of the country's golf association
+	//	countryCode	NSString *				Country code from locale date on this device
+	//	countryName	NSString *				The localized name of the country
+	//	association	NSString *				The name of the country's golf association
 	//	URL				NSString *				The URL of the golf association
 	//	authority		GOLFHandicapAuthority	The default golf authority for handicapping in this country
 	//	states			NSArray *				Optional array of states dictionaries for this country - postalCode, stateName
