@@ -10,6 +10,7 @@
 "TERM_ADJUSTED" = "adjusted";
 "TERM_ADJUSTED_ABBR" = "adj.";
 "TERM_ADJUSTED_FOR_RATINGS" = "adjusted for Course Rating differences";
+"TERM_ADJUSTMENT" = "adjustment";
 "TERM_AGGREGATION" = "aggregation";
 "TERM_AGGREGATION_PLURAL" = "aggregations";
 "TERM_ALL" = "all";
@@ -29,6 +30,7 @@
 "TERM_BIRDIE" = "birdie";
 "TERM_BIRDIE_PLURAL" = "birdies";
 "TERM_BOWMAKER" = "Bowmaker";
+"TERM_CALCULATE" = "calculate";
 "TERM_CALCULATES" = "calculates";
 "TERM_CALLAWAY" = "Callaway";
 "TERM_CHACHA" = "Cha-Cha";
@@ -96,6 +98,7 @@
 "TERM_HELP" = "help";
 "TERM_HOLE" = "hole";
 "TERM_HOLE_PLURAL" = "holes";
+"TERM_IGNORE" = "ignore";
 "TERM_IMPORT" = "import";
 "TERM_INDICATE" = "indicate";
 "TERM_INDIVIDUAL" = "individual";	//	The adjective ("individual gross")
@@ -104,7 +107,10 @@
 "TERM_KEYBOARD" = "keyboard";
 "TERM_LEADERBOARD" = "leaderboard";
 "TERM_LIMITED" = "limited";
+"TERM_LINK" = "link";
 "TERM_LOCATE" = "locate";
+"TERM_LOCATION" = "location";
+"TERM_LOCK" = "lock";
 "TERM_LOCKED" = "locked";
 "TERM_LOOKUP" = "lookup";
 "TERM_LOW" = "low";	//	As in "low handicap"
@@ -138,6 +144,7 @@
 "TERM_NUMBER_ABBR" = "no.";
 "TERM_NUMBER_PLURAL" = "numbers";
 "TERM_NUMBER_PLURAL_ABBR" = "nos.";
+"TERM_ON_SITUATED" = "on";
 "TERM_OPEN" = "open";
 "TERM_OPT_OUT" = "opt out";
 "TERM_OVERALL" = "overall";
@@ -164,6 +171,7 @@
 "TERM_RATING" = "rating";
 "TERM_RATING_PLURAL" = "ratings";
 "TERM_RATING_PLURAL_ABBR" = "ratings";
+"TERM_RESET" = "reset";
 "TERM_REVERSERITZ" = "Reverse Ritz";
 "TERM_RITZ" = "Ritz";
 "TERM_ROUND" = "round";
@@ -219,6 +227,8 @@
 "TERM_TREND" = "trend";
 "TERM_TYPE" = "type";
 "TERM_UNKNOWN" = "unknown";
+"TERM_UNLINK" = "unlink";
+"TERM_UNLOCK" = "unlock";
 "TERM_UNLOCKED" = "unlocked";
 "TERM_UNNAMED" = "unnamed";
 "TERM_USE" = "use";
@@ -498,6 +508,7 @@
 "TITLE_IGNORE_BEST" = "Ignore best";
 "TITLE_IGNORE_WORST" = "Ignore worst";
 "TITLE_INCOMPLETE_HOLE" = "Incomplete Hole";
+"TITLE_INSTALL" = "Install";
 "TITLE_KEEP" = "Keep";
 "TITLE_KEEP_SCORES" = "Keep the Scores";
 "TITLE_KEEPING_SCORE" = "Keeping score since 1995";
@@ -559,6 +570,7 @@
 "TITLE_RECENT_PLAYERS_ETC" = "Recent Players, Clubs, Scorecards, etc.";
 "TITLE_REFRESH" = "Refresh";
 "TITLE_REGISTER" = "Register";
+"TITLE_REMOVE" = "Remove";
 "TITLE_REVIEW_BUTTON" = "Review";
 "TITLE_REVISION_DATE" = "Revision Date";
 "TITLE_ROUNDS_HIGHLIGHT" = "Rounds Highlight";
@@ -588,6 +600,7 @@
 "TITLE_SHOW_SCORES_AT_STARTUP" = "Show scores at startup";
 "TITLE_SHOW_TABLES" = "Show Tables";
 "TITLE_SKILL_ADJUSTMENT" = "Skill Adjustment";
+"TITLE_SKIP" = "Skip";
 "TITLE_SNAKE" = "Snake";
 "TITLE_SPECIAL_PREFERENCES" = "Special Settings";
 "TITLE_SSS" = "Standard Scratch Score";
@@ -608,6 +621,7 @@
 "TITLE_UNLINK_DROPBOX" = "Unlink Dropbox";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Unlock all Event Scorecards";
 "TITLE_UP_AND_DOWN" = "Up & Down";
+"TITLE_UPDATE" = "Update";
 "TITLE_UPDATES_UNAVAILABLE" = "Updates unavailable";
 "TITLE_USE_IOS_APPEARANCE" = "Use the iOS Appearance setting";
 "TITLE_USE_LAST" = "Use last";
@@ -964,8 +978,10 @@
 
 //	Phrases & Special characters
 "ALL_SQUARE_CHARACTER" = "―";		//	\U2015 Special character	alt: "–" (En Dash) \U2013
+"CURLY_CHARACTERS" = "“”‘’";
 "DONE_DOT" = "•";		//	Special character
 "DONT_ASK_ME_AGAIN" = "Don’t ask me about this again.";
+"DOTS_CHARACTERS" = "•••••";
 "DOUBLE_QUOTE_CLOSING" = "”";
 "DOUBLE_QUOTE_OPENING" = "“";
 "DOWNWARD_ARROW" = "↓";
@@ -979,10 +995,13 @@
 "ORDINAL_NTH" = "th";		/*	9th	*/
 "ORDINAL_20TH_TO_29TH" = "th,st,nd,rd,th,th,th,th,th,th";	/*	20th, 21st, 22nd, 23rd, 24th, 25th, etc.		*/
 "PERCENT_CHARACTER" = "%";
+"PLUS_CHARACTER" = "+";
 "PRESS_LEADER_CHARACTER" = "└";	//	Special character - alternates: "╚" or "‣"
 "SCORECARD_EXCEEDS_1_PLAYER" = "Scorecard exceeds maximum 1 player";
 "SCORECARD_EXCEEDS_%ld_PLAYERS" = "Scorecard exceeds maximum %ld players";
+"SUPERSCRIPT_+_CHARACTER" = "⁺";		//	Special character
 "TRADEMARK_CHARACTER" = "™";		//	Special character
+"UNCURLY_CHARACTERS" = "\"\"''";
 "UPWARD_ARROW" = "↑";
 "VIA_THE_INTERNET" = "via the Internet";
 "WITH_CHARACTER" = "c̅";		//	Special character

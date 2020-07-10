@@ -10,6 +10,7 @@
 "TERM_ADJUSTED" = "ajustado";
 "TERM_ADJUSTED_ABBR" = "aju.";
 "TERM_ADJUSTED_FOR_RATINGS" = "ajustado por diferencias de Clasificaciones del Campo";
+"TERM_ADJUSTMENT" = "adjuste";
 "TERM_AGGREGATION" = "agregación";
 "TERM_AGGREGATION_PLURAL" = "agregaciones";
 "TERM_ALL" = "todo";
@@ -29,6 +30,7 @@
 "TERM_BIRDIE" = "birdie";
 "TERM_BIRDIE_PLURAL" = "birdies";
 "TERM_BOWMAKER" = "Bowmaker";
+"TERM_CALCULATE" = "calcular";
 "TERM_CALCULATES" = "calcula";
 "TERM_CALLAWAY" = "Callaway";
 "TERM_CHACHA" = "Cha-Cha";
@@ -96,6 +98,7 @@
 "TERM_HELP" = "ayuda";
 "TERM_HOLE" = "hoyo";
 "TERM_HOLE_PLURAL" = "hoyos";
+"TERM_IGNORE" = "ignorar";
 "TERM_IMPORT" = "importar";
 "TERM_INDICATE" = "indicar";
 "TERM_INDIVIDUAL" = "individual";	//	The adjective ("individual gross")
@@ -104,7 +107,10 @@
 "TERM_KEYBOARD" = "teclado";
 "TERM_LEADERBOARD" = "tabla de clasificación";
 "TERM_LIMITED" = "limitado";
+"TERM_LINK" = "enlace";
 "TERM_LOCATE" = "ubicar";
+"TERM_LOCATION" = "localidad";
+"TERM_LOCK" = "bloquear";
 "TERM_LOCKED" = "bloqueado";
 "TERM_LOOKUP" = "buscar";
 "TERM_LOW" = "bajo";	//	As in "low handicap"
@@ -138,6 +144,7 @@
 "TERM_NUMBER_ABBR" = "no.";
 "TERM_NUMBER_PLURAL" = "números";
 "TERM_NUMBER_PLURAL_ABBR" = "nos.";
+"TERM_ON_SITUATED" = "en";
 "TERM_OPEN" = "abrir";
 "TERM_OPT_OUT" = "optar fuera";
 "TERM_OVERALL" = "de conjunto";
@@ -164,6 +171,7 @@
 "TERM_RATING" = "calificación";
 "TERM_RATING_PLURAL" = "calificaciones";
 "TERM_RATING_PLURAL_ABBR" = "calif.";
+"TERM_RESET" = "restablecer";
 "TERM_REVERSERITZ" = "Ritz Reversa";
 "TERM_RITZ" = "Ritz";
 "TERM_ROUND" = "ronda";
@@ -219,6 +227,8 @@
 "TERM_TREND" = "tendencia";
 "TERM_TYPE" = "tipo";
 "TERM_UNKNOWN" = "ignoto";
+"TERM_UNLINK" = "desenlazar";
+"TERM_UNLOCK" = "desbloquear";
 "TERM_UNLOCKED" = "desbloqueado";
 "TERM_UNNAMED" = "sin nobre";
 "TERM_USE" = "usar";
@@ -498,6 +508,7 @@
 "TITLE_IGNORE_BEST" = "Ignorar mejores";
 "TITLE_IGNORE_WORST" = "Ignorar peores";
 "TITLE_INCOMPLETE_HOLE" = "Hoyo incompleto";
+"TITLE_INSTALL" = "Instalar";
 "TITLE_KEEP" = "Conservar";
 "TITLE_KEEP_SCORES" = "Mantener los Resultados";
 "TITLE_KEEPING_SCORE" = "Llevando puntajes desde 1995";
@@ -559,6 +570,7 @@
 "TITLE_RECENT_PLAYERS_ETC" = "Jugadores recientes, Clubes, Tarjetas, etc.";
 "TITLE_REFRESH" = "Actualizar";
 "TITLE_REGISTER" = "Registrar";
+"TITLE_REMOVE" = "Eliminar";
 "TITLE_REVIEW_BUTTON" = "Revisar";
 "TITLE_REVISION_DATE" = "Fecha de Revisión";
 "TITLE_ROUNDS_HIGHLIGHT" = "Resaltado de Rondas";
@@ -588,6 +600,7 @@
 "TITLE_SHOW_SCORES_AT_STARTUP" = "Mostrar los puntajes al inicio";
 "TITLE_SHOW_TABLES" = "Mostrar tablas";
 "TITLE_SKILL_ADJUSTMENT" = "Ajuste por habilidad";
+"TITLE_SKIP" = "Omitir";
 "TITLE_SNAKE" = "Snake";
 "TITLE_SPECIAL_PREFERENCES" = "Ajustes Especiales";
 "TITLE_SSS" = "Standard Scratch Score";
@@ -608,6 +621,7 @@
 "TITLE_UNLINK_DROPBOX" = "Desenlazar Dropbox";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Desbloquea todas Tarjetas del Evento";
 "TITLE_UP_AND_DOWN" = "Alto y Abajo";
+"TITLE_UPDATE" = "Actualizar";
 "TITLE_UPDATES_UNAVAILABLE" = "Actualizaciones no disponibles";
 "TITLE_USE_IOS_APPEARANCE" = "Usar la configuración Apariencia de iOS";
 "TITLE_USE_LAST" = "Utilizar últimos";
@@ -965,8 +979,10 @@
 
 //	Phrases & Special characters
 "ALL_SQUARE_CHARACTER" = "―";		//	\U2015 Special character	alt: "–" (En Dash) \U2013
+"CURLY_CHARACTERS" = "“”‘’";
 "DONE_DOT" = "•";		//	Special character
 "DONT_ASK_ME_AGAIN" = "No volver a preguntar.";
+"DOTS_CHARACTERS" = "•••••";
 "DOUBLE_QUOTE_CLOSING" = "”";
 "DOUBLE_QUOTE_OPENING" = "“";
 "DOWNWARD_ARROW" = "↓";
@@ -979,10 +995,13 @@
 "ORDINAL_NTH" = "º";		/*	nth (like 133º)	*/
 "ORDINAL_20TH_TO_29TH" = "º,º,º,º,º,º,º,º,º,º";	/*	20º, 21º, 22º, etc.	*/
 "PERCENT_CHARACTER" = "%";
+"PLUS_CHARACTER" = "+";
 "PRESS_LEADER_CHARACTER" = "└";	//	Special character - alternates: "╚" or "‣"
 "SCORECARD_EXCEEDS_1_PLAYER" = "Tarjeta excede el máximo de 1 jugador";
 "SCORECARD_EXCEEDS_%ld_PLAYERS" = "Tarjeta excede el máximo de %ld jugadores";
+"SUPERSCRIPT_+_CHARACTER" = "⁺";		//	Special character
 "TRADEMARK_CHARACTER" = "™";		//	Special character
+"UNCURLY_CHARACTERS" = "\"\"''";
 "UPWARD_ARROW" = "↑";
 "VIA_THE_INTERNET" = "vía Internet";
 "WITH_CHARACTER" = "c̅";		//	Special character

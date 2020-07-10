@@ -10,6 +10,7 @@
 "TERM_ADJUSTED" = "angepasst";
 "TERM_ADJUSTED_ABBR" = "ang.";
 "TERM_ADJUSTED_FOR_RATINGS" = "bereinigt um Unterschiede der Course Ratings";
+"TERM_ADJUSTMENT" = "Anpassung";
 "TERM_AGGREGATION" = "Ansammlung";
 "TERM_AGGREGATION_PLURAL" = "Ansummlungen";
 "TERM_ALL" = "alle";
@@ -29,6 +30,7 @@
 "TERM_BIRDIE" = "Birdie";
 "TERM_BIRDIE_PLURAL" = "Birdies";
 "TERM_BOWMAKER" = "Bowmaker";
+"TERM_CALCULATE" = "berechnung";
 "TERM_CALCULATES" = "berechnet";
 "TERM_CALLAWAY" = "Callaway";
 "TERM_CHACHA" = "Cha-Cha";
@@ -96,6 +98,7 @@
 "TERM_HELP" = "Hilfe";
 "TERM_HOLE" = "Loch";
 "TERM_HOLE_PLURAL" = "Löcher";
+"TERM_IGNORE" = "ignorieren";
 "TERM_IMPORT" = "importieren";
 "TERM_INDICATE" = "zeigen";
 "TERM_INDIVIDUAL" = "individuell";	//	The adjective ("individual gross")
@@ -104,7 +107,10 @@
 "TERM_KEYBOARD" = "Tastatur";
 "TERM_LEADERBOARD" = "Bestenliste";
 "TERM_LIMITED" = "limitiert";
+"TERM_LINK" = "link";
 "TERM_LOCATE" = "suchen";
+"TERM_LOCATION" = "Lokalität";
+"TERM_LOCK" = "sperren";
 "TERM_LOCKED" = "gesperrt";
 "TERM_LOOKUP" = "nachsehen";
 "TERM_LOW" = "klein";	//	As in "low handicap"
@@ -138,6 +144,7 @@
 "TERM_NUMBER_ABBR" = "nr.";
 "TERM_NUMBER_PLURAL" = "Nummern";
 "TERM_NUMBER_PLURAL_ABBR" = "nrn.";
+"TERM_ON_SITUATED" = "in";
 "TERM_OPEN" = "öffnen";
 "TERM_OPT_OUT" = "ablehnen";
 "TERM_OVERALL" = "gesamt";
@@ -164,6 +171,7 @@
 "TERM_RATING" = "Bewertung";
 "TERM_RATING_PLURAL" = "Bewertungen";
 "TERM_RATING_PLURAL_ABBR" = "Bewer.";
+"TERM_RESET" = "zurücksetzen";
 "TERM_REVERSERITZ" = "Ritz Rückwärts";
 "TERM_RITZ" = "Ritz";
 "TERM_ROUND" = "Runde";
@@ -219,6 +227,8 @@
 "TERM_TREND" = "Trend";
 "TERM_TYPE" = "Art";
 "TERM_UNKNOWN" = "unbekannt";
+"TERM_UNLINK" = "Verknüpfung aufheben";
+"TERM_UNLOCK" = "entsperren";
 "TERM_UNLOCKED" = "entsperrt";
 "TERM_UNNAMED" = "namenlos";
 "TERM_USE" = "verwenden";
@@ -498,6 +508,7 @@
 "TITLE_IGNORE_BEST" = "Ignoriere besten";
 "TITLE_IGNORE_WORST" = "Ignoriere schlimmsten";
 "TITLE_INCOMPLETE_HOLE" = "Unvollständiges Loch";
+"TITLE_INSTALL" = "Installieren";
 "TITLE_KEEP" = "Behalten";
 "TITLE_KEEP_SCORES" = "Behalte die Scores";
 "TITLE_KEEPING_SCORE" = "Punkte gesammelt seit 1995";
@@ -559,6 +570,7 @@
 "TITLE_RECENT_PLAYERS_ETC" = "Aktuelle Spieler, Vereine, Scorekarten, usw.";
 "TITLE_REFRESH" = "Aktualisieren";
 "TITLE_REGISTER" = "Registrieren";
+"TITLE_REMOVE" = "Entfernen";
 "TITLE_REVIEW_BUTTON" = "Überprüfen";
 "TITLE_REVISION_DATE" = "Änderungsdatum";
 "TITLE_ROUNDS_HIGHLIGHT" = "Runden Akzentuierung";
@@ -588,6 +600,7 @@
 "TITLE_SHOW_SCORES_AT_STARTUP" = "Zeige Spielergebnise beim Start";
 "TITLE_SHOW_TABLES" = "Tabellen anzeigen";
 "TITLE_SKILL_ADJUSTMENT" = "Anpassung für Fähigkeiten";
+"TITLE_SKIP" = "Übergehen";
 "TITLE_SNAKE" = "Snake";
 "TITLE_SPECIAL_PREFERENCES" = "Spezielle Einstellungen";
 "TITLE_SSS" = "Scratch Score genormt";
@@ -608,6 +621,7 @@
 "TITLE_UNLINK_DROPBOX" = "Link Dropbox";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Schalte alle Scorekarten der Veranstaltung";
 "TITLE_UP_AND_DOWN" = "Auf und ab";
+"TITLE_UPDATE" = "Aktualisieren";
 "TITLE_UPDATES_UNAVAILABLE" = "Aktualisierung nicht verfügbar";
 "TITLE_USE_IOS_APPEARANCE" = "Verwenden die iOS-Darstellungseinstellung";
 "TITLE_USE_LAST" = "Benutze die letzten";
@@ -965,8 +979,10 @@
 
 //	Phrases & Special characters
 "ALL_SQUARE_CHARACTER" = "―";		//	\U2015 Special character	alt: "–" (En Dash) \U2013
+"CURLY_CHARACTERS" = "“”‘’";
 "DONE_DOT" = "•";		//	Special character
 "DONT_ASK_ME_AGAIN" = "Fragen Sie mich nicht noch einmal.";
+"DOTS_CHARACTERS" = "•••••";
 "DOUBLE_QUOTE_CLOSING" = "“";
 "DOUBLE_QUOTE_OPENING" = "„";
 "DOWNWARD_ARROW" = "↓";
@@ -979,10 +995,13 @@
 "ORDINAL_NTH" = ".";
 "ORDINAL_20TH_TO_29TH" = ".,.,.,.,.,.,.,.,.,.";
 "PERCENT_CHARACTER" = "%";
+"PLUS_CHARACTER" = "+";
 "PRESS_LEADER_CHARACTER" = "└";	//	Special character - alternates: "╚" or "‣"
 "SCORECARD_EXCEEDS_1_PLAYER" = "Scorekarte überschreitet maximal 1 Spieler";
 "SCORECARD_EXCEEDS_%ld_PLAYERS" = "Scorekarte überschreitet maximal %ld Spieler";
+"SUPERSCRIPT_+_CHARACTER" = "⁺";		//	Special character
 "TRADEMARK_CHARACTER" = "™";		//	Special character
+"UNCURLY_CHARACTERS" = "\"\"''";
 "UPWARD_ARROW" = "↑";
 "VIA_THE_INTERNET" = "über das Internet";
 "WITH_CHARACTER" = "c̅";		//	Special character

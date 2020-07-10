@@ -213,6 +213,64 @@ typedef NS_ENUM(NSUInteger, GOLFFairwayStatus) {
 
 //	Status Masks
 
+typedef NS_OPTIONS(NSUInteger, GOLFEventStatus) {
+	GOLFEventStatusNone									= 0,			//	(0)
+	GOLFEventStatusHasTeeTime							= 1 << 0,		//	(1)			Date includes a starting tee time
+	GOLFEventStatusIsTournament							= 1 << 1,		//	(2)			Event is tournament or competition special
+	GOLFEventStatusShouldAdjustForTeeRating				= 1 << 2,		//	(4)			Make adjustments for different tee ratings
+	GOLFEventStatusPrefersPctReduction					= 1 << 3,		//	(8)			Use % teammate handicap reductions (vs. strokes)
+	GOLFEventStatusIgnoreForStatsAndHandicapping		= 1 << 4,		//	(16)		Disregard Event rounds for stats accumulation or handicapping
+	GOLFEventStatusNetScoresInTenths					= 1 << 5,		//	(32)		Net scores reported to a tenth
+	GOLFEventStatusXDoesntDisqualifyScore				= 1 << 6,		//	(64)		An "X" score does not disqualify the player/hole
+	GOLFEventStatusKeepResultsSorted					= 1 << 7,		//	(128)		Keep results sorted during entry
+	GOLFEventStatusShowRegistrationStatus				= 1 << 8,		//	(256)		Always display registration details/status
+	GOLFEventStatusIsSpecial							= 1 << 9,		//	(512)		Event is special case
+	GOLFEventStatusOption10								= 1 << 10,		//	(1024)
+	GOLFEventStatusNoPublication						= 1 << 11,		//	(2048)		Event publication (cloud) prohibited
+	GOLFEventStatusOption12								= 1 << 12,		//	(4096)
+	GOLFEventStatusMissingFrontSide						= 1 << 13,		//	(8192)		Event configuration is missing Front Side
+	GOLFEventStatusMissingBackSide						= 1 << 14,		//	(16384)		Event configuration is missing Back Side
+	GOLFEventStatusCachedForScoring						= 1 << 15,		//	(32768)		Event cached for cloud output
+	GOLFEventStatusCacheRequested						= 1 << 16,		//	(65536)		Event marked as prospect for caching
+	GOLFEventStatusOption17								= 1 << 17,		//	(131072)
+	GOLFEventStatusOption18								= 1 << 18,		//	(262144)
+	GOLFEventStatusOption19								= 1 << 19,		//	(524288)
+	GOLFEventStatusNeedsScoresUpdate					= 1 << 20,		//	(1048576)	Processing status (local only)
+	GOLFEventStatusNeedsSkinsUpdate						= 1 << 21,		//	(2097152)	Processing status (local only)
+	GOLFEventStatusNeedsRankingsUpdate					= 1 << 22,		//	(4194304)	Processing status (local only)
+	GOLFEventStatusOption23								= 1 << 23,		//	(8388608)
+	GOLFEventStatusOption24								= 1 << 24		//	(16777216)
+};
+
+typedef NS_OPTIONS(NSUInteger, GOLFScorecardStatus) {
+	GOLFScorecardStatusNone								= 0,			//	(0)
+	GOLFScorecardStatusHasTeeTime						= 1 << 0,		//	(1)			Date includes a starting tee time
+	GOLFScorecardStatusIsTournament						= 1 << 1,		//	(2)			Scorecard is tournament or competition special
+	GOLFScorecardStatusShouldAdjustForTeeRating			= 1 << 2,		//	(4)			Make adjustments for different tee ratings
+	GOLFScorecardStatusOption3							= 1 << 3,		//	(8)
+	GOLFScorecardStatusOption4							= 1 << 4,		//	(16)
+	GOLFScorecardStatusNetScoresInTenths				= 1 << 5,		//	(32)		Net scores reported to a tenth
+	GOLFScorecardStatusOption6							= 1 << 6,		//	(64)
+	GOLFScorecardStatusOption7							= 1 << 7,		//	(128)
+	GOLFScorecardStatusOption8							= 1 << 8,		//	(256)
+	GOLFScorecardStatusOption9							= 1 << 9,		//	(512)
+	GOLFScorecardStatusIsSelfLocked						= 1 << 10,		//	(1024)		Scorecard is manually locked by the user
+	GOLFScorecardStatusNoPublication					= 1 << 11,		//	(2048)		Scorecard publication (cloud) prohibited
+	GOLFScorecardStatusOption12							= 1 << 12,		//	(4096)
+	GOLFScorecardStatusOption13							= 1 << 13,		//	(8192)
+	GOLFScorecardStatusOption14							= 1 << 14,		//	(16384)
+	GOLFScorecardStatusCachedForScoring					= 1 << 15,		//	(32768)		Scorecard cached for cloud output
+	GOLFScorecardStatusCacheRequested					= 1 << 16,		//	(65536)		Scorecard marked as prospect for caching
+	GOLFScorecardStatusForceCache						= 1 << 17,		//	(131072)	Scorecard requires caching (despite incomplete data, etc.)
+	GOLFScorecardStatusOption18							= 1 << 18,		//	(262144)
+	GOLFScorecardStatusOption19							= 1 << 19,		//	(524288)
+	GOLFScorecardStatusNeedsScoresUpdate				= 1 << 20,		//	(1048576)	Processing status (local only)
+	GOLFScorecardStatusNeedsSkinsUpdate					= 1 << 21,		//	(2097152)	Processing status (local only)
+	GOLFScorecardStatusNeedsRankingsUpdate				= 1 << 22,		//	(4194304)	Processing status (local only)
+	GOLFScorecardStatusOption23							= 1 << 23,		//	(8388608)
+	GOLFScorecardStatusOption24							= 1 << 24		//	(16777216)
+};
+
 typedef NS_OPTIONS(NSUInteger, GOLFRoundStatus) {
 	GOLFRoundStatusNone								= 0,			//	(0)
 	GOLFRoundStatusNoFairways						= 1 << 0,		//	(1)			No fairways hit (not the same as all fairways unknown)
