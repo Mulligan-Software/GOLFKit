@@ -128,6 +128,7 @@
 "TERM_MODIFIER" = "modificador";
 "TERM_MORE" = "más";
 "TERM_MOVE" = "trasladar";
+"TERM_NAME" = "nombre";
 "TERM_NET" = "neto";
 "TERM_NEXT" = "siguiente";
 "TERM_NINE" = "nueve";
@@ -230,7 +231,8 @@
 "TERM_UNLINK" = "desenlazar";
 "TERM_UNLOCK" = "desbloquear";
 "TERM_UNLOCKED" = "desbloqueado";
-"TERM_UNNAMED" = "sin nobre";
+"TERM_UNNAMED" = "sin nombre";
+"TERM_UNRATED" = "sin clasificar";
 "TERM_USE" = "usar";
 "TERM_USED" = "utilizado";
 "TERM_USED_ABBR" = "util.";
@@ -513,7 +515,7 @@
 "TITLE_KEEP_SCORES" = "Mantener los Resultados";
 "TITLE_KEEPING_SCORE" = "Llevando puntajes desde 1995";
 "TITLE_KEY_NEXT" = "siguiente";
-"TITLE_KEY_RETURN" = "⮐";
+"TITLE_KEY_RETURN" = "⮐";	//	"intro", "retorno" or "⮐"
 "TITLE_LAST_HOLE" = "Último Hoyo";
 "TITLE_LICENSED_OWNER" = "Titular de la licencia";
 "TITLE_LIGHT" = "Claro";

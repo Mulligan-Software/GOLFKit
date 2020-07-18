@@ -128,6 +128,7 @@
 "TERM_MODIFIER" = "modifier";
 "TERM_MORE" = "more";
 "TERM_MOVE" = "move";
+"TERM_NAME" = "name";
 "TERM_NET" = "net";
 "TERM_NEXT" = "next";
 "TERM_NINE" = "nine";
@@ -231,6 +232,7 @@
 "TERM_UNLOCK" = "unlock";
 "TERM_UNLOCKED" = "unlocked";
 "TERM_UNNAMED" = "unnamed";
+"TERM_UNRATED" = "unrated";
 "TERM_USE" = "use";
 "TERM_USED" = "used";
 "TERM_USED_ABBR" = "used";
@@ -513,7 +515,7 @@
 "TITLE_KEEP_SCORES" = "Keep the Scores";
 "TITLE_KEEPING_SCORE" = "Keeping score since 1995";
 "TITLE_KEY_NEXT" = "Next";
-"TITLE_KEY_RETURN" = "return";
+"TITLE_KEY_RETURN" = "return";	//	A short word or "⮐"
 "TITLE_LAST_HOLE" = "Last Hole";
 "TITLE_LICENSED_OWNER" = "License Holder";
 "TITLE_LIGHT" = "Light";

@@ -128,6 +128,7 @@
 "TERM_MODIFIER" = "modificateur";
 "TERM_MORE" = "plus";
 "TERM_MOVE" = "déplacer";
+"TERM_NAME" = "nom";
 "TERM_NET" = "net";
 "TERM_NEXT" = "suivant";
 "TERM_NINE" = "neuf";
@@ -231,6 +232,7 @@
 "TERM_UNLOCK" = "déverrouiller";
 "TERM_UNLOCKED" = "déverrouillé";
 "TERM_UNNAMED" = "innomé";
+"TERM_UNRATED" = "non évalué";
 "TERM_USE" = "utiliser";
 "TERM_USED" = "utilisé";
 "TERM_USED_ABBR" = "util.";
@@ -513,7 +515,7 @@
 "TITLE_KEEP_SCORES" = "Garder les Scores";
 "TITLE_KEEPING_SCORE" = "Gardant scores depuis 1995";
 "TITLE_KEY_NEXT" = "suivant";
-"TITLE_KEY_RETURN" = "⮐";
+"TITLE_KEY_RETURN" = "⮐";	//	"renvoi", "retour" or "⮐"
 "TITLE_LAST_HOLE" = "Dernier Trou";
 "TITLE_LICENSED_OWNER" = "Détenteur de licence";
 "TITLE_LIGHT" = "Claire";
