@@ -10,7 +10,7 @@
 #import "GOLFKit.h"
 
 //	Misc constants
-//#define	kGOLFWageringSupportsCloseOuts		YES			//	Whether GOLFKit supports "Close-Out" bets
+#define	kGOLFWageringSupportsTeamMatchStyes		YES			//	Whether GOLFKit supports special team match styles
 
 typedef NS_ENUM(NSUInteger, GOLFWageringMatchStyle) {
 	GOLFWageringMatchPlayMatchStyle,		//	(0)
@@ -19,6 +19,15 @@ typedef NS_ENUM(NSUInteger, GOLFWageringMatchStyle) {
 	GOLFWageringThreeBySixMatchStyle,		//	(3)
 	GOLFWageringLastMatchStyle = GOLFWageringThreeBySixMatchStyle,
 	GOLFWageringUnknownMatchStyle = 99		//	Unknown
+};
+
+typedef NS_ENUM(NSUInteger, GOLFWageringTeamMatchStyle) {
+	GOLFWageringDefaultTeamMatchStyle,				//	(0)
+	GOLFWageringLowBallLowTotalTeamMatchStyle,		//	(1)
+	GOLFWageringLowBallHighBallTeamMatchStyle,		//	(2)
+	GOLFWageringLowBallSecondBallTeamMatchStyle,	//	(3)
+	GOLFWageringLastTeamMatchStyle = GOLFWageringLowBallSecondBallTeamMatchStyle,
+	GOLFWageringUnknownTeamMatchStyle = 99			//	Unknown
 };
 
 typedef NS_ENUM(NSUInteger, GOLFWageringHandicapStyle) {
@@ -73,6 +82,7 @@ typedef NS_ENUM(NSUInteger, GOLFWageringGameStyle) {
 	GOLFWageringGameHollywood,				//	(3)		Hollywood, Sixes, Round-Robin (6 hole matches)
 	GOLFWageringGameSwing,					//	(4)		Swing Game - 2 vs. 3 or more
 	GOLFWageringGameWolf,					//	(5)		Wolf - 3 or more
+	GOLFWageringGameBingoBangoBongo,		//	(6)		Bingo, Bango, Bongo - 3 or more
 	GOLFWageringGameUnknownStyle = 99		//	Unknown
 };
 
@@ -82,7 +92,7 @@ typedef NS_OPTIONS(NSUInteger, GOLFWageringTrashOption) {
 	GOLFWageringTrashGreenie			= 1 << 1,		//	(2)			Closest to pin in regulation, par 3 - voided with 3-putt
 	GOLFWageringTrashSandie				= 1 << 2,		//	(4)			Up and down from a greenside bunker
 	GOLFWageringTrashStobbie			= 1 << 3,		//	(8)			Green in regulation within length of the pin
-	GOLFWageringTrashOption4			= 1 << 4,		//	(16)
+	GOLFWageringTrashFairway			= 1 << 4,		//	(16)		Fairway hit with original tee shot
 	GOLFWageringTrashArnie				= 1 << 5,		//	(32)		Par or better without visiting fairway
 	GOLFWageringTrashChipinski			= 1 << 6,		//	(64)		Chip-in or hole out from off the green
 	GOLFWageringTrashHogan				= 1 << 7,		//	(128)		Par hitting fairway, green in regulation, 2 putts
@@ -164,19 +174,57 @@ typedef NS_OPTIONS(NSUInteger, GOLFWageringTrashOption) {
 //	GOLFWageringMatchStylesArray()
 //=================================================================
 NSArray * GOLFWageringMatchStylesArray(void);
-//	returns an NSArray of NSDictionarys with info about Handicap styles used in Match Play and wagering
+//	returns an NSArray of NSDictionarys with info about competition styles
+//	used in Match Play and wagering
 //
 //	key					type		description
 //	------------------	----------	--------------------------------------------------
 //	styleCode			NSNumber *	GOLFWageringMatchStyle style identifier
 //	styleName			NSString *	localized name or title of the match style
-//	styleDescription	NSString *	localized additional description of match style
+//	styleDescription	NSString *	localized additional description of the match style
+
+//=================================================================
+//	GOLFWageringTeamMatchStylesArray(info)
+//=================================================================
+NSArray * GOLFWageringTeamMatchStylesArray(NSDictionary *info);
+//	Optional info dictionary may contain hints for constructing elements of the array…
+//	key					type			description
+//	------------------	--------------	----------------------------------------------------------------
+//	styleCode			NSNumber *		GOLFWageringMatchStyle style code for individual match play
+//	teamPlayType		NSNumber *		GOLFPlayType team competition play type (fourball, total, avg. etc.
+//	short				NSNumber *		BOOL indicating need for short (abbreviated?) return (if available)
+//	bestRoundsN			NSNumber *		Integer N of TeamBestNPlayType (Team total of best N rounds) - default: 4
+//
+//	Returns an NSArray of NSDictionarys with info about competition styles
+//	used in Team Match Play and wagering
+//
+//	key					type		description
+//	------------------	----------	--------------------------------------------------
+//	styleCode			NSNumber *	GOLFWageringTeamMatchStyle style identifier
+//	styleName			NSString *	localized name or title of the team match style
+//	styleDescription	NSString *	localized additional description of the team match style (if any)
 
 //=================================================================
 //	NSStringFromGOLFWageringMatchStyle(styleCode, &descriptiveText)
 //=================================================================
 NSString * NSStringFromGOLFWageringMatchStyle(GOLFWageringMatchStyle styleCode, NSString **descriptiveText);
 //	returns a localized name or title of a match style designated by styleCode
+//	When an NSString * designated by descriptiveText is supplied, it contains
+//	localized additional descriptive text about the match style
+
+//=================================================================
+//	NSStringFromGOLFWageringTeamMatchStyle(styleCode, &descriptiveText, info)
+//=================================================================
+NSString * NSStringFromGOLFWageringTeamMatchStyle(GOLFWageringTeamMatchStyle styleCode, NSString **descriptiveText, NSDictionary *info);
+//	Optional info dictionary may contain hints for constructing descriptive string…
+//	key					type			description
+//	------------------	--------------	----------------------------------------------------------------
+//	styleCode			NSNumber *		GOLFWageringMatchStyle style code for individual match play
+//	teamPlayType		NSNumber *		GOLFPlayType team competition play type (fourball, total, avg. etc.
+//	short				NSNumber *		BOOL indicating need for short (abbreviated?) return (if available)
+//	bestRoundsN			NSNumber *		Integer N of TeamBestNPlayType (Team total of best N rounds) - default: 4
+//
+//	Returns a localized name or title of a team match style designated by styleCode
 //	When an NSString * designated by descriptiveText is supplied, it contains
 //	localized additional descriptive text about the match style
 
@@ -203,12 +251,21 @@ NSString * NSStringFromGOLFWageringHandicapStyle(GOLFWageringHandicapStyle style
 
 
 //=================================================================
-//	NSStringFromTrashOption(trashOption, &descriptiveText)
+//	NSStringFromGOLFWageringTrashOption(trashOption, &descriptiveText)
 //=================================================================
-NSString * NSStringFromTrashOption(GOLFWageringTrashOption trashOption, NSString **descriptiveText);
+NSString * NSStringFromGOLFWageringTrashOption(GOLFWageringTrashOption trashOption, NSString **descriptiveText);
 //	Returns a localized title/name of a Trash/Dots option ("Greenie", "Sandie", "Stobbie", etc.) and
 //	optionally (when the address of descriptiveText is provided), a localized description of the
 //	option ("Closest to flagstick in regulation on a par 3", etc.)
+
+
+//=================================================================
+//	NSStringFromGOLFWageringGameStyle(gameStyle, &descriptiveText)
+//=================================================================
+NSString * NSStringFromGOLFWageringGameStyle(GOLFWageringGameStyle gameStyle, NSString **descriptiveText);
+//	Returns a localized title/name of a wagering game style ("Trash", "Wolf", "Bingo-Bango-Bongo", etc.) and
+//	optionally (when the address of descriptiveText is provided), a localized description of the
+//	style ("Player, optional partner vs. rest at each hole", etc.)
 
 
 //=================================================================

@@ -204,6 +204,7 @@
 "TERM_STATUS" = "status";
 "TERM_STROKE" = "stroke";
 "TERM_STROKE_PLURAL" = "strokes";
+"TERM_STYLE" = "style";
 "TERM_SUPERSEDED" = "superseded";
 "TERM_TAP" = "tap";
 "TERM_TEAM" = "team";
@@ -348,6 +349,7 @@
 "TITLE_ALLOWANCE" = "Allowance";
 "TITLE_ALWAYS_DARK" = "Always Dark";
 "TITLE_ALWAYS_LIGHT" = "Always Light";
+"TITLE_ANIMALS" = "Animals";
 "TITLE_ARNIE" = "Arnie";
 "TITLE_ASPHALT" = "Asphalt";
 "TITLE_ASSIGN_ROUND_TO" = "Assign a round to";
@@ -506,6 +508,7 @@
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Hole score adjustment";
 "TITLE_HOLES_TO_BE_SCORED" = "Holes to be Scored";
 "TITLE_HOLE_SELECTION" = "Hole Selection";
+"TITLE_HOLLYWOOD" = "Hollywood";
 "TITLE_HOME_CLUB" = "Home Club";
 "TITLE_IGNORE_BEST" = "Ignore best";
 "TITLE_IGNORE_WORST" = "Ignore worst";
@@ -614,6 +617,7 @@
 "TITLE_STATUS_REGISTERED" = "Registered";
 "TITLE_STATUS_VERIFIED" = "Verified";
 "TITLE_STOBBIE" = "Stobbie";
+"TITLE_SWING_GAME" = "Swing Game";
 "TITLE_SYSTEM" = "System";
 "TITLE_TECHNICAL_SUPPORT" = "Technical Support";
 "TITLE_THE_SCORING_MACHINE" = "The Scoring Machine";
@@ -637,6 +641,18 @@
 "TITLE_2_DOWN" = "2-down";
 "TITLE_3_BY_6" = "3 × 6";
 
+"TITLE_TEAM_MATCHES" = "Team Matches";
+"TITLE_DEFAULT_TEAM_MATCH_STYLE" = "Team Score";
+"TITLE_LOW_BALL_LOW_TOTAL" = "Low Ball - Low Total";
+"TITLE_LOW_BALL_HIGH_BALL" = "Low Ball - High Ball";
+"TITLE_LOW_BALL_SECOND_BALL" = "Low Ball - Second Ball";
+"DESCRIPTION_DEFAULT_TEAM_MATCH_STYLE_%@" = "%@ using team scores ¹";
+"DESCRIPTION_LOW_BALL_LOW_TOTAL" = "1 point - low teammate, 1 pt. - low team total";
+"DESCRIPTION_LOW_BALL_HIGH_BALL" = "1 point - low teammate, 1 pt. - vs. high teammates";
+"DESCRIPTION_LOW_BALL_SECOND_BALL" = "1 point - low teammate, 1 pt. - vs. 2nd teammates";
+"DESCRIPTION_TEAM_MATCH_STYLES" = "¹ Available for all forms of team play - always used for team-only play and points scoring.";
+
+"DESCRIPTION_ANIMALS" = "On-course card game for foursomes";
 "DESCRIPTION_ARNIE" = "Par or better without visiting fairway";
 "DESCRIPTION_ASPHALT" = "Par or better from a cart path";
 "DESCRIPTION_BANGO" = "All on green - closest to the hole";
@@ -646,17 +662,20 @@
 "DESCRIPTION_BONGO" = "Away putting - first holed";
 "DESCRIPTION_CHIPINSKI" = "Chip-in";
 "DESCRIPTION_COVER" = "Match or better opponent's sub-par score";
+"DESCRIPTION_FAIRWAY" = "Fairway reached with initial tee shot";
 "DESCRIPTION_GORILLA" = "Closest to pin in regulation on par 5";
 "DESCRIPTION_GREENIE" = "Closest to pin in regulation on par 3 - voided with 3-putt";
 "DESCRIPTION_GURGLIE" = "Par or better from, or skipping off, water";
 "DESCRIPTION_HOGAN" = "Hit fairway, green in regulation, 2-putt par";
+"DESCRIPTION_HOLLYWOOD" = "6-Hole matches (Sixes, Round-Robin)";
 "DESCRIPTION_NO_TRASH" = "No Trash/Dots category specified";
 "DESCRIPTION_POLIE" = "1-putt longer than flagstick length";
 "DESCRIPTION_SANDIE" = "Up and down from a greenside bunker";
 "DESCRIPTION_SEVE" = "Birdie or better without hitting fairway or green";
 "DESCRIPTION_SNAKE" = "3-putt, last 3-putt or shortest 3-putt";
 "DESCRIPTION_STOBBIE" = "On in regulation within length of the pin";
-"DESCRIPTION_TRASH" = "Points awarded for achievements";
+"DESCRIPTION_SWING_GAME" = "Rotating team of 2 vs. 3 or more";
+"DESCRIPTION_TRASH" = "Points or “dots” awarded for achievements";
 "DESCRIPTION_WICKERS" = "Trash/Dots value increases with each occurrance";
 "DESCRIPTION_WOLF" = "Player, optional partner vs. rest at each hole";
 
@@ -1007,6 +1026,7 @@
 "UPWARD_ARROW" = "↑";
 "VIA_THE_INTERNET" = "via the Internet";
 "WITH_CHARACTER" = "c̅";		//	Special character
+"SUPERSCRIPT_1_CHARACTER" = "¹";
 
 //	Unicode Vulgar Fractions
 "VF_1/2" = "½";

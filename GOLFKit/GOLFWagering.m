@@ -12,9 +12,17 @@
 #import "GOLFWagering.h"
 
 static NSArray *cachedGOLFWageringMatchStyles = nil;
+static NSArray *cachedGOLFWageringTeamMatchStyles = nil;
 static NSArray *cachedGOLFWageringHandicapStyles = nil;
 
 NSArray * GOLFWageringMatchStylesArray(void) {
+	//	Returns an array of NSDictionary for localized match play style descriptions
+	//	key					type			description
+	//	------------------	--------------	----------------------------------------------------------------
+	//	styleCode			NSNumber *		GOLFWageringMatchStyle style code for individual match play (as below)
+	//	styleName			NSString *		The localized name of the match play style
+	//	styleDescription	NSString *		Localized descriptive text about the match play style
+
 	//	GOLFWageringMatchPlayMatchStyle,		//	(0)
 	//	GOLFWageringNassauMatchStyle,			//	(1)
 	//	GOLFWageringFrontAndBackMatchStyle,		//	(2)
@@ -56,6 +64,84 @@ NSArray * GOLFWageringMatchStylesArray(void) {
 	return [cachedGOLFWageringMatchStyles copy];
 }
 
+NSArray * GOLFWageringTeamMatchStylesArray(NSDictionary *info) {
+	//	info NSDictionary for customized style descriptions
+	//	key					type			description
+	//	------------------	--------------	----------------------------------------------------------------
+	//	styleCode			NSNumber *		GOLFWageringMatchStyle style code for individual match play
+	//	teamPlayType		NSNumber *		GOLFPlayType team competition play type (fourball, total, avg. etc.
+	//	short				NSNumber *		BOOL indicating need for short (abbreviated?) return (if available)
+	//	bestRoundsN			NSNumber *		Integer N of TeamBestNPlayType (Team total of best N rounds) - default: 4
+	//	reload				NSNumber *		BOOL to force re-creating the cachedGOLFWageringTeamMatchStyles
+
+	//	Returns an array of NSDictionary for localized match play style descriptions
+	//	key					type			description
+	//	------------------	--------------	----------------------------------------------------------------
+	//	styleCode			NSNumber *		GOLFWageringMatchStyle style code for individual match play (as below)
+	//	styleName			NSString *		The localized name of the match play style
+	//	styleDescription	NSString *		Localized descriptive text about the match play style
+
+	//	GOLFWageringDefaultTeamMatchStyle,				//	(0)
+	//	GOLFWageringLowBallLowTotalTeamMatchStyle,		//	(1)
+	//	GOLFWageringLowBallHighBallTeamMatchStyle,		//	(2)
+	//	GOLFWageringLowBallSecondBallTeamMatchStyle,	//	(3)
+
+	//	Set up defaults for player match play, in case they're not provided…
+	GOLFWageringMatchStyle playerMatchPlayStyle = GOLFWageringMatchPlayMatchStyle;	//	Default = 18-hole Match Play
+	GOLFPlayType teamPlayType = TotalTeamPlayType;	//	Default = Team Total
+	NSMutableDictionary *localInfo = (info
+			? [NSMutableDictionary dictionaryWithDictionary:info]
+			: [NSMutableDictionary dictionaryWithObjectsAndKeys:
+					[NSNumber numberWithUnsignedInteger:GOLFWageringMatchPlayMatchStyle], @"styleCode",
+					[NSNumber numberWithUnsignedInteger:TotalTeamPlayType], @"teamPlayType",
+					nil]);
+	
+	NSNumber *workingNumber = [localInfo objectForKey:@"styleCode"];
+	if (workingNumber) {
+		playerMatchPlayStyle = [workingNumber unsignedIntegerValue];
+	} 
+	workingNumber = [localInfo objectForKey:@"teamPlayType"];
+	if (workingNumber) {
+		teamPlayType = [workingNumber unsignedIntegerValue];
+	}
+	BOOL reload = [[localInfo objectForKey:@"reload"] boolValue];
+	
+	if ((cachedGOLFWageringTeamMatchStyles == nil) || reload) {
+		NSMutableArray *workingList = [NSMutableArray arrayWithCapacity:5];
+		
+		//	Default - Team match play uses team gross / net / competition scores
+		NSDictionary *styleDict = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithInteger:GOLFWageringDefaultTeamMatchStyle], @"styleCode",
+				GOLFLocalizedString(@"TITLE_DEFAULT_TEAM_MATCH_STYLE"), @"styleName",
+				[NSString stringWithFormat:GOLFLocalizedString(@"DESCRIPTION_DEFAULT_TEAM_MATCH_STYLE_%@"), NSStringFromGOLFWageringMatchStyle(playerMatchPlayStyle, nil), NSStringFromPlayType(teamPlayType, localInfo, nil)], @"styleDescription", nil];
+		[workingList addObject:styleDict];
+		
+		//	Low Ball / Low Total - 1 team point for low teammate score, 1 team point for low team total
+		styleDict = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithInteger:GOLFWageringLowBallLowTotalTeamMatchStyle], @"styleCode",
+				GOLFLocalizedString(@"TITLE_LOW_BALL_LOW_TOTAL"), @"styleName",
+				GOLFLocalizedString(@"DESCRIPTION_LOW_BALL_LOW_TOTAL"), @"styleDescription", nil];
+		[workingList addObject:styleDict];
+		
+		//	Low Ball / High Ball - 1 team point for low teammate score, 1 point for best highest teammate
+		styleDict = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithInteger:GOLFWageringLowBallHighBallTeamMatchStyle], @"styleCode",
+				GOLFLocalizedString(@"TITLE_LOW_BALL_HIGH_BALL"), @"styleName",
+				GOLFLocalizedString(@"DESCRIPTION_LOW_BALL_HIGH_BALL"), @"styleDescription", nil];
+		[workingList addObject:styleDict];
+		
+		//	Low Ball / Second Ball - 1 team point for low teammate, 1 point for best second-best teammate
+		styleDict = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithInteger:GOLFWageringLowBallSecondBallTeamMatchStyle], @"styleCode",
+				GOLFLocalizedString(@"TITLE_LOW_BALL_SECOND_BALL"), @"styleName",
+				GOLFLocalizedString(@"DESCRIPTION_LOW_BALL_SECOND_BALL"), @"styleDescription", nil];
+		[workingList addObject:styleDict];
+				
+		cachedGOLFWageringTeamMatchStyles = [NSArray arrayWithArray:workingList];
+	}
+	return [cachedGOLFWageringTeamMatchStyles copy];
+}
+
 NSString * NSStringFromGOLFWageringMatchStyle(GOLFWageringMatchStyle styleCode, NSString **descriptiveText) {
 	//	GOLFWageringMatchPlayMatchStyle,		//	(0)
 	//	GOLFWageringNassauMatchStyle,			//	(1)
@@ -69,6 +155,26 @@ NSString * NSStringFromGOLFWageringMatchStyle(GOLFWageringMatchStyle styleCode, 
 		return [GOLFLocalizedString(@"TERM_UNKNOWN") capitalizedString];
 	} else {
 		NSDictionary *styleDict = [GOLFWageringMatchStylesArray() objectAtIndex:styleCode];
+		if (descriptiveText) {
+			*descriptiveText = [styleDict objectForKey:@"styleDescription"];
+		}
+		return [styleDict objectForKey:@"styleName"];
+	}
+}
+
+NSString * NSStringFromGOLFWageringTeamMatchStyle(GOLFWageringTeamMatchStyle styleCode, NSString **descriptiveText, NSDictionary *info) {
+	//	GOLFWageringDefaultTeamMatchStyle,				//	(0)
+	//	GOLFWageringLowBallLowTotalTeamMatchStyle,		//	(1)
+	//	GOLFWageringLowBallHighBallTeamMatchStyle,		//	(2)
+	//	GOLFWageringLowBallSecondBallTeamMatchStyle,	//	(3)
+	
+	if (styleCode > GOLFWageringLastTeamMatchStyle) {
+		if (descriptiveText) {
+			*descriptiveText = @"";
+		}
+		return [GOLFLocalizedString(@"TERM_UNKNOWN") capitalizedString];
+	} else {
+		NSDictionary *styleDict = [GOLFWageringTeamMatchStylesArray(info) objectAtIndex:styleCode];
 		if (descriptiveText) {
 			*descriptiveText = [styleDict objectForKey:@"styleDescription"];
 		}
@@ -145,7 +251,7 @@ NSString * NSStringFromGOLFWageringHandicapStyle(GOLFWageringHandicapStyle style
 	}
 }
 
-NSString * NSStringFromTrashOption(GOLFWageringTrashOption trashOption, NSString **descriptiveText) {
+NSString * NSStringFromGOLFWageringTrashOption(GOLFWageringTrashOption trashOption, NSString **descriptiveText) {
 	//	Returns a localized title/name of a Trash/Dots option ("Greenie", "Sandie", "Stobbie", etc.) and
 	//	optionally (when the address of descriptiveText is provided), a localized description of the
 	//	option ("Closest to flagstick in regulation on a par 3", etc.)
@@ -170,6 +276,11 @@ NSString * NSStringFromTrashOption(GOLFWageringTrashOption trashOption, NSString
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_STOBBIE");
 		}
 		return GOLFLocalizedString(@"TITLE_STOBBIE");
+	} else if (trashOption | GOLFWageringTrashFairway) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_FAIRWAY");
+		}
+		return [GOLFLocalizedString(@"TERM_FAIRWAY") capitalizedString];
 	} else if (trashOption | GOLFWageringTrashArnie) {
 		if (descriptiveText) {
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_ARNIE");
@@ -235,6 +346,56 @@ NSString * NSStringFromTrashOption(GOLFWageringTrashOption trashOption, NSString
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_NO_TRASH");
 		}
 		return [GOLFLocalizedString(@"TERM_NONE") capitalizedString];
+	} else {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"");
+		}
+		return [GOLFLocalizedString(@"TERM_UNKNOWN") capitalizedString];
+	}
+}
+
+NSString * NSStringFromGOLFWageringGameStyle(GOLFWageringGameStyle gameStyle, NSString **descriptiveText) {
+	//	Returns a localized title/name of a wagering game style ("Trash", "Wolf", "Bingo-Bango-Bongo", etc.) and
+	//	optionally (when the address of descriptiveText is provided), a localized description of the
+	//	style ("Player, optional partner vs. rest at each hole", etc.)
+
+	//	GOLFWageringGameTrash,					//	(1)		Trash, Dots or Wickers
+	//	GOLFWageringGameAnimals,				//	(2)		Snake, Camel, Gorilla, etc.
+	//	GOLFWageringGameHollywood,				//	(3)		Hollywood, Sixes, Round-Robin (6 hole matches)
+	//	GOLFWageringGameSwing,					//	(4)		Swing Game - 2 vs. 3 or more
+	//	GOLFWageringGameWolf,					//	(5)		Wolf - 3 or more
+	//	GOLFWageringGameBingoBangoBongo,		//	(6)		Bingo, Bango, Bongo - 3 or more
+
+	if (gameStyle == GOLFWageringGameTrash) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_TRASH");
+		}
+		return GOLFLocalizedString(@"TITLE_TRASH");
+	} else if (gameStyle == GOLFWageringGameAnimals) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_ANIMALS");
+		}
+		return GOLFLocalizedString(@"TITLE_ANIMALS");
+	} else if (gameStyle == GOLFWageringGameHollywood) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_HOLLYWOOD");
+		}
+		return GOLFLocalizedString(@"TITLE_HOLLYWOOD");
+	} else if (gameStyle == GOLFWageringGameSwing) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_SWING_GAME");
+		}
+		return GOLFLocalizedString(@"TITLE_SWING_GAME");
+	} else if (gameStyle == GOLFWageringGameWolf) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_WOLF");
+		}
+		return GOLFLocalizedString(@"TITLE_WOLF");
+	} else if (gameStyle == GOLFWageringGameBingoBangoBongo) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_BINGO_BANGO_BONGO");
+		}
+		return GOLFLocalizedString(@"TITLE_BINGO_BANGO_BONGO");
 	} else {
 		if (descriptiveText) {
 			*descriptiveText = GOLFLocalizedString(@"");

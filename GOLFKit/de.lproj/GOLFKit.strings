@@ -204,6 +204,7 @@
 "TERM_STATUS" = "Status";
 "TERM_STROKE" = "Schlag";
 "TERM_STROKE_PLURAL" = "Schläge";
+"TERM_STYLE" = "Art";
 "TERM_SUPERSEDED" = "abgelöst";
 "TERM_TAP" = "tippe";	//	tippe auf ~
 "TERM_TEAM" = "Mannschaft";
@@ -348,6 +349,7 @@
 "TITLE_ALLOWANCE" = "Zustimmung";
 "TITLE_ALWAYS_DARK" = "Immer Dunkel";
 "TITLE_ALWAYS_LIGHT" = "Immer Leicht";
+"TITLE_ANIMALS" = "Tiere";
 "TITLE_ARNIE" = "Arnie";
 "TITLE_ASPHALT" = "Asphalt";
 "TITLE_ASSIGN_ROUND_TO" = "Zuweisen eine Runde";
@@ -506,6 +508,7 @@
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Loch-Score-Einstellung";
 "TITLE_HOLE_SELECTION" = "Lochauswahl";
 "TITLE_HOLES_TO_BE_SCORED" = "Zu bewertenden Löcher";
+"TITLE_HOLLYWOOD" = "Hollywood";
 "TITLE_HOME_CLUB" = "Heimverein";
 "TITLE_IGNORE_BEST" = "Ignoriere besten";
 "TITLE_IGNORE_WORST" = "Ignoriere schlimmsten";
@@ -614,12 +617,13 @@
 "TITLE_STATUS_REGISTERED" = "Registriert";
 "TITLE_STATUS_VERIFIED" = "Geprüft";
 "TITLE_STOBBIE" = "Stobbie";
+"TITLE_SWING_GAME" = "Schwenkungspiel";
 "TITLE_SYSTEM" = "System";
 "TITLE_TECHNICAL_SUPPORT" = "Technische Unterstützung";
 "TITLE_THE_SCORING_MACHINE" = "Das Wertung-Apparat";
 "TITLE_THE_SCORING_MACHINE_TM" = "Das Wertung-Apparat™";
 "TITLE_TOTAL_POINTS" = "Gesamtpunktzahl";
-"TITLE_TRASH" = "Trash, Dots";
+"TITLE_TRASH" = "Trash, Reste, Punkte";
 "TITLE_UNLINK_DROPBOX" = "Link Dropbox";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Schalte alle Scorekarten der Veranstaltung";
 "TITLE_UP_AND_DOWN" = "Auf und ab";
@@ -637,6 +641,18 @@
 "TITLE_2_DOWN" = "2-down";
 "TITLE_3_BY_6" = "3 × 6";
 
+"TITLE_TEAM_MATCHES" = "Mannschaftsspiele";
+"TITLE_DEFAULT_TEAM_MATCH_STYLE" = "Mannschafts-Score";
+"TITLE_LOW_BALL_LOW_TOTAL" = "Niedriger Ball - Niedriger Summe";
+"TITLE_LOW_BALL_HIGH_BALL" = "Niedriger Ball - Hoher Ball";
+"TITLE_LOW_BALL_SECOND_BALL" = "Niedriger Ball - Zweiter Ball";
+"DESCRIPTION_DEFAULT_TEAM_MATCH_STYLE_%@" = "%@ mit Mannschaftswerten ¹";
+"DESCRIPTION_LOW_BALL_LOW_TOTAL" = "1 Punkt - niedriger Teamkollege, 1 pt. - niedrigste Mannschaftssumme";
+"DESCRIPTION_LOW_BALL_HIGH_BALL" = "1 Punkt - niedriger Teamkollege, 1 pt. - vs. hohe Teamkollegen";
+"DESCRIPTION_LOW_BALL_SECOND_BALL" = "1 Punkt - niedriger Teamkollege, 1 pt. - vs. zweite Teamkollegen";
+"DESCRIPTION_TEAM_MATCH_STYLES" = "¹ Verfügbar für alle Spielformen - wird immer nur Teamspiele un Punkte erzielen.";
+
+"DESCRIPTION_ANIMALS" = "Kartenspiel auf dem Golfplatz für Vierer";
 "DESCRIPTION_ARNIE" = "Par oder besser ohne das Fairway zu besuchen";
 "DESCRIPTION_ASPHALT" = "Par oder besser aus einem Wagenpfad";
 "DESCRIPTION_BANGO" = "Jeder auf dem Grün - dem Loch am nächsten";
@@ -646,18 +662,21 @@
 "DESCRIPTION_BONGO" = "Wegputten - ester Putt gemacht";
 "DESCRIPTION_CHIPINSKI" = "Chip-in";
 "DESCRIPTION_COVER" = "Krawatte oder Gegner unter Par Score schlagen";
+"DESCRIPTION_FAIRWAY" = "Fairway mit erstem Abschlag erreicht";
 "DESCRIPTION_GORILLA" = "Am nächsten zum Flaggenstock in Regulierung auf Par 5";
 "DESCRIPTION_GREENIE" = "Am nächsten zum Flaggenstock in Regulierung auf Par 3 - entwertet mit einem 3-Putt";
 "DESCRIPTION_GURGLEY" = "Par oder besser vom, oder überspringen von, Wasser";
 "DESCRIPTION_HOGAN" = "Erlangte das Fairway, Grün in Regulation, 2-Putt par";
-"DESCRIPTION_NO_TRASH" = "No Trash/Dots category specified";
+"DESCRIPTION_HOLLYWOOD" = "6-Loch-Matches (Sechsen, Round-Robin)";
+"DESCRIPTION_NO_TRASH" = "Keine Reste / Punkte Kategorie angegeben";
 "DESCRIPTION_POLIE" = "1-Putt länger als Flaggenstocklänge";
 "DESCRIPTION_SANDIE" = "Auf und ab von einem Grün-Bunker";
 "DESCRIPTION_SEVE" = "Birdie oder besser, ohne das Fairway oder das Grün zu erreichen";
 "DESCRIPTION_SNAKE" = "3-Putt, letzter 3-Putt oder kurzester 3-Putt";
 "DESCRIPTION_STOBBIE" = "Einregulierung innerhalb de Länge der Flaggenstock";
-"DESCRIPTION_TRASH" = "Punkte für Golfleistungen";
-"DESCRIPTION_WICKERS" = "Trash/Dots Werte nehmen mit jedem Auftreten zu";
+"DESCRIPTION_SWING_GAME" = "Rotierendes Team von 2 vs. 3 oder mehr";
+"DESCRIPTION_TRASH" = "Punkte oder „Flecken“ für Golfleistungen";
+"DESCRIPTION_WICKERS" = "Reste / Punkte Werte nehmen mit jedem Auftreten zu";
 "DESCRIPTION_WOLF" = "Spieler, optionaler Partner vs. der Rest an jedem Loch";
 
 //	Formats

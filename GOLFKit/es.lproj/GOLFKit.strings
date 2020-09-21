@@ -204,6 +204,7 @@
 "TERM_STATUS" = "estado";
 "TERM_STROKE" = "golpe";
 "TERM_STROKE_PLURAL" = "golpes";
+"TERM_STYLE" = "estilo";
 "TERM_SUPERSEDED" = "suplantado";
 "TERM_TAP" = "pulsa";	//	pulsa en ~
 "TERM_TEAM" = "equipo";
@@ -348,6 +349,7 @@
 "TITLE_ALLOWANCE" = "Asignación";
 "TITLE_ALWAYS_DARK" = "Siempre Oscuro";
 "TITLE_ALWAYS_LIGHT" = "Siempre Claro";
+"TITLE_ANIMALS" = "Animales";
 "TITLE_ARNIE" = "Arnie";
 "TITLE_ASPHALT" = "Asphalt";
 "TITLE_ASSIGN_ROUND_TO" = "Asignar una ronda a";
@@ -506,6 +508,7 @@
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Ajuste de resultado de hoyo";
 "TITLE_HOLE_SELECTION" = "Selección de los Hoyos";
 "TITLE_HOLES_TO_BE_SCORED" = "Hoyos que se Puntúan";
+"TITLE_HOLLYWOOD" = "Hollywood";
 "TITLE_HOME_CLUB" = "Club de origen";
 "TITLE_IGNORE_BEST" = "Ignorar mejores";
 "TITLE_IGNORE_WORST" = "Ignorar peores";
@@ -614,12 +617,13 @@
 "TITLE_STATUS_REGISTERED" = "Registrado";
 "TITLE_STATUS_VERIFIED" = "Verificado";
 "TITLE_STOBBIE" = "Stobbie";
+"TITLE_SWING_GAME" = "Juego de Cambio";
 "TITLE_SYSTEM" = "Sistema";
 "TITLE_TECHNICAL_SUPPORT" = "Asistencia al Cliente";
 "TITLE_THE_SCORING_MACHINE" = "La Máquina del Puntaje";
 "TITLE_THE_SCORING_MACHINE_TM" = "La Máquina del Puntaje™";
 "TITLE_TOTAL_POINTS" = "Puntos Totales";
-"TITLE_TRASH" = "Trash, Dots";
+"TITLE_TRASH" = "Trash, Sobras, Puntos";
 "TITLE_UNLINK_DROPBOX" = "Desenlazar Dropbox";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Desbloquea todas Tarjetas del Evento";
 "TITLE_UP_AND_DOWN" = "Alto y Abajo";
@@ -637,27 +641,42 @@
 "TITLE_2_DOWN" = "2-down";
 "TITLE_3_BY_6" = "3 × 6";
 
+"TITLE_TEAM_MATCHES" = "Partidos de Equipo";
+"TITLE_DEFAULT_TEAM_MATCH_STYLE" = "Puntaje del Equipo";
+"TITLE_LOW_BALL_LOW_TOTAL" = "Bola Baja - Total Bajo";
+"TITLE_LOW_BALL_HIGH_BALL" = "Bola Baja - Bola Alta";
+"TITLE_LOW_BALL_SECOND_BALL" = "Bola Baja - Segunda Bola";
+"DESCRIPTION_DEFAULT_TEAM_MATCH_STYLE_%@" = "%@ usando puntajes del equipo ¹";
+"DESCRIPTION_LOW_BALL_LOW_TOTAL" = "1 punto - compañero bajo, 1 pt. - bajo total de equipo";
+"DESCRIPTION_LOW_BALL_HIGH_BALL" = "1 punto - compañero bajo, 1 pt. - vs. compañeros altos";
+"DESCRIPTION_LOW_BALL_SECOND_BALL" = "1 punto - compañero bajo, 1 pt. - vs. segundos compañeros";
+"DESCRIPTION_TEAM_MATCH_STYLES" = "¹ Disponible para todo las formas de juego - siempre se usa para jugar en equipo-solo y puntaje de puntos.";
+
+"DESCRIPTION_ANIMALS" = "En-campo juego de cartes para foursomes";
 "DESCRIPTION_ARNIE" = "Par o mejor sin visitar el fairway";
 "DESCRIPTION_ASPHALT" = "Par o mejor de un camino de carro";
 "DESCRIPTION_BANGO" = "Todos en el green - más cerca del hoyo";
 "DESCRIPTION_BARKIE" = "Par o mejor golpeando un árbol";
 "DESCRIPTION_BINGO" = "Primero en llegar el green";
-"DESCRIPTION_BINGO_BANGO_BONGO" = "Primero en green, más cerca del h, primer hecho";
+"DESCRIPTION_BINGO_BANGO_BONGO" = "Primero en green, más cerca del hoyo, primer hecho";
 "DESCRIPTION_BONGO" = "Golpe lejos - primer putt hecho";
 "DESCRIPTION_CHIPINSKI" = "Chip-in";
 "DESCRIPTION_COVER" = "Empatar o vencer el resultado debajo de par del oponente";
+"DESCRIPTION_FAIRWAY" = "Fairway alcanzado con el golpe inicial";
 "DESCRIPTION_GORILLA" = "Más cercano al flagstick en regulación en un par 5";
 "DESCRIPTION_GREENIE" = "Más cercano al flagstick en regulación en un par 3 - anulado con un 3-putt";
 "DESCRIPTION_GURGLEY" = "Par o mejor de, o saltando de, agua";
-"DESCRIPTION_HOGAN" = "Alcanzao el fairway, Green en regulación, 2-putt par";
-"DESCRIPTION_NO_TRASH" = "No Trash/Dots category specified";
+"DESCRIPTION_HOGAN" = "Fairway alcanzado, Green en regulación, 2-putt par";
+"DESCRIPTION_HOLLYWOOD" = "Partidos de 6 hoyos (Seises, Round-Robin)";
+"DESCRIPTION_NO_TRASH" = "No se especificó categoria de Trash / Dots";
 "DESCRIPTION_POLIE" = "1-putt más largo que la longitud del flagstick";
 "DESCRIPTION_SANDIE" = "Alto y abajo de un bunker al green acertó";
 "DESCRIPTION_SEVE" = "Birdie o mejor sin alcanzar el fairway o el green";
 "DESCRIPTION_SNAKE" = "3-putt, último 3-putt, o 3-putt más corto";
 "DESCRIPTION_STOBBIE" = "Encendido en regulación dentro de la longitud del flagstick";
+"DESCRIPTION_SWING_GAME" = "Equipo rotativo de 2 vs. 3 o más";
 "DESCRIPTION_TRASH" = "Puntos otorgados por logros de golf";
-"DESCRIPTION_WICKERS" = "Trash/Dots valores aumentan con cada aperición";
+"DESCRIPTION_WICKERS" = "Puntos valores aumentan con cada aperición";
 "DESCRIPTION_WOLF" = "Jugador, compañero opcional vs. resto en cada hoyo";
 
 //	Formats
