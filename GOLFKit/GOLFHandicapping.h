@@ -8,7 +8,7 @@
 
 @import Foundation;
 @import CoreGraphics;
-#import "GOLFKit.h"
+#import <GOLFKit/GOLFKit.h>
 
 //	Misc constants
 #define	kGOLFHandicapMethodsNumberOfCertifiable		6			//	USGA (1) through WHS (6), total of 6

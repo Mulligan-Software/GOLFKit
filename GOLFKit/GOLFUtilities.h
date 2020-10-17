@@ -7,7 +7,7 @@
 //
 
 @import Foundation;
-#import "GOLFKitTypes.h"
+#import <GOLFKit/GOLFKitTypes.h>
 
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 

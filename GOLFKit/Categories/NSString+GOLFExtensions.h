@@ -6,7 +6,7 @@
 //  Copyright © 2019 Mulligan Software. All rights reserved.
 //
 
-#import "GOLFKit.h"
+#import <GOLFKit/GOLFKit.h>
 
 @interface NSString (GOLFExtensions)
 

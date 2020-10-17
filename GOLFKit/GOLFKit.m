@@ -6,7 +6,7 @@
 //  Copyright © 2018 Mulligan Software. All rights reserved.
 //
 
-#import "GOLFKit.h"
+#import <GOLFKit/GOLFKit.h>
 
 //	Errors
 NSString *const GOLFKitErrorDomain = @"com.mulligansoftware.GOLFKit.ErrorDomain";

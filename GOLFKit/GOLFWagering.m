@@ -256,87 +256,87 @@ NSString * NSStringFromGOLFWageringTrashOption(GOLFWageringTrashOption trashOpti
 	//	optionally (when the address of descriptiveText is provided), a localized description of the
 	//	option ("Closest to flagstick in regulation on a par 3", etc.)
 
-	if (trashOption | GOLFWageringTrashCover) {
+	if (trashOption & GOLFWageringTrashCover) {
 		if (descriptiveText) {
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_COVER");
 		}
 		return GOLFLocalizedString(@"TITLE_COVER");
-	} else if (trashOption | GOLFWageringTrashGreenie) {
+	} else if (trashOption & GOLFWageringTrashGreenie) {
 		if (descriptiveText) {
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_GREENIE");
 		}
 		return GOLFLocalizedString(@"TITLE_GREENIE");
-	} else if (trashOption | GOLFWageringTrashSandie) {
+	} else if (trashOption & GOLFWageringTrashSandie) {
 		if (descriptiveText) {
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_SANDIE");
 		}
 		return GOLFLocalizedString(@"TITLE_SANDIE");
-	} else if (trashOption | GOLFWageringTrashStobbie) {
+	} else if (trashOption & GOLFWageringTrashStobbie) {
 		if (descriptiveText) {
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_STOBBIE");
 		}
 		return GOLFLocalizedString(@"TITLE_STOBBIE");
-	} else if (trashOption | GOLFWageringTrashFairway) {
+	} else if (trashOption & GOLFWageringTrashFairway) {
 		if (descriptiveText) {
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_FAIRWAY");
 		}
 		return [GOLFLocalizedString(@"TERM_FAIRWAY") capitalizedString];
-	} else if (trashOption | GOLFWageringTrashArnie) {
+	} else if (trashOption & GOLFWageringTrashArnie) {
 		if (descriptiveText) {
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_ARNIE");
 		}
 		return GOLFLocalizedString(@"TITLE_ARNIE");
-	} else if (trashOption | GOLFWageringTrashChipinski) {
+	} else if (trashOption & GOLFWageringTrashChipinski) {
 		if (descriptiveText) {
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_CHIPINSKI");
 		}
 		return GOLFLocalizedString(@"TITLE_CHIPINSKI");
-	} else if (trashOption | GOLFWageringTrashHogan) {
+	} else if (trashOption & GOLFWageringTrashHogan) {
 		if (descriptiveText) {
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_HOGAN");
 		}
 		return GOLFLocalizedString(@"TITLE_HOGAN");
-	} else if (trashOption | GOLFWageringTrashSeve) {
+	} else if (trashOption & GOLFWageringTrashSeve) {
 		if (descriptiveText) {
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_SEVE");
 		}
 		return GOLFLocalizedString(@"TITLE_SEVE");
-	} else if (trashOption | GOLFWageringTrashPolie) {
+	} else if (trashOption & GOLFWageringTrashPolie) {
 		if (descriptiveText) {
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_POLIE");
 		}
 		return GOLFLocalizedString(@"TITLE_POLIE");
-	} else if (trashOption | GOLFWageringTrashBingo) {
+	} else if (trashOption & GOLFWageringTrashBingo) {
 		if (descriptiveText) {
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_BINGO");
 		}
 		return GOLFLocalizedString(@"TITLE_BINGO");
-	} else if (trashOption | GOLFWageringTrashBango) {
+	} else if (trashOption & GOLFWageringTrashBango) {
 		if (descriptiveText) {
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_BANGO");
 		}
 		return GOLFLocalizedString(@"TITLE_BANGO");
-	} else if (trashOption | GOLFWageringTrashBongo) {
+	} else if (trashOption & GOLFWageringTrashBongo) {
 		if (descriptiveText) {
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_BONGO");
 		}
 		return GOLFLocalizedString(@"TITLE_BONGO");
-	} else if (trashOption | GOLFWageringTrashGurglie) {
+	} else if (trashOption & GOLFWageringTrashGurglie) {
 		if (descriptiveText) {
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_GURGLIE");
 		}
 		return GOLFLocalizedString(@"TITLE_GURGLIE");
-	} else if (trashOption | GOLFWageringTrashBarkie) {
+	} else if (trashOption & GOLFWageringTrashBarkie) {
 		if (descriptiveText) {
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_BARKIE");
 		}
 		return GOLFLocalizedString(@"TITLE_BARKIE");
-	} else if (trashOption | GOLFWageringTrashAsphalt) {
+	} else if (trashOption & GOLFWageringTrashAsphalt) {
 		if (descriptiveText) {
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_ASPHALT");
 		}
 		return GOLFLocalizedString(@"TITLE_ASPHALT");
-	} else if (trashOption | GOLFWageringTrashSnake) {
+	} else if (trashOption & GOLFWageringTrashSnake) {
 		if (descriptiveText) {
 			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_SNAKE");
 		}

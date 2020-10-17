@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GOLFKit.h"
+#import <GOLFKit/GOLFKit.h>
 
 //	Misc constants
 #define USGADataServicesIsAvailable 0	//	for testing

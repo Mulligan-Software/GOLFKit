@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GOLFKitTypes.h"
-#import "GOLFColors.h"
+#import <GOLFKit/GOLFKitTypes.h>
+#import <GOLFKit/GOLFColors.h>
 
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 

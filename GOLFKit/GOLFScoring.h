@@ -7,7 +7,7 @@
 //
 
 @import Foundation;
-#import "GOLFKitTypes.h"
+#import <GOLFKit/GOLFKitTypes.h>
 
 #define kNotAScore						-999		//	No-value for a whole-number score - GOLFScore
 #define kNotAGrossScore					-999		//	No-value for a gross score - GOLFGrossScore

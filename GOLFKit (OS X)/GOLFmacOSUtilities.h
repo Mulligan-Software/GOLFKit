@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GOLFKit.h"
-#import "GOLFUtilities.h"
+#import <GOLFKit/GOLFKit.h>
+#import <GOLFKit/GOLFUtilities.h>
 
 //UIImage * GOLFActivitiesPrintScorecardIcon(void);
 //	The icon to appear in an iOS Share sheet for a Scorecard printing action

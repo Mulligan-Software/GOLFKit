@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "GOLFKitTypes.h"
+#import <GOLFKit/GOLFKitTypes.h>
 
 //	Club/course related constants
 

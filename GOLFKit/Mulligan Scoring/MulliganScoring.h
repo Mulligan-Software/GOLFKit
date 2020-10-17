@@ -7,7 +7,7 @@
 //
 
 @import Foundation;
-#import "GOLFKitTypes.h"
+#import <GOLFKit/GOLFKitTypes.h>
 
 //	Mulligan Software iCloud credentials
 extern NSString * const MulliganSoftwareDevelopmentTeamID;

@@ -7,7 +7,7 @@
 //
 
 @import Foundation;
-#import "GOLFKit.h"
+#import <GOLFKit/GOLFKit.h>
 
 //	Misc constants
 #define	kGOLFWageringSupportsTeamMatchStyes		YES			//	Whether GOLFKit supports special team match styles

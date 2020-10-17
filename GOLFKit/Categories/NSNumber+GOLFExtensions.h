@@ -6,9 +6,9 @@
 //  Copyright © 2017 Mulligan Software. All rights reserved.
 //
 
-#import "GOLFKit.h"
-#import "GOLFColors.h"
-#import "GOLFScoring.h"
+#import <GOLFKit/GOLFKit.h>
+#import <GOLFKit/GOLFColors.h>
+#import <GOLFKit/GOLFScoring.h>
 
 @interface NSNumber (GOLFExtensions)
 

@@ -7,6 +7,7 @@
 */
 
 //	Golf Terminology
+"TERM_ACKNOWLEDGEMENT_PLURAL" = "reconocimientos";
 "TERM_ADJUSTED" = "ajustado";
 "TERM_ADJUSTED_ABBR" = "aju.";
 "TERM_ADJUSTED_FOR_RATINGS" = "ajustado por diferencias de Clasificaciones del Campo";
@@ -349,6 +350,7 @@
 "TITLE_ALLOWANCE" = "Asignación";
 "TITLE_ALWAYS_DARK" = "Siempre Oscuro";
 "TITLE_ALWAYS_LIGHT" = "Siempre Claro";
+"TITLE_AN_ERROR_OCCURRED" = "Ocurrió un error";
 "TITLE_ANIMALS" = "Animales";
 "TITLE_ARNIE" = "Arnie";
 "TITLE_ASPHALT" = "Asphalt";
@@ -401,6 +403,7 @@
 "TITLE_DESIGNATE_CAPTAIN" = "Designar como capitán";
 "TITLE_DIFFERENTIAL_TYPE" = "Tipo de diferencial";
 "TITLE_DONE" = "Aceptar";
+"TITLE_DOWNLOADING_COURSES" = "Descargando los campos";
 "TITLE_DOWNLOADING_EAGLE_USERS_GUIDE"= "Descargando la Guía del Usuario de Mulligan’s Eagle™…";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
@@ -570,11 +573,13 @@
 "TITLE_PRIMARY" = "Primero";
 "TITLE_PRINT_SCORECARD" = "Imprimir Tarjeta";
 "TITLE_PRINT_SCORECARDS" = "Imprimir Tarjetas";
+"TITLE_QUICK_START" = "Inicio Rápido";
 "TITLE_QUOTA_POINTS_GAINED" = "Puntos de Cuota Ganados";
 "TITLE_RANDOM_SELECTION" = "Selección al Azar";
 "TITLE_RECENT_PLAYERS_ETC" = "Jugadores recientes, Clubes, Tarjetas, etc.";
 "TITLE_REFRESH" = "Actualizar";
 "TITLE_REGISTER" = "Registrar";
+"TITLE_REMOTE_DATA" = "Datos Remotos";
 "TITLE_REMOVE" = "Eliminar";
 "TITLE_REVIEW_BUTTON" = "Revisar";
 "TITLE_REVISION_DATE" = "Fecha de Revisión";
@@ -620,6 +625,7 @@
 "TITLE_SWING_GAME" = "Juego de Cambio";
 "TITLE_SYSTEM" = "Sistema";
 "TITLE_TECHNICAL_SUPPORT" = "Asistencia al Cliente";
+"TITLE_THE_SCOREBOARD" = "El Marcador";
 "TITLE_THE_SCORING_MACHINE" = "La Máquina del Puntaje";
 "TITLE_THE_SCORING_MACHINE_TM" = "La Máquina del Puntaje™";
 "TITLE_TOTAL_POINTS" = "Puntos Totales";

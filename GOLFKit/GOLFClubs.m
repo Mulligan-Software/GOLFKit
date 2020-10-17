@@ -6,9 +6,9 @@
 //  Copyright © 2018 Mulligan Software. All rights reserved.
 //
 
-#import "GOLFKit.h"
-#import "GOLFUtilities.h"
-#import "GOLFClubs.h"
+#import <GOLFKit/GOLFKit.h>
+#import <GOLFKit/GOLFUtilities.h>
+#import <GOLFKit/GOLFClubs.h>
 
 //	Private Prototypes
 //NSInteger EGACategoryFromEGAHandicap(float EGAHandicap, BOOL playerIsFemale);
