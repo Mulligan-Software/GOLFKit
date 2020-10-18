@@ -48,7 +48,7 @@ extern NSString * const MulliganScoringTeamRoundIDUniversalTypeIdentifier;
 //	iTunes URL's for Eagle & iOS apps
 extern NSString * const iTunesEagleURL;	//	Not really usable in iOS - calls go to generic Apple apps page
 extern NSString * const iTunesMulliganAppsURL;;
-extern NSString * const iTunesTeeChartURL;
+extern NSString * const iTunesTeeChartURL;	//	Obsolete for Eagle
 extern NSString * const iTunesiPressURL;
 extern NSString * const iTunesScoringMachineURL;
 
