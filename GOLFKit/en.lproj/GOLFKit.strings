@@ -704,8 +704,10 @@
 "FORMAT_CURRENT_%@_TITLE_PLURAL" = "Current %@";
 "FORMAT_DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Determine your %@ on the right by finding the row in which your %@ appears on the left.";
 "FORMAT_DISCONTINUED_HANDICAP_METHOD_%@_PLAYER_%@" = "The %@ is no longer available.  If you select another method for %@ and save the change, you will be unable to restore the previous setting.";
-"FORMAT_%@_IS_DEFAULT_CAPTAIN" = "%@ assigned by handicap as team captain.";
-"FORMAT_%@_IS_DESIGNATED_CAPTAIN" = "%@ is designated as team captain.";
+"FORMAT_%@_IS_DEFAULT_TEAM_CAPTAIN" = "%@ assigned by handicap as team captain.";
+"FORMAT_%@_IS_DESIGNATED_TEAM_CAPTAIN" = "%@ is designated as team captain.";
+"FORMAT_%@_IS_DEFAULT_SCORECARD_CAPTAIN" = "%@ assigned by handicap as scorecard captain.";
+"FORMAT_%@_IS_DESIGNATED_SCORECARD_CAPTAIN" = "%@ is designated as scorecard captain.";
 "FORMAT_MAXIMUM_%@_ABBR" = "Max. %@";
 "FORMAT_MB_DOWNLOADED_%1.1f" = "%1.1fMB downloaded";
 "FORMAT_NET_%@" = "Net %@";
