@@ -1257,12 +1257,6 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 //	//	session - The session collecting the metrics.
 //	//	task - The task whose metrics have been collected.
 //	//	metrics - The collected metrics.
-//	
-//	if (@available (macOS 10.12, iOS 10.0, *)) {
-//#ifdef DEBUG
-//	NSLog(@"%@ -%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
-//#endif
-//	}
 //}
 
 #pragma mark <NSURLSessionDataDelegate>

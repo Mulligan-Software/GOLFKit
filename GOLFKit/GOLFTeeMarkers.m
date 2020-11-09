@@ -6,8 +6,9 @@
 //  Copyright © 2016 Mulligan Software. All rights reserved.
 //
 
-#import "GOLFKit.h"
+#import <GOLFKit/GOLFKit.h>
 #import "GOLFTeeMarkers.h"
+#import "GOLFUtilities.h"
 #import "GOLFColors.h"
 #import "NSNumber+GOLFExtensions.h"
 
