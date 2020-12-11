@@ -211,6 +211,13 @@ typedef NS_ENUM(NSUInteger, GOLFFairwayStatus) {
 	GOLFFairwayStatusForceMissed = 99		//	Force a FairwayMissed setting	(99)
 };
 
+typedef NS_ENUM(NSUInteger, GOLFSkinsEligibility) {
+	GOLFSkinsEligibilityAllScores = 0,		//	All hole scores are eligible for skins			(0)
+	GOLFSkinsEligibilityBogeyOrBetter,		//	Only scores of bogey or better are eligible		(1)
+	GOLFSkinsEligibilityParOrBetter,		//	Only scores of par or better are eligible		(2)
+	GOLFSkinsEligibilityUnderPar			//	Only hole scores under par are eligible			(3)
+};
+
 //	Status Masks
 
 typedef NS_OPTIONS(NSUInteger, GOLFEventStatus) {
@@ -508,3 +515,11 @@ NSString * NSStringFromMaxScoreType(GOLFMaxScoreType type, NSString **descriptiv
 //	Returns a localized title/name of a WHS Maximum Score method ("Net Double Bogey", "Triple Par", etc.) and
 //	optionally (when the address of descriptiveText is provided), a localized description of the technique
 //	("par plus 2 plus your strokes", "three times par at the hole", etc.)
+
+//=================================================================
+//	NSStringFromSkinsEligibility(eligibility, descriptiveText)
+//=================================================================
+NSString * NSStringFromSkinsEligibility(GOLFSkinsEligibility eligibility, NSString **descriptiveText);
+//	Returns a localized title/name of a skins eligibility setting ("Any Score", "Par or Better", etc.) and
+//	optionally (when the address of descriptiveText is provided), a localized description of the setting
+//	("All hole scores are eligible for skins", "Only scores of par or better are eligible", etc.)

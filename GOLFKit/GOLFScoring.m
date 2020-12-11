@@ -826,27 +826,25 @@ NSString * NSStringFromTiebreakerOutcome(GOLFTiebreakerOutcome outcome, NSNumber
 //=================================================================
 NSString * NSStringFromMaxScoreType(GOLFMaxScoreType type, NSString **descriptiveText) {
 
-//		Max Score Type
-//
-//		Type									Value		Description
-//		------------------------------------	--------	-----------------------------------
-//		GOLFMaxScoreTypeNone						0		Maximum score is unlimited
-//		GOLFMaxScoreTypeBogey						1		Maximum returned score is bogey (par + 1)
-//		GOLFMaxScoreTypeDoubleBogey					2		Maximum returned score is double-bogey (par + 2)
-//		GOLFMaxScoreTypeTripleBogey					3		Maximum returned score is triple-bogey (par + 3)
-//		GOLFMaxScoreTypeQuadrupleBogey				4		Maximum returned score is quadruple-bogey (par + 4)
-//		GOLFMaxScoreTypeQuintupleBogey				5		Maximum returned score is quintuple-bogey (par + 5)
-//		GOLFMaxScoreTypeWithoutHandicap				5		GOLFMaxScoreTypeQuintupleBogey for players without a handicap
-//		GOLFMaxScoreTypeSextupleBogey				6		Maximum returned score is sextuple-bogey (par + 6)
-//		GOLFMaxScoreTypeNetBogey					11      Maximum returned score equivalent to net bogey (par + 1 + strokes)
-//		GOLFMaxScoreTypeNetDoubleBogey				12		Maximum returned score equivalent to net double-bogey (par + 2 + strokes)
-//		GOLFMaxScoreTypeNetTripleBogey				13		Maximum returned score equivalent to net triple-bogey (par + 3 + strokes)
-//		GOLFMaxScoreTypeNetQuadrupleBogey			14		Maximum returned score equivalent to net quadruple-bogey (par + 4 + strokes)
-//		GOLFMaxScoreTypeDoublePar					21		Maximum returned score is twice par (par x 2)
-//		GOLFMaxScoreTypeTriplePar					22		Maximum returned score is 3 times par (par x 3)
-//		GOLFMaxScoreTypeFixedLimit					51		Maximum returned score is fixed maximum (WHSMaxScoreFixedLimitScore)
-//		GOLFMaxScoreTypeFixed_6_9_12				52		Maximum returned score is fixed maximum (6 on par 3, 9 on par 4, 12 on par 5 or higher)
-//		GOLFMaxScoreTypeUnknown						99		Maximum returned score unknown
+	//	Type									  Value		Description
+	//	------------------------------------	--------	-----------------------------------
+	//	GOLFMaxScoreTypeNone						0		Maximum score is unlimited
+	//	GOLFMaxScoreTypeBogey						1		Maximum returned score is bogey (par + 1)
+	//	GOLFMaxScoreTypeDoubleBogey					2		Maximum returned score is double-bogey (par + 2)
+	//	GOLFMaxScoreTypeTripleBogey					3		Maximum returned score is triple-bogey (par + 3)
+	//	GOLFMaxScoreTypeQuadrupleBogey				4		Maximum returned score is quadruple-bogey (par + 4)
+	//	GOLFMaxScoreTypeQuintupleBogey				5		Maximum returned score is quintuple-bogey (par + 5)
+	//	GOLFMaxScoreTypeWithoutHandicap				5		GOLFMaxScoreTypeQuintupleBogey for players without a handicap
+	//	GOLFMaxScoreTypeSextupleBogey				6		Maximum returned score is sextuple-bogey (par + 6)
+	//	GOLFMaxScoreTypeNetBogey					11      Maximum returned score equivalent to net bogey (par + 1 + strokes)
+	//	GOLFMaxScoreTypeNetDoubleBogey				12		Maximum returned score equivalent to net double-bogey (par + 2 + strokes)
+	//	GOLFMaxScoreTypeNetTripleBogey				13		Maximum returned score equivalent to net triple-bogey (par + 3 + strokes)
+	//	GOLFMaxScoreTypeNetQuadrupleBogey			14		Maximum returned score equivalent to net quadruple-bogey (par + 4 + strokes)
+	//	GOLFMaxScoreTypeDoublePar					21		Maximum returned score is twice par (par x 2)
+	//	GOLFMaxScoreTypeTriplePar					22		Maximum returned score is 3 times par (par x 3)
+	//	GOLFMaxScoreTypeFixedLimit					51		Maximum returned score is fixed maximum (WHSMaxScoreFixedLimitScore)
+	//	GOLFMaxScoreTypeFixed_6_9_12				52		Maximum returned score is fixed maximum (6 on par 3, 9 on par 4, 12 on par 5 or higher)
+	//	GOLFMaxScoreTypeUnknown						99		Maximum returned score unknown
 	
 	switch(type) {
 		case GOLFMaxScoreTypeNone:
@@ -950,3 +948,47 @@ NSString * NSStringFromMaxScoreType(GOLFMaxScoreType type, NSString **descriptiv
 	}
 }
 
+//=================================================================
+//	NSStringFromSkinsEligibility(eligibility, descriptiveText)
+//=================================================================
+NSString * NSStringFromSkinsEligibility(GOLFSkinsEligibility eligibility, NSString **descriptiveText) {
+
+	//	Eligibility								  Value		Description
+	//	------------------------------------	--------	-----------------------------------
+	//	GOLFSkinsEligibilityAllScores				0		All hole scores are eligible for skins
+	//	GOLFSkinsEligibilityBogeyOrBetter			1		Only scores of bogey or better are eligible
+	//	GOLFSkinsEligibilityParOrBetter				2		Only scores of par or better are eligible
+	//	GOLFSkinsEligibilityUnderPar				3		Only hole scores under par are eligible
+
+	switch(eligibility) {
+		case GOLFSkinsEligibilityAllScores:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_SKINS_ALL_SCORES");
+			}
+			return GOLFLocalizedString(@"MENU_SKINS_ALL_SCORES");
+			
+		case GOLFSkinsEligibilityBogeyOrBetter:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_SKINS_BOGEY_OR_BETTER");
+			}
+			return GOLFLocalizedString(@"MENU_SKINS_BOGEY_OR_BETTER");
+			
+		case GOLFSkinsEligibilityParOrBetter:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_SKINS_PAR_OR_BETTER");
+			}
+			return GOLFLocalizedString(@"MENU_SKINS_PAR_OR_BETTER");
+			
+		case GOLFSkinsEligibilityUnderPar:
+			if (descriptiveText != nil) {
+				*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_SKINS_BIRDIE_OR_BETTER");
+			}
+			return GOLFLocalizedString(@"MENU_SKINS_UNDER_PAR");
+			
+		default:
+			if (descriptiveText != nil) {
+				*descriptiveText = [NSString stringWithFormat:@"(%lu)", (unsigned long)eligibility];
+			}
+			return [GOLFLocalizedString(@"TERM_UNKNOWN") capitalizedString];
+	}
+}

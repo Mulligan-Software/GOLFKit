@@ -31,6 +31,7 @@
 "TERM_BIRDIE" = "birdie";
 "TERM_BIRDIE_PLURAL" = "birdies";
 "TERM_BOWMAKER" = "Bowmaker";
+"TERM_BOY_PLURAL" = "muchachos";
 "TERM_CALCULATE" = "calcular";
 "TERM_CALCULATES" = "calcula";
 "TERM_CALLAWAY" = "Callaway";
@@ -67,6 +68,7 @@
 "TERM_DOUBLE_TAP" = "pulsa dos veces";
 "TERM_DOWNLOAD" = "descargar";
 "TERM_DUPLICATE" = "duplicar";
+"TERM_EFFECTIVE" = "efectiva";	//	an "effective" date
 "TERM_ENTER" = "intro";
 "TERM_EVEN" = "igual";
 "TERM_EVEN_ABBR" = "E";
@@ -89,6 +91,7 @@
 "TERM_FRONT" = "primero";
 "TERM_GAIN" = "ganancia";
 "TERM_GENDER" = "género";
+"TERM_GIRL_PLURAL" = "muchachas";
 "TERM_GOLF" = "golf";
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "bruto";
@@ -107,6 +110,7 @@
 "TERM_IRISH" = "Irlandesa";
 "TERM_KEYBOARD" = "teclado";
 "TERM_LEADERBOARD" = "tabla de clasificación";
+"TERM_LEVEL" = "nival";	//	n. skill "level"
 "TERM_LIMITED" = "limitado";
 "TERM_LINK" = "enlace";
 "TERM_LOCATE" = "ubicar";
@@ -198,6 +202,7 @@
 "TERM_SIDE" = "lado";
 "TERM_SIDE_PLURAL" = "lados";
 "TERM_SIXPT" = "6-Puntos";
+"TERM_SKIN" = "skin";
 "TERM_SKIN_PLURAL" = "skins";
 "TERM_SLOPE" = "slope";
 "TERM_SORT" = "ordenar";
@@ -352,6 +357,7 @@
 "TITLE_ALWAYS_LIGHT" = "Siempre Claro";
 "TITLE_AN_ERROR_OCCURRED" = "Ocurrió un error";
 "TITLE_ANIMALS" = "Animales";
+"TITLE_APPLY_BUTTON" = "Aplicar";
 "TITLE_ARNIE" = "Arnie";
 "TITLE_ASPHALT" = "Asphalt";
 "TITLE_ASSIGN_ROUND_TO" = "Asignar una ronda a";
@@ -398,10 +404,12 @@
 "TITLE_DARK" = "Oscuro";
 "TITLE_DATA_PROTECTION" = "Protección de Datos";
 "TITLE_DECERTIFY" = "Descertificar";
+"TITLE_DEFAULT_TEAM_MATCH_STYLE" = "Puntaje del Equipo";
 "TITLE_DELETE_ALL" = "Eliminar Todos";
 "TITLE_DELETE_CONTESTANT" = "Eliminar el concursante";
 "TITLE_DESIGNATE_CAPTAIN" = "Designar como capitán";
 "TITLE_DIFFERENTIAL_TYPE" = "Tipo de diferencial";
+"TITLE_DISCARD" = "Descartar";
 "TITLE_DONE" = "Aceptar";
 "TITLE_DOWNLOADING_COURSES" = "Descargando los campos";
 "TITLE_DOWNLOADING_EAGLE_USERS_GUIDE"= "Descargando la Guía del Usuario de Mulligan’s Eagle™…";
@@ -517,6 +525,11 @@
 "TITLE_IGNORE_WORST" = "Ignorar peores";
 "TITLE_INCOMPLETE_HOLE" = "Hoyo incompleto";
 "TITLE_INSTALL" = "Instalar";
+"TITLE_INSTALL_JUNIOR_PAR" = "Instalar Par Junior";
+"TITLE_JUNIOR_PAR" = "Par Junior";
+"TITLE_JUNIOR_PAR_ADVANCED" = "Versado - handicap de jugar debajo de 25";
+"TITLE_JUNIOR_PAR_BEGINNER" = "Novato - handicap de jugar más de 40";
+"TITLE_JUNIOR_PAR_INTERMEDIATE" = "Intermedio - handicap de jugar 25 a 40";
 "TITLE_KEEP" = "Conservar";
 "TITLE_KEEP_SCORES" = "Mantener los Resultados";
 "TITLE_KEEPING_SCORE" = "Llevando puntajes desde 1995";
@@ -532,6 +545,9 @@
 "TITLE_LOCK_EVENTS" = "Bloquear los Eventos";
 "TITLE_LOCK_PLAYERS" = "Bloquear los Jugadores";
 "TITLE_LOCK_SCORECARDS" = "Bloquear las Tarjetas";
+"TITLE_LOW_BALL_HIGH_BALL" = "Bola Baja - Bola Alta";
+"TITLE_LOW_BALL_LOW_TOTAL" = "Bola Baja - Total Bajo";
+"TITLE_LOW_BALL_SECOND_BALL" = "Bola Baja - Segunda Bola";
 "TITLE_LOW_INDEX" = "Bajo Indice de Handicap";
 "TITLE_MASS_CONVERT_%@" = "Cambiar el Método de Handicap de los Jugadores - %@";
 "TITLE_MATCH_PLAY" = "Match Play";
@@ -601,6 +617,7 @@
 "TITLE_SELECT_ALL" = "Seleccionar Todo";
 "TITLE_SELECTED_HOLES" = "Hoyos Seleccionados";
 "TITLE_SERIAL_NUMBER" = "Número de serie";
+"TITLE_SET_BUTTON" = "Definir";
 "TITLE_SEVE" = "Seve";
 "TITLE_SHOW_ALLOWANCE_DOTS" = "Mostrar puntos de asignación";
 "TITLE_SHOW_ME" = "Muéstrame";
@@ -610,6 +627,7 @@
 "TITLE_SHOW_SCORES_AT_STARTUP" = "Mostrar los puntajes al inicio";
 "TITLE_SHOW_TABLES" = "Mostrar tablas";
 "TITLE_SKILL_ADJUSTMENT" = "Ajuste por habilidad";
+"TITLE_SKINS_REQUIRE" = "Skins requieren";
 "TITLE_SKIP" = "Omitir";
 "TITLE_SNAKE" = "Snake";
 "TITLE_SPECIAL_PREFERENCES" = "Ajustes Especiales";
@@ -624,6 +642,7 @@
 "TITLE_STOBBIE" = "Stobbie";
 "TITLE_SWING_GAME" = "Juego de Cambio";
 "TITLE_SYSTEM" = "Sistema";
+"TITLE_TEAM_MATCHES" = "Partidos de Equipo";
 "TITLE_TECHNICAL_SUPPORT" = "Asistencia al Cliente";
 "TITLE_THE_SCOREBOARD" = "El Marcador";
 "TITLE_THE_SCORING_MACHINE" = "La Máquina del Puntaje";
@@ -647,17 +666,7 @@
 "TITLE_2_DOWN" = "2-down";
 "TITLE_3_BY_6" = "3 × 6";
 
-"TITLE_TEAM_MATCHES" = "Partidos de Equipo";
-"TITLE_DEFAULT_TEAM_MATCH_STYLE" = "Puntaje del Equipo";
-"TITLE_LOW_BALL_LOW_TOTAL" = "Bola Baja - Total Bajo";
-"TITLE_LOW_BALL_HIGH_BALL" = "Bola Baja - Bola Alta";
-"TITLE_LOW_BALL_SECOND_BALL" = "Bola Baja - Segunda Bola";
-"DESCRIPTION_DEFAULT_TEAM_MATCH_STYLE_%@" = "%@ usando puntajes del equipo ¹";
-"DESCRIPTION_LOW_BALL_LOW_TOTAL" = "1 punto - compañero bajo, 1 pt. - bajo total de equipo";
-"DESCRIPTION_LOW_BALL_HIGH_BALL" = "1 punto - compañero bajo, 1 pt. - vs. compañeros altos";
-"DESCRIPTION_LOW_BALL_SECOND_BALL" = "1 punto - compañero bajo, 1 pt. - vs. segundos compañeros";
-"DESCRIPTION_TEAM_MATCH_STYLES" = "¹ Disponible para todo las formas de juego - siempre se usa para jugar en equipo-solo y puntaje de puntos.";
-
+"DESCRIPTION_3_BY_6" = "Hoyos 1-6, 7-11 y 12-18";
 "DESCRIPTION_ANIMALS" = "En-campo juego de cartes para foursomes";
 "DESCRIPTION_ARNIE" = "Par o mejor sin visitar el fairway";
 "DESCRIPTION_ASPHALT" = "Par o mejor de un camino de carro";
@@ -667,20 +676,37 @@
 "DESCRIPTION_BINGO_BANGO_BONGO" = "Primero en green, más cerca del hoyo, primer hecho";
 "DESCRIPTION_BONGO" = "Golpe lejos - primer putt hecho";
 "DESCRIPTION_CHIPINSKI" = "Chip-in";
+"DESCRIPTION_CLOSE_OUT" = "(cuando no hay apuestas vigentes)";
 "DESCRIPTION_COVER" = "Empatar o vencer el resultado debajo de par del oponente";
+"DESCRIPTION_DEFAULT_TEAM_MATCH_STYLE_%@" = "%@ usando puntajes del equipo ¹";
+"DESCRIPTION_EXTENDED_SCORING" = "Puntaje Ampliado incluye puntajes “X”, puntajes máximos (controlados por golpes), puntajes de Competición/Tourneo, fairways y bunkers acertos.";
 "DESCRIPTION_FAIRWAY" = "Fairway alcanzado con el golpe inicial";
+"DESCRIPTION_FRONT_BACK" = "Primero lado y Segundo lado";
 "DESCRIPTION_GORILLA" = "Más cercano al flagstick en regulación en un par 5";
 "DESCRIPTION_GREENIE" = "Más cercano al flagstick en regulación en un par 3 - anulado con un 3-putt";
 "DESCRIPTION_GURGLEY" = "Par o mejor de, o saltando de, agua";
 "DESCRIPTION_HOGAN" = "Fairway alcanzado, Green en regulación, 2-putt par";
 "DESCRIPTION_HOLLYWOOD" = "Partidos de 6 hoyos (Seises, Round-Robin)";
+"DESCRIPTION_LOW_BALL_LOW_TOTAL" = "1 punto - compañero bajo, 1 pt. - bajo total de equipo";
+"DESCRIPTION_LOW_BALL_HIGH_BALL" = "1 punto - compañero bajo, 1 pt. - vs. compañeros altos";
+"DESCRIPTION_LOW_BALL_SECOND_BALL" = "1 punto - compañero bajo, 1 pt. - vs. segundos compañeros";
+"DESCRIPTION_MATCH_PLAY" = "Competición cara a cara anotada por los hoyos ganados.";
+"DESCRIPTION_NASSAU" = "Primero lado, Segundo lado y 18 hoyos";
 "DESCRIPTION_NO_TRASH" = "No se especificó categoria de Trash / Dots";
 "DESCRIPTION_POLIE" = "1-putt más largo que la longitud del flagstick";
+"DESCRIPTION_PRINTING_PRIVACY_%@" = "Las categorías de registro de eventos identificadas como “%@” generalmente no se imprimen ni se muestran.";
 "DESCRIPTION_SANDIE" = "Alto y abajo de un bunker al green acertó";
 "DESCRIPTION_SEVE" = "Birdie o mejor sin alcanzar el fairway o el green";
+"DESCRIPTION_SKINS_ALL_SCORES" = "Cualquier score de hoyo válida es elegible para skins";
+"DESCRIPTION_SKINS_BIRDIE_OR_BETTER" = "Solo los resultados de hoyos debajo del par son elegibles para skins";
+"DESCRIPTION_SKINS_BOGEY_OR_BETTER" = "Solo resultados de bogey o mejores son elegibles para skins";
+"DESCRIPTION_SKINS_PAR_OR_BETTER" = "Solo resultados de par o mejores son elegibles para skins";
 "DESCRIPTION_SNAKE" = "3-putt, último 3-putt, o 3-putt más corto";
 "DESCRIPTION_STOBBIE" = "Encendido en regulación dentro de la longitud del flagstick";
 "DESCRIPTION_SWING_GAME" = "Equipo rotativo de 2 vs. 3 o más";
+"DESCRIPTION_TEAM_MATCH_STYLES" = "¹ Disponible para todo las formas de juego - siempre se usa para jugar en equipo-solo y puntaje de puntos.";
+"DESCRIPTION_THEME_APPEARANCE" = "Claro - Eagle siempre usa la apariencia clásico de Aqua\nOscuro - Eagle siempre usa la apariencia del Modo Oscuro\nSistema - Eagle usa la apariencia seleccionada en Preferencias del Sistema";
+"DESCRIPTION_THEME_PRE_MOJAVE" = "Antes de macOS 10.14 Mojave, Eagle utiliza el estilo de apariencia Aqua estándar del sistema.";
 "DESCRIPTION_TRASH" = "Puntos otorgados por logros de golf";
 "DESCRIPTION_WICKERS" = "Puntos valores aumentan con cada aperición";
 "DESCRIPTION_WOLF" = "Jugador, compañero opcional vs. resto en cada hoyo";
@@ -741,8 +767,6 @@
 "UNDO_GRAPHING_SECONDARY_COLOR_CHANGE" = "Cambio de Gráphicos Color Secondario";
 
 "MENU_ALPHABETICALLY" = "alfabéticamente";
-"MENU_LOOSELY_ALPHABETIC" = "vagamente alfabético";
-"MENU_STRICTLY_ALPHABETIC" = "estricamente alfabético";
 "MENU_BY_SKILL" = "pos habilidad (handicap)";
 "MENU_BY_PLAYER_POSITION" = "por posición del jugador (A, B, C, …)";
 "MENU_HIGHLIGHT_RED_LINE" = "línea roja despues del 20 (estilo MGP)";
@@ -760,6 +784,12 @@
 "MENU_HDCP_ADJUSTED_RATING" = "Calificación Ajustada";
 "MENU_HDCP_ADJUSTED_FULL" = "Completamente Ajustado";
 "MENU_HDCP_ADJUSTED_SLOPE" = "Slope Ajustado";
+"MENU_LOOSELY_ALPHABETIC" = "vagamente alfabético";
+"MENU_SKINS_ALL_SCORES" = "cualquier puntaje válido";
+"MENU_SKINS_BOGEY_OR_BETTER" = "bogey o mejor";
+"MENU_SKINS_PAR_OR_BETTER" = "par o mejor";
+"MENU_SKINS_UNDER_PAR" = "birdie o mejor";
+"MENU_STRICTLY_ALPHABETIC" = "estricamente alfabético";
 
 "ALERT_NO_GOLFERS_COURSES_FOR_EVENT" = "Ni los jugadores ni los campos de golf aún disponible para crear un Evento.";
 "ALERT_NO_COURSES_FOR_EVENT" = "No hay campos de golf aún disponible para crear un Evento.";
@@ -780,16 +810,6 @@
 "BLURB_ALLOW_REFERENCE_TEES" = "Al ajustar handicaps por las diferencias en las clasificaciones del campo, permite la especificación de tees “referencias” para ser utilizado para el cálculo de ajustes para los caballeros y/o damas.";
 "BLURB_REVIEW_HANDICAP_RECORDS" = "Examinar los registros de handicap previamente calculados en forma de cuadros con capacidad para eliminar los datos seleccionados.";
 
-"DESCRIPTION_3_BY_6" = "Hoyos 1-6, 7-11 y 12-18";
-"DESCRIPTION_CLOSE_OUT" = "(cuando no hay apuestas vigentes)";
-"DESCRIPTION_EXTENDED_SCORING" = "Puntaje Ampliado incluye puntajes “X”, puntajes máximos (controlados por golpes), puntajes de Competición/Tourneo, fairways y bunkers acertos.";
-"DESCRIPTION_FRONT_BACK" = "Primero lado y Segundo lado";
-"DESCRIPTION_MATCH_PLAY" = "Competición cara a cara anotada por los hoyos ganados.";
-"DESCRIPTION_NASSAU" = "Primero lado, Segundo lado y 18 hoyos";
-"DESCRIPTION_PRINTING_PRIVACY_%@" = "Las categorías de registro de eventos identificadas como “%@” generalmente no se imprimen ni se muestran.";
-"DESCRIPTION_THEME_APPEARANCE" = "Claro - Eagle siempre usa la apariencia clásico de Aqua\nOscuro - Eagle siempre usa la apariencia del Modo Oscuro\nSistema - Eagle usa la apariencia seleccionada en Preferencias del Sistema";
-"DESCRIPTION_THEME_PRE_MOJAVE" = "Antes de macOS 10.14 Mojave, Eagle utiliza el estilo de apariencia Aqua estándar del sistema.";
-
 "INFO_AUTHORITY_%@_NOT_CERTIFIED" = "El método de handicap %@ no está certificado actualmente para su uso.";
 "INFO_DECERTIFY_AUTHORITY_%@" = "Anule la autorización del %@ como un método de handicap certificado par su uso en Mulligan’s Eagle.";
 "INFO_EAGLE_USERS_GUIDE_DOWNLOAD" = "la versión mas reciente de la Guía del Usuario del sitio web de Mulligan Software";
@@ -797,9 +817,10 @@
 "INFO_ENFORCE_EXTINCT_HANDICAPS" = "Marcada: Los requisitos de autoridad de handicap obedecen incluso si duele.\nSin marcar: De lo contrario.";
 "INFO_USGA_EXTINCTION_WARNING" = "El Sistema de Handicap de USGA ha sido reemplazado y no será compatible ni estará disponible en futuras versiones de Mulligan’s Eagle.  Le recomendamos que elija otro método de handicap.";
 
-"NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "La configuración presentada no se cambian con un reajuste “Ajustes de fábrica”.";
 "NOTICE_CANCEL_TO_UNDO_CHANGES" = "Cancelar para deshacer los cambios.";
 "NOTICE_DISCONTINUED_HANDICAP_METHOD" = "Este método de handicap ya no está vigente.  Por favor seleccione otro.";
+"NOTICE_JUNIOR_PAR_REQUIREMENTS" = "Par Junior no está disponible cuando faltan longitudes de hoyo.";
+"NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "La configuración presentada no se cambian con un reajuste “Ajustes de fábrica”.";
 
 //	USGA Data Services
 "NOTICE_USGA_CANCELLED" = "Conexión de USGA Data Services cancelada";

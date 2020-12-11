@@ -31,6 +31,7 @@
 "TERM_BIRDIE" = "birdie";
 "TERM_BIRDIE_PLURAL" = "birdies";
 "TERM_BOWMAKER" = "Bowmaker";
+"TERM_BOY_PLURAL" = "boys";
 "TERM_CALCULATE" = "calculate";
 "TERM_CALCULATES" = "calculates";
 "TERM_CALLAWAY" = "Callaway";
@@ -67,6 +68,7 @@
 "TERM_DOUBLE_TAP" = "double-tap";
 "TERM_DOWNLOAD" = "download";
 "TERM_DUPLICATE" = "duplicate";
+"TERM_EFFECTIVE" = "effective";	//	an "effective" date
 "TERM_ENTER" = "enter";
 "TERM_EVEN" = "even";
 "TERM_EVEN_ABBR" = "E";
@@ -89,6 +91,7 @@
 "TERM_FRONT" = "front";
 "TERM_GAIN" = "gain";
 "TERM_GENDER" = "gender";
+"TERM_GIRL_PLURAL" = "girls";
 "TERM_GOLF" = "golf";
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "gross";
@@ -107,6 +110,7 @@
 "TERM_IRISH" = "Irish";
 "TERM_KEYBOARD" = "keyboard";
 "TERM_LEADERBOARD" = "leaderboard";
+"TERM_LEVEL" = "level";
 "TERM_LIMITED" = "limited";
 "TERM_LINK" = "link";
 "TERM_LOCATE" = "locate";
@@ -135,7 +139,7 @@
 "TERM_NINE" = "nine";
 "TERM_NINE_PLURAL" = "nines";
 "TERM_NINEPT" = "9-Point";
-"TERM_NO" = "no";
+"TERM_NO" = "no";	//	Consider "FORMAT_NO_%@" for no players, no scores, etc.
 "TERM_NONE" = "none";
 "TERM_NORMAL" = "normal";
 "TERM_NOT_AVAILABLE_ABBR" = "n/a";
@@ -198,6 +202,7 @@
 "TERM_SIDE" = "side";
 "TERM_SIDE_PLURAL" = "sides";
 "TERM_SIXPT" = "6-Point";
+"TERM_SKIN" = "skin";
 "TERM_SKIN_PLURAL" = "skins";
 "TERM_SLOPE" = "slope";
 "TERM_SORT" = "sort";
@@ -352,6 +357,7 @@
 "TITLE_ALWAYS_LIGHT" = "Always Light";
 "TITLE_AN_ERROR_OCCURRED" = "An error occurred";
 "TITLE_ANIMALS" = "Animals";
+"TITLE_APPLY_BUTTON" = "Apply";
 "TITLE_ARNIE" = "Arnie";
 "TITLE_ASPHALT" = "Asphalt";
 "TITLE_ASSIGN_ROUND_TO" = "Assign a round to";
@@ -398,10 +404,12 @@
 "TITLE_DARK" = "Dark";
 "TITLE_DATA_PROTECTION" = "Data Protection";
 "TITLE_DECERTIFY" = "Decertify";
+"TITLE_DEFAULT_TEAM_MATCH_STYLE" = "Team Score";
 "TITLE_DELETE_ALL" = "Delete All";
 "TITLE_DELETE_CONTESTANT" = "Delete Contestant";
 "TITLE_DESIGNATE_CAPTAIN" = "Designate as Captain";
 "TITLE_DIFFERENTIAL_TYPE" = "Differential type";
+"TITLE_DISCARD" = "Discard";
 "TITLE_DONE" = "Done";
 "TITLE_DOWNLOADING_COURSES" = "Downloading Courses";
 "TITLE_DOWNLOADING_EAGLE_USERS_GUIDE"= "Downloading the Mulligan’s Eagle™ Users’ Guide…";
@@ -517,6 +525,11 @@
 "TITLE_IGNORE_WORST" = "Ignore worst";
 "TITLE_INCOMPLETE_HOLE" = "Incomplete Hole";
 "TITLE_INSTALL" = "Install";
+"TITLE_INSTALL_JUNIOR_PAR" = "Install Junior Par";
+"TITLE_JUNIOR_PAR" = "Junior Par";
+"TITLE_JUNIOR_PAR_ADVANCED" = "Advanced - Playing handicap under 25";
+"TITLE_JUNIOR_PAR_BEGINNER" = "Beginner - Playing handicap over 40";
+"TITLE_JUNIOR_PAR_INTERMEDIATE" = "Intermediate - Playing handicap 25 to 40";
 "TITLE_KEEP" = "Keep";
 "TITLE_KEEP_SCORES" = "Keep the Scores";
 "TITLE_KEEPING_SCORE" = "Keeping score since 1995";
@@ -532,6 +545,9 @@
 "TITLE_LOCK_EVENTS" = "Lock Events";
 "TITLE_LOCK_PLAYERS" = "Lock Players";
 "TITLE_LOCK_SCORECARDS" = "Lock Scorecards";
+"TITLE_LOW_BALL_HIGH_BALL" = "Low Ball - High Ball";
+"TITLE_LOW_BALL_LOW_TOTAL" = "Low Ball - Low Total";
+"TITLE_LOW_BALL_SECOND_BALL" = "Low Ball - Second Ball";
 "TITLE_LOW_INDEX" = "Low Handicap Index";
 "TITLE_MASS_CONVERT_%@" = "Change Players' Handicapping Method - %@";
 "TITLE_MATCH_PLAY" = "Match Play";
@@ -601,6 +617,7 @@
 "TITLE_SELECT_ALL" = "Select All";
 "TITLE_SELECTED_HOLES" = "Selected Holes";
 "TITLE_SERIAL_NUMBER" = "Serial number";
+"TITLE_SET_BUTTON" = "Set";
 "TITLE_SEVE" = "Seve";
 "TITLE_SHOW_ALLOWANCE_DOTS" = "Show Handicap Allowance Dots";
 "TITLE_SHOW_ME" = "Show Me";
@@ -610,6 +627,7 @@
 "TITLE_SHOW_SCORES_AT_STARTUP" = "Show scores at startup";
 "TITLE_SHOW_TABLES" = "Show Tables";
 "TITLE_SKILL_ADJUSTMENT" = "Skill Adjustment";
+"TITLE_SKINS_REQUIRE" = "Skins require";
 "TITLE_SKIP" = "Skip";
 "TITLE_SNAKE" = "Snake";
 "TITLE_SPECIAL_PREFERENCES" = "Special Settings";
@@ -624,6 +642,7 @@
 "TITLE_STOBBIE" = "Stobbie";
 "TITLE_SWING_GAME" = "Swing Game";
 "TITLE_SYSTEM" = "System";
+"TITLE_TEAM_MATCHES" = "Team Matches";
 "TITLE_TECHNICAL_SUPPORT" = "Technical Support";
 "TITLE_THE_SCOREBOARD" = "The Scoreboard";
 "TITLE_THE_SCORING_MACHINE" = "The Scoring Machine";
@@ -647,17 +666,7 @@
 "TITLE_2_DOWN" = "2-down";
 "TITLE_3_BY_6" = "3 × 6";
 
-"TITLE_TEAM_MATCHES" = "Team Matches";
-"TITLE_DEFAULT_TEAM_MATCH_STYLE" = "Team Score";
-"TITLE_LOW_BALL_LOW_TOTAL" = "Low Ball - Low Total";
-"TITLE_LOW_BALL_HIGH_BALL" = "Low Ball - High Ball";
-"TITLE_LOW_BALL_SECOND_BALL" = "Low Ball - Second Ball";
-"DESCRIPTION_DEFAULT_TEAM_MATCH_STYLE_%@" = "%@ using team scores ¹";
-"DESCRIPTION_LOW_BALL_LOW_TOTAL" = "1 point - low teammate, 1 pt. - low team total";
-"DESCRIPTION_LOW_BALL_HIGH_BALL" = "1 point - low teammate, 1 pt. - vs. high teammates";
-"DESCRIPTION_LOW_BALL_SECOND_BALL" = "1 point - low teammate, 1 pt. - vs. 2nd teammates";
-"DESCRIPTION_TEAM_MATCH_STYLES" = "¹ Available for all forms of team play - always used for team-only play and points scoring.";
-
+"DESCRIPTION_3_BY_6" = "Holes 1-6, 7-11 and 12-18";
 "DESCRIPTION_ANIMALS" = "On-course card game for foursomes";
 "DESCRIPTION_ARNIE" = "Par or better without visiting fairway";
 "DESCRIPTION_ASPHALT" = "Par or better from a cart path";
@@ -667,20 +676,37 @@
 "DESCRIPTION_BINGO_BANGO_BONGO" = "First to green, closest to hole, first holed";
 "DESCRIPTION_BONGO" = "Away putting - first holed";
 "DESCRIPTION_CHIPINSKI" = "Chip-in";
+"DESCRIPTION_CLOSE_OUT" = "(when no bets or presses are in effect)";
 "DESCRIPTION_COVER" = "Match or better opponent's sub-par score";
+"DESCRIPTION_DEFAULT_TEAM_MATCH_STYLE_%@" = "%@ using team scores ¹";
+"DESCRIPTION_EXTENDED_SCORING" = "Extended Scoring includes “X” scores, Maximum (stroke-controlled) scores, Competition/Tournament scores, fairways and greenside bunkers hit.";
 "DESCRIPTION_FAIRWAY" = "Fairway reached with initial tee shot";
+"DESCRIPTION_FRONT_BACK" = "Front side and Back side";
 "DESCRIPTION_GORILLA" = "Closest to pin in regulation on par 5";
 "DESCRIPTION_GREENIE" = "Closest to pin in regulation on par 3 - voided with 3-putt";
 "DESCRIPTION_GURGLIE" = "Par or better from, or skipping off, water";
 "DESCRIPTION_HOGAN" = "Hit fairway, green in regulation, 2-putt par";
 "DESCRIPTION_HOLLYWOOD" = "6-Hole matches (Sixes, Round-Robin)";
+"DESCRIPTION_LOW_BALL_LOW_TOTAL" = "1 point - low teammate, 1 pt. - low team total";
+"DESCRIPTION_LOW_BALL_HIGH_BALL" = "1 point - low teammate, 1 pt. - vs. high teammates";
+"DESCRIPTION_LOW_BALL_SECOND_BALL" = "1 point - low teammate, 1 pt. - vs. 2nd teammates";
+"DESCRIPTION_MATCH_PLAY" = "Head-to-head competition scored by holes won";
+"DESCRIPTION_NASSAU" = "Front side, Back side and 18 holes";
 "DESCRIPTION_NO_TRASH" = "No Trash/Dots category specified";
 "DESCRIPTION_POLIE" = "1-putt longer than flagstick length";
+"DESCRIPTION_PRINTING_PRIVACY_%@" = "Event registration categories identified as “%@” are generally not printed or displayed.";
 "DESCRIPTION_SANDIE" = "Up and down from a greenside bunker";
 "DESCRIPTION_SEVE" = "Birdie or better without hitting fairway or green";
+"DESCRIPTION_SKINS_ALL_SCORES" = "Any valid hole score is eligible for skins";
+"DESCRIPTION_SKINS_BIRDIE_OR_BETTER" = "Only scores below par are eligible for skins";
+"DESCRIPTION_SKINS_BOGEY_OR_BETTER" = "Only scores of bogey or better are eligible for skins";
+"DESCRIPTION_SKINS_PAR_OR_BETTER" = "Only scores of par or better are eligible for skins";
 "DESCRIPTION_SNAKE" = "3-putt, last 3-putt or shortest 3-putt";
 "DESCRIPTION_STOBBIE" = "On in regulation within length of the pin";
 "DESCRIPTION_SWING_GAME" = "Rotating team of 2 vs. 3 or more";
+"DESCRIPTION_TEAM_MATCH_STYLES" = "¹ Available for all forms of team play - always used for team-only play and points scoring.";
+"DESCRIPTION_THEME_APPEARANCE" = "Light - Eagle always uses classic Aqua appearance\nDark - Eagle always uses Dark Mode appearance\nSystem - Eagle uses the appearance selected in System Preferences";
+"DESCRIPTION_THEME_PRE_MOJAVE" = "Prior to macOS 10.14 Mojave, Eagle uses the system's standard Aqua appearance style.";
 "DESCRIPTION_TRASH" = "Points or “dots” awarded for achievements";
 "DESCRIPTION_WICKERS" = "Trash/Dots value increases with each occurrance";
 "DESCRIPTION_WOLF" = "Player, optional partner vs. rest at each hole";
@@ -741,8 +767,6 @@
 "UNDO_GRAPHING_SECONDARY_COLOR_CHANGE" = "Graphing Secondary Color Change";
 
 "MENU_ALPHABETICALLY" = "alphabetically";
-"MENU_LOOSELY_ALPHABETIC" = "loosely alphabetic";
-"MENU_STRICTLY_ALPHABETIC" = "strictly alphabetic";
 "MENU_BY_SKILL" = "by skill (handicap)";
 "MENU_BY_PLAYER_POSITION" = "by player position (A, B, C, …)";
 "MENU_HIGHLIGHT_RED_LINE" = "Red line after 20th (MGP style)";
@@ -760,6 +784,12 @@
 "MENU_HDCP_ADJUSTED_RATING" = "Rating Adjusted";
 "MENU_HDCP_ADJUSTED_FULL" = "Fully Adjusted";
 "MENU_HDCP_ADJUSTED_SLOPE" = "Slope Adjusted";
+"MENU_LOOSELY_ALPHABETIC" = "loosely alphabetic";
+"MENU_SKINS_ALL_SCORES" = "any valid score";
+"MENU_SKINS_BOGEY_OR_BETTER" = "bogey or better";
+"MENU_SKINS_PAR_OR_BETTER" = "par or better";
+"MENU_SKINS_UNDER_PAR" = "birdie or better";
+"MENU_STRICTLY_ALPHABETIC" = "strictly alphabetic";
 
 "ALERT_NO_GOLFERS_COURSES_FOR_EVENT" = "No Players or Courses are available yet to create an Event.";
 "ALERT_NO_COURSES_FOR_EVENT" = "No Courses are available yet to create an Event.";
@@ -771,7 +801,7 @@
 "ALERT_USERS_GUIDE_ERROR" = "Unable to download Users’ Guide";
 "ALERT_USERS_GUIDE_ERROR_INFO" = "Make sure you have an internet connection and try again later.";
 
-"BLURB_DUPLICATE_HOLE_HANDICAPS" = "On courses with more than one nine, don’t allow hole handicaps that duplicate any of the hole handicaps on another nine unless the nines use 9-hole handicaps).";
+"BLURB_DUPLICATE_HOLE_HANDICAPS" = "On courses with more than one nine, don’t allow hole handicaps that duplicate any of the hole handicaps on another nine (unless the nines use 9-hole handicaps).";
 "BLURB_MISSING_RATINGS_NOTICE" = "Note: Missing ratings may prevent the display of some Course Handicap Tables. Consider adding 9-hole ratings to the definition of this course.";
 "BLURB_REMOTE_DROPBOX" = "Scores can be imported or updated from scoring data files synchronized to the “Dropbox/Apps/Mulligan Scoring” folder on this computer.  Choose “Scores from Dropbox…” in the File / Import menu to review incoming scores.";
 "BLURB_REMOTE_ICLOUD" = "Scores can be imported or updated from scoring data files sent to iCloud by remote devices logged in using the same Apple ID used for iCloud on this computer.  Choose “Scores from iCloud…” in the File/Import menu to review incoming scores.";
@@ -780,15 +810,6 @@
 "BLURB_ALLOW_REFERENCE_TEES" = "When adjusting Playing Handicaps for differences in Course Ratings, allow specification of “reference” tees to be used for calculation of adjustments for men and/or women.";
 "BLURB_REVIEW_HANDICAP_RECORDS" = "Examine previously calculated handicap records in tabular form with capabilities to remove selected data.";
 
-"DESCRIPTION_3_BY_6" = "Holes 1-6, 7-11 and 12-18";
-"DESCRIPTION_CLOSE_OUT" = "(when no bets or presses are in effect)";
-"DESCRIPTION_EXTENDED_SCORING" = "Extended Scoring includes “X” scores, Maximum (stroke-controlled) scores, Competition/Tournament scores, fairways and greenside bunkers hit.";
-"DESCRIPTION_FRONT_BACK" = "Front side and Back side";
-"DESCRIPTION_MATCH_PLAY" = "Head-to-head competition scored by holes won";
-"DESCRIPTION_NASSAU" = "Front side, Back side and 18 holes";
-"DESCRIPTION_PRINTING_PRIVACY_%@" = "Event registration categories identified as “%@” are generally not printed or displayed.";
-"DESCRIPTION_THEME_APPEARANCE" = "Light - Eagle always uses classic Aqua appearance\nDark - Eagle always uses Dark Mode appearance\nSystem - Eagle uses the appearance selected in System Preferences";
-"DESCRIPTION_THEME_PRE_MOJAVE" = "Prior to macOS 10.14 Mojave, Eagle uses the system's standard Aqua appearance style.";
 "INFO_AUTHORITY_%@_NOT_CERTIFIED" = "The %@ handicapping method is not currently certified for use.";
 "INFO_DECERTIFY_AUTHORITY_%@" = "De-authorize the %@ as a handicapping method certified for use in Mulligan’s Eagle.";
 "INFO_EAGLE_USERS_GUIDE_DOWNLOAD" = "the most recent version of the Users‘ Guide from Mulligan Software‘s web site";
@@ -796,9 +817,10 @@
 "INFO_ENFORCE_EXTINCT_HANDICAPS" = "Checked: Handicap authority requirements obeyed even if it hurts.\nUnchecked: Otherwise.";
 "INFO_USGA_EXTINCTION_WARNING" = "The USGA Handicap System has been superseded and will not be supported or available in future versions of Mulligan’s Eagle.  We recommend you choose another handicapping method.";
 
-"NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "The Personal Handicapping settings above are not changed with a “Factory Settings” reset.";
 "NOTICE_CANCEL_TO_UNDO_CHANGES" = "Cancel to undo changes.";
 "NOTICE_DISCONTINUED_HANDICAP_METHOD" = "This handicapping method is no longer in effect.  Please select another.";
+"NOTICE_JUNIOR_PAR_REQUIREMENTS" = "Junior Par is not available when hole lengths are missing.";
+"NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "The Personal Handicapping settings above are not changed with a “Factory Settings” reset.";
 
 //	USGA Data Services
 "NOTICE_USGA_CANCELLED" = "USGA Data Services connection cancelled";
