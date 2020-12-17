@@ -24,6 +24,8 @@
 "TERM_AUTHORIZATION" = "Autorisierung";
 "TERM_AVERAGE" = "mittlere";
 "TERM_BACK" = "letzte";		//	As in "back nine" - letzte (last) ?
+"TERM_BACKWARD" = "rückwärts";
+"TERM_BEGINNING" = "anfang";
 "TERM_BEST" = "beste";
 "TERM_BESTBALL" = "Best-Ball";
 "TERM_BET" = "Wette";
@@ -69,6 +71,7 @@
 "TERM_DOWNLOAD" = "download";
 "TERM_DUPLICATE" = "duplizieren";
 "TERM_EFFECTIVE" = "des Inkrafttretens";	//	an "effective" date
+"TERM_ENDING" = "ende";
 "TERM_ENTER" = "Nummer eingeben";
 "TERM_EVEN" = "eben";
 "TERM_EVEN_ABBR" = "E";
@@ -84,6 +87,7 @@
 "TERM_FLIGHT" = "Pulk";
 "TERM_FLIGHT_PLURAL" = "Pulke";
 "TERM_FOR" = "für";	// Net FOR Best-Ball
+"TERM_FORWARD" = "vorwärts";
 "TERM_FOR_ABOUT" = "über";
 "TERM_FOURBALL" = "Vier-Ball";
 "TERM_FOURSOMES" = "Viererspiel";
@@ -95,6 +99,7 @@
 "TERM_GOLF" = "Golf";
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "brutto";
+"TERM_GUEST" = "Gast";
 "TERM_HANDICAP" = "Handicap";
 "TERM_HANDICAP_PLURAL" = "Handicaps";
 "TERM_HANDICAP_ABBR" = "hdcp";
@@ -104,6 +109,7 @@
 "TERM_HOLE_PLURAL" = "Löcher";
 "TERM_IGNORE" = "ignorieren";
 "TERM_IMPORT" = "importieren";
+"TERM_IMPROVEMENT" = "Verbesserung";
 "TERM_INDICATE" = "zeigen";
 "TERM_INDIVIDUAL" = "individuell";	//	The adjective ("individual gross")
 "TERM_INTERNATIONAL" = "International";
@@ -124,9 +130,12 @@
 "TERM_MALE_PLAYER_PLURAL" = "Herren";
 "TERM_MATCH" = "Match";
 "TERM_MATCH_PLURAL" = "Matches";
+"TERM_MAXIMUM" = "maximum";
+"TERM_MAXIMUM_ABBR" = "max.";
 "TERM_MEASURED" = "gemessen";
 "TERM_MEDAL" = "medaille";
 "TERM_MEDALMATCH" = "Match Medaille";
+"TERM_MEMBER" = "Mitglied";
 "TERM_METER_PLURAL" = "Meter";
 "TERM_METER_PLURAL_ABBR" = "Mtr.";
 "TERM_METHOD" = "Methode";
@@ -197,7 +206,7 @@
 "TERM_SCRAMBLE" = "Gerangel";
 "TERM_SECOND" = "Sekunde";
 "TERM_SECOND_PLURAL" = "Sekunden";
-"TERM_SELECTED" = "ausgewält";
+"TERM_SELECTED" = "ausgewählt";
 "TERM_SETTINGS" = "Einstellungen";
 "TERM_SIDE" = "Seite";
 "TERM_SIDE_PLURAL" = "Seiten";
@@ -361,8 +370,8 @@
 "TITLE_ARNIE" = "Arnie";
 "TITLE_ASPHALT" = "Asphalt";
 "TITLE_ASSIGN_ROUND_TO" = "Zuweisen eine Runde";
-"TITLE_ASSIGN_TEES" = "Zuweisen Start-Tees";
-"TITLE_ASSIGN_TIMES" = "Zuweisen Anfangszeit";
+"TITLE_ASSIGN_TEES" = "Startabschläge zuweisen";
+"TITLE_ASSIGN_TIMES" = "Abschlagzeiten zuweisen";
 "TITLE_AUTHORITY_OR_METHOD" = "Behörde / System";
 "TITLE_AUTOMATIC_PRESSES" = "Automatische Pressen";
 "TITLE_BACK_NINE" = "Letzteneun";
@@ -378,6 +387,8 @@
 "TITLE_BOGEYS_OR_WORSE" = "Bogeys & schlimmer";
 "TITLE_BONGO" = "Bongo";
 "TITLE_CANCEL" = "Abbrechen";
+"TITLE_CART_ASSIGNMENT_CARDS" = "Wagenzuweisungsplakate";
+"TITLE_CART_NUMBER_ABBR" = "Wagen nr.";
 "TITLE_CBA" = "Computed Buffer Adjustment";
 "TITLE_CBA_ABBR" = "CBA";
 "TITLE_CCR" = "Course Rating berechnet";
@@ -490,6 +501,7 @@
 "TITLE_HANDICAP_GRADE" = "Handicap Klasse";
 "TITLE_HANDICAP_GRADE_ABBR" = "Klasse";
 "TITLE_HANDICAP_ID" = "Handicap ID";
+"TITLE_HANDICAP_IMPROVEMENT_REPORT" = "Bericht zur Verbesserung des Handicaps";
 "TITLE_HANDICAP_INDEX" = "Handicap Index";
 "TITLE_HANDICAP_INDEX_ABBR" = "Index";
 "TITLE_HANDICAP_INDEX_PLURAL" = "Handicap Indizes";
@@ -523,6 +535,8 @@
 "TITLE_HOME_CLUB" = "Heimverein";
 "TITLE_IGNORE_BEST" = "Ignoriere besten";
 "TITLE_IGNORE_WORST" = "Ignoriere schlimmsten";
+"TITLE_IMPROVEMENT_REPORT" = "Verbesserungsbericht";
+"TITLE_IMPROVEMENT_REPORT_COLUMNS" = "Spieler\tAnfangsindex\tEndindex\tVerbesserung\tRang\tRunden";
 "TITLE_INCOMPLETE_HOLE" = "Unvollständiges Loch";
 "TITLE_INSTALL" = "Installieren";
 "TITLE_INSTALL_JUNIOR_PAR" = "Installieren Sie Junior-Par";
@@ -633,6 +647,9 @@
 "TITLE_SPECIAL_PREFERENCES" = "Spezielle Einstellungen";
 "TITLE_SSS" = "Scratch Score genormt";
 "TITLE_SSS_ABBR" = "SSS";
+"TITLE_STARTERS_LIST" = "Starterliste";
+"TITLE_STARTERS_LIST_COLUMNS" = "Spieler\tMitglied\tTee\tAbschlag\tZeit\tWagen nr.";
+"TITLE_STARTING_TEE_ABBR" = "Abschlag";
 "TITLE_STATUS_A" = "Status A";
 "TITLE_STATUS_B" = "Status B";
 "TITLE_STATUS_C" = "Status C";
@@ -644,6 +661,8 @@
 "TITLE_SYSTEM" = "System";
 "TITLE_TEAM_MATCHES" = "Mannschaftsspiele";
 "TITLE_TECHNICAL_SUPPORT" = "Technische Unterstützung";
+"TITLE_TEE_TIME_ABBR" = "Zeit";
+"TITLE_THANK_YOU" = "Danke";
 "TITLE_THE_SCOREBOARD" = "Die Anzeigetafel";
 "TITLE_THE_SCORING_MACHINE" = "Das Wertung-Apparat";
 "TITLE_THE_SCORING_MACHINE_TM" = "Das Wertung-Apparat™";
@@ -665,6 +684,22 @@
 "TITLE_1_DOWN_LAST" = "1-down letztes Loch";
 "TITLE_2_DOWN" = "2-down";
 "TITLE_3_BY_6" = "3 × 6";
+
+"TERM_CART" = "wagen";
+"TITLE_ASSIGN_BUTTON" = "Bewirken";
+"TITLE_ASSIGNED_TEE_TIMES" = "Zugewiesene Abschlagzeiten";
+"TITLE_CART_ASSIGNMENT_CARDS" = "Golfwagen Zuordnungskarten";
+"TITLE_CART_ASSIGNMENT_PLANNER" = "Golfwagen Einsatzplaner";
+"TITLE_CART_NUMBER" = "Golfwagen Nummer";
+"TITLE_CARTS_PLANNER_COLUMNS" = "Abschlag\tZeit\tWagen\tSpieler\tTee\tNotizen";
+"TITLE_FIRST_TEE_TIME" = "Erste Abschlagzeit";
+"TITLE_SHOTGUN_START" = "‘Schrotflinte’ Start";
+"TITLE_SHOW_CARDS" = "Zeige Karten";
+"TITLE_STARTING_TEE" = "Abflug Abschlag";
+"TITLE_TEE_TIME" = "Abschlagzeit";
+"TITLE_TIME_CART_PLAYER" = "Zeit/Wagen/Spieler";
+"TITLE_TIMES_OR_TEES" = "Zeiten oder Abschläge";
+"INSTRUCTION_DRAG_TO_REORDER" = "Ziehen zum Neuanordnen";
 
 "DESCRIPTION_3_BY_6" = "Löcher 1-6, 7-11 und 12-18";
 "DESCRIPTION_ANIMALS" = "Kartenspiel auf dem Golfplatz für Vierer";
@@ -730,6 +765,7 @@
 "FORMAT_CURRENT_%@_TITLE_PLURAL" = "aktuellen %@";
 "FORMAT_DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Bestimme Dein %@ auf der rechten Seite indem Sie die Zeile finden, in der Ihre %@ auf der linken Seite steht.";
 "FORMAT_DISCONTINUED_HANDICAP_METHOD_%@_PLAYER_%@" = "Das %@ ist nicht mehr verfügbar.  Wenn Sie eine andere Methode für %@ auswählen und die Änderung speichern, können Sie die vorherige Einstellung nicht wiederherstellen.";
+"FORMAT_FOR_TITLE_%@" = "Für %@…";	//	For selected players… or For Al Czervik…
 "FORMAT_%@_IS_DEFAULT_TEAM_CAPTAIN" = "%@ wird per Handicap zum Mannschaftskapitän ernannt.";
 "FORMAT_%@_IS_DESIGNATED_TEAM_CAPTAIN" = "%@ wird zum Mannschaftskapitän ernannt.";
 "FORMAT_%@_IS_DEFAULT_SCORECARD_CAPTAIN" = "%@ wird per Handicap zum Kapitän der Scorekarte ernannt.";
@@ -743,6 +779,9 @@
 "FORMAT_NUMBER_%ld_ABBR" = "Nr. %ld";
 "FORMAT_OPEN_%@" = "Öffne %@";
 "FORMAT_OPEN_3_%@" = "Öffne 3 %@";
+"FORMAT_SELECTED_ITEM_%@_ONE" = "1 %@ ausgewählt";
+"FORMAT_SELECTED_ITEM_%@_NONE" = "keine %@ ausgewählt";
+"FORMAT_SELECTED_ITEMS_%1$@_COUNT_%2$d" = "%2$d %1$@ ausgewählt";
 "FORMAT_THROUGH_HOLE_%@" = "bis %@";
 "FORMAT_TO_PROMPT_%@" = "in: %@";	//	Convert to: WHS
 "FORMAT_TOTAL_POINTS_VS_QUOTA_%d" = "Gesamtpunkte v. %d Kontingent";
