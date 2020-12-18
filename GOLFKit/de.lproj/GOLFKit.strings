@@ -37,6 +37,8 @@
 "TERM_CALCULATE" = "berechnung";
 "TERM_CALCULATES" = "berechnet";
 "TERM_CALLAWAY" = "Callaway";
+"TERM_CART" = "Wagen";
+"TERM_CART_PLURAL" = "Wagen";
 "TERM_CHACHA" = "Cha-Cha";
 "TERM_CHACHACHA" = "Cha-Cha-Cha";
 "TERM_CHAPMAN" = "Chapman";
@@ -92,6 +94,9 @@
 "TERM_FOURBALL" = "Vier-Ball";
 "TERM_FOURSOMES" = "Viererspiel";
 "TERM_FROM" = "von";
+"TERM_FROM_FIRST_AND_TENTH_TEE" = "vom 1. und 10. Abschlag";
+"TERM_FROM_FIRST_TEE" = "vom 1. Abschlag";
+"TERM_FROM_TEE_NO" = "vom Abschlag nr.";
 "TERM_FRONT" = "ersten";
 "TERM_GAIN" = "Gewinn";
 "TERM_GENDER" = "Geschlecht";
@@ -139,6 +144,7 @@
 "TERM_METER_PLURAL" = "Meter";
 "TERM_METER_PLURAL_ABBR" = "Mtr.";
 "TERM_METHOD" = "Methode";
+"TERM_MINUTES_APART" = "Minuten auseinander";
 "TERM_MODIFIER" = "Modifikator";
 "TERM_MORE" = "Mehr";
 "TERM_MOVE" = "bewegen";
@@ -228,8 +234,11 @@
 "TERM_TEAMMATE_PLURAL" = "Teamkollegen";
 "TERM_TEE" = "Tee";
 "TERM_TEE_PLURAL" = "Tees";
+"TERM_TEE_TIME" = "Abschlagzeit";
+"TERM_TEE_TIME_PLURAL" = "Abschlagzeiten";
 "TERM_THEME" = "Thema";
 "TERM_THROUGH" = "während";
+"TERM_THROUGH_TEE_NO" = "bis nr.";	//	from hole nr. N through nr. N
 "TERM_TIE" = "Remis";
 "TERM_TIE_ABBR" = "T";
 "TERM_TIEBREAKER" = "Tiebreaker";
@@ -369,9 +378,11 @@
 "TITLE_APPLY_BUTTON" = "Anwenden";
 "TITLE_ARNIE" = "Arnie";
 "TITLE_ASPHALT" = "Asphalt";
+"TITLE_ASSIGN_BUTTON" = "Bewirken";
 "TITLE_ASSIGN_ROUND_TO" = "Zuweisen eine Runde";
 "TITLE_ASSIGN_TEES" = "Startabschläge zuweisen";
 "TITLE_ASSIGN_TIMES" = "Abschlagzeiten zuweisen";
+"TITLE_ASSIGNED_TEE_TIMES" = "Zugewiesene Abschlagzeiten";
 "TITLE_AUTHORITY_OR_METHOD" = "Behörde / System";
 "TITLE_AUTOMATIC_PRESSES" = "Automatische Pressen";
 "TITLE_BACK_NINE" = "Letzteneun";
@@ -388,7 +399,10 @@
 "TITLE_BONGO" = "Bongo";
 "TITLE_CANCEL" = "Abbrechen";
 "TITLE_CART_ASSIGNMENT_CARDS" = "Wagenzuweisungsplakate";
+"TITLE_CART_ASSIGNMENT_PLANNER" = "Golfwagen Einsatzplaner";
+"TITLE_CART_NUMBER" = "Golfwagen Nummer";
 "TITLE_CART_NUMBER_ABBR" = "Wagen nr.";
+"TITLE_CARTS_PLANNER_COLUMNS" = "Abschlag\tZeit\tWagen\tSpieler\tTee\tNotizen";
 "TITLE_CBA" = "Computed Buffer Adjustment";
 "TITLE_CBA_ABBR" = "CBA";
 "TITLE_CCR" = "Course Rating berechnet";
@@ -448,6 +462,7 @@
 "TITLE_FAIRWAY_HIT" = "Fairway erreicht";
 "TITLE_FAVORITE_PLAYER" = "Lieblings Spieler";
 "TITLE_FIRST_HOLE" = "erstes Loch";
+"TITLE_FIRST_TEE_TIME" = "Erste Abschlagzeit";
 "TITLE_FLAG_TOURNAMENT_SCORES" = "Bestimmen Turnier-Scores";
 "TITLE_FROM_MULLIGAN_SOFTWARE" = "von Mulligan Software";
 "TITLE_FRONT_BACK" = "Vorne und Hinten";
@@ -633,7 +648,9 @@
 "TITLE_SERIAL_NUMBER" = "Seriennummer";
 "TITLE_SET_BUTTON" = "Festlegen";
 "TITLE_SEVE" = "Seve";
+"TITLE_SHOTGUN_START" = "‘Schrotflinte’ Start";
 "TITLE_SHOW_ALLOWANCE_DOTS" = "Punkte für Handicap-Zustimmung anzeigen";
+"TITLE_SHOW_CARDS" = "Zeige Karten";
 "TITLE_SHOW_ME" = "Zeig es mir";
 "TITLE_SHOW_MEMBER_NUMBERS" = "Zeige Clubmitgliedsnummern auf Scorekarten";
 "TITLE_SHOW_REPORT" = "Bericht zeigen";
@@ -649,6 +666,7 @@
 "TITLE_SSS_ABBR" = "SSS";
 "TITLE_STARTERS_LIST" = "Starterliste";
 "TITLE_STARTERS_LIST_COLUMNS" = "Spieler\tMitglied\tTee\tAbschlag\tZeit\tWagen nr.";
+"TITLE_STARTING_TEE" = "Abflug Abschlag";
 "TITLE_STARTING_TEE_ABBR" = "Abschlag";
 "TITLE_STATUS_A" = "Status A";
 "TITLE_STATUS_B" = "Status B";
@@ -661,11 +679,14 @@
 "TITLE_SYSTEM" = "System";
 "TITLE_TEAM_MATCHES" = "Mannschaftsspiele";
 "TITLE_TECHNICAL_SUPPORT" = "Technische Unterstützung";
+"TITLE_TEE_TIME" = "Abschlagzeit";
 "TITLE_TEE_TIME_ABBR" = "Zeit";
 "TITLE_THANK_YOU" = "Danke";
 "TITLE_THE_SCOREBOARD" = "Die Anzeigetafel";
 "TITLE_THE_SCORING_MACHINE" = "Das Wertung-Apparat";
 "TITLE_THE_SCORING_MACHINE_TM" = "Das Wertung-Apparat™";
+"TITLE_TIME_CART_PLAYER" = "Zeit/Wagen/Spieler";
+"TITLE_TIMES_OR_TEES" = "Zeiten oder Abschläge";
 "TITLE_TOTAL_POINTS" = "Gesamtpunktzahl";
 "TITLE_TRASH" = "Trash, Reste, Punkte";
 "TITLE_UNLINK_DROPBOX" = "Link Dropbox";
@@ -684,22 +705,6 @@
 "TITLE_1_DOWN_LAST" = "1-down letztes Loch";
 "TITLE_2_DOWN" = "2-down";
 "TITLE_3_BY_6" = "3 × 6";
-
-"TERM_CART" = "wagen";
-"TITLE_ASSIGN_BUTTON" = "Bewirken";
-"TITLE_ASSIGNED_TEE_TIMES" = "Zugewiesene Abschlagzeiten";
-"TITLE_CART_ASSIGNMENT_CARDS" = "Golfwagen Zuordnungskarten";
-"TITLE_CART_ASSIGNMENT_PLANNER" = "Golfwagen Einsatzplaner";
-"TITLE_CART_NUMBER" = "Golfwagen Nummer";
-"TITLE_CARTS_PLANNER_COLUMNS" = "Abschlag\tZeit\tWagen\tSpieler\tTee\tNotizen";
-"TITLE_FIRST_TEE_TIME" = "Erste Abschlagzeit";
-"TITLE_SHOTGUN_START" = "‘Schrotflinte’ Start";
-"TITLE_SHOW_CARDS" = "Zeige Karten";
-"TITLE_STARTING_TEE" = "Abflug Abschlag";
-"TITLE_TEE_TIME" = "Abschlagzeit";
-"TITLE_TIME_CART_PLAYER" = "Zeit/Wagen/Spieler";
-"TITLE_TIMES_OR_TEES" = "Zeiten oder Abschläge";
-"INSTRUCTION_DRAG_TO_REORDER" = "Ziehen zum Neuanordnen";
 
 "DESCRIPTION_3_BY_6" = "Löcher 1-6, 7-11 und 12-18";
 "DESCRIPTION_ANIMALS" = "Kartenspiel auf dem Golfplatz für Vierer";
@@ -756,6 +761,8 @@
 "FORMAT_ASSIGN_%ld_ROUNDS_TO" = "%ld Runden zuweisen an";
 "FORMAT_BEST_%d_ROUNDS" = "besten %d Golfrunden";
 "FORMAT_BET_HOLES_%ld_%ld" = "Löcher %ld - %ld";
+"FORMAT_CART_NO_%@" = "Wagen nr. %@";
+"FORMAT_CARTS_PLAYER_%@_SHARES_SCORECARD_%@" = "%@ teilt die Scorekarte „%@“";
 "FORMAT_CLICKORTAP_%@_TO_SELECT" = "%@ um auszuwählen…";
 "FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST" = "%@ Sie auf die Nummer, un sie anzupassen";
 "FORMAT_CLICKORTAP_%@_NUMBER_%@_TO_ADJUST" = "%@ Sie auf die Nummer (%@), un sie anzupassen"; 
@@ -765,6 +772,8 @@
 "FORMAT_CURRENT_%@_TITLE_PLURAL" = "aktuellen %@";
 "FORMAT_DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Bestimme Dein %@ auf der rechten Seite indem Sie die Zeile finden, in der Ihre %@ auf der linken Seite steht.";
 "FORMAT_DISCONTINUED_HANDICAP_METHOD_%@_PLAYER_%@" = "Das %@ ist nicht mehr verfügbar.  Wenn Sie eine andere Methode für %@ auswählen und die Änderung speichern, können Sie die vorherige Einstellung nicht wiederherstellen.";
+"FORMAT_EVENT_HAS_TEE_%@_WARNING" = "Warnung: Veranstaltung wird mit einem Startabschlag konfiguriert (%@).";
+"FORMAT_EVENT_HAS_TIME_%@_WARNING" = "Warnung: Veranstaltung wird mit einer Abschlagzeit konfiguriert (%@).";
 "FORMAT_FOR_TITLE_%@" = "Für %@…";	//	For selected players… or For Al Czervik…
 "FORMAT_%@_IS_DEFAULT_TEAM_CAPTAIN" = "%@ wird per Handicap zum Mannschaftskapitän ernannt.";
 "FORMAT_%@_IS_DESIGNATED_TEAM_CAPTAIN" = "%@ wird zum Mannschaftskapitän ernannt.";
@@ -782,6 +791,8 @@
 "FORMAT_SELECTED_ITEM_%@_ONE" = "1 %@ ausgewählt";
 "FORMAT_SELECTED_ITEM_%@_NONE" = "keine %@ ausgewählt";
 "FORMAT_SELECTED_ITEMS_%1$@_COUNT_%2$d" = "%2$d %1$@ ausgewählt";
+"FORMAT_SWAP_%@_HEADER" = "%@ tauschen…";
+"FORMAT_TEE_NO_%@" = "Abschlag nr. %@";
 "FORMAT_THROUGH_HOLE_%@" = "bis %@";
 "FORMAT_TO_PROMPT_%@" = "in: %@";	//	Convert to: WHS
 "FORMAT_TOTAL_POINTS_VS_QUOTA_%d" = "Gesamtpunkte v. %d Kontingent";
@@ -830,6 +841,8 @@
 "MENU_SKINS_UNDER_PAR" = "Birdie oder besser";
 "MENU_STRICTLY_ALPHABETIC" = "streng alphabetisch";
 
+"ALERT_CARTS_APPLY_MESSAGE" = "Sie haben Änderungen an Startzeiten, Startanschläge oder Wagenzuweisungen vorgeschlagen.";
+"ALERT_CARTS_APPLY_MESSAGE_EXTRA" = "Möchten Sie zurückgehen, um diese Änderungen auf Scorekarten anzuwenden, bevor Sie fortfahren?";
 "ALERT_NO_GOLFERS_COURSES_FOR_EVENT" = "Weder Spieler noch Golfplätze sind verfügbar, um eine Veranstaltung zu erstellen.";
 "ALERT_NO_COURSES_FOR_EVENT" = "Es sind noch keine Golfplätze verfügbar, um eine Veranstaltung zu erstellen.";
 "ALERT_NO_GOLFERS_FOR_EVENT" = "Es sind noch keine Spieler verfügbar, um eine Veranstaltung zu erstellen.";
@@ -857,6 +870,7 @@
 "INFO_USGA_EXTINCTION_WARNING" = "Das USGA Handicap System wurde abgelöst und wird in zukünftigen Versionen von Mulligan’s Eagle nicht unterstützt oder verfügbar sein.  Wir empfehlen Ihnen, eine andere Handicap-Methode zu wählen.";
 
 "NOTICE_CANCEL_TO_UNDO_CHANGES" = "Breche den Vorgang zu, um widderufen.";
+"NOTICE_CARTS_FULL_CART" = "Kein Platz im Wagen für einen anderen Spieler";
 "NOTICE_DISCONTINUED_HANDICAP_METHOD" = "Diese Handicap-Methode ist nicht mehr wirksam.  Bitte wählen Sie eine andere.";
 "NOTICE_JUNIOR_PAR_REQUIREMENTS" = "Junior-Par ist nicht verfügbar, wenn die Länge der Locher fehlt.";
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "Die persönlichen Handicaps Einstellungen oben sind nicht mit einem „Werkseinstellungen“ Reset geändert.";
@@ -1037,6 +1051,14 @@
 "TOOLTIP_18HOLE_BEGINNING_INDEX" = "Anfänglich Handicap";
 "TOOLTIP_18HOLE_BEGINNING_INDEX_%@" = "Anfänglich %@";
 "TOOLTIP_BEGINNING_INDEX_EXTRA" = "zur Verwendung, bis ein gültiger Handicap-Datensatz verfügbar ist.";
+"TOOLTIP_CARTS_APPLY_BUTTON" = "die Abschlagzeit und die Startabschlag Änderungen auf Scorekarten anwenden";
+"TOOLTIP_CARTS_APPLY_BUTTON_TRAINING" = "Klicken Sie hier, um die oben gezeigten Abschlag- un Zeitinformationen auf die Veranstaltung-Scorekarten anzuwenden.";
+"TOOLTIP_CARTS_ASSIGN_BUTTON" = "Abschlagzeiten oder Startabschläge zuweisen";
+"TOOLTIP_CARTS_ASSIGN_BUTTON_TRAINING" = "Klicken Sie hier, um Startzeiten oder ‘Schrotflinte’ Startabschlage Zuweisungen für des Feldes vorzunehmen.";
+"TOOLTIP_CARTS_OUTLINE_CART" = "Doppelklicken Sie, um eine Golfwagen Nummer einzugeben";
+"TOOLTIP_CARTS_OUTLINE_TIME" = "Doppelklicken Sie, um das Startabschlag oder die Startzeit anzupassen";
+"TOOLTIP_CARTS_SHOW_BUTTON" = "Wagenplakate zum Drucken anzeigen";
+"TOOLTIP_CARTS_SHOW_BUTTON_TRAINING" = "Klicken Sie hier, um ein Fenster mit allen druckfertigen Wagenplakaten zu öffnen.";
 "TOOLTIP_EXCLUDE_GUESTS" = "Aktivieren Sie das Kontrollkästchen, um „Gastspieler“ von Änderungen auszuschließen.";
 "TOOLTIP_HANDICAP_DELETE_RECORDS" = "Klicken Sie hier, um ausgewählte Handicap-Datensätze dauerhaft zu entfernen.";
 "TOOLTIP_LIMIT_SCORE" = "Das Loch-Score-Limit für einen festen WHS-Maximum-Score.";
@@ -1065,6 +1087,7 @@
 "TOOLTIP_TEAM_TOTAL_SCORE" = "Die Gesamtpunktzahl der Mannschaft";
 
 "INSTRUCTION_DRAG_ROUND_HERE" = "… oder zeihen Sie eine Runde hierher";
+"INSTRUCTION_DRAG_TO_REORDER" = "Ziehen zum Neuanordnen";
 
 //	Phrases & Special characters
 "ALL_SQUARE_CHARACTER" = "―";		//	\U2015 Special character	alt: "–" (En Dash) \U2013

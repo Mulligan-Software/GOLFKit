@@ -37,6 +37,8 @@
 "TERM_CALCULATE" = "calculate";
 "TERM_CALCULATES" = "calculates";
 "TERM_CALLAWAY" = "Callaway";
+"TERM_CART" = "cart";
+"TERM_CART_PLURAL" = "carts";
 "TERM_CHACHA" = "Cha-Cha";
 "TERM_CHACHACHA" = "Cha-Cha-Cha";
 "TERM_CHAPMAN" = "Chapman";
@@ -92,6 +94,9 @@
 "TERM_FOURBALL" = "Four-Ball";
 "TERM_FOURSOMES" = "Foursomes";
 "TERM_FROM" = "from";
+"TERM_FROM_FIRST_AND_TENTH_TEE" = "from 1st and 10th tee";
+"TERM_FROM_FIRST_TEE" = "from 1st tee";
+"TERM_FROM_TEE_NO" = "from tee no.";
 "TERM_FRONT" = "front";
 "TERM_GAIN" = "gain";
 "TERM_GENDER" = "gender";
@@ -139,6 +144,7 @@
 "TERM_METER_PLURAL" = "meters";
 "TERM_METER_PLURAL_ABBR" = "Mtr.";
 "TERM_METHOD" = "method";
+"TERM_MINUTES_APART" = "minutes apart";
 "TERM_MODIFIER" = "modifier";
 "TERM_MORE" = "more";
 "TERM_MOVE" = "move";
@@ -228,8 +234,11 @@
 "TERM_TEAMMATE_PLURAL" = "teammates";
 "TERM_TEE" = "tee";
 "TERM_TEE_PLURAL" = "tees";
+"TERM_TEE_TIME" = "tee time";
+"TERM_TEE_TIME_PLURAL" = "tee times";
 "TERM_THEME" = "theme";
 "TERM_THROUGH" = "through";
+"TERM_THROUGH_TEE_NO" = "through no.";	//	from hole no. N through no. N
 "TERM_TIE" = "tie";
 "TERM_TIE_ABBR" = "T";
 "TERM_TIEBREAKER" = "tiebreaker";
@@ -369,9 +378,11 @@
 "TITLE_APPLY_BUTTON" = "Apply";
 "TITLE_ARNIE" = "Arnie";
 "TITLE_ASPHALT" = "Asphalt";
+"TITLE_ASSIGN_BUTTON" = "Assign";
 "TITLE_ASSIGN_ROUND_TO" = "Assign a round to";
 "TITLE_ASSIGN_TEES" = "Assign Starting Tees";
 "TITLE_ASSIGN_TIMES" = "Assign Tee Times";
+"TITLE_ASSIGNED_TEE_TIMES" = "Assigned Tee Times";
 "TITLE_AUTHORITY_OR_METHOD" = "Authority / System";
 "TITLE_AUTOMATIC_PRESSES" = "Automatic Presses";
 "TITLE_BACK_NINE" = "Back Nine";
@@ -387,7 +398,11 @@
 "TITLE_BOGEYS_OR_WORSE" = "Bogeys & worse";
 "TITLE_BONGO" = "Bongo";
 "TITLE_CANCEL" = "Cancel";
+"TITLE_CART_ASSIGNMENT_CARDS" = "Cart Assignment Cards";
+"TITLE_CART_ASSIGNMENT_PLANNER" = "Cart Assignment Planner";
+"TITLE_CART_NUMBER" = "Cart Number";
 "TITLE_CART_NUMBER_ABBR" = "Cart No.";
+"TITLE_CARTS_PLANNER_COLUMNS" = "Tee\tTime\tCart\tPlayer\tTee\tNotes";
 "TITLE_CBA" = "Computed Buffer Adjustment";
 "TITLE_CBA_ABBR" = "CBA";
 "TITLE_CCR" = "Calculated Course Rating";
@@ -447,6 +462,7 @@
 "TITLE_FAIRWAY_HIT" = "Fairway Hit";
 "TITLE_FAVORITE_PLAYER" = "Favorite Player";
 "TITLE_FIRST_HOLE" = "First Hole";
+"TITLE_FIRST_TEE_TIME" = "First Tee Time";
 "TITLE_FLAG_TOURNAMENT_SCORES" = "Flag Tournament scores";
 "TITLE_FROM_MULLIGAN_SOFTWARE" = "from Mulligan Software";
 "TITLE_FRONT_BACK" = "Front & Back";
@@ -632,7 +648,9 @@
 "TITLE_SERIAL_NUMBER" = "Serial number";
 "TITLE_SET_BUTTON" = "Set";
 "TITLE_SEVE" = "Seve";
+"TITLE_SHOTGUN_START" = "Shotgun Start";
 "TITLE_SHOW_ALLOWANCE_DOTS" = "Show Handicap Allowance Dots";
+"TITLE_SHOW_CARDS" = "Show Cards";
 "TITLE_SHOW_ME" = "Show Me";
 "TITLE_SHOW_MEMBER_NUMBERS" = "Show club member numbers on Scorecards";
 "TITLE_SHOW_REPORT" = "Show Report";
@@ -648,6 +666,7 @@
 "TITLE_SSS_ABBR" = "SSS";
 "TITLE_STARTERS_LIST" = "Starter’s List";
 "TITLE_STARTERS_LIST_COLUMNS" = "Player\tMember\tTee\tStart\tTee Time\tCart No.";
+"TITLE_STARTING_TEE" = "Starting Tee";
 "TITLE_STARTING_TEE_ABBR" = "Start";
 "TITLE_STATUS_A" = "Status A";
 "TITLE_STATUS_B" = "Status B";
@@ -660,11 +679,14 @@
 "TITLE_SYSTEM" = "System";
 "TITLE_TEAM_MATCHES" = "Team Matches";
 "TITLE_TECHNICAL_SUPPORT" = "Technical Support";
+"TITLE_TEE_TIME" = "Tee Time";
 "TITLE_TEE_TIME_ABBR" = "Tee Time";
 "TITLE_THANK_YOU" = "Thank You";
 "TITLE_THE_SCOREBOARD" = "The Scoreboard";
 "TITLE_THE_SCORING_MACHINE" = "The Scoring Machine";
 "TITLE_THE_SCORING_MACHINE_TM" = "The Scoring Machine™";
+"TITLE_TIME_CART_PLAYER" = "Time/Cart/Player";
+"TITLE_TIMES_OR_TEES" = "Times or Tees";
 "TITLE_TOTAL_POINTS" = "Total Points";
 "TITLE_TRASH" = "Trash, Dots";
 "TITLE_UNLINK_DROPBOX" = "Unlink Dropbox";
@@ -683,22 +705,6 @@
 "TITLE_1_DOWN_LAST" = "1-down last hole";
 "TITLE_2_DOWN" = "2-down";
 "TITLE_3_BY_6" = "3 × 6";
-
-"TERM_CART" = "cart";
-"TITLE_ASSIGN_BUTTON" = "Assign";
-"TITLE_ASSIGNED_TEE_TIMES" = "Assigned Tee Times";
-"TITLE_CART_ASSIGNMENT_CARDS" = "Cart Assignment Cards";
-"TITLE_CART_ASSIGNMENT_PLANNER" = "Cart Assignment Planner";
-"TITLE_CART_NUMBER" = "Cart Number";
-"TITLE_CARTS_PLANNER_COLUMNS" = "Tee\tTime\tCart\tPlayer\tTee\tNotes";
-"TITLE_FIRST_TEE_TIME" = "First Tee Time";
-"TITLE_SHOTGUN_START" = "Shotgun Start";
-"TITLE_SHOW_CARDS" = "Show Cards";
-"TITLE_STARTING_TEE" = "Starting Tee";
-"TITLE_TEE_TIME" = "Tee Time";
-"TITLE_TIME_CART_PLAYER" = "Time/Cart/Player";
-"TITLE_TIMES_OR_TEES" = "Times or Tees";
-"INSTRUCTION_DRAG_TO_REORDER" = "Drag to reorder";
 
 "DESCRIPTION_3_BY_6" = "Holes 1-6, 7-11 and 12-18";
 "DESCRIPTION_ANIMALS" = "On-course card game for foursomes";
@@ -755,6 +761,8 @@
 "FORMAT_ASSIGN_%ld_ROUNDS_TO" = "Assign %ld rounds to";
 "FORMAT_BEST_%d_ROUNDS" = "Best %d Rounds";
 "FORMAT_BET_HOLES_%ld_%ld" = "Holes %ld - %ld";
+"FORMAT_CART_NO_%@" = "Cart no. %@";
+"FORMAT_CARTS_PLAYER_%@_SHARES_SCORECARD_%@" = "%@ shares the scorecard “%@”";
 "FORMAT_CLICKORTAP_%@_TO_SELECT" = "%@ to select…";
 "FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST" = "%@ number to adjust";
 "FORMAT_CLICKORTAP_%@_NUMBER_%@_TO_ADJUST" = "%@ number (%@) to adjust";
@@ -764,6 +772,8 @@
 "FORMAT_CURRENT_%@_TITLE_PLURAL" = "Current %@";
 "FORMAT_DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Determine your %@ on the right by finding the row in which your %@ appears on the left.";
 "FORMAT_DISCONTINUED_HANDICAP_METHOD_%@_PLAYER_%@" = "The %@ is no longer available.  If you select another method for %@ and save the change, you will be unable to restore the previous setting.";
+"FORMAT_EVENT_HAS_TEE_%@_WARNING" = "Warning: Event is configured with a starting tee (%@).";
+"FORMAT_EVENT_HAS_TIME_%@_WARNING" = "Warning: Event is configured with a tee time (%@).";
 "FORMAT_FOR_TITLE_%@" = "For %@…";	//	For selected players… or For Al Czervik…
 "FORMAT_%@_IS_DEFAULT_TEAM_CAPTAIN" = "%@ assigned by handicap as team captain.";
 "FORMAT_%@_IS_DESIGNATED_TEAM_CAPTAIN" = "%@ is designated as team captain.";
@@ -781,6 +791,8 @@
 "FORMAT_SELECTED_ITEM_%@_ONE" = "1 %@ selected";
 "FORMAT_SELECTED_ITEM_%@_NONE" = "no %@ selected";
 "FORMAT_SELECTED_ITEMS_%1$@_COUNT_%2$d" = "%2$d %1$@ selected";
+"FORMAT_SWAP_%@_HEADER" = "Swap %@…";
+"FORMAT_TEE_NO_%@" = "Tee no. %@";
 "FORMAT_THROUGH_HOLE_%@" = "through %@";
 "FORMAT_TO_PROMPT_%@" = "to: %@";	//	Convert to: WHS
 "FORMAT_TOTAL_POINTS_VS_QUOTA_%d" = "Total Points v. %d Quota";
@@ -829,6 +841,8 @@
 "MENU_SKINS_UNDER_PAR" = "birdie or better";
 "MENU_STRICTLY_ALPHABETIC" = "strictly alphabetic";
 
+"ALERT_CARTS_APPLY_MESSAGE" = "You've proposed changes to tee times, starting tees or cart assignments.";
+"ALERT_CARTS_APPLY_MESSAGE_EXTRA" = "Do you want to go back to apply those changes to scorecards before continuing?";
 "ALERT_NO_GOLFERS_COURSES_FOR_EVENT" = "No Players or Courses are available yet to create an Event.";
 "ALERT_NO_COURSES_FOR_EVENT" = "No Courses are available yet to create an Event.";
 "ALERT_NO_GOLFERS_FOR_EVENT" = "No Players are available yet to create an Event.";
@@ -856,6 +870,7 @@
 "INFO_USGA_EXTINCTION_WARNING" = "The USGA Handicap System has been superseded and will not be supported or available in future versions of Mulligan’s Eagle.  We recommend you choose another handicapping method.";
 
 "NOTICE_CANCEL_TO_UNDO_CHANGES" = "Cancel to undo changes.";
+"NOTICE_CARTS_FULL_CART" = "No room in the cart for another player";
 "NOTICE_DISCONTINUED_HANDICAP_METHOD" = "This handicapping method is no longer in effect.  Please select another.";
 "NOTICE_JUNIOR_PAR_REQUIREMENTS" = "Junior Par is not available when hole lengths are missing.";
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "The Personal Handicapping settings above are not changed with a “Factory Settings” reset.";
@@ -1036,6 +1051,14 @@
 "TOOLTIP_18HOLE_BEGINNING_INDEX" = "Starting handicap";
 "TOOLTIP_18HOLE_BEGINNING_INDEX_%@" = "Starting %@";
 "TOOLTIP_BEGINNING_INDEX_EXTRA" = "for use until a valid handicap record is available";
+"TOOLTIP_CARTS_APPLY_BUTTON" = "apply tee time and starting tee changes to scorecards";
+"TOOLTIP_CARTS_APPLY_BUTTON_TRAINING" = "Click to apply the tee and time information shown above to the event scorecards.";
+"TOOLTIP_CARTS_ASSIGN_BUTTON" = "assign tee times or starting tees";
+"TOOLTIP_CARTS_ASSIGN_BUTTON_TRAINING" = "Click to make tee times or shotgun start tee assignments for the field.";
+"TOOLTIP_CARTS_OUTLINE_CART" = "Double-click to enter a cart number";
+"TOOLTIP_CARTS_OUTLINE_TIME" = "Double-click to adjust starting tee or tee time";
+"TOOLTIP_CARTS_SHOW_BUTTON" = "show cart signs for printing";
+"TOOLTIP_CARTS_SHOW_BUTTON_TRAINING" = "Click to open a window containing all the cart signs ready to print.";
 "TOOLTIP_EXCLUDE_GUESTS" = "Check to exclude “Guest” players from changes.";
 "TOOLTIP_HANDICAP_DELETE_RECORDS" = "Click to permanently remove selected handicap records.";
 "TOOLTIP_LIMIT_SCORE" = "The hole score limit for a fixed WHS Maximum Score.";
@@ -1064,6 +1087,7 @@
 "TOOLTIP_TEAM_TOTAL_SCORE" = "The team’s total score";
 
 "INSTRUCTION_DRAG_ROUND_HERE" = "… or drag a round here";
+"INSTRUCTION_DRAG_TO_REORDER" = "Drag to reorder";
 
 //	Phrases & Special characters
 "ALL_SQUARE_CHARACTER" = "―";		//	\U2015 Special character	alt: "–" (En Dash) \U2013

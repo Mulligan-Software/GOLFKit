@@ -37,6 +37,8 @@
 "TERM_CALCULATE" = "calculer";
 "TERM_CALCULATES" = "calcule";
 "TERM_CALLAWAY" = "Callaway";
+"TERM_CART" = "voiturette";
+"TERM_CART_PLURAL" = "voiturettes";
 "TERM_CHACHA" = "Cha-Cha";
 "TERM_CHACHACHA" = "Cha-Cha-Cha";
 "TERM_CHAPMAN" = "Chapman";
@@ -92,6 +94,9 @@
 "TERM_FOURBALL" = "Quatre-Balle";
 "TERM_FOURSOMES" = "Foursomes";
 "TERM_FROM" = "de";
+"TERM_FROM_FIRST_AND_TENTH_TEE" = "du 1ᵉʳ et 10ᵉ jalon";
+"TERM_FROM_FIRST_TEE" = "du 1ᵉʳ jalon";
+"TERM_FROM_TEE_NO" = "du jalon no.";
 "TERM_FRONT" = "premier";
 "TERM_GAIN" = "gain";
 "TERM_GENDER" = "genre";
@@ -139,6 +144,7 @@
 "TERM_METER_PLURAL" = "mètres";
 "TERM_METER_PLURAL_ABBR" = "Mtr.";
 "TERM_METHOD" = "méthode";
+"TERM_MINUTES_APART" = "minutes d’intervalle";
 "TERM_MODIFIER" = "modificateur";
 "TERM_MORE" = "plus";
 "TERM_MOVE" = "déplacer";
@@ -228,8 +234,11 @@
 "TERM_TEAMMATE_PLURAL" = "coéquipiers";
 "TERM_TEE" = "jalon";
 "TERM_TEE_PLURAL" = "jalons";
+"TERM_TEE_TIME" = "heure de départ";
+"TERM_TEE_TIME_PLURAL" = "heures de départ";
 "TERM_THEME" = "thème";
 "TERM_THROUGH" = "à travers";
+"TERM_THROUGH_TEE_NO" = "au jalon no.";	//	du jalon no. N au jalon no. N
 "TERM_TIE" = "égalité";
 "TERM_TIE_ABBR" = "T";
 "TERM_TIEBREAKER" = "jouant la belle";
@@ -369,9 +378,11 @@
 "TITLE_APPLY_BUTTON" = "Appliquer";
 "TITLE_ARNIE" = "Arnie";
 "TITLE_ASPHALT" = "Asphalt";
+"TITLE_ASSIGN_BUTTON" = "Affecter";
 "TITLE_ASSIGN_ROUND_TO" = "Attribuer un tour à";
 "TITLE_ASSIGN_TEES" = "Assigner Jalons de Départ";
 "TITLE_ASSIGN_TIMES" = "Assigner l’Heures de Départ";
+"TITLE_ASSIGNED_TEE_TIMES" = "Heures de départ affectés";
 "TITLE_AUTHORITY_OR_METHOD" = "Autorité / Système";
 "TITLE_AUTOMATIC_PRESSES" = "Presses Automatiques";
 "TITLE_BACK_NINE" = "Deuxième Neuf";
@@ -388,7 +399,10 @@
 "TITLE_BONGO" = "Bongo";
 "TITLE_CANCEL" = "Annuler";
 "TITLE_CART_ASSIGNMENT_CARDS" = "Écriteaux Voiturettes de Golf";
+"TITLE_CART_ASSIGNMENT_PLANNER" = "Agenda des Affectations de Voiturette";
+"TITLE_CART_NUMBER" = "Numéro de voiturette";
 "TITLE_CART_NUMBER_ABBR" = "Voiture";
+"TITLE_CARTS_PLANNER_COLUMNS" = "Départ\tHeure\tVoiturette\tJoueur\tJalon\tMémo";
 "TITLE_CBA" = "Computed Buffer Adjustment";
 "TITLE_CBA_ABBR" = "CBA";
 "TITLE_CCR" = "Évaluation Parcours Calculée";
@@ -448,6 +462,7 @@
 "TITLE_FAIRWAY_HIT" = "Fairway atteint";
 "TITLE_FAVORITE_PLAYER" = "Joueur Préféré";
 "TITLE_FIRST_HOLE" = "Premier Trou";	//	m.
+"TITLE_FIRST_TEE_TIME" = "Premier heure de départ";
 "TITLE_FLAG_TOURNAMENT_SCORES" = "Signalez les scores de tournoi";
 "TITLE_FROM_MULLIGAN_SOFTWARE" = "de Mulligan Software";
 "TITLE_FRONT_BACK" = "Avant et Arrière";
@@ -633,7 +648,9 @@
 "TITLE_SERIAL_NUMBER" = "Numéro de série";
 "TITLE_SET_BUTTON" = "Définir";
 "TITLE_SEVE" = "Seve";
+"TITLE_SHOTGUN_START" = "Départs simultanés";
 "TITLE_SHOW_ALLOWANCE_DOTS" = "Afficher les taches d’allocation";
+"TITLE_SHOW_CARDS" = "Afficher Écriteaux";
 "TITLE_SHOW_ME" = "Montre moi";
 "TITLE_SHOW_MEMBER_NUMBERS" = "Afficher numéros des membres du club sur Cartes de Score";
 "TITLE_SHOW_REPORT" = "Afficher le Rapport";
@@ -649,6 +666,7 @@
 "TITLE_SSS_ABBR" = "SSS";
 "TITLE_STARTERS_LIST" = "Liste de Départ";
 "TITLE_STARTERS_LIST_COLUMNS" = "Joueur\tMembre\tJalon\tDépart\tHeure\tVoiture";
+"TITLE_STARTING_TEE" = "L’aire de départ initial";
 "TITLE_STARTING_TEE_ABBR" = "Départ";
 "TITLE_STATUS_A" = "Statut A";
 "TITLE_STATUS_B" = "Statut B";
@@ -661,11 +679,14 @@
 "TITLE_SYSTEM" = "Système";
 "TITLE_TEAM_MATCHES" = "Matchs par Équipe";
 "TITLE_TECHNICAL_SUPPORT" = "Support Technique";
+"TITLE_TEE_TIME" = "Heure de départ";
 "TITLE_TEE_TIME_ABBR" = "Heure";
 "TITLE_THANK_YOU" = "Merci";
 "TITLE_THE_SCOREBOARD" = "Le Tableau";
 "TITLE_THE_SCORING_MACHINE" = "La Machine de Marquant";
 "TITLE_THE_SCORING_MACHINE_TM" = "La Machine de Marquant™";
+"TITLE_TIME_CART_PLAYER" = "Heure/Voiturette/Joueur";
+"TITLE_TIMES_OR_TEES" = "Heures ou Jalons";
 "TITLE_TOTAL_POINTS" = "Points Totaux";
 "TITLE_TRASH" = "Trash, Restes, Dots";
 "TITLE_UNLINK_DROPBOX" = "Délier Dropbox";
@@ -684,21 +705,6 @@
 "TITLE_1_DOWN_LAST" = "1-down dernier trou";
 "TITLE_2_DOWN" = "2-down";
 "TITLE_3_BY_6" = "3 × 6";
-
-"TERM_CART" = "voiturette";
-"TITLE_ASSIGN_BUTTON" = "Affecter";
-"TITLE_ASSIGNED_TEE_TIMES" = "Heures de départ affectés";
-"TITLE_CART_ASSIGNMENT_PLANNER" = "Agenda des Affectations de Voiturette";
-"TITLE_CART_NUMBER" = "Numéro de voiturette";
-"TITLE_CARTS_PLANNER_COLUMNS" = "Départ\tHeure\tVoiturette\tJoueur\tJalon\tMémo";
-"TITLE_FIRST_TEE_TIME" = "Premier heure de départ";
-"TITLE_SHOTGUN_START" = "Départs simultanés";
-"TITLE_SHOW_CARDS" = "Afficher Écriteaux";
-"TITLE_STARTING_TEE" = "L’aire de départ initial";
-"TITLE_TEE_TIME" = "Heure de départ";
-"TITLE_TIME_CART_PLAYER" = "Heure/Voiturette/Joueur";
-"TITLE_TIMES_OR_TEES" = "Heures ou Jalons";
-"INSTRUCTION_DRAG_TO_REORDER" = "Faites glisser pour réordonner";
 
 "DESCRIPTION_3_BY_6" = "Trous 1-6, 7-11 et 12-18";
 "DESCRIPTION_ANIMALS" = "Sur-parcours jeu de cartes pour foursomes";
@@ -755,6 +761,8 @@
 "FORMAT_ASSIGN_%ld_ROUNDS_TO" = "Attribuer %ld tours à";
 "FORMAT_BEST_%d_ROUNDS" = "Meilleures %d Tours";
 "FORMAT_BET_HOLES_%ld_%ld" = "Trous %ld - %ld";
+"FORMAT_CART_NO_%@" = "Voiturette no. %@";
+"FORMAT_CARTS_PLAYER_%@_SHARES_SCORECARD_%@" = "%@ partage la carte de score «%@»";
 "FORMAT_CLICKORTAP_%@_TO_SELECT" = "%@ pour sélectionner…";
 "FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST" = "%@ le numéro pour l’ajuster";
 "FORMAT_CLICKORTAP_%@_NUMBER_%@_TO_ADJUST" = "%@ le numéro (%@) pour l’ajuster";
@@ -764,6 +772,8 @@
 "FORMAT_CURRENT_%@_TITLE_PLURAL" = "%@ Actuelles";
 "FORMAT_DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Déterminez votre %@ à droite en repérant la rangée ou apparaît votre %@ de gauche.";
 "FORMAT_DISCONTINUED_HANDICAP_METHOD_%@_PLAYER_%@" = "Le %@ n’est plus disponible.  Si vous sélectionnez une autre méthode pour %@ et enregistrez la modification, vous ne pourrez pas restaurer le réglage précédent.";
+"FORMAT_EVENT_HAS_TEE_%@_WARNING" = "Attention: L’événement est configuré avec une aire de départ initiale (%@).";
+"FORMAT_EVENT_HAS_TIME_%@_WARNING" = "Attention: L’événement est configuré avec une heure de départ (%@).";
 "FORMAT_FOR_TITLE_%@" = "Pour %@…";	//	For selected players… or For Al Czervik…
 "FORMAT_%@_IS_DEFAULT_TEAM_CAPTAIN" = "%@ assigné par handicap en tant que capitaine d’équipe.";
 "FORMAT_%@_IS_DESIGNATED_TEAM_CAPTAIN" = "%@ est désigné capitaine d’équipe.";
@@ -781,6 +791,8 @@
 "FORMAT_SELECTED_ITEM_%@_ONE" = "1 %@ sélectionné";
 "FORMAT_SELECTED_ITEM_%@_NONE" = "aucun %@ sélectionné";
 "FORMAT_SELECTED_ITEMS_%1$@_COUNT_%2$d" = "%2$d %1$@ sélectionnés";
+"FORMAT_SWAP_%@_HEADER" = "Échanger des %@…";
+"FORMAT_TEE_NO_%@" = "Jalon no. %@";
 "FORMAT_THROUGH_HOLE_%@" = "jusqu’à %@";
 "FORMAT_TO_PROMPT_%@" = "en: %@";	//	Convert to: WHS
 "FORMAT_TOTAL_POINTS_VS_QUOTA_%d" = "Points Totaux v. %d Quota";
@@ -829,6 +841,8 @@
 "MENU_SKINS_UNDER_PAR" = "birdie ou mieux";
 "MENU_STRICTLY_ALPHABETIC" = "strictement alphabétique";
 
+"ALERT_CARTS_APPLY_MESSAGE" = "Vous avez proposé des modifications aux heures de départ, les départs initials ou affectations de voiturette.";
+"ALERT_CARTS_APPLY_MESSAGE_EXTRA" = "Souhaitez-vous revenir en arrière pour appliquer ces changements aux cartes de score avant de continuer?";
 "ALERT_NO_GOLFERS_COURSES_FOR_EVENT" = "Ni les Joueurs ni les Parcours de golf encore disponible pour créer un Événement.";
 "ALERT_NO_COURSES_FOR_EVENT" = "Pas encore de Parcours de golf disponible pour créer un Événement.";
 "ALERT_NO_GOLFERS_FOR_EVENT" = "Pas encore de Joueur de golf disponible pour créer un Événement.";
@@ -856,6 +870,7 @@
 "INFO_USGA_EXTINCTION_WARNING" = "Le Système de Handicap USGA a été remplacé et ne sera plus pris en charge ni disponible dans les futures versions de Mulligan’s Eagle.  Nous vous recommandons de choisir une autre méthode de handicap.";
 
 "NOTICE_CANCEL_TO_UNDO_CHANGES" = "Annuler pour défaire vos modifications.";
+"NOTICE_CARTS_FULL_CART" = "Pas de place dans la voiturette pour un autre joueur";
 "NOTICE_DISCONTINUED_HANDICAP_METHOD" = "Cette méthode de handicap n’est plus en vigueur.  Veuillez en sélectionner un autre.";
 "NOTICE_JUNIOR_PAR_REQUIREMENTS" = "Par Junior n’est pas disponible lorsqu’il manque des longueurs de trous.";
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "Ces réglages ci-dessus ne sont pas modifiés par une réinitialisation «Réglages par défaut».";
@@ -1036,6 +1051,14 @@
 "TOOLTIP_18HOLE_BEGINNING_INDEX" = "Handicap initial";
 "TOOLTIP_18HOLE_BEGINNING_INDEX_%@" = "%@ initial";
 "TOOLTIP_BEGINNING_INDEX_EXTRA" = "à utiliser jusqu’à ce qu’un enregistrement de handicap valide soit disponible.";
+"TOOLTIP_CARTS_APPLY_BUTTON" = "appliquez les changements des heures et des départs aux cartes de score";
+"TOOLTIP_CARTS_APPLY_BUTTON_TRAINING" = "Cliquer ici pour appliquer les informations des tees et heures ci-dessus aux cartes de score de l’événement.";
+"TOOLTIP_CARTS_ASSIGN_BUTTON" = "affectez les heures de départ ou les départs initials";
+"TOOLTIP_CARTS_ASSIGN_BUTTON_TRAINING" = "Cliquer ici pour faire les affectations des heures de départ ou des tees de départ simultané pour le champ.";
+"TOOLTIP_CARTS_OUTLINE_CART" = "Double-cliquez pour saisir un numéro de voiturette";
+"TOOLTIP_CARTS_OUTLINE_TIME" = "Double-cliquez pour ajuster l’aire de départ initial ou l’heure de départ";
+"TOOLTIP_CARTS_SHOW_BUTTON" = "affichez les écriteaux de voiturette pour imprimer";
+"TOOLTIP_CARTS_SHOW_BUTTON_TRAINING" = "Cliquez pour ouvrir une fenêtre contenant tous les écriteux de voiturette prête à imprimer.";
 "TOOLTIP_EXCLUDE_GUESTS" = "Cochez la case pour exclure les joueurs «Invités» des modifications.";
 "TOOLTIP_HANDICAP_DELETE_RECORDS" = "Cliquez pour supprimer définitivement les données de handicap sélectionnées.";
 "TOOLTIP_LIMIT_SCORE" = "La limite de score de trou pour un Score Maximum WHS fixe.";
@@ -1064,6 +1087,7 @@
 "TOOLTIP_TEAM_TOTAL_SCORE" = "Le score total d’équipe";
 
 "INSTRUCTION_DRAG_ROUND_HERE" = "… ou glissez un tour ici";
+"INSTRUCTION_DRAG_TO_REORDER" = "Faites glisser pour réordonner";
 
 //	Phrases & Special characters
 "ALL_SQUARE_CHARACTER" = "―";		//	\U2015 Special character	alt: "–" (En Dash) \U2013
