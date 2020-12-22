@@ -867,6 +867,8 @@
 "INFO_EAGLE_USERS_GUIDE_DOWNLOAD" = "la version plus récente du Guide des Utilisateurs du site web de Mulligan Software";
 "INFO_EAGLE_USERS_GUIDE_LOCATE" = "une copie du Guide des Utilisateurs déjà installée sur votre ordinateur";
 "INFO_ENFORCE_EXTINCT_HANDICAPS" = "Cochée: Les exigences de l’autorité de handicap sont respectées même si cela fait mal.\nDécochée: Sinon.";
+"INFO_UG_DOWNLOAD_MESSAGE" = "Veuillez visiter:\n\nhttps://www.mulligansoftware.com/responsive/eagleguide.html\n\npour télécharger la dernière version du Guide de l’Utilisateur";
+"INFO_UG_DOWNLOAD_INFORMATIVE" = "Installez le fichier téléchargé dans le dossier Eagle de votre répertoire personnel à:\n\n~/Bibliothèque/Support aux applications/Eagle";
 "INFO_USGA_EXTINCTION_WARNING" = "Le Système de Handicap USGA a été remplacé et ne sera plus pris en charge ni disponible dans les futures versions de Mulligan’s Eagle.  Nous vous recommandons de choisir une autre méthode de handicap.";
 
 "NOTICE_CANCEL_TO_UNDO_CHANGES" = "Annuler pour défaire vos modifications.";
