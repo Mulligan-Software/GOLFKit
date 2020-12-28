@@ -77,8 +77,8 @@
 "TERM_ENTER" = "Nummer eingeben";
 "TERM_EVEN" = "eben";
 "TERM_EVEN_ABBR" = "E";
-"TERM_EVENT" = "Veranstaltung";
-"TERM_EVENT_PLURAL" = "Veranstaltungen";
+"TERM_EVENT" = "Wettkampf";
+"TERM_EVENT_PLURAL" = "Wettkampfen";
 "TERM_EVERYTHING" = "alles";
 "TERM_FAIRWAY" = "Fairway";
 "TERM_FEMALE" = "weiblich";
@@ -455,7 +455,7 @@
 "TITLE_EULA_ABBR" = "EULA";
 "TITLE_EVEN" = "Eben";
 "TITLE_EVEN_ABBR" = "E";
-"TITLE_EVENT_REGISTRATION" = "Veranstaltungsanmeldung";
+"TITLE_EVENT_REGISTRATION" = "Wettkampfsregistrierung";
 "TITLE_EXCLUDE_GUESTS" = "Gäste ausschließen";
 "TITLE_EXTENDED_SCORING" = "Erweiterte Wertung";
 "TITLE_FACTORY_SETTINGS" = "Werkseinstellungen";
@@ -571,7 +571,7 @@
 "TITLE_LINK_DROPBOX" = "Verknüpfen Dropbox aufheben";
 "TITLE_LOCAL_COUNTRY" = "Lokales Land";
 "TITLE_LOCK_CLUBS" = "Clubs schützen";
-"TITLE_LOCK_EVENTS" = "Veranstaltungen schützen";
+"TITLE_LOCK_EVENTS" = "Wettkampfen schützen";
 "TITLE_LOCK_PLAYERS" = "Spieler schützen";
 "TITLE_LOCK_SCORECARDS" = "Scorekarten schützen";
 "TITLE_LOW_BALL_HIGH_BALL" = "Niedriger Ball - Hoher Ball";
@@ -658,7 +658,8 @@
 "TITLE_SHOW_SCORES_AT_STARTUP" = "Zeige Spielergebnise beim Start";
 "TITLE_SHOW_TABLES" = "Tabellen anzeigen";
 "TITLE_SKILL_ADJUSTMENT" = "Anpassung für Fähigkeiten";
-"TITLE_SKINS_REQUIRE" = "Skins benötigen";
+"TITLE_SKINS_ELIGIBILITY" = "Zulassungskriterien für Skins";
+"TITLE_SKINS_REQUIRE" = "Skins benötigen…";
 "TITLE_SKIP" = "Übergehen";
 "TITLE_SNAKE" = "Snake";
 "TITLE_SPECIAL_PREFERENCES" = "Spezielle Einstellungen";
@@ -690,7 +691,7 @@
 "TITLE_TOTAL_POINTS" = "Gesamtpunktzahl";
 "TITLE_TRASH" = "Trash, Reste, Punkte";
 "TITLE_UNLINK_DROPBOX" = "Link Dropbox";
-"TITLE_UNLOCK_ENTIRE_EVENT" = "Schalte alle Scorekarten der Veranstaltung";
+"TITLE_UNLOCK_ENTIRE_EVENT" = "Schalte alle Scorekarten der Wettkampf";
 "TITLE_UP_AND_DOWN" = "Auf und ab";
 "TITLE_UPDATE" = "Aktualisieren";
 "TITLE_UPDATES_UNAVAILABLE" = "Aktualisierung nicht verfügbar";
@@ -734,13 +735,13 @@
 "DESCRIPTION_NASSAU" = "Ersteseite, Letzteseite und 18 Löcher";
 "DESCRIPTION_NO_TRASH" = "Keine Reste / Punkte Kategorie angegeben";
 "DESCRIPTION_POLIE" = "1-Putt länger als Flaggenstocklänge";
-"DESCRIPTION_PRINTING_PRIVACY_%@" = "Veranstaltungsregistrierung Kategorien als „%@“ bezeichnet werden in der Regel nicht gedruckt oder angezeigt.";
+"DESCRIPTION_PRINTING_PRIVACY_%@" = "Wettkampfsregistrierung Kategorien als „%@“ bezeichnet werden in der Regel nicht gedruckt oder angezeigt.";
 "DESCRIPTION_SANDIE" = "Auf und ab von einem Grün-Bunker";
 "DESCRIPTION_SEVE" = "Birdie oder besser, ohne das Fairway oder das Grün zu erreichen";
-"DESCRIPTION_SKINS_ALL_SCORES" = "Jeder gültige Golfloch-Score ist für Skins berechtigt";
-"DESCRIPTION_SKINS_BIRDIE_OR_BETTER" = "Nur Golfloch-Scores unter Par sind für Skins geeignet";
-"DESCRIPTION_SKINS_BOGEY_OR_BETTER" = "Nur Golfloch-Scores von Bogey oder besser sind für Skins geeignet";
-"DESCRIPTION_SKINS_PAR_OR_BETTER" = "Nur Golfloch-Scores von Par oder besser sind für Skins geeignet";
+"DESCRIPTION_SKINS_ALL_SCORES" = "Jeder gültige Golfloch-Score kann einen Skin gewinnen";
+"DESCRIPTION_SKINS_BIRDIE_OR_BETTER" = "Nur Golfloch-Scores unter Par können einen Skin gewinnen";
+"DESCRIPTION_SKINS_BOGEY_OR_BETTER" = "Nur Golfloch-Scores von Bogey oder besser können einen Skin gewinnen";
+"DESCRIPTION_SKINS_PAR_OR_BETTER" = "Nur Golfloch-Scores von Par oder besser können einen Skin gewinnen";
 "DESCRIPTION_SNAKE" = "3-Putt, letzter 3-Putt oder kurzester 3-Putt";
 "DESCRIPTION_STOBBIE" = "Einregulierung innerhalb de Länge der Flaggenstock";
 "DESCRIPTION_SWING_GAME" = "Rotierendes Team von 2 vs. 3 oder mehr";
@@ -772,8 +773,8 @@
 "FORMAT_CURRENT_%@_TITLE_PLURAL" = "aktuellen %@";
 "FORMAT_DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Bestimme Dein %@ auf der rechten Seite indem Sie die Zeile finden, in der Ihre %@ auf der linken Seite steht.";
 "FORMAT_DISCONTINUED_HANDICAP_METHOD_%@_PLAYER_%@" = "Das %@ ist nicht mehr verfügbar.  Wenn Sie eine andere Methode für %@ auswählen und die Änderung speichern, können Sie die vorherige Einstellung nicht wiederherstellen.";
-"FORMAT_EVENT_HAS_TEE_%@_WARNING" = "Warnung: Veranstaltung wird mit einem Startabschlag konfiguriert (%@).";
-"FORMAT_EVENT_HAS_TIME_%@_WARNING" = "Warnung: Veranstaltung wird mit einer Abschlagzeit konfiguriert (%@).";
+"FORMAT_EVENT_HAS_TEE_%@_WARNING" = "Warnung: Wettkampf wird mit einem Startabschlag konfiguriert (%@).";
+"FORMAT_EVENT_HAS_TIME_%@_WARNING" = "Warnung: Wettkampf wird mit einer Abschlagzeit konfiguriert (%@).";
 "FORMAT_FOR_TITLE_%@" = "Für %@…";	//	For selected players… or For Al Czervik…
 "FORMAT_%@_IS_DEFAULT_TEAM_CAPTAIN" = "%@ wird per Handicap zum Mannschaftskapitän ernannt.";
 "FORMAT_%@_IS_DESIGNATED_TEAM_CAPTAIN" = "%@ wird zum Mannschaftskapitän ernannt.";
@@ -843,9 +844,9 @@
 
 "ALERT_CARTS_APPLY_MESSAGE" = "Sie haben Änderungen an Startzeiten, Startanschläge oder Wagenzuweisungen vorgeschlagen.";
 "ALERT_CARTS_APPLY_MESSAGE_EXTRA" = "Möchten Sie zurückgehen, um diese Änderungen auf Scorekarten anzuwenden, bevor Sie fortfahren?";
-"ALERT_NO_GOLFERS_COURSES_FOR_EVENT" = "Weder Spieler noch Golfplätze sind verfügbar, um eine Veranstaltung zu erstellen.";
-"ALERT_NO_COURSES_FOR_EVENT" = "Es sind noch keine Golfplätze verfügbar, um eine Veranstaltung zu erstellen.";
-"ALERT_NO_GOLFERS_FOR_EVENT" = "Es sind noch keine Spieler verfügbar, um eine Veranstaltung zu erstellen.";
+"ALERT_NO_GOLFERS_COURSES_FOR_EVENT" = "Weder Spieler noch Golfplätze sind verfügbar, um eine Wettkampf zu erstellen.";
+"ALERT_NO_COURSES_FOR_EVENT" = "Es sind noch keine Golfplätze verfügbar, um eine Wettkampf zu erstellen.";
+"ALERT_NO_GOLFERS_FOR_EVENT" = "Es sind noch keine Spieler verfügbar, um eine Wettkampf zu erstellen.";
 "ALERT_NO_GOLFERS_COURSES_FOR_SCORECARD" = "Weder Spieler noch Golfplätze sind verfügbar, um eine Scorekarte zu erstellen.";
 "ALERT_NO_COURSES_FOR_SCORECARD" = "Es sind noch keine Golfplätze verfügbar, um eine Scorekarte zu erstellen.";
 "ALERT_NO_GOLFERS_FOR_SCORECARD" = "Es sind noch keine Spieler verfügbar, um eine Scorekarte zu erstellen.";
@@ -876,6 +877,8 @@
 "NOTICE_DISCONTINUED_HANDICAP_METHOD" = "Diese Handicap-Methode ist nicht mehr wirksam.  Bitte wählen Sie eine andere.";
 "NOTICE_JUNIOR_PAR_REQUIREMENTS" = "Junior-Par ist nicht verfügbar, wenn die Länge der Locher fehlt.";
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "Die persönlichen Handicaps Einstellungen oben sind nicht mit einem „Werkseinstellungen“ Reset geändert.";
+"NOTICE_SKINS_ELIGIBILITY_EVENT" = "Die Einstellungen für die Skins-Zulassungskriterien gelten sowohl für Brutto- als auch für die Netto-Scores in diesem Wettkampf.";
+"NOTICE_SKINS_ELIGIBILITY_SCORECARD" = "Die Einstellungen für die Skins-Zulassungskriterien gelten sowohl für Brutto- als auch für die Netto-Scores auf dieser Scorekarte.";
 
 //	USGA Data Services
 "NOTICE_USGA_CANCELLED" = "USGA Data Services-Verbindung abgebrochen";
@@ -1054,7 +1057,7 @@
 "TOOLTIP_18HOLE_BEGINNING_INDEX_%@" = "Anfänglich %@";
 "TOOLTIP_BEGINNING_INDEX_EXTRA" = "zur Verwendung, bis ein gültiger Handicap-Datensatz verfügbar ist.";
 "TOOLTIP_CARTS_APPLY_BUTTON" = "die Abschlagzeit und die Startabschlag Änderungen auf Scorekarten anwenden";
-"TOOLTIP_CARTS_APPLY_BUTTON_TRAINING" = "Klicken Sie hier, um die oben gezeigten Abschlag- un Zeitinformationen auf die Veranstaltung-Scorekarten anzuwenden.";
+"TOOLTIP_CARTS_APPLY_BUTTON_TRAINING" = "Klicken Sie hier, um die oben gezeigten Abschlag- un Zeitinformationen auf die Wettkampf-Scorekarten anzuwenden.";
 "TOOLTIP_CARTS_ASSIGN_BUTTON" = "Abschlagzeiten oder Startabschläge zuweisen";
 "TOOLTIP_CARTS_ASSIGN_BUTTON_TRAINING" = "Klicken Sie hier, um Startzeiten oder ‘Schrotflinte’ Startabschlage Zuweisungen für des Feldes vorzunehmen.";
 "TOOLTIP_CARTS_OUTLINE_CART" = "Doppelklicken Sie, um eine Golfwagen Nummer einzugeben";

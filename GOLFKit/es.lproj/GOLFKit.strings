@@ -658,7 +658,8 @@
 "TITLE_SHOW_SCORES_AT_STARTUP" = "Mostrar los puntajes al inicio";
 "TITLE_SHOW_TABLES" = "Mostrar tablas";
 "TITLE_SKILL_ADJUSTMENT" = "Ajuste por habilidad";
-"TITLE_SKINS_REQUIRE" = "Skins requieren";
+"TITLE_SKINS_ELIGIBILITY" = "Elegibilidad de Skins";
+"TITLE_SKINS_REQUIRE" = "Skins requieren…";
 "TITLE_SKIP" = "Omitir";
 "TITLE_SNAKE" = "Snake";
 "TITLE_SPECIAL_PREFERENCES" = "Ajustes Especiales";
@@ -737,10 +738,10 @@
 "DESCRIPTION_PRINTING_PRIVACY_%@" = "Las categorías de registro de eventos identificadas como “%@” generalmente no se imprimen ni se muestran.";
 "DESCRIPTION_SANDIE" = "Alto y abajo de un bunker al green acertó";
 "DESCRIPTION_SEVE" = "Birdie o mejor sin alcanzar el fairway o el green";
-"DESCRIPTION_SKINS_ALL_SCORES" = "Cualquier score de hoyo válida es elegible para skins";
-"DESCRIPTION_SKINS_BIRDIE_OR_BETTER" = "Solo los resultados de hoyos debajo del par son elegibles para skins";
-"DESCRIPTION_SKINS_BOGEY_OR_BETTER" = "Solo resultados de bogey o mejores son elegibles para skins";
-"DESCRIPTION_SKINS_PAR_OR_BETTER" = "Solo resultados de par o mejores son elegibles para skins";
+"DESCRIPTION_SKINS_ALL_SCORES" = "Cualquier resultado de hoyo válido puede ganar un skin";
+"DESCRIPTION_SKINS_BIRDIE_OR_BETTER" = "Solo los resultados debajo del par pueden ganar un skin";
+"DESCRIPTION_SKINS_BOGEY_OR_BETTER" = "Solo resultados de bogey o mejores pueden ganar un skin";
+"DESCRIPTION_SKINS_PAR_OR_BETTER" = "Solo resultados de par o mejores pueden ganar un skin";
 "DESCRIPTION_SNAKE" = "3-putt, último 3-putt, o 3-putt más corto";
 "DESCRIPTION_STOBBIE" = "Encendido en regulación dentro de la longitud del flagstick";
 "DESCRIPTION_SWING_GAME" = "Equipo rotativo de 2 vs. 3 o más";
@@ -876,6 +877,8 @@
 "NOTICE_DISCONTINUED_HANDICAP_METHOD" = "Este método de handicap ya no está vigente.  Por favor seleccione otro.";
 "NOTICE_JUNIOR_PAR_REQUIREMENTS" = "Par Junior no está disponible cuando faltan longitudes de hoyo.";
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "La configuración presentada no se cambian con un reajuste “Ajustes de fábrica”.";
+"NOTICE_SKINS_ELIGIBILITY_EVENT" = "La configuración de elegibilidad de Skins aplica tanto a los puntajes brutos como a los netos en este Evento.";
+"NOTICE_SKINS_ELIGIBILITY_SCORECARD" = "La configuración de elegibilidad de Skins aplica tanto a los puntajes brutos como a los netos en esta Tarjeta.";
 
 //	USGA Data Services
 "NOTICE_USGA_CANCELLED" = "Conexión de USGA Data Services cancelada";

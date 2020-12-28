@@ -215,7 +215,8 @@ typedef NS_ENUM(NSUInteger, GOLFSkinsEligibility) {
 	GOLFSkinsEligibilityAllScores = 0,		//	All hole scores are eligible for skins			(0)
 	GOLFSkinsEligibilityBogeyOrBetter,		//	Only scores of bogey or better are eligible		(1)
 	GOLFSkinsEligibilityParOrBetter,		//	Only scores of par or better are eligible		(2)
-	GOLFSkinsEligibilityUnderPar			//	Only hole scores under par are eligible			(3)
+	GOLFSkinsEligibilityUnderPar,			//	Only hole scores under par are eligible			(3)
+	GOLFSkinsEligibilityUnknown = 99		//	Eligibility Unknown / Error						(99)
 };
 
 //	Status Masks

@@ -658,7 +658,8 @@
 "TITLE_SHOW_SCORES_AT_STARTUP" = "Show scores at startup";
 "TITLE_SHOW_TABLES" = "Show Tables";
 "TITLE_SKILL_ADJUSTMENT" = "Skill Adjustment";
-"TITLE_SKINS_REQUIRE" = "Skins require";
+"TITLE_SKINS_ELIGIBILITY" = "Skins Eligibility";
+"TITLE_SKINS_REQUIRE" = "Skins require…";
 "TITLE_SKIP" = "Skip";
 "TITLE_SNAKE" = "Snake";
 "TITLE_SPECIAL_PREFERENCES" = "Special Settings";
@@ -737,10 +738,10 @@
 "DESCRIPTION_PRINTING_PRIVACY_%@" = "Event registration categories identified as “%@” are generally not printed or displayed.";
 "DESCRIPTION_SANDIE" = "Up and down from a greenside bunker";
 "DESCRIPTION_SEVE" = "Birdie or better without hitting fairway or green";
-"DESCRIPTION_SKINS_ALL_SCORES" = "Any valid hole score is eligible for skins";
-"DESCRIPTION_SKINS_BIRDIE_OR_BETTER" = "Only scores below par are eligible for skins";
-"DESCRIPTION_SKINS_BOGEY_OR_BETTER" = "Only scores of bogey or better are eligible for skins";
-"DESCRIPTION_SKINS_PAR_OR_BETTER" = "Only scores of par or better are eligible for skins";
+"DESCRIPTION_SKINS_ALL_SCORES" = "Any valid hole score may win a skin";
+"DESCRIPTION_SKINS_BIRDIE_OR_BETTER" = "Only scores below par may win a skin";
+"DESCRIPTION_SKINS_BOGEY_OR_BETTER" = "Only scores of bogey or better may win a skin";
+"DESCRIPTION_SKINS_PAR_OR_BETTER" = "Only scores of par or better may win a skin";
 "DESCRIPTION_SNAKE" = "3-putt, last 3-putt or shortest 3-putt";
 "DESCRIPTION_STOBBIE" = "On in regulation within length of the pin";
 "DESCRIPTION_SWING_GAME" = "Rotating team of 2 vs. 3 or more";
@@ -876,6 +877,8 @@
 "NOTICE_DISCONTINUED_HANDICAP_METHOD" = "This handicapping method is no longer in effect.  Please select another.";
 "NOTICE_JUNIOR_PAR_REQUIREMENTS" = "Junior Par is not available when hole lengths are missing.";
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "The Personal Handicapping settings above are not changed with a “Factory Settings” reset.";
+"NOTICE_SKINS_ELIGIBILITY_EVENT" = "Skins eligibility settings apply to both gross and net scores in this event.";
+"NOTICE_SKINS_ELIGIBILITY_SCORECARD" = "Skins eligibility settings apply to both gross and net scores on this scorecard.";
 
 //	USGA Data Services
 "NOTICE_USGA_CANCELLED" = "USGA Data Services connection cancelled";

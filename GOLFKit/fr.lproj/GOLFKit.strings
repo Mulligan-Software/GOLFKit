@@ -658,7 +658,8 @@
 "TITLE_SHOW_SCORES_AT_STARTUP" = "Afficher les scores au démarrage";
 "TITLE_SHOW_TABLES" = "Afficher Tableaux";
 "TITLE_SKILL_ADJUSTMENT" = "Ajustement habileté";
-"TITLE_SKINS_REQUIRE" = "Skins nécessitent";
+"TITLE_SKINS_ELIGIBILITY" = "Éligibilité des Skins";
+"TITLE_SKINS_REQUIRE" = "Skins nécessitent…";
 "TITLE_SKIP" = "Passer";
 "TITLE_SNAKE" = "Snake";
 "TITLE_SPECIAL_PREFERENCES" = "Réglages Spéciaux";
@@ -737,10 +738,10 @@
 "DESCRIPTION_PRINTING_PRIVACY_%@" = "Les catégories d’enregistrement d’événement identifiés comme «%@» ne sont généralement ni imprimés ni affichés.";
 "DESCRIPTION_SANDIE" = "En haut et en bas d’un bunker au bord du green";
 "DESCRIPTION_SEVE" = "Birdie ou mieux sans atteindre le fairway ou le green";
-"DESCRIPTION_SKINS_ALL_SCORES" = "Tout score de trou valide est éligible pour les skins";
-"DESCRIPTION_SKINS_BIRDIE_OR_BETTER" = "Seuls les scores sous le par sont éligible pour les skins";
-"DESCRIPTION_SKINS_BOGEY_OR_BETTER" = "Seuls les scores de bogey ou mieux sont éligible pour les skins";
-"DESCRIPTION_SKINS_PAR_OR_BETTER" = "Seuls les scores de par ou mieux sont éligible pour les skins";
+"DESCRIPTION_SKINS_ALL_SCORES" = "Tout score de trou valide peut gagner un skin";
+"DESCRIPTION_SKINS_BIRDIE_OR_BETTER" = "Seuls les scores sous le par peuvent gagner un skin";
+"DESCRIPTION_SKINS_BOGEY_OR_BETTER" = "Seuls les scores de bogey ou mieux peuvent gagner un skin";
+"DESCRIPTION_SKINS_PAR_OR_BETTER" = "Seuls les scores de par ou mieux peuvent gagner un skin";
 "DESCRIPTION_SNAKE" = "3-putt, dernier 3-putt ou 3-putt plus court";
 "DESCRIPTION_STOBBIE" = "En régulation dans la longueur du drapeau";
 "DESCRIPTION_SWING_GAME" = "Équipe tournante de 2 vs 3 ou plus";
@@ -876,6 +877,8 @@
 "NOTICE_DISCONTINUED_HANDICAP_METHOD" = "Cette méthode de handicap n’est plus en vigueur.  Veuillez en sélectionner un autre.";
 "NOTICE_JUNIOR_PAR_REQUIREMENTS" = "Par Junior n’est pas disponible lorsqu’il manque des longueurs de trous.";
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "Ces réglages ci-dessus ne sont pas modifiés par une réinitialisation «Réglages par défaut».";
+"NOTICE_SKINS_ELIGIBILITY_EVENT" = "Les paramètres d’éligibilité des skins s’appliquent aux scores bruts et nets dans cet Événement.";
+"NOTICE_SKINS_ELIGIBILITY_SCORECARD" = "Les paramètres d’éligibilité des skins s’appliquent aux scores bruts et nets sur cette Carte de score.";
 
 //	USGA Data Services
 "NOTICE_USGA_CANCELLED" = "Connexion USGA Data Services annulée";
