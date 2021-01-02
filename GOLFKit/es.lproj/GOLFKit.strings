@@ -63,6 +63,7 @@
 "TERM_CUSTOMIZATION" = "personalización";
 "TERM_CUSTOMIZATION_PLURAL" = "personalizaciones";
 "TERM_DATE" = "fecha";
+"TERM_DEFAULT_PLURAL" = "valores predeterminados";
 "TERM_DELETE" = "eliminar";
 "TERM_DIFFERENTIAL" = "diferencial";
 "TERM_DIFFERENTIAL_ABBR" = "dif.";
@@ -204,7 +205,7 @@
 "TERM_SCORE" = "resultado";
 "TERM_SCORE_ABBR" = "res.";
 "TERM_SCORE_PLURAL" = "resultados";
-"TERM_SCOREBOARD" = "marcadore";	//	pizarrón ?
+"TERM_SCOREBOARD" = "marcador";	//	pizarrón ?
 "TERM_SCORECARD" = "tarjeta";
 "TERM_SCORECARD_PLURAL" = "tarjetas";
 "TERM_SCORECARD_PLURAL_SHORT" = "tarjetas";
@@ -659,7 +660,7 @@
 "TITLE_SHOW_TABLES" = "Mostrar tablas";
 "TITLE_SKILL_ADJUSTMENT" = "Ajuste por habilidad";
 "TITLE_SKINS_ELIGIBILITY" = "Elegibilidad de Skins";
-"TITLE_SKINS_REQUIRE" = "Skins requieren…";
+"TITLE_SKINS_REQUIRE" = "Skins requieren";
 "TITLE_SKIP" = "Omitir";
 "TITLE_SNAKE" = "Snake";
 "TITLE_SPECIAL_PREFERENCES" = "Ajustes Especiales";
@@ -877,6 +878,7 @@
 "NOTICE_DISCONTINUED_HANDICAP_METHOD" = "Este método de handicap ya no está vigente.  Por favor seleccione otro.";
 "NOTICE_JUNIOR_PAR_REQUIREMENTS" = "Par Junior no está disponible cuando faltan longitudes de hoyo.";
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "La configuración presentada no se cambian con un reajuste “Ajustes de fábrica”.";
+"NOTICE_SKINS_ELIGIBILITY" = "La configuración de elegibilidad de Skins se aplica a los puntajes brutos y netos.";
 "NOTICE_SKINS_ELIGIBILITY_EVENT" = "La configuración de elegibilidad de Skins aplica tanto a los puntajes brutos como a los netos en este Evento.";
 "NOTICE_SKINS_ELIGIBILITY_SCORECARD" = "La configuración de elegibilidad de Skins aplica tanto a los puntajes brutos como a los netos en esta Tarjeta.";
 

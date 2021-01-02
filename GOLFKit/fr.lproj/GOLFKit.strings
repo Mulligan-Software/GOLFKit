@@ -63,6 +63,7 @@
 "TERM_CUSTOMIZATION" = "personnalisation";
 "TERM_CUSTOMIZATION_PLURAL" = "personnalisations";
 "TERM_DATE" = "date";
+"TERM_DEFAULT_PLURAL" = "valeurs par défaut";
 "TERM_DELETE" = "supprimer";
 "TERM_DIFFERENTIAL" = "différentiel";
 "TERM_DIFFERENTIAL_ABBR" = "diff.";
@@ -659,7 +660,7 @@
 "TITLE_SHOW_TABLES" = "Afficher Tableaux";
 "TITLE_SKILL_ADJUSTMENT" = "Ajustement habileté";
 "TITLE_SKINS_ELIGIBILITY" = "Éligibilité des Skins";
-"TITLE_SKINS_REQUIRE" = "Skins nécessitent…";
+"TITLE_SKINS_REQUIRE" = "Skins nécessitent";
 "TITLE_SKIP" = "Passer";
 "TITLE_SNAKE" = "Snake";
 "TITLE_SPECIAL_PREFERENCES" = "Réglages Spéciaux";
@@ -877,8 +878,9 @@
 "NOTICE_DISCONTINUED_HANDICAP_METHOD" = "Cette méthode de handicap n’est plus en vigueur.  Veuillez en sélectionner un autre.";
 "NOTICE_JUNIOR_PAR_REQUIREMENTS" = "Par Junior n’est pas disponible lorsqu’il manque des longueurs de trous.";
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "Ces réglages ci-dessus ne sont pas modifiés par une réinitialisation «Réglages par défaut».";
-"NOTICE_SKINS_ELIGIBILITY_EVENT" = "Les paramètres d’éligibilité des skins s’appliquent aux scores bruts et nets dans cet Événement.";
-"NOTICE_SKINS_ELIGIBILITY_SCORECARD" = "Les paramètres d’éligibilité des skins s’appliquent aux scores bruts et nets sur cette Carte de score.";
+"NOTICE_SKINS_ELIGIBILITY" = "Les paramètres d’éligibilité des skins s’appliquent aux scores bruts et nets.";
+"NOTICE_SKINS_ELIGIBILITY_EVENT" = "Le paramètre d’éligibilité des skins s’applique aux scores bruts et nets de cet Événement.";
+"NOTICE_SKINS_ELIGIBILITY_SCORECARD" = "Le paramètre d’éligibilité des skins s’applique aux scores bruts et nets sur cette Carte de score.";
 
 //	USGA Data Services
 "NOTICE_USGA_CANCELLED" = "Connexion USGA Data Services annulée";

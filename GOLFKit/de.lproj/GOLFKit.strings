@@ -63,6 +63,7 @@
 "TERM_CUSTOMIZATION" = "Anpassung";
 "TERM_CUSTOMIZATION_PLURAL" = "Anpassungen";
 "TERM_DATE" = "Datum";
+"TERM_DEFAULT_PLURAL" = "Standardeinstellungen";
 "TERM_DELETE" = "löschen";
 "TERM_DIFFERENTIAL" = "Differential";
 "TERM_DIFFERENTIAL_ABBR" = "Diff.";
@@ -659,7 +660,7 @@
 "TITLE_SHOW_TABLES" = "Tabellen anzeigen";
 "TITLE_SKILL_ADJUSTMENT" = "Anpassung für Fähigkeiten";
 "TITLE_SKINS_ELIGIBILITY" = "Zulassungskriterien für Skins";
-"TITLE_SKINS_REQUIRE" = "Skins benötigen…";
+"TITLE_SKINS_REQUIRE" = "Skins benötigen";
 "TITLE_SKIP" = "Übergehen";
 "TITLE_SNAKE" = "Snake";
 "TITLE_SPECIAL_PREFERENCES" = "Spezielle Einstellungen";
@@ -877,8 +878,9 @@
 "NOTICE_DISCONTINUED_HANDICAP_METHOD" = "Diese Handicap-Methode ist nicht mehr wirksam.  Bitte wählen Sie eine andere.";
 "NOTICE_JUNIOR_PAR_REQUIREMENTS" = "Junior-Par ist nicht verfügbar, wenn die Länge der Locher fehlt.";
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "Die persönlichen Handicaps Einstellungen oben sind nicht mit einem „Werkseinstellungen“ Reset geändert.";
-"NOTICE_SKINS_ELIGIBILITY_EVENT" = "Die Einstellungen für die Skins-Zulassungskriterien gelten sowohl für Brutto- als auch für die Netto-Scores in diesem Wettkampf.";
-"NOTICE_SKINS_ELIGIBILITY_SCORECARD" = "Die Einstellungen für die Skins-Zulassungskriterien gelten sowohl für Brutto- als auch für die Netto-Scores auf dieser Scorekarte.";
+"NOTICE_SKINS_ELIGIBILITY" = "Die Einstellungen für die Skins-Zulassungskritien gelten sowohl für Brutto- als auch für Netto-Scores.";
+"NOTICE_SKINS_ELIGIBILITY_EVENT" = "Die Einstellung für die Skins-Zulassungskriterien gilt sowohl für die Brutto- als auch für die Netto-Scores in diesem Wettkampf.";
+"NOTICE_SKINS_ELIGIBILITY_SCORECARD" = "Die Einstellung für die Skins-Zulassungskriterien gilt sowohl für die Brutto- als auch für die Netto-Scores auf dieser Scorekarte.";
 
 //	USGA Data Services
 "NOTICE_USGA_CANCELLED" = "USGA Data Services-Verbindung abgebrochen";

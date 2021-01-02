@@ -63,6 +63,7 @@
 "TERM_CUSTOMIZATION" = "customization";
 "TERM_CUSTOMIZATION_PLURAL" = "customizations";
 "TERM_DATE" = "date";
+"TERM_DEFAULT_PLURAL" = "defaults";
 "TERM_DELETE" = "delete";
 "TERM_DIFFERENTIAL" = "differential";
 "TERM_DIFFERENTIAL_ABBR" = "diff.";
@@ -659,7 +660,7 @@
 "TITLE_SHOW_TABLES" = "Show Tables";
 "TITLE_SKILL_ADJUSTMENT" = "Skill Adjustment";
 "TITLE_SKINS_ELIGIBILITY" = "Skins Eligibility";
-"TITLE_SKINS_REQUIRE" = "Skins require…";
+"TITLE_SKINS_REQUIRE" = "Skins require";
 "TITLE_SKIP" = "Skip";
 "TITLE_SNAKE" = "Snake";
 "TITLE_SPECIAL_PREFERENCES" = "Special Settings";
@@ -877,8 +878,9 @@
 "NOTICE_DISCONTINUED_HANDICAP_METHOD" = "This handicapping method is no longer in effect.  Please select another.";
 "NOTICE_JUNIOR_PAR_REQUIREMENTS" = "Junior Par is not available when hole lengths are missing.";
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "The Personal Handicapping settings above are not changed with a “Factory Settings” reset.";
-"NOTICE_SKINS_ELIGIBILITY_EVENT" = "Skins eligibility settings apply to both gross and net scores in this event.";
-"NOTICE_SKINS_ELIGIBILITY_SCORECARD" = "Skins eligibility settings apply to both gross and net scores on this scorecard.";
+"NOTICE_SKINS_ELIGIBILITY" = "Skins eligibility settings apply to both gross and net scores.";
+"NOTICE_SKINS_ELIGIBILITY_EVENT" = "Skins eligibility setting applies to both gross and net scores in this Event.";
+"NOTICE_SKINS_ELIGIBILITY_SCORECARD" = "Skins eligibility setting applies to both gross and net scores on this Scorecard.";
 
 //	USGA Data Services
 "NOTICE_USGA_CANCELLED" = "USGA Data Services connection cancelled";
