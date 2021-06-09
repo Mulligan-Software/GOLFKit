@@ -6,6 +6,49 @@
   Copyright © 2016 Mulligan Software. All rights reserved.
 */
 
+/*
+	Rules of the road - Localization (translation) strings are identified by a key (usually an UPPER_CASE descriptor)
+	that will be used to search the appropriate language-specific dictionary - like this one - for the proper
+	translation.
+	
+	The onboard dictionaries are searched, in order, by the user's selected language (locale), the system default language,
+	and finally the development language.  The first encounter of the key is used.  If no match is found for the key, the
+	key itself is returned as its translation AND a diagnostic message that a localization is unavailable is sent to the
+	system console log.
+	
+	A translation key may be expressed as a print or display format:
+			"FORMAT_MAXIMUM_%@_ABBR" = "Max. %@";   (%@ designates a string)
+			"FORMAT_MB_DOWNLOADED_%1.1f" = "%1.1fMB heruntergeladen";   (%1.1f designates a floating point number to 1 decimal)
+	that will by returned exactly as translated, including the embedded format specifiers.  The software will use the
+	returned translation as a format, substituting the appropriate already-localized string, number, etc. for presentation.
+
+	A key (and its localization can have multiple embedded format specifiers:
+			"FORMAT_ADJECTIVE_%@_NOUN_%@" = "%1$@ %2$@";  (n$ inside %@ designates the order of substitutions in the final string
+	the adjective (first specifier) should precede (1$) the noun (2$) --> "sonniger Tag"
+			"FORMAT_ADJECTIVE_%@_NOUN_%@" = "%2$@ %1$@";
+	the adjective (first specifier) should follow (2$) the noun (1$) -->  journée ensoleillée
+	
+	The key should be descriptive in English, have no embedded spaces, and be long enough to identify it properly:
+		"TERM_" - prefix identifying a single word or phrase generally without leading or trailing whitespace, lowercase capitalization
+			unless the language (or the word) has capitalization rules.  Software may be used to capitalize TERMs.
+			
+		"_PLURAL" - suffix indicating a plural noun (singular version is unadorned)
+		
+		"TITLE_" - prefix identifying a title, prompt, or translation that should be localized as a title-cased or sentence-cased string.
+			TITLE keys typically are used to translate the contents of dialog boxes, printed or displayed forms, warnings, questions, etc.
+			They will generally NOT be assumed to require further capitalization of case modification by the software.
+	
+	Special keys or keystrokes, symbols or characters occur in the dictionary, like:
+		"ELLIPSIS" = "…";
+		"FOOTNOTE_CHARACTER" = "†";		//	Special character
+	These translations allow the use of simple text "keys" to be used in software which will be translated to an appropriate
+	localized string or character compatible with UNICODE equivalents on Mac devices.  It saves programmers' time and handles linguistic
+	differences.  These translation dictionaries will be exported as UTF-8 files, but keep the left side simple, special-character-free
+	and English.
+
+*/
+
+
 //	Golf Terminology
 "TERM_ACKNOWLEDGEMENT_PLURAL" = "Danksagungen";
 "TERM_ADJUSTED" = "angepasst";
