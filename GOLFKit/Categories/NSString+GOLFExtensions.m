@@ -60,4 +60,33 @@ NSString *ETagLetters = @"abcdefghijklmnopqrstuvwxyz0123456789";
 	return 0;
 }
 
+- (BOOL)isValidHandicapServiceAccountForAuthority:(GOLFHandicapAuthority *)authority {
+	//	determines whether the this string (a GOLFHandicapServiceAccountID) is in a format
+	//	valid for a user account at the handicapping service used by the designated authority.
+	NSUInteger ourLength = self.length;
+	if (ourLength > 0) {
+		if ((authority && [authority length] > 1)) {
+			if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
+				//	WHS uses GHIN, which uses 7 or fewer, 8 or 10 digit account numbers
+				if ([self rangeOfCharacterFromSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]].location == NSNotFound) {
+					if ((ourLength <= 7) || (ourLength == 8) || (ourLength == 10)) {
+						return YES;
+					}
+				}
+			}
+			if ([authority isEqualToString:GOLFHandicapAuthorityUSGA]) {
+				//	USGA (superceded) uses GHIN, which uses 7 digit or fewer account numbers
+				//	It requires decimal digits
+				if ([self rangeOfCharacterFromSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]].location == NSNotFound) {
+					if (ourLength <= 7) {
+						return YES;
+					}
+				}
+			}
+			return YES;	//	We don't have limitations on other handicapping services
+		}	//	if ((authority && [authority length] > 1))
+	}	//	if (self.length > 0)
+	return NO;	//	By default, NO
+}
+
 @end

@@ -134,14 +134,9 @@ extern GOLFHandicapAuthority * const GOLFHandicapAuthorityMulligan;		//	"MULLIGA
 extern GOLFHandicapAuthority * const GOLFHandicapAuthoritySecondBest;	//	"SECONDBEST"
 extern GOLFHandicapAuthority * const GOLFHandicapAuthorityPersonal;		//	"PERSONAL"
 
-//	GOLFLink
-extern NSString * const GOLFLinkLoggedInGAUserCookieValue;
-extern NSString * const GOLFLink_gaCookieValue;
-extern NSString * const GOLFLink_gidCookieValue;
-
 GOLFHandicapAuthority * GOLFDefaultHandicapAuthority(void);
 //	Without any further help, return an appropriate GOLFHandicapAuthority
-//	Last resort is "USGA"
+//	Last resort is "WHS"
 
 GOLFHandicapAuthority * GOLFHandicapAuthorityFromMethodIndex(GOLFHandicapMethodIndex methodIndex);
 //	Returns the GOLFHandicapAuthority mnemonic that best represents the handicapping method indicated by the methodIndex.
@@ -166,6 +161,7 @@ NSArray * GOLFHandicapAuthorities(void);	//	An array of dictionaries
 //	URL						NSString *		The URL of the handicapping association (authority) web site
 //	methodName				NSString *		The localized name of the handicap SYSTEM supported by the authority
 //	certifiable				NSNumber *		A BOOL indicating whether the handicap method requires certification for use
+//	obsolete				NSNumber *		A BOOL indicating that handicapping method can't be a default setting
 
 NSString * GOLFHandicapIndexTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural);
 //	Returns a localized title for an "official" calculated handicap ("Handicap Index®", "Índice de Handicap", "Exakt Handicapen", etc.)
@@ -249,6 +245,9 @@ NSString * GOLFHandicapTournamentScoreModifierForAuthority(GOLFHandicapAuthority
 
 NSString * GOLFHandicapTournamentTitleForAuthority(GOLFHandicapAuthority *authority);
 //	Returns a localized title used to identify a tournament or designated competition round ("Tournament", "Designate Competition", etc.)
+
+NSString * GOLFHandicapServiceAccountIDForAuthority(GOLFHandicapAuthority *authority);
+//	Returns a localized name of the handicapping service identifier ("GHIN number", "GOLFLink account", etc.)
 
 NSString * GOLFRoundModifierTooltip(GOLFHandicapAuthority *authority);
 //	Returns the appropriate tooltip (with line feeds) tabulating the description of round modifiers ("* - used", "T - Torneo", "E - Estimado", etc.

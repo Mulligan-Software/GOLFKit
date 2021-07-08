@@ -27,11 +27,6 @@ GOLFHandicapAuthority * const GOLFHandicapAuthorityMulligan		= @"MULLIGAN";
 GOLFHandicapAuthority * const GOLFHandicapAuthoritySecondBest	= @"SECONDBEST";
 GOLFHandicapAuthority * const GOLFHandicapAuthorityPersonal		= @"PERSONAL";
 
-//	GOLFLink (www.golf.org.au) constants for Lou Loomis login
-NSString * const GOLFLinkLoggedInGAUserCookieValue = @"212251";
-NSString * const GOLFLink_gaCookieValue = @"GA1.3.1660873617.1546283221";
-NSString * const GOLFLink_gidCookieValue = @"GA1.3.1902797135.1547657519";
-
 static NSArray *cachedGOLFHandicapAuthorities = nil;
 static NSDictionary *cachedGOLFHomeCountryInfo = nil;
 
@@ -44,11 +39,14 @@ GOLFHandicapAuthority * GOLFDefaultHandicapAuthority() {
 	}
 	
 	GOLFHandicapAuthority *prospectiveAuthority = [cachedGOLFHomeCountryInfo objectForKey:@"authority"];
-	if (!GOLFHandicapValidAuthority(prospectiveAuthority)) {
+	if (!GOLFHandicapValidAuthority(prospectiveAuthority)
+			|| [[GOLFHandicapInfoForAuthority(prospectiveAuthority) objectForKey:@"obsolete"] boolValue]) {
 		prospectiveAuthority = [[NSUserDefaults standardUserDefaults] objectForKey:@"HandicapAuthority"];
-		if (!GOLFHandicapValidAuthority(prospectiveAuthority)) {
+		if (!GOLFHandicapValidAuthority(prospectiveAuthority)
+				|| [[GOLFHandicapInfoForAuthority(prospectiveAuthority) objectForKey:@"obsolete"] boolValue]) {
 			prospectiveAuthority = [[NSUserDefaults standardUserDefaults] objectForKey:@"LastSelectedHandicapAuthority"];
-			if (!GOLFHandicapValidAuthority(prospectiveAuthority)) {
+			if (!GOLFHandicapValidAuthority(prospectiveAuthority)
+					|| [[GOLFHandicapInfoForAuthority(prospectiveAuthority) objectForKey:@"obsolete"] boolValue]) {
 				prospectiveAuthority = GOLFHandicapAuthorityWHS;
 			}
 		}
@@ -172,6 +170,7 @@ NSDictionary * GOLFHandicapInfoForAuthority(GOLFHandicapAuthority *authority) {
 	//	URL						NSString *		The URL of the handicapping association (authority) web site
 	//	methodName				NSString *		The localized name of the handicap SYSTEM supported by the authority
 	//	certifiable				NSNumber *		A BOOL indicating whether the handicap method requires certification for use
+	//	obsolete				NSNumber *		A BOOL indicating the handicap method is not available as a default
 	
 	if (authority && ([authority length] > 0)) {
 		for (NSDictionary *authDict in GOLFHandicapAuthorities()) {
@@ -246,6 +245,7 @@ NSArray * GOLFHandicapAuthorities(void) {
 								? [NSString stringWithFormat:@"%@ (%@)", GOLFLocalizedString(@"HANDICAP_METHOD_USGA"), GOLFLocalizedString(@"TERM_SUPERSEDED")]
 								: GOLFLocalizedString(@"HANDICAP_METHOD_USGA")), @"methodName",
 						[NSNumber numberWithBool:(enforceExtinctHandicaps ? NO : YES)], @"certifiable",
+						[NSNumber numberWithBool:YES], @"obsolete",
 						nil],
 				nil];
 		
@@ -999,6 +999,25 @@ NSString * GOLFHandicapTournamentTitleForAuthority(GOLFHandicapAuthority *author
 		}
 	}
 	return [GOLFLocalizedString(@"TERM_COMPETITION") capitalizedString];	//	"Competition"
+}
+
+//=================================================================
+//	GOLFHandicapServiceAccountIDForAuthority(authority)
+//=================================================================
+NSString * GOLFHandicapServiceAccountIDForAuthority(GOLFHandicapAuthority *authority) {
+//	Returns a localized name of the handicapping service identifier ("GHIN number", "GOLFLink account", etc.)
+	if (authority) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityWHS] || [authority isEqualToString:GOLFHandicapAuthorityUSGA]) {
+			return GOLFLocalizedString(@"TITLE_GHIN_NUMBER");	// "GHIN number"
+		}
+		else if ([authority isEqualToString:GOLFHandicapAuthorityRCGA]) {
+			return GOLFLocalizedString(@"TITLE_HDCP_NETWORK_NUMBER");	// "Handicap Network Account"
+		}
+		else if ([authority isEqualToString:GOLFHandicapAuthorityAGU]) {
+			return GOLFLocalizedString(@"TITLE_GOLFLINK_NUMBER");	// "GOLFLink Number"
+		}
+	}
+	return GOLFLocalizedString(@"TITLE_ACCOUNT_NUMBER");	//	"Account Number"
 }
 
 //=================================================================

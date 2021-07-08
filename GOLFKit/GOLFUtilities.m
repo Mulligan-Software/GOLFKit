@@ -9,6 +9,7 @@
 #import "GOLFKit.h"
 #import "GOLFUtilities.h"
 #import "GOLFHandicapping.h"
+#import "GOLFHandicapLookup.h"
 
 //	External constants
 NSString * const GOLFLocalizedStringNotFound = @"*-*";

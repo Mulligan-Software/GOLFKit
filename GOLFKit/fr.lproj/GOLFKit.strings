@@ -7,6 +7,7 @@
 */
 
 //	Golf Terminology
+"TERM_ACCOUNT" = "compte";
 "TERM_ACKNOWLEDGEMENT_PLURAL" = "remerciements";
 "TERM_ADJUSTED" = "ajusté";
 "TERM_ADJUSTED_ABBR" = "aju.";
@@ -60,6 +61,7 @@
 "TERM_COUNTRY_NOUN" = "pays";
 "TERM_COURSE" = "parcours";
 "TERM_COURSE_PLURAL" = "parcours";
+"TERM_CURRENT" = "actuel";
 "TERM_CUSTOMIZATION" = "personnalisation";
 "TERM_CUSTOMIZATION_PLURAL" = "personnalisations";
 "TERM_DATE" = "date";
@@ -81,6 +83,7 @@
 "TERM_EVENT" = "événement";
 "TERM_EVENT_PLURAL" = "événements";
 "TERM_EVERYTHING" = "tout";
+"TERM_FAILED" = "échoué";
 "TERM_FAIRWAY" = "fairway";
 "TERM_FEMALE" = "féminin";
 "TERM_FEMALE_ABBR" = "F";
@@ -92,6 +95,7 @@
 "TERM_FOR" = "pour";	// Net FOR Best-Ball
 "TERM_FORWARD" = "en avant";
 "TERM_FOR_ABOUT" = "de";
+"TERM_FOUND" = "trouvé";
 "TERM_FOURBALL" = "Quatre-Balle";
 "TERM_FOURSOMES" = "Foursomes";
 "TERM_FROM" = "de";
@@ -102,6 +106,7 @@
 "TERM_GAIN" = "gain";
 "TERM_GENDER" = "genre";
 "TERM_GIRL_PLURAL" = "jeune fille";
+"TERM_GOAL" = "but";
 "TERM_GOLF" = "golf";
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "brut";
@@ -121,6 +126,7 @@
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "Irlandais";
 "TERM_KEYBOARD" = "clavier";
+"TERM_LAST_NAME" = "nom de famille";
 "TERM_LEADERBOARD" = "leaderboard";
 "TERM_LEVEL" = "niveau";
 "TERM_LIMITED" = "limité";
@@ -154,6 +160,7 @@
 "TERM_NEXT" = "suivant";
 "TERM_NINE" = "neuf";
 "TERM_NINE_PLURAL" = "neufs";
+"TERM_9_HOLE" = "9-trou";
 "TERM_NINEPT" = "9-Points";
 "TERM_NO" = "non";
 "TERM_NONE" = "aucun";
@@ -170,6 +177,7 @@
 "TERM_OPEN" = "ouvrir";
 "TERM_OPT_OUT" = "se retirer";
 "TERM_OVERALL" = "général";
+"TERM_OVERRIDDEN" = "outrepassé";
 "TERM_PAIRING" = "jumelage";
 "TERM_PAIRING_PLURAL" = "jumelages";
 "TERM_PAR" = "par";
@@ -259,6 +267,7 @@
 "TERM_UNLOCKED" = "déverrouillé";
 "TERM_UNNAMED" = "innomé";
 "TERM_UNRATED" = "non évalué";
+"TERM_UPDATED" = "mise à jour";
 "TERM_USE" = "utiliser";
 "TERM_USED" = "utilisé";
 "TERM_USED_ABBR" = "util.";
@@ -365,6 +374,7 @@
 //	Titles & Abbr.
 "TITLE_ABBREVIATED_DATES" = "Dates Abrégées";
 "TITLE_ACCESSORY_PRINT_INITIALS" = "Initiales des Joueurs";
+"TITLE_ACCOUNT_NUMBER" = "Numéro de Compte";
 "TITLE_ADD_A_ROUND" = "Ajoutez un tour";
 "TITLE_ADD_BUTTON" = "Ajouter";
 "TITLE_ADVANCED_DUPLICATES" = "Prohibir les handicaps de trou dupliqués";
@@ -471,8 +481,12 @@
 "TITLE_FRONT_SIDE" = "Premier Côté";	//	m.
 "TITLE_FULL_HDCP" = "Hdcp. Complète";
 "TITLE_GETTING_STARTED" = "Commencer…";
-"TITLE_GHIN_NUMBER" = "Numéro de compte GHIN";
+"TITLE_GHIN" = "Golf Handicap Information Network (GHIN)";
+"TITLE_GHIN_NUMBER" = "Numéro de GHIN";
 "TITLE_GOLF_GLOSSARY" = "Glossaire de Golf";
+"TITLE_GOLF_NETWORK" = "Golf Network (Canada)";
+"TITLE_GOLFLINK" = "GOLFLink (Australia)";
+"TITLE_GOLFLINK_NUMBER" = "Compte GOLFLink";
 "TITLE_GORILLA" = "Gorilla";
 "TITLE_GRADE" = "Classe";
 "TITLE_GRAPHING_COLORS" = "Couleurs d’Infographie";
@@ -488,6 +502,7 @@
 "TITLE_HANDICAP_ADJUSTED_GROSS" = "Score Brut Adjusté";
 "TITLE_HANDICAP_ALLOWANCE" = "Allocation de Handicap";
 "TITLE_HANDICAP_ALLOWANCE_ABBR" = "Alloc";
+"TITLE_HANDICAP_AUTHORITY" = "Autorité Handicapante";
 "TITLE_HANDICAP_CARDS" = "Cartes de Handicap";
 "TITLE_HANDICAP_CATEGORY" = "Handicap Catégorie";
 "TITLE_HANDICAP_CATEGORY_ABBR" = "Catégorie";
@@ -543,6 +558,7 @@
 "TITLE_HANDICAP_WORLD_INDEX_RTM" = "Handicap Index®";
 "TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "Handicap Indexes";
 "TITLE_HANDICAPPING_NUMBER" = "Numéro de compte Handicap";
+"TITLE_HDCP_NETWORK_NUMBER" = "Compte Handicap Network";
 "TITLE_HOGAN" = "Hogan";
 "TITLE_HOLE_HANDICAP" = "Handicap";
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Trou score ajustement";
@@ -576,6 +592,11 @@
 "TITLE_LOCK_EVENTS" = "Verrouriller les Événements";
 "TITLE_LOCK_PLAYERS" = "Verrouriller les Joueurs";
 "TITLE_LOCK_SCORECARDS" = "Verrouriller les Cartes de Score";
+"TITLE_LOOKUP_HANDICAP" = "Rechercher un Handicap";
+"TITLE_LOOKUP_HANDICAP_PLURAL" = "Rechercher des Handicaps";
+"TITLE_LOOKUP_ONLY" = "Recherche uniquement - aucune mise à jour";
+"TITLE_LOOKUP_OVERRIDES_%@" = "Remplacer au %@ les Index de Handicap";
+"TITLE_LOOKUP_RECORDS" = "Créer des Données de Handicap";
 "TITLE_LOW_BALL_HIGH_BALL" = "Balle Basse - Balle Haute";
 "TITLE_LOW_BALL_LOW_TOTAL" = "Balle Basse - Total Bas";
 "TITLE_LOW_BALL_SECOND_BALL" = "Balle Basse - Balle Seconde";
@@ -667,6 +688,7 @@
 "TITLE_SPECIAL_PREFERENCES" = "Réglages Spéciaux";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
+"TITLE_START" = "Commencer";
 "TITLE_STARTERS_LIST" = "Liste de Départ";
 "TITLE_STARTERS_LIST_COLUMNS" = "Joueur\tMembre\tJalon\tDépart\tHeure\tVoiture";
 "TITLE_STARTING_TEE" = "L’aire de départ initial";
@@ -692,6 +714,7 @@
 "TITLE_TIMES_OR_TEES" = "Heures ou Jalons";
 "TITLE_TOTAL_POINTS" = "Points Totaux";
 "TITLE_TRASH" = "Trash, Restes, Dots";
+"TITLE_UNKNOWN_SERVICE" = "Unknown Handicapping Service";
 "TITLE_UNLINK_DROPBOX" = "Délier Dropbox";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Débloquer tous Cartes d’Événement";
 "TITLE_UP_AND_DOWN" = "En haut et en bas";
@@ -778,12 +801,14 @@
 "FORMAT_EVENT_HAS_TEE_%@_WARNING" = "Attention: L’événement est configuré avec une aire de départ initiale (%@).";
 "FORMAT_EVENT_HAS_TIME_%@_WARNING" = "Attention: L’événement est configuré avec une heure de départ (%@).";
 "FORMAT_FOR_TITLE_%@" = "Pour %@…";	//	For selected players… or For Al Czervik…
+"FORMAT_INVALID_%@" = "%@ invalide";
 "FORMAT_%@_IS_DEFAULT_TEAM_CAPTAIN" = "%@ assigné par handicap en tant que capitaine d’équipe.";
 "FORMAT_%@_IS_DESIGNATED_TEAM_CAPTAIN" = "%@ est désigné capitaine d’équipe.";
 "FORMAT_%@_IS_DEFAULT_SCORECARD_CAPTAIN" = "%@ assigné par handicap en tant que capitaine du carte de score.";
 "FORMAT_%@_IS_DESIGNATED_SCORECARD_CAPTAIN" = "%@ est désigné capitaine du carte de score.";
 "FORMAT_MAXIMUM_%@_ABBR" = "Max. %@";
 "FORMAT_MB_DOWNLOADED_%1.1f" = "%1.1fMB téléchargés";
+"FORMAT_MISSING_%@" = "%@ manquante";
 "FORMAT_NET_%@" = "%@ Net";
 "FORMAT_NO_%@" = "pas de %@";	//	"no strokes", "no players"
 "FORMAT_NOT_AVAILABLE_WITH_%@" = "non disponible pour %@";
@@ -882,6 +907,15 @@
 "NOTICE_SKINS_ELIGIBILITY" = "Les paramètres d’éligibilité des skins s’appliquent aux scores bruts et nets.";
 "NOTICE_SKINS_ELIGIBILITY_EVENT" = "Le paramètre d’éligibilité des skins s’applique aux scores bruts et nets de cet Événement.";
 "NOTICE_SKINS_ELIGIBILITY_SCORECARD" = "Le paramètre d’éligibilité des skins s’applique aux scores bruts et nets sur cette Carte de score.";
+
+//	Handicap Services
+"NOTICE_SERVICE_CANCELLED" = "Connexion handicap service annulée";
+"NOTICE_SERVICE_CANCELLING" = "Anuller la connexion handicap service…";
+"NOTICE_SERVICE_CODE_%ld_DESC_%@" = "Handicap service a renvoyé le code %ld (%@)";
+"NOTICE_SERVICE_CONNECTED" = "Connecté à handicap service";
+"NOTICE_SERVICE_CONNECTING" = "Connexion à handicap service…";
+"NOTICE_SERVICE_FAILED" = "Connexion handicap service a échoué";
+"NOTICE_SERVICE_RECEIVING" = "Réception de handicap service…";
 
 //	USGA Data Services
 "NOTICE_USGA_CANCELLED" = "Connexion USGA Data Services annulée";
@@ -1226,3 +1260,10 @@
 "Venezuela" = "Venezuela";
 "Wales" = "Wales";
 "Zimbabwe" = "Zimbabwe";
+
+//	Handicap Services
+"HANDICAP_SERVICE_UNREACHABLE" = "Handicap service est inaccessible";
+"SERVICE_GETHANDICAP_FAIL" = "GetHandicap requête a échoué";
+"SERVICE_GETHANDICAP_JSON_FAIL" = "GetHandicap JSON sérialisation a échoué";
+"SERVICE_NOT_AVAILABLE_FAIL" = "Handicap service non disponible";
+

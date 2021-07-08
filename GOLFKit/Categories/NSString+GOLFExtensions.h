@@ -15,4 +15,6 @@
 + (id)stringForWageringStrokesAtHole:(GOLFHandicapStrokes)holeStrokes;
 - (GOLFHandicapStrokes)wageringStrokesAtIndex:(NSUInteger)holeIndex;
 
+- (BOOL)isValidHandicapServiceAccountForAuthority:(GOLFHandicapAuthority *)authority;
+
 @end

@@ -45,6 +45,7 @@ typedef NS_ENUM(NSInteger, GOLFKitErrorDomainError) {
 #import <GOLFKit/GOLFClubs.h>
 #import <GOLFKit/GOLFScoring.h>
 #import <GOLFKit/GOLFHandicapping.h>
+#import <GOLFKit/GOLFHandicapLookup.h>
 #import <GOLFKit/GOLFWagering.h>
 #import <GOLFKit/MulliganScoring.h>
 #import <GOLFKit/USGADataServices.h>

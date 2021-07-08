@@ -37,4 +37,5 @@ typedef float GOLFOfficialHandicap;				//	The course and player-independent nume
 typedef NSInteger GOLFPlayingHandicap;			//	The whole unadjusted course and player-dependent strokes calculated for a player
 typedef NSInteger GOLFHandicapStrokes;			//	Any value related to strokes earned, taken or used
 typedef float GOLFPlayingConditionAdjustment;	//	An handicapping differential adjustment based on playing conditions
+typedef NSString GOLFHandicapServiceAccountID;	//	A handicapping service account number or ID  (a GHIN, GolfLink or HandicapNetwork number)
 
