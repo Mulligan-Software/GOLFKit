@@ -499,7 +499,7 @@
 "TITLE_EDIT_BUTTON" = "Bearbeiten";
 "TITLE_EDIT_EVENT" = "Ereignis bearbeiten";
 "TITLE_EDIT_PLAYER" = "Spieler bearbeiten";
-"TITLE_EFFECTIVE_DATE" = "Tag des Inkrafttretens";
+"TITLE_EFFECTIVE_DATE" = "Gültigkeitsdatum";
 "TITLE_EGO_PULL_TO_SORT" = "Zum Sortieren ziehen…";
 "TITLE_EGO_RELEASE_TO_SORT" = "Zur Sortierung freigeben…";
 "TITLE_EGO_SORTING" = "Sortierung…";
@@ -626,6 +626,7 @@
 "TITLE_KEY_NEXT" = "weiter";
 "TITLE_KEY_RETURN" = "⮐";	//	"Zeilenschalter" or "⮐"
 "TITLE_LAST_HOLE" = "letztes Loch";
+"TITLE_LATE_EFFECTIVE_%@" = "Gültigkeitsdatum folgt %@";
 "TITLE_LICENSED_OWNER" = "Lizenzinhaber";
 "TITLE_LIGHT" = "Helle";
 "TITLE_LIMIT_SCORE" = "Begrenzte Lochpunktzahl";
@@ -665,6 +666,7 @@
 "TITLE_OPTIONS" = "Optionen";
 "TITLE_ORGANIZED_COMPETITION" = "Organisierter Wettbewerb";	//	The WHS phrase for "Tournament" play
 "TITLE_OK_BUTTON" = "OK";
+"TITLE_OVERRIDE_UNAVAILABLE" = "Überschreiben nicht verfügbar";
 "TITLE_PCC" = "Berechnung der Speilbedingungen";
 "TITLE_PCC_ABBR" = "PCC";
 "TITLE_PENALTY_ROUND" = "Strafrunde";
@@ -957,7 +959,9 @@
 "NOTICE_SERVICE_CODE_%ld_DESC_%@" = "Handicapservice hat den Code %ld zurückgegeben (%@)";
 "NOTICE_SERVICE_CONNECTED" = "Verbunden mit Handicapservice";
 "NOTICE_SERVICE_CONNECTING" = "Verbindung zu Handicapservice…";
+"NOTICE_SERVICE_ERROR_INVALID" = "Fehler - Keine gültigen Daten gefunden";
 "NOTICE_SERVICE_FAILED" = "Handicapservice-Verbindung ist fehlgeschlagen";
+"NOTICE_SERVICE_NO_CONNECTION" = "Keine Verbindung zum Handicapservice…";
 "NOTICE_SERVICE_RECEIVING" = "Empfangen von Handicapservice…";
 
 //	USGA Data Services

@@ -16,6 +16,21 @@ typedef NS_ENUM(NSUInteger, GOLFHandicapLookupService) {
 	GOLFHandicapLookupServiceUnknown = 99	//	Unknown handicap lookup technique
 };
 
+typedef NS_ENUM(NSUInteger, GOLFHandicapLookupStatus) {
+	GOLFHandicapLookupStatusNone = 0,		//	none (0) - no indicator
+	GOLFHandicapLookupStatusSuccess,		//	Lookup succeeded - green indicator
+	GOLFHandicapLookupStatusFailure,		//	Lookup failed - red indicator
+	GOLFHandicapLookupStatusWarning,		//	Lookup succeeded or caution - yellow indicator
+	GOLFHandicapLookupStatusUnknown = 999	//	Unknown status - gray indicator
+};
+
+typedef NS_ENUM(NSUInteger, GOLFHandicapLookupGoal) {
+	GOLFHandicapLookupGoalQueryOnly = 0,	//	Lookup only - no data updates
+	GOLFHandicapLookupGoalHandicapRecords,	//	Successful lookup creates GOLFHandicapRecord
+	GOLFHandicapLookupGoalIndexOverrides,	//	Successful lookup sets Scorecard or Event index override
+	GOLFHandicapLookupGoalUnknown = 999		//	Unknown goal
+};
+
 //	GOLFLink
 extern NSString * _Nonnull const GOLFLinkLoggedInGAUserCookieValue;
 extern NSString * _Nonnull const GOLFLink_gaCookieValue;
@@ -26,6 +41,7 @@ NSString * _Nonnull GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService loo
 
 
 //	Misc constants
+#define GOLFHandicapLookupProgressNotification @"GOLFHandicapLookupProgress"	//	for Notification
 #define GOLFHandicapLookupDidCompleteNotification @"GOLFHandicapLookupDidComplete"	//	for Notification
 #define GOLFHandicapLookupDidFailNotification @"GOLFHandicapLookupDidFail"			//	for Notification
 
@@ -43,6 +59,8 @@ typedef NS_ENUM(NSInteger, GOLFHandicapLookupServiceErrorDomainError) {
 	GOLFHandicapLookupServiceGetCourseDetailsError	= 17195,	// something wrong with GetCourseDetails retrieval
 };
 
+//	Forward declarations
+@class GOLFHandicapLookupAgent;
 
 @protocol GOLFHandicapLookupAgentDelegate <NSObject>
 
@@ -57,25 +75,34 @@ typedef NS_ENUM(NSInteger, GOLFHandicapLookupServiceErrorDomainError) {
 //	lookupService			NSNumber *		A GOLFHandicapLookupService identifying the service
 - (NSDictionary * _Nullable)GOLFHandicapLookupServiceInfo;
 
+//	Allows the GOLFHandicapLookupAgent to report its progress with a localized
+//	NSString indicating its status.  There is no return from the delegate
+- (void)GOLFHandicapLookupAgent:(GOLFHandicapLookupAgent *_Nonnull)lookupAgent reportingProgress:(NSString *_Nonnull)progressNotice;
+
 @end
 
 
 @interface GOLFHandicapLookupAgent : NSObject <NSURLSessionDelegate, NSURLSessionTaskDelegate, NSURLSessionDataDelegate>
 
-@property (nullable, retain) id <GOLFHandicapLookupAgentDelegate> delegate;
-@property (nonatomic, strong, nullable) NSURLSession *handicapLookupSession;
+@property (nonatomic, weak, nullable) id <GOLFHandicapLookupAgentDelegate> delegate;
+
+@property (nonatomic, weak, nullable) NSURLSession *handicapLookupSession;
+@property (nonatomic, weak, nullable) NSURLSessionTask *getHandicapTask;
+@property (nonatomic, strong, nullable) NSMutableData *getHandicapData;
+@property (nonatomic, strong, nullable) NSString * getHandicapResponseString;
+@property (nonatomic, strong, nullable) NSDate * getHandicapTaskStart;
+
 @property (nonatomic, strong) NSString * _Nullable userAgent;
 
 //	Lookup Handicap
 @property (nonatomic, weak, nullable) NSDictionary *queryInfo;
 
-@property (nonatomic, strong, nullable) NSURLSessionTask *getHandicapTask;
-@property (nonatomic, strong, nullable) NSMutableData *getHandicapData;
-@property (nonatomic, strong, nullable) NSString * getHandicapResponseString;
-@property (nonatomic, strong, nullable) NSDate * getHandicapTaskStart;
+@property (nonatomic, assign) GOLFHandicapLookupService lookupService;
 @property (nonatomic, copy, nullable) void (^GetHandicapTaskCompletionHandler)(NSDictionary * _Nullable queryResponse, NSError * _Nullable error);
 
-@property (nullable, strong) NSString *progressNotice;
+@property (nonatomic, nullable, strong) NSString *progressNotice;
+@property (nonatomic, assign) BOOL canReportProgressToDelegate;
+@property (nonatomic, assign) BOOL sendProgressNotifications;
 @property (nullable, strong) NSTimer *startupTimer;
 @property (nonatomic, assign) BOOL needCancel;
 

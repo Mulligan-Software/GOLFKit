@@ -583,6 +583,7 @@
 "TITLE_KEY_NEXT" = "siguiente";
 "TITLE_KEY_RETURN" = "⮐";	//	"intro", "retorno" or "⮐"
 "TITLE_LAST_HOLE" = "Último Hoyo";
+"TITLE_LATE_EFFECTIVE_%@" = "Efectiva sigue a %@";
 "TITLE_LICENSED_OWNER" = "Titular de la licencia";
 "TITLE_LIGHT" = "Claro";
 "TITLE_LIMIT_SCORE" = "Score Limite de Hoyo";
@@ -622,6 +623,7 @@
 "TITLE_OPTIONS" = "Opciones";
 "TITLE_ORGANIZED_COMPETITION" = "Competencia Organizada";	//	The WHS phrase for "Tournament" play
 "TITLE_OK_BUTTON" = "OK";
+"TITLE_OVERRIDE_UNAVAILABLE" = "anular no disponible";
 "TITLE_PCC" = "Cálculo de Condiciones de Juego";
 "TITLE_PCC_ABBR" = "CCJ";
 "TITLE_PENALTY_ROUND" = "Ronda Penalidad";
@@ -914,7 +916,9 @@
 "NOTICE_SERVICE_CODE_%ld_DESC_%@" = "Handicap service devolvió el código %ld (%@)";
 "NOTICE_SERVICE_CONNECTED" = "Conectado a handicap service";
 "NOTICE_SERVICE_CONNECTING" = "Conexión a handicap service…";
+"NOTICE_SERVICE_ERROR_INVALID" = "Error - No se encontraron datos válidos";
 "NOTICE_SERVICE_FAILED" = "Conexión de handicap service falló";
+"NOTICE_SERVICE_NO_CONNECTION" = "Sin conexión con handicap service…";
 "NOTICE_SERVICE_RECEIVING" = "Recibiendo de handicap service…";
 
 //	USGA Data Services
