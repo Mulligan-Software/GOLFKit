@@ -64,6 +64,7 @@
 "TERM_AND" = "und";
 "TERM_APPEARANCE" = "Erscheinungsbild";
 "TERM_ASSIGN" = "zuweisen";
+"TERM_ATTESTOR" = "Attestierer";
 "TERM_AUTHORITY" = "Autorität";
 "TERM_AUTHORIZATION" = "Autorisierung";
 "TERM_AVERAGE" = "mittlere";
@@ -183,6 +184,7 @@
 "TERM_MALE" = "männlich";
 "TERM_MALE_ABBR" = "M";
 "TERM_MALE_PLAYER_PLURAL" = "Herren";
+"TERM_MARKER" = "Punktrichter";
 "TERM_MATCH" = "Match";
 "TERM_MATCH_PLURAL" = "Matches";
 "TERM_MAXIMUM" = "maximum";
@@ -240,6 +242,7 @@
 "TERM_PUTT_PLURAL" = "Putts";
 "TERM_QUIT" = "beenden";
 "TERM_QUOTA" = "Quote";
+"TERM_RANDOMLY" = "zufällig";
 "TERM_RANK" = "Rang";
 "TERM_RATING" = "Bewertung";
 "TERM_RATING_PLURAL" = "Bewertungen";

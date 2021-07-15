@@ -185,7 +185,7 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 
 - (void)invalidateAndClose {
 	if (self.handicapLookupSession != nil) {
-		[self.handicapLookupSession invalidateAndCancel];
+		[self.handicapLookupSession finishTasksAndInvalidate];
 	}
 }
 
@@ -244,7 +244,6 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 		NSURL *url = components.URL;
 		
 		NSMutableURLRequest *lookupRequest = [[NSMutableURLRequest alloc] initWithURL:url];
-//		[lookupRequest setValue:@"https://www.ghin.com" forHTTPHeaderField:@"Origin"];
 		lookupRequest.HTTPMethod = @"GET";
 		lookupRequest.HTTPBody = [NSData data];
 		lookupRequest.networkServiceType = NSURLNetworkServiceTypeDefault;
@@ -257,7 +256,6 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 		[lookupRequest setValue:self.userAgent forHTTPHeaderField:@"User-Agent"];
 		[lookupRequest setValue:@"https://www.ghin.com/login?returnUrl=/profile" forHTTPHeaderField:@"Referer"];
 		[lookupRequest setValue:@"br, gzip, deflate" forHTTPHeaderField:@"Accept-Encoding"];
-//		[lookupRequest setValue:@"en-us" forHTTPHeaderField:@"Accept-Language"];
 //		[lookupRequest setValue:@"application/json, text/plain, */*" forHTTPHeaderField:@"Accept"];
 //		[lookupRequest setValue:[NSString stringWithFormat:@"W/\"%@\"", [NSString randomETagStringOfLength:32]] forHTTPHeaderField:@"If-None-Match"];
 		[lookupRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
@@ -591,19 +589,19 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 }
 
 //- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didSendBodyData:(int64_t)bytesSent totalBytesSent:(int64_t)totalBytesSent totalBytesExpectedToSend:(int64_t)totalBytesExpectedToSend {
-
-	//	session - The session containing the data task.
-	//	task - The data task.
-	//	bytesSent - The number of bytes sent since the last time this delegate method was called.
-	//	totalBytesSent - The total number of bytes sent so far.
-	//	totalBytesExpectedToSend - The expected length of the body data. The URL loading system can determine the length of the upload data in three ways:
-	//		From the length of the NSData object provided as the upload body.
-	//		From the length of the file on disk provided as the upload body of an upload task (not a download task).
-	//		From the Content-Length in the request object, if you explicitly set it.
-	//		Otherwise, the value is NSURLSessionTransferSizeUnknown (-1) if you provided a stream or body data object, or zero (0) if you did not.
-
-	//	Discussion - The totalBytesSent and totalBytesExpectedToSend parameters are also available as NSURLSessionTask properties countOfBytesSent and countOfBytesExpectedToSend. Or, since NSURLSessionTask supports NSProgressReporting, you can use the task’s progress property instead, which may be more convenient.
-
+//
+//	//	session - The session containing the data task.
+//	//	task - The data task.
+//	//	bytesSent - The number of bytes sent since the last time this delegate method was called.
+//	//	totalBytesSent - The total number of bytes sent so far.
+//	//	totalBytesExpectedToSend - The expected length of the body data. The URL loading system can determine the length of the upload data in three ways:
+//	//		From the length of the NSData object provided as the upload body.
+//	//		From the length of the file on disk provided as the upload body of an upload task (not a download task).
+//	//		From the Content-Length in the request object, if you explicitly set it.
+//	//		Otherwise, the value is NSURLSessionTransferSizeUnknown (-1) if you provided a stream or body data object, or zero (0) if you did not.
+//
+//	//	Discussion - The totalBytesSent and totalBytesExpectedToSend parameters are also available as NSURLSessionTask properties countOfBytesSent and countOfBytesExpectedToSend. Or, since NSURLSessionTask supports NSProgressReporting, you can use the task’s progress property instead, which may be more convenient.
+//
 //	if (session == self.lookupHandicapSession) {
 //	}
 //}
@@ -667,8 +665,8 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 					self.progressNotice = GOLFLocalizedString(@"NOTICE_SERVICE_CANCELLING");
 					[self.getHandicapTask cancel];
 				} else {
-					NSTimeInterval halfMinuteAgo = -30.0;
-					if ([self.getHandicapTaskStart timeIntervalSinceNow] < halfMinuteAgo) {
+					NSTimeInterval fiveSecondsAgo = -5.0;
+					if ([self.getHandicapTaskStart timeIntervalSinceNow] < fiveSecondsAgo) {
 						self.progressNotice = GOLFLocalizedString(@"NOTICE_SERVICE_NO_CONNECTION");
 						[self.getHandicapTask cancel];	//	Cancel and report an error
 					}
@@ -677,12 +675,6 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 		}
 	}
 }
-
-//- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didFinishCollectingMetrics:(NSURLSessionTaskMetrics *)metrics API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) {
-//	//	session - The session collecting the metrics.
-//	//	task - The task whose metrics have been collected.
-//	//	metrics - The collected metrics.
-//}
 
 #pragma mark <NSURLSessionDataDelegate>
 
@@ -713,32 +705,6 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 	}
 }
 
-//- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didBecomeDownloadTask:(NSURLSessionDownloadTask *)downloadTask {
-
-	//	session - The session containing the task that was replaced by a download task.
-	//	dataTask - The data task that was replaced by a download task.
-	//	downloadTask - The new download task that replaced the data task.
-
-	//	Discussion - When your URLSession:dataTask:didReceiveResponse:completionHandler: delegate method uses the NSURLSessionResponseBecomeDownload disposition to convert the request to use a download, the session calls this delegate method to provide you with the new download task. After this call, the session delegate receives no further delegate method calls related to the original data task.
-
-//	if (session == self.handicapLookupSession) {
-//	}
-//}
-
-//- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didBecomeStreamTask:(NSURLSessionStreamTask *)streamTask {
-
-	//	session - The session containing the task that was replaced by a stream task.
-	//	dataTask - The data task that was replaced by a stream task.
-	//	streamTask - The new stream task that replaced the data task.
-
-	//	Discussion - When your URLSession:dataTask:didReceiveResponse:completionHandler: delegate method uses the NSURLSessionResponseBecomeStream disposition to convert the request to use a stream, the session calls this delegate method to provide you with the new stream task.  After this call, the session delegate receives no further delegate method calls related to the original data task.
-
-	//	For requests that were pipelined, the stream task allows only reading, and the object immediately sends the delegate message URLSession:writeClosedForStreamTask:. You can disable pipelining for all requests in a session by setting the HTTPShouldUsePipelining property on its NSURLSessionConfiguration object, or for individual requests by setting the HTTPShouldUsePipelining property on an NSURLRequest object.
-
-//	if (session == self.handicapLookupSession) {
-//	}
-//}
-
 - (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask didReceiveData:(NSData *)data {
 
 	//	session - The session containing the data task that provided data.
@@ -763,23 +729,23 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 }
 
 //- (void)URLSession:(NSURLSession *)session dataTask:(NSURLSessionDataTask *)dataTask willCacheResponse:(NSCachedURLResponse *)proposedResponse completionHandler:(void (^)(NSCachedURLResponse *cachedResponse))completionHandler {
-
-	//	session - The session containing the data (or upload) task.
-	//	dataTask - The data (or upload) task.
-	//	proposedResponse - The default caching behavior. This behavior is determined based on the current caching policy and the values of certain received headers, such as the Pragma and Cache-Control headers.
-	//	completionHandler - A block that your handler must call, providing either the original proposed response, a modified version of that response, or NULL to prevent caching the response. If your delegate implements this method, it must call this completion handler; otherwise, your app leaks memory.
-
-	//	Discussion - The session calls this delegate method after the task finishes receiving all of the expected data. If you don’t implement this method, the default behavior is to use the caching policy specified in the session’s configuration object. The primary purpose of this method is to prevent caching of specific URLs or to modify the userInfo dictionary associated with the URL response.
-
-	//	This method is called only if the NSURLProtocol handling the request decides to cache the response. As a rule, responses are cached only when all of the following are true:
-	//		The request is for an HTTP or HTTPS URL (or your own custom networking protocol that supports caching).
-	//		The request was successful (with a status code in the 200–299 range).
-	//		The provided response came from the server, rather than out of the cache.
-	//		The session configuration’s cache policy allows caching.
-	//		The provided URLRequest object's cache policy (if applicable) allows caching.
-	//		The cache-related headers in the server’s response (if present) allow caching.
-	//		The response size is small enough to reasonably fit within the cache. (For example, if you provide a disk cache, the response must be no larger than about 5% of the disk cache size.)
-
+//
+//	//	session - The session containing the data (or upload) task.
+//	//	dataTask - The data (or upload) task.
+//	//	proposedResponse - The default caching behavior. This behavior is determined based on the current caching policy and the values of certain received headers, such as the Pragma and Cache-Control headers.
+//	//	completionHandler - A block that your handler must call, providing either the original proposed response, a modified version of that response, or NULL to prevent caching the response. If your delegate implements this method, it must call this completion handler; otherwise, your app leaks memory.
+//
+//	//	Discussion - The session calls this delegate method after the task finishes receiving all of the expected data. If you don’t implement this method, the default behavior is to use the caching policy specified in the session’s configuration object. The primary purpose of this method is to prevent caching of specific URLs or to modify the userInfo dictionary associated with the URL response.
+//
+//	//	This method is called only if the NSURLProtocol handling the request decides to cache the response. As a rule, responses are cached only when all of the following are true:
+//	//		The request is for an HTTP or HTTPS URL (or your own custom networking protocol that supports caching).
+//	//		The request was successful (with a status code in the 200–299 range).
+//	//		The provided response came from the server, rather than out of the cache.
+//	//		The session configuration’s cache policy allows caching.
+//	//		The provided URLRequest object's cache policy (if applicable) allows caching.
+//	//		The cache-related headers in the server’s response (if present) allow caching.
+//	//		The response size is small enough to reasonably fit within the cache. (For example, if you provide a disk cache, the response must be no larger than about 5% of the disk cache size.)
+//
 //	if (session == self.handicapLookupSession) {
 //		completionHandler(nil);	//	Don't cache the response
 //	}

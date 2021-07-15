@@ -102,8 +102,7 @@ typedef NS_ENUM(NSInteger, GOLFHandicapLookupServiceErrorDomainError) {
 
 @property (nonatomic, nullable, strong) NSString *progressNotice;
 @property (nonatomic, assign) BOOL canReportProgressToDelegate;
-@property (nonatomic, assign) BOOL sendProgressNotifications;
-@property (nullable, strong) NSTimer *startupTimer;
+@property (nonatomic, assign) BOOL sendProgressNotifications;	//	Always sent on main thread
 @property (nonatomic, assign) BOOL needCancel;
 
 + (GOLFHandicapLookupAgent * _Nonnull)agentForDelegate:(id<GOLFHandicapLookupAgentDelegate> _Nonnull)delegate;
