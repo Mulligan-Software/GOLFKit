@@ -195,4 +195,15 @@
 	return (GOLFAllowanceType)[self unsignedIntegerValue];
 }
 
+- (NSString *)currencyString {
+	//	$1,234.56, -$1,234.56
+	return [NSNumberFormatter localizedStringFromNumber:[NSNumber numberWithFloat:[self floatValue]] numberStyle:NSNumberFormatterCurrencyStyle];
+}
+
+- (NSString *)currencyAccountingString {
+	//	$1,234.56, ($1,234.56)
+	return [NSNumberFormatter localizedStringFromNumber:[NSNumber numberWithFloat:[self floatValue]] numberStyle:NSNumberFormatterCurrencyAccountingStyle];
+}
+
+
 @end

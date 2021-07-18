@@ -115,6 +115,18 @@ typedef NS_OPTIONS(NSUInteger, GOLFWageringTrashOption) {
 	GOLFWageringTrashOption24			= 1 << 24		//	(16777216)
 };
 
+#if !defined(IS_ANY_BET_SCORED_STATUS)
+	#define IS_ANY_BET_SCORED_STATUS(_status)	((((_status) >= GOLFBetAllSquare) && ((_status) < GOLFBetUnknownStatus)) ? YES : NO)
+#endif
+
+#if !defined(IS_ANY_UP_BET_STATUS)
+	#define IS_ANY_UP_BET_STATUS(_status)	((((_status) == GOLFBetAAhead) || ((_status) == GOLFBetAWins)) ? YES : NO)
+#endif
+
+#if !defined(IS_ANY_DOWN_BET_STATUS)
+	#define IS_ANY_DOWN_BET_STATUS(_status)	((((_status) == GOLFBetBAhead) || ((_status) == GOLFBetBWins)) ? YES : NO)
+#endif
+
 
 @protocol GOLFWageringDataSource <NSObject>
 

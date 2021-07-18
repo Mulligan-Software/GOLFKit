@@ -137,6 +137,8 @@
 "TERM_LOCK" = "verrouiller";
 "TERM_LOCKED" = "verrouillé";
 "TERM_LOOKUP" = "chercher";
+"TERM_LOSES" = "perd";
+"TERM_LOSING" = "en train de perte";
 "TERM_LOW" = "moins";	//	As in "low handicap"
 "TERM_MALE" = "masculin";
 "TERM_MALE_ABBR" = "M";
@@ -279,6 +281,7 @@
 "TERM_VERSUS_ABBR" = "vs";
 "TERM_WAGERING" = "parier";
 "TERM_WALTZ" = "Waltz";
+"TERM_WINNING" = "en train de gagner";
 "TERM_WINS" = "gagne";
 "TERM_WOMAN_PLURAL" = "femmes";
 "TERM_YARD_PLURAL" = "yards";
@@ -463,7 +466,7 @@
 "TITLE_EGO_PULL_TO_SORT" = "Maintenez enfoncée pour trier…";
 "TITLE_EGO_RELEASE_TO_SORT" = "Relâchez pour trier…";
 "TITLE_EGO_SORTING" = "Tirent…";
-"TITLE_ENFORCE_EXTINCT_HANDICAPS" = "Imposer l’arrêt des méthodes de handicap";
+"TITLE_ENFORCE_EXTINCT_HANDICAPS" = "Imposer l’arrêt des\nméthodes de handicap.";	//	2 lines
 "TITLE_ESC_LIMIT" = "limite ESC";
 "TITLE_EULA" = "Contrat de License de l’Utilisateur Final";
 "TITLE_EULA_ABBR" = "EULA";
@@ -606,6 +609,9 @@
 "TITLE_LOW_BALL_SECOND_BALL" = "Balle Basse - Balle Seconde";
 "TITLE_LOW_INDEX" = "Handicap Index le plus bas";
 "TITLE_MASS_CONVERT_%@" = "Changer la Méthode de Handicap des joueurs - %@";
+"TITLE_MATCH_IS_EVEN" = "Match est pair";
+"TITLE_MATCH_IS_TIED" = "Match est à égalité";
+"TITLE_MATCH_NO_SCORES" = "Aucun score";
 "TITLE_MATCH_PLAY" = "Match Play";
 "TITLE_MATCH_TYPE" = "Type de Match";
 "TITLE_MAX_SCORE_HOLE_LIMIT/2" = "Score Max\nLimite de Trou";
@@ -679,6 +685,7 @@
 "TITLE_SHOTGUN_START" = "Départs simultanés";
 "TITLE_SHOW_ALLOWANCE_DOTS" = "Afficher les taches d’allocation";
 "TITLE_SHOW_CARDS" = "Afficher Écriteaux";
+"TITLE_SHOW_MATCHES_IN_ASSISTANT" = "Afficher l'état du match\nintra-Carte de Score dans\nle «Sur-Parcours» Auxiliaire.";	//	3 lines!
 "TITLE_SHOW_ME" = "Montre moi";
 "TITLE_SHOW_MEMBER_NUMBERS" = "Afficher numéros des membres du club sur Cartes de Score";
 "TITLE_SHOW_REPORT" = "Afficher le Rapport";

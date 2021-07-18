@@ -1228,8 +1228,29 @@ GOLFHandicapStrokes GOLFWageringStrokesFromStringByIndex(NSString *strokesString
 
 - (NSDictionary *)dictionaryRepresentation {
 	//	A dictionary representation of a GOLFBet
-	//	Top-level bets return an "ARoundIDForWagering" and "BRoundIDForWagering" derived from the original
-	//	<GOLFWageringDataSource> ARound and BRound used in bet handling.
+	//	key							type			description
+	//	--------------------------	--------------	-----------------------------------------------------------------------
+	//	ARoundIDForWagering			id				NSString* or NSNumber* identifying ARound as a <GOLFWageringDataSource>
+	//	BRoundIDForWagering			id				NSString* or NSNumber* identifying BRound as a <GOLFWageringDataSource>
+	//	AStrokesString				NSString *		18-character string of strokes given for A competitor
+	//	BStrokesString				NSString *		18-character string of strokes given for B competitor
+	//	betInfo						NSDictionary *	Top level bet data
+	//	betName						NSString *		Name of bet ("F", "Back", "18", "Match", etc.)
+	//	does2DownAutomatics			NSNumber *		BOOL set if an automatic 2-down press is available for this bet
+	//	does1DownLastHoleAutomatics	NSNumber *		BOOL set if an automatic 1-down press at the last hole is available
+	//	doesCloseOuts				NSNumber *		BOOL set if Close Out presses are available on this bet
+	//	holesStatus					NSString *		18-character hole-by-hole status
+	//	presses						NSArray *		Presses (GOLFBet) connected to this bet
+	//	reason						NSNumber *		GOLFBetReason for the bet's existence (press type, etc.)
+	//	handicapStyle				NSNumber *		GOLFWageringHandicapStyle handicapping style (Gross, Full, Difference)
+	//	betStatus					NSNumber *		GOLFBetStatus overall bet status
+	//	firstHole					NSNumber *		The first hole for the bet
+	//	fromHole					NSNumber *		The number (index) of the hole after which the bet began
+	//	lastHole					NSNumber *		The last scored hole for this bet
+	//	betUp						NSNumber *		The last determined "up", "down" or "even" status of the bet
+	//	betToGo						NSNumber *		The number of holes remaining at the time betUp was determined
+	//	upString					NSString *		Bet & Presses status string ("3/1/-1", etc.)
+	
 	NSMutableDictionary *representationDict = [NSMutableDictionary dictionaryWithCapacity:10];
 	
 	//	Main level bets hold the ARound, BRound, aStrokesString, bStrokesString, betInfo
@@ -1296,9 +1317,6 @@ GOLFHandicapStrokes GOLFWageringStrokesFromStringByIndex(NSString *strokesString
 			[betInfoDict setObject:workingString forKey:@"lowName"];
 		}
 		
-		//	Let the A round control what the source of scores is for the match…
-//		[betInfoDict setObject:[NSNumber numberWithUnsignedInteger:[self.ARound scoringSourceForWagering]] forKey:@"scoringSource"];
-		
 		[representationDict setObject:[NSDictionary dictionaryWithDictionary:betInfoDict] forKey:@"betInfo"];
 	}
 	
@@ -1323,11 +1341,60 @@ GOLFHandicapStrokes GOLFWageringStrokesFromStringByIndex(NSString *strokesString
 	[representationDict setObject:[NSNumber numberWithBool:self.doesCloseOuts] forKey:@"doesCloseOuts"];
 	
 	NSMutableArray *presses = [NSMutableArray arrayWithCapacity:2];
+	NSString *pressesUpString;
+	NSInteger pressesSquare = 0;
+	NSInteger pressesAAhead = 0;
+	NSInteger pressesBAhead = 0;
+	NSInteger pressesHalved = 0;
+	NSInteger pressesAWins = 0;
+	NSInteger pressesBWins = 0;
 	for (GOLFBet *aPress in self.presses) {
-		[presses addObject:[aPress dictionaryRepresentation]];
+		NSDictionary *pressDict = [aPress dictionaryRepresentation];
+		NSString *pressUpString = [pressDict objectForKey:@"upString"];
+		pressesSquare = [[pressDict objectForKey:@"betsSquare"] integerValue];
+		pressesAAhead = [[pressDict objectForKey:@"betsAAhead"] integerValue];
+		pressesBAhead = [[pressDict objectForKey:@"betsBAhead"] integerValue];
+		pressesHalved = [[pressDict objectForKey:@"betsHalved"] integerValue];
+		pressesAWins = [[pressDict objectForKey:@"betsAWins"] integerValue];
+		pressesBWins = [[pressDict objectForKey:@"betsBWins"] integerValue];
+		[presses addObject:pressDict];
+		
+		if (pressUpString) {
+			pressesUpString = (pressesUpString ? [pressesUpString stringByAppendingFormat:@"•%@", pressUpString] : pressUpString);
+		}
 	}
-	[representationDict setObject:[NSArray arrayWithArray:presses] forKey:@"presses"];
 	
+	NSString *betStatusString = GOLFLocalizedString(@"ALL_SQUARE_CHARACTER");
+	if (IS_ANY_BET_SCORED_STATUS(self.betStatus)) {
+		if (IS_ANY_UP_BET_STATUS(self.betStatus)) {
+			betStatusString = [NSString stringWithFormat:@"%ld%@", (long)self.betUp, GOLFLocalizedString(@"UPWARD_ARROW")];	//	"3↑"
+		} else if (IS_ANY_DOWN_BET_STATUS(self.betStatus)) {
+			betStatusString = [NSString stringWithFormat:@"%ld%@", (long)self.betUp, GOLFLocalizedString(@"DOWNWARD_ARROW")];	//	@"1↓"
+		} else {
+			betStatusString = [NSString stringWithFormat:@"%ld", (long)self.betUp];	//	@"0"
+		}
+	}
+
+	if (pressesUpString) {
+		betStatusString = [betStatusString stringByAppendingFormat:@"/%@", pressesUpString];
+	}
+	NSInteger betsSquare = ((self.betStatus == GOLFBetAllSquare) ? (pressesSquare + 1) : pressesSquare);
+	NSInteger betsAAhead = ((self.betStatus == GOLFBetAAhead) ? (pressesAAhead + 1) : pressesAAhead);
+	NSInteger betsBAhead = ((self.betStatus == GOLFBetBAhead) ? (pressesBAhead + 1) : pressesBAhead);
+	NSInteger betsHalved = ((self.betStatus == GOLFBetHalved) ? (pressesHalved + 1) : pressesHalved);
+	NSInteger betsAWins = ((self.betStatus == GOLFBetAWins) ? (pressesAWins + 1) : pressesAWins);
+	NSInteger betsBWins = ((self.betStatus == GOLFBetBWins) ? (pressesBWins + 1) : pressesBWins);
+
+	[representationDict setObject:betStatusString forKey:@"upString"];
+	
+	[representationDict setObject:[NSNumber numberWithInteger:betsSquare] forKey:@"betsSquare"];
+	[representationDict setObject:[NSNumber numberWithInteger:betsAAhead] forKey:@"betsAAhead"];
+	[representationDict setObject:[NSNumber numberWithInteger:betsBAhead] forKey:@"betsBAhead"];
+	[representationDict setObject:[NSNumber numberWithInteger:betsHalved] forKey:@"betsHalved"];
+	[representationDict setObject:[NSNumber numberWithInteger:betsAWins] forKey:@"betsAWins"];
+	[representationDict setObject:[NSNumber numberWithInteger:betsBWins] forKey:@"betsBWins"];
+
+	[representationDict setObject:[NSArray arrayWithArray:presses] forKey:@"presses"];
 	return [NSDictionary dictionaryWithDictionary:representationDict];
 }
 

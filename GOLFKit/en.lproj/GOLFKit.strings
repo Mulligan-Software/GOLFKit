@@ -137,6 +137,8 @@
 "TERM_LOCK" = "lock";
 "TERM_LOCKED" = "locked";
 "TERM_LOOKUP" = "lookup";
+"TERM_LOSES" = "loses";
+"TERM_LOSING" = "losing";
 "TERM_LOW" = "low";	//	As in "low handicap"
 "TERM_MALE" = "male";
 "TERM_MALE_ABBR" = "M";
@@ -279,6 +281,7 @@
 "TERM_VERSUS_ABBR" = "vs.";
 "TERM_WAGERING" = "wagering";
 "TERM_WALTZ" = "Waltz";
+"TERM_WINNING" = "winning";
 "TERM_WINS" = "wins";
 "TERM_WOMAN_PLURAL" = "women";
 "TERM_YARD_PLURAL" = "yards";
@@ -463,7 +466,7 @@
 "TITLE_EGO_PULL_TO_SORT" = "Pull to sort…";
 "TITLE_EGO_RELEASE_TO_SORT" = "Release to sort…";
 "TITLE_EGO_SORTING" = "Sorting…";
-"TITLE_ENFORCE_EXTINCT_HANDICAPS" = "Enforce the discontinuation of handicap methods";
+"TITLE_ENFORCE_EXTINCT_HANDICAPS" = "Enforce the discontinuation\nof handicap methods.";	//	2 lines!
 "TITLE_ESC_LIMIT" = "ESC limit";
 "TITLE_EULA" = "End User License Agreement";
 "TITLE_EULA_ABBR" = "EULA";
@@ -606,6 +609,9 @@
 "TITLE_LOW_BALL_SECOND_BALL" = "Low Ball - Second Ball";
 "TITLE_LOW_INDEX" = "Low Handicap Index";
 "TITLE_MASS_CONVERT_%@" = "Change Players' Handicapping Method - %@";
+"TITLE_MATCH_IS_EVEN" = "Match is even";
+"TITLE_MATCH_IS_TIED" = "Match is tied";
+"TITLE_MATCH_NO_SCORES" = "No scores";
 "TITLE_MATCH_PLAY" = "Match Play";
 "TITLE_MATCH_TYPE" = "Match Type";
 "TITLE_MAX_HANDICAP_MEN" = "Maximum standard handicap for men";
@@ -679,6 +685,7 @@
 "TITLE_SHOTGUN_START" = "Shotgun Start";
 "TITLE_SHOW_ALLOWANCE_DOTS" = "Show Handicap Allowance Dots";
 "TITLE_SHOW_CARDS" = "Show Cards";
+"TITLE_SHOW_MATCHES_IN_ASSISTANT" = "Show intra-Scorecard\nmatch play status\nin the “On-Course” Assistant.";	//	3 lines!
 "TITLE_SHOW_ME" = "Show Me";
 "TITLE_SHOW_MEMBER_NUMBERS" = "Show club member numbers on Scorecards";
 "TITLE_SHOW_REPORT" = "Show Report";

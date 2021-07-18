@@ -81,4 +81,7 @@
 + (id)numberWithAllowanceType:(GOLFAllowanceType)allowanceType;
 - (GOLFAllowanceType)allowanceTypeValue;
 
+- (NSString *)currencyString;
+- (NSString *)currencyAccountingString;
+
 @end

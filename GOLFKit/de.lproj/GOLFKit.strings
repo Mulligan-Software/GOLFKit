@@ -32,7 +32,7 @@
 		"TERM_" - prefix identifying a single word or phrase generally without leading or trailing whitespace, lowercase capitalization
 			unless the language (or the word) has capitalization rules.  Software may be used to capitalize TERMs.
 			
-		"_PLURAL" - suffix indicating a plural noun (singular version is unadorned)
+		"_PLURAL" - suffix indicating a plural noun (singular version is unadorned) --> "TERM_PLAYER_PLURAL" = "Spieler"
 		
 		"TITLE_" - prefix identifying a title, prompt, or translation that should be localized as a title-cased or sentence-cased string.
 			TITLE keys typically are used to translate the contents of dialog boxes, printed or displayed forms, warnings, questions, etc.
@@ -101,8 +101,8 @@
 "TERM_COMPLETE" = "komplett";
 "TERM_CONTINUE" = "fortfahren";
 "TERM_COPY" = "kopieren";
-"TERM_COUNTRY_ADJ" = "country";
-"TERM_COUNTRY_NOUN" = "Land";
+"TERM_COUNTRY_ADJ" = "country";	//	As in "Country Club"
+"TERM_COUNTRY_NOUN" = "Land";	//	As in "This is my country."
 "TERM_COURSE" = "Golfplatz";
 "TERM_COURSE_PLURAL" = "Golfplätze";
 "TERM_CURRENT" = "jetzt";
@@ -180,6 +180,8 @@
 "TERM_LOCK" = "sperren";
 "TERM_LOCKED" = "gesperrt";
 "TERM_LOOKUP" = "nachsehen";
+"TERM_LOSES" = "verliert";
+"TERM_LOSING" = "verliert um";
 "TERM_LOW" = "klein";	//	As in "low handicap"
 "TERM_MALE" = "männlich";
 "TERM_MALE_ABBR" = "M";
@@ -322,6 +324,7 @@
 "TERM_VERSUS_ABBR" = "vs.";
 "TERM_WAGERING" = "Wetten";
 "TERM_WALTZ" = "Waltzer";
+"TERM_WINNING" = "führt mit";
 "TERM_WINS" = "gewinnt";
 "TERM_WOMAN_PLURAL" = "Damen";
 "TERM_YARD_PLURAL" = "Yards";
@@ -506,7 +509,7 @@
 "TITLE_EGO_PULL_TO_SORT" = "Zum Sortieren ziehen…";
 "TITLE_EGO_RELEASE_TO_SORT" = "Zur Sortierung freigeben…";
 "TITLE_EGO_SORTING" = "Sortierung…";
-"TITLE_ENFORCE_EXTINCT_HANDICAPS" = "Erzwingen Sie die Einstellung von Handicap-Methoden";
+"TITLE_ENFORCE_EXTINCT_HANDICAPS" = "Erzwingen Sie die Einstellung\nvon Handicap-Methoden";	//	2 lines!
 "TITLE_ESC_LIMIT" = "ESC limit";
 "TITLE_EULA" = "Endbenutzer-Lizenzvereinbarung";
 "TITLE_EULA_ABBR" = "EULA";
@@ -649,6 +652,9 @@
 "TITLE_LOW_BALL_SECOND_BALL" = "Niedriger Ball - Zweiter Ball";
 "TITLE_LOW_INDEX" = "Niedriger Handicap Index";
 "TITLE_MASS_CONVERT_%@" = "Handicap-Methode der Spieler ändern - %@";
+"TITLE_MATCH_IS_TIED" = "Golfspiel ist unentschieden";
+"TITLE_MATCH_IS_EVEN" = "Golfspiel ist ausgeglichen";
+"TITLE_MATCH_NO_SCORES" = "Keine Golfergebnisse";
 "TITLE_MATCH_PLAY" = "Matchplay";
 "TITLE_MATCH_TYPE" = "Matchtyp";
 "TITLE_MAX_SCORE_HOLE_LIMIT/2" = "Punktzahl\nMax Lochlimit";
@@ -722,6 +728,7 @@
 "TITLE_SHOTGUN_START" = "‘Schrotflinte’ Start";
 "TITLE_SHOW_ALLOWANCE_DOTS" = "Punkte für Handicap-Zustimmung anzeigen";
 "TITLE_SHOW_CARDS" = "Zeige Karten";
+"TITLE_SHOW_MATCHES_IN_ASSISTANT" = "Intra-Scorecard-Spielstatus\nim „auf dem Golfplatz“\nAssistent anzeigen.";	//	3 lines!
 "TITLE_SHOW_ME" = "Zeig es mir";
 "TITLE_SHOW_MEMBER_NUMBERS" = "Zeige Clubmitgliedsnummern auf Scorekarten";
 "TITLE_SHOW_REPORT" = "Bericht zeigen";
