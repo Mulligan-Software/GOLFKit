@@ -17,6 +17,7 @@
 "TERM_AGGREGATION_PLURAL" = "agregaciones";
 "TERM_ALL" = "todo";
 "TERM_ALL_SEARCH" = "todo";
+"TERM_ALL_SQUARE" = "parejo";
 "TERM_ALLOWANCE" = "asignación";
 "TERM_AND" = "y";
 "TERM_APPEARANCE" = "apariencia";
@@ -112,6 +113,8 @@
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "bruto";
 "TERM_GUEST" = "invitado";
+"TERM_HALVED" = "empatada";
+"TERM_HALVED_PLURAL" = "empatadas";
 "TERM_HANDICAP" = "handicap";
 "TERM_HANDICAP_PLURAL" = "handicaps";
 "TERM_HANDICAP_ABBR" = "hdcp";
@@ -599,6 +602,9 @@
 "TITLE_LOCK_EVENTS" = "Bloquear los Eventos";
 "TITLE_LOCK_PLAYERS" = "Bloquear los Jugadores";
 "TITLE_LOCK_SCORECARDS" = "Bloquear las Tarjetas";
+"TITLE_LOCKED_SCORECARD_ALERT_DELETE" = "Este tarjeta está bloqueado.  ¿Está seguro que deseas eliminarla?";
+"TITLE_LOCKED_SCORECARD_ALERT_EXTRA" = "Este tarjeta está bloqueado.  ¿Quieres desbloquear para la edición o introducir los puntajes?";
+"TITLE_LOCKED_SCORECARD_ALERT_UNLOCK" = "Este tarjeta está bloqueado.  ¿Quieres desbloquear para introducir los puntajes?";
 "TITLE_LOOKUP_HANDICAP" = "Buscar Handicap";
 "TITLE_LOOKUP_HANDICAP_PLURAL" = "Buscar Handicaps";
 "TITLE_LOOKUP_ONLY" = "Solo búsqueda - sin actualizaciones";
@@ -609,8 +615,8 @@
 "TITLE_LOW_BALL_SECOND_BALL" = "Bola Baja - Segunda Bola";
 "TITLE_LOW_INDEX" = "Bajo Indice de Handicap";
 "TITLE_MASS_CONVERT_%@" = "Cambiar el Método de Handicap de los Jugadores - %@";
-"TITLE_MATCH_IS_EVEN" = "Partido es parejo";
-"TITLE_MATCH_IS_TIED" = "Partido está empatado";
+"TITLE_MATCH_IS_EVEN" = "Partido está parejo";
+"TITLE_MATCH_IS_TIED" = "Partido estaba empatado";
 "TITLE_MATCH_NO_SCORES" = "Sin puntajes";
 "TITLE_MATCH_PLAY" = "Match Play";
 "TITLE_MATCH_TYPE" = "Tipo de Partido";
@@ -659,6 +665,13 @@
 "TITLE_REFRESH" = "Actualizar";
 "TITLE_REGISTER" = "Registrar";
 "TITLE_REMOTE_DATA" = "Datos Remotos";
+"TITLE_REMOTE_EVENT_ALERT" = "Evento Remoto";
+"TITLE_REMOTE_EVENT_ALERT_DELETE" = "Este evento fue creado y es mantenido en otro dispositivo.  ¿Está seguro que deseas eliminarlo?";
+"TITLE_REMOTE_EVENT_ALERT_EXTRA" = "Este evento fue creado en otro dispositivo.  ¿Quieres desbloquear con todos sus tarjetas para la edición y introducir los puntajes?";
+"TITLE_REMOTE_SCORECARD_ALERT" = "Tarjeta Remota";
+"TITLE_REMOTE_SCORECARD_ALERT_DELETE" = "Este tarjeta se créa en otro dispositivo.  ¿Está seguro que deseas eliminarla?";
+"TITLE_REMOTE_SCORECARD_ALERT_EXTRA" = "Este tarjeta se créa en otro dispositivo.  ¿Quieres desbloquear para la edición o introducir los puntajes?";
+"TITLE_REMOTE_SCORECARD_ALERT_UNLOCK" = "Este tarjeta se créa en otro dispositivo.  ¿Quieres desbloquear para introducir los puntajes?";
 "TITLE_REMOVE" = "Eliminar";
 "TITLE_REVIEW_BUTTON" = "Revisar";
 "TITLE_REVISION_DATE" = "Fecha de Revisión";
@@ -828,6 +841,12 @@
 "FORMAT_NUMBER_%ld_ABBR" = "No. %ld";	/*	No. 3	*/
 "FORMAT_OPEN_%@" = "Abrir %@";
 "FORMAT_OPEN_3_%@" = "Abrir 3 %@";
+"FORMAT_PLAYER_%@_LEADS_%d_UP_%d" = "%@ lidera %d up, %d por jugar.";
+"FORMAT_PLAYER_%@_LEADS_%d_%@" = "%@ lidera %d %@";
+"FORMAT_PLAYER_%@_WINS_%d_AND_%d_%@" = "%@ gana %d & %d.%@";
+"FORMAT_PLAYER_%@_WINS_%d_UP_%@" = "%@ gana %d up.%@";
+"FORMAT_PLAYER_%@_WINS_%d_%@" = "%@ gana %d %@";
+"FORMAT_PLAYER_%@_WINS_%@" = "%@ gana %@";
 "FORMAT_SELECTED_ITEM_%@_ONE" = "1 %@ seleccionado";
 "FORMAT_SELECTED_ITEM_%@_NONE" = "no hay %@ seleccionados";
 "FORMAT_SELECTED_ITEMS_%1$@_COUNT_%2$d" = "%2$d %1$@ seleccionados";

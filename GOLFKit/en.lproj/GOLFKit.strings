@@ -17,6 +17,7 @@
 "TERM_AGGREGATION_PLURAL" = "aggregations";
 "TERM_ALL" = "all";
 "TERM_ALL_SEARCH" = "all";
+"TERM_ALL_SQUARE" = "all square";
 "TERM_ALLOWANCE" = "allowance";
 "TERM_AND" = "and";
 "TERM_APPEARANCE" = "appearance";
@@ -112,6 +113,8 @@
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "gross";
 "TERM_GUEST" = "guest";
+"TERM_HALVED" = "halved";
+"TERM_HALVED_PLURAL" = "halved";
 "TERM_HANDICAP" = "handicap";
 "TERM_HANDICAP_PLURAL" = "handicaps";
 "TERM_HANDICAP_ABBR" = "hdcp";
@@ -599,6 +602,9 @@
 "TITLE_LOCK_EVENTS" = "Lock Events";
 "TITLE_LOCK_PLAYERS" = "Lock Players";
 "TITLE_LOCK_SCORECARDS" = "Lock Scorecards";
+"TITLE_LOCKED_SCORECARD_ALERT_DELETE" = "This scorecard is locked.  Are you sure you want to delete it?";
+"TITLE_LOCKED_SCORECARD_ALERT_EXTRA" = "This scorecard is locked.  Do you want to unlock it for editing or entering scores?";
+"TITLE_LOCKED_SCORECARD_ALERT_UNLOCK" = "This scorecard is locked.  Do you want to unlock it to enter scores?";
 "TITLE_LOOKUP_HANDICAP" = "Look Up Handicap";
 "TITLE_LOOKUP_HANDICAP_PLURAL" = "Look Up Handicaps";
 "TITLE_LOOKUP_ONLY" = "Lookup Only - No Updates";
@@ -609,8 +615,8 @@
 "TITLE_LOW_BALL_SECOND_BALL" = "Low Ball - Second Ball";
 "TITLE_LOW_INDEX" = "Low Handicap Index";
 "TITLE_MASS_CONVERT_%@" = "Change Players' Handicapping Method - %@";
-"TITLE_MATCH_IS_EVEN" = "Match is all square";
-"TITLE_MATCH_IS_TIED" = "Match is tied";
+"TITLE_MATCH_IS_EVEN" = "Match is all square.";
+"TITLE_MATCH_IS_TIED" = "Match is tied.";
 "TITLE_MATCH_NO_SCORES" = "No scores";
 "TITLE_MATCH_PLAY" = "Match Play";
 "TITLE_MATCH_TYPE" = "Match Type";
@@ -659,6 +665,13 @@
 "TITLE_REFRESH" = "Refresh";
 "TITLE_REGISTER" = "Register";
 "TITLE_REMOTE_DATA" = "Remote Data";
+"TITLE_REMOTE_EVENT_ALERT" = "Remote Event";
+"TITLE_REMOTE_EVENT_ALERT_DELETE" = "This event was created and is maintained on another device.  Are you sure you want to delete it?";
+"TITLE_REMOTE_EVENT_ALERT_EXTRA" = "This event was created on another device.  Do you want to unlock it and all its scorecards for editing or entering scores?";
+"TITLE_REMOTE_SCORECARD_ALERT" = "Remote Scorecard";
+"TITLE_REMOTE_SCORECARD_ALERT_DELETE" = "This scorecard was created on another device.  Are you sure you want to delete it?";
+"TITLE_REMOTE_SCORECARD_ALERT_EXTRA" = "This scorecard was created on another device.  Do you want to unlock it for editing or entering scores?";
+"TITLE_REMOTE_SCORECARD_ALERT_UNLOCK" = "This scorecard was created on another device.  Do you want to unlock it to enter scores?";
 "TITLE_REMOVE" = "Remove";
 "TITLE_REVIEW_BUTTON" = "Review";
 "TITLE_REVISION_DATE" = "Revision Date";
@@ -828,6 +841,12 @@
 "FORMAT_NUMBER_%ld_ABBR" = "No. %ld";
 "FORMAT_OPEN_%@" = "Open %@";
 "FORMAT_OPEN_3_%@" = "Open 3 %@";
+"FORMAT_PLAYER_%@_LEADS_%d_UP_%d" = "%@ leads %d up, %d to play.";
+"FORMAT_PLAYER_%@_LEADS_%d_%@" = "%@ leads %d %@";
+"FORMAT_PLAYER_%@_WINS_%d_AND_%d_%@" = "%@ wins %d & %d.%@";
+"FORMAT_PLAYER_%@_WINS_%d_UP_%@" = "%@ wins %d up.%@";
+"FORMAT_PLAYER_%@_WINS_%d_%@" = "%@ wins %d %@";
+"FORMAT_PLAYER_%@_WINS_%@" = "%@ wins %@";
 "FORMAT_SELECTED_ITEM_%@_ONE" = "1 %@ selected";
 "FORMAT_SELECTED_ITEM_%@_NONE" = "no %@ selected";
 "FORMAT_SELECTED_ITEMS_%1$@_COUNT_%2$d" = "%2$d %1$@ selected";

@@ -17,6 +17,7 @@
 "TERM_AGGREGATION_PLURAL" = "agrégations";
 "TERM_ALL" = "toutes";
 "TERM_ALL_SEARCH" = "tout";
+"TERM_ALL_SQUARE" = "pair";
 "TERM_ALLOWANCE" = "allocation";
 "TERM_AND" = "et";
 "TERM_APPEARANCE" = "apparence";
@@ -112,6 +113,8 @@
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "brut";
 "TERM_GUEST" = "invité";
+"TERM_HALVED" = "à égalité";
+"TERM_HALVED_PLURAL" = "à égalité";
 "TERM_HANDICAP" = "handicap";
 "TERM_HANDICAP_PLURAL" = "handicaps";
 "TERM_HANDICAP_ABBR" = "hdcp";
@@ -599,6 +602,9 @@
 "TITLE_LOCK_EVENTS" = "Verrouriller les Événements";
 "TITLE_LOCK_PLAYERS" = "Verrouriller les Joueurs";
 "TITLE_LOCK_SCORECARDS" = "Verrouriller les Cartes de Score";
+"TITLE_LOCKED_SCORECARD_ALERT_DELETE" = "Cette carte de score est verrouillé.  Etes-vouz sûr de vouloir supprimer?";
+"TITLE_LOCKED_SCORECARD_ALERT_EXTRA" = "Cette carte de score est verrouillé.  Voulez-vous la déverrouiller pour l’édition ou la saisie des scores?";
+"TITLE_LOCKED_SCORECARD_ALERT_UNLOCK" = "Cette carte de score est verrouillé.  Voulez-vous la déverrouiller pour la saisie des scores?";
 "TITLE_LOOKUP_HANDICAP" = "Rechercher un Handicap";
 "TITLE_LOOKUP_HANDICAP_PLURAL" = "Rechercher des Handicaps";
 "TITLE_LOOKUP_ONLY" = "Recherche uniquement - aucune mise à jour";
@@ -659,6 +665,13 @@
 "TITLE_REFRESH" = "Actualiser";
 "TITLE_REGISTER" = "Inscrire";
 "TITLE_REMOTE_DATA" = "Données Distant";
+"TITLE_REMOTE_EVENT_ALERT" = "Événement Distant";
+"TITLE_REMOTE_EVENT_ALERT_DELETE" = "Cette événement a été créé et est maintenu sur un autre appareil.  Etes-vouz sûr de vouloir supprimer?";
+"TITLE_REMOTE_EVENT_ALERT_EXTRA" = "Cette événement a été créé sur un autre appareil.  Voulez-vous le déverrouiller et tous ses cartes de score pour l’édition ou la saisie des scores?";
+"TITLE_REMOTE_SCORECARD_ALERT" = "Carte de Score Distant";
+"TITLE_REMOTE_SCORECARD_ALERT_DELETE" = "Cette carte de score a été créé sur un autre appareil.  Etes-vouz sûr de vouloir supprimer?";
+"TITLE_REMOTE_SCORECARD_ALERT_EXTRA" = "Cette carte de score a été créé sur un autre appareil.  Voulez-vous le déverrouiller pour l’édition ou la saisie des scores?";
+"TITLE_REMOTE_SCORECARD_ALERT_UNLOCK" = "Cette carte de score a été créé sur un autre appareil.  Voulez-vous le déverrouiller pour la saisie des scores?";
 "TITLE_REMOVE" = "Supprimer";
 "TITLE_REVIEW_BUTTON" = "Revoir";
 "TITLE_REVISION_DATE" = "Date de Révision";
@@ -828,6 +841,12 @@
 "FORMAT_NUMBER_%ld_ABBR" = "No. %ld";
 "FORMAT_OPEN_%@" = "Ouvrir %@";
 "FORMAT_OPEN_3_%@" = "Ouvrir 3 %@";
+"FORMAT_PLAYER_%@_LEADS_%d_UP_%d" = "%@ mène %d-up, %d à jouer.";
+"FORMAT_PLAYER_%@_LEADS_%d_%@" = "%@ mène %d %@";
+"FORMAT_PLAYER_%@_WINS_%d_AND_%d_%@" = "%@ gagne %d & %d.%@";
+"FORMAT_PLAYER_%@_WINS_%d_UP_%@" = "%@ gagne %d-up.%@";
+"FORMAT_PLAYER_%@_WINS_%d_%@" = "%@ gagne %d %@";
+"FORMAT_PLAYER_%@_WINS_%@" = "%@ gagne %@";
 "FORMAT_SELECTED_ITEM_%@_ONE" = "1 %@ sélectionné";
 "FORMAT_SELECTED_ITEM_%@_NONE" = "aucun %@ sélectionné";
 "FORMAT_SELECTED_ITEMS_%1$@_COUNT_%2$d" = "%2$d %1$@ sélectionnés";

@@ -60,6 +60,7 @@
 "TERM_AGGREGATION_PLURAL" = "Ansummlungen";
 "TERM_ALL" = "alle";
 "TERM_ALL_SEARCH" = "alle";
+"TERM_ALL_SQUARE" = "ausgeglichen";
 "TERM_ALLOWANCE" = "Zustimmung";
 "TERM_AND" = "und";
 "TERM_APPEARANCE" = "Erscheinungsbild";
@@ -124,8 +125,8 @@
 "TERM_ENTER" = "Nummer eingeben";
 "TERM_EVEN" = "eben";
 "TERM_EVEN_ABBR" = "E";
-"TERM_EVENT" = "Wettkampf";
-"TERM_EVENT_PLURAL" = "Wettkampfen";
+"TERM_EVENT" = "Event";
+"TERM_EVENT_PLURAL" = "Events";
 "TERM_EVERYTHING" = "alles";
 "TERM_FAILED" = "fehlgeschlagen";
 "TERM_FAIRWAY" = "Fairway";
@@ -155,6 +156,8 @@
 "TERM_GREENSOMES" = "Greensomes";
 "TERM_GROSS" = "brutto";
 "TERM_GUEST" = "Gast";
+"TERM_HALVED" = "gleich";	//	"tied", "even", "equal"
+"TERM_HALVED_PLURAL" = "gleich";
 "TERM_HANDICAP" = "Handicap";
 "TERM_HANDICAP_PLURAL" = "Handicaps";
 "TERM_HANDICAP_ABBR" = "hdcp";
@@ -515,7 +518,7 @@
 "TITLE_EULA_ABBR" = "EULA";
 "TITLE_EVEN" = "Eben";
 "TITLE_EVEN_ABBR" = "E";
-"TITLE_EVENT_REGISTRATION" = "Wettkampfsregistrierung";
+"TITLE_EVENT_REGISTRATION" = "Eventsregistrierung";
 "TITLE_EXCLUDE_GUESTS" = "Gäste ausschließen";
 "TITLE_EXTENDED_SCORING" = "Erweiterte Wertung";
 "TITLE_FACTORY_SETTINGS" = "Werkseinstellungen";
@@ -639,9 +642,12 @@
 "TITLE_LINK_DROPBOX" = "Verknüpfen Dropbox aufheben";
 "TITLE_LOCAL_COUNTRY" = "Lokales Land";
 "TITLE_LOCK_CLUBS" = "Clubs schützen";
-"TITLE_LOCK_EVENTS" = "Wettkampfen schützen";
+"TITLE_LOCK_EVENTS" = "Events schützen";
 "TITLE_LOCK_PLAYERS" = "Spieler schützen";
 "TITLE_LOCK_SCORECARDS" = "Scorekarten schützen";
+"TITLE_LOCKED_SCORECARD_ALERT_DELETE" = "Diese Scorekarte ist gesperrt. Möchten Sie es wirklich löschen?";
+"TITLE_LOCKED_SCORECARD_ALERT_EXTRA" = "Diese Scorekarte ist gesperrt. Möchten Sie es zum Bearbeiten oder Eingeben von Partituren entsperren?";
+"TITLE_LOCKED_SCORECARD_ALERT_UNLOCK" = "Diese Scorekarte ist gesperrt. Möchten Sie es freischalten, um Punkte einzugeben?";
 "TITLE_LOOKUP_HANDICAP" = "Handicap nachschlagen";
 "TITLE_LOOKUP_HANDICAP_PLURAL" = "Handicaps nachschlagen";
 "TITLE_LOOKUP_ONLY" = "Nachschlag nur - keine Aktualisierungen";
@@ -652,8 +658,8 @@
 "TITLE_LOW_BALL_SECOND_BALL" = "Niedriger Ball - Zweiter Ball";
 "TITLE_LOW_INDEX" = "Niedriger Handicap Index";
 "TITLE_MASS_CONVERT_%@" = "Handicap-Methode der Spieler ändern - %@";
-"TITLE_MATCH_IS_TIED" = "Golfspiel ist unentschieden";
 "TITLE_MATCH_IS_EVEN" = "Golfspiel ist ausgeglichen";
+"TITLE_MATCH_IS_TIED" = "Golfspiel ist unentschieden";
 "TITLE_MATCH_NO_SCORES" = "Keine Golfergebnisse";
 "TITLE_MATCH_PLAY" = "Matchplay";
 "TITLE_MATCH_TYPE" = "Matchtyp";
@@ -702,6 +708,13 @@
 "TITLE_REFRESH" = "Aktualisieren";
 "TITLE_REGISTER" = "Registrieren";
 "TITLE_REMOTE_DATA" = "Entfernte Daten";
+"TITLE_REMOTE_EVENT_ALERT" = "Entfernte Event";
+"TITLE_REMOTE_EVENT_ALERT_DELETE" = "Dieses Event wurde erstellt und wird auf einem anderen Gerät verwaltet. Möchten Sie es wirklich löschen?";
+"TITLE_REMOTE_EVENT_ALERT_EXTRA" = "Dieses Event wurde auf einem anderen Gerät erstellt. Möchten Sie es und alle seine Scorekarten zum Bearbeiten oder Eingeben von Partituren freischalten?";
+"TITLE_REMOTE_SCORECARD_ALERT" = "Entfernte Scorekarte";
+"TITLE_REMOTE_SCORECARD_ALERT_DELETE" = "Diese Scorekarte wurde auf einem anderen Gerät erstellt. Möchten Sie es wirklich löschen?";
+"TITLE_REMOTE_SCORECARD_ALERT_EXTRA" = "Diese Scorekarte wurde auf einem anderen Gerät erstellt. Möchten Sie es zum Bearbeiten oder Eingeben von Partituren entsperren?";
+"TITLE_REMOTE_SCORECARD_ALERT_UNLOCK" = "Diese Scorekarte wurde auf einem anderen Gerät erstellt. Möchten Sie es freischalten, um Punkte einzugeben?";
 "TITLE_REMOVE" = "Entfernen";
 "TITLE_REVIEW_BUTTON" = "Überprüfen";
 "TITLE_REVISION_DATE" = "Änderungsdatum";
@@ -771,7 +784,7 @@
 "TITLE_TRASH" = "Trash, Reste, Punkte";
 "TITLE_UNKNOWN_SERVICE" = "Unknown Handicapping Service";
 "TITLE_UNLINK_DROPBOX" = "Link Dropbox";
-"TITLE_UNLOCK_ENTIRE_EVENT" = "Schalte alle Scorekarten der Wettkampf";
+"TITLE_UNLOCK_ENTIRE_EVENT" = "Schalte alle Scorekarten der Event";
 "TITLE_UP_AND_DOWN" = "Auf und ab";
 "TITLE_UPDATE" = "Aktualisieren";
 "TITLE_UPDATES_UNAVAILABLE" = "Aktualisierung nicht verfügbar";
@@ -815,7 +828,7 @@
 "DESCRIPTION_NASSAU" = "Ersteseite, Letzteseite und 18 Löcher";
 "DESCRIPTION_NO_TRASH" = "Keine Reste / Punkte Kategorie angegeben";
 "DESCRIPTION_POLIE" = "1-Putt länger als Flaggenstocklänge";
-"DESCRIPTION_PRINTING_PRIVACY_%@" = "Wettkampfsregistrierung Kategorien als „%@“ bezeichnet werden in der Regel nicht gedruckt oder angezeigt.";
+"DESCRIPTION_PRINTING_PRIVACY_%@" = "Eventsregistrierung Kategorien als „%@“ bezeichnet werden in der Regel nicht gedruckt oder angezeigt.";
 "DESCRIPTION_SANDIE" = "Auf und ab von einem Grün-Bunker";
 "DESCRIPTION_SEVE" = "Birdie oder besser, ohne das Fairway oder das Grün zu erreichen";
 "DESCRIPTION_SKINS_ALL_SCORES" = "Jeder gültige Golfloch-Score kann einen Skin gewinnen";
@@ -853,8 +866,8 @@
 "FORMAT_CURRENT_%@_TITLE_PLURAL" = "aktuellen %@";
 "FORMAT_DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Bestimme Dein %@ auf der rechten Seite indem Sie die Zeile finden, in der Ihre %@ auf der linken Seite steht.";
 "FORMAT_DISCONTINUED_HANDICAP_METHOD_%@_PLAYER_%@" = "Das %@ ist nicht mehr verfügbar.  Wenn Sie eine andere Methode für %@ auswählen und die Änderung speichern, können Sie die vorherige Einstellung nicht wiederherstellen.";
-"FORMAT_EVENT_HAS_TEE_%@_WARNING" = "Warnung: Wettkampf wird mit einem Startabschlag konfiguriert (%@).";
-"FORMAT_EVENT_HAS_TIME_%@_WARNING" = "Warnung: Wettkampf wird mit einer Abschlagzeit konfiguriert (%@).";
+"FORMAT_EVENT_HAS_TEE_%@_WARNING" = "Warnung: Event wird mit einem Startabschlag konfiguriert (%@).";
+"FORMAT_EVENT_HAS_TIME_%@_WARNING" = "Warnung: Event wird mit einer Abschlagzeit konfiguriert (%@).";
 "FORMAT_FOR_TITLE_%@" = "Für %@…";	//	For selected players… or For Al Czervik…
 "FORMAT_INVALID_%@" = "ungültige %@";
 "FORMAT_%@_IS_DEFAULT_TEAM_CAPTAIN" = "%@ wird per Handicap zum Mannschaftskapitän ernannt.";
@@ -871,6 +884,12 @@
 "FORMAT_NUMBER_%ld_ABBR" = "Nr. %ld";
 "FORMAT_OPEN_%@" = "Öffne %@";
 "FORMAT_OPEN_3_%@" = "Öffne 3 %@";
+"FORMAT_PLAYER_%@_LEADS_%d_UP_%d" = "%@ führt %d-up, %d zu spielen.";	//	Al leads 2 up, 5 to play
+"FORMAT_PLAYER_%@_LEADS_%d_%@" = "%@ führt bei %d %@";	//	Al leads in 3 bets
+"FORMAT_PLAYER_%@_WINS_%d_AND_%d_%@" = "%@ gewinnt %d & %d.%@";	//	Al wins 3 & 2."money-changing-hands"
+"FORMAT_PLAYER_%@_WINS_%d_UP_%@" = "%@ gewinnt %d-up.%@";	//	Al wins 2 up."money-changing-hands"
+"FORMAT_PLAYER_%@_WINS_%d_%@" = "%@ gewinnt %d %@";	//	Al wins 1 bet
+"FORMAT_PLAYER_%@_WINS_%@" = "%@ gewinnt %@";	//	Al wins $2.00
 "FORMAT_SELECTED_ITEM_%@_ONE" = "1 %@ ausgewählt";
 "FORMAT_SELECTED_ITEM_%@_NONE" = "keine %@ ausgewählt";
 "FORMAT_SELECTED_ITEMS_%1$@_COUNT_%2$d" = "%2$d %1$@ ausgewählt";
@@ -926,9 +945,9 @@
 
 "ALERT_CARTS_APPLY_MESSAGE" = "Sie haben Änderungen an Startzeiten, Startanschläge oder Wagenzuweisungen vorgeschlagen.";
 "ALERT_CARTS_APPLY_MESSAGE_EXTRA" = "Möchten Sie zurückgehen, um diese Änderungen auf Scorekarten anzuwenden, bevor Sie fortfahren?";
-"ALERT_NO_GOLFERS_COURSES_FOR_EVENT" = "Weder Spieler noch Golfplätze sind verfügbar, um eine Wettkampf zu erstellen.";
-"ALERT_NO_COURSES_FOR_EVENT" = "Es sind noch keine Golfplätze verfügbar, um eine Wettkampf zu erstellen.";
-"ALERT_NO_GOLFERS_FOR_EVENT" = "Es sind noch keine Spieler verfügbar, um eine Wettkampf zu erstellen.";
+"ALERT_NO_GOLFERS_COURSES_FOR_EVENT" = "Weder Spieler noch Golfplätze sind verfügbar, um eine Event zu erstellen.";
+"ALERT_NO_COURSES_FOR_EVENT" = "Es sind noch keine Golfplätze verfügbar, um eine Event zu erstellen.";
+"ALERT_NO_GOLFERS_FOR_EVENT" = "Es sind noch keine Spieler verfügbar, um eine Event zu erstellen.";
 "ALERT_NO_GOLFERS_COURSES_FOR_SCORECARD" = "Weder Spieler noch Golfplätze sind verfügbar, um eine Scorekarte zu erstellen.";
 "ALERT_NO_COURSES_FOR_SCORECARD" = "Es sind noch keine Golfplätze verfügbar, um eine Scorekarte zu erstellen.";
 "ALERT_NO_GOLFERS_FOR_SCORECARD" = "Es sind noch keine Spieler verfügbar, um eine Scorekarte zu erstellen.";
@@ -960,7 +979,7 @@
 "NOTICE_JUNIOR_PAR_REQUIREMENTS" = "Junior-Par ist nicht verfügbar, wenn die Länge der Locher fehlt.";
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "Die persönlichen Handicaps Einstellungen oben sind nicht mit einem „Werkseinstellungen“ Reset geändert.";
 "NOTICE_SKINS_ELIGIBILITY" = "Die Einstellungen für die Skins-Zulassungskritien gelten sowohl für Brutto- als auch für Netto-Scores.";
-"NOTICE_SKINS_ELIGIBILITY_EVENT" = "Die Einstellung für die Skins-Zulassungskriterien gilt sowohl für die Brutto- als auch für die Netto-Scores in diesem Wettkampf.";
+"NOTICE_SKINS_ELIGIBILITY_EVENT" = "Die Einstellung für die Skins-Zulassungskriterien gilt sowohl für die Brutto- als auch für die Netto-Scores in diesem Event.";
 "NOTICE_SKINS_ELIGIBILITY_SCORECARD" = "Die Einstellung für die Skins-Zulassungskriterien gilt sowohl für die Brutto- als auch für die Netto-Scores auf dieser Scorekarte.";
 
 //	Handicap Services
@@ -1151,7 +1170,7 @@
 "TOOLTIP_18HOLE_BEGINNING_INDEX_%@" = "Anfänglich %@";
 "TOOLTIP_BEGINNING_INDEX_EXTRA" = "zur Verwendung, bis ein gültiger Handicap-Datensatz verfügbar ist.";
 "TOOLTIP_CARTS_APPLY_BUTTON" = "die Abschlagzeit und die Startabschlag Änderungen auf Scorekarten anwenden";
-"TOOLTIP_CARTS_APPLY_BUTTON_TRAINING" = "Klicken Sie hier, um die oben gezeigten Abschlag- un Zeitinformationen auf die Wettkampf-Scorekarten anzuwenden.";
+"TOOLTIP_CARTS_APPLY_BUTTON_TRAINING" = "Klicken Sie hier, um die oben gezeigten Abschlag- un Zeitinformationen auf die Event-Scorekarten anzuwenden.";
 "TOOLTIP_CARTS_ASSIGN_BUTTON" = "Abschlagzeiten oder Startabschläge zuweisen";
 "TOOLTIP_CARTS_ASSIGN_BUTTON_TRAINING" = "Klicken Sie hier, um Startzeiten oder ‘Schrotflinte’ Startabschlage Zuweisungen für des Feldes vorzunehmen.";
 "TOOLTIP_CARTS_OUTLINE_CART" = "Doppelklicken Sie, um eine Golfwagen Nummer einzugeben";
@@ -1172,7 +1191,7 @@
 "TOOLTIP_ROUND_GROSS_SCORE" = "Brutto Punktzahl";
 "TOOLTIP_ROUND_NET_SCORE" = "Netto Punktzahl";
 "TOOLTIP_ROUND_TOTAL_SCORE" = "Gesamtpunktzahl";
-"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - benutzt\nH - heimisch\nA - entfernt\nC - Wettkampf\nN - 9-Löcher kombiniert\nS - Schlag-Spiel\nM - Match-Spiel\nI - unfertig\nE - außergewöhnlich\nP - Strafe";
+"TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - benutzt\nH - heimisch\nA - entfernt\nC - Event\nN - 9-Löcher kombiniert\nS - Schlag-Spiel\nM - Match-Spiel\nI - unfertig\nE - außergewöhnlich\nP - Strafe";
 "TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - benutzt\nA - entfernt\nC - kombiniert\nT - Tournier\nP - Strafe";
 "TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - benutzt\nA - entfernt\nC - kombiniert\nT - Tournier\nP - Strafe";
 "TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - benutzt\nA - entfernt\nC - kombiniert";
