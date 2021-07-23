@@ -25,6 +25,7 @@
 "TERM_ATTESTOR" = "attestateur";
 "TERM_AUTHORITY" = "autorité";
 "TERM_AUTHORIZATION" = "autorisation";
+"TERM_AVAILABLE" = "disponible";
 "TERM_AVERAGE" = "moyenne";
 "TERM_BACK" = "deuxième";	//	as in "Back Nine" or "Back Side"
 "TERM_BACKWARD" = "à rebours";
@@ -40,6 +41,7 @@
 "TERM_CALCULATE" = "calculer";
 "TERM_CALCULATES" = "calcule";
 "TERM_CALLAWAY" = "Callaway";
+"TERM_CARRYOVER_PLURAL" = "reports";
 "TERM_CART" = "voiturette";
 "TERM_CART_PLURAL" = "voiturettes";
 "TERM_CHACHA" = "Cha-Cha";
@@ -198,6 +200,7 @@
 "TERM_POINT_PLURAL" = "points";
 "TERM_POINT_PLURAL_ABBR" = "pts.";
 "TERM_PRESS" = "presse";
+"TERM_PRESS_PLURAL" = "presses";
 "TERM_PRIVATE" = "privé";
 "TERM_PURCHASE" = "acheter";
 "TERM_PUTT" = "putt";
@@ -269,6 +272,8 @@
 "TERM_TRAINING" = "formation";
 "TERM_TREND" = "tendance";
 "TERM_TYPE" = "type";
+"TERM_UNAVAILABLE" = "indisponible";
+"TERM_UNCHANGED" = "inchangé";
 "TERM_UNKNOWN" = "inconnu";
 "TERM_UNLINK" = "délier";
 "TERM_UNLOCK" = "déverrouiller";
@@ -411,7 +416,10 @@
 "TITLE_BARKIE" = "Barkie";
 "TITLE_BET_BACK" = "Deuxième";
 "TITLE_BET_FRONT" = "Premier";
+"TITLE_BET_LAST_HOLE_DETAIL" = "(avec un trou à jouer)";
 "TITLE_BET_MATCH" = "Match";
+"TITLE_BET_WHEN_1_DOWN" = "Quand 1-down";
+"TITLE_BET_WHEN_2_DOWN" = "Quand 2-down";
 "TITLE_BET_18_HOLES" = "18 Trous";
 "TITLE_BINGO" = "Bingo";
 "TITLE_BINGO_BANGO_BONGO" = "Bingo-Bango-Bongo";
@@ -607,6 +615,7 @@
 "TITLE_LOCKED_SCORECARD_ALERT_UNLOCK" = "Cette carte de score est verrouillé.  Voulez-vous la déverrouiller pour la saisie des scores?";
 "TITLE_LOOKUP_HANDICAP" = "Rechercher un Handicap";
 "TITLE_LOOKUP_HANDICAP_PLURAL" = "Rechercher des Handicaps";
+"TITLE_LOOKUP_IN_PROGRESS" = "recherche en cours";
 "TITLE_LOOKUP_ONLY" = "Recherche uniquement - aucune mise à jour";
 "TITLE_LOOKUP_OVERRIDES_%@" = "Remplacer au %@ les Index de Handicap";
 "TITLE_LOOKUP_RECORDS" = "Créer des Données de Handicap";
@@ -632,7 +641,9 @@
 "TITLE_NASSAU" = "Nassau";
 "TITLE_NEXT_HOLE" = "Trou Suivant";
 "TITLE_NINE_HOLES" = "9 Trous";
+"TITLE_NO_DATA_FOUND" = "aucune donnée disponible";
 "TITLE_NO_STROKES" = "aucun coups";
+"TITLE_ON_COURSE_ASSISTANT" = "«Sur-Parcours» Auxiliaire";
 "TITLE_OPEN_SCORECARD" = "Ouvrir la Carte";
 "TITLE_OPT_OUT_SKINS" = "Se Retirer de Skins";
 "TITLE_OPTIONS" = "Options";
@@ -707,6 +718,7 @@
 "TITLE_SHOW_TABLES" = "Afficher Tableaux";
 "TITLE_SKILL_ADJUSTMENT" = "Ajustement habileté";
 "TITLE_SKINS_ELIGIBILITY" = "Éligibilité des Skins";
+"TITLE_SKINS_NOT_ENABLED" = "Les fonctionnalités des Skins ne sont pas activées actuellement. Voir Réglages.";
 "TITLE_SKINS_REQUIRE" = "Skins nécessitent";
 "TITLE_SKIP" = "Passer";
 "TITLE_SNAKE" = "Snake";

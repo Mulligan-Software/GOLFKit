@@ -189,6 +189,12 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 	}
 }
 
+- (void)endLookupSession {
+	if (self.handicapLookupSession) {
+		[self.handicapLookupSession invalidateAndCancel];
+	}
+}
+
 - (void)GetHandicapWithQueryInfo:(NSDictionary *)queryInfo completionHandler:(void (^)(NSDictionary *queryResponse, NSError *error))completionHandler {
 	//	Data to perform a lookup query is contained in a queryInfo NSDictionary
 	//	which is returned in queryResponse at completion (with additions) that may contain…

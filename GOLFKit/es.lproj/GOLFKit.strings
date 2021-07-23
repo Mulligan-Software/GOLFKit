@@ -25,6 +25,7 @@
 "TERM_ATTESTOR" = "certificador";
 "TERM_AUTHORITY" = "potestad";
 "TERM_AUTHORIZATION" = "autorización";
+"TERM_AVAILABLE" = "disponible";
 "TERM_AVERAGE" = "promedio";
 "TERM_BACK" = "segundo";	//	as in "Back Nine" or "Back Side"
 "TERM_BACKWARD" = "hacia atrás";
@@ -40,6 +41,7 @@
 "TERM_CALCULATE" = "calcular";
 "TERM_CALCULATES" = "calcula";
 "TERM_CALLAWAY" = "Callaway";
+"TERM_CARRYOVER_PLURAL" = "traslados";
 "TERM_CART" = "carrito";
 "TERM_CART_PLURAL" = "carritos";
 "TERM_CHACHA" = "Cha-Cha";
@@ -198,6 +200,7 @@
 "TERM_POINT_PLURAL" = "puntos";
 "TERM_POINT_PLURAL_ABBR" = "pts.";
 "TERM_PRESS" = "presión";
+"TERM_PRESS_PLURAL" = "presiones";
 "TERM_PRIVATE" = "particular";
 "TERM_PURCHASE" = "comprar";
 "TERM_PUTT" = "putt";
@@ -269,6 +272,8 @@
 "TERM_TRAINING" = "entrenamiento";
 "TERM_TREND" = "tendencia";
 "TERM_TYPE" = "tipo";
+"TERM_UNAVAILABLE" = "no disponible";
+"TERM_UNCHANGED" = "sin alterar";
 "TERM_UNKNOWN" = "ignoto";
 "TERM_UNLINK" = "desenlazar";
 "TERM_UNLOCK" = "desbloquear";
@@ -411,7 +416,10 @@
 "TITLE_BARKIE" = "Barkie";
 "TITLE_BET_BACK" = "Segundo";
 "TITLE_BET_FRONT" = "Primero";
+"TITLE_BET_LAST_HOLE_DETAIL" = "(con un hoyo para jugar)";
 "TITLE_BET_MATCH" = "Partido";
+"TITLE_BET_WHEN_1_DOWN" = "Cuando 1-down";
+"TITLE_BET_WHEN_2_DOWN" = "Cuando 2-down";
 "TITLE_BET_18_HOLES" = "18 Hoyos";
 "TITLE_BINGO" = "Bingo";
 "TITLE_BINGO_BANGO_BONGO" = "Bingo-Bango-Bongo";
@@ -607,6 +615,7 @@
 "TITLE_LOCKED_SCORECARD_ALERT_UNLOCK" = "Este tarjeta está bloqueado.  ¿Quieres desbloquear para introducir los puntajes?";
 "TITLE_LOOKUP_HANDICAP" = "Buscar Handicap";
 "TITLE_LOOKUP_HANDICAP_PLURAL" = "Buscar Handicaps";
+"TITLE_LOOKUP_IN_PROGRESS" = "búsqueda en curso";
 "TITLE_LOOKUP_ONLY" = "Solo búsqueda - sin actualizaciones";
 "TITLE_LOOKUP_OVERRIDES_%@" = "Anular %@ Índices de Handicap";
 "TITLE_LOOKUP_RECORDS" = "Crear Registros de Handicap";
@@ -632,7 +641,9 @@
 "TITLE_NASSAU" = "Nassau";
 "TITLE_NEXT_HOLE" = "Próximo Hoyo";
 "TITLE_NINE_HOLES" = "9 Hoyos";
+"TITLE_NO_DATA_FOUND" = "datos no encontrados";
 "TITLE_NO_STROKES" = "sin golpes";
+"TITLE_ON_COURSE_ASSISTANT" = "“En-Campo” Ayudante";
 "TITLE_OPEN_SCORECARD" = "Abrir la Tarjeta";
 "TITLE_OPT_OUT_SKINS" = "Optar fuera de Skins";
 "TITLE_OPTIONS" = "Opciones";
@@ -707,6 +718,7 @@
 "TITLE_SHOW_TABLES" = "Mostrar tablas";
 "TITLE_SKILL_ADJUSTMENT" = "Ajuste por habilidad";
 "TITLE_SKINS_ELIGIBILITY" = "Elegibilidad de Skins";
+"TITLE_SKINS_NOT_ENABLED" = "Las funciones de Skins no están habilitadas actualmente. Ver Ajustes.";
 "TITLE_SKINS_REQUIRE" = "Skins requieren";
 "TITLE_SKIP" = "Omitir";
 "TITLE_SNAKE" = "Snake";

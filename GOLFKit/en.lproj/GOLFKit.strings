@@ -25,6 +25,7 @@
 "TERM_ATTESTOR" = "attestor";
 "TERM_AUTHORITY" = "authority";
 "TERM_AUTHORIZATION" = "authorization";
+"TERM_AVAILABLE" = "available";
 "TERM_AVERAGE" = "average";
 "TERM_BACK" = "back";
 "TERM_BACKWARD" = "backward";
@@ -40,6 +41,7 @@
 "TERM_CALCULATE" = "calculate";
 "TERM_CALCULATES" = "calculates";
 "TERM_CALLAWAY" = "Callaway";
+"TERM_CARRYOVER_PLURAL" = "carryovers";
 "TERM_CART" = "cart";
 "TERM_CART_PLURAL" = "carts";
 "TERM_CHACHA" = "Cha-Cha";
@@ -198,6 +200,7 @@
 "TERM_POINT_PLURAL" = "points";
 "TERM_POINT_PLURAL_ABBR" = "pts.";
 "TERM_PRESS" = "press";
+"TERM_PRESS_PLURAL" = "presses";
 "TERM_PRIVATE" = "private";
 "TERM_PURCHASE" = "purchase";
 "TERM_PUTT" = "putt";
@@ -269,6 +272,8 @@
 "TERM_TRAINING" = "training";
 "TERM_TREND" = "trend";
 "TERM_TYPE" = "type";
+"TERM_UNAVAILABLE" = "unavailable";
+"TERM_UNCHANGED" = "unchanged";
 "TERM_UNKNOWN" = "unknown";
 "TERM_UNLINK" = "unlink";
 "TERM_UNLOCK" = "unlock";
@@ -411,7 +416,10 @@
 "TITLE_BARKIE" = "Barkie";
 "TITLE_BET_BACK" = "Back";
 "TITLE_BET_FRONT" = "Front";
+"TITLE_BET_LAST_HOLE_DETAIL" = "(with one hole to play)";
 "TITLE_BET_MATCH" = "Match";
+"TITLE_BET_WHEN_1_DOWN" = "When 1 down";
+"TITLE_BET_WHEN_2_DOWN" = "When 2 down";
 "TITLE_BET_18_HOLES" = "18 Holes";
 "TITLE_BINGO" = "Bingo";
 "TITLE_BINGO_BANGO_BONGO" = "Bingo-Bango-Bongo";
@@ -607,6 +615,7 @@
 "TITLE_LOCKED_SCORECARD_ALERT_UNLOCK" = "This scorecard is locked.  Do you want to unlock it to enter scores?";
 "TITLE_LOOKUP_HANDICAP" = "Look Up Handicap";
 "TITLE_LOOKUP_HANDICAP_PLURAL" = "Look Up Handicaps";
+"TITLE_LOOKUP_IN_PROGRESS" = "lookup in progress";
 "TITLE_LOOKUP_ONLY" = "Lookup Only - No Updates";
 "TITLE_LOOKUP_OVERRIDES_%@" = "Override %@ Handicap Indexes";
 "TITLE_LOOKUP_RECORDS" = "Create Handicap Records";
@@ -632,7 +641,9 @@
 "TITLE_NASSAU" = "Nassau";
 "TITLE_NEXT_HOLE" = "Next Hole";
 "TITLE_NINE_HOLES" = "9 Holes";
+"TITLE_NO_DATA_FOUND" = "no data found";
 "TITLE_NO_STROKES" = "no strokes";
+"TITLE_ON_COURSE_ASSISTANT" = "“On-Course” Assistant";
 "TITLE_OPEN_SCORECARD" = "Open the Scorecard";
 "TITLE_OPT_OUT_SKINS" = "Opt Out of Skins";
 "TITLE_OPTIONS" = "Options";
@@ -707,6 +718,7 @@
 "TITLE_SHOW_TABLES" = "Show Tables";
 "TITLE_SKILL_ADJUSTMENT" = "Skill Adjustment";
 "TITLE_SKINS_ELIGIBILITY" = "Skins Eligibility";
+"TITLE_SKINS_NOT_ENABLED" = "Skins features are not currently enabled.  See Settings.";
 "TITLE_SKINS_REQUIRE" = "Skins require";
 "TITLE_SKIP" = "Skip";
 "TITLE_SNAKE" = "Snake";

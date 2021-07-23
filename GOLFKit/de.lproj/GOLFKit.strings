@@ -68,6 +68,7 @@
 "TERM_ATTESTOR" = "Attestierer";
 "TERM_AUTHORITY" = "Autorität";
 "TERM_AUTHORIZATION" = "Autorisierung";
+"TERM_AVAILABLE" = "verfügbar";
 "TERM_AVERAGE" = "mittlere";
 "TERM_BACK" = "letzte";		//	As in "back nine" - letzte (last) ?
 "TERM_BACKWARD" = "rückwärts";
@@ -83,6 +84,7 @@
 "TERM_CALCULATE" = "berechnung";
 "TERM_CALCULATES" = "berechnet";
 "TERM_CALLAWAY" = "Callaway";
+"TERM_CARRYOVER_PLURAL" = "Übertragungen";
 "TERM_CART" = "Wagen";
 "TERM_CART_PLURAL" = "Wagen";
 "TERM_CHACHA" = "Cha-Cha";
@@ -241,6 +243,7 @@
 "TERM_POINT_PLURAL" = "Punkte";
 "TERM_POINT_PLURAL_ABBR" = "Pte.";
 "TERM_PRESS" = "Presse";
+"TERM_PRESS_PLURAL" = "Pressen";
 "TERM_PRIVATE" = "privat";
 "TERM_PURCHASE" = "kauf";
 "TERM_PUTT" = "Putt";
@@ -312,6 +315,8 @@
 "TERM_TRAINING" = "Schulung";
 "TERM_TREND" = "Trend";
 "TERM_TYPE" = "Art";
+"TERM_UNAVAILABLE" = "nicht verfügbar";
+"TERM_UNCHANGED" = "unverändert";
 "TERM_UNKNOWN" = "unbekannt";
 "TERM_UNLINK" = "Verknüpfung aufheben";
 "TERM_UNLOCK" = "entsperren";
@@ -454,7 +459,10 @@
 "TITLE_BARKIE" = "Barkie";
 "TITLE_BET_BACK" = "Letzteseite";
 "TITLE_BET_FRONT" = "Ersteseite";
+"TITLE_BET_LAST_HOLE_DETAIL" = "(mit einem Loch zu spielen)";
 "TITLE_BET_MATCH" = "Match";
+"TITLE_BET_WHEN_1_DOWN" = "Wenn 1-down";
+"TITLE_BET_WHEN_2_DOWN" = "Wenn 2-down";
 "TITLE_BET_18_HOLES" = "18 Löcher";
 "TITLE_BINGO" = "Bingo";
 "TITLE_BINGO_BANGO_BONGO" = "Bingo-Bango-Bongo";
@@ -650,6 +658,7 @@
 "TITLE_LOCKED_SCORECARD_ALERT_UNLOCK" = "Diese Scorekarte ist gesperrt. Möchten Sie es freischalten, um Punkte einzugeben?";
 "TITLE_LOOKUP_HANDICAP" = "Handicap nachschlagen";
 "TITLE_LOOKUP_HANDICAP_PLURAL" = "Handicaps nachschlagen";
+"TITLE_LOOKUP_IN_PROGRESS" = "Suche läuft";
 "TITLE_LOOKUP_ONLY" = "Nachschlag nur - keine Aktualisierungen";
 "TITLE_LOOKUP_OVERRIDES_%@" = "Handicap-Indizes der %@ überschreiben";
 "TITLE_LOOKUP_RECORDS" = "Handicap-Rekorde erstellen";
@@ -675,7 +684,9 @@
 "TITLE_NASSAU" = "Nassau";
 "TITLE_NEXT_HOLE" = "nächstes Loch";
 "TITLE_NINE_HOLES" = "9 Löcher";
+"TITLE_NO_DATA_FOUND" = "keine Daten gefunden";
 "TITLE_NO_STROKES" = "keine Schläge";
+"TITLE_ON_COURSE_ASSISTANT" = "„auf dem Golfplatz“ Assistent";
 "TITLE_OPEN_SCORECARD" = "Scorekarte öffnen";
 "TITLE_OPT_OUT_SKINS" = "Ablehnen Sie die Skins";
 "TITLE_OPTIONS" = "Optionen";
@@ -750,6 +761,7 @@
 "TITLE_SHOW_TABLES" = "Tabellen anzeigen";
 "TITLE_SKILL_ADJUSTMENT" = "Anpassung für Fähigkeiten";
 "TITLE_SKINS_ELIGIBILITY" = "Zulassungskriterien für Skins";
+"TITLE_SKINS_NOT_ENABLED" = "Skins-Funktionen sind derzeit nicht aktiviert. Siehe Einstellungen.";
 "TITLE_SKINS_REQUIRE" = "Skins benötigen";
 "TITLE_SKIP" = "Übergehen";
 "TITLE_SNAKE" = "Snake";

@@ -109,6 +109,7 @@ typedef NS_ENUM(NSInteger, GOLFHandicapLookupServiceErrorDomainError) {
 - (GOLFHandicapLookupAgent * _Nonnull)initWithDelegate:(id<GOLFHandicapLookupAgentDelegate> _Nonnull)delegate;
 
 - (void)invalidateAndClose;
+- (void)endLookupSession;
 
 - (void)GetHandicapWithQueryInfo:(NSDictionary *_Nonnull)queryInfo completionHandler:(void (^ _Nonnull)(NSDictionary * _Nullable queryResponse, NSError * _Nullable error))completionHandler;
 
