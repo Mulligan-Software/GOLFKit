@@ -837,6 +837,7 @@
 "FORMAT_DISCONTINUED_HANDICAP_METHOD_%@_PLAYER_%@" = "The %@ is no longer available.  If you select another method for %@ and save the change, you will be unable to restore the previous setting.";
 "FORMAT_EVENT_HAS_TEE_%@_WARNING" = "Warning: Event is configured with a starting tee (%@).";
 "FORMAT_EVENT_HAS_TIME_%@_WARNING" = "Warning: Event is configured with a tee time (%@).";
+"FORMAT_FOLLOWS_%@_DATE" = "follows %@ date";	//	"follows Scorecard date" or "follows Event date" lookup errors
 "FORMAT_FOR_TITLE_%@" = "For %@…";	//	For selected players… or For Al Czervik…
 "FORMAT_INVALID_%@" = "invalid %@";
 "FORMAT_%@_IS_DEFAULT_TEAM_CAPTAIN" = "%@ assigned by handicap as team captain.";

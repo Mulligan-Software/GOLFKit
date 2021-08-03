@@ -880,6 +880,7 @@
 "FORMAT_DISCONTINUED_HANDICAP_METHOD_%@_PLAYER_%@" = "Das %@ ist nicht mehr verfügbar.  Wenn Sie eine andere Methode für %@ auswählen und die Änderung speichern, können Sie die vorherige Einstellung nicht wiederherstellen.";
 "FORMAT_EVENT_HAS_TEE_%@_WARNING" = "Warnung: Event wird mit einem Startabschlag konfiguriert (%@).";
 "FORMAT_EVENT_HAS_TIME_%@_WARNING" = "Warnung: Event wird mit einer Abschlagzeit konfiguriert (%@).";
+"FORMAT_FOLLOWS_%@_DATE" = "folgt %@-Datum";	//	"follows Scorecard date" or "follows Event date" lookup errors
 "FORMAT_FOR_TITLE_%@" = "Für %@…";	//	For selected players… or For Al Czervik…
 "FORMAT_INVALID_%@" = "ungültige %@";
 "FORMAT_%@_IS_DEFAULT_TEAM_CAPTAIN" = "%@ wird per Handicap zum Mannschaftskapitän ernannt.";

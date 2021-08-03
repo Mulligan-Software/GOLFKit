@@ -64,23 +64,7 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 
 			self.canReportProgressToDelegate = [delegate respondsToSelector:@selector(GOLFHandicapLookupAgent:reportingProgress:)];
     	}
-    	
-#ifdef DEBUG
-    	if (self.canReportProgressToDelegate) {
-			[self.delegate GOLFHandicapLookupAgent:self reportingProgress:@"[GOLFHandicapLookupAgent initWithDelegate:]"];
-		}
-#endif
-	
-    	if (info == nil) {
-//    		self.USGADataServicesProductAppName = USGADataServicesGOLFKitAppName;
-//    		self.USGADataServicesProductAppKey = USGADataServicesGOLFKitAppKey;
-//    		self.USGADataServicesProductAppSecret = USGADataServicesGOLFKitAppSecret;
-    	} else {
-    		//	All or nothing
-//    		self.USGADataServicesProductAppName = [info objectForKey:@"appName"];
-//    		self.USGADataServicesProductAppKey = [info objectForKey:@"appKey"];
-//    		self.USGADataServicesProductAppSecret = [info objectForKey:@"appSecret"];
-    	}
+    	self.serviceInfo = info;
 	}
 	return self;
 }
@@ -96,14 +80,15 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 			NSDictionary *info = (progressNotice ? [NSDictionary dictionaryWithObject:progressNotice forKey:@"notice"] : nil);
 			[[NSNotificationCenter defaultCenter] postNotificationName:GOLFHandicapLookupProgressNotification object:self.delegate userInfo:info];
 		});
-	} else if (progressNotice && self.canReportProgressToDelegate) {
+	}
+	
+	if (progressNotice && self.canReportProgressToDelegate) {
 		[self.delegate GOLFHandicapLookupAgent:self reportingProgress:progressNotice];
 	}
 }
 
 - (void)setNeedCancel:(BOOL)wantCancel {
-	BOOL wasCancel = self.needCancel;
-	if (wasCancel != wantCancel) {
+	if (_needCancel != wantCancel) {
 		if (wantCancel && self.handicapLookupSession) {
 			[self.handicapLookupSession invalidateAndCancel];
 		}
@@ -114,10 +99,12 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 - (NSString *)userAgent {
 	if (_userAgent == nil) {
 		NSOperatingSystemVersion systemVersion = [[NSProcessInfo processInfo] operatingSystemVersion];
-		NSDictionary *info = [[NSBundle mainBundle] infoDictionary];
-		NSString *bundleName = [info objectForKey:@"CFBundleName"];	//	"Application Name"
-		NSString *bundleVersion = [info objectForKey:@"CFBundleVersion"];	//	build number
-		NSString *bundleShortVersion = [info objectForKey:@"CFBundleShortVersionString"];	//	version number
+		NSString *appName = ([self.serviceInfo objectForKey:@"appName"]
+				?: [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleName"]);	//	"Application Name"
+		NSString *build = ([self.serviceInfo objectForKey:@"build"]
+				?: [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleVersion"]);	//	build number
+		NSString *appVersion = ([self.serviceInfo objectForKey:@"appVersion"]
+				?: [[[NSBundle mainBundle] infoDictionary] objectForKey:@"CFBundleShortVersionString"]);	//	version number
 		NSString *osVersionString = @"";
 		if (systemVersion.patchVersion > 0) {
 			osVersionString = [NSString stringWithFormat:@"_%ld", (long)systemVersion.patchVersion];
@@ -127,7 +114,7 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 		}
 		osVersionString = [NSString stringWithFormat:@"%ld%@", (long)systemVersion.majorVersion, osVersionString];
 
-		NSString *appPart = [NSString stringWithFormat:@"%@/%@(%@)", [[bundleName componentsSeparatedByString:@" "] componentsJoinedByString:@""], bundleShortVersion, bundleVersion];
+		NSString *appPart = [NSString stringWithFormat:@"%@/%@(%@)", [[appName componentsSeparatedByString:@" "] componentsJoinedByString:@""], appVersion, build];
 		NSString *GOLFKitPart = [NSString stringWithFormat:@"GOLFKit/%@(%@)", GOLFKitBundleShortVersionString(), GOLFKitBundleVersion()];
 		NSString *WebKitPart = [NSString stringWithFormat:@"AppleWebKit/%@ (KHTML, like Gecko)", [[[NSBundle bundleForClass:[WKWebView class]] infoDictionary] objectForKey:@"CFBundleVersion"]];
 		NSString *MozillaPart = @"Mozilla/5.0 ";
@@ -147,7 +134,12 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 
 		//	User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.2 Safari/605.1.15
-		_userAgent = [MozillaPart stringByAppendingFormat:@"(Macintosh; Intel Mac OS X %@) %@ %@ %@", osVersionString, WebKitPart, GOLFKitPart, appPart];
+		if (@available (macOS 10.14, *)) {
+			_userAgent = [MozillaPart stringByAppendingFormat:@"(Macintosh; Intel Mac OS X %@) %@ %@ %@", osVersionString, WebKitPart, GOLFKitPart, appPart];
+		} else {
+			//	User-Agent: Mozilla/5.0 (Macintosh; U; Mac OS X 10_13_2; en-us) Eagle/2.9.9
+			_userAgent = [MozillaPart stringByAppendingFormat:@"(Macintosh; U; Mac OS X %@; en-us) Eagle/%@", osVersionString, appVersion];
+		}
 	
 #endif
 	}
@@ -257,19 +249,23 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 		lookupRequest.timeoutInterval = 10.0;
 		lookupRequest.HTTPShouldHandleCookies = YES;
 		
-//		[lookupRequest setValue:[NSString stringWithFormat:@"Bearer %@", token] forHTTPHeaderField:@"Authorization"];
 		[lookupRequest setValue:@"https://www.ghin.com" forHTTPHeaderField:@"Origin"];
 		[lookupRequest setValue:self.userAgent forHTTPHeaderField:@"User-Agent"];
 		[lookupRequest setValue:@"https://www.ghin.com/login?returnUrl=/profile" forHTTPHeaderField:@"Referer"];
 		[lookupRequest setValue:@"br, gzip, deflate" forHTTPHeaderField:@"Accept-Encoding"];
-//		[lookupRequest setValue:@"application/json, text/plain, */*" forHTTPHeaderField:@"Accept"];
-//		[lookupRequest setValue:[NSString stringWithFormat:@"W/\"%@\"", [NSString randomETagStringOfLength:32]] forHTTPHeaderField:@"If-None-Match"];
-		[lookupRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
 		[lookupRequest setValue:@"en-us" forHTTPHeaderField:@"Accept-Language"];
-//		[lookupRequest setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
 		[lookupRequest setValue:@"keep-alive" forHTTPHeaderField:@"Connection"];
-		[lookupRequest setValue:@"*/*" forHTTPHeaderField:@"Accept"];
-		[lookupRequest setValue:@"XMLHttpRequest" forHTTPHeaderField:@"X-Requested-With"];
+		
+//		[lookupRequest setValue:@"gzip" forHTTPHeaderField:@"Accept-Encoding"];
+//		[lookupRequest setValue:[NSString stringWithFormat:@"W/\"%@\"", [NSString randomETagStringOfLength:32]] forHTTPHeaderField:@"If-None-Match"];
+
+		if (@available (macOS 10.14, *)) {
+			[lookupRequest setValue:@"*/*" forHTTPHeaderField:@"Accept"];
+			[lookupRequest setValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];
+			[lookupRequest setValue:@"XMLHttpRequest" forHTTPHeaderField:@"X-Requested-With"];
+		} else {
+			[lookupRequest setValue:@"application/json, text/plain, */*" forHTTPHeaderField:@"Accept"];
+		}
 
 		self.getHandicapTask = [self.handicapLookupSession dataTaskWithRequest:lookupRequest];
 		self.getHandicapData = nil;	//	Start with no data
@@ -664,7 +660,7 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 
 	//	This method is called, at most, once per task, and only if connectivity is initially unavailable.  It is never called for background sessions because waitsForConnectivity is ignored for those sessions.
 	
-	if (@available (macOS 10.13, *)) {
+	if (@available (macOS 10.13, iOS 11.0, *)) {
 		if (session == self.handicapLookupSession) {
 			if (task == self.getHandicapTask) {
 				if (self.needCancel) {
@@ -701,12 +697,10 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 	//	Each time the URLSession:dataTask:didReceiveResponse:completionHandler: method is called for a part, collect the data received for the previous part (if any) and process the data as needed for your application. This processing can include storing the data to the filesystem, parsing it into custom types, or displaying it to the user. Next, begin receiving the next part by calling the completion handler with the NSURLSessionResponseAllow constant. Finally, if you have also implemented URLSession:task:didCompleteWithError:, the session will call it after sending all the data for the last part.
 
 	if (session == self.handicapLookupSession) {
-		if (self.needCancel) {
-			self.progressNotice = GOLFLocalizedString(@"NOTICE_SERVICE_CANCELLING");
-			completionHandler(NSURLSessionResponseCancel);
-		} else {
-			self.progressNotice = GOLFLocalizedString(@"NOTICE_SERVICE_CONNECTED");
-			completionHandler(NSURLSessionResponseAllow);
+		NSURLSessionResponseDisposition disposition = (self.needCancel ? NSURLSessionResponseCancel : NSURLSessionResponseAllow);
+		if (dataTask == self.getHandicapTask) {
+			self.progressNotice = (self.needCancel ? GOLFLocalizedString(@"NOTICE_SERVICE_CANCELLING") : GOLFLocalizedString(@"NOTICE_SERVICE_CONNECTED"));
+			completionHandler(disposition);
 		}
 	}
 }

@@ -9,6 +9,8 @@
 @import Foundation;
 #import <GOLFKit/GOLFKit.h>
 
+NS_ASSUME_NONNULL_BEGIN
+
 typedef NS_ENUM(NSUInteger, GOLFHandicapLookupService) {
 	GOLFHandicapLookupServiceGHIN = 0,		//	Golf Handicap Information Network (GHIN)	(0)
 	GOLFHandicapLookupServiceGOLFLink,		//	GOLFLink Australia							(1)
@@ -32,9 +34,9 @@ typedef NS_ENUM(NSUInteger, GOLFHandicapLookupGoal) {
 };
 
 //	GOLFLink
-extern NSString * _Nonnull const GOLFLinkLoggedInGAUserCookieValue;
-extern NSString * _Nonnull const GOLFLink_gaCookieValue;
-extern NSString * _Nonnull const GOLFLink_gidCookieValue;
+extern NSString * const GOLFLinkLoggedInGAUserCookieValue;
+extern NSString * const GOLFLink_gaCookieValue;
+extern NSString * const GOLFLink_gidCookieValue;
 
 NSString * _Nonnull GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupService);
 //	Returns a localized title for the specified handicap data service ("GHIN", "GOLFLink", "Network de Golf", etc.)
@@ -45,7 +47,7 @@ NSString * _Nonnull GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService loo
 #define GOLFHandicapLookupDidCompleteNotification @"GOLFHandicapLookupDidComplete"	//	for Notification
 #define GOLFHandicapLookupDidFailNotification @"GOLFHandicapLookupDidFail"			//	for Notification
 
-extern NSString * _Nonnull const GOLFHandicapLookupServiceErrorDomain;	//	The error domain name
+extern NSString * const GOLFHandicapLookupServiceErrorDomain;	//	The error domain name
 
 typedef NS_ENUM(NSInteger, GOLFHandicapLookupServiceErrorDomainError) {
 	GOLFHandicapLookupServiceDataError				= 17000,	// generic error
@@ -64,20 +66,24 @@ typedef NS_ENUM(NSInteger, GOLFHandicapLookupServiceErrorDomainError) {
 
 @protocol GOLFHandicapLookupAgentDelegate <NSObject>
 
-@optional
-
 //	Returns an NSDictionary with information about the GOLFHandicapLookupService to be used for a query
 //	May return nil if there is no service or the service is disabled
 //
 //	Key						Type			Description
-//	----------------------	--------------	---------------------------------
-//	serviceName				NSString *		Complete name of the handicapping service
-//	lookupService			NSNumber *		A GOLFHandicapLookupService identifying the service
+//	------------------	----------	---------------------------------
+//	serviceName			NSString *		Complete name of the handicapping service
+//	lookupService		NSNumber *		A GOLFHandicapLookupService identifying the service
+//	appName				NSString *		From the delegate's [NSBundle mainBundle] - the app(lication) name
+//	appVersion			NSString *		From the delegate's [NSBundle mainBundle] - the app(lication) version number
+//	build				NSString *		From the delegate's [NSBundle mainBundle] - the app(lication) build number
+
 - (NSDictionary * _Nullable)GOLFHandicapLookupServiceInfo;
+
+@optional
 
 //	Allows the GOLFHandicapLookupAgent to report its progress with a localized
 //	NSString indicating its status.  There is no return from the delegate
-- (void)GOLFHandicapLookupAgent:(GOLFHandicapLookupAgent *_Nonnull)lookupAgent reportingProgress:(NSString *_Nonnull)progressNotice;
+- (void)GOLFHandicapLookupAgent:(GOLFHandicapLookupAgent *)lookupAgent reportingProgress:(NSString *)progressNotice;
 
 @end
 
@@ -93,6 +99,8 @@ typedef NS_ENUM(NSInteger, GOLFHandicapLookupServiceErrorDomainError) {
 @property (nonatomic, strong, nullable) NSDate * getHandicapTaskStart;
 
 @property (nonatomic, strong) NSString * _Nullable userAgent;
+@property (nonatomic, strong) NSString * _Nullable webKitVersionString;
+@property (nonatomic, strong) NSDictionary * _Nullable serviceInfo;	//	Setup data from the delegate
 
 //	Lookup Handicap
 @property (nonatomic, weak, nullable) NSDictionary *queryInfo;
@@ -105,12 +113,14 @@ typedef NS_ENUM(NSInteger, GOLFHandicapLookupServiceErrorDomainError) {
 @property (nonatomic, assign) BOOL sendProgressNotifications;	//	Always sent on main thread
 @property (nonatomic, assign) BOOL needCancel;
 
-+ (GOLFHandicapLookupAgent * _Nonnull)agentForDelegate:(id<GOLFHandicapLookupAgentDelegate> _Nonnull)delegate;
-- (GOLFHandicapLookupAgent * _Nonnull)initWithDelegate:(id<GOLFHandicapLookupAgentDelegate> _Nonnull)delegate;
++ (GOLFHandicapLookupAgent *)agentForDelegate:(id<GOLFHandicapLookupAgentDelegate>)delegate;
+- (GOLFHandicapLookupAgent *)initWithDelegate:(id<GOLFHandicapLookupAgentDelegate>)delegate;
 
 - (void)invalidateAndClose;
 - (void)endLookupSession;
 
-- (void)GetHandicapWithQueryInfo:(NSDictionary *_Nonnull)queryInfo completionHandler:(void (^ _Nonnull)(NSDictionary * _Nullable queryResponse, NSError * _Nullable error))completionHandler;
+- (void)GetHandicapWithQueryInfo:(NSDictionary *)queryInfo completionHandler:(void (^)(NSDictionary * _Nullable queryResponse, NSError * _Nullable error))completionHandler;
 
 @end
+
+NS_ASSUME_NONNULL_END
