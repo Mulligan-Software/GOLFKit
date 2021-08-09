@@ -193,7 +193,7 @@
 		294140451DDA03E300CC9605 /* GOLFTeeMarkerWhiteAndGold.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = GOLFTeeMarkerWhiteAndGold.icns; path = "GOLFKit (OS X)/TeeMarker icns/GOLFTeeMarkerWhiteAndGold.icns"; sourceTree = SOURCE_ROOT; };
 		294140461DDA03E300CC9605 /* GOLFTeeMarkerYellow.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = GOLFTeeMarkerYellow.icns; path = "GOLFKit (OS X)/TeeMarker icns/GOLFTeeMarkerYellow.icns"; sourceTree = SOURCE_ROOT; };
 		294140471DDA03E300CC9605 /* GOLFTeeMarkerYellowAndBlue.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; name = GOLFTeeMarkerYellowAndBlue.icns; path = "GOLFKit (OS X)/TeeMarker icns/GOLFTeeMarkerYellowAndBlue.icns"; sourceTree = SOURCE_ROOT; };
-		294140621DDB582600CC9605 /* GOLFKitTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLFKitTypes.h; path = GOLFKit/GOLFKitTypes.h; sourceTree = "<group>"; };
+		294140621DDB582600CC9605 /* GOLFKitTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLFKitTypes.h; path = GOLFKit/GOLFKitTypes.h; sourceTree = SOURCE_ROOT; };
 		29436C632055B5F90080E0FE /* GOLFCountries.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = GOLFCountries.plist; sourceTree = "<group>"; };
 		2944356C217E1CA500D4595C /* GOLFColors.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = GOLFColors.xcassets; sourceTree = "<group>"; };
 		29443571217E3A5700D4595C /* GOLFDynamicColor.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GOLFDynamicColor.h; path = ../GOLFKit/GOLFDynamicColor.h; sourceTree = "<group>"; };
@@ -249,7 +249,7 @@
 		29E02E3421E64CB80078569C /* NSDate+GOLFExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+GOLFExtensions.h"; sourceTree = "<group>"; };
 		29E02E3521E64CB80078569C /* NSDate+GOLFExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSDate+GOLFExtensions.m"; sourceTree = "<group>"; };
 		29E888AC1DCE5B0000C4A63A /* GOLFKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = GOLFKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		29E888AF1DCE5B0000C4A63A /* GOLFKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOLFKit.h; sourceTree = SOURCE_ROOT; };
+		29E888AF1DCE5B0000C4A63A /* GOLFKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = GOLFKit.h; path = GOLFKit/GOLFKit.h; sourceTree = SOURCE_ROOT; };
 		29E888B01DCE5B0000C4A63A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = "GOLFKit (iOS)/Info.plist"; sourceTree = SOURCE_ROOT; };
 		29E888B51DCE5B0000C4A63A /* GOLFKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GOLFKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		29E888BA1DCE5B0000C4A63A /* GOLFKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOLFKitTests.m; sourceTree = "<group>"; };
@@ -422,8 +422,6 @@
 		29E888A21DCE5B0000C4A63A = {
 			isa = PBXGroup;
 			children = (
-				294140621DDB582600CC9605 /* GOLFKitTypes.h */,
-				29E888AF1DCE5B0000C4A63A /* GOLFKit.h */,
 				29E888D11DCE652700C4A63A /* Common */,
 				29E888AE1DCE5B0000C4A63A /* GOLFKit (iOS) */,
 				29E888DA1DCE65E000C4A63A /* GOLFKit (macOS) */,
@@ -471,6 +469,8 @@
 		29E888D11DCE652700C4A63A /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				29E888AF1DCE5B0000C4A63A /* GOLFKit.h */,
+				294140621DDB582600CC9605 /* GOLFKitTypes.h */,
 				296411EB204B44CF002A70CB /* GOLFKit.m */,
 				2954DC052050EBC2008A7306 /* GOLFUtilities.h */,
 				2954DC062050EBC2008A7306 /* GOLFUtilities.m */,
@@ -909,7 +909,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 54;
+				CURRENT_PROJECT_VERSION = 55;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -928,7 +928,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -971,7 +971,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 54;
+				CURRENT_PROJECT_VERSION = 55;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -984,7 +984,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -999,7 +999,6 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 54;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1010,7 +1009,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 12.0;
+				MARKETING_VERSION = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mulligansoftware.GOLFKit;
 				PRODUCT_NAME = GOLFKit;
 				SDKROOT = iphoneos;
@@ -1027,7 +1026,6 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 54;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1038,7 +1036,7 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MARKETING_VERSION = 12.0;
+				MARKETING_VERSION = 14.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mulligansoftware.GOLFKit;
 				PRODUCT_NAME = GOLFKit;
 				SDKROOT = iphoneos;
@@ -1079,7 +1077,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 54;
+				CURRENT_PROJECT_VERSION = 55;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1089,8 +1087,8 @@
 				INFOPLIST_FILE = "GOLFKit (OS X)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mulligansoftware.GOLFKit;
 				PRODUCT_NAME = GOLFKit;
 				REZ_SEARCH_PATHS = "";
@@ -1106,7 +1104,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 54;
+				CURRENT_PROJECT_VERSION = 55;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1116,8 +1114,8 @@
 				INFOPLIST_FILE = "GOLFKit (OS X)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
-				MACOSX_DEPLOYMENT_TARGET = 10.12;
-				MARKETING_VERSION = 10.12;
+				MACOSX_DEPLOYMENT_TARGET = 10.14;
+				MARKETING_VERSION = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mulligansoftware.GOLFKit;
 				PRODUCT_NAME = GOLFKit;
 				REZ_SEARCH_PATHS = "";

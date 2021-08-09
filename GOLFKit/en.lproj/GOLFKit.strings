@@ -22,6 +22,7 @@
 "TERM_AND" = "and";
 "TERM_APPEARANCE" = "appearance";
 "TERM_ASSIGN" = "assign";
+"TERM_AT_LOCATED" = "at";	//	"The Inn at Spanish Bay"
 "TERM_ATTESTOR" = "attestor";
 "TERM_AUTHORITY" = "authority";
 "TERM_AUTHORIZATION" = "authorization";
@@ -61,8 +62,8 @@
 "TERM_COMPLETE" = "complete";
 "TERM_CONTINUE" = "continue";
 "TERM_COPY" = "copy";
-"TERM_COUNTRY_ADJ" = "country";
-"TERM_COUNTRY_NOUN" = "country";
+"TERM_COUNTRY_ADJ" = "country";	//	As in "Country Club"
+"TERM_COUNTRY_NOUN" = "country";	//	As in "This is my country."
 "TERM_COURSE" = "course";
 "TERM_COURSE_PLURAL" = "courses";
 "TERM_CURRENT" = "current";
@@ -126,6 +127,7 @@
 "TERM_HOLE_PLURAL" = "holes";
 "TERM_IGNORE" = "ignore";
 "TERM_IMPORT" = "import";
+"TERM_IN_SITUATED" = "in";
 "TERM_IMPROVEMENT" = "improvement";
 "TERM_INDICATE" = "indicate";
 "TERM_INDIVIDUAL" = "individual";	//	The adjective ("individual gross")
@@ -137,6 +139,7 @@
 "TERM_LEVEL" = "level";
 "TERM_LIMITED" = "limited";
 "TERM_LINK" = "link";
+"TERM_LINKS_GOLF" = "links";	//	St. Andrews Golf Links
 "TERM_LOCATE" = "locate";
 "TERM_LOCATION" = "location";
 "TERM_LOCK" = "lock";
@@ -182,6 +185,7 @@
 "TERM_NUMBER_ABBR" = "no.";
 "TERM_NUMBER_PLURAL" = "numbers";
 "TERM_NUMBER_PLURAL_ABBR" = "nos.";
+"TERM_OF_FROM" = "of";	//	"the Rockefellers of Staton Island"
 "TERM_ON_SITUATED" = "on";
 "TERM_OPEN" = "open";
 "TERM_OPT_OUT" = "opt out";
@@ -191,6 +195,7 @@
 "TERM_PAIRING_PLURAL" = "pairings";
 "TERM_PAR" = "par";
 "TERM_PAR_PLURAL" = "pars";
+"TERM_PARK" = "park";	//	like a "golf park"
 "TERM_PEORIA" = "Peoria";
 "TERM_PLACE" = "place";	//	like "first place" or "placement"
 "TERM_PLAYER" = "player";
@@ -208,7 +213,9 @@
 "TERM_QUIT" = "quit";
 "TERM_QUOTA" = "quota";
 "TERM_RANDOMLY" = "randomly";
+"TERM_RANGE" = "range";
 "TERM_RANK" = "rank";
+"TERM_RACQUET" = "racquet";	//	"racquet" club
 "TERM_RATING" = "rating";
 "TERM_RATING_PLURAL" = "ratings";
 "TERM_RATING_PLURAL_ABBR" = "ratings";
@@ -256,6 +263,9 @@
 "TERM_TEE_PLURAL" = "tees";
 "TERM_TEE_TIME" = "tee time";
 "TERM_TEE_TIME_PLURAL" = "tee times";
+"TERM_THE_ARTICLE" = "the";
+"TERM_THE_ARTICLE_F" = "the";
+"TERM_THE_ARTICLE_M" = "the";
 "TERM_THEME" = "theme";
 "TERM_THROUGH" = "through";
 "TERM_THROUGH_TEE_NO" = "through no.";	//	from hole no. N through no. N

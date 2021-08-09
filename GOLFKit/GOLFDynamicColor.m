@@ -75,10 +75,10 @@ FORWARD(colorSpace, NSColorSpace *)
 	return [self.effectiveColor colorUsingColorSpace:space];
 }
 
-FORWARD(colorSpaceName, NSColorSpaceName)
-- (GOLFColor *)colorUsingColorSpaceName:(NSColorSpaceName)name {
-	return [self.effectiveColor colorUsingColorSpaceName:name];
-}
+//FORWARD(colorSpaceName, NSColorSpaceName)
+//- (GOLFColor *)colorUsingColorSpaceName:(NSColorSpaceName)name {
+//	return [self.effectiveColor colorUsingColorSpaceName:name];
+//}
 
 FORWARD(numberOfComponents, NSInteger)
 - (void)getComponents:(CGFloat *)components {

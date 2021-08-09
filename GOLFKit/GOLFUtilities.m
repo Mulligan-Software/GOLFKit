@@ -145,7 +145,7 @@ NSString * GOLFLocalizedString(NSString *key) {
 	if (key && (key.length > 0)) {
 		//	[NSBundle localizedStringForKey:key value:value table:table] returns the following when key is nil or not found in table:
 		//	•	If key is nil and value is nil, returns an empty string.	(We simply return nil or zero-length key)
-		//	•	If key is nil and value is non-nil, returns value.	(We simply return nil or zero-length key)
+		//	•	If key is nil and value is non-nil, returns value.
 		//	•	If key is not found and value is nil or an empty string, returns key.
 		//	•	If key is not found and value is non-nil and not empty, return value.	(our technique looking to 2 places)
 		

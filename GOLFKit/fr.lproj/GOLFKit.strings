@@ -22,6 +22,7 @@
 "TERM_AND" = "et";
 "TERM_APPEARANCE" = "apparence";
 "TERM_ASSIGN" = "attribuer";
+"TERM_AT_LOCATED" = "à";	//	"The Inn at Spanish Bay"
 "TERM_ATTESTOR" = "attestateur";
 "TERM_AUTHORITY" = "autorité";
 "TERM_AUTHORIZATION" = "autorisation";
@@ -102,7 +103,7 @@
 "TERM_FOUND" = "trouvé";
 "TERM_FOURBALL" = "Quatre-Balle";
 "TERM_FOURSOMES" = "Foursomes";
-"TERM_FROM" = "de";
+"TERM_FROM" = "du";
 "TERM_FROM_FIRST_AND_TENTH_TEE" = "du 1ᵉʳ et 10ᵉ jalon";
 "TERM_FROM_FIRST_TEE" = "du 1ᵉʳ jalon";
 "TERM_FROM_TEE_NO" = "du jalon no.";
@@ -127,6 +128,7 @@
 "TERM_IGNORE" = "ignorer";
 "TERM_IMPORT" = "importer";
 "TERM_IMPROVEMENT" = "progrès";
+"TERM_IN_SITUATED" = "dans";
 "TERM_INDICATE" = "indiquer";
 "TERM_INDIVIDUAL" = "individuel";	//	The adjective ("individual gross")
 "TERM_INTERNATIONAL" = "International";
@@ -137,6 +139,7 @@
 "TERM_LEVEL" = "niveau";
 "TERM_LIMITED" = "limité";
 "TERM_LINK" = "lien";
+"TERM_LINKS_GOLF" = "liens";	//	St. Andrews Golf Links
 "TERM_LOCATE" = "localiser";
 "TERM_LOCATION" = "localité";
 "TERM_LOCK" = "verrouiller";
@@ -182,6 +185,7 @@
 "TERM_NUMBER_ABBR" = "no.";
 "TERM_NUMBER_PLURAL" = "números";
 "TERM_NUMBER_PLURAL_ABBR" = "nos.";
+"TERM_OF_FROM" = "de";	//	"the Rockefellers of Staton Island"
 "TERM_ON_SITUATED" = "sur";
 "TERM_OPEN" = "ouvrir";
 "TERM_OPT_OUT" = "se retirer";
@@ -191,6 +195,7 @@
 "TERM_PAIRING_PLURAL" = "jumelages";
 "TERM_PAR" = "par";
 "TERM_PAR_PLURAL" = "pars";
+"TERM_PARK" = "park";	//	like a "golf park"
 "TERM_PEORIA" = "Peoria";
 "TERM_PLACE" = "place";	//	like "first place" or "placement"
 "TERM_PLAYER" = "joueur";
@@ -208,7 +213,9 @@
 "TERM_QUIT" = "quitter";
 "TERM_QUOTA" = "quota";
 "TERM_RANDOMLY" = "au hasard";
+"TERM_RANGE" = "champ";
 "TERM_RANK" = "rang";
+"TERM_RACQUET" = "raquette";	//	"racquet" club
 "TERM_RATING" = "évaluation";
 "TERM_RATING_PLURAL" = "évaluations";
 "TERM_RATING_PLURAL_ABBR" = "éval.";
@@ -256,6 +263,9 @@
 "TERM_TEE_PLURAL" = "jalons";
 "TERM_TEE_TIME" = "heure de départ";
 "TERM_TEE_TIME_PLURAL" = "heures de départ";
+"TERM_THE_ARTICLE" = "le";
+"TERM_THE_ARTICLE_F" = "la";
+"TERM_THE_ARTICLE_M" = "le";
 "TERM_THEME" = "thème";
 "TERM_THROUGH" = "à travers";
 "TERM_THROUGH_TEE_NO" = "au jalon no.";	//	du jalon no. N au jalon no. N

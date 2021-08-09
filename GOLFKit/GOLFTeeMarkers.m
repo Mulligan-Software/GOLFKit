@@ -419,7 +419,7 @@ GOLFColor * GOLFTeeColorFromTeeColorIndex(GOLFTeeColorIndex proposedColorIndex) 
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 			return offWhite;
 #elif TARGET_OS_MAC
-			return [offWhite colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+			return [offWhite colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
 #endif
 		}
 		
@@ -449,7 +449,7 @@ GOLFColor * GOLFTeeColorFromTeeColorIndex(GOLFTeeColorIndex proposedColorIndex) 
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 	return genericColor;
 #elif TARGET_OS_MAC
-	return [genericColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+	return [genericColor colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
 #endif
 }
 
@@ -469,7 +469,7 @@ GOLFTeeColorIndex GOLFTeeColorIndexFromTeeColor(GOLFColor *teeColor) {
 		GOLFColor *rgb = teeColor;
 		[rgb getRed:&redComponent green:&greenComponent blue:&blueComponent alpha:nil];
 #elif TARGET_OS_MAC
-		GOLFColor *rgb = [teeColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+		GOLFColor *rgb = [teeColor colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
 		redComponent = [rgb redComponent];
 		greenComponent = [rgb greenComponent];
 		blueComponent = [rgb blueComponent];
@@ -484,7 +484,7 @@ GOLFTeeColorIndex GOLFTeeColorIndexFromTeeColor(GOLFColor *teeColor) {
 			testColor = [colorDict objectForKey:@"teeColor"];
 			[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
 #elif TARGET_OS_MAC
-			testColor = [[colorDict objectForKey:@"teeColor"] colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+			testColor = [[colorDict objectForKey:@"teeColor"] colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
 			redTestComponent = [testColor redComponent];
 			greenTestComponent = [testColor greenComponent];
 			blueTestComponent = [testColor blueComponent];
@@ -500,7 +500,7 @@ GOLFTeeColorIndex GOLFTeeColorIndexFromTeeColor(GOLFColor *teeColor) {
 		testColor = comboGreen;
 		[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
 #elif TARGET_OS_MAC
-		testColor = [comboGreen colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+		testColor = [comboGreen colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
 		redTestComponent = [testColor redComponent];
 		greenTestComponent = [testColor greenComponent];
 		blueTestComponent = [testColor blueComponent];
@@ -515,7 +515,7 @@ GOLFTeeColorIndex GOLFTeeColorIndexFromTeeColor(GOLFColor *teeColor) {
 //		testColor = oldGloryRed;
 //		[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
 //#elif TARGET_OS_MAC
-//		testColor = [oldGloryRed colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+//		testColor = [oldGloryRed colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
 //		redTestComponent = [testColor redComponent];
 //		greenTestComponent = [testColor greenComponent];
 //		blueTestComponent = [testColor blueComponent];
@@ -530,7 +530,7 @@ GOLFTeeColorIndex GOLFTeeColorIndexFromTeeColor(GOLFColor *teeColor) {
 //		testColor = euBlue;
 //		[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
 //#elif TARGET_OS_MAC
-//		testColor = [euBlue colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+//		testColor = [euBlue colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
 //		redTestComponent = [testColor redComponent];
 //		greenTestComponent = [testColor greenComponent];
 //		blueTestComponent = [testColor blueComponent];
@@ -545,7 +545,7 @@ GOLFTeeColorIndex GOLFTeeColorIndexFromTeeColor(GOLFColor *teeColor) {
 //		testColor = pgaPurple;
 //		[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
 //#elif TARGET_OS_MAC
-//		testColor = [pgaPurple colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+//		testColor = [pgaPurple colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
 //		redTestComponent = [testColor redComponent];
 //		greenTestComponent = [testColor greenComponent];
 //		blueTestComponent = [testColor blueComponent];
@@ -560,7 +560,7 @@ GOLFTeeColorIndex GOLFTeeColorIndexFromTeeColor(GOLFColor *teeColor) {
 //		testColor = usgaBlue;
 //		[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
 //#elif TARGET_OS_MAC
-//		testColor = [usgaBlue colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+//		testColor = [usgaBlue colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
 //		redTestComponent = [testColor redComponent];
 //		greenTestComponent = [testColor greenComponent];
 //		blueTestComponent = [testColor blueComponent];
@@ -707,7 +707,7 @@ GOLFTeeImage * GOLFTeeMarkerImageFromSpecs(GOLFTeeColorIndex teeColorIndex, GOLF
 				[(GOLFTeeImage *)[ourBundle imageForResource:@"GOLFTeeMarkerGeneric"] drawAtPoint:offscreenRect.origin fromRect:NSZeroRect operation:NSCompositingOperationCopy fraction:1.0];
 			} else {
 				//	Draw the white icon into the context
-				GOLFColor *localTintingColor = [teeColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+				GOLFColor *localTintingColor = [teeColor colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
 				[(GOLFTeeImage *)[ourBundle imageForResource:@"GOLFTeeMarkerWhite"] drawAtPoint:offscreenRect.origin fromRect:NSZeroRect operation:NSCompositingOperationCopy fraction:1.0];
 				//	The actual colored circle of the 128x128 image is 100 pixels wide, 14px left, 7 px top, 14 px right, 21 px bottom
 				

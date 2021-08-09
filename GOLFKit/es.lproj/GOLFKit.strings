@@ -22,6 +22,7 @@
 "TERM_AND" = "y";
 "TERM_APPEARANCE" = "apariencia";
 "TERM_ASSIGN" = "asignar";
+"TERM_AT_LOCATED" = "en";	//	"The Inn at Spanish Bay"
 "TERM_ATTESTOR" = "certificador";
 "TERM_AUTHORITY" = "potestad";
 "TERM_AUTHORIZATION" = "autorización";
@@ -127,6 +128,7 @@
 "TERM_IGNORE" = "ignorar";
 "TERM_IMPORT" = "importar";
 "TERM_IMPROVEMENT" = "mejora";
+"TERM_IN_SITUATED" = "en";
 "TERM_INDICATE" = "indicar";
 "TERM_INDIVIDUAL" = "individual";	//	The adjective ("individual gross")
 "TERM_INTERNATIONAL" = "International";
@@ -137,6 +139,7 @@
 "TERM_LEVEL" = "nival";	//	n. skill "level"
 "TERM_LIMITED" = "limitado";
 "TERM_LINK" = "enlace";
+"TERM_LINKS_GOLF" = "lugar para";	//	St. Andrews Golf Links
 "TERM_LOCATE" = "ubicar";
 "TERM_LOCATION" = "localidad";
 "TERM_LOCK" = "bloquear";
@@ -182,6 +185,7 @@
 "TERM_NUMBER_ABBR" = "no.";
 "TERM_NUMBER_PLURAL" = "números";
 "TERM_NUMBER_PLURAL_ABBR" = "nos.";
+"TERM_OF_FROM" = "de";	//	"the Rockefellers of Staton Island"
 "TERM_ON_SITUATED" = "en";
 "TERM_OPEN" = "abrir";
 "TERM_OPT_OUT" = "optar fuera";
@@ -191,6 +195,7 @@
 "TERM_PAIRING_PLURAL" = "parejas";
 "TERM_PAR" = "par";
 "TERM_PAR_PLURAL" = "pars";
+"TERM_PARK" = "park";	//	like a "golf park"
 "TERM_PEORIA" = "Peoria";
 "TERM_PLACE" = "lugar";	//	like "first place" or "placement"
 "TERM_PLAYER" = "jugador";
@@ -208,7 +213,9 @@
 "TERM_QUIT" = "salir";
 "TERM_QUOTA" = "cuota";
 "TERM_RANDOMLY" = "al azar";
+"TERM_RANGE" = "rango";
 "TERM_RANK" = "grado";
+"TERM_RACQUET" = "raqueta";	//	"racquet" club
 "TERM_RATING" = "calificación";
 "TERM_RATING_PLURAL" = "calificaciones";
 "TERM_RATING_PLURAL_ABBR" = "calif.";
@@ -256,6 +263,9 @@
 "TERM_TEE_PLURAL" = "tees";
 "TERM_TEE_TIME" = "tee-time";
 "TERM_TEE_TIME_PLURAL" = "tee-times";
+"TERM_THE_ARTICLE" = "el";
+"TERM_THE_ARTICLE_F" = "la";
+"TERM_THE_ARTICLE_M" = "el";
 "TERM_THEME" = "tema";
 "TERM_THROUGH" = "hasta";
 "TERM_THROUGH_TEE_NO" = "hasta no.";	//	desde tee no. N hasta no. N

@@ -61,7 +61,7 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 		return [GOLFColor GOLFFactoryEagleColor];
 	}
 	if (@available (macOS 10.10, *)) {
-		return (GOLFColor *)[[NSColor systemPurpleColor] colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+		return (GOLFColor *)[[NSColor systemPurpleColor] colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
 	}
 	return [GOLFColor purpleColor];
 	
@@ -79,7 +79,7 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 		return [GOLFColor GOLFFactoryBirdieColor];
 	}
 	if (@available (macOS 10.10, *)) {
-		return (GOLFColor *)[[NSColor systemRedColor] colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+		return (GOLFColor *)[[NSColor systemRedColor] colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
 	}
 	return [GOLFColor redColor];
 	
@@ -97,7 +97,7 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 		return [GOLFColor GOLFFactoryParColor];
 	}
 	if (@available (macOS 10.10, *)) {
-		return (GOLFColor *)[[NSColor systemBlueColor] colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+		return (GOLFColor *)[[NSColor systemBlueColor] colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
 	}
 	return [GOLFColor blueColor];
 	
@@ -439,8 +439,8 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 	
 #elif TARGET_OS_MAC
 
-	NSColor *ourColor = [self colorUsingColorSpaceName:NSCalibratedRGBColorSpace];;
-	NSColor *otherColor = [compareColor colorUsingColorSpaceName:NSCalibratedRGBColorSpace];
+	NSColor *ourColor = [self colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
+	NSColor *otherColor = [compareColor colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
 	[ourColor getRed:&ourRed green:&ourGreen blue:&ourBlue alpha:nil];
 	[otherColor getRed:&otherRed green:&otherGreen blue:&otherBlue alpha:nil];
 	
