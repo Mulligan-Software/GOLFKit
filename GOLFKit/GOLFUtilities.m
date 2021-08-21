@@ -196,6 +196,28 @@ GOLFImage * GOLFImageWithName(NSString *imageName) {
 #pragma mark NSStringFrom… Utilities
 
 //=================================================================
+//	NSStringFromDragAndDropDelimiterType(delimiterType)
+//=================================================================
+NSString * NSStringFromDragAndDropDelimiterType(GOLFDragAndDropDelimiterType delimiterType) {
+	switch (delimiterType) {
+		case GOLFDragAndDropDelimiterTypeTab:
+			return GOLFLocalizedString(@"TERM_TAB_DELIMITED");
+			
+		case GOLFDragAndDropDelimiterTypeComma:
+			return GOLFLocalizedString(@"TERM_COMMA_SEPARATED");
+			
+		case GOLFDragAndDropDelimiterTypeSemicolon:
+			return GOLFLocalizedString(@"TERM_SEMICOLON_SEPARATED");
+			
+		case GOLFDragAndDropDelimiterTypeUnknown:
+			return [GOLFLocalizedString(@"TERM_UNKNOWN") capitalizedString];
+			
+		default:
+			return [GOLFLocalizedString(@"TERM_ERROR") capitalizedString];
+	}
+}
+
+//=================================================================
 //	NSStringFromPlayingHandicap(playingHandicap)
 //=================================================================
 NSString * NSStringFromPlayingHandicap(GOLFPlayingHandicap playingHandicap) {

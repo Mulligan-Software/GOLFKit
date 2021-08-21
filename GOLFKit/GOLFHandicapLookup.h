@@ -38,6 +38,11 @@ extern NSString * const GOLFLinkLoggedInGAUserCookieValue;
 extern NSString * const GOLFLink_gaCookieValue;
 extern NSString * const GOLFLink_gidCookieValue;
 
+//	Lookup functions…
+
+GOLFHandicapLookupService GOLFHandicapServiceForAuthority(GOLFHandicapAuthority *authority);
+//	Returns handicapping service appropriate for the specified authority (GOLFHandicapLookupServiceGHIN for example)
+
 NSString * _Nonnull GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupService);
 //	Returns a localized title for the specified handicap data service ("GHIN", "GOLFLink", "Network de Golf", etc.)
 

@@ -19,6 +19,7 @@
 "TERM_ALL_SEARCH" = "all";
 "TERM_ALL_SQUARE" = "all square";
 "TERM_ALLOWANCE" = "allowance";
+"TERM_ALPHABETIC" = "alphabetic";
 "TERM_AND" = "and";
 "TERM_APPEARANCE" = "appearance";
 "TERM_ASSIGN" = "assign";
@@ -56,6 +57,7 @@
 "TERM_CLUB_PLURAL" = "clubs";
 "TERM_CODE" = "code";
 "TERM_COLOR" = "color";
+"TERM_COMMA" = "comma (,)";
 "TERM_COMPETITION" = "competition";
 "TERM_COMPETITOR" = "competitor";
 "TERM_COMPETITOR_PLURAL" = "competitors";
@@ -126,6 +128,7 @@
 "TERM_HOLE" = "hole";
 "TERM_HOLE_PLURAL" = "holes";
 "TERM_IGNORE" = "ignore";
+"TERM_IGNORED" = "ignored";
 "TERM_IMPORT" = "import";
 "TERM_IN_SITUATED" = "in";
 "TERM_IMPROVEMENT" = "improvement";
@@ -197,7 +200,9 @@
 "TERM_PAR_PLURAL" = "pars";
 "TERM_PARK" = "park";	//	like a "golf park"
 "TERM_PEORIA" = "Peoria";
+"TERM_PHONE" = "phone";
 "TERM_PLACE" = "place";	//	like "first place" or "placement"
+"TERM_PLACEMENT" = "placement";
 "TERM_PLAYER" = "player";
 "TERM_PLAYER_PLURAL" = "players";
 "TERM_POINT" = "point";
@@ -240,6 +245,7 @@
 "TERM_SECOND" = "second";
 "TERM_SECOND_PLURAL" = "seconds";
 "TERM_SELECTED" = "selected";
+"TERM_SEMICOLON" = "semicolon (;)";
 "TERM_SETTINGS" = "settings";
 "TERM_SIDE" = "side";
 "TERM_SIDE_PLURAL" = "sides";
@@ -254,6 +260,7 @@
 "TERM_STROKE_PLURAL" = "strokes";
 "TERM_STYLE" = "style";
 "TERM_SUPERSEDED" = "superseded";
+"TERM_TAB" = "tab (→)";
 "TERM_TAP" = "tap";
 "TERM_TEAM" = "team";
 "TERM_TEAM_PLURAL" = "teams";
@@ -309,6 +316,10 @@
 "TERM_YESTERDAY" = "yesterday";
 "TERM_ZERO" = "zero";
 "TERM_ZIGZAG" = "Zig-Zag";
+
+"TERM_COMMA_SEPARATED" = "comma-separated";
+"TERM_SEMICOLON_SEPARATED" = "semicolon-separated";
+"TERM_TAB_DELIMITED" = "tab-delimited";
 
 //	Standard Tee Colors
 "GOLF_TEE_COLOR_NAME_BLACK" = "Black";
@@ -476,6 +487,7 @@
 "TITLE_DONE" = "Done";
 "TITLE_DOWNLOADING_COURSES" = "Downloading Courses";
 "TITLE_DOWNLOADING_EAGLE_USERS_GUIDE"= "Downloading the Mulligan’s Eagle™ Users’ Guide…";
+"TITLE_DRAG_DROP_DELIMITERS" = "Drag & Drop\ndata delimiters";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
 "TITLE_EAGLE_USERS_GUIDE" = "Mulligan’s Eagle Users’ Guide";
@@ -487,6 +499,7 @@
 "TITLE_EGO_PULL_TO_SORT" = "Pull to sort…";
 "TITLE_EGO_RELEASE_TO_SORT" = "Release to sort…";
 "TITLE_EGO_SORTING" = "Sorting…";
+"TITLE_EMAIL" = "eMail";
 "TITLE_ENFORCE_EXTINCT_HANDICAPS" = "Enforce the discontinuation\nof handicap methods.";	//	2 lines!
 "TITLE_ESC_LIMIT" = "ESC limit";
 "TITLE_EULA" = "End User License Agreement";
@@ -499,6 +512,7 @@
 "TITLE_FACTORY_SETTINGS" = "Factory Settings";
 "TITLE_FAIRWAY_HIT" = "Fairway Hit";
 "TITLE_FAVORITE_PLAYER" = "Favorite Player";
+"TITLE_FAX_CELL" = "Fax / Cell";
 "TITLE_FIRST_HOLE" = "First Hole";
 "TITLE_FIRST_TEE_TIME" = "First Tee Time";
 "TITLE_FLAG_TOURNAMENT_SCORES" = "Flag Tournament scores";
@@ -573,7 +587,8 @@
 "TITLE_HANDICAP_PLAYING" = "Playing Handicap";
 "TITLE_HANDICAP_PLAYING_PLURAL" = "Playing Handicaps";
 "TITLE_HANDICAP_RECORDS" = "Handicap Records";
-"TITLE_HANDICAP_SERVICE" = "Download…";
+"TITLE_HANDICAP_SERVICE" = "Handicap Service";
+"TITLE_HANDICAP_SERVICE_ACCOUNT" = "Handicapping Account";
 "TITLE_HANDICAP_SLOPE_CHART" = "Slope Chart";
 "TITLE_HANDICAP_SLOPE_RATING" = "Slope Rating";
 "TITLE_HANDICAP_STABLEFORD_SCORE" = "Stableford Score";
@@ -682,6 +697,7 @@
 "TITLE_QUICK_START" = "Quick Start";
 "TITLE_QUOTA_POINTS_GAINED" = "Quota Points Gained";
 "TITLE_RANDOM_SELECTION" = "Random Selection";
+"TITLE_RAW_INDEX" = "Raw Index";
 "TITLE_RECENT_PLAYERS_ETC" = "Recent Players, Clubs, Scorecards, etc.";
 "TITLE_REFRESH" = "Refresh";
 "TITLE_REGISTER" = "Register";
@@ -1208,6 +1224,7 @@
 "PERCENT_CHARACTER" = "%";
 "PLUS_CHARACTER" = "+";
 "PRESS_LEADER_CHARACTER" = "└";	//	Special character - alternates: "╚" or "‣"
+"RIGHTWARD_ARROW" = "→";
 "SCORECARD_EXCEEDS_1_PLAYER" = "Scorecard exceeds maximum 1 player";
 "SCORECARD_EXCEEDS_%ld_PLAYERS" = "Scorecard exceeds maximum %ld players";
 "SUPERSCRIPT_+_CHARACTER" = "⁺";		//	Special character

@@ -21,6 +21,25 @@ NSString * const GOLFLink_gidCookieValue = @"GA1.3.1902797135.1547657519";
 
 
 //=================================================================
+//	GOLFHandicapServiceForAuthority(authority)
+//=================================================================
+GOLFHandicapLookupService GOLFHandicapServiceForAuthority(GOLFHandicapAuthority *authority) {
+//	Returns the GOLFHandicapLookupService identifier of the calculation service for the specified authority
+	if (authority) {
+		if ([authority isEqualToString:GOLFHandicapAuthorityWHS] || [authority isEqualToString:GOLFHandicapAuthorityUSGA]) {
+			return GOLFHandicapLookupServiceGHIN;
+		}
+		else if ([authority isEqualToString:GOLFHandicapAuthorityRCGA]) {
+			return GOLFHandicapLookupServiceGolfNetwork;
+		}
+		else if ([authority isEqualToString:GOLFHandicapAuthorityAGU]) {
+			return GOLFHandicapLookupServiceGOLFLink;
+		}
+	}
+	return GOLFHandicapLookupServiceUnknown;
+}
+
+//=================================================================
 //	GOLFHandicapLookupServiceTitle(lookupService)
 //=================================================================
 NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupService) {

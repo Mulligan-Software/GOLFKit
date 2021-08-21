@@ -62,6 +62,7 @@
 "TERM_ALL_SEARCH" = "alle";
 "TERM_ALL_SQUARE" = "ausgeglichen";
 "TERM_ALLOWANCE" = "Zustimmung";
+"TERM_ALPHABETIC" = "alphabetisch";
 "TERM_AND" = "und";
 "TERM_APPEARANCE" = "Erscheinungsbild";
 "TERM_ASSIGN" = "zuweisen";
@@ -99,6 +100,7 @@
 "TERM_CLUB_PLURAL" = "Clubs";
 "TERM_CODE" = "Code";
 "TERM_COLOR" = "Farbe";
+"TERM_COMMA" = "Komma (,)";
 "TERM_COMPETITION" = "Wettbewerb";
 "TERM_COMPETITOR" = "Konkurrent";
 "TERM_COMPETITOR_PLURAL" = "Konkurrenten";
@@ -169,6 +171,7 @@
 "TERM_HOLE" = "Loch";
 "TERM_HOLE_PLURAL" = "Löcher";
 "TERM_IGNORE" = "ignorieren";
+"TERM_IGNORED" = "ignoriert";
 "TERM_IMPORT" = "importieren";
 "TERM_IMPROVEMENT" = "Verbesserung";
 "TERM_IN_SITUATED" = "in";
@@ -240,7 +243,9 @@
 "TERM_PAR_PLURAL" = "Pars";
 "TERM_PARK" = "Golfpark";	//	like a "golf park"
 "TERM_PEORIA" = "Peoria";
+"TERM_PHONE" = "Telefon";
 "TERM_PLACE" = "Platz";	//	like "first place" or "placement"
+"TERM_PLACEMENT" = "Stellung";
 "TERM_PLAYER" = "Spieler";
 "TERM_PLAYER_PLURAL" = "Spieler";
 "TERM_POINT" = "Punkt";
@@ -283,6 +288,7 @@
 "TERM_SECOND" = "Sekunde";
 "TERM_SECOND_PLURAL" = "Sekunden";
 "TERM_SELECTED" = "ausgewählt";
+"TERM_SEMICOLON" = "Semikolon (;)";
 "TERM_SETTINGS" = "Einstellungen";
 "TERM_SIDE" = "Seite";
 "TERM_SIDE_PLURAL" = "Seiten";
@@ -297,6 +303,7 @@
 "TERM_STROKE_PLURAL" = "Schläge";
 "TERM_STYLE" = "Art";
 "TERM_SUPERSEDED" = "abgelöst";
+"TERM_TAB" = "Tab (→)";
 "TERM_TAP" = "tippe";	//	tippe auf ~
 "TERM_TEAM" = "Mannschaft";
 "TERM_TEAM_PLURAL" = "Mannschaften";
@@ -519,6 +526,7 @@
 "TITLE_DONE" = "Fertig";
 "TITLE_DOWNLOADING_COURSES" = "Golfplätze herunterladen";
 "TITLE_DOWNLOADING_EAGLE_USERS_GUIDE"= "Mulligan’s Eagle™ Benutzerhandbuch wird heruntergeladen…";
+"TITLE_DRAG_DROP_DELIMITERS" = "Datentrennzeichen per\nziehen und loslassen";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
 "TITLE_EAGLE_USERS_GUIDE" = "Benutzerhandbuch für Mulligan’s Eagle";
@@ -530,6 +538,7 @@
 "TITLE_EGO_PULL_TO_SORT" = "Zum Sortieren ziehen…";
 "TITLE_EGO_RELEASE_TO_SORT" = "Zur Sortierung freigeben…";
 "TITLE_EGO_SORTING" = "Sortierung…";
+"TITLE_EMAIL" = "E-Mail";
 "TITLE_ENFORCE_EXTINCT_HANDICAPS" = "Erzwingen Sie die Einstellung\nvon Handicap-Methoden";	//	2 lines!
 "TITLE_ESC_LIMIT" = "ESC limit";
 "TITLE_EULA" = "Endbenutzer-Lizenzvereinbarung";
@@ -542,6 +551,7 @@
 "TITLE_FACTORY_SETTINGS" = "Werkseinstellungen";
 "TITLE_FAIRWAY_HIT" = "Fairway erreicht";
 "TITLE_FAVORITE_PLAYER" = "Lieblings Spieler";
+"TITLE_FAX_CELL" = "Fax / Handy";
 "TITLE_FIRST_HOLE" = "erstes Loch";
 "TITLE_FIRST_TEE_TIME" = "Erste Abschlagzeit";
 "TITLE_FLAG_TOURNAMENT_SCORES" = "Bestimmen Turnier-Scores";
@@ -616,7 +626,8 @@
 "TITLE_HANDICAP_PLAYING" = "Spielen Handicap";
 "TITLE_HANDICAP_PLAYING_PLURAL" = "Spielen Handicapen";
 "TITLE_HANDICAP_RECORDS" = "Handicap-Datensätze";
-"TITLE_HANDICAP_SERVICE" = "Herunterladen…";
+"TITLE_HANDICAP_SERVICE" = "Handicap-Service";
+"TITLE_HANDICAP_SERVICE_ACCOUNT" = "Handicap-Konto";
 "TITLE_HANDICAP_SLOPE_CHART" = "Slope-Diagramm";
 "TITLE_HANDICAP_SLOPE_RATING" = "Slope Rating";
 "TITLE_HANDICAP_STABLEFORD_SCORE" = "Stableford Score";
@@ -725,6 +736,7 @@
 "TITLE_QUICK_START" = "Schnellstart";
 "TITLE_QUOTA_POINTS_GAINED" = "Quotenpunkte gewonnen";
 "TITLE_RANDOM_SELECTION" = "Zufällige Auswahl";
+"TITLE_RAW_INDEX" = "Rohindex";
 "TITLE_RECENT_PLAYERS_ETC" = "Aktuelle Spieler, Vereine, Scorekarten, usw.";
 "TITLE_REFRESH" = "Aktualisieren";
 "TITLE_REGISTER" = "Registrieren";
@@ -1250,6 +1262,7 @@
 "PERCENT_CHARACTER" = "%";
 "PLUS_CHARACTER" = "+";
 "PRESS_LEADER_CHARACTER" = "└";	//	Special character - alternates: "╚" or "‣"
+"RIGHTWARD_ARROW" = "→";
 "SCORECARD_EXCEEDS_1_PLAYER" = "Scorekarte überschreitet maximal 1 Spieler";
 "SCORECARD_EXCEEDS_%ld_PLAYERS" = "Scorekarte überschreitet maximal %ld Spieler";
 "SUPERSCRIPT_+_CHARACTER" = "⁺";		//	Special character

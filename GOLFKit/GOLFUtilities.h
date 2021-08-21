@@ -29,6 +29,18 @@ extern NSString * const GOLFLocalizedStringNotFound;
 //	No-value constants
 #define kNotAnIntegerValue			-999		//	No-value for misc. NSInteger-based value storage
 #define kNotAFloatValue				-999.0		//	No-value for misc. float-based value storage
+#define SEMICOLON ';'							//	Special European D&D delimiter
+
+//	General operational typedefs and options…
+
+//	Drag & Drop options
+typedef NS_ENUM(NSInteger, GOLFDragAndDropDelimiterType) {
+	GOLFDragAndDropDelimiterTypeTab = 0,		//	Drag and drop produces tab-delimited string table data			(0)
+	GOLFDragAndDropDelimiterTypeDefault = GOLFDragAndDropDelimiterTypeTab,	//	Default is tab-delimited
+	GOLFDragAndDropDelimiterTypeComma,			//	Drag and drop produces comma-delimited (CSV) string table data	(1)
+	GOLFDragAndDropDelimiterTypeSemicolon,		//	Drag and drop produces semicolon-delimited string table data	(2)
+	GOLFDragAndDropDelimiterTypeUnknown = 99	//	Unknown or programmatically-provided delimiter					(99)
+};
 
 NSString * GOLFUnlocalizedCurrentCountry(void);
 //	The unlocalized name of the country for which the user's device is configured, discovered from NSLocale features
@@ -75,6 +87,9 @@ GOLFImage * GOLFImageWithName(NSString *imageName);
 //	An NSImage or UIImage available in GOLFKit by name
 
 #pragma mark NSStringFrom… Utilities
+
+NSString * NSStringFromDragAndDropDelimiterType(GOLFDragAndDropDelimiterType delimiterType);
+//	"tab-delimited", "CSV", etc.
 
 NSString * NSStringFromPlayingHandicap(GOLFPlayingHandicap playingHandicap);
 //	The Playing Handicap or 'kNotAPlayingHandicap'
