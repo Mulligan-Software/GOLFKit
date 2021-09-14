@@ -365,7 +365,7 @@
 
 //	Handicap methods & associations
 "HANDICAP_METHOD_2ND_BEST" = "Second-Best Score System";
-"HANDICAP_METHOD_AGU" = "Golf Australia Handicap System";
+"HANDICAP_METHOD_AGU" = "World Handicap System - Australia";
 "HANDICAP_METHOD_CONGU" = "CONGU Unified Handicapping System";
 "HANDICAP_METHOD_EGA" = "EGA Handicap System";
 "HANDICAP_METHOD_MULLIGAN" = "Mulligan Handicapping";
@@ -527,7 +527,7 @@
 "TITLE_GOLF_GLOSSARY" = "Golf Glossary";
 "TITLE_GOLF_NETWORK" = "Golf Network (Canada)";
 "TITLE_GOLFLINK" = "GOLFLink (Australia)";
-"TITLE_GOLFLINK_NUMBER" = "GOLFLink Account";
+"TITLE_GOLFLINK_NUMBER" = "GOLFLink Number";
 "TITLE_GORILLA" = "Gorilla";
 "TITLE_GRADE" = "Grade";
 "TITLE_GRAPHING_COLORS" = "Graphing Colors";
@@ -569,8 +569,8 @@
 "TITLE_HANDICAP_EXACT_PLURAL" = "Exact Handicaps";
 "TITLE_HANDICAP_FACTOR" = "Handicap Factor";
 "TITLE_HANDICAP_FACTOR_PLURAL" = "Handicap Factors";
-"TITLE_HANDICAP_GA" = "G.A. Handicap";
-"TITLE_HANDICAP_GA_PLURAL" = "G.A. Handicaps";
+"TITLE_HANDICAP_GA" = "GA Handicap";
+"TITLE_HANDICAP_GA_PLURAL" = "GA Handicaps";
 "TITLE_HANDICAP_GRADE" = "Handicap Grade";
 "TITLE_HANDICAP_GRADE_ABBR" = "Grade";
 "TITLE_HANDICAP_ID" = "Handicap ID";
@@ -726,6 +726,7 @@
 "TITLE_SCORECARD_TOTAL" = "Tot";	//	As it appears in Scorecard total headers ("Tot"
 "TITLE_SCORING_COLORS" = "Scoring Colors";
 "TITLE_SCORING_SHORTHAND" = "Scoring Shorthand";
+"TITLE_SCRATCH_SCORE" = "Scratch Score";
 "TITLE_SECONDARY" = "Secondary";
 "TITLE_SELECT_ALL" = "Select All";
 "TITLE_SELECTED_HOLES" = "Selected Holes";
@@ -1190,7 +1191,7 @@
 "TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - used\nH - home\nA - away\nC - competition\nN - 9-hole combined\nS - stroke play\nM - match play\nI - incomplete\nE - exceptional\nP - penalty";
 "TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - used\nA - away\nC - combined\nT - tournament\nP - penalty";
 "TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - used\nA - away\nC - combined\nT - tournament\nP - penalty";
-"TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - used\nA - away\nC - combined";
+"TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - used\nH - home\nA - away\nC - competition\nN - 9-hole combined\nS - stroke play\nM - match play\nI - incomplete\nE - exceptional\nP - penalty";
 "TOOLTIP_ROUNDS_MODIFIER_CONGU" = "* - used\nT - tournament";
 "TOOLTIP_ROUNDS_MODIFIER_EGA" = "* - used\nT - tournament";
 "TOOLTIP_ROUNDS_MODIFIER_MULLIGAN" = "* - used\nA - away\nT - tournament";

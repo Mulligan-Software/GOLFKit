@@ -523,7 +523,7 @@
 "TITLE_GOLF_GLOSSARY" = "Glosario de Golf";
 "TITLE_GOLF_NETWORK" = "Golf Network (Canada)";
 "TITLE_GOLFLINK" = "GOLFLink (Australia)";
-"TITLE_GOLFLINK_NUMBER" = "Cuenta de GOLFLink";
+"TITLE_GOLFLINK_NUMBER" = "Número de GOLFLink";
 "TITLE_GORILLA" = "Gorilla";
 "TITLE_GRADE" = "Grado";
 "TITLE_GRAPHING_COLORS" = "Colores gráphicos";
@@ -565,8 +565,8 @@
 "TITLE_HANDICAP_EXACT_PLURAL" = "Handicaps Exactos";
 "TITLE_HANDICAP_FACTOR" = "Factor de Handicap";
 "TITLE_HANDICAP_FACTOR_PLURAL" = "Factores de Handicap";
-"TITLE_HANDICAP_GA" = "Handicap G.A.";
-"TITLE_HANDICAP_GA_PLURAL" = "Handicaps G.A.";
+"TITLE_HANDICAP_GA" = "GA Handicap";
+"TITLE_HANDICAP_GA_PLURAL" = "GA Handicaps";
 "TITLE_HANDICAP_GRADE" = "Grado de Handicap";
 "TITLE_HANDICAP_GRADE_ABBR" = "Grado";
 "TITLE_HANDICAP_ID" = "ID de Handicap";
@@ -722,6 +722,7 @@
 "TITLE_SCORECARD_TOTAL" = "Tot";	//	As it appears in Scorecard total headers
 "TITLE_SCORING_COLORS" = "Colores de Resultados";
 "TITLE_SCORING_SHORTHAND" = "Taquigrafía para Resultados";
+"TITLE_SCRATCH_SCORE" = "Scratch Score";
 "TITLE_SECONDARY" = "Secundario";
 "TITLE_SELECT_ALL" = "Seleccionar Todo";
 "TITLE_SELECTED_HOLES" = "Hoyos Seleccionados";
@@ -1186,7 +1187,7 @@
 "TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - utilizado\nH - a casa\nA - allá\nC - competencia\nN - 9-hoyos combinados\nS - stroke play\nM - match play\nI - incompleta\nE - excepcional\nP - pena";
 "TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - utilizado\nA - allá\nC - combinado\nT - torneo\nP - pena";
 "TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - utilizado\nA - allá\nC - combinado\nT - torneo\nP - pena";
-"TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - utilizado\nA - allá\nC - combinado";
+"TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - utilizado\nH - a casa\nA - allá\nC - competencia\nN - 9-hoyos combinados\nS - stroke play\nM - match play\nI - incompleta\nE - excepcional\nP - pena";
 "TOOLTIP_ROUNDS_MODIFIER_CONGU" = "* - utilizado\nT - torneo";
 "TOOLTIP_ROUNDS_MODIFIER_EGA" = "* - utilizado\nT - torneo";
 "TOOLTIP_ROUNDS_MODIFIER_MULLIGAN" = "* - utilizado\nA - allá\nT - torneo";

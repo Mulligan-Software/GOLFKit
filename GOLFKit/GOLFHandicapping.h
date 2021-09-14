@@ -205,7 +205,7 @@ NSString * GOLFHandicapTableBlurb(GOLFHandicapMethodIndex handicapMethod);	//	Sl
 NSString * GOLFHandicapTableInstruction(GOLFHandicapMethodIndex handicapMethod);	//	Slope Chart (Handicap Table) selection instruction
 //	Returns a localized instruction for identifying your playing handicap on the right from the range of handicap indexes on the left
 
-NSString * GOLFHandicapCalculationFormula(GOLFHandicapMethodIndex handicapMethod);	//	Playing Handicap formula
+NSString * GOLFHandicapCalculationFormula(GOLFHandicapMethodIndex handicapMethod, BOOL usingSSS);	//	Playing Handicap formula
 //	Returns a localized descriptive formula for the computation of a Playing Handicap ("Handicap Index x Slope Rating / 113 (rounded)", etc.)
 
 //	Authority-specific data

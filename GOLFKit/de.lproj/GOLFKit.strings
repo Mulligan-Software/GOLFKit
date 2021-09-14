@@ -608,8 +608,8 @@
 "TITLE_HANDICAP_EXACT_PLURAL" = "Exakt Handicapen";
 "TITLE_HANDICAP_FACTOR" = "Handicapfaktor";
 "TITLE_HANDICAP_FACTOR_PLURAL" = "Handicapfaktoren";
-"TITLE_HANDICAP_GA" = "G.A. Handicap";
-"TITLE_HANDICAP_GA_PLURAL" = "G.A. Handicapen";
+"TITLE_HANDICAP_GA" = "GA Handicap";
+"TITLE_HANDICAP_GA_PLURAL" = "GA Handicapen";
 "TITLE_HANDICAP_GRADE" = "Handicap Klasse";
 "TITLE_HANDICAP_GRADE_ABBR" = "Klasse";
 "TITLE_HANDICAP_ID" = "Handicap ID";
@@ -765,6 +765,7 @@
 "TITLE_SCORECARD_TOTAL" = "Sum";	//	As it appears in Scorecard total headers
 "TITLE_SCORING_COLORS" = "Farben für Golfwertung";
 "TITLE_SCORING_SHORTHAND" = "Kurzschrift für Golfwertung";
+"TITLE_SCRATCH_SCORE" = "Scratch Score";
 "TITLE_SECONDARY" = "Sekundär";
 "TITLE_SELECT_ALL" = "Wählen Sie Alle";
 "TITLE_SELECTED_HOLES" = "ausgewählte Löcher";
@@ -1229,7 +1230,7 @@
 "TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - benutzt\nH - heimisch\nA - entfernt\nC - Event\nN - 9-Löcher kombiniert\nS - Schlag-Spiel\nM - Match-Spiel\nI - unfertig\nE - außergewöhnlich\nP - Strafe";
 "TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - benutzt\nA - entfernt\nC - kombiniert\nT - Tournier\nP - Strafe";
 "TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - benutzt\nA - entfernt\nC - kombiniert\nT - Tournier\nP - Strafe";
-"TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - benutzt\nA - entfernt\nC - kombiniert";
+"TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - benutzt\nH - heimisch\nA - entfernt\nC - Event\nN - 9-Löcher kombiniert\nS - Schlag-Spiel\nM - Match-Spiel\nI - unfertig\nE - außergewöhnlich\nP - Strafe";
 "TOOLTIP_ROUNDS_MODIFIER_CONGU" = "* - benutzt\nT - Tournier";
 "TOOLTIP_ROUNDS_MODIFIER_EGA" = "* - benutzt\nT - Tournier";
 "TOOLTIP_ROUNDS_MODIFIER_MULLIGAN" = "* - benutzt\nA - entfernt\nT - Tournier";

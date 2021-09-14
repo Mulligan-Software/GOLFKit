@@ -74,6 +74,17 @@ NSString *ETagLetters = @"abcdefghijklmnopqrstuvwxyz0123456789";
 					}
 				}
 			}
+			if ([authority isEqualToString:GOLFHandicapAuthorityAGU]) {
+				//	AGU uses GOLFLink, which uses 10 digit account numbers
+				if ([self rangeOfCharacterFromSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]].location == NSNotFound) {
+					if (ourLength == 10) {
+						return YES;
+					}
+				}
+#ifdef DEBUG
+				NSLog(@"NSString -isValidHandicapServiceAccountForAuthority: Trying to validate GOLFLink account \'%@\'", self);
+#endif
+			}
 			if ([authority isEqualToString:GOLFHandicapAuthorityUSGA]) {
 				//	USGA (superceded) uses GHIN, which uses 7 digit or fewer account numbers
 				//	It requires decimal digits
