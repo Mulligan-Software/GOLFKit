@@ -113,7 +113,8 @@ NSArray * GOLFWageringTeamMatchStylesArray(NSDictionary *info) {
 		NSDictionary *styleDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithInteger:GOLFWageringDefaultTeamMatchStyle], @"styleCode",
 				GOLFLocalizedString(@"TITLE_DEFAULT_TEAM_MATCH_STYLE"), @"styleName",
-				[NSString stringWithFormat:GOLFLocalizedString(@"DESCRIPTION_DEFAULT_TEAM_MATCH_STYLE_%@"), NSStringFromGOLFWageringMatchStyle(playerMatchPlayStyle, nil), NSStringFromPlayType(teamPlayType, localInfo, nil)], @"styleDescription", nil];
+				[NSString stringWithFormat:GOLFLocalizedString(@"DESCRIPTION_DEFAULT_TEAM_MATCH_STYLE_%@"), NSStringFromPlayType(teamPlayType, localInfo, nil)], @"styleDescription",
+				nil];
 		[workingList addObject:styleDict];
 		
 		//	Low Ball / Low Total - 1 team point for low teammate score, 1 team point for low team total
