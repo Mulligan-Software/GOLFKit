@@ -96,6 +96,7 @@
 "TERM_FEMALE_ABBR" = "F";
 "TERM_FEMALE_PLAYER_PLURAL" = "femmes";
 "TERM_FIND" = "rechercher";
+"TERM_FIRST" = "prénom";	//	as: 'first' name
 "TERM_FLAGSTICK" = "drapeau";
 "TERM_FLIGHT" = "vol";
 "TERM_FLIGHT_PLURAL" = "vols";
@@ -129,6 +130,7 @@
 "TERM_HOLE_PLURAL" = "trous";
 "TERM_IGNORE" = "ignorer";
 "TERM_IGNORED" = "ignoré";
+"TERM_IMPERIAL" = "impériales";
 "TERM_IMPORT" = "importer";
 "TERM_IMPROVEMENT" = "progrès";
 "TERM_IN_SITUATED" = "dans";
@@ -137,6 +139,7 @@
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "Irlandais";
 "TERM_KEYBOARD" = "clavier";
+"TERM_LAST" = "de famille";	//	as:	'last' name
 "TERM_LAST_NAME" = "nom de famille";
 "TERM_LEADERBOARD" = "leaderboard";
 "TERM_LEVEL" = "niveau";
@@ -166,6 +169,7 @@
 "TERM_METER_PLURAL" = "mètres";
 "TERM_METER_PLURAL_ABBR" = "Mtr.";
 "TERM_METHOD" = "méthode";
+"TERM_METRIC" = "métriques";
 "TERM_MINUTES_APART" = "minutes d’intervalle";
 "TERM_MODIFIER" = "modificateur";
 "TERM_MORE" = "plus";
@@ -317,6 +321,11 @@
 "TERM_ZERO" = "zéro";
 "TERM_ZIGZAG" = "Zig-Zag";
 
+"TERM_ALL_SQUARE_ABBR" = "AS";
+"TERM_CHANGE_PLURAL" = "changements";
+"TERM_DEACTIVATED" = "désactivé";
+"TERM_ERROR" = "erreur";
+
 //	Standard Tee Colors
 "GOLF_TEE_COLOR_NAME_BLACK" = "Noir";
 "GOLF_TEE_COLOR_NAME_BLUE" = "Bleue";
@@ -406,6 +415,7 @@
 "TITLE_ABBREVIATED_DATES" = "Dates Abrégées";
 "TITLE_ACCESSORY_PRINT_INITIALS" = "Initiales des Joueurs";
 "TITLE_ACCOUNT_NUMBER" = "Numéro de Compte";
+"TITLE_ADD_A_NEW_PLAYER" = "Ajouter un Nouveau Joueur";
 "TITLE_ADD_A_ROUND" = "Ajoutez un tour";
 "TITLE_ADD_BUTTON" = "Ajouter";
 "TITLE_ADVANCED_DUPLICATES" = "Prohibir les handicaps de trou dupliqués";
@@ -690,6 +700,7 @@
 "TITLE_PRIMARY" = "Première";
 "TITLE_PRINT_SCORECARD" = "Imprimer Carte de Score";
 "TITLE_PRINT_SCORECARDS" = "Imprimer Cartes de Score";
+"TITLE_QUICK_ADD" = "Ajouter Rapidement";
 "TITLE_QUICK_START" = "Démarrage Rapide";
 "TITLE_QUOTA_POINTS_GAINED" = "Points de Quota Gagnés";
 "TITLE_RANDOM_SELECTION" = "Sélection au Hasard";

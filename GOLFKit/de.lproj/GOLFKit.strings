@@ -139,6 +139,7 @@
 "TERM_FEMALE_ABBR" = "F";
 "TERM_FEMALE_PLAYER_PLURAL" = "Damen";
 "TERM_FIND" = "suchen";
+"TERM_FIRST" = "Vorname";	//	as: 'first' name
 "TERM_FLAGSTICK" = "Flaggenstock";
 "TERM_FLIGHT" = "Pulk";
 "TERM_FLIGHT_PLURAL" = "Pulke";
@@ -172,6 +173,7 @@
 "TERM_HOLE_PLURAL" = "Löcher";
 "TERM_IGNORE" = "ignorieren";
 "TERM_IGNORED" = "ignoriert";
+"TERM_IMPERIAL" = "imperiale";
 "TERM_IMPORT" = "importieren";
 "TERM_IMPROVEMENT" = "Verbesserung";
 "TERM_IN_SITUATED" = "in";
@@ -180,6 +182,7 @@
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "irische";
 "TERM_KEYBOARD" = "Tastatur";
+"TERM_LAST" = "Nachname";	//	as:	'last' name
 "TERM_LAST_NAME" = "Nachname";
 "TERM_LEADERBOARD" = "Bestenliste";
 "TERM_LEVEL" = "Niveau";	//	n. skill "level"
@@ -209,6 +212,7 @@
 "TERM_METER_PLURAL" = "Meter";
 "TERM_METER_PLURAL_ABBR" = "Mtr.";
 "TERM_METHOD" = "Methode";
+"TERM_METRIC" = "metrische";
 "TERM_MINUTES_APART" = "Minuten auseinander";
 "TERM_MODIFIER" = "Modifikator";
 "TERM_MORE" = "Mehr";
@@ -360,6 +364,11 @@
 "TERM_ZERO" = "null";
 "TERM_ZIGZAG" = "Zig-Zag";
 
+"TERM_ALL_SQUARE_ABBR" = "AS";
+"TERM_CHANGE_PLURAL" = "Änderungen";
+"TERM_DEACTIVATED" = "deaktiviert";
+"TERM_ERROR" = "Error";
+
 //	Standard Tee Colors
 "GOLF_TEE_COLOR_NAME_BLACK" = "schwarz";
 "GOLF_TEE_COLOR_NAME_BLUE" = "blau";
@@ -449,6 +458,7 @@
 "TITLE_ABBREVIATED_DATES" = "Abgekürzte Daten";
 "TITLE_ACCESSORY_PRINT_INITIALS" = "Initialen der Spieler";
 "TITLE_ACCOUNT_NUMBER" = "Kontonummer";
+"TITLE_ADD_A_NEW_PLAYER" = "Neuen Spieler hinzufügen";
 "TITLE_ADD_A_ROUND" = "Eine Runde ergänzen";
 "TITLE_ADD_BUTTON" = "Hinzufügen";
 "TITLE_ADVANCED_DUPLICATES" = "Verbieten Sie doppelte Loch-Handicaps";
@@ -733,6 +743,7 @@
 "TITLE_PRIMARY" = "Primär";
 "TITLE_PRINT_SCORECARD" = "Drucken Scorekarte";
 "TITLE_PRINT_SCORECARDS" = "Drucken Scorekarten";
+"TITLE_QUICK_ADD" = "Schnell hinzufügen";
 "TITLE_QUICK_START" = "Schnellstart";
 "TITLE_QUOTA_POINTS_GAINED" = "Quotenpunkte gewonnen";
 "TITLE_RANDOM_SELECTION" = "Zufällige Auswahl";

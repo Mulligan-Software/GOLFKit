@@ -96,6 +96,7 @@
 "TERM_FEMALE_ABBR" = "F";
 "TERM_FEMALE_PLAYER_PLURAL" = "damas";
 "TERM_FIND" = "buscar";
+"TERM_FIRST" = "de pila";	//	as: 'first' name
 "TERM_FLAGSTICK" = "flagstick";
 "TERM_FLIGHT" = "flight";
 "TERM_FLIGHT_PLURAL" = "flights";
@@ -129,6 +130,7 @@
 "TERM_HOLE_PLURAL" = "hoyos";
 "TERM_IGNORE" = "ignorar";
 "TERM_IGNORED" = "ignorado";
+"TERM_IMPERIAL" = "imperiales";
 "TERM_IMPORT" = "importar";
 "TERM_IMPROVEMENT" = "mejora";
 "TERM_IN_SITUATED" = "en";
@@ -137,6 +139,7 @@
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "Irlandesa";
 "TERM_KEYBOARD" = "teclado";
+"TERM_LAST" = "appelido";	//	as:	'last' name
 "TERM_LAST_NAME" = "apellido";
 "TERM_LEADERBOARD" = "tabla de clasificación";
 "TERM_LEVEL" = "nival";	//	n. skill "level"
@@ -166,6 +169,7 @@
 "TERM_METER_PLURAL" = "metros";
 "TERM_METER_PLURAL_ABBR" = "Mtr.";
 "TERM_METHOD" = "método";
+"TERM_METRIC" = "métricas";
 "TERM_MINUTES_APART" = "minutos de diferencia";
 "TERM_MODIFIER" = "modificador";
 "TERM_MORE" = "más";
@@ -317,6 +321,11 @@
 "TERM_ZERO" = "cero";
 "TERM_ZIGZAG" = "Zig-Zag";
 
+"TERM_ALL_SQUARE_ABBR" = "AS";
+"TERM_CHANGE_PLURAL" = "cambios";
+"TERM_DEACTIVATED" = "desactivado";
+"TERM_ERROR" = "error";
+
 //	Standard Tee Colors
 "GOLF_TEE_COLOR_NAME_BLACK" = "Negro";
 "GOLF_TEE_COLOR_NAME_BLUE" = "Azul";
@@ -406,6 +415,7 @@
 "TITLE_ABBREVIATED_DATES" = "Fechas Abreviadas";
 "TITLE_ACCESSORY_PRINT_INITIALS" = "Initiales de Jugadores";
 "TITLE_ACCOUNT_NUMBER" = "Número de Cuenta";
+"TITLE_ADD_A_NEW_PLAYER" = "Añadir un Nuevo Jugador";
 "TITLE_ADD_A_ROUND" = "Añadir una ronda";
 "TITLE_ADD_BUTTON" = "Añadir";
 "TITLE_ADVANCED_DUPLICATES" = "Prohibir los handicaps de hoyo duplicado";
@@ -690,6 +700,7 @@
 "TITLE_PRIMARY" = "Primero";
 "TITLE_PRINT_SCORECARD" = "Imprimir Tarjeta";
 "TITLE_PRINT_SCORECARDS" = "Imprimir Tarjetas";
+"TITLE_QUICK_ADD" = "Añadir Rápidamente";
 "TITLE_QUICK_START" = "Inicio Rápido";
 "TITLE_QUOTA_POINTS_GAINED" = "Puntos de Cuota Ganados";
 "TITLE_RANDOM_SELECTION" = "Selección al Azar";

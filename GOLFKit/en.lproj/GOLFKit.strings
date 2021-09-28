@@ -96,6 +96,7 @@
 "TERM_FEMALE_ABBR" = "F";
 "TERM_FEMALE_PLAYER_PLURAL" = "women";
 "TERM_FIND" = "find";
+"TERM_FIRST" = "first";	//	as: 'first' name
 "TERM_FLAGSTICK" = "flagstick";
 "TERM_FLIGHT" = "flight";
 "TERM_FLIGHT_PLURAL" = "flights";
@@ -131,12 +132,14 @@
 "TERM_IGNORED" = "ignored";
 "TERM_IMPORT" = "import";
 "TERM_IN_SITUATED" = "in";
+"TERM_IMPERIAL" = "imperial";
 "TERM_IMPROVEMENT" = "improvement";
 "TERM_INDICATE" = "indicate";
 "TERM_INDIVIDUAL" = "individual";	//	The adjective ("individual gross")
 "TERM_INTERNATIONAL" = "International";
 "TERM_IRISH" = "Irish";
 "TERM_KEYBOARD" = "keyboard";
+"TERM_LAST" = "last";	//	as:	'last' name
 "TERM_LAST_NAME" = "last name";
 "TERM_LEADERBOARD" = "leaderboard";
 "TERM_LEVEL" = "level";
@@ -166,6 +169,7 @@
 "TERM_METER_PLURAL" = "meters";
 "TERM_METER_PLURAL_ABBR" = "Mtr.";
 "TERM_METHOD" = "method";
+"TERM_METRIC" = "metric";
 "TERM_MINUTES_APART" = "minutes apart";
 "TERM_MODIFIER" = "modifier";
 "TERM_MORE" = "more";
@@ -317,9 +321,10 @@
 "TERM_ZERO" = "zero";
 "TERM_ZIGZAG" = "Zig-Zag";
 
-"TERM_COMMA_SEPARATED" = "comma-separated";
-"TERM_SEMICOLON_SEPARATED" = "semicolon-separated";
-"TERM_TAB_DELIMITED" = "tab-delimited";
+"TERM_ALL_SQUARE_ABBR" = "AS";
+"TERM_CHANGE_PLURAL" = "changes";
+"TERM_DEACTIVATED" = "deactivated";
+"TERM_ERROR" = "error";
 
 //	Standard Tee Colors
 "GOLF_TEE_COLOR_NAME_BLACK" = "Black";
@@ -410,6 +415,7 @@
 "TITLE_ABBREVIATED_DATES" = "Abbreviated Dates";
 "TITLE_ACCESSORY_PRINT_INITIALS" = "Players’ Initials";
 "TITLE_ACCOUNT_NUMBER" = "Account Number";
+"TITLE_ADD_A_NEW_PLAYER" = "Add a New Player";
 "TITLE_ADD_A_ROUND" = "Add a Round";
 "TITLE_ADD_BUTTON" = "Add";
 "TITLE_ADVANCED_DUPLICATES" = "Prohibit duplicate hole handicaps";
@@ -694,6 +700,7 @@
 "TITLE_PRIMARY" = "Primary";
 "TITLE_PRINT_SCORECARD" = "Print Scorecard";
 "TITLE_PRINT_SCORECARDS" = "Print Scorecards";
+"TITLE_QUICK_ADD" = "Quick Add";
 "TITLE_QUICK_START" = "Quick Start";
 "TITLE_QUOTA_POINTS_GAINED" = "Quota Points Gained";
 "TITLE_RANDOM_SELECTION" = "Random Selection";

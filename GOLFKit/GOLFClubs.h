@@ -46,3 +46,20 @@ typedef NS_OPTIONS(NSUInteger, GOLFCourseStatus) {
 	GOLFCourseStatusOption6					= 1 << 6,		//	(64)
 };
 
+typedef NS_ENUM(NSUInteger, GOLFCourseMeasurementType) {
+	GOLFCourseMeasurementTypeUnknown = 0,
+	GOLFCourseMeasurementTypeImperial,		//	Course length in imperial units (yards)		(1)
+	GOLFCourseMeasurementTypeYards = GOLFCourseMeasurementTypeImperial,
+	GOLFCourseMeasurementTypeMetric,		//	Course length in metric units (meters)		(2)
+	GOLFCourseMeasurementTypeMeters = GOLFCourseMeasurementTypeMetric
+};
+
+
+//=================================================================
+//	NSStringFromCourseMeasurementType(type, abbreviated, descriptiveText)
+//=================================================================
+NSString * NSStringFromCourseMeasurementType(GOLFCourseMeasurementType type, BOOL abbreviated, NSString **descriptiveText);
+//	Returns a localized description or abbreviation of the units of the specified GOLFCourseMeasurementType ("yards", "meters") and
+//	optionally, the localized description of the measurement system ("imperial", "metric")
+
+
