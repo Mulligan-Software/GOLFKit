@@ -529,10 +529,13 @@
 "TITLE_FULL_HDCP" = "Hdcp. Complète";
 "TITLE_GETTING_STARTED" = "Commencer…";
 "TITLE_GHIN" = "Golf Handicap Information Network (GHIN)";
+"TITLE_GHIN_ABBR" = "GHIN";
 "TITLE_GHIN_NUMBER" = "Numéro de GHIN";
 "TITLE_GOLF_GLOSSARY" = "Glossaire de Golf";
 "TITLE_GOLF_NETWORK" = "Golf Network (Canada)";
+"TITLE_GOLF_NETWORK_ABBR" = "Golf Network";
 "TITLE_GOLFLINK" = "GOLFLink (Australia)";
+"TITLE_GOLFLINK_ABBR" = "GOLFLink";
 "TITLE_GOLFLINK_NUMBER" = "Numéro de GOLFLink";
 "TITLE_GORILLA" = "Gorilla";
 "TITLE_GRADE" = "Classe";
@@ -788,6 +791,7 @@
 "TITLE_UNKNOWN_SERVICE" = "Unknown Handicapping Service";
 "TITLE_UNLINK_DROPBOX" = "Délier Dropbox";
 "TITLE_UNLOCK_ENTIRE_EVENT" = "Débloquer tous Cartes d’Événement";
+"TITLE_UNLOCK_YES_EVENT" = "Oui, tous Cartes d’Événement";
 "TITLE_UP_AND_DOWN" = "En haut et en bas";
 "TITLE_UPDATE" = "Mettre à Jour";
 "TITLE_UPDATES_UNAVAILABLE" = "Mises à jour non disponibles";

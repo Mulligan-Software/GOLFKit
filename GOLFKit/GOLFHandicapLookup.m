@@ -44,11 +44,11 @@ GOLFHandicapLookupService GOLFHandicapServiceForAuthority(GOLFHandicapAuthority 
 //=================================================================
 NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupService) {
 	if (lookupService == GOLFHandicapLookupServiceGHIN) {
-		return GOLFLocalizedString(@"TITLE_GHIN");	//	???
+		return GOLFLocalizedString(@"TITLE_GHIN_ABBR");	//	"GHIN"
 	} else if (lookupService == GOLFHandicapLookupServiceGOLFLink) {
-		return GOLFLocalizedString(@"TITLE_GOLFLINK");	//	???
+		return GOLFLocalizedString(@"TITLE_GOLFLINK_ABBR");	//	"GOLFLink"
 	} else if (lookupService == GOLFHandicapLookupServiceGolfNetwork) {
-		return GOLFLocalizedString(@"TITLE_GOLF_NETWORK");	//	???
+		return GOLFLocalizedString(@"TITLE_GOLF_NETWORK_ABBR");	//	"Golf Network"
 	}
 	//	Anything else
 	return GOLFLocalizedString(@"TITLE_UNKNOWN_SERVICE");	//	???
