@@ -7,6 +7,7 @@
 */
 
 //	Golf Terminology
+"TERM_ABOUT" = "à propos de";
 "TERM_ACCOUNT" = "compte";
 "TERM_ACKNOWLEDGEMENT_PLURAL" = "remerciements";
 "TERM_ADJUSTED" = "ajusté";
@@ -92,6 +93,7 @@
 "TERM_EVERYTHING" = "tout";
 "TERM_FAILED" = "échoué";
 "TERM_FAIRWAY" = "fairway";
+"TERM_FEATURE_PLURAL" = "caractéristiques";
 "TERM_FEMALE" = "féminin";
 "TERM_FEMALE_ABBR" = "F";
 "TERM_FEMALE_PLAYER_PLURAL" = "femmes";
@@ -630,6 +632,7 @@
 "TITLE_JUNIOR_PAR_INTERMEDIATE" = "Intermédiaire - Handicap jouer 25 à 40";
 "TITLE_KEEP" = "Conserver";
 "TITLE_KEEP_SCORES" = "Garder les Scores";
+"TITLE_KEEP_SCORES_HEADER" = "Conservez les informations sur scores de golf pour…";
 "TITLE_KEEPING_SCORE" = "Gardant scores depuis 1995";
 "TITLE_KEY_NEXT" = "suivant";
 "TITLE_KEY_RETURN" = "⮐";	//	"renvoi", "retour" or "⮐"
@@ -985,6 +988,7 @@
 "NOTICE_CARTS_FULL_CART" = "Pas de place dans la voiturette pour un autre joueur";
 "NOTICE_DISCONTINUED_HANDICAP_METHOD" = "Cette méthode de handicap n’est plus en vigueur.  Veuillez en sélectionner un autre.";
 "NOTICE_JUNIOR_PAR_REQUIREMENTS" = "Par Junior n’est pas disponible lorsqu’il manque des longueurs de trous.";
+"NOTICE_ONLINE_HELP" = "Quelque aide nécessite une connexion Internet.\n\nLa plupart de l’aide en ligne est en anglais.";
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "Ces réglages ci-dessus ne sont pas modifiés par une réinitialisation «Réglages par défaut».";
 "NOTICE_SKINS_ELIGIBILITY" = "Les paramètres d’éligibilité des skins s’appliquent aux scores bruts et nets.";
 "NOTICE_SKINS_ELIGIBILITY_EVENT" = "Le paramètre d’éligibilité des skins s’applique aux scores bruts et nets de cet Événement.";

@@ -7,6 +7,7 @@
 */
 
 //	Golf Terminology
+"TERM_ABOUT" = "about";
 "TERM_ACCOUNT" = "account";
 "TERM_ACKNOWLEDGEMENT_PLURAL" = "acknowledgments";
 "TERM_ADJUSTED" = "adjusted";
@@ -92,6 +93,7 @@
 "TERM_EVERYTHING" = "everything";
 "TERM_FAILED" = "failed";
 "TERM_FAIRWAY" = "fairway";
+"TERM_FEATURE_PLURAL" = "features";
 "TERM_FEMALE" = "female";
 "TERM_FEMALE_ABBR" = "F";
 "TERM_FEMALE_PLAYER_PLURAL" = "women";
@@ -631,6 +633,7 @@
 "TITLE_KEEP" = "Keep";
 "TITLE_KEEP_SCORES" = "Keep the Scores";
 "TITLE_KEEPING_SCORE" = "Keeping score since 1995";
+"TITLE_KEEP_SCORES_HEADER" = "Keep scoring information for…";
 "TITLE_KEY_NEXT" = "Next";
 "TITLE_KEY_RETURN" = "return";	//	A short word or "⮐"
 "TITLE_LAST_HOLE" = "Last Hole";
@@ -820,7 +823,7 @@
 "DESCRIPTION_CLOSE_OUT" = "(when no bets or presses are in effect)";
 "DESCRIPTION_COVER" = "Match or better opponent's sub-par score";
 "DESCRIPTION_DEFAULT_TEAM_MATCH_STYLE_%@" = "%@ using team scores ¹";
-"DESCRIPTION_EXTENDED_SCORING" = "Extended Scoring includes “X” scores, Maximum (stroke-controlled) scores, Competition/Tournament scores, fairways and greenside bunkers hit.";
+"DESCRIPTION_EXTENDED_SCORING" = "Extended Scoring includes “X” scores, Maximum (strokes-limited) scores, Competition/Tournament scores, fairways and greenside bunkers hit.";
 "DESCRIPTION_FAIRWAY" = "Fairway reached with initial tee shot";
 "DESCRIPTION_FRONT_BACK" = "Front side and Back side";
 "DESCRIPTION_GORILLA" = "Closest to pin in regulation on par 5";
@@ -985,6 +988,7 @@
 "NOTICE_CARTS_FULL_CART" = "No room in the cart for another player";
 "NOTICE_DISCONTINUED_HANDICAP_METHOD" = "This handicapping method is no longer in effect.  Please select another.";
 "NOTICE_JUNIOR_PAR_REQUIREMENTS" = "Junior Par is not available when hole lengths are missing.";
+"NOTICE_ONLINE_HELP" = "Some help information may require an internet connection.";
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "The Personal Handicapping settings above are not changed with a “Factory Settings” reset.";
 "NOTICE_SKINS_ELIGIBILITY" = "Skins eligibility settings apply to both gross and net scores.";
 "NOTICE_SKINS_ELIGIBILITY_EVENT" = "Skins eligibility setting applies to both gross and net scores in this Event.";

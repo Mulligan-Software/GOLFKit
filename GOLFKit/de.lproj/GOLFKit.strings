@@ -50,6 +50,7 @@
 
 
 //	Golf Terminology
+"TERM_ABOUT" = "über";
 "TERM_ACCOUNT" = "Konto";
 "TERM_ACKNOWLEDGEMENT_PLURAL" = "Danksagungen";
 "TERM_ADJUSTED" = "angepasst";
@@ -135,6 +136,7 @@
 "TERM_EVERYTHING" = "alles";
 "TERM_FAILED" = "fehlgeschlagen";
 "TERM_FAIRWAY" = "Fairway";
+"TERM_FEATURE_PLURAL" = "Eigenschaften";
 "TERM_FEMALE" = "weiblich";
 "TERM_FEMALE_ABBR" = "F";
 "TERM_FEMALE_PLAYER_PLURAL" = "Damen";
@@ -673,6 +675,7 @@
 "TITLE_JUNIOR_PAR_INTERMEDIATE" = "Mittelstufe - Spielen-Handicap 25 bis 40";
 "TITLE_KEEP" = "Behalten";
 "TITLE_KEEP_SCORES" = "Behalte die Scores";
+"TITLE_KEEP_SCORES_HEADER" = "Bewahren Sie die Golf-Scoring-Informationen für…";
 "TITLE_KEEPING_SCORE" = "Punkte gesammelt seit 1995";
 "TITLE_KEY_NEXT" = "weiter";
 "TITLE_KEY_RETURN" = "⮐";	//	"Zeilenschalter" or "⮐"
@@ -1028,6 +1031,7 @@
 "NOTICE_CARTS_FULL_CART" = "Kein Platz im Wagen für einen anderen Spieler";
 "NOTICE_DISCONTINUED_HANDICAP_METHOD" = "Diese Handicap-Methode ist nicht mehr wirksam.  Bitte wählen Sie eine andere.";
 "NOTICE_JUNIOR_PAR_REQUIREMENTS" = "Junior-Par ist nicht verfügbar, wenn die Länge der Locher fehlt.";
+"NOTICE_ONLINE_HELP" = "Für einige Hilfen ist eine Internetverbindung erforderlich.\n\nDie meisten Online-Hilfen sind auf Englisch.";
 "NOTICE_PERSONAL_HANDICAPS_PREFERENCE" = "Die persönlichen Handicaps Einstellungen oben sind nicht mit einem „Werkseinstellungen“ Reset geändert.";
 "NOTICE_SKINS_ELIGIBILITY" = "Die Einstellungen für die Skins-Zulassungskritien gelten sowohl für Brutto- als auch für Netto-Scores.";
 "NOTICE_SKINS_ELIGIBILITY_EVENT" = "Die Einstellung für die Skins-Zulassungskriterien gilt sowohl für die Brutto- als auch für die Netto-Scores in diesem Event.";
