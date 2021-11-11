@@ -1140,9 +1140,9 @@
 "ALLOWANCE_TYPE_TEAMMATES_100_AVG_ABBR" = "Average";
 "ALLOWANCE_TYPE_TEAMMATES_80_AVG" = "80% Avg. of Teammates";
 "ALLOWANCE_TYPE_TEAMMATES_80_AVG_ABBR" = "80% Avg.";
-"ALLOWANCE_TYPE_AGGREGATE_3_8" = "3/8 of Aggregate";
-"ALLOWANCE_TYPE_AGGREGATE_3_8_ABBR" = "3/8 Aggr.";
-"ALLOWANCE_TYPE_AGGREGATE_3_8_DESC" = "3/8 of partners’ total handicaps";
+"ALLOWANCE_TYPE_AGGREGATE_3_8" = "⅜ of Aggregate";
+"ALLOWANCE_TYPE_AGGREGATE_3_8_ABBR" = "⅜ Aggr.";
+"ALLOWANCE_TYPE_AGGREGATE_3_8_DESC" = "⅜ (37.5%) of partners’ total handicaps";
 "ALLOWANCE_TYPE_DIFFERENCE" = "Difference";
 "ALLOWANCE_TYPE_DIFFERENCE_ABBR" = "Diff.";
 "ALLOWANCE_TYPE_DIFFERENCE_DESC" = "Low handicap competitor plays at scratch";

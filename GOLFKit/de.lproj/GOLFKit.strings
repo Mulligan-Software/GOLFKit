@@ -1183,9 +1183,9 @@
 "ALLOWANCE_TYPE_TEAMMATES_100_AVG_ABBR" = "Durchschnitt";
 "ALLOWANCE_TYPE_TEAMMATES_80_AVG" = "80% der Durchschnitt des Mitspielers";
 "ALLOWANCE_TYPE_TEAMMATES_80_AVG_ABBR" = "80% Durch.";
-"ALLOWANCE_TYPE_AGGREGATE_3_8" = "3/8 des Aggregats";
-"ALLOWANCE_TYPE_AGGREGATE_3_8_ABBR" = "3/8 Aggr.";
-"ALLOWANCE_TYPE_AGGREGATE_3_8_DESC" = "3/8 der Partner insgesamt Handicaps";
+"ALLOWANCE_TYPE_AGGREGATE_3_8" = "⅜ des Aggregats";
+"ALLOWANCE_TYPE_AGGREGATE_3_8_ABBR" = "⅜ Aggr.";
+"ALLOWANCE_TYPE_AGGREGATE_3_8_DESC" = "⅜ (37.5%) der Partner insgesamt Handicaps";
 "ALLOWANCE_TYPE_DIFFERENCE" = "Differenz";
 "ALLOWANCE_TYPE_DIFFERENCE_ABBR" = "Diff.";
 "ALLOWANCE_TYPE_DIFFERENCE_DESC" = "Teilnehmer mit dem niedrigen Handicap speilt bei scratch";

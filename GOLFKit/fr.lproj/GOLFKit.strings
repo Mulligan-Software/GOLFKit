@@ -1140,9 +1140,9 @@
 "ALLOWANCE_TYPE_TEAMMATES_100_AVG_ABBR" = "Moyenne";
 "ALLOWANCE_TYPE_TEAMMATES_80_AVG" = "80% Moyenne des Coéquipiers";
 "ALLOWANCE_TYPE_TEAMMATES_80_AVG_ABBR" = "80% Moyenne";
-"ALLOWANCE_TYPE_AGGREGATE_3_8" = "3/8 de l’agrégat";
-"ALLOWANCE_TYPE_AGGREGATE_3_8_ABBR" = "3/8 agrégat";
-"ALLOWANCE_TYPE_AGGREGATE_3_8_DESC" = "3/8 de handicaps total des partenaires";
+"ALLOWANCE_TYPE_AGGREGATE_3_8" = "⅜ de l’agrégat";
+"ALLOWANCE_TYPE_AGGREGATE_3_8_ABBR" = "⅜ agrégat";
+"ALLOWANCE_TYPE_AGGREGATE_3_8_DESC" = "⅜ (37.5%) de handicaps total des partenaires";
 "ALLOWANCE_TYPE_DIFFERENCE" = "Différence";
 "ALLOWANCE_TYPE_DIFFERENCE_ABBR" = "Diff.";
 "ALLOWANCE_TYPE_DIFFERENCE_DESC" = "Concurrent avec plus bas handicap joue de zéro";

@@ -28,7 +28,7 @@ typedef NS_ENUM(NSUInteger, GOLFAllowanceType) {
 	SpecifiedPercentAllowanceType,		//	A specified percentage of course handicap				(14)
 	AverageCombinedAllowanceType = 20,	//	Average team handicap  (Foursomes)						(20)
 	AverageCombined80AllowanceType,		//	80% of average team handicap  (Foursomes w/ selected drive, Scramble)	(21)
-	Aggregate3EighthsAllowanceType,		//	3/8 of aggregate (37.5% of average) team handicap  (American Foursomes)	(22)
+	Aggregate3EighthsAllowanceType,		//	3/8 (37.5%) of partners’ total handicaps  (American Foursomes)	(22)
 	DifferenceAllowanceType = 30,		//	Handicap Difference vs Opponent  (Single Player or Teammates intra-Scorecard)	(30)
 	QuotaAllowanceType,					//	Point Quota (36 / 38 / 18 less Full handicap)			(31)
 	ScrambleA50AllowanceType = 40,		//	50% of A Player  (2+ Player Scramble)					(40)

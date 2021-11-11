@@ -198,7 +198,7 @@ NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictiona
 	//
 	//		AverageCombinedAllowanceType		20			Average of teammates' Playing Handicaps (Foursomes)
 	//		AverageCombined80AllowanceType		21			80% of average teammates' handicap (Greensomes)
-	//		Aggregate3EighthsAllowanceType		22			3/8 of aggregate team handicap (American Foursomes)
+	//		Aggregate3EighthsAllowanceType		22			3/8 (37.5%) of partners’ total handicaps (American Foursomes)
 	//
 	//		DifferenceAllowanceType				30			Handicap difference vs. opponent (player or team)
 	//		QuotaAllowanceType					31			Point Quota (36 / 38 / 18 less Full Handicap)
