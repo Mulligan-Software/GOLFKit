@@ -23,7 +23,8 @@ typedef NS_ENUM(NSUInteger, GOLFWageringMatchStyle) {
 
 typedef NS_ENUM(NSUInteger, GOLFWageringTeamMatchStyle) {
 	GOLFWageringDefaultTeamMatchStyle,				//	(0)
-	GOLFWageringLowBallLowTotalTeamMatchStyle,		//	(1)
+	GOLFWageringTeamScoreTeamMatchStyle = GOLFWageringDefaultTeamMatchStyle,
+	GOLFWageringLowBallLowTotalTeamMatchStyle = 1,	//	(1)
 	GOLFWageringLowBallHighBallTeamMatchStyle,		//	(2)
 	GOLFWageringLowBallSecondBallTeamMatchStyle,	//	(3)
 	GOLFWageringLastTeamMatchStyle = GOLFWageringLowBallSecondBallTeamMatchStyle,

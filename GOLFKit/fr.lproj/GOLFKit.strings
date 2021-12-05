@@ -10,6 +10,7 @@
 "TERM_ABOUT" = "à propos de";
 "TERM_ACCOUNT" = "compte";
 "TERM_ACKNOWLEDGEMENT_PLURAL" = "remerciements";
+"TERM_ACTION" = "action";
 "TERM_ADJUSTED" = "ajusté";
 "TERM_ADJUSTED_ABBR" = "aju.";
 "TERM_ADJUSTED_FOR_RATINGS" = "ajusté pour les différences d’Évaluations Parcours";
@@ -63,10 +64,13 @@
 "TERM_COMPETITOR" = "concurrent";
 "TERM_COMPETITOR_PLURAL" = "concurrents";
 "TERM_COMPLETE" = "complet";
+"TERM_CONTESTANT" = "concurrent";
+"TERM_CONTESTANT_PLURAL" = "concurrents";
 "TERM_CONTINUE" = "continuer";
 "TERM_COPY" = "copier";
 "TERM_COUNTRY_ADJ" = "country";
 "TERM_COUNTRY_NOUN" = "pays";
+"TERM_COUNTRY_PLURAL" = "pays";	//	As in "We visited several countries."
 "TERM_COURSE" = "parcours";
 "TERM_COURSE_PLURAL" = "parcours";
 "TERM_CURRENT" = "actuel";
@@ -97,6 +101,8 @@
 "TERM_FEMALE" = "féminin";
 "TERM_FEMALE_ABBR" = "F";
 "TERM_FEMALE_PLAYER_PLURAL" = "femmes";
+"TERM_FILE" = "fichier";
+"TERM_FILE_PLURAL" = "fichiers";
 "TERM_FIND" = "rechercher";
 "TERM_FIRST" = "prénom";	//	as: 'first' name
 "TERM_FLAGSTICK" = "drapeau";
@@ -130,6 +136,7 @@
 "TERM_HELP" = "aide";
 "TERM_HOLE" = "trou";
 "TERM_HOLE_PLURAL" = "trous";
+"TERM_ID" = "identité";
 "TERM_IGNORE" = "ignorer";
 "TERM_IGNORED" = "ignoré";
 "TERM_IMPERIAL" = "impériales";
@@ -144,6 +151,7 @@
 "TERM_LAST" = "de famille";	//	as:	'last' name
 "TERM_LAST_NAME" = "nom de famille";
 "TERM_LEADERBOARD" = "leaderboard";
+"TERM_LENGTH" = "longueur";
 "TERM_LEVEL" = "niveau";
 "TERM_LIMITED" = "limité";
 "TERM_LINK" = "lien";
@@ -200,6 +208,8 @@
 "TERM_OPT_OUT" = "se retirer";
 "TERM_OVERALL" = "général";
 "TERM_OVERRIDDEN" = "outrepassé";
+"TERM_OVERRIDE" = "remplacement";
+"TERM_OVERRIDE_PLURAL" = "remplacements";
 "TERM_PAIRING" = "jumelage";
 "TERM_PAIRING_PLURAL" = "jumelages";
 "TERM_PAR" = "par";
@@ -250,6 +260,7 @@
 "TERM_SCRAMBLE" = "Scramble";
 "TERM_SECOND" = "seconde";
 "TERM_SECOND_PLURAL" = "secondes";
+"TERM_SELECT" = "sélectionner";
 "TERM_SELECTED" = "sélectionné";
 "TERM_SEMICOLON" = "point-virgule (;)";
 "TERM_SETTINGS" = "réglages";
@@ -316,7 +327,7 @@
 "TERM_WINS" = "gagne";
 "TERM_WOMAN_PLURAL" = "femmes";
 "TERM_YARD_PLURAL" = "yards";
-"TERM_YARD_PLURAL_ABBR" = "Yds.";
+"TERM_YARD_PLURAL_ABBR" = "Yds";
 "TERM_YARDAGE" = "métrage";
 "TERM_YES" = "oui";
 "TERM_YESTERDAY" = "hier";
@@ -348,6 +359,7 @@
 "GOLF_TEE_COLOR_NAME_BLUE_AND_WHITE" = "Bleue & Blanc";
 "GOLF_TEE_COLOR_NAME_RED_AND_YELLOW" = "Rouge & Jaune";
 "GOLF_TEE_COLOR_NAME_YELLOW_AND_BLUE" = "Jaune & Bleue";
+"GOLF_TEE_COLOR_NAME_YELLOW_AND_GREEN" = "Jaune & Vert";
 "GOLF_TEE_COLOR_NAME_RED_AND_WHITE" = "Rouge & Blanc";
 "GOLF_TEE_COLOR_NAME_BLACK_AND_GOLD" = "Noir & Or";
 "GOLF_TEE_COLOR_NAME_WHITE_AND_GOLD" = "Blanc & Or";
@@ -420,6 +432,7 @@
 "TITLE_ADD_A_NEW_PLAYER" = "Ajouter un Nouveau Joueur";
 "TITLE_ADD_A_ROUND" = "Ajoutez un tour";
 "TITLE_ADD_BUTTON" = "Ajouter";
+"TITLE_ADD_TO_EVENT" = "Ajouter à Événement";
 "TITLE_ADVANCED_DUPLICATES" = "Prohibir les handicaps de trou dupliqués";
 "TITLE_ADVANCED_MULTIPLE_PRESSES" = "Prohibir les presses multiple";
 "TITLE_ADVANCED_9_HOLE_HANDICAPS" = "Requérir handicaps 9-trous";
@@ -439,6 +452,7 @@
 "TITLE_ASSIGNED_TEE_TIMES" = "Heures de départ affectés";
 "TITLE_AUTHORITY_OR_METHOD" = "Autorité / Système";
 "TITLE_AUTOMATIC_PRESSES" = "Presses Automatiques";
+"TITLE_AVAILABLE_FILES_HEADER" = "Fichiers de base de données disponibles";
 "TITLE_BACK_NINE" = "Deuxième Neuf";
 "TITLE_BACK_SIDE" = "Deuxième Côté";
 "TITLE_BANGO" = "Bango";
@@ -477,6 +491,8 @@
 "TITLE_CLOSE_OUT" = "Clôturera";
 "TITLE_CLOSE_OUT_PLURAL" = "paris Clôturera";
 "TITLE_COMPARE_9_HOLE_SCORES" = "Combinez et utilisez les scores 9-trous";
+"TITLE_COMPETITION_SCORES" = "Scores de compétition…";
+"TITLE_COMPETITION_SUMMARY" = "Résumé de compétition…";
 "TITLE_CONVERT" = "Convertir";
 "TITLE_COURSE_HANDICAP_TABLE" = "Tableau des Handicaps de Parcours";
 "TITLE_COURSE_HANDICAP_TABLES" = "Tableaux des Handicaps de Parcours";
@@ -485,6 +501,7 @@
 "TITLE_CSS_ABBR" = "CSS";
 "TITLE_DARK" = "Sombre";
 "TITLE_DATA_PROTECTION" = "Protection des Données";
+"TITLE_DATA_STORE_SELECTION" = "Sélection de Base de Données";
 "TITLE_DECERTIFY" = "Décertifier";
 "TITLE_DEFAULT_TEAM_MATCH_STYLE" = "Score d’Équipe";
 "TITLE_DELETE_ALL" = "Effacer Tout";
@@ -502,6 +519,7 @@
 "TITLE_EAGLES_OR_BETTER" = "Eagles & meilleur";
 "TITLE_EDIT_BUTTON" = "Modifier";
 "TITLE_EDIT_EVENT" = "Modifier l’Événement";
+"TITLE_EDIT_NINES" = "Modifier Neufs";
 "TITLE_EDIT_PLAYER" = "Modifier le joueur";
 "TITLE_EFFECTIVE_DATE" = "Date effective";
 "TITLE_EGO_PULL_TO_SORT" = "Maintenez enfoncée pour trier…";
@@ -516,6 +534,7 @@
 "TITLE_EVEN_ABBR" = "E";
 "TITLE_EVENT_REGISTRATION" = "Inscription à l’Événement";
 "TITLE_EXCLUDE_GUESTS" = "Exclure les Invités";
+"TITLE_EXPORT" = "Exporter";
 "TITLE_EXTENDED_SCORING" = "Marquant Avancée";
 "TITLE_FACTORY_SETTINGS" = "Réglages par défaut";
 "TITLE_FAIRWAY_HIT" = "Fairway atteint";
@@ -530,9 +549,12 @@
 "TITLE_FRONT_SIDE" = "Premier Côté";	//	m.
 "TITLE_FULL_HDCP" = "Hdcp. Complète";
 "TITLE_GETTING_STARTED" = "Commencer…";
+"TITLE_GETTING_STARTED_CLUB" = "Créer un club de golf et l’appeler: ";
+"TITLE_GETTING_STARTED_IMPORT" = "Importer les informations du club depuis Mulligan Software";
 "TITLE_GHIN" = "Golf Handicap Information Network (GHIN)";
 "TITLE_GHIN_ABBR" = "GHIN";
 "TITLE_GHIN_NUMBER" = "Numéro de GHIN";
+"TITLE_GOLF_CLUB_OR_ASSOCIATION" = "Club ou Association de Golf";
 "TITLE_GOLF_GLOSSARY" = "Glossaire de Golf";
 "TITLE_GOLF_NETWORK" = "Golf Network (Canada)";
 "TITLE_GOLF_NETWORK_ABBR" = "Golf Network";
@@ -610,6 +632,7 @@
 "TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
 "TITLE_HANDICAP_WORLD_INDEX_RTM" = "Handicap Index®";
 "TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "Handicap Indexes";
+"TITLE_HANDICAPPING_CERTIFICATION" = "Certification Handicapant";
 "TITLE_HANDICAPPING_NUMBER" = "Numéro de compte Handicap";
 "TITLE_HDCP_NETWORK_NUMBER" = "Compte Handicap Network";
 "TITLE_HOGAN" = "Hogan";
@@ -619,6 +642,7 @@
 "TITLE_HOLES_TO_BE_SCORED" = "Trous à marquer";
 "TITLE_HOLLYWOOD" = "Hollywood";
 "TITLE_HOME_CLUB" = "Club d’accueil";
+"TITLE_HOW_TO_GET_STARTED" = "Comment préférez-vous commencer?";
 "TITLE_IGNORE_BEST" = "Ignorez meilleurs";
 "TITLE_IGNORE_WORST" = "Ignorez les pires";
 "TITLE_IMPROVEMENT_REPORT" = "Rapport de Progrès";
@@ -626,6 +650,7 @@
 "TITLE_INCOMPLETE_HOLE" = "Trou incomplet";
 "TITLE_INSTALL" = "Installer";
 "TITLE_INSTALL_JUNIOR_PAR" = "Installer Par Junior";
+"TITLE_INSTALL_SAMPLES" = "Installer les Échantillons";
 "TITLE_JUNIOR_PAR" = "Par Junior";
 "TITLE_JUNIOR_PAR_ADVANCED" = "Avancé - Handicap jouer moins de 25";
 "TITLE_JUNIOR_PAR_BEGINNER" = "Débutant - Handicap jouer plus de 40";
@@ -660,6 +685,7 @@
 "TITLE_LOW_BALL_LOW_TOTAL" = "Balle Basse - Total Bas";
 "TITLE_LOW_BALL_SECOND_BALL" = "Balle Basse - Balle Seconde";
 "TITLE_LOW_INDEX" = "Handicap Index le plus bas";
+"TITLE_MAKE_NEW_DATA_STORE" = "Créer un nouveau base de données";
 "TITLE_MASS_CONVERT_%@" = "Changer la Méthode de Handicap des joueurs - %@";
 "TITLE_MATCH_IS_EVEN" = "Match est pair";
 "TITLE_MATCH_IS_TIED" = "Match est à égalité";
@@ -676,10 +702,14 @@
 "TITLE_NAME_SCORECARDS" = "Nommez les Cartes de Score";
 "TITLE_NAME_TEAMS" = "Nommez les Équipes";
 "TITLE_NASSAU" = "Nassau";
+"TITLE_NEW_DATA_STORE_NAME" = "Nom du nouveau base de données";
+"TITLE_NEW_SCORECARD" = "Nouvelle Carte de Score";
+"TITLE_NEW_SCORECARD_BUTTON" = "Nouvelle Carte";
 "TITLE_NEXT_HOLE" = "Trou Suivant";
 "TITLE_NINE_HOLES" = "9 Trous";
 "TITLE_NO_DATA_FOUND" = "aucune donnée disponible";
 "TITLE_NO_STROKES" = "aucun coups";
+"TITLE_NONE_OF_THESE" = "Aucun d’eux";
 "TITLE_ON_COURSE_ASSISTANT" = "«Sur-Parcours» Auxiliaire";
 "TITLE_OPEN_SCORECARD" = "Ouvrir la Carte";
 "TITLE_OPT_OUT_SKINS" = "Se Retirer de Skins";
@@ -693,6 +723,7 @@
 "TITLE_PENALTY_STROKE" = "Coup de pénalité";
 "TITLE_PENALTY_STROKE_PLURAL" = "Coups de pénalité";
 "TITLE_PERSONAL_HANDICAPPING" = "Handicapant Individuel";
+"TITLE_PLAYERS_TO_ADD" = "Joueurs à ajouter à une nouvelle Carte de Score";
 "TITLE_PLAYER(S)" = "Joueur(s)";
 "TITLE_PLAYING_HANDICAP_DETERMINATION" = "Détermination de handicap jouer";
 "TITLE_POLIE" = "Polie";
@@ -742,6 +773,7 @@
 "TITLE_SCRATCH_SCORE" = "Scratch Score";
 "TITLE_SECONDARY" = "Secondaire";
 "TITLE_SELECT_ALL" = "Tout Sélectionner";
+"TITLE_SELECT_PLAYERS" = "Sélectionner des joueurs";
 "TITLE_SELECTED_HOLES" = "Trous Sélectionnés";
 "TITLE_SERIAL_NUMBER" = "Numéro de série";
 "TITLE_SET_BUTTON" = "Définir";
@@ -752,16 +784,19 @@
 "TITLE_SHOW_MATCHES_IN_ASSISTANT" = "Afficher l'état du match\nintra-Carte de Score dans\nle «Sur-Parcours» Auxiliaire.";	//	3 lines!
 "TITLE_SHOW_ME" = "Montre moi";
 "TITLE_SHOW_MEMBER_NUMBERS" = "Afficher numéros des membres du club sur Cartes de Score";
+"TITLE_SHOW_REGISTERED" = "Afficher uniquement joueurs enregistrés";
 "TITLE_SHOW_REPORT" = "Afficher le Rapport";
 "TITLE_SHOW_REPORTS" = "Afficher les Rapports";
 "TITLE_SHOW_SCORES_AT_STARTUP" = "Afficher les scores au démarrage";
 "TITLE_SHOW_TABLES" = "Afficher Tableaux";
+"TITLE_SHOW_9_HOLE_RATINGS" = "Évaluations 9-trous";
 "TITLE_SKILL_ADJUSTMENT" = "Ajustement habileté";
 "TITLE_SKINS_ELIGIBILITY" = "Éligibilité des Skins";
 "TITLE_SKINS_NOT_ENABLED" = "Les fonctionnalités des Skins ne sont pas activées actuellement. Voir Réglages.";
 "TITLE_SKINS_REQUIRE" = "Skins nécessitent";
 "TITLE_SKIP" = "Passer";
 "TITLE_SNAKE" = "Snake";
+"TITLE_SOFTWARE_LICENSE_AGREEMENT" = "Contrat de Licence Logicielle";
 "TITLE_SPECIAL_PREFERENCES" = "Réglages Spéciaux";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
@@ -780,7 +815,10 @@
 "TITLE_SWING_GAME" = "Jeu Pivoter";
 "TITLE_SYSTEM" = "Système";
 "TITLE_TEAM_MATCHES" = "Matchs par Équipe";
+"TITLE_TEAM_MEMBERS" = "Membres de l’Équipe";
 "TITLE_TECHNICAL_SUPPORT" = "Support Technique";
+"TITLE_TEE_COLOR" = "Couleur de jalon";
+"TITLE_TEE_NAME" = "Nom de l’aire de départ";
 "TITLE_TEE_TIME" = "Heure de départ";
 "TITLE_TEE_TIME_ABBR" = "Heure";
 "TITLE_THANK_YOU" = "Merci";
@@ -800,6 +838,7 @@
 "TITLE_UPDATES_UNAVAILABLE" = "Mises à jour non disponibles";
 "TITLE_USE_IOS_APPEARANCE" = "Utiliser le paramètre Apparence de iOS";
 "TITLE_USE_LAST" = "Utilizez dernières";
+"TITLE_USE_SSS" = "Util. SSS";
 "TITLE_USERS_GUIDE_FOUND" = "Guide des Utilisateurs a été trouvé";
 "TITLE_USERS_GUIDE_NOT_FOUND" = "Aucun fichier du Guide des Utilisateurs a été trouvé";
 "TITLE_WICKERS" = "Wickers";
@@ -846,6 +885,10 @@
 "DESCRIPTION_SKINS_BOGEY_OR_BETTER" = "Seuls les scores de bogey ou mieux peuvent gagner un skin";
 "DESCRIPTION_SKINS_PAR_OR_BETTER" = "Seuls les scores de par ou mieux peuvent gagner un skin";
 "DESCRIPTION_SNAKE" = "3-putt, dernier 3-putt ou 3-putt plus court";
+"DESCRIPTION_STARTUP_AVAILABLE" = "toujours disponibles dans le menu Fichier / Importer";
+"DESCRIPTION_STARTUP_CLUB_IMPORT" = "via Internet à partir des archives de Mulligan Software";
+"DESCRIPTION_STARTUP_CLUB_INFO" = "informations de départ que vous pouvez modifier pour décrire votre parcours";
+"DESCRIPTION_STARTUP_SAMPLES" = "données effaçables pour vous familiariser avec Mulligan’s Eagle™";
 "DESCRIPTION_STOBBIE" = "En régulation dans la longueur du drapeau";
 "DESCRIPTION_SWING_GAME" = "Équipe tournante de 2 vs 3 ou plus";
 "DESCRIPTION_TEAM_MATCH_STYLES" = "¹ Disponible pour toutes les formes de jeu en équipe - toujours utilisé pour le jeu équipe-seulement et pour marquer des points.";
@@ -868,6 +911,7 @@
 "FORMAT_CART_NO_%@" = "Voiturette no. %@";
 "FORMAT_CARTS_PLAYER_%@_SHARES_SCORECARD_%@" = "%@ partage la carte de score «%@»";
 "FORMAT_CLICKORTAP_%@_TO_SELECT" = "%@ pour sélectionner…";
+"FORMAT_CLICKORTAP_%@_NO_CONTESTANTS" = "Pas des compétiteurs - %@ + pour ajouter";
 "FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST" = "%@ le numéro pour l’ajuster";
 "FORMAT_CLICKORTAP_%@_NUMBER_%@_TO_ADJUST" = "%@ le numéro (%@) pour l’ajuster";
 "FORMAT_COLOR_%@_TEES" = "Jalons %@";
@@ -930,6 +974,10 @@
 "UNDO_GRAPHING_SECONDARY_COLOR_CHANGE" = "Changement de l’Infographie Couleur Secondaire";
 
 "MENU_ALPHABETICALLY" = "alphabétiquement";
+"MENU_ALPHABETICALLY_BY_FIRST" = "alphabétiquement par prénom";
+"MENU_BY_GENDER" = "par genre (hommes, femmes, inconnu)";
+"MENU_BY_HANDICAP_DECREASING" = "par handicaps décroissants";
+"MENU_BY_HANDICAP_INCREASING" = "par handicaps croissants";
 "MENU_BY_SKILL" = "par compétence (handicap)";
 "MENU_BY_PLAYER_POSITION" = "par position de joueur (A, B, C, …)";
 "MENU_HIGHLIGHT_RED_LINE" = "ligne rouge aprés le 20ème (style MGP)";
@@ -966,6 +1014,7 @@
 "ALERT_USERS_GUIDE_ERROR" = "Impossible de télécharger le Guide des Utilisateurs";
 "ALERT_USERS_GUIDE_ERROR_INFO" = "Assurez vous d’avoir une connexion internet.  Réessayez plus tard.";
 
+"BLURB_CERTIFICATION_AGREEMENT" = "J’ai lu, compris et j’accepte les termes de cette certification.";
 "BLURB_DUPLICATE_HOLE_HANDICAPS" = "Sur les parcours avec plus d’un neuf, ne permettez pas handicaps de trou qui dupliquent les handicaps de trou d’un autre neuf (à moins que les neufs utilisent handicaps 9-trous).";
 "BLURB_MISSING_RATINGS_NOTICE" = "Remarque: Des évaluations manquantes peuvent empêcher l’affichage de certains Tableaux des Handicaps de Parcours. Envisagez d’ajouter des évaluations de 9-trous à la définition de ce parcours.";
 "BLURB_REMOTE_DROPBOX" = "Les scores peuvent être importées ou mises à jour de les fiches de données synchronisés dans le dossier «Dropbox/Apps/Mulligan Scoring» sur cet ordinateur.  Choisissez «Scores du Dropbox…» dans la menu Ficher / Importer pour commenter scores entrants.";
@@ -974,6 +1023,7 @@
 "BLURB_PROHIBIT_MULTIPLE_PRESSES" = "Dans un match, si un pari a déjà été pressé (manuellement ou automatiquement), prohibez l’ajout d’une presse manuelle pour ce pari.";
 "BLURB_ALLOW_REFERENCE_TEES" = "Lors du réglage de Handicaps Jouer de différences dans les évaluations de parcours, permet la spécification de jalons «référence» pour le calcul de ajustements pour les hommes et/ou femmes.";
 "BLURB_REVIEW_HANDICAP_RECORDS" = "Examinez les données de handicap précedemment calculés sous forme tabulaire avec capacités pour vous supprimez les données selectionnées.";
+"BLURB_UNDERSTOOD_LICENSE" = "J’ai lu, compris et accepté les termes de cette licence de logiciels.";
 
 "INFO_AUTHORITY_%@_NOT_CERTIFIED" = "La méthode de handicap %@ n’est pas actuellement certifiée pour une utilisation.";
 "INFO_DECERTIFY_AUTHORITY_%@" = "Annuler l’autorisation du %@ en tant que méthode de handicap certifiée pour une utilisation dans Mulligan’s Eagle.";
@@ -1189,6 +1239,9 @@
 "TOOLTIP_CARTS_OUTLINE_TIME" = "Double-cliquez pour ajuster l’aire de départ initial ou l’heure de départ";
 "TOOLTIP_CARTS_SHOW_BUTTON" = "affichez les écriteaux de voiturette pour imprimer";
 "TOOLTIP_CARTS_SHOW_BUTTON_TRAINING" = "Cliquez pour ouvrir une fenêtre contenant tous les écriteux de voiturette prête à imprimer.";
+"TOOLTIP_EVENT_ADD" = "Ajouter un ou plusieurs concurrents, par Carte de Score, à l’Événement.";
+"TOOLTIP_EVENT_PLACE" = "Indiquer comment les places de l’Événement doivent être déterminés.";
+"TOOLTIP_EVENT_SORT" = "Trier les concurrents de l’Événement.";
 "TOOLTIP_EXCLUDE_GUESTS" = "Cochez la case pour exclure les joueurs «Invités» des modifications.";
 "TOOLTIP_HANDICAP_DELETE_RECORDS" = "Cliquez pour supprimer définitivement les données de handicap sélectionnées.";
 "TOOLTIP_LIMIT_SCORE" = "La limite de score de trou pour un Score Maximum WHS fixe.";
@@ -1215,11 +1268,13 @@
 "TOOLTIP_TEAM_GROSS_SCORE" = "Le score brut total d’équipe";
 "TOOLTIP_TEAM_NET_SCORE" = "Le score net total d’équipe";
 "TOOLTIP_TEAM_TOTAL_SCORE" = "Le score total d’équipe";
+"TOOLTIP_TOOLBAR_REGISTRATION" = "Pré-inscrire les joueurs à l'événement";
 
 "INSTRUCTION_DRAG_ROUND_HERE" = "… ou glissez un tour ici";
 "INSTRUCTION_DRAG_TO_REORDER" = "Faites glisser pour réordonner";
 
 //	Phrases & Special characters
+"ABCDEFG" = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";	//	For cart signs, player positions, etc.
 "ALL_SQUARE_CHARACTER" = "―";		//	\U2015 Special character	alt: "–" (En Dash) \U2013
 "CURLY_CHARACTERS" = "“”‘’";
 "DONE_DOT" = "•";		//	Special character

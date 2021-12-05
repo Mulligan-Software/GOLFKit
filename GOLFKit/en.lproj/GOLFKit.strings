@@ -10,6 +10,7 @@
 "TERM_ABOUT" = "about";
 "TERM_ACCOUNT" = "account";
 "TERM_ACKNOWLEDGEMENT_PLURAL" = "acknowledgments";
+"TERM_ACTION" = "action";
 "TERM_ADJUSTED" = "adjusted";
 "TERM_ADJUSTED_ABBR" = "adj.";
 "TERM_ADJUSTED_FOR_RATINGS" = "adjusted for Course Rating differences";
@@ -63,10 +64,13 @@
 "TERM_COMPETITOR" = "competitor";
 "TERM_COMPETITOR_PLURAL" = "competitors";
 "TERM_COMPLETE" = "complete";
+"TERM_CONTESTANT" = "contestant";
+"TERM_CONTESTANT_PLURAL" = "contestants";
 "TERM_CONTINUE" = "continue";
 "TERM_COPY" = "copy";
 "TERM_COUNTRY_ADJ" = "country";	//	As in "Country Club"
 "TERM_COUNTRY_NOUN" = "country";	//	As in "This is my country."
+"TERM_COUNTRY_PLURAL" = "countries";	//	As in "We visited several countries."
 "TERM_COURSE" = "course";
 "TERM_COURSE_PLURAL" = "courses";
 "TERM_CURRENT" = "current";
@@ -97,6 +101,8 @@
 "TERM_FEMALE" = "female";
 "TERM_FEMALE_ABBR" = "F";
 "TERM_FEMALE_PLAYER_PLURAL" = "women";
+"TERM_FILE" = "file";
+"TERM_FILE_PLURAL" = "files";
 "TERM_FIND" = "find";
 "TERM_FIRST" = "first";	//	as: 'first' name
 "TERM_FLAGSTICK" = "flagstick";
@@ -130,6 +136,7 @@
 "TERM_HELP" = "help";
 "TERM_HOLE" = "hole";
 "TERM_HOLE_PLURAL" = "holes";
+"TERM_ID" = "ID";
 "TERM_IGNORE" = "ignore";
 "TERM_IGNORED" = "ignored";
 "TERM_IMPORT" = "import";
@@ -144,6 +151,7 @@
 "TERM_LAST" = "last";	//	as:	'last' name
 "TERM_LAST_NAME" = "last name";
 "TERM_LEADERBOARD" = "leaderboard";
+"TERM_LENGTH" = "length";
 "TERM_LEVEL" = "level";
 "TERM_LIMITED" = "limited";
 "TERM_LINK" = "link";
@@ -200,6 +208,8 @@
 "TERM_OPT_OUT" = "opt out";
 "TERM_OVERALL" = "overall";
 "TERM_OVERRIDDEN" = "overridden";
+"TERM_OVERRIDE" = "override";
+"TERM_OVERRIDE_PLURAL" = "overrides";
 "TERM_PAIRING" = "pairing";
 "TERM_PAIRING_PLURAL" = "pairings";
 "TERM_PAR" = "par";
@@ -250,6 +260,7 @@
 "TERM_SCORING" = "scoring";
 "TERM_SECOND" = "second";
 "TERM_SECOND_PLURAL" = "seconds";
+"TERM_SELECT" = "select";
 "TERM_SELECTED" = "selected";
 "TERM_SEMICOLON" = "semicolon (;)";
 "TERM_SETTINGS" = "settings";
@@ -316,7 +327,7 @@
 "TERM_WINS" = "wins";
 "TERM_WOMAN_PLURAL" = "women";
 "TERM_YARD_PLURAL" = "yards";
-"TERM_YARD_PLURAL_ABBR" = "Yds.";
+"TERM_YARD_PLURAL_ABBR" = "Yds";
 "TERM_YARDAGE" = "yardage";
 "TERM_YES" = "yes";
 "TERM_YESTERDAY" = "yesterday";
@@ -348,6 +359,7 @@
 "GOLF_TEE_COLOR_NAME_BLUE_AND_WHITE" = "Blue & White";
 "GOLF_TEE_COLOR_NAME_RED_AND_YELLOW" = "Red & Yellow";
 "GOLF_TEE_COLOR_NAME_YELLOW_AND_BLUE" = "Yellow & Blue";
+"GOLF_TEE_COLOR_NAME_YELLOW_AND_GREEN" = "Yellow & Green";
 "GOLF_TEE_COLOR_NAME_RED_AND_WHITE" = "Red & White";
 "GOLF_TEE_COLOR_NAME_BLACK_AND_GOLD" = "Black & Gold";
 "GOLF_TEE_COLOR_NAME_WHITE_AND_GOLD" = "White & Gold";
@@ -420,6 +432,7 @@
 "TITLE_ADD_A_NEW_PLAYER" = "Add a New Player";
 "TITLE_ADD_A_ROUND" = "Add a Round";
 "TITLE_ADD_BUTTON" = "Add";
+"TITLE_ADD_TO_EVENT" = "Add to Event";
 "TITLE_ADVANCED_DUPLICATES" = "Prohibit duplicate hole handicaps";
 "TITLE_ADVANCED_MULTIPLE_PRESSES" = "Prohibit multiple presses";
 "TITLE_ADVANCED_9_HOLE_HANDICAPS" = "Require 9-hole handicaps";
@@ -439,6 +452,7 @@
 "TITLE_ASSIGNED_TEE_TIMES" = "Assigned Tee Times";
 "TITLE_AUTHORITY_OR_METHOD" = "Authority / System";
 "TITLE_AUTOMATIC_PRESSES" = "Automatic Presses";
+"TITLE_AVAILABLE_FILES_HEADER" = "Available Data Store Files";
 "TITLE_BACK_NINE" = "Back Nine";
 "TITLE_BACK_SIDE" = "Back Side";
 "TITLE_BANGO" = "Bango";
@@ -477,6 +491,8 @@
 "TITLE_CLOSE_OUT" = "Close-Out";
 "TITLE_CLOSE_OUT_PLURAL" = "Close-Out bets";
 "TITLE_COMPARE_9_HOLE_SCORES" = "Combine and use 9-hole scores";
+"TITLE_COMPETITION_SCORES" = "Competition Scores…";
+"TITLE_COMPETITION_SUMMARY" = "Competition Summary…";
 "TITLE_CONVERT" = "Convert";
 "TITLE_COURSE_HANDICAP_TABLE" = "Course Handicap Table";
 "TITLE_COURSE_HANDICAP_TABLES" = "Course Handicap Tables";
@@ -485,6 +501,7 @@
 "TITLE_CSS_ABBR" = "CSS";
 "TITLE_DARK" = "Dark";
 "TITLE_DATA_PROTECTION" = "Data Protection";
+"TITLE_DATA_STORE_SELECTION" = "Data Store Selection";
 "TITLE_DECERTIFY" = "Decertify";
 "TITLE_DEFAULT_TEAM_MATCH_STYLE" = "Team Score";
 "TITLE_DELETE_ALL" = "Delete All";
@@ -502,6 +519,7 @@
 "TITLE_EAGLES_OR_BETTER" = "Eagles & better";
 "TITLE_EDIT_BUTTON" = "Edit";
 "TITLE_EDIT_EVENT" = "Edit the Event";
+"TITLE_EDIT_NINES" = "Edit Nines";
 "TITLE_EDIT_PLAYER" = "Edit Player";
 "TITLE_EFFECTIVE_DATE" = "Effective Date";
 "TITLE_EGO_PULL_TO_SORT" = "Pull to sort…";
@@ -516,6 +534,7 @@
 "TITLE_EVEN_ABBR" = "E";
 "TITLE_EVENT_REGISTRATION" = "Event Registration";
 "TITLE_EXCLUDE_GUESTS" = "Exclude Guests";
+"TITLE_EXPORT" = "Export";
 "TITLE_EXTENDED_SCORING" = "Extended Scoring";
 "TITLE_FACTORY_SETTINGS" = "Factory Settings";
 "TITLE_FAIRWAY_HIT" = "Fairway Hit";
@@ -530,9 +549,12 @@
 "TITLE_FRONT_SIDE" = "Front Side";
 "TITLE_FULL_HDCP" = "Full Hdcp.";
 "TITLE_GETTING_STARTED" = "Getting Started…";
+"TITLE_GETTING_STARTED_CLUB" = "Set up a golf club and call it: ";
+"TITLE_GETTING_STARTED_IMPORT" = "Import club information from Mulligan Software";
 "TITLE_GHIN" = "Golf Handicap Information Network (GHIN)";
 "TITLE_GHIN_ABBR" = "GHIN";
 "TITLE_GHIN_NUMBER" = "GHIN Number";
+"TITLE_GOLF_CLUB_OR_ASSOCIATION" = "Golf Club or Association";
 "TITLE_GOLF_GLOSSARY" = "Golf Glossary";
 "TITLE_GOLF_NETWORK" = "Golf Network (Canada)";
 "TITLE_GOLF_NETWORK_ABBR" = "Golf Network";
@@ -610,6 +632,7 @@
 "TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
 "TITLE_HANDICAP_WORLD_INDEX_RTM" = "Handicap Index®";
 "TITLE_HANDICAP_WORLD_INDEX_PLURAL" = "Handicap Indexes";
+"TITLE_HANDICAPPING_CERTIFICATION" = "Handicapping Certification";
 "TITLE_HANDICAPPING_NUMBER" = "Handicapping number";
 "TITLE_HDCP_NETWORK_NUMBER" = "Handicap Network Account";
 "TITLE_HOGAN" = "Hogan";
@@ -619,6 +642,7 @@
 "TITLE_HOLE_SELECTION" = "Hole Selection";
 "TITLE_HOLLYWOOD" = "Hollywood";
 "TITLE_HOME_CLUB" = "Home Club";
+"TITLE_HOW_TO_GET_STARTED" = "How would you like to get started?";
 "TITLE_IGNORE_BEST" = "Ignore best";
 "TITLE_IGNORE_WORST" = "Ignore worst";
 "TITLE_IMPROVEMENT_REPORT" = "Improvement Report";
@@ -626,6 +650,7 @@
 "TITLE_INCOMPLETE_HOLE" = "Incomplete Hole";
 "TITLE_INSTALL" = "Install";
 "TITLE_INSTALL_JUNIOR_PAR" = "Install Junior Par";
+"TITLE_INSTALL_SAMPLES" = "Install Samples";
 "TITLE_JUNIOR_PAR" = "Junior Par";
 "TITLE_JUNIOR_PAR_ADVANCED" = "Advanced - Playing handicap under 25";
 "TITLE_JUNIOR_PAR_BEGINNER" = "Beginner - Playing handicap over 40";
@@ -660,6 +685,7 @@
 "TITLE_LOW_BALL_LOW_TOTAL" = "Low Ball - Low Total";
 "TITLE_LOW_BALL_SECOND_BALL" = "Low Ball - Second Ball";
 "TITLE_LOW_INDEX" = "Low Handicap Index";
+"TITLE_MAKE_NEW_DATA_STORE" = "Make a New Data Store";
 "TITLE_MASS_CONVERT_%@" = "Change Players' Handicapping Method - %@";
 "TITLE_MATCH_IS_EVEN" = "Match is all square.";
 "TITLE_MATCH_IS_TIED" = "Match is tied.";
@@ -676,10 +702,14 @@
 "TITLE_NAME_SCORECARDS" = "Name Scorecards";
 "TITLE_NAME_TEAMS" = "Name Teams";
 "TITLE_NASSAU" = "Nassau";
+"TITLE_NEW_DATA_STORE_NAME" = "New Data Store Name";
+"TITLE_NEW_SCORECARD" = "New Scorecard";
+"TITLE_NEW_SCORECARD_BUTTON" = "New Scorecard";
 "TITLE_NEXT_HOLE" = "Next Hole";
 "TITLE_NINE_HOLES" = "9 Holes";
 "TITLE_NO_DATA_FOUND" = "no data found";
 "TITLE_NO_STROKES" = "no strokes";
+"TITLE_NONE_OF_THESE" = "None of These";
 "TITLE_ON_COURSE_ASSISTANT" = "“On-Course” Assistant";
 "TITLE_OPEN_SCORECARD" = "Open the Scorecard";
 "TITLE_OPT_OUT_SKINS" = "Opt Out of Skins";
@@ -693,6 +723,7 @@
 "TITLE_PENALTY_STROKE" = "Penalty Stroke";
 "TITLE_PENALTY_STROKE_PLURAL" = "Penalty Strokes";
 "TITLE_PERSONAL_HANDICAPPING" = "Personal Handicapping";
+"TITLE_PLAYERS_TO_ADD" = "Players to add to a new Scorecard";
 "TITLE_PLAYER(S)" = "Player(s)";
 "TITLE_PLAYING_HANDICAP_DETERMINATION" = "Playing Handicap determination";
 "TITLE_POLIE" = "Polie";
@@ -732,7 +763,7 @@
 "TITLE_SCORECARD" = "Scorecard";
 "TITLE_SCORECARD_HANDICAP" = "Hcp";		//	As it appears in Scorecard headers ("Hcp")
 "TITLE_SCORECARD_IN" = "In";		//	As it appears in Scorecard total headers ("In")
-"TITLE_SCORECARD_LENGTH_IMPERIAL" = "Ydg";
+"TITLE_SCORECARD_LENGTH_IMPERIAL" = "Yds";
 "TITLE_SCORECARD_LENGTH_METRIC" = "M.";
 "TITLE_SCORECARD_OUT" = "Out";		//	As it appears in Scorecard total headers ("Out")
 "TITLE_SCORECARD_NET" = "Net";		//	As it appears in Scorecard total headers ("Net")
@@ -742,6 +773,7 @@
 "TITLE_SCRATCH_SCORE" = "Scratch Score";
 "TITLE_SECONDARY" = "Secondary";
 "TITLE_SELECT_ALL" = "Select All";
+"TITLE_SELECT_PLAYERS" = "Select Players";
 "TITLE_SELECTED_HOLES" = "Selected Holes";
 "TITLE_SERIAL_NUMBER" = "Serial number";
 "TITLE_SET_BUTTON" = "Set";
@@ -752,16 +784,19 @@
 "TITLE_SHOW_MATCHES_IN_ASSISTANT" = "Show intra-Scorecard\nmatch play status\nin the “On-Course” Assistant.";	//	3 lines!
 "TITLE_SHOW_ME" = "Show Me";
 "TITLE_SHOW_MEMBER_NUMBERS" = "Show club member numbers on Scorecards";
+"TITLE_SHOW_REGISTERED" = "Show registered players only";
 "TITLE_SHOW_REPORT" = "Show Report";
 "TITLE_SHOW_REPORTS" = "Show Reports";
 "TITLE_SHOW_SCORES_AT_STARTUP" = "Show scores at startup";
 "TITLE_SHOW_TABLES" = "Show Tables";
+"TITLE_SHOW_9_HOLE_RATINGS" = "Show 9-hole Ratings";
 "TITLE_SKILL_ADJUSTMENT" = "Skill Adjustment";
 "TITLE_SKINS_ELIGIBILITY" = "Skins Eligibility";
 "TITLE_SKINS_NOT_ENABLED" = "Skins features are not currently enabled.  See Settings.";
 "TITLE_SKINS_REQUIRE" = "Skins require";
 "TITLE_SKIP" = "Skip";
 "TITLE_SNAKE" = "Snake";
+"TITLE_SOFTWARE_LICENSE_AGREEMENT" = "Software License Agreement";
 "TITLE_SPECIAL_PREFERENCES" = "Special Settings";
 "TITLE_SSS" = "Standard Scratch Score";
 "TITLE_SSS_ABBR" = "SSS";
@@ -780,7 +815,10 @@
 "TITLE_SWING_GAME" = "Swing Game";
 "TITLE_SYSTEM" = "System";
 "TITLE_TEAM_MATCHES" = "Team Matches";
+"TITLE_TEAM_MEMBERS" = "Team Members";
 "TITLE_TECHNICAL_SUPPORT" = "Technical Support";
+"TITLE_TEE_COLOR" = "Color";
+"TITLE_TEE_NAME" = "Tee Name";
 "TITLE_TEE_TIME" = "Tee Time";
 "TITLE_TEE_TIME_ABBR" = "Tee Time";
 "TITLE_THANK_YOU" = "Thank You";
@@ -800,6 +838,7 @@
 "TITLE_UPDATES_UNAVAILABLE" = "Updates unavailable";
 "TITLE_USE_IOS_APPEARANCE" = "Use the iOS Appearance setting";
 "TITLE_USE_LAST" = "Use last";
+"TITLE_USE_SSS" = "Use SSS";
 "TITLE_USERS_GUIDE_FOUND" = "Users’ Guide found";
 "TITLE_USERS_GUIDE_NOT_FOUND" = "No Users’ Guide file found";
 "TITLE_WICKERS" = "Wickers";
@@ -846,6 +885,10 @@
 "DESCRIPTION_SKINS_BOGEY_OR_BETTER" = "Only scores of bogey or better may win a skin";
 "DESCRIPTION_SKINS_PAR_OR_BETTER" = "Only scores of par or better may win a skin";
 "DESCRIPTION_SNAKE" = "3-putt, last 3-putt or shortest 3-putt";
+"DESCRIPTION_STARTUP_AVAILABLE" = "always available in the File / Import menu";
+"DESCRIPTION_STARTUP_CLUB_IMPORT" = "via the internet from Mulligan Software’s archives";
+"DESCRIPTION_STARTUP_CLUB_INFO" = "starting information that you can edit to describe your own course";
+"DESCRIPTION_STARTUP_SAMPLES" = "deletable data to familiarize yourself with Mulligan’s Eagle™";
 "DESCRIPTION_STOBBIE" = "On in regulation within length of the pin";
 "DESCRIPTION_SWING_GAME" = "Rotating team of 2 vs. 3 or more";
 "DESCRIPTION_TEAM_MATCH_STYLES" = "¹ Available for all forms of team play - always used for team-only play and points scoring.";
@@ -868,6 +911,7 @@
 "FORMAT_CART_NO_%@" = "Cart no. %@";
 "FORMAT_CARTS_PLAYER_%@_SHARES_SCORECARD_%@" = "%@ shares the scorecard “%@”";
 "FORMAT_CLICKORTAP_%@_TO_SELECT" = "%@ to select…";
+"FORMAT_CLICKORTAP_%@_NO_CONTESTANTS" = "No contestants - %@ + to add";
 "FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST" = "%@ number to adjust";
 "FORMAT_CLICKORTAP_%@_NUMBER_%@_TO_ADJUST" = "%@ number (%@) to adjust";
 "FORMAT_COLOR_%@_TEES" = "%@ Tees";
@@ -930,6 +974,10 @@
 "UNDO_GRAPHING_SECONDARY_COLOR_CHANGE" = "Graphing Secondary Color Change";
 
 "MENU_ALPHABETICALLY" = "alphabetically";
+"MENU_ALPHABETICALLY_BY_FIRST" = "alphabetically by first name";
+"MENU_BY_GENDER" = "by gender (men, women, unknown)";
+"MENU_BY_HANDICAP_DECREASING" = "by decreasing handicap";
+"MENU_BY_HANDICAP_INCREASING" = "by increasing handicap";
 "MENU_BY_SKILL" = "by skill (handicap)";
 "MENU_BY_PLAYER_POSITION" = "by player position (A, B, C, …)";
 "MENU_HIGHLIGHT_RED_LINE" = "Red line after 20th (MGP style)";
@@ -966,6 +1014,7 @@
 "ALERT_USERS_GUIDE_ERROR" = "Unable to download Users’ Guide";
 "ALERT_USERS_GUIDE_ERROR_INFO" = "Make sure you have an internet connection and try again later.";
 
+"BLURB_CERTIFICATION_AGREEMENT" = "I’ve read, understood, and agree to the terms of this certification.";
 "BLURB_DUPLICATE_HOLE_HANDICAPS" = "On courses with more than one nine, don’t allow hole handicaps that duplicate any of the hole handicaps on another nine (unless the nines use 9-hole handicaps).";
 "BLURB_MISSING_RATINGS_NOTICE" = "Note: Missing ratings may prevent the display of some Course Handicap Tables. Consider adding 9-hole ratings to the definition of this course.";
 "BLURB_REMOTE_DROPBOX" = "Scores can be imported or updated from scoring data files synchronized to the “Dropbox/Apps/Mulligan Scoring” folder on this computer.  Choose “Scores from Dropbox…” in the File / Import menu to review incoming scores.";
@@ -974,6 +1023,7 @@
 "BLURB_PROHIBIT_MULTIPLE_PRESSES" = "In a match, if a bet has been previously pressed (manually or automatically), prohibit the addition of a manual press to that bet.";
 "BLURB_ALLOW_REFERENCE_TEES" = "When adjusting Playing Handicaps for differences in Course Ratings, allow specification of “reference” tees to be used for calculation of adjustments for men and/or women.";
 "BLURB_REVIEW_HANDICAP_RECORDS" = "Examine previously calculated handicap records in tabular form with capabilities to remove selected data.";
+"BLURB_UNDERSTOOD_LICENSE" = "I’ve read, understood, and agree to the terms of this Software License.";
 
 "INFO_AUTHORITY_%@_NOT_CERTIFIED" = "The %@ handicapping method is not currently certified for use.";
 "INFO_DECERTIFY_AUTHORITY_%@" = "De-authorize the %@ as a handicapping method certified for use in Mulligan’s Eagle.";
@@ -1189,6 +1239,9 @@
 "TOOLTIP_CARTS_OUTLINE_TIME" = "Double-click to adjust starting tee or tee time";
 "TOOLTIP_CARTS_SHOW_BUTTON" = "show cart signs for printing";
 "TOOLTIP_CARTS_SHOW_BUTTON_TRAINING" = "Click to open a window containing all the cart signs ready to print.";
+"TOOLTIP_EVENT_ADD" = "Add one or more contestants, by Scorecard, to the Event.";
+"TOOLTIP_EVENT_PLACE" = "Indicate how Event places are to be determined.";
+"TOOLTIP_EVENT_SORT" = "Sort the Event contestants.";
 "TOOLTIP_EXCLUDE_GUESTS" = "Check to exclude “Guest” players from changes.";
 "TOOLTIP_HANDICAP_DELETE_RECORDS" = "Click to permanently remove selected handicap records.";
 "TOOLTIP_LIMIT_SCORE" = "The hole score limit for a fixed WHS Maximum Score.";
@@ -1215,11 +1268,13 @@
 "TOOLTIP_TEAM_GROSS_SCORE" = "The team’s total gross score";
 "TOOLTIP_TEAM_NET_SCORE" = "The team’s total net score";
 "TOOLTIP_TEAM_TOTAL_SCORE" = "The team’s total score";
+"TOOLTIP_TOOLBAR_REGISTRATION" = "Pre-register players for the event";
 
 "INSTRUCTION_DRAG_ROUND_HERE" = "… or drag a round here";
 "INSTRUCTION_DRAG_TO_REORDER" = "Drag to reorder";
 
 //	Phrases & Special characters
+"ABCDEFG" = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";	//	For cart signs, player positions, etc.
 "ALL_SQUARE_CHARACTER" = "―";		//	\U2015 Special character	alt: "–" (En Dash) \U2013
 "CURLY_CHARACTERS" = "“”‘’";
 "DONE_DOT" = "•";		//	Special character

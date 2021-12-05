@@ -165,6 +165,7 @@ NSString * NSStringFromGOLFWageringMatchStyle(GOLFWageringMatchStyle styleCode, 
 
 NSString * NSStringFromGOLFWageringTeamMatchStyle(GOLFWageringTeamMatchStyle styleCode, NSString **descriptiveText, NSDictionary *info) {
 	//	GOLFWageringDefaultTeamMatchStyle,				//	(0)
+	//	GOLFWageringTeamScoreTeamMatchStyle,			//	(0)
 	//	GOLFWageringLowBallLowTotalTeamMatchStyle,		//	(1)
 	//	GOLFWageringLowBallHighBallTeamMatchStyle,		//	(2)
 	//	GOLFWageringLowBallSecondBallTeamMatchStyle,	//	(3)

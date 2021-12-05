@@ -411,7 +411,7 @@ typedef NS_OPTIONS(NSUInteger, GOLFMembershipStatus) {
 //	from which the object might be reconstituted for re-creating scoring data
 - (id)IDForScoring;
 
-//	Returns an object (weakly retained here) reconstituted in context from the provided wageringID
+//	Returns an object (weakly retained here) reconstituted in context from the provided scoringID
 + (id)objectForScoringID:(id)scoringID inContext:(NSManagedObjectContext *)context;
 
 //	Returns a gross score  (round, side, hole or others) in strokes
