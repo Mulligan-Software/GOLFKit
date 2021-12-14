@@ -91,6 +91,7 @@
 "TERM_CARRYOVER_PLURAL" = "Übertragungen";
 "TERM_CART" = "Wagen";
 "TERM_CART_PLURAL" = "Wagen";
+"TERM_CELL_FAX" = "Handy/Fax";
 "TERM_CHACHA" = "Cha-Cha";
 "TERM_CHACHACHA" = "Cha-Cha-Cha";
 "TERM_CHAPMAN" = "Chapman";
@@ -127,6 +128,8 @@
 "TERM_DISQUALIFIED" = "disqualifiziert";
 "TERM_DISQUALIFIED_ABBR" = "disq.";
 "TERM_DISQUALIFIED_ACRONYM" = "DQ";
+"TERM_DOT" = "Punkt";
+"TERM_DOT_PLURAL" = "Punkte";
 "TERM_DOUBLE_TAP" = "zweimal tippen";
 "TERM_DOWNLOAD" = "download";
 "TERM_DUPLICATE" = "duplizieren";
@@ -148,6 +151,7 @@
 "TERM_FILE_PLURAL" = "Dateien";
 "TERM_FIND" = "suchen";
 "TERM_FIRST" = "Vorname";	//	as: 'first' name
+"TERM_FIRST_NAME" = "Vorname";
 "TERM_FLAGSTICK" = "Flaggenstock";
 "TERM_FLIGHT" = "Pulk";
 "TERM_FLIGHT_PLURAL" = "Pulke";
@@ -223,6 +227,7 @@
 "TERM_METER_PLURAL_ABBR" = "Mtr.";
 "TERM_METHOD" = "Methode";
 "TERM_METRIC" = "metrische";
+"TERM_MIDDLE" = "zweiter";	//	As in "middle" name
 "TERM_MINUTES_APART" = "Minuten auseinander";
 "TERM_MODIFIER" = "Modifikator";
 "TERM_MORE" = "Mehr";
@@ -230,6 +235,7 @@
 "TERM_NAME" = "Name";
 "TERM_NET" = "netto";
 "TERM_NEXT" = "weiter";
+"TERM_NICKNAME" = "Spitzname";
 "TERM_NINE" = "Neun";
 "TERM_NINE_PLURAL" = "Neunen";
 "TERM_9_HOLE" = "9-Loch";
@@ -249,6 +255,7 @@
 "TERM_ON_SITUATED" = "in";
 "TERM_OPEN" = "öffnen";
 "TERM_OPT_OUT" = "ablehnen";
+"TERM_OR" = "oder";
 "TERM_OVERALL" = "gesamt";
 "TERM_OVERRIDDEN" = "überschrieben";
 "TERM_OVERRIDE" = "Überschreibung";
@@ -306,6 +313,7 @@
 "TERM_SELECT" = "auswählen";
 "TERM_SELECTED" = "ausgewählt";
 "TERM_SEMICOLON" = "Semikolon (;)";
+"TERM_SEND" = "senden";	//	As in: "Send" email
 "TERM_SETTINGS" = "Einstellungen";
 "TERM_SIDE" = "Seite";
 "TERM_SIDE_PLURAL" = "Seiten";
@@ -319,6 +327,7 @@
 "TERM_STROKE" = "Schlag";
 "TERM_STROKE_PLURAL" = "Schläge";
 "TERM_STYLE" = "Art";
+"TERM_SUFFIX" = "Suffix";
 "TERM_SUPERSEDED" = "abgelöst";
 "TERM_TAB" = "Tab (→)";
 "TERM_TAP" = "tippe";	//	tippe auf ~
@@ -364,6 +373,8 @@
 "TERM_VALUE" = "Wert";
 "TERM_VERSION" = "Version";
 "TERM_VERSUS_ABBR" = "vs.";
+"TERM_VISIT" = "besichtigen";
+"TERM_VOICE" = "Sprachleitung";
 "TERM_WAGERING" = "Wetten";
 "TERM_WALTZ" = "Waltzer";
 "TERM_WINNING" = "führt mit";
@@ -470,7 +481,20 @@
 
 //	Titles & Abbr.
 "TITLE_ABBREVIATED_DATES" = "Abgekürzte Daten";
+"TITLE_ACCESSORY_DOTS" = "Punktieren Sie die Scorekarten mit…";
+"TITLE_ACCESSORY_DOTS_DESC" = "Punktiere die Scorekarten";
+"TITLE_ACCESSORY_EXTRA" = "Extra Drucken…";
+"TITLE_ACCESSORY_EXTRA_DESC" = "Extra Drucken";
+"TITLE_ACCESSORY_EXTRA_ROOM" = "Extra raum für statistiken";
+"TITLE_ACCESSORY_EXTRA_STYLE" = "Stil der Extra";
+"TITLE_ACCESSORY_IN_COLOR" = "…in Farbe";
+"TITLE_ACCESSORY_IN_COLOR_DESC" = "Scores in Farbe drucken";
+"TITLE_ACCESSORY_PRINT_COMP" = "Wettbewerb-Scores";
 "TITLE_ACCESSORY_PRINT_INITIALS" = "Initialen der Spieler";
+"TITLE_ACCESSORY_PRINT_INITIALS_DESC" = "Drucken Sie die Initialen jedes Spielers auf seine Scorekarte";
+"TITLE_ACCESSORY_PRINT_ROOM" = "Raum für Statistiken";
+"TITLE_ACCESSORY_PRINT_SCORES" = "Scores drucken…";
+"TITLE_ACCESSORY_PRINT_SCORES_DESC" = "Verfügbare Scores drucken";
 "TITLE_ACCOUNT_NUMBER" = "Kontonummer";
 "TITLE_ADD_A_NEW_PLAYER" = "Neuen Spieler hinzufügen";
 "TITLE_ADD_A_ROUND" = "Eine Runde ergänzen";
@@ -528,6 +552,7 @@
 "TITLE_CHECK_FOR_SCORES_STARTUP" = "Prüfen Sie ob Scores beim Start";
 "TITLE_CHIPINSKI" = "Chip-in, Offner, Dr. Chipinski";
 "TITLE_CHOOSE_HOLE" = "Wählen ein Golfloch";
+"TITLE_CITY_STATE" = "Ort, Bundesland PLZ";
 "TITLE_CLEAR" = "Löschen";
 "TITLE_CLEAR_SCORES" = "Scores löschen";
 "TITLE_CLOSE" = "Schließen";
@@ -553,6 +578,7 @@
 "TITLE_DIFFERENTIAL_TYPE" = "Differentieller Typ";
 "TITLE_DISCARD" = "Verwerfen";
 "TITLE_DONE" = "Fertig";
+"TITLE_DONT_CALCULATE" = "Berechne nicht";
 "TITLE_DOWNLOADING_COURSES" = "Golfplätze herunterladen";
 "TITLE_DOWNLOADING_EAGLE_USERS_GUIDE"= "Mulligan’s Eagle™ Benutzerhandbuch wird heruntergeladen…";
 "TITLE_DRAG_DROP_DELIMITERS" = "Datentrennzeichen per\nziehen und loslassen";
@@ -658,6 +684,7 @@
 "TITLE_HANDICAP_INDEX_RTM_PLURAL" = "Handicap Indexes®";
 "TITLE_HANDICAP_MULLIGAN" = "Mulligan Handicap";
 "TITLE_HANDICAP_MULLIGAN_PLURAL" = "Mulligan Handicapen";
+"TITLE_HANDICAP_NATIONAL_ASSOCIATION" = "Nationaler Golfverband";
 "TITLE_HANDICAP_PERSONAL" = "Individuell Handicap";
 "TITLE_HANDICAP_PERSONAL_PLURAL" = "Individuell Handicapen";
 "TITLE_HANDICAP_PLAYING" = "Spielen Handicap";
@@ -738,6 +765,7 @@
 "TITLE_MAX_SCORE_HOLE_LIMIT/2" = "Punktzahl\nMax Lochlimit";
 "TITLE_MAX_HANDICAP_MEN" = "Maximal Standard-Handicap für Herren";
 "TITLE_MAXIMUM_SCORE" = "Höchste Punktzahl";
+"TITLE_MEMBER_NO" = "Mitglied nr.";
 "TITLE_MENS_HANDICAP" = "Handicap der Herren";
 "TITLE_MOVE_ROUND_DOWN" = "Bewege die Runde nach unten";
 "TITLE_MOVE_ROUND_UP" = "Bewege die Runde nach oben";
@@ -766,13 +794,17 @@
 "TITLE_PENALTY_STROKE" = "Strafschlag";
 "TITLE_PENALTY_STROKE_PLURAL" = "Strafschlage";
 "TITLE_PERSONAL_HANDICAPPING" = "Persönliche Handicapend";
+"TITLE_PLAYER_NAME" = "Spielername";
 "TITLE_PLAYERS_TO_ADD" = "Zu einer neuen Scorekarte hinzuzufügende Spieler";
 "TITLE_PLAYER(S)" = "Spieler";
 "TITLE_PLAYING_HANDICAP_DETERMINATION" = "Spielen-Handicap Bestimmung";
 "TITLE_POLIE" = "Polie";
 "TITLE_POST" = "Posten";
+"TITLE_POST_ADJUSTMENT" = "Anpassung vornehmen";
+"TITLE_POST_ROUND" = "Ergänzende score posten";
 "TITLE_POST_SCORE_FOR_%@" = "Posten Sie eine zusätzliche Partitur für %@";
 "TITLE_PREFERENCES" = "Einstellungen";
+"TITLE_PREFERRED_CLUB" = "Bevorzugter Club";
 "TITLE_PRESS_ADDED" = "Presse";
 "TITLE_PRESS_1_DOWN" = "1↓ Presse";
 "TITLE_PRESS_2_DOWN" = "2↓ Presse";
@@ -810,6 +842,7 @@
 "TITLE_SCORECARD_LENGTH_METRIC" = "M.";
 "TITLE_SCORECARD_NET" = "Net";		//	As it appears in Scorecard total headers ("Net")
 "TITLE_SCORECARD_OUT" = "Aus";		//	As it appears in Scorecard total headers
+"TITLE_SCORECARD_PLURAL" = "Scorekarten";
 "TITLE_SCORECARD_TOTAL" = "Sum";	//	As it appears in Scorecard total headers
 "TITLE_SCORING_COLORS" = "Farben für Golfwertung";
 "TITLE_SCORING_SHORTHAND" = "Kurzschrift für Golfwertung";
@@ -855,6 +888,7 @@
 "TITLE_STATUS_REGISTERED" = "Registriert";
 "TITLE_STATUS_VERIFIED" = "Geprüft";
 "TITLE_STOBBIE" = "Stobbie";
+"TITLE_STREET_ADDRESS" = "Adresse";
 "TITLE_SWING_GAME" = "Schwenkungspiel";
 "TITLE_SYSTEM" = "System";
 "TITLE_TEAM_MATCHES" = "Mannschaftsspiele";
@@ -910,6 +944,8 @@
 "DESCRIPTION_FRONT_BACK" = "Ersteseite und Letzteseite";
 "DESCRIPTION_GORILLA" = "Am nächsten zum Flaggenstock in Regulierung auf Par 5";
 "DESCRIPTION_GREENIE" = "Am nächsten zum Flaggenstock in Regulierung auf Par 3 - entwertet mit einem 3-Putt";
+"DESCRIPTION_GUEST" = "Einmaliger, Nicht-Mitglied oder einzelner Event-Spieler. Keine Handicap-Berechnung.";
+"DESCRIPTION_GUEST_PADDING" = "            ";
 "DESCRIPTION_GURGLEY" = "Par oder besser vom, oder überspringen von, Wasser";
 "DESCRIPTION_HOGAN" = "Erlangte das Fairway, Grün in Regulation, 2-Putt par";
 "DESCRIPTION_HOLLYWOOD" = "6-Loch-Matches (Sechsen, Round-Robin)";
@@ -949,6 +985,7 @@
 "FORMAT_APPEARANCE_%@_DEVICE_%@_LIGHT" = "%@ passt die Anzeige für den Leichten Modus an, unabhängig von der iOS-Einstellung für Ihr %@, obwohl Sie möglicherweise ein Dunkles Design für die Tastatur erzwingen.";
 "FORMAT_APPEARANCE_%@_DEVICE_%@_DARK" = "%@ passt die Anzeige für den Dunklen Modus an, unabhängig von der iOS-EInstellung für Ihr %@.";
 "FORMAT_ASSIGN_%ld_ROUNDS_TO" = "%ld Runden zuweisen an";
+"FORMAT_BEGINNING_%@" = "Anfang %@";
 "FORMAT_BEST_%d_ROUNDS" = "besten %d Golfrunden";
 "FORMAT_BET_HOLES_%ld_%ld" = "Löcher %ld - %ld";
 "FORMAT_CART_NO_%@" = "Wagen nr. %@";
@@ -967,11 +1004,13 @@
 "FORMAT_EVENT_HAS_TIME_%@_WARNING" = "Warnung: Event wird mit einer Abschlagzeit konfiguriert (%@).";
 "FORMAT_FOLLOWS_%@_DATE" = "folgt %@-Datum";	//	"follows Scorecard date" or "follows Event date" lookup errors
 "FORMAT_FOR_TITLE_%@" = "Für %@…";	//	For selected players… or For Al Czervik…
+"FORMAT_HCP_SETTINGS_FOR_%@" = "Handicap-Einstellungen für %@…";
 "FORMAT_INVALID_%@" = "ungültige %@";
 "FORMAT_%@_IS_DEFAULT_TEAM_CAPTAIN" = "%@ wird per Handicap zum Mannschaftskapitän ernannt.";
 "FORMAT_%@_IS_DESIGNATED_TEAM_CAPTAIN" = "%@ wird zum Mannschaftskapitän ernannt.";
 "FORMAT_%@_IS_DEFAULT_SCORECARD_CAPTAIN" = "%@ wird per Handicap zum Kapitän der Scorekarte ernannt.";
 "FORMAT_%@_IS_DESIGNATED_SCORECARD_CAPTAIN" = "%@ wird zum Kapitän der Scorekarte ernannt.";
+"FORMAT_%@_OR_%@" = "%@ oder %@";
 "FORMAT_MAXIMUM_%@_ABBR" = "Max. %@";
 "FORMAT_MB_DOWNLOADED_%1.1f" = "%1.1fMB heruntergeladen";
 "FORMAT_MISSING_%@" = "fehlender %@";
@@ -988,6 +1027,7 @@
 "FORMAT_PLAYER_%@_WINS_%d_UP_%@" = "%@ gewinnt %d-up.%@";	//	Al wins 2 up."money-changing-hands"
 "FORMAT_PLAYER_%@_WINS_%d_%@" = "%@ gewinnt %d %@";	//	Al wins 1 bet
 "FORMAT_PLAYER_%@_WINS_%@" = "%@ gewinnt %@";	//	Al wins $2.00
+"FORMAT_PREF_SETTINGS_FOR_%@" = "Bevorzugte Einstellungen für %@…";
 "FORMAT_SELECTED_ITEM_%@_ONE" = "1 %@ ausgewählt";
 "FORMAT_SELECTED_ITEM_%@_NONE" = "keine %@ ausgewählt";
 "FORMAT_SELECTED_ITEMS_%1$@_COUNT_%2$d" = "%2$d %1$@ ausgewählt";
@@ -1282,20 +1322,40 @@
 "TOOLTIP_CARTS_OUTLINE_TIME" = "Doppelklicken Sie, um das Startabschlag oder die Startzeit anzupassen";
 "TOOLTIP_CARTS_SHOW_BUTTON" = "Wagenplakate zum Drucken anzeigen";
 "TOOLTIP_CARTS_SHOW_BUTTON_TRAINING" = "Klicken Sie hier, um ein Fenster mit allen druckfertigen Wagenplakaten zu öffnen.";
+"TOOLTIP_CELL_FAX" = "Handy, Fax oder alternative Telefonnummer";
+"TOOLTIP_CITY_STATE" = "Stadt, Bundesland und Postleitzahl-Adresse";
+"TOOLTIP_DOT_HANDICAP_%@" = "Schläge werden durch das %@ eines Konkurrent bestimmt";
+"TOOLTIP_DOT_PLAYING_%@_ALLOWANCE_%@" = "Schläge werden durch das %@ oder das %@ eines Konkurrent bestimmt.";
+"TOOLTIP_EMAIL" = "Internet-E-Mail-Adresse";
 "TOOLTIP_EVENT_ADD" = "Fügen Sie dem Event einen oder mehrere Teilnehmer nach Scorekarte hinzu.";
 "TOOLTIP_EVENT_PLACE" = "Geben Sie an, wie die Platzierung das Event bestimmt werden soll.";
 "TOOLTIP_EVENT_SORT" = "Sortieren Sie die Event-Teilnehmer.";
 "TOOLTIP_EXCLUDE_GUESTS" = "Aktivieren Sie das Kontrollkästchen, um „Gastspieler“ von Änderungen auszuschließen.";
+"TOOLTIP_FIRST_NAME" = "Vorname (vorgegebener oder formloser) Name";
+"TOOLTIP_GENDER" = "Sex (Geschlecht) des Spielers";
 "TOOLTIP_HANDICAP_DELETE_RECORDS" = "Klicken Sie hier, um ausgewählte Handicap-Datensätze dauerhaft zu entfernen.";
+"TOOLTIP_HOME_CLUB" = "Heimat-Golfclub des Spielers";
+"TOOLTIP_LAST_NAME" = "Nachname oder Familienname";
 "TOOLTIP_LIMIT_SCORE" = "Das Loch-Score-Limit für einen festen WHS-Maximum-Score.";
 "TOOLTIP_LIMIT_SCORE_TRAINING" = "Das feste Loch-Score-Limit, das für alle Löcher in einem Wettbewerb mit „Maximaler Punktzahl“ verwendet wird.  Über diesem Limit eingegebene Punkt werden reduziert.";
 "TOOLTIP_MASS_CONVERT_BUTTON_%@" = "Klicken Sie, um Spieler zu %@ zu konvertieren.";
 "TOOLTIP_MAX_SCORE" = "Die Methode zur Bestimmung eines WHS-Maximum-Score-Limits.";
 "TOOLTIP_MAX_SCORE_TRAINING" = "Geben Sie für einen Wettbewerb mit „Maximaler Punktzahl“ unter Verwendung des World Handicap-Systems an, wie die maximale Punktzahl für ein Loch bestimmt wird.";
+"TOOLTIP_MEMBER_NO" = "Mitgliedsnummer im Heimatgolfclub des Spielers";
+"TOOLTIP_MIDDLE_NAME" = "Zweiter Vorname oder Initiale";
+"TOOLTIP_NAME_SUFFIX" = "Namenszusatz (wie III oder Jr. oder MD)";
+"TOOLTIP_NICKNAME" = "Spitzname (wenn häufig verwendet)";
+"TOOLTIP_PHONE" = "Sprachtelefonnummer";
+"TOOLTIP_PLAYER_ADD_SCORECARD" = "Öffne eine neue Scorecard für diesen Spieler.";
+"TOOLTIP_PLAYER_EDIT_ROUNDS" = "Überprüfe oder bearbeite die ausgewählten Runden.";
+"TOOLTIP_PLAYER_IMAGE" = "Ziehen Sie das Bild des Spielers hierher.";
+"TOOLTIP_PLAYER_REMOVE_ROUNDS" = "Die ausgewählten Runden löschen.";
 "TOOLTIP_PLAYER_GROSS_SCORE" = "Die gesamte Brutto Punktzahl des Spielers";
 "TOOLTIP_PLAYER_NET_SCORE" = "Die gesamte Netto Punktzahl des Spielers";
 "TOOLTIP_PLAYER_TOTAL_SCORE" = "Die Gesamtpunktzahl des Speilers";
 "TOOLTIP_PLAYERS_MASS_CONVERT_%@" = "Klicken Sie hier, um die Handicap-Methode ausgewählter Spieler auf %@ zu ändern.";
+"TOOLTIP_PLAYERS_PRINT" = "Drucken Sie eine vollständige Liste der Runden des Spielers";
+"TOOLTIP_PRINT_DOTS" = "Drucken Sie Punkte auf der Scorekarte, wo die Handicap-Striche ausgeführt werden.";
 "TOOLTIP_ROUND_GROSS_SCORE" = "Brutto Punktzahl";
 "TOOLTIP_ROUND_NET_SCORE" = "Netto Punktzahl";
 "TOOLTIP_ROUND_TOTAL_SCORE" = "Gesamtpunktzahl";
@@ -1308,6 +1368,7 @@
 "TOOLTIP_ROUNDS_MODIFIER_MULLIGAN" = "* - benutzt\nA - entfernt\nT - Tournier";
 "TOOLTIP_SHOW_SCORECARD" = "Wettbewerber-Scorekarte anzeigen.";
 "TOOLTIP_SHOW_SCORECARD_UNAVAILABLE" = "Wettbewerber-Scorekarte anzeigen.\n\nNicht verfügbar, da kein Mitbewerber ausgewählt wurde.";
+"TOOLTIP_STREET_ADDRESS" = "Straße oder Postfach Kasten";
 "TOOLTIP_TEAM_GROSS_SCORE" = "Die gesamte Brutto Punktzahl der Mannschaft";
 "TOOLTIP_TEAM_NET_SCORE" = "Die gesamte Netto Punktzahl der Mannschaft";
 "TOOLTIP_TEAM_TOTAL_SCORE" = "Die Gesamtpunktzahl der Mannschaft";
