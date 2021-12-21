@@ -65,6 +65,8 @@
 "TERM_COMPETITOR" = "competitor";
 "TERM_COMPETITOR_PLURAL" = "competitors";
 "TERM_COMPLETE" = "complete";
+"TERM_CONNECTION" = "connection";
+"TERM_CONTACT_VERB" = "contact";	//	to CONTACT someone
 "TERM_CONTESTANT" = "contestant";
 "TERM_CONTESTANT_PLURAL" = "contestants";
 "TERM_CONTINUE" = "continue";
@@ -80,8 +82,10 @@
 "TERM_DATE" = "date";
 "TERM_DEFAULT_PLURAL" = "defaults";
 "TERM_DELETE" = "delete";
+"TERM_DEVICE" = "device";
 "TERM_DIFFERENTIAL" = "differential";
 "TERM_DIFFERENTIAL_ABBR" = "diff.";
+"TERM_DISABLED" = "disabled";
 "TERM_DISQUALIFIED" = "disqualified";
 "TERM_DISQUALIFIED_ABBR" = "disq.";
 "TERM_DISQUALIFIED_ACRONYM" = "DQ";
@@ -93,6 +97,7 @@
 "TERM_EFFECTIVE" = "effective";	//	an "effective" date
 "TERM_ENDING" = "ending";
 "TERM_ENTER" = "enter";
+"TERM_ERASE" = "erase";
 "TERM_EVEN" = "even";
 "TERM_EVEN_ABBR" = "E";
 "TERM_EVENT" = "event";
@@ -132,6 +137,7 @@
 "TERM_GROSS" = "gross";
 "TERM_GUEST" = "guest";
 "TERM_HALVED" = "halved";
+"TERM_HALVED_ABBR" = "H";
 "TERM_HALVED_PLURAL" = "halved";
 "TERM_HANDICAP" = "handicap";
 "TERM_HANDICAP_PLURAL" = "handicaps";
@@ -161,12 +167,14 @@
 "TERM_LINK" = "link";
 "TERM_LINKS_GOLF" = "links";	//	St. Andrews Golf Links
 "TERM_LOCATE" = "locate";
+"TERM_LOCATED" = "located";
 "TERM_LOCATION" = "location";
 "TERM_LOCK" = "lock";
 "TERM_LOCKED" = "locked";
 "TERM_LOOKUP" = "lookup";
 "TERM_LOSES" = "loses";
 "TERM_LOSING" = "losing";
+"TERM_LOST_ABBR" = "L";
 "TERM_LOW" = "low";	//	As in "low handicap"
 "TERM_MALE" = "male";
 "TERM_MALE_ABBR" = "M";
@@ -186,11 +194,13 @@
 "TERM_METRIC" = "metric";
 "TERM_MIDDLE" = "middle";	//	As in "middle" name
 "TERM_MINUTES_APART" = "minutes apart";
+"TERM_MODIFIED" = "modified";
 "TERM_MODIFIER" = "modifier";
 "TERM_MORE" = "more";
 "TERM_MOVE" = "move";
 "TERM_NAME" = "name";
 "TERM_NET" = "net";
+"TERM_NEVER" = "never";
 "TERM_NEXT" = "next";
 "TERM_NICKNAME" = "nickname";
 "TERM_NINE" = "nine";
@@ -209,6 +219,9 @@
 "TERM_NUMBER_PLURAL" = "numbers";
 "TERM_NUMBER_PLURAL_ABBR" = "nos.";
 "TERM_OF_FROM" = "of";	//	"the Rockefellers of Staton Island"
+"TERM_OF_PORTION" = "of";	//	"30% of Course Handicap"
+"TERM_OFF_SETTING" = "off";
+"TERM_ON_SETTING" = "on";
 "TERM_ON_SITUATED" = "on";
 "TERM_OPEN" = "open";
 "TERM_OPT_OUT" = "opt out";
@@ -234,10 +247,13 @@
 "TERM_POINT_PLURAL_ABBR" = "pts.";
 "TERM_PRESS" = "press";
 "TERM_PRESS_PLURAL" = "presses";
+"TERM_PROCESSED" = "processed";
 "TERM_PRIVATE" = "private";
 "TERM_PURCHASE" = "purchase";
+"TERM_PUBLISH" = "publish";
 "TERM_PUTT" = "putt";
 "TERM_PUTT_PLURAL" = "putts";
+"TERM_PUTTING" = "putting";
 "TERM_QUIT" = "quit";
 "TERM_QUOTA" = "quota";
 "TERM_RANDOMLY" = "randomly";
@@ -247,8 +263,13 @@
 "TERM_RATING" = "rating";
 "TERM_RATING_PLURAL" = "ratings";
 "TERM_RATING_PLURAL_ABBR" = "ratings";
+"TERM_REASON" = "reason";
+"TERM_REGULATION_ABBR" = "reg";
+"TERM_REPUBLISH" = "republish";
 "TERM_RESET" = "reset";
+"TERM_RESULT_PLURAL" = "results";
 "TERM_REVERSERITZ" = "Reverse Ritz";
+"TERM_REVERT" = "revert";
 "TERM_RITZ" = "Ritz";
 "TERM_ROUND" = "round";
 "TERM_ROUND_PLURAL" = "rounds";
@@ -301,6 +322,7 @@
 "TERM_THE_ARTICLE_M" = "the";
 "TERM_THEME" = "theme";
 "TERM_THROUGH" = "through";
+"TERM_THROUGH_ABBR" = "thru";
 "TERM_THROUGH_TEE_NO" = "through no.";	//	from hole no. N through no. N
 "TERM_TIE" = "tie";
 "TERM_TIE_ABBR" = "T";
@@ -327,6 +349,7 @@
 "TERM_USE" = "use";
 "TERM_USED" = "used";
 "TERM_USED_ABBR" = "used";
+"TERM_USING" = "using";
 "TERM_VALUE" = "value";
 "TERM_VERSION" = "version";
 "TERM_VERSUS_ABBR" = "vs.";
@@ -337,6 +360,7 @@
 "TERM_WINNING" = "winning";
 "TERM_WINS" = "wins";
 "TERM_WOMAN_PLURAL" = "women";
+"TERM_WON_ABBR" = "W";
 "TERM_YARD_PLURAL" = "yards";
 "TERM_YARD_PLURAL_ABBR" = "Yds";
 "TERM_YARDAGE" = "yardage";
@@ -456,6 +480,7 @@
 "TITLE_ADD_A_NEW_PLAYER" = "Add a New Player";
 "TITLE_ADD_A_ROUND" = "Add a Round";
 "TITLE_ADD_BUTTON" = "Add";
+"TITLE_ADD_TEAMMATES" = "Add Teammates";
 "TITLE_ADD_TO_EVENT" = "Add to Event";
 "TITLE_ADVANCED_DUPLICATES" = "Prohibit duplicate hole handicaps";
 "TITLE_ADVANCED_MULTIPLE_PRESSES" = "Prohibit multiple presses";
@@ -527,6 +552,8 @@
 "TITLE_DARK" = "Dark";
 "TITLE_DATA_PROTECTION" = "Data Protection";
 "TITLE_DATA_STORE_SELECTION" = "Data Store Selection";
+"TITLE_DATE_&_TEE_TIME" = "Date & Tee Time";
+"TITLE_DATE_&_TIME" = "Date & Time";
 "TITLE_DECERTIFY" = "Decertify";
 "TITLE_DEFAULT_TEAM_MATCH_STYLE" = "Team Score";
 "TITLE_DELETE_ALL" = "Delete All";
@@ -539,6 +566,7 @@
 "TITLE_DOWNLOADING_COURSES" = "Downloading Courses";
 "TITLE_DOWNLOADING_EAGLE_USERS_GUIDE"= "Downloading the Mulligan’s Eagle™ Users’ Guide…";
 "TITLE_DRAG_DROP_DELIMITERS" = "Drag & Drop\ndata delimiters";
+"TITLE_DROPBOX" = "Dropbox";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
 "TITLE_EAGLE_USERS_GUIDE" = "Mulligan’s Eagle Users’ Guide";
@@ -559,13 +587,16 @@
 "TITLE_EVEN" = "Even";
 "TITLE_EVEN_ABBR" = "E";
 "TITLE_EVENT_REGISTRATION" = "Event Registration";
+"TITLE_EVERNOTE" = "Evernote";
 "TITLE_EXCLUDE_GUESTS" = "Exclude Guests";
 "TITLE_EXPORT" = "Export";
 "TITLE_EXTENDED_SCORING" = "Extended Scoring";
 "TITLE_FACTORY_SETTINGS" = "Factory Settings";
 "TITLE_FAIRWAY_HIT" = "Fairway Hit";
-"TITLE_FAVORITE_PLAYER" = "Favorite Player";
+"TITLE_FAVORITE_PLAYER" = "“Favorite” Player";
 "TITLE_FAX_CELL" = "Fax / Cell";
+"TITLE_FILE_NAME" = "File Name";
+"TITLE_FILE_TYPE" = "File Type";
 "TITLE_FIRST_HOLE" = "First Hole";
 "TITLE_FIRST_TEE_TIME" = "First Tee Time";
 "TITLE_FLAG_TOURNAMENT_SCORES" = "Flag Tournament scores";
@@ -587,6 +618,7 @@
 "TITLE_GOLFLINK" = "GOLFLink (Australia)";
 "TITLE_GOLFLINK_ABBR" = "GOLFLink";
 "TITLE_GOLFLINK_NUMBER" = "GOLFLink Number";
+"TITLE_GOOGLE_DRIVE" = "Google Drive";
 "TITLE_GORILLA" = "Gorilla";
 "TITLE_GRADE" = "Grade";
 "TITLE_GRAPHING_COLORS" = "Graphing Colors";
@@ -670,6 +702,7 @@
 "TITLE_HOLLYWOOD" = "Hollywood";
 "TITLE_HOME_CLUB" = "Home Club";
 "TITLE_HOW_TO_GET_STARTED" = "How would you like to get started?";
+"TITLE_ICLOUD" = "iCloud";
 "TITLE_IGNORE_BEST" = "Ignore best";
 "TITLE_IGNORE_WORST" = "Ignore worst";
 "TITLE_IMPROVEMENT_REPORT" = "Improvement Report";
@@ -721,6 +754,7 @@
 "TITLE_MATCH_TYPE" = "Match Type";
 "TITLE_MAX_HANDICAP_MEN" = "Maximum standard handicap for men";
 "TITLE_MAX_SCORE_HOLE_LIMIT/2" = "Max Score\nHole Limit";
+"TITLE_MAXIMUM_ABBR" = "Max";
 "TITLE_MAXIMUM_SCORE" = "Maximum Score";
 "TITLE_MEMBER_NO" = "Member no.";
 "TITLE_MENS_HANDICAP" = "Men’s Handicap";
@@ -735,8 +769,10 @@
 "TITLE_NEW_SCORECARD_BUTTON" = "New Scorecard";
 "TITLE_NEXT_HOLE" = "Next Hole";
 "TITLE_NINE_HOLES" = "9 Holes";
+"TITLE_NINE_NAME" = "Nine Name";
 "TITLE_NO_DATA_FOUND" = "no data found";
 "TITLE_NO_STROKES" = "no strokes";
+"TITLE_NO_TEAM_MEMBERS" = "No Team Members";
 "TITLE_NONE_OF_THESE" = "None of These";
 "TITLE_ON_COURSE_ASSISTANT" = "“On-Course” Assistant";
 "TITLE_OPEN_SCORECARD" = "Open the Scorecard";
@@ -809,19 +845,23 @@
 "TITLE_SELECT_PLAYERS" = "Select Players";
 "TITLE_SELECTED_HOLES" = "Selected Holes";
 "TITLE_SERIAL_NUMBER" = "Serial number";
+"TITLE_SESSION_LIST" = "Session List";
 "TITLE_SET_BUTTON" = "Set";
 "TITLE_SEVE" = "Seve";
 "TITLE_SHOTGUN_START" = "Shotgun Start";
 "TITLE_SHOW_ALLOWANCE_DOTS" = "Show Handicap Allowance Dots";
 "TITLE_SHOW_CARDS" = "Show Cards";
+"TITLE_SHOW_GROSS_SCORES" = "Show Gross Scores";
 "TITLE_SHOW_MATCHES_IN_ASSISTANT" = "Show intra-Scorecard\nmatch play status\nin the “On-Course” Assistant.";	//	3 lines!
 "TITLE_SHOW_ME" = "Show Me";
 "TITLE_SHOW_MEMBER_NUMBERS" = "Show club member numbers on Scorecards";
+"TITLE_SHOW_NET_SCORES" = "Show Net Scores";
 "TITLE_SHOW_REGISTERED" = "Show registered players only";
 "TITLE_SHOW_REPORT" = "Show Report";
 "TITLE_SHOW_REPORTS" = "Show Reports";
 "TITLE_SHOW_SCORES_AT_STARTUP" = "Show scores at startup";
 "TITLE_SHOW_TABLES" = "Show Tables";
+"TITLE_SHOW_TEAMMATES" = "Show Teammates";
 "TITLE_SHOW_9_HOLE_RATINGS" = "Show 9-hole Ratings";
 "TITLE_SKILL_ADJUSTMENT" = "Skill Adjustment";
 "TITLE_SKINS_ELIGIBILITY" = "Skins Eligibility";
@@ -846,12 +886,14 @@
 "TITLE_STATUS_VERIFIED" = "Verified";
 "TITLE_STOBBIE" = "Stobbie";
 "TITLE_STREET_ADDRESS" = "Street Address";
+"TITLE_SUPPORT_REQUEST" = "Technical Support Request";
 "TITLE_SWING_GAME" = "Swing Game";
 "TITLE_SYSTEM" = "System";
 "TITLE_TEAM_MATCHES" = "Team Matches";
 "TITLE_TEAM_MEMBERS" = "Team Members";
+"TITLE_TEAM_PLAY" = "Team Play";
 "TITLE_TECHNICAL_SUPPORT" = "Technical Support";
-"TITLE_TEE_COLOR" = "Color";
+"TITLE_TEE_COLOR" = "Tee Color";
 "TITLE_TEE_NAME" = "Tee Name";
 "TITLE_TEE_TIME" = "Tee Time";
 "TITLE_TEE_TIME_ABBR" = "Tee Time";
@@ -947,6 +989,7 @@
 "FORMAT_BET_HOLES_%ld_%ld" = "Holes %ld - %ld";
 "FORMAT_CART_NO_%@" = "Cart no. %@";
 "FORMAT_CARTS_PLAYER_%@_SHARES_SCORECARD_%@" = "%@ shares the scorecard “%@”";
+"FORMAT_CLICKORTAP_%@_TO_EDIT" = "%@ to edit";
 "FORMAT_CLICKORTAP_%@_TO_SELECT" = "%@ to select…";
 "FORMAT_CLICKORTAP_%@_NO_CONTESTANTS" = "No contestants - %@ + to add";
 "FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST" = "%@ number to adjust";
@@ -993,6 +1036,9 @@
 "FORMAT_THROUGH_HOLE_%@" = "through %@";
 "FORMAT_TO_PROMPT_%@" = "to: %@";	//	Convert to: WHS
 "FORMAT_TOTAL_POINTS_VS_QUOTA_%d" = "Total Points v. %d Quota";
+"FORMAT_TSM_APPEARANCE_DARK_ON_%@" = "The Scoring Machine will adjust its display for Dark Mode, regardless of the iOS setting for your %@.";
+"FORMAT_TSM_APPEARANCE_LIGHT_ON_%@" = "The Scoring Machine will adjust its display for Light Mode, regardless of the iOS setting for your %@, though you may indicate below a Dark Theme for the keyboard.";
+"FORMAT_TSM_APPEARANCE_SYSTEM_ON_%@" = "The Scoring Machine will adjust its display to accommodate the Display Appearance Settings on your %@.";
 "FORMAT_%@_DIFFERENCE" = "%@ Difference";	//	"COURSE HANDICAP Difference"
 "FORMAT_%@_OF_EACH_PLAYER" = "%@ of each player";	//	"COURSE HANDICAP of each player"
 "FORMAT_%@_TO_%@" = "%@ to %@";	//	Front Nine to Back Nine
@@ -1044,6 +1090,9 @@
 
 "ALERT_CARTS_APPLY_MESSAGE" = "You've proposed changes to tee times, starting tees or cart assignments.";
 "ALERT_CARTS_APPLY_MESSAGE_EXTRA" = "Do you want to go back to apply those changes to scorecards before continuing?";
+"ALERT_DATABASE_ERROR" = "Database Error";
+"ALERT_DATABASE_ERROR_INFO" = "The data storage found on this device is incompatible or damaged.\n\nYou can delete the app and re-install, or we can clear the database and you can restart the app.\n\nThe application will terminate.";
+"ALERT_DATABASE_ERROR_REINSTALL" = "I’ll re-install";
 "ALERT_NO_GOLFERS_COURSES_FOR_EVENT" = "No Players or Courses are available yet to create an Event.";
 "ALERT_NO_COURSES_FOR_EVENT" = "No Courses are available yet to create an Event.";
 "ALERT_NO_GOLFERS_FOR_EVENT" = "No Players are available yet to create an Event.";
@@ -1334,6 +1383,7 @@
 
 "INSTRUCTION_DRAG_ROUND_HERE" = "… or drag a round here";
 "INSTRUCTION_DRAG_TO_REORDER" = "Drag to reorder";
+"INSTRUCTION_TSM_GETTING_STARTED" = "Tap the ☰ menu disclosure button at the top left, or swipe this Scoreboard to the right to set up your home course, add some players, then create Scorecards or Events.\n\nFor detailed Help including a “Quick-Start” guide, or to change app Settings, tap the ☰ button at the top right or swipe this Scoreboard to the left.";
 
 //	Phrases & Special characters
 "ABCDEFG" = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";	//	For cart signs, player positions, etc.

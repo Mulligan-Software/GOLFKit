@@ -104,6 +104,8 @@ NSString * NSStringForClickOrTap(void);
 //	Utilities:
 //
 //	NSStringFromNSComparisonResult(result)
+//	NSStringFromNSStringEncoding(encoding)
 //
 //=================================================================
 NSString * NSStringFromNSComparisonResult(NSComparisonResult result);
+NSString * NSStringFromNSStringEncoding(NSStringEncoding encoding);

@@ -259,13 +259,13 @@ NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictiona
 
 		case Men90Women95AllowanceType:
 			if (descriptiveText) {
-				*descriptiveText = [NSString stringWithFormat:@"%@ %@", [GOLFLocalizedString(@"OF") lowercaseString], GOLFPlayingHandicapTitle(methodIndex, NO)];
+				*descriptiveText = [NSString stringWithFormat:@"%@ %@", [GOLFLocalizedString(@"TERM_OF_PORTION") lowercaseString], GOLFPlayingHandicapTitle(methodIndex, NO)];
 			}
 			return (needShortText ? GOLFLocalizedString(@"ALLOWANCE_TYPE_MEN_90_WOMEN_95_ABBR") : GOLFLocalizedString(@"ALLOWANCE_TYPE_MEN_90_WOMEN_95"));
 
 		case Men80Women90AllowanceType:
 			if (descriptiveText) {
-				*descriptiveText = [NSString stringWithFormat:@"%@ %@", [GOLFLocalizedString(@"OF") lowercaseString], GOLFPlayingHandicapTitle(methodIndex, NO)];
+				*descriptiveText = [NSString stringWithFormat:@"%@ %@", [GOLFLocalizedString(@"TERM_OF_PORTION") lowercaseString], GOLFPlayingHandicapTitle(methodIndex, NO)];
 			}
 			return (needShortText ? GOLFLocalizedString(@"ALLOWANCE_TYPE_MEN_80_WOMEN_90_ABBR") : GOLFLocalizedString(@"ALLOWANCE_TYPE_MEN_80_WOMEN_90"));
 

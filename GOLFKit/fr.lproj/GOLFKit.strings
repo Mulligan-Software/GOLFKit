@@ -65,6 +65,8 @@
 "TERM_COMPETITOR" = "concurrent";
 "TERM_COMPETITOR_PLURAL" = "concurrents";
 "TERM_COMPLETE" = "complet";
+"TERM_CONNECTION" = "connexion";
+"TERM_CONTACT_VERB" = "contacter";	//	to CONTACT someone
 "TERM_CONTESTANT" = "concurrent";
 "TERM_CONTESTANT_PLURAL" = "concurrents";
 "TERM_CONTINUE" = "continuer";
@@ -80,8 +82,10 @@
 "TERM_DATE" = "date";
 "TERM_DEFAULT_PLURAL" = "valeurs par défaut";
 "TERM_DELETE" = "supprimer";
+"TERM_DEVICE" = "appareil";
 "TERM_DIFFERENTIAL" = "différentiel";
 "TERM_DIFFERENTIAL_ABBR" = "diff.";
+"TERM_DISABLED" = "désactivé";
 "TERM_DISQUALIFIED" = "disqualifié";
 "TERM_DISQUALIFIED_ABBR" = "disq.";
 "TERM_DISQUALIFIED_ACRONYM" = "DQ";
@@ -93,6 +97,7 @@
 "TERM_EFFECTIVE" = "effective";	//	an "effective" date
 "TERM_ENDING" = "fin";
 "TERM_ENTER" = "entrée";
+"TERM_ERASE" = "effacer";
 "TERM_EVEN" = "égal";
 "TERM_EVEN_ABBR" = "E";
 "TERM_EVENT" = "événement";
@@ -132,6 +137,7 @@
 "TERM_GROSS" = "brut";
 "TERM_GUEST" = "invité";
 "TERM_HALVED" = "à égalité";
+"TERM_HALVED_ABBR" = "É";
 "TERM_HALVED_PLURAL" = "à égalité";
 "TERM_HANDICAP" = "handicap";
 "TERM_HANDICAP_PLURAL" = "handicaps";
@@ -161,12 +167,14 @@
 "TERM_LINK" = "lien";
 "TERM_LINKS_GOLF" = "liens";	//	St. Andrews Golf Links
 "TERM_LOCATE" = "localiser";
+"TERM_LOCATED" = "situé";
 "TERM_LOCATION" = "localité";
 "TERM_LOCK" = "verrouiller";
 "TERM_LOCKED" = "verrouillé";
 "TERM_LOOKUP" = "chercher";
 "TERM_LOSES" = "perd";
 "TERM_LOSING" = "en train de perte";
+"TERM_LOST_ABBR" = "L";	//	lost --> perdu(e)
 "TERM_LOW" = "moins";	//	As in "low handicap"
 "TERM_MALE" = "masculin";
 "TERM_MALE_ABBR" = "M";
@@ -186,11 +194,13 @@
 "TERM_METRIC" = "métriques";
 "TERM_MIDDLE" = "m.";	//	As in "middle" name
 "TERM_MINUTES_APART" = "minutes d’intervalle";
+"TERM_MODIFIED" = "modifié";
 "TERM_MODIFIER" = "modificateur";
 "TERM_MORE" = "plus";
 "TERM_MOVE" = "déplacer";
 "TERM_NAME" = "nom";
 "TERM_NET" = "net";
+"TERM_NEVER" = "jamais";
 "TERM_NEXT" = "suivant";
 "TERM_NICKNAME" = "surnom";
 "TERM_NINE" = "neuf";
@@ -209,6 +219,9 @@
 "TERM_NUMBER_PLURAL" = "números";
 "TERM_NUMBER_PLURAL_ABBR" = "nos.";
 "TERM_OF_FROM" = "de";	//	"the Rockefellers of Staton Island"
+"TERM_OF_PORTION" = "de";	//	"30% of Course Handicap"
+"TERM_OFF_SETTING" = "désactivé";
+"TERM_ON_SETTING" = "activé";
 "TERM_ON_SITUATED" = "sur";
 "TERM_OPEN" = "ouvrir";
 "TERM_OPT_OUT" = "se retirer";
@@ -235,9 +248,12 @@
 "TERM_PRESS" = "presse";
 "TERM_PRESS_PLURAL" = "presses";
 "TERM_PRIVATE" = "privé";
+"TERM_PROCESSED" = "traité";
 "TERM_PURCHASE" = "acheter";
+"TERM_PUBLISH" = "publier";
 "TERM_PUTT" = "putt";
 "TERM_PUTT_PLURAL" = "putts";
+"TERM_PUTTING" = "putting";
 "TERM_QUIT" = "quitter";
 "TERM_QUOTA" = "quota";
 "TERM_RANDOMLY" = "au hasard";
@@ -247,8 +263,13 @@
 "TERM_RATING" = "évaluation";
 "TERM_RATING_PLURAL" = "évaluations";
 "TERM_RATING_PLURAL_ABBR" = "éval.";
+"TERM_REASON" = "raison";
+"TERM_REGULATION_ABBR" = "rég";
+"TERM_REPUBLISH" = "republier";
 "TERM_RESET" = "réinitialiser";
+"TERM_RESULT_PLURAL" = "résultats";
 "TERM_REVERSERITZ" = "Ritz Inverse";
+"TERM_REVERT" = "revenir";
 "TERM_RITZ" = "Ritz";
 "TERM_ROUND" = "tour";
 "TERM_ROUND_PLURAL" = "tours";
@@ -301,6 +322,7 @@
 "TERM_THE_ARTICLE_M" = "le";
 "TERM_THEME" = "thème";
 "TERM_THROUGH" = "à travers";
+"TERM_THROUGH_ABBR" = "à";
 "TERM_THROUGH_TEE_NO" = "au jalon no.";	//	du jalon no. N au jalon no. N
 "TERM_TIE" = "égalité";
 "TERM_TIE_ABBR" = "T";
@@ -327,6 +349,7 @@
 "TERM_USE" = "utiliser";
 "TERM_USED" = "utilisé";
 "TERM_USED_ABBR" = "util.";
+"TERM_USING" = "utilisant";
 "TERM_VALUE" = "valeur";
 "TERM_VERSION" = "version";
 "TERM_VERSUS_ABBR" = "vs";
@@ -337,6 +360,7 @@
 "TERM_WINNING" = "en train de gagner";
 "TERM_WINS" = "gagne";
 "TERM_WOMAN_PLURAL" = "femmes";
+"TERM_WON_ABBR" = "W";	//	won --> a gagné
 "TERM_YARD_PLURAL" = "yards";
 "TERM_YARD_PLURAL_ABBR" = "Yds";
 "TERM_YARDAGE" = "métrage";
@@ -456,6 +480,7 @@
 "TITLE_ADD_A_NEW_PLAYER" = "Ajouter un Nouveau Joueur";
 "TITLE_ADD_A_ROUND" = "Ajoutez un tour";
 "TITLE_ADD_BUTTON" = "Ajouter";
+"TITLE_ADD_TEAMMATES" = "Ajouter des coéquipiers";
 "TITLE_ADD_TO_EVENT" = "Ajouter à Événement";
 "TITLE_ADVANCED_DUPLICATES" = "Prohibir les handicaps de trou dupliqués";
 "TITLE_ADVANCED_MULTIPLE_PRESSES" = "Prohibir les presses multiple";
@@ -527,6 +552,8 @@
 "TITLE_DARK" = "Sombre";
 "TITLE_DATA_PROTECTION" = "Protection des Données";
 "TITLE_DATA_STORE_SELECTION" = "Sélection de Base de Données";
+"TITLE_DATE_&_TEE_TIME" = "Date et Heure de départ";
+"TITLE_DATE_&_TIME" = "Date et Heure";
 "TITLE_DECERTIFY" = "Décertifier";
 "TITLE_DEFAULT_TEAM_MATCH_STYLE" = "Score d’Équipe";
 "TITLE_DELETE_ALL" = "Effacer Tout";
@@ -539,6 +566,7 @@
 "TITLE_DOWNLOADING_COURSES" = "Téléchargement des parcours";
 "TITLE_DOWNLOADING_EAGLE_USERS_GUIDE"= "Télécharant du Guide de Utilisateur de Mulligan’s Eagle™…";
 "TITLE_DRAG_DROP_DELIMITERS" = "Délimiteurs de données\npar Glisser-Déposer";
+"TITLE_DROPBOX" = "Dropbox";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
 "TITLE_EAGLE_USERS_GUIDE" = "Guide des Utilisateurs de Mulligan’s Eagle";
@@ -559,13 +587,16 @@
 "TITLE_EVEN" = "Égal";
 "TITLE_EVEN_ABBR" = "E";
 "TITLE_EVENT_REGISTRATION" = "Inscription à l’Événement";
+"TITLE_EVERNOTE" = "Evernote";
 "TITLE_EXCLUDE_GUESTS" = "Exclure les Invités";
 "TITLE_EXPORT" = "Exporter";
 "TITLE_EXTENDED_SCORING" = "Marquant Avancée";
 "TITLE_FACTORY_SETTINGS" = "Réglages par défaut";
 "TITLE_FAIRWAY_HIT" = "Fairway atteint";
-"TITLE_FAVORITE_PLAYER" = "Joueur Préféré";
+"TITLE_FAVORITE_PLAYER" = "Joueur «Favori»";
 "TITLE_FAX_CELL" = "Fax / Portable";
+"TITLE_FILE_NAME" = "Nom de Fichier";
+"TITLE_FILE_TYPE" = "Type de Fichier";
 "TITLE_FIRST_HOLE" = "Premier Trou";	//	m.
 "TITLE_FIRST_TEE_TIME" = "Premier heure de départ";
 "TITLE_FLAG_TOURNAMENT_SCORES" = "Signalez les scores de tournoi";
@@ -587,6 +618,7 @@
 "TITLE_GOLFLINK" = "GOLFLink (Australia)";
 "TITLE_GOLFLINK_ABBR" = "GOLFLink";
 "TITLE_GOLFLINK_NUMBER" = "Numéro de GOLFLink";
+"TITLE_GOOGLE_DRIVE" = "Google Drive";
 "TITLE_GORILLA" = "Gorilla";
 "TITLE_GRADE" = "Classe";
 "TITLE_GRAPHING_COLORS" = "Couleurs d’Infographie";
@@ -670,6 +702,7 @@
 "TITLE_HOLLYWOOD" = "Hollywood";
 "TITLE_HOME_CLUB" = "Club d’accueil";
 "TITLE_HOW_TO_GET_STARTED" = "Comment préférez-vous commencer?";
+"TITLE_ICLOUD" = "iCloud";
 "TITLE_IGNORE_BEST" = "Ignorez meilleurs";
 "TITLE_IGNORE_WORST" = "Ignorez les pires";
 "TITLE_IMPROVEMENT_REPORT" = "Rapport de Progrès";
@@ -721,6 +754,7 @@
 "TITLE_MATCH_TYPE" = "Type de Match";
 "TITLE_MAX_SCORE_HOLE_LIMIT/2" = "Score Max\nLimite de Trou";
 "TITLE_MAX_HANDICAP_MEN" = "Standard handicap maximum - hommes";
+"TITLE_MAXIMUM_ABBR" = "Max";
 "TITLE_MAXIMUM_SCORE" = "Score Maximum";
 "TITLE_MEMBER_NO" = "Membre no.";
 "TITLE_MENS_HANDICAP" = "Handicap - Hommes";
@@ -735,8 +769,10 @@
 "TITLE_NEW_SCORECARD_BUTTON" = "Nouvelle Carte";
 "TITLE_NEXT_HOLE" = "Trou Suivant";
 "TITLE_NINE_HOLES" = "9 Trous";
+"TITLE_NINE_NAME" = "Nom de Neuf";
 "TITLE_NO_DATA_FOUND" = "aucune donnée disponible";
 "TITLE_NO_STROKES" = "aucun coups";
+"TITLE_NO_TEAM_MEMBERS" = "Aucun Membre de l’Équipe";
 "TITLE_NONE_OF_THESE" = "Aucun d’eux";
 "TITLE_ON_COURSE_ASSISTANT" = "«Sur-Parcours» Auxiliaire";
 "TITLE_OPEN_SCORECARD" = "Ouvrir la Carte";
@@ -809,19 +845,23 @@
 "TITLE_SELECT_PLAYERS" = "Sélectionner des joueurs";
 "TITLE_SELECTED_HOLES" = "Trous Sélectionnés";
 "TITLE_SERIAL_NUMBER" = "Numéro de série";
+"TITLE_SESSION_LIST" = "Liste de Session";
 "TITLE_SET_BUTTON" = "Définir";
 "TITLE_SEVE" = "Seve";
 "TITLE_SHOTGUN_START" = "Départs simultanés";
 "TITLE_SHOW_ALLOWANCE_DOTS" = "Afficher les taches d’allocation";
 "TITLE_SHOW_CARDS" = "Afficher Écriteaux";
+"TITLE_SHOW_GROSS_SCORES" = "Afficher les Scores Bruts";
 "TITLE_SHOW_MATCHES_IN_ASSISTANT" = "Afficher l'état du match\nintra-Carte de Score dans\nle «Sur-Parcours» Auxiliaire.";	//	3 lines!
 "TITLE_SHOW_ME" = "Montre moi";
 "TITLE_SHOW_MEMBER_NUMBERS" = "Afficher numéros des membres du club sur Cartes de Score";
+"TITLE_SHOW_NET_SCORES" = "Afficher les Scores Nets";
 "TITLE_SHOW_REGISTERED" = "Afficher uniquement joueurs enregistrés";
 "TITLE_SHOW_REPORT" = "Afficher le Rapport";
 "TITLE_SHOW_REPORTS" = "Afficher les Rapports";
 "TITLE_SHOW_SCORES_AT_STARTUP" = "Afficher les scores au démarrage";
 "TITLE_SHOW_TABLES" = "Afficher Tableaux";
+"TITLE_SHOW_TEAMMATES" = "Afficher les Coéquipiers";
 "TITLE_SHOW_9_HOLE_RATINGS" = "Évaluations 9-trous";
 "TITLE_SKILL_ADJUSTMENT" = "Ajustement habileté";
 "TITLE_SKINS_ELIGIBILITY" = "Éligibilité des Skins";
@@ -846,10 +886,12 @@
 "TITLE_STATUS_VERIFIED" = "Vérifié";
 "TITLE_STOBBIE" = "Stobbie";
 "TITLE_STREET_ADDRESS" = "Adresse de la Rue";
+"TITLE_SUPPORT_REQUEST" = "Demande d’Aide Aprés-Vente";
 "TITLE_SWING_GAME" = "Jeu Pivoter";
 "TITLE_SYSTEM" = "Système";
 "TITLE_TEAM_MATCHES" = "Matchs par Équipe";
 "TITLE_TEAM_MEMBERS" = "Membres de l’Équipe";
+"TITLE_TEAM_PLAY" = "Jeu d’Équipe";
 "TITLE_TECHNICAL_SUPPORT" = "Support Technique";
 "TITLE_TEE_COLOR" = "Couleur de jalon";
 "TITLE_TEE_NAME" = "Nom de l’aire de départ";
@@ -947,6 +989,7 @@
 "FORMAT_BET_HOLES_%ld_%ld" = "Trous %ld - %ld";
 "FORMAT_CART_NO_%@" = "Voiturette no. %@";
 "FORMAT_CARTS_PLAYER_%@_SHARES_SCORECARD_%@" = "%@ partage la carte de score «%@»";
+"FORMAT_CLICKORTAP_%@_TO_EDIT" = "%@ pour modifier";
 "FORMAT_CLICKORTAP_%@_TO_SELECT" = "%@ pour sélectionner…";
 "FORMAT_CLICKORTAP_%@_NO_CONTESTANTS" = "Pas des compétiteurs - %@ + pour ajouter";
 "FORMAT_CLICKORTAP_%@_NUMBER_TO_ADJUST" = "%@ le numéro pour l’ajuster";
@@ -993,6 +1036,9 @@
 "FORMAT_THROUGH_HOLE_%@" = "jusqu’à %@";
 "FORMAT_TO_PROMPT_%@" = "en: %@";	//	Convert to: WHS
 "FORMAT_TOTAL_POINTS_VS_QUOTA_%d" = "Points Totaux v. %d Quota";
+"FORMAT_TSM_APPEARANCE_DARK_ON_%@" = "La Machine de Marquant ajustera son affichage pour le Mode Sombre, quel que soit le paramètre iOS de votre %@.";
+"FORMAT_TSM_APPEARANCE_LIGHT_ON_%@" = "La Machine de Marquant ajustera son affichage pour le Mode Clair, quel que soit le paramètre iOS pour votre %@, bien que vous puissiez indiquer ci-dessous un Thème Sombre pour le clavier.";
+"FORMAT_TSM_APPEARANCE_SYSTEM_ON_%@" = "La Machine de Marquant ajustera son affichage pour s’adapter aux paramètres d’apparence de l’affichage sur votre %@.";
 "FORMAT_%@_DIFFERENCE" = "Différence de %@";	//	"COURSE HANDICAP Difference"
 "FORMAT_%@_OF_EACH_PLAYER" = "%@ de chaque joueur";	//	"COURSE HANDICAP of each player"
 "FORMAT_%@_TO_%@" = "%@ à %@";	//	Front Nine to Back Nine
@@ -1044,6 +1090,9 @@
 
 "ALERT_CARTS_APPLY_MESSAGE" = "Vous avez proposé des modifications aux heures de départ, les départs initials ou affectations de voiturette.";
 "ALERT_CARTS_APPLY_MESSAGE_EXTRA" = "Souhaitez-vous revenir en arrière pour appliquer ces changements aux cartes de score avant de continuer?";
+"ALERT_DATABASE_ERROR" = "Erreur de la Base de Données";
+"ALERT_DATABASE_ERROR_INFO" = "Le stockage de données trouvé sur cet appareil est incompatible ou endommagé.\n\nVous pouvez supprimer l’application et la réinstaller, ou nous pouvons effacer la base de données et vous pouvez redémarrer l’application.\n\nL’application se terminera.";
+"ALERT_DATABASE_ERROR_REINSTALL" = "Je vais réinstaller";
 "ALERT_NO_GOLFERS_COURSES_FOR_EVENT" = "Ni les Joueurs ni les Parcours de golf encore disponible pour créer un Événement.";
 "ALERT_NO_COURSES_FOR_EVENT" = "Pas encore de Parcours de golf disponible pour créer un Événement.";
 "ALERT_NO_GOLFERS_FOR_EVENT" = "Pas encore de Joueur de golf disponible pour créer un Événement.";
@@ -1333,6 +1382,7 @@
 
 "INSTRUCTION_DRAG_ROUND_HERE" = "… ou glissez un tour ici";
 "INSTRUCTION_DRAG_TO_REORDER" = "Faites glisser pour réordonner";
+"INSTRUCTION_TSM_GETTING_STARTED" = "Touchez le bouton ☰ en haute à gauche, ou balayez ce Tableau vers la droite pour configurer votre parcours d’accueil, ajoutez des joueurs, puis créez des Cartes de Score ou des Événements.\n\nPour obtenir une aide détaillée, y compris un guide «Quick-Start», ou pour modifier les réglages de cette application, touchez le bouton ☰ en haut à droite ou balayez ce Tableau vers la gauche.";
 
 //	Phrases & Special characters
 "ABCDEFG" = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";	//	For cart signs, player positions, etc.

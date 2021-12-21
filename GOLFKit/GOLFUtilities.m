@@ -273,3 +273,83 @@ NSString * NSStringFromNSComparisonResult(NSComparisonResult result) {
 			return @"";
     }
 }
+
+//=================================================================
+//	NSStringFromNSStringEncoding(encoding)
+//=================================================================
+NSString * NSStringFromNSStringEncoding(NSStringEncoding encoding) {
+	switch(encoding) {
+		case NSASCIIStringEncoding:
+			return @"ASCII";
+			
+		case NSNEXTSTEPStringEncoding:
+			return @"NEXTSTEP";
+			
+		case NSJapaneseEUCStringEncoding:
+			return @"JapaneseEUC";
+			
+		case NSUTF8StringEncoding:
+			return @"UTF8";
+			
+		case NSISOLatin1StringEncoding:
+			return @"ISOLatin1";
+			
+		case NSSymbolStringEncoding:
+			return @"Symbol";
+			
+		case NSNonLossyASCIIStringEncoding:
+			return @"NonLossyASCII";
+			
+		case NSShiftJISStringEncoding:
+			return @"ShiftJIS";
+			
+		case NSISOLatin2StringEncoding:
+			return @"ISOLatin2";
+			
+		case NSWindowsCP1251StringEncoding:
+			return @"WindowsCP1251";
+			
+		case NSWindowsCP1252StringEncoding:
+			return @"WindowsCP1252";
+			
+		case NSWindowsCP1253StringEncoding:
+			return @"WindowsCP1253";
+			
+		case NSWindowsCP1254StringEncoding:
+			return @"WindowsCP1254";
+			
+		case NSWindowsCP1250StringEncoding:
+			return @"WindowsCP1250";
+			
+		case NSISO2022JPStringEncoding:
+			return @"ISO2022JP";
+			
+		case NSMacOSRomanStringEncoding:
+			return @"MacOSRoman";
+			
+		case NSUTF16StringEncoding:
+			return @"UTF16";
+			
+		case NSUTF16BigEndianStringEncoding:
+			return @"UTF16BigEndian";
+			
+		case NSUTF16LittleEndianStringEncoding:
+			return @"UTF16LittleEndian";
+			
+		case NSUTF32StringEncoding:
+			return @"UTF32";
+			
+		case NSUTF32BigEndianStringEncoding:
+			return @"UTF32BigEndian";
+			
+		case NSUTF32LittleEndianStringEncoding:
+			return @"UTF32LittleEndian";
+			
+		case NSProprietaryStringEncoding:
+			return @"Proprietary";
+			
+		default:
+			return [GOLFLocalizedString(@"TERM_UNKNOWN") capitalizedString];
+	}
+}
+
