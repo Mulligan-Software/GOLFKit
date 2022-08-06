@@ -579,8 +579,9 @@
 "TITLE_EGO_PULL_TO_SORT" = "Arrastrar para ordenar…";
 "TITLE_EGO_RELEASE_TO_SORT" = "Soltar para ordenar…";
 "TITLE_EGO_SORTING" = "Ordenando…";
+"TITLE_ELIGIBLE_PLAYERS" = "Jugadoras Elegibles";	//	Section title for handicap updates - "Eligible Players"
 "TITLE_EMAIL" = "Email";
-"TITLE_ENFORCE_EXTINCT_HANDICAPS" = "Hacer cumplir la interrupción\nde los métodos de handicap";	//	2 lines!
+"TITLE_ENFORCE_EXTINCT_HANDICAPS" = "Hacer cumplir la interrupción\nde los métodos obsoletos de handicap";	//	2 lines!
 "TITLE_ESC_LIMIT" = "límite ESC";
 "TITLE_EULA" = "Acuerdo de Licencia de Usuario Final";
 "TITLE_EULA_ABBR" = "EULA";
@@ -686,6 +687,7 @@
 "TITLE_HANDICAP_STABLEFORD_SCORE" = "Puntaje Stableford";
 "TITLE_HANDICAP_TABLE" = "Tabla de Handicap";
 "TITLE_HANDICAP_UPDATE" = "Actualizar handicaps";
+"TITLE_HANDICAP_UPDATE_WORKSHEET" = "Hoja de cálculo de Actualización de Handicap";
 "TITLE_HANDICAP_UPDATED_OR_EFFECTIVE" = "Actualizado";
 "TITLE_HANDICAP_WORLD_INDEX" = "Índice de Handicap";
 "TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Índice";
@@ -770,6 +772,7 @@
 "TITLE_NEXT_HOLE" = "Próximo Hoyo";
 "TITLE_NINE_HOLES" = "9 Hoyos";
 "TITLE_NINE_NAME" = "Nombre de Nueve";
+"TITLE_NO_COURSES_AVAILABLE" = "Sin campos disponibles";
 "TITLE_NO_DATA_FOUND" = "datos no encontrados";
 "TITLE_NO_STROKES" = "sin golpes";
 "TITLE_NO_TEAM_MEMBERS" = "Sin Miembros del Equipo";
@@ -805,6 +808,7 @@
 "TITLE_PRIMARY" = "Primero";
 "TITLE_PRINT_SCORECARD" = "Imprimir Tarjeta";
 "TITLE_PRINT_SCORECARDS" = "Imprimir Tarjetas";
+"TITLE_PROPOSED_UPDATE" = "Actualización Propuesta";
 "TITLE_QUICK_ADD" = "Añadir Rápidamente";
 "TITLE_QUICK_START" = "Inicio Rápido";
 "TITLE_QUOTA_POINTS_GAINED" = "Puntos de Cuota Ganados";
@@ -887,6 +891,8 @@
 "TITLE_STOBBIE" = "Stobbie";
 "TITLE_STREET_ADDRESS" = "Dirección";
 "TITLE_SUPPORT_REQUEST" = "Solicitud de Asesoría Técnica";
+"TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Suprimir ajustes de hándicap “calificación vs. par”.";	//	Settings Handicapping configuration item
+"TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS_ADDL" = "para las autoridades que lo permitan";	//	Settings Handicapping configuration item (extra)
 "TITLE_SWING_GAME" = "Juego de Cambio";
 "TITLE_SYSTEM" = "Sistema";
 "TITLE_TEAM_MATCHES" = "Partidos de Equipo";
@@ -924,6 +930,7 @@
 "TITLE_1_DOWN_LAST" = "1-down último hoyo";
 "TITLE_2_DOWN" = "2-down";
 "TITLE_3_BY_6" = "3 × 6";
+"TITLE_9_HOLE_RATINGS_REQD" = "Se req. clasificaciones de 9-hoyos";
 
 "DESCRIPTION_3_BY_6" = "Hoyos 1-6, 7-11 y 12-18";
 "DESCRIPTION_ANIMALS" = "En-campo juego de cartes para foursomes";
@@ -1028,6 +1035,9 @@
 "FORMAT_PLAYER_%@_WINS_%d_%@" = "%@ gana %d %@";
 "FORMAT_PLAYER_%@_WINS_%@" = "%@ gana %@";
 "FORMAT_PREF_SETTINGS_FOR_%@" = "Configuración preferida para %@…";
+"FORMAT_REVISED_ITEM_%@_NONE" = "no hay %@ revisados";
+"FORMAT_REVISED_ITEM_%@_ONE" = "1 %@ revisado";
+"FORMAT_REVISED_ITEMS_%1$@_COUNT_%2$d" = "%2$d %1$@ revisados";
 "FORMAT_SELECTED_ITEM_%@_ONE" = "1 %@ seleccionado";
 "FORMAT_SELECTED_ITEM_%@_NONE" = "no hay %@ seleccionados";
 "FORMAT_SELECTED_ITEMS_%1$@_COUNT_%2$d" = "%2$d %1$@ seleccionados";
@@ -1039,8 +1049,12 @@
 "FORMAT_TSM_APPEARANCE_DARK_ON_%@" = "La Máquina del Puntaje ajustará su pantalla para el Modo Oscuro, independientemente de la configuración de iOS para su %@.";
 "FORMAT_TSM_APPEARANCE_LIGHT_ON_%@" = "La Máquina del Puntaje ajustará su pantalla para el Modo Claro, independientemente de la configuración de iOS para su %@, aunque puede indicar a continuación un Tema Oscuro para el teclado.";
 "FORMAT_TSM_APPEARANCE_SYSTEM_ON_%@" = "La Máquina del Puntaje ajustará su pantalla para adaptarse a la configuración de apariencia de pantalla en su %@.";
+"FORMAT_UPDATE_COLORS_%@" = "Azul - cambio pendiente\nRojo - %@ anulación";	//	Section footer for handicap updates - "Blue - change pending / Red - scorecard override"
+"FORMAT_UPDATE_PLAYER_%@" = "Actualizar %@";	//	Button title for handicap updates - "Update Handicap Indexes"
+"FORMAT_UPDATE_%@_OVERRIDES" = "Instalar %@ anulaciones";	//	Button title for handicap overrides - "Install Handicap Index Overrides"
 "FORMAT_%@_DIFFERENCE" = "Diferencia en %@";	//	"COURSE HANDICAP Difference"
 "FORMAT_%@_OF_EACH_PLAYER" = "%@ de cada jugador";	//	"COURSE HANDICAP of each player"
+"FORMAT_%@_OVERRIDE" = "%@ anulación";
 "FORMAT_%@_TO_%@" = "%@ a %@";	//	Front Nine to Back Nine
 "FORMAT_%@_ TO _%@" = "%@  a  %@";	//	Range of: "13.5  to  14.6" (spaces important!)
 

@@ -48,7 +48,6 @@
 
 */
 
-
 //	Golf Terminology
 "TERM_ABOUT" = "über";
 "TERM_ACCOUNT" = "Konto";
@@ -622,8 +621,9 @@
 "TITLE_EGO_PULL_TO_SORT" = "Zum Sortieren ziehen…";
 "TITLE_EGO_RELEASE_TO_SORT" = "Zur Sortierung freigeben…";
 "TITLE_EGO_SORTING" = "Sortierung…";
+"TITLE_ELIGIBLE_PLAYERS" = "Berechtigte Spieler";	//	Section title for handicap updates - "Eligible Players"
 "TITLE_EMAIL" = "E-Mail";
-"TITLE_ENFORCE_EXTINCT_HANDICAPS" = "Erzwingen Sie die Einstellung\nvon Handicap-Methoden";	//	2 lines!
+"TITLE_ENFORCE_EXTINCT_HANDICAPS" = "Erzwingen Sie die Einstellung\nvon veraltete Handicap-Methoden";	//	2 lines!
 "TITLE_ESC_LIMIT" = "ESC limit";
 "TITLE_EULA" = "Endbenutzer-Lizenzvereinbarung";
 "TITLE_EULA_ABBR" = "EULA";
@@ -729,6 +729,7 @@
 "TITLE_HANDICAP_STABLEFORD_SCORE" = "Stableford Score";
 "TITLE_HANDICAP_TABLE" = "Handicap-Tabelle";
 "TITLE_HANDICAP_UPDATE" = "Handicaps aktualisieren";
+"TITLE_HANDICAP_UPDATE_WORKSHEET" = "Handicap-Aktualisieren Arbeitsblatt";
 "TITLE_HANDICAP_UPDATED_OR_EFFECTIVE" = "Aktualisiert";	//	Latest handicap lookup date / time - "last lookup"
 "TITLE_HANDICAP_WORLD_INDEX" = "Handicap Index";
 "TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
@@ -813,6 +814,7 @@
 "TITLE_NEXT_HOLE" = "nächstes Loch";
 "TITLE_NINE_HOLES" = "9 Löcher";
 "TITLE_NINE_NAME" = "Neun Namen";
+"TITLE_NO_COURSES_AVAILABLE" = "Keine Golfplätze vorhanden";
 "TITLE_NO_DATA_FOUND" = "keine Daten gefunden";
 "TITLE_NO_STROKES" = "keine Schläge";
 "TITLE_NO_TEAM_MEMBERS" = "Keine Teammitglieder";
@@ -848,6 +850,7 @@
 "TITLE_PRIMARY" = "Primär";
 "TITLE_PRINT_SCORECARD" = "Drucken Scorekarte";
 "TITLE_PRINT_SCORECARDS" = "Drucken Scorekarten";
+"TITLE_PROPOSED_UPDATE" = "Vorgeschlagene Aktualisierung";
 "TITLE_QUICK_ADD" = "Schnell hinzufügen";
 "TITLE_QUICK_START" = "Schnellstart";
 "TITLE_QUOTA_POINTS_GAINED" = "Quotenpunkte gewonnen";
@@ -930,6 +933,8 @@
 "TITLE_STOBBIE" = "Stobbie";
 "TITLE_STREET_ADDRESS" = "Adresse";
 "TITLE_SUPPORT_REQUEST" = "Technischer Support-Anfrage";
+"TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Unterdrücke „Bewertung vs. Par“ Handicap-Anpassungen.";	//	Settings Handicapping configuration item
+"TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS_ADDL" = "für Golfbehörden, die dies zulassen";	//	Settings Handicapping configuration item (extra)
 "TITLE_SWING_GAME" = "Schwenkungspiel";
 "TITLE_SYSTEM" = "System";
 "TITLE_TEAM_MATCHES" = "Mannschaftsspiele";
@@ -967,6 +972,7 @@
 "TITLE_1_DOWN_LAST" = "1-down letztes Loch";
 "TITLE_2_DOWN" = "2-down";
 "TITLE_3_BY_6" = "3 × 6";
+"TITLE_9_HOLE_RATINGS_REQD" = "9-Loch-Bewertungen erforderlich";
 
 "DESCRIPTION_3_BY_6" = "Löcher 1-6, 7-11 und 12-18";
 "DESCRIPTION_ANIMALS" = "Kartenspiel auf dem Golfplatz für Vierer";
@@ -1071,6 +1077,9 @@
 "FORMAT_PLAYER_%@_WINS_%d_%@" = "%@ gewinnt %d %@";	//	Al wins 1 bet
 "FORMAT_PLAYER_%@_WINS_%@" = "%@ gewinnt %@";	//	Al wins $2.00
 "FORMAT_PREF_SETTINGS_FOR_%@" = "Bevorzugte Einstellungen für %@…";
+"FORMAT_REVISED_ITEM_%@_NONE" = "keine %@ überarbeitet";
+"FORMAT_REVISED_ITEM_%@_ONE" = "1 %@ überarbeitet";
+"FORMAT_REVISED_ITEMS_%1$@_COUNT_%2$d" = "%2$d %1$@ überarbeitet";
 "FORMAT_SELECTED_ITEM_%@_ONE" = "1 %@ ausgewählt";
 "FORMAT_SELECTED_ITEM_%@_NONE" = "keine %@ ausgewählt";
 "FORMAT_SELECTED_ITEMS_%1$@_COUNT_%2$d" = "%2$d %1$@ ausgewählt";
@@ -1082,8 +1091,12 @@
 "FORMAT_TSM_APPEARANCE_DARK_ON_%@" = "Die Scoring-Maschine passt seine Anzeige für den Dunkelmodus an, unabhängig von den iOS-Einstellungen für Ihr %@.";
 "FORMAT_TSM_APPEARANCE_LIGHT_ON_%@" = "Die Scoring-Maschine passt ihre Anzeige für den Hellen Modus an, unabhängig von der iOS-Einstellung für Ihr %@, obwohl Sie unten möglicherweise ein Dunkles Design für die Tastatur angeben.";
 "FORMAT_TSM_APPEARANCE_SYSTEM_ON_%@" = "Die Scoring-Maschine passt seine Anzeige an die Einstellungen für die Anzeigedarstellung auf Ihrem %@ an.";
+"FORMAT_UPDATE_COLORS_%@" = "Blau - Änderung ansteht\nRot - %@ Überschreitung";	//	Section footer for handicap updates - "Blue - change pending / Red - scorecard override"
+"FORMAT_UPDATE_PLAYER_%@" = "%@ aktualisieren";	//	Button title for handicap updates - "Update Handicap Indexes"
+"FORMAT_UPDATE_%@_OVERRIDES" = "Installieren %@ Überschreitungen";	//	Button title for handicap overrides - "Install Handicap Index Overrides"
 "FORMAT_%@_DIFFERENCE" = "Differenz in der %@";	//	"COURSE HANDICAP Difference"
 "FORMAT_%@_OF_EACH_PLAYER" = "der %@ jedes Spielers";	//	"COURSE HANDICAP of each player"
+"FORMAT_%@_OVERRIDE" = "%@ Überschreibung";
 "FORMAT_%@_TO_%@" = "%@ nach %@";	//	Front Nine to Back Nine
 "FORMAT_%@_ TO _%@" = "%@  bis  %@";	//	Range of: "13.5  to  14.6" (spaces important!)
 

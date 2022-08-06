@@ -516,9 +516,12 @@ NSString * GOLFHandicapTableBlurb(GOLFHandicapMethodIndex handicapMethod) {
 					case GOLFPlayingHandicapTypeFullyAdjusted:
 						{
 							//	Use both slope, rating and par to adjust the handicap…
-							NSString *usingPhrase = GOLFLocalizedString(@"TITLE_HANDICAP_COURSE_RATING");
-							usingPhrase = [usingPhrase stringByAppendingFormat:@", %@", GOLFLocalizedString(@"TITLE_HANDICAP_SLOPE_RATING")];
-							usingPhrase = [usingPhrase stringByAppendingFormat:GOLFLocalizedString(@"FORMAT_AND_%@"), GOLFLocalizedString(@"TERM_PAR")];
+							NSString *usingPhrase = GOLFLocalizedString(@"TITLE_HANDICAP_SLOPE_RATING");
+							if (![[NSUserDefaults standardUserDefaults] boolForKey:@"SuppressVsParHandicapAdjustments"]) {
+								usingPhrase = [usingPhrase stringByAppendingFormat:@", %@", GOLFLocalizedString(@"TITLE_HANDICAP_COURSE_RATING")];
+								usingPhrase = [usingPhrase stringByAppendingFormat:GOLFLocalizedString(@"FORMAT_AND_%@"), GOLFLocalizedString(@"TERM_PAR")];
+							}
+
 							return [NSString stringWithFormat:GOLFLocalizedString(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@"),
 									playingHandicapTitle,
 									slopeChartTitle,
@@ -544,8 +547,11 @@ NSString * GOLFHandicapTableBlurb(GOLFHandicapMethodIndex handicapMethod) {
   		case GOLFHandicapMethodAGU:
   			{
 				NSString *usingPhrase = GOLFLocalizedString(@"TITLE_HANDICAP_SLOPE_RATING");
-				usingPhrase = [usingPhrase stringByAppendingFormat:@", %@", GOLFLocalizedString(@"TITLE_HANDICAP_COURSE_RATING")];
-				usingPhrase = [usingPhrase stringByAppendingFormat:GOLFLocalizedString(@"FORMAT_AND_%@"), GOLFLocalizedString(@"TERM_PAR")];
+				if (![[NSUserDefaults standardUserDefaults] boolForKey:@"SuppressVsParHandicapAdjustments"]) {
+					usingPhrase = [usingPhrase stringByAppendingFormat:@", %@", GOLFLocalizedString(@"TITLE_HANDICAP_COURSE_RATING")];
+					usingPhrase = [usingPhrase stringByAppendingFormat:GOLFLocalizedString(@"FORMAT_AND_%@"), GOLFLocalizedString(@"TERM_PAR")];
+				}
+
 				return [NSString stringWithFormat:GOLFLocalizedString(@"HANDICAP_BLURB_PLAY_%@_CHART_%@_INDEX_%@_PLAY_%@_BASED_%@"),
 						playingHandicapTitle,
 						slopeChartTitle,
@@ -596,14 +602,18 @@ NSString * GOLFHandicapCalculationFormula(GOLFHandicapMethodIndex handicapMethod
 	switch (handicapMethod) {
   		case GOLFHandicapMethodEGA:
   		case GOLFHandicapMethodWHS:
-  			{
+			if ([[NSUserDefaults standardUserDefaults] boolForKey:@"SuppressVsParHandicapAdjustments"]) {
+				return [NSString stringWithFormat:@"%@ = %@ x %@ / %ld %@", courseHdcpText, indexText, slopeText, (GOLFTeeSLOPERating)GOLFDefaultUnratedTeeSLOPERating, GOLFLocalizedString(@"TERM_ROUNDED")];
+  			} else {
 				NSString *courseRatingText = (usingSSS ? GOLFLocalizedString(@"TITLE_SCRATCH_SCORE") : GOLFLocalizedString(@"TITLE_HANDICAP_COURSE_RATING"));
 				NSString *parText = [GOLFLocalizedString(@"TERM_PAR") capitalizedString];
 				return [NSString stringWithFormat:@"%@ = %@ x %@ / %ld + (%@ - %@) %@", courseHdcpText, indexText, slopeText, (GOLFTeeSLOPERating)GOLFDefaultUnratedTeeSLOPERating, courseRatingText, parText, GOLFLocalizedString(@"TERM_ROUNDED")];
   			}
   		
   		case GOLFHandicapMethodAGU:
-  			{
+			if ([[NSUserDefaults standardUserDefaults] boolForKey:@"SuppressVsParHandicapAdjustments"]) {
+				return [NSString stringWithFormat:@"%@ = %@ x %@ / %ld x 0.93 %@", courseHdcpText, indexText, slopeText, (GOLFTeeSLOPERating)GOLFDefaultUnratedTeeSLOPERating, GOLFLocalizedString(@"TERM_ROUNDED")];
+  			} else {
 				NSString *courseRatingText = (usingSSS ? GOLFLocalizedString(@"TITLE_SCRATCH_SCORE") : GOLFLocalizedString(@"TITLE_HANDICAP_COURSE_RATING"));
 				NSString *parText = [GOLFLocalizedString(@"TERM_PAR") capitalizedString];
 				return [NSString stringWithFormat:@"%@ = (%@ x %@ / %ld + (%@ - %@)) x 0.93 %@", courseHdcpText, indexText, slopeText, (GOLFTeeSLOPERating)GOLFDefaultUnratedTeeSLOPERating, courseRatingText, parText, GOLFLocalizedString(@"TERM_ROUNDED")];
@@ -1666,6 +1676,8 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 	//	GOLFHandicapCalculationOption9HoleRating		(8)		Provided GOLFTeeCourseRating is for 9 holes
 	//	GOLFHandicapCalculationOption9HoleSLOPE			(16)	Provided GOLFTeeSLOPERating is for 9 holes
 	//	GOLFHandicapCalculationOption9HolePar			(32)	Provided GOLFPar is for 9 holes
+	//	GOLFHandicapCalculationOptionSuppressVsParAdj	(256)	If authority includes it, suppress (Course Rating - Par) adjustment
+	//	GOLFHandicapCalculationOptionEnforceVsParAdj	(512)	Do (Course Rating - Par) adjustment if Authority doesn't include it
 	//
 	//	info:
 	//	key					type			description
@@ -1685,6 +1697,12 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 	id <GOLFHandicapDataSource> referenceSource = nil;	//	Assume we don't have a reference source (round, event, competitor, scorecard, etc.)
 	BOOL is9HoleResult = NO;
 	BOOL isWomensResult = NO;
+	
+	//	Rating vs. Par adjustment…
+	BOOL forceVsParAdj = ((options & GOLFHandicapCalculationOptionEnforceVsParAdj) != 0);	//	Priority
+	BOOL suppressVsParAdj = !forceVsParAdj
+			&& ([[[NSUserDefaults standardUserDefaults] objectForKey:@"SuppressVsParHandicapAdjustments"] boolValue]
+					|| ((options & GOLFHandicapCalculationOptionSuppressVsParAdj) != 0));
 	
 	//	Decide specifically what is needed…
 	BOOL need9HoleResult = ((options & GOLFHandicapCalculationOptionNeed9HoleResult) != 0);
@@ -1916,7 +1934,7 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 			} else {
 				//	Plus handicaps - rounded toward zero
 				float adjust = 0.0;
-				if ((localRating != kNotACourseRating) && (localPar != kNotAPar)) {
+				if ((localRating != kNotACourseRating) && (localPar != kNotAPar) && !suppressVsParAdj) {
 					//	adjustment is based on rating and par pre-set for proper number of holes
 					adjust += localRating - localPar;
 				}
@@ -1934,23 +1952,6 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 					is9HoleResult = YES;
 				}
 			}
-//		} else if ([localAuthority isEqualToString:GOLFHandicapAuthorityAGU]) {
-//			//	Daily handicap is GA handicap * slope / 113
-//			//	Plus handicaps - rounded toward zero
-//
-//			if (have9HoleIndex == need9HoleResult) {
-//				playingHandicap = (GOLFPlayingHandicap)floorf(((localIndex * localSlope) / unratedSLOPERating) + 0.5);
-//				is9HoleResult = have9HoleIndex;
-//			} else if (have9HoleIndex) {
-//				//	9-hole index… need 18-hole playingHandicap…
-//				playingHandicap = (GOLFPlayingHandicap)floorf(((localIndex * localSlope * 2.0) / unratedSLOPERating) + 0.5);
-//				is9HoleResult = NO;
-//			} else {
-//				//	18-hole index…, need 9-hole playingHandicap…
-//				GOLFHandicapIndex halfIndex = (GOLFHandicapIndex)floorf((localIndex * 5.0) + 0.5) / 10.0;	//	rounded to a tenth
-//				playingHandicap = (GOLFPlayingHandicap)floorf(((halfIndex * localSlope) / unratedSLOPERating) + 0.5);
-//				is9HoleResult = YES;
-//			}
 		} else if ([localAuthority isEqualToString:GOLFHandicapAuthorityAGU]) {
 			//	Playing handicap is (index * slope / 113 + (rating - par)) * 0.93
 
@@ -1960,7 +1961,7 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 			//	+0.5 rounds to Scratch, +0.501 rounds to +1, +1.5 rounds to +1, +1.501 rounds to +2, +2.5 rounds to +2, +2.501 rounds to +3, etc."
 
 			float adjust = 0.0;
-			if ((localRating != kNotACourseRating) && (localPar != kNotAPar)) {
+			if ((localRating != kNotACourseRating) && (localPar != kNotAPar) && !suppressVsParAdj) {
 				//	adjustment is based on rating and par pre-set for proper number of holes
 				adjust += localRating - localPar;
 			}
@@ -2019,7 +2020,7 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 
 			//	Plus handicaps - documentatation says handicaps are rounded "up"
 			float adjust = 0.0;
-			if ((localRating != kNotACourseRating) && (localPar != kNotAPar)) {
+			if ((localRating != kNotACourseRating) && (localPar != kNotAPar) && !suppressVsParAdj) {
 				//	adjustment is based on rating and par pre-set for proper number of holes
 				adjust += localRating - localPar;
 			}
@@ -2084,7 +2085,7 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 					{
 						//	Use just the rating to adjust the exact handicap…
 						float adjust = 0.0;
-						if ((localRating != kNotACourseRating) && (localPar != kNotAPar)) {
+						if ((localRating != kNotACourseRating) && (localPar != kNotAPar) && !suppressVsParAdj) {
 							adjust = localRating - localPar;
 						}
 						if (have9HoleIndex == need9HoleResult) {
@@ -2105,7 +2106,7 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 					{
 						//	Use both slope and rating to adjust the exact handicap…
 						float adjust = 0.0;
-						if ((localRating != kNotACourseRating) && (localPar != kNotAPar)) {
+						if ((localRating != kNotACourseRating) && (localPar != kNotAPar) && !suppressVsParAdj) {
 							adjust = localRating - localPar;
 						}
 						if (have9HoleIndex == need9HoleResult) {
@@ -2184,6 +2185,8 @@ CGPoint GOLFLowHighIndexesAsPointFor(GOLFHandicapAuthority *authority, GOLFPlayi
 	//	GOLFHandicapCalculationOption9HoleRating		(8)		Provided GOLFTeeCourseRating is for 9 holes
 	//	GOLFHandicapCalculationOption9HoleSLOPE			(16)	Provided GOLFTeeSLOPERating is for 9 holes
 	//	GOLFHandicapCalculationOption9HolePar			(32)	Provided GOLFPar is for 9 holes
+	//	GOLFHandicapCalculationOptionSuppressVsParAdj	(256)	If authority includes it, suppress (Course Rating - Par) adjustment
+	//	GOLFHandicapCalculationOptionEnforceVsParAdj	(512)	Do (Course Rating - Par) adjustment if Authority doesn't include it
 
 	//	* - NOTE:  Return indexes might be 18-hole, for example, EVEN IF the provided playingHandicap, courseRating, slopeRating and/or par are for 9 holes!
 	
@@ -2213,6 +2216,12 @@ CGPoint GOLFLowHighIndexesAsPointFor(GOLFHandicapAuthority *authority, GOLFPlayi
 	GOLFPar localPar = par;
 	BOOL have9HolePar = ((options & GOLFHandicapCalculationOption9HolePar) != 0);
 
+	//	Rating vs. Par adjustment…
+	BOOL forceVsParAdj = ((options & GOLFHandicapCalculationOptionEnforceVsParAdj) != 0);	//	Priority
+	BOOL suppressVsParAdj = !forceVsParAdj
+			&& ([[[NSUserDefaults standardUserDefaults] objectForKey:@"SuppressVsParHandicapAdjustments"] boolValue]
+					|| ((options & GOLFHandicapCalculationOptionSuppressVsParAdj) != 0));
+	
 	//	Even if we've been provided a SLOPE rating - we'll try the dataSource…
 	if (referenceSource) {
 		BOOL for9Holes = need9HoleResult;
@@ -2259,15 +2268,21 @@ CGPoint GOLFLowHighIndexesAsPointFor(GOLFHandicapAuthority *authority, GOLFPlayi
 	float maxVal;
 	float multiplier = ((!need9HoleResult && have9HolePlayingHandicap) ? 2.0 : 1.0);
 	if ([localAuthority isEqualToString:GOLFHandicapAuthorityEGA]) {
-		GOLFTeeCourseRating ratingAdj = (((localPar == kNotAPar) || (localRating == kNotACourseRating)) ? 0.0 : (localRating - (GOLFTeeCourseRating)localPar));
+		GOLFTeeCourseRating ratingAdj = (((localPar == kNotAPar) || (localRating == kNotACourseRating) || suppressVsParAdj)
+				? 0.0
+				: (localRating - (GOLFTeeCourseRating)localPar));
 		minVal = floor(((((float)localHandicap - ratingAdj - 0.5) * unratedSLOPERating * 10.0) * multiplier / localSlope) + 0.999) / 10.0;
 		maxVal = floor(((((float)localHandicap - ratingAdj + 0.5) * unratedSLOPERating * 10.0) * multiplier / localSlope) - 0.001) / 10.0;
 	} else if ([localAuthority isEqualToString:GOLFHandicapAuthorityWHS]) {
-		GOLFTeeCourseRating ratingAdj = (((localPar == kNotAPar) || (localRating == kNotACourseRating)) ? 0.0 : (localRating - (GOLFTeeCourseRating)localPar));
+		GOLFTeeCourseRating ratingAdj = (((localPar == kNotAPar) || (localRating == kNotACourseRating) || suppressVsParAdj)
+				? 0.0
+				: (localRating - (GOLFTeeCourseRating)localPar));
 		minVal = floor(((((float)localHandicap - ratingAdj - 0.5) * unratedSLOPERating * 10.0) * multiplier / localSlope) + 0.999) / 10.0;
 		maxVal = floor(((((float)localHandicap - ratingAdj + 0.5) * unratedSLOPERating * 10.0) * multiplier / localSlope) - 0.001) / 10.0;
 	} else if ([localAuthority isEqualToString:GOLFHandicapAuthorityAGU]) {
-		GOLFTeeCourseRating ratingAdj = (((localPar == kNotAPar) || (localRating == kNotACourseRating)) ? 0.0 : (localRating - (GOLFTeeCourseRating)localPar));
+		GOLFTeeCourseRating ratingAdj = (((localPar == kNotAPar) || (localRating == kNotACourseRating) || suppressVsParAdj)
+				? 0.0
+				: (localRating - (GOLFTeeCourseRating)localPar));
 		
 //		if (workingHandicap < 0) {
 //			playingHandicap = (GOLFPlayingHandicap)nearbyintf(workingHandicap);	//	Rounded to the nearest integer equivalent (-0.5 rounds to 0, 1.5 rounds to -1)
@@ -2387,6 +2402,8 @@ GOLFPlayingHandicap GOLFFirstLocalHandicapForAuthority(GOLFHandicapAuthority *au
 	//	GOLFHandicapCalculationOption9HoleRating		(8)		Provided GOLFTeeCourseRating is for 9 holes
 	//	GOLFHandicapCalculationOption9HoleSLOPE			(16)	Provided GOLFTeeSLOPERating is for 9 holes
 	//	GOLFHandicapCalculationOption9HolePar			(32)	Provided GOLFPar is for 9 holes
+	//	GOLFHandicapCalculationOptionSuppressVsParAdj	(256)	If authority includes it, suppress (Course Rating - Par) adjustment
+	//	GOLFHandicapCalculationOptionEnforceVsParAdj	(512)	Do (Course Rating - Par) adjustment if Authority doesn't include it
 
 	GOLFHandicapAuthority *localAuthority = nil;
 	if (referenceSource && [referenceSource respondsToSelector:@selector(handicapAuthority)]) {
@@ -2418,6 +2435,12 @@ GOLFPlayingHandicap GOLFFirstLocalHandicapForAuthority(GOLFHandicapAuthority *au
 	GOLFPar localPar = par;
 	BOOL have9HolePar = ((options & GOLFHandicapCalculationOption9HolePar) != 0);
 
+	//	Rating vs. Par adjustment…
+	BOOL forceVsParAdj = ((options & GOLFHandicapCalculationOptionEnforceVsParAdj) != 0);	//	Priority
+	BOOL suppressVsParAdj = !forceVsParAdj
+			&& ([[[NSUserDefaults standardUserDefaults] objectForKey:@"SuppressVsParHandicapAdjustments"] boolValue]
+					|| ((options & GOLFHandicapCalculationOptionSuppressVsParAdj) != 0));
+	
 	//	Even if we've been provided a SLOPE rating - we'll try the dataSource…
 	if (referenceSource) {
 		BOOL for9Holes = need9HoleResult;
@@ -2461,14 +2484,20 @@ GOLFPlayingHandicap GOLFFirstLocalHandicapForAuthority(GOLFHandicapAuthority *au
 	NSInteger unratedSLOPERating = GOLFHandicapUnratedSLOPERatingForAuthority(localAuthority);	//	Usually, 113.
 
 	if ([localAuthority isEqualToString:GOLFHandicapAuthorityEGA]) {
-		GOLFTeeCourseRating ratingAdj = (((localPar == kNotAPar) || (localRating == kNotACourseRating)) ? 0.0 : (localRating - (GOLFTeeCourseRating)localPar));
+		GOLFTeeCourseRating ratingAdj = (((localPar == kNotAPar) || (localRating == kNotACourseRating) || suppressVsParAdj)
+				? 0.0
+				: (localRating - (GOLFTeeCourseRating)localPar));
 		return (GOLFPlayingHandicap)floor((((localLimit + 0.1) * localSlope) / unratedSLOPERating) + ratingAdj + 0.5);
 	} else if ([localAuthority isEqualToString:GOLFHandicapAuthorityWHS]) {
-		GOLFTeeCourseRating ratingAdj = (((localPar == kNotAPar) || (localRating == kNotACourseRating)) ? 0.0 : (localRating - (GOLFTeeCourseRating)localPar));
+		GOLFTeeCourseRating ratingAdj = (((localPar == kNotAPar) || (localRating == kNotACourseRating) || suppressVsParAdj)
+				? 0.0
+				: (localRating - (GOLFTeeCourseRating)localPar));
 		return (GOLFPlayingHandicap)floor((((localLimit + 0.1) * localSlope) / unratedSLOPERating) + ratingAdj + 0.5);
 	} else if ([localAuthority isEqualToString:GOLFHandicapAuthorityAGU]) {
 		//	Golf Australia applies a 0.93 multiplier to Daily Handicaps
-		GOLFTeeCourseRating ratingAdj = (((localPar == kNotAPar) || (localRating == kNotACourseRating)) ? 0.0 : (localRating - (GOLFTeeCourseRating)localPar));
+		GOLFTeeCourseRating ratingAdj = (((localPar == kNotAPar) || (localRating == kNotACourseRating) || suppressVsParAdj)
+				? 0.0
+				: (localRating - (GOLFTeeCourseRating)localPar));
 		return (GOLFPlayingHandicap)floor((((((localLimit + 0.1) * localSlope) / unratedSLOPERating) + ratingAdj) * 0.93) + 0.5);
 	} else {
 		return (GOLFPlayingHandicap)floor((((localLimit + 0.1) * localSlope) / unratedSLOPERating) + 0.5);

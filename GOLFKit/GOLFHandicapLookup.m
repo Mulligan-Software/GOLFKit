@@ -312,6 +312,9 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 		//	Report any invalidation error…
 		if (error != nil) {
 			self.progressNotice = [NSString stringWithFormat:GOLFLocalizedString(@"NOTICE_SERVICE_CODE_%ld_DESC_%@"), [error code], [error localizedFailureReason]];	//	???
+//#ifdef DEBUG
+//			NSLog(@"%@ -%@\nnotice: %@\nerror: %@", [self className], NSStringFromSelector(_cmd), self.progressNotice, error);
+//#endif
 		}
 
 		//	Final stuff
@@ -364,6 +367,9 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 				} else {
 					self.progressNotice = [NSString stringWithFormat:GOLFLocalizedString(@"NOTICE_SERVICE_CODE_%ld_DESC_%@"), [error code], [error localizedFailureReason]];
 				}
+//#ifdef DEBUG
+//				NSLog(@"%@ -%@\nnotice: %@\nerror: %@", [self className], NSStringFromSelector(_cmd), self.progressNotice, error);
+//#endif
 				self.getHandicapTask = nil;	//	We don't need the reference
 				self.getHandicapData = nil;	//	Nor any data we've accumulated
 				if (self.GetHandicapTaskCompletionHandler) {
@@ -382,6 +388,9 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 					|| ([(NSHTTPURLResponse *)lastResponse statusCode] > 299)) {
 				NSInteger code = [(NSHTTPURLResponse *)lastResponse statusCode];
 				self.progressNotice = [NSString stringWithFormat:GOLFLocalizedString(@"NOTICE_SERVICE_CODE_%ld_DESC_%@"), code, [NSHTTPURLResponse localizedStringForStatusCode:code]];
+//#ifdef DEBUG
+//				NSLog(@"%@ -%@\nnotice: %@", [self className], NSStringFromSelector(_cmd), self.progressNotice);
+//#endif
 
 				NSInteger responseCode = GOLFHandicapLookupServiceGetHandicapError;
 				NSString *responseDescription = GOLFLocalizedString(@"SERVICE_GETHANDICAP_FAIL");

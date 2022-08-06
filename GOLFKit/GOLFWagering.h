@@ -10,7 +10,7 @@
 #import <GOLFKit/GOLFKit.h>
 
 //	Misc constants
-#define	kGOLFWageringSupportsTeamMatchStyes		YES			//	Whether GOLFKit supports special team match styles
+#define	kGOLFWageringSupportsTeamMatchStyes		NO			//	Whether GOLFKit supports special team match styles
 
 typedef NS_ENUM(NSUInteger, GOLFWageringMatchStyle) {
 	GOLFWageringMatchPlayMatchStyle,		//	(0)
@@ -298,6 +298,36 @@ GOLFHandicapStrokes GOLFWageringStrokesFromStringByIndex(NSString *strokesString
 //	returns handicap strokes applied (or to be applied) to determine the match play score used at a hole.  
 //	Generally strokesString is a 9 or 18 character string of integer characters,
 //	But alphabetic characters indicate negative values (plus handicaps) - ("A" == -1)
+
+
+@interface GOLFMatch : NSObject
+{
+}
+
+@property (nonatomic, weak) id<GOLFWageringDataSource> ARound;
+@property (nonatomic, weak) id<GOLFWageringDataSource> BRound;
+@property (nonatomic, retain) NSString *aStrokesString;	//	Stroke apportionment for handicap difference
+@property (nonatomic, retain) NSString *bStrokesString;
+@property (nonatomic, retain) NSArray *aHoleScores;
+@property (nonatomic, retain) NSArray *bHoleScores;
+
+@property (nonatomic, strong) NSMutableArray *topLevelBets;
+
+@property (nonatomic, assign) GOLFWageringHandicapStyle handicapStyle;
+
+#pragma mark Initialization
++ (id)matchForA:(id<GOLFWageringDataSource>)aRound vsB:(id<GOLFWageringDataSource>)bRound;
++ (id)matchWithData:(NSData *)data;
+- (id)initForA:(id<GOLFWageringDataSource>)aRound vsB:(id<GOLFWageringDataSource>)bRound;
+- (id)initWithData:(NSData *)data;
+
+#pragma mark Storage
+- (NSDictionary *)dictionaryRepresentation;
+- (void)setDictionaryRepresentation:(NSDictionary *)dictionary;
+- (NSData *)JSONRepresentation;
+- (void)setJSONRepresentation:(NSData *)data;
+
+@end
 
 
 @interface GOLFBet : NSObject

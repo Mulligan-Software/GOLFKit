@@ -29,6 +29,7 @@
 //
 //		Tee Markers, etc.
 //			USGA tee marker	- white rectangular stone marker
+//			Combo tees - Construction of a custom icon from specification of 2 colors, teeColor value identifies both
 //
 //	iOS-only Capabilities
 //

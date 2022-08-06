@@ -579,8 +579,9 @@
 "TITLE_EGO_PULL_TO_SORT" = "Pull to sort…";
 "TITLE_EGO_RELEASE_TO_SORT" = "Release to sort…";
 "TITLE_EGO_SORTING" = "Sorting…";
+"TITLE_ELIGIBLE_PLAYERS" = "Eligible Players";	//	Section title for handicap updates - "Eligible Players"
 "TITLE_EMAIL" = "eMail";
-"TITLE_ENFORCE_EXTINCT_HANDICAPS" = "Enforce the discontinuation\nof handicap methods.";	//	2 lines!
+"TITLE_ENFORCE_EXTINCT_HANDICAPS" = "Enforce the discontinuation\nof obsolete handicap methods.";	//	2 lines!
 "TITLE_ESC_LIMIT" = "ESC limit";
 "TITLE_EULA" = "End User License Agreement";
 "TITLE_EULA_ABBR" = "EULA";
@@ -686,6 +687,7 @@
 "TITLE_HANDICAP_STABLEFORD_SCORE" = "Stableford Score";
 "TITLE_HANDICAP_TABLE" = "Handicap Table";
 "TITLE_HANDICAP_UPDATE" = "Handicap Update";
+"TITLE_HANDICAP_UPDATE_WORKSHEET" = "Handicap Update Worksheet";
 "TITLE_HANDICAP_UPDATED_OR_EFFECTIVE" = "Updated";
 "TITLE_HANDICAP_WORLD_INDEX" = "Handicap Index";
 "TITLE_HANDICAP_WORLD_INDEX_ABBR" = "Index";
@@ -770,6 +772,7 @@
 "TITLE_NEXT_HOLE" = "Next Hole";
 "TITLE_NINE_HOLES" = "9 Holes";
 "TITLE_NINE_NAME" = "Nine Name";
+"TITLE_NO_COURSES_AVAILABLE" = "No Courses Available";
 "TITLE_NO_DATA_FOUND" = "no data found";
 "TITLE_NO_STROKES" = "no strokes";
 "TITLE_NO_TEAM_MEMBERS" = "No Team Members";
@@ -805,6 +808,7 @@
 "TITLE_PRIMARY" = "Primary";
 "TITLE_PRINT_SCORECARD" = "Print Scorecard";
 "TITLE_PRINT_SCORECARDS" = "Print Scorecards";
+"TITLE_PROPOSED_UPDATE" = "Proposed Update";
 "TITLE_QUICK_ADD" = "Quick Add";
 "TITLE_QUICK_START" = "Quick Start";
 "TITLE_QUOTA_POINTS_GAINED" = "Quota Points Gained";
@@ -887,6 +891,8 @@
 "TITLE_STOBBIE" = "Stobbie";
 "TITLE_STREET_ADDRESS" = "Street Address";
 "TITLE_SUPPORT_REQUEST" = "Technical Support Request";
+"TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Suppress “rating vs. par” handicap adjustments.";	//	Settings Handicapping configuration item
+"TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS_ADDL" = "for handicap authorities that allow it";	//	Settings Handicapping configuration item (extra)
 "TITLE_SWING_GAME" = "Swing Game";
 "TITLE_SYSTEM" = "System";
 "TITLE_TEAM_MATCHES" = "Team Matches";
@@ -924,6 +930,7 @@
 "TITLE_1_DOWN_LAST" = "1-down last hole";
 "TITLE_2_DOWN" = "2-down";
 "TITLE_3_BY_6" = "3 × 6";
+"TITLE_9_HOLE_RATINGS_REQD" = "9-hole Ratings req’d";
 
 "DESCRIPTION_3_BY_6" = "Holes 1-6, 7-11 and 12-18";
 "DESCRIPTION_ANIMALS" = "On-course card game for foursomes";
@@ -1028,6 +1035,9 @@
 "FORMAT_PLAYER_%@_WINS_%d_%@" = "%@ wins %d %@";
 "FORMAT_PLAYER_%@_WINS_%@" = "%@ wins %@";
 "FORMAT_PREF_SETTINGS_FOR_%@" = "Preferred settings for %@…";
+"FORMAT_REVISED_ITEM_%@_NONE" = "no %@ revised";
+"FORMAT_REVISED_ITEM_%@_ONE" = "1 %@ revised";
+"FORMAT_REVISED_ITEMS_%1$@_COUNT_%2$d" = "%2$d %1$@ revised";
 "FORMAT_SELECTED_ITEM_%@_ONE" = "1 %@ selected";
 "FORMAT_SELECTED_ITEM_%@_NONE" = "no %@ selected";
 "FORMAT_SELECTED_ITEMS_%1$@_COUNT_%2$d" = "%2$d %1$@ selected";
@@ -1039,8 +1049,12 @@
 "FORMAT_TSM_APPEARANCE_DARK_ON_%@" = "The Scoring Machine will adjust its display for Dark Mode, regardless of the iOS setting for your %@.";
 "FORMAT_TSM_APPEARANCE_LIGHT_ON_%@" = "The Scoring Machine will adjust its display for Light Mode, regardless of the iOS setting for your %@, though you may indicate below a Dark Theme for the keyboard.";
 "FORMAT_TSM_APPEARANCE_SYSTEM_ON_%@" = "The Scoring Machine will adjust its display to accommodate the Display Appearance Settings on your %@.";
+"FORMAT_UPDATE_COLORS_%@" = "Blue - change pending\nRed - %@ override";	//	Section footer for handicap updates - "Blue - change pending / Red - scorecard override"
+"FORMAT_UPDATE_PLAYER_%@" = "Update %@";	//	Button title for handicap updates - "Update Handicap Indexes"
+"FORMAT_UPDATE_%@_OVERRIDES" = "Install %@ Overrides";	//	Button title for handicap overrides - "Install Handicap Index Overrides"
 "FORMAT_%@_DIFFERENCE" = "%@ Difference";	//	"COURSE HANDICAP Difference"
 "FORMAT_%@_OF_EACH_PLAYER" = "%@ of each player";	//	"COURSE HANDICAP of each player"
+"FORMAT_%@_OVERRIDE" = "%@ override";
 "FORMAT_%@_TO_%@" = "%@ to %@";	//	Front Nine to Back Nine
 "FORMAT_%@_ TO _%@" = "%@  to  %@";	//	Range of: "13.5  to  14.6" (spaces important!)
 

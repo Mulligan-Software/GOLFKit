@@ -93,12 +93,13 @@ NSString * _Nonnull GOLFKitBundleVersion(void);
 @optional
 
 - (NSString *_Nullable)handicapAuthority;
-//	The handicap authority used for handicapping - usually available from events or rounds
+//	The handicap authority used for handicapping - usually available from events, rounds or competitors
 //	return NSString*, nil if none or using a default
 
 - (NSNumber *_Nullable)handicapIndexForWomen:(nullable BOOL *)women for9Holes:(nullable BOOL *)nineHoles;
-//	A previously determined handicapIndex - usually available from rounds
+//	A previously determined handicapIndex - usually available from rounds or competitors
 //	Non-nil *women, *nineHoles pre-set TRUE if ladies or nineHole response required - change if response requires
+//	Pre-set *women, *nineHoles ignored by competitor source - gender and nineHole status reported
 //	return float equivalent, nil for no data, *women = TRUE for ladies, *nineHoles = TRUE for 9-hole index
 
 - (NSNumber *_Nullable)teeSLOPERatingForWomen:(nullable BOOL *)women for9Holes:(nullable BOOL *)nineHoles;

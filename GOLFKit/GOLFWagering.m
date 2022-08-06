@@ -449,6 +449,65 @@ GOLFHandicapStrokes GOLFWageringStrokesFromStringByIndex(NSString *strokesString
 }
 
 
+@implementation GOLFMatch
+
+#pragma mark Initialization
+
++ (id)matchForA:(id<GOLFWageringDataSource>)aRound vsB:(id<GOLFWageringDataSource>)bRound {
+	GOLFMatch *newMatch = [[GOLFMatch alloc] initForA:aRound vsB:bRound];
+	
+	return newMatch;
+}
+
++ (id)matchWithData:(NSData *)data {
+	GOLFMatch *newMatch = [[GOLFMatch alloc] initWithData:data];
+	
+	return newMatch;
+}
+
+- (id)init {
+    if (self = [super init]) {
+		self.topLevelBets = [NSMutableArray arrayWithCapacity:1];
+		self.handicapStyle = ([[NSUserDefaults standardUserDefaults] boolForKey:@"NetMatchPlay"]
+				? [[[NSUserDefaults standardUserDefaults] objectForKey:@"HandicapStyle"] unsignedIntegerValue]
+				: GOLFWageringGrossHandicapStyle);
+	}
+    return self;
+}
+
+- (id)initWithData:(NSData *)data {
+    if (self = [self init]) {
+		[self setJSONRepresentation:data];
+	}
+    return self;
+}
+
+- (id)initForA:(id<GOLFWageringDataSource>)aRound vsB:(id<GOLFWageringDataSource>)bRound {
+    if (self = [self init]) {
+		self.ARound = aRound;
+		self.BRound = bRound;
+	
+	}
+    return self;
+}
+
+- (NSDictionary *)dictionaryRepresentation {
+	return nil;
+}
+
+- (void)setDictionaryRepresentation:(NSDictionary *)dictionary {
+}
+
+- (NSData *)JSONRepresentation {
+	return nil;
+}
+
+- (void)setJSONRepresentation:(NSData *)data {
+}
+
+@end
+
+
 @implementation GOLFBet
 
 #pragma mark Initialization
@@ -520,17 +579,17 @@ GOLFHandicapStrokes GOLFWageringStrokesFromStringByIndex(NSString *strokesString
 - (NSDictionary *)betInfo {
 	//	betInfo NSDictionary supplied to all bottom-level bets…
 	//	key					type			description
-	//	------------------	--------------	----------------------------------------------------------------
-	//	aRound				SCRRound *		A competitor's round
-	//	aScores				NSArray *		0, 9, or 18 (NSNumber *) A competitor hole-by-hole match scores
-	//	aStrokesString		NSString *		18-character string of strokes given for A competitor
-	//	aWageringStrokes	NSNumber *		Adjusted wagering strokes for A competitor (un-diff'd)
-	//	bRound				SCRRound *		B competitor's round
-	//	bScores				NSArray *		0, 9, or 18 (NSNumber *) B competitor hole-by-hole match scores
-	//	bStrokesString		NSString *		18-character string of strokes given for B competitor
-	//	bWageringStrokes	NSNumber *		Adjusted wagering strokes for B competitor (un-diff'd)
-	//	lowHandicap			NSNumber *		GOLFPlayingHandicap for the lowest handicap competitor
-	//	lowName				NSString *		name of the lowest-handicapped competitor
+	//	------------------	--------------------------	----------------------------------------------------------------
+	//	aRound				<GOLFWageringDataSource>*	A competitor's round  (SCRRound, EAGRound)
+	//	aScores				NSArray *					0, 9, or 18 (NSNumber *) A competitor hole-by-hole match scores
+	//	aStrokesString		NSString *					18-character string of strokes given for A competitor
+	//	aWageringStrokes	NSNumber *					Adjusted wagering strokes for A competitor (un-diff'd)
+	//	bRound				<GOLFWageringDataSource>*	B competitor's round  (SCRRound, EAGRound)
+	//	bScores				NSArray *					0, 9, or 18 (NSNumber *) B competitor hole-by-hole match scores
+	//	bStrokesString		NSString *					18-character string of strokes given for B competitor
+	//	bWageringStrokes	NSNumber *					Adjusted wagering strokes for B competitor (un-diff'd)
+	//	lowHandicap			NSNumber *					GOLFPlayingHandicap for the lowest handicap competitor
+	//	lowName				NSString *					name of the lowest-handicapped competitor
 			
 	if (self.fromBet) {
 		return [self.fromBet betInfo];
@@ -1281,18 +1340,18 @@ GOLFHandicapStrokes GOLFWageringStrokesFromStringByIndex(NSString *strokesString
 	
 	if (self.betInfo != nil) {
 		NSMutableDictionary *betInfoDict = [NSMutableDictionary dictionaryWithCapacity:6];
-		//	key					type			description
-		//	------------------	--------------	----------------------------------------------------------------
-		//	aRound				SCRRound *		A competitor's round
-		//	aScores				NSArray *		0, 9, or 18 (NSNumber *) A competitor hole-by-hole match scores
-		//	aStrokesString		NSString *		18-character string of strokes given for A competitor
-		//	aWageringStrokes	NSNumber *		Adjusted wagering strokes for A competitor (un-diff'd)
-		//	bRound				SCRRound *		B competitor's round
-		//	bScores				NSArray *		0, 9, or 18 (NSNumber *) B competitor hole-by-hole match scores
-		//	bStrokesString		NSString *		18-character string of strokes given for B competitor
-		//	bWageringStrokes	NSNumber *		Adjusted wagering strokes for B competitor (un-diff'd)
-		//	lowHandicap			NSNumber *		GOLFPlayingHandicap for the lowest handicap competitor
-		//	lowName				NSString *		name of the lowest-handicapped competitor
+		//	key					type						description
+		//	------------------	--------------------------	----------------------------------------------------------------
+		//	aRound				<GOLFWageringDataSource> *	A competitor's round
+		//	aScores				NSArray *					0, 9, or 18 (NSNumber *) A competitor hole-by-hole match scores
+		//	aStrokesString		NSString *					18-character string of strokes given for A competitor
+		//	aWageringStrokes	NSNumber *					Adjusted wagering strokes for A competitor (un-diff'd)
+		//	bRound				<GOLFWageringDataSource> *	B competitor's round
+		//	bScores				NSArray *					0, 9, or 18 (NSNumber *) B competitor hole-by-hole match scores
+		//	bStrokesString		NSString *					18-character string of strokes given for B competitor
+		//	bWageringStrokes	NSNumber *					Adjusted wagering strokes for B competitor (un-diff'd)
+		//	lowHandicap			NSNumber *					GOLFPlayingHandicap for the lowest handicap competitor
+		//	lowName				NSString *					name of the lowest-handicapped competitor
 		
 		NSArray *workingArray = [self.betInfo objectForKey:@"aScores"];
 		if (workingArray != nil) {

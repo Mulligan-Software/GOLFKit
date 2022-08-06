@@ -40,8 +40,8 @@ typedef NS_OPTIONS(NSUInteger, GOLFHandicapCalculationOption) {
 	GOLFHandicapCalculationOption9HolePar			= 1 << 5,		//	(32)	Provided GOLFPar is for 9 holes
 	GOLFHandicapCalculationOptionSpare6				= 1 << 6,		//	(64)
 	GOLFHandicapCalculationOptionSpare7				= 1 << 7,		//	(128)
-	GOLFHandicapCalculationOptionSpare8				= 1 << 8,		//	(256)
-	GOLFHandicapCalculationOptionSpare9				= 1 << 9,		//	(512)
+	GOLFHandicapCalculationOptionSuppressVsParAdj	= 1 << 8,		//	(256)	If authority includes it, suppress (Course Rating - Par) adjustment
+	GOLFHandicapCalculationOptionEnforceVsParAdj	= 1 << 9,		//	(512)	Do (Course Rating - Par) adjustment if Authority doesn't include it
 	GOLFHandicapCalculationOptionSpare10			= 1 << 10		//	(1024)
 };
 
@@ -323,6 +323,8 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 //	GOLFHandicapCalculationOption9HoleRating		(8)		Provided GOLFTeeCourseRating is for 9 holes
 //	GOLFHandicapCalculationOption9HoleSLOPE			(16)	Provided GOLFTeeSLOPERating is for 9 holes
 //	GOLFHandicapCalculationOption9HolePar			(32)	Provided GOLFPar is for 9 holes
+//	GOLFHandicapCalculationOptionSuppressVsParAdj	(256)	If authority includes it, suppress (Course Rating - Par) adjustment
+//	GOLFHandicapCalculationOptionEnforceVsParAdj	(512)	Do (Course Rating - Par) adjustment if Authority doesn't include it
 //
 //	info:
 //	key					type			description
@@ -355,6 +357,8 @@ CGPoint GOLFLowHighIndexesAsPointFor(GOLFHandicapAuthority *authority, GOLFPlayi
 //	GOLFHandicapCalculationOption9HoleRating		(8)		Provided GOLFTeeCourseRating is for 9 holes
 //	GOLFHandicapCalculationOption9HoleSLOPE			(16)	Provided GOLFTeeSLOPERating is for 9 holes
 //	GOLFHandicapCalculationOption9HolePar			(32)	Provided GOLFPar is for 9 holes
+//	GOLFHandicapCalculationOptionSuppressVsParAdj	(256)	If authority includes it, suppress (Course Rating - Par) adjustment
+//	GOLFHandicapCalculationOptionEnforceVsParAdj	(512)	Do (Course Rating - Par) adjustment if Authority doesn't include it
 
 GOLFPlayingHandicap GOLFFirstLocalHandicapForAuthority(GOLFHandicapAuthority *authority, GOLFHandicapIndex limitingIndex, GOLFTeeCourseRating courseRating, GOLFTeeSLOPERating slopeRating, GOLFPar par, GOLFHandicapCalculationOption options, id <GOLFHandicapDataSource>referenceSource);
 //	The first local (club) handicap following the last (limiting) official handicap index
@@ -374,3 +378,5 @@ GOLFPlayingHandicap GOLFFirstLocalHandicapForAuthority(GOLFHandicapAuthority *au
 //	GOLFHandicapCalculationOption9HoleRating		(8)		Provided GOLFTeeCourseRating is for 9 holes
 //	GOLFHandicapCalculationOption9HoleSLOPE			(16)	Provided GOLFTeeSLOPERating is for 9 holes
 //	GOLFHandicapCalculationOption9HolePar			(32)	Provided GOLFPar is for 9 holes
+//	GOLFHandicapCalculationOptionSuppressVsParAdj	(256)	If authority includes it, suppress (Course Rating - Par) adjustment
+//	GOLFHandicapCalculationOptionEnforceVsParAdj	(512)	Do (Course Rating - Par) adjustment if Authority doesn't include it
