@@ -428,6 +428,7 @@
 "HANDICAP_METHOD_UNKNOWN" = "Método de handicap desconocido";
 "HANDICAP_METHOD_USGA" = "Sistema Handicap USGA";
 "HANDICAP_METHOD_WHS" = "Sistema Handicap Mundial";
+"HANDICAP_METHOD_WHS_ABBR" = "SHM";	//	Sistema Handicap Mundial
 "HANDICAP_ASSOCIATION_AGU" = "Golf Australia";
 "HANDICAP_ASSOCIATION_CONGU" = "Consejo de Uniones Nacionales de Golf";
 "HANDICAP_ASSOCIATION_EGA" = "Asociación Europea de Golf";
@@ -891,7 +892,7 @@
 "TITLE_STOBBIE" = "Stobbie";
 "TITLE_STREET_ADDRESS" = "Dirección";
 "TITLE_SUPPORT_REQUEST" = "Solicitud de Asesoría Técnica";
-"TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Suprimir ajustes de hándicap “calificación vs. par”.";	//	Settings Handicapping configuration item
+"TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Suprima los ajustes “Calificación\ndel Campo vs. Par” en el cálculo\nde los Handicaps de Campo.";	//	Settings Handicapping configuration item
 "TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS_ADDL" = "para las autoridades que lo permitan";	//	Settings Handicapping configuration item (extra)
 "TITLE_SWING_GAME" = "Juego de Cambio";
 "TITLE_SYSTEM" = "Sistema";

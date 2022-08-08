@@ -470,6 +470,7 @@
 "HANDICAP_METHOD_UNKNOWN" = "Unbekannte Handicap-Method";
 "HANDICAP_METHOD_USGA" = "USGA Handicap-System";
 "HANDICAP_METHOD_WHS" = "Weltweites Handicap-System";
+"HANDICAP_METHOD_WHS_ABBR" = "WHS";	//	Weltweites Handicap-System
 "HANDICAP_ASSOCIATION_AGU" = "Golf Australien";
 "HANDICAP_ASSOCIATION_CONGU" = "Rat der Nationalen Golf-Verien";
 "HANDICAP_ASSOCIATION_EGA" = "Europäischer Golfverband";
@@ -682,8 +683,8 @@
 "TITLE_HANDICAP_CATEGORY" = "Handicapklasse";
 "TITLE_HANDICAP_CATEGORY_ABBR" = "Klasse";
 "TITLE_HANDICAP_CERTIFICATION" = "Handicap-Zertifizierung";
-"TITLE_HANDICAP_COURSE" = "Golfplatz Handicap";
-"TITLE_HANDICAP_COURSE_PLURAL" = "Golfplatz Handicapen";
+"TITLE_HANDICAP_COURSE" = "Course Handicap";
+"TITLE_HANDICAP_COURSE_PLURAL" = "Course Handicapen";
 "TITLE_HANDICAP_COURSE_RATING" = "Course Rating";
 "TITLE_HANDICAP_COURSE_TM" = "Course Handicap™";
 "TITLE_HANDICAP_COURSE_TM_PLURAL" = "Course Handicaps™";
@@ -933,7 +934,7 @@
 "TITLE_STOBBIE" = "Stobbie";
 "TITLE_STREET_ADDRESS" = "Adresse";
 "TITLE_SUPPORT_REQUEST" = "Technischer Support-Anfrage";
-"TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Unterdrücke „Bewertung vs. Par“ Handicap-Anpassungen.";	//	Settings Handicapping configuration item
+"TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Unterdrückung von „Course Rating vs. Par“\nAnpassungen bei der Berechnung\nvon WHS Course Handicaps.";	//	Settings Handicapping configuration item
 "TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS_ADDL" = "für Golfbehörden, die dies zulassen";	//	Settings Handicapping configuration item (extra)
 "TITLE_SWING_GAME" = "Schwenkungspiel";
 "TITLE_SYSTEM" = "System";

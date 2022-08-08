@@ -428,6 +428,7 @@
 "HANDICAP_METHOD_UNKNOWN" = "Unknown handicapping method";
 "HANDICAP_METHOD_USGA" = "USGA Handicap System";
 "HANDICAP_METHOD_WHS" = "World Handicap System";
+"HANDICAP_METHOD_WHS_ABBR" = "WHS";	//	World Handicap System
 "HANDICAP_ASSOCIATION_AGU" = "Golf Australia";
 "HANDICAP_ASSOCIATION_CONGU" = "Council of National Golf Unions";
 "HANDICAP_ASSOCIATION_EGA" = "European Golf Association";
@@ -891,7 +892,7 @@
 "TITLE_STOBBIE" = "Stobbie";
 "TITLE_STREET_ADDRESS" = "Street Address";
 "TITLE_SUPPORT_REQUEST" = "Technical Support Request";
-"TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Suppress “rating vs. par” handicap adjustments.";	//	Settings Handicapping configuration item
+"TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Suppress “course rating vs. par”\nWHS Course Handicap\ncalculation adjustments.";	//	Settings Handicapping configuration item
 "TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS_ADDL" = "for handicap authorities that allow it";	//	Settings Handicapping configuration item (extra)
 "TITLE_SWING_GAME" = "Swing Game";
 "TITLE_SYSTEM" = "System";
