@@ -100,7 +100,7 @@
 		<key>URL</key>
 		<string>http://www.bahamasgolf.org</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>BH</key>
 	<dict>
@@ -133,7 +133,7 @@
 		<key>URL</key>
 		<string>https://www.bermudagolf.org</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>BO</key>
 	<dict>
@@ -164,7 +164,7 @@
 		<key>countryName</key>
 		<string>Brazil</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>BN</key>
 	<dict>
@@ -175,7 +175,7 @@
 		<key>countryName</key>
 		<string>Brunei Darussalam</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>BG</key>
 	<dict>
@@ -197,7 +197,7 @@
 		<key>association</key>
 		<string>Cambodian Golf Federation</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 		<key>URL</key>
 		<string>https://www.igfgolf.org/nationalmembers/cambodian-golf-federation/</string>
 	</dict>
@@ -306,7 +306,7 @@
 		<key>URL</key>
 		<string>https://www.ciga.ky</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>CL</key>
 	<dict>
@@ -319,7 +319,7 @@
 		<key>countryName</key>
 		<string>Chile</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>CN</key>
 	<dict>
@@ -332,7 +332,7 @@
 		<key>countryName</key>
 		<string>China</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>TW</key>
 	<dict>
@@ -345,7 +345,7 @@
 		<key>countryName</key>
 		<string>Chinese Taipei</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>CO</key>
 	<dict>
@@ -358,7 +358,7 @@
 		<key>countryName</key>
 		<string>Colombia</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>CK</key>
 	<dict>
@@ -378,7 +378,7 @@
 		<key>countryName</key>
 		<string>Costa Rica</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>HR</key>
 	<dict>
@@ -448,7 +448,7 @@
 		<key>URL</key>
 		<string>https://fedogolf.org.do</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>EC</key>
 	<dict>
@@ -461,7 +461,7 @@
 		<key>countryName</key>
 		<string>Ecuador</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>GB</key>
 	<dict>
@@ -565,7 +565,7 @@
 		<key>countryName</key>
 		<string>Guam</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>GT</key>
 	<dict>
@@ -578,7 +578,7 @@
 		<key>URL</key>
 		<string>http://www.asogolfguatemala.org</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>HN</key>
 	<dict>
@@ -598,7 +598,7 @@
 		<key>countryName</key>
 		<string>Hong Kong</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>HU</key>
 	<dict>
@@ -635,7 +635,7 @@
 		<key>countryName</key>
 		<string>India</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 		<key>URL</key>
 		<string>http://www.indiangolfunion.org</string>
 	</dict>
@@ -650,7 +650,7 @@
 		<key>countryName</key>
 		<string>Indonesia</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>IE</key>
 	<dict>
@@ -712,7 +712,7 @@
 		<key>countryName</key>
 		<string>Japan</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 		<key>URL</key>
 		<string>http://www.jga.or.jp</string>
 	</dict>
@@ -740,7 +740,7 @@
 		<key>URL</key>
 		<string>http://www.kgagolf.or.kr</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>LV</key>
 	<dict>
@@ -804,7 +804,7 @@
 		<key>URL</key>
 		<string>http://www.mgaonline.com.my</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>MX</key>
 	<dict>
@@ -1072,7 +1072,7 @@
 		<key>countryName</key>
 		<string>New Zealand</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>NI</key>
 	<dict>
@@ -1105,7 +1105,7 @@
 		<key>URL</key>
 		<string>http://www.golfoman.com</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>PK</key>
 	<dict>
@@ -1123,7 +1123,7 @@
 		<key>association</key>
 		<string>Panama Golf Association</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>PG</key>
 	<dict>
@@ -1143,7 +1143,7 @@
 		<key>URL</key>
 		<string>http://www.apg.org.py</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>PE</key>
 	<dict>
@@ -1156,7 +1156,7 @@
 		<key>countryName</key>
 		<string>Peru</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>PH</key>
 	<dict>
@@ -1169,7 +1169,7 @@
 		<key>countryName</key>
 		<string>Philippines</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>PL</key>
 	<dict>
@@ -1204,7 +1204,7 @@
 		<key>countryName</key>
 		<string>Puerto Rico</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>QA</key>
 	<dict>
@@ -1264,7 +1264,7 @@
 		<key>countryName</key>
 		<string>Singapore</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>SK</key>
 	<dict>
@@ -1325,7 +1325,7 @@
 		<key>URL</key>
 		<string>http://www.slgu.org</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>SE</key>
 	<dict>
@@ -1364,7 +1364,7 @@
 		<key>countryName</key>
 		<string>Thailand</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>TT</key>
 	<dict>
@@ -1377,7 +1377,7 @@
 		<key>countryName</key>
 		<string>Trinidad &amp; Tobago</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>TR</key>
 	<dict>
@@ -1403,7 +1403,7 @@
 		<key>countryName</key>
 		<string>United Arab Emirates</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>UK</key>
 	<dict>
@@ -1848,7 +1848,7 @@
 		<key>countryName</key>
 		<string>Venezuela</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>VN</key>
 	<dict>
@@ -1861,7 +1861,7 @@
 		<key>URL</key>
 		<string>http://www.vga.com.vn</string>
 		<key>authority</key>
-		<string>USGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>ZW</key>
 	<dict>

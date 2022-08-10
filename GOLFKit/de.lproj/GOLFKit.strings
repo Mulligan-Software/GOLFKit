@@ -934,7 +934,7 @@
 "TITLE_STOBBIE" = "Stobbie";
 "TITLE_STREET_ADDRESS" = "Adresse";
 "TITLE_SUPPORT_REQUEST" = "Technischer Support-Anfrage";
-"TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Unterdrückung von „Course Rating vs. Par“\nAnpassungen bei der Berechnung\nvon WHS Course Handicaps.";	//	Settings Handicapping configuration item
+"TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Unterdrückung von „Course Rating vs. Par“\nAnpassung bei der Berechnung\nvon WHS Course Handicaps.";	//	Settings Handicapping configuration item
 "TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS_ADDL" = "für Golfbehörden, die dies zulassen";	//	Settings Handicapping configuration item (extra)
 "TITLE_SWING_GAME" = "Schwenkungspiel";
 "TITLE_SYSTEM" = "System";

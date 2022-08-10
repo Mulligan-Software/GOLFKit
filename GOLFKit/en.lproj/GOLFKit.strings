@@ -892,7 +892,7 @@
 "TITLE_STOBBIE" = "Stobbie";
 "TITLE_STREET_ADDRESS" = "Street Address";
 "TITLE_SUPPORT_REQUEST" = "Technical Support Request";
-"TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Suppress “course rating vs. par”\nWHS Course Handicap\ncalculation adjustments.";	//	Settings Handicapping configuration item
+"TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Suppress “course rating vs. par”\nWHS Course Handicap\ncalculation adjustment.";	//	Settings Handicapping configuration item
 "TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS_ADDL" = "for handicap authorities that allow it";	//	Settings Handicapping configuration item (extra)
 "TITLE_SWING_GAME" = "Swing Game";
 "TITLE_SYSTEM" = "System";

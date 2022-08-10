@@ -892,7 +892,7 @@
 "TITLE_STOBBIE" = "Stobbie";
 "TITLE_STREET_ADDRESS" = "Dirección";
 "TITLE_SUPPORT_REQUEST" = "Solicitud de Asesoría Técnica";
-"TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Suprima los ajustes “Calificación\ndel Campo vs. Par” en el cálculo\nde los Handicaps de Campo.";	//	Settings Handicapping configuration item
+"TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Suprima el ajuste “Calificación\ndel Campo vs. Par” en el cálculo\nde los Handicaps de Campo.";	//	Settings Handicapping configuration item
 "TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS_ADDL" = "para las autoridades que lo permitan";	//	Settings Handicapping configuration item (extra)
 "TITLE_SWING_GAME" = "Juego de Cambio";
 "TITLE_SYSTEM" = "Sistema";

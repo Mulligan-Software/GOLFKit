@@ -892,7 +892,7 @@
 "TITLE_STOBBIE" = "Stobbie";
 "TITLE_STREET_ADDRESS" = "Adresse de la Rue";
 "TITLE_SUPPORT_REQUEST" = "Demande d’Aide Aprés-Vente";
-"TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Supprimer les ajustements «Évaluation\nParcours vs Par» dans le calcul\ndes Handicaps de Parcours.";	//	Settings Handicapping configuration item
+"TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Supprimer l’ajustement «Évaluation\nParcours vs Par» dans le calcul\ndes Handicaps de Parcours.";	//	Settings Handicapping configuration item
 "TITLE_SUPPRESS_VS_PAR_ADJUSTMENTS_ADDL" = "pour les autorités qui le permettent";	//	Settings Handicapping configuration item (extra)
 "TITLE_SWING_GAME" = "Jeu Pivoter";
 "TITLE_SYSTEM" = "Système";
