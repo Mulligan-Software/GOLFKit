@@ -166,6 +166,9 @@ NSArray * GOLFHandicapAuthorities(void);	//	An array of dictionaries
 NSString * GOLFHandicapIndexTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural);
 //	Returns a localized title for an "official" calculated handicap ("Handicap Index®", "Índice de Handicap", "Exakt Handicapen", etc.)
 
+NSString * GOLFHandicapIndexCasualTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural);
+//	Returns a localized title for a calculated handicap, without marks ("Handicap Index", "Índice de Handicap", "Exakt Handicapen", etc.)
+
 NSString * GOLFHandicapCurrentIndexTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural);
 //	Returns a localized title as above with a "current" qualifier ("Current Handicap Index", "Índice de Handicap Actual", "Aktuellen Exakt Handicapen")
 

@@ -84,9 +84,9 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 
 - (void)dealloc {
 	[self invalidateAndClose];
-#ifdef DEBUG
-	NSLog(@"%@ -%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
-#endif
+//#ifdef DEBUG
+//	NSLog(@"%@ -%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+//#endif
 }
 
 - (NSString *)userAgent {
@@ -127,9 +127,9 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 		//	User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_2) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.2 Safari/605.1.15
 		_userAgent = [MozillaPart stringByAppendingFormat:@"(Macintosh; Intel Mac OS X %@) %@ %@ %@", osVersionString, WebKitPart, GOLFKitPart, appPart];
 	
-#ifdef DEBUG
-	NSLog(@"%@ -%@ returns…\n%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), _userAgent);
-#endif
+//#ifdef DEBUG
+//	NSLog(@"%@ -%@ returns…\n%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd), _userAgent);
+//#endif
 
 #endif
 	}
@@ -211,9 +211,9 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 }
 
 - (void)invalidateAndClose {
-#ifdef DEBUG
-	NSLog(@"%@ -%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
-#endif
+//#ifdef DEBUG
+//	NSLog(@"%@ -%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+//#endif
 	if (self.USGAQuerySession != nil) {
 		[self.USGAQuerySession invalidateAndCancel];
 	}
@@ -1239,9 +1239,9 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 	if (@available (macOS 10.13, iOS 11.0, *)) {
 		if (session == self.USGAQuerySession) {
 			if (self.needCancel) {
-#ifdef DEBUG
-	NSLog(@"%@ -%@ task cancelled", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
-#endif
+//#ifdef DEBUG
+//	NSLog(@"%@ -%@ task cancelled", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
+//#endif
 				[task cancel];	//	Cancel the task (and report a "User cancelled" error)
 //			} else if (task == self.USGATokenPostTask) {
 //				NSTimeInterval twoMinutesAgo = -120.0;

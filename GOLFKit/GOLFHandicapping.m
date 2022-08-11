@@ -296,6 +296,39 @@ NSString * GOLFHandicapIndexTitle(GOLFHandicapMethodIndex handicapMethod, BOOL p
 }
 
 //=================================================================
+//	GOLFHandicapIndexCasualTitle(handicapMethod, plural)
+//=================================================================
+NSString * GOLFHandicapIndexCasualTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural) {
+	switch (handicapMethod) {
+  		case GOLFHandicapMethodWHS:
+  		case GOLFHandicapMethodUSGA:
+  		case GOLFHandicapMethodSecondBest:
+    		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_INDEX_PLURAL" : @"TITLE_HANDICAP_INDEX");
+
+  		case GOLFHandicapMethodRCGA:
+    		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_FACTOR_PLURAL" : @"TITLE_HANDICAP_FACTOR");
+
+  		case GOLFHandicapMethodAGU:
+    		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_GA_PLURAL" : @"TITLE_HANDICAP_GA");
+
+  		case GOLFHandicapMethodEGA:
+    		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_EGA_PLURAL" : @"TITLE_HANDICAP_EGA");
+
+  		case GOLFHandicapMethodCONGU:
+    		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_EXACT_PLURAL" : @"TITLE_HANDICAP_EXACT");
+
+  		case GOLFHandicapMethodMulligan:
+    		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_ESTIMATED_PLURAL" : @"TITLE_HANDICAP_ESTIMATED");
+
+  		case GOLFHandicapMethodPersonal:
+    		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_PERSONAL_PLURAL" : @"TITLE_HANDICAP_PERSONAL");
+
+  		default:
+    		return GOLFLocalizedString(plural ? @"TITLE_HANDICAP_PLURAL" : @"TITLE_HANDICAP");
+	}
+}
+
+//=================================================================
 //	GOLFHandicapCurrentIndexTitle(handicapMethod, plural)
 //=================================================================
 NSString * GOLFHandicapCurrentIndexTitle(GOLFHandicapMethodIndex handicapMethod, BOOL plural) {
