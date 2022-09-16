@@ -98,6 +98,7 @@
 		2990FA9520726F7000E7DB45 /* GOLFClubs.h in Headers */ = {isa = PBXBuildFile; fileRef = 2990FA9220726F7000E7DB45 /* GOLFClubs.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2990FA9620726F7000E7DB45 /* GOLFClubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2990FA9320726F7000E7DB45 /* GOLFClubs.m */; };
 		2990FA9720726F7000E7DB45 /* GOLFClubs.m in Sources */ = {isa = PBXBuildFile; fileRef = 2990FA9320726F7000E7DB45 /* GOLFClubs.m */; };
+		2991914B28B3DCBF00766AE0 /* GOLFTeeMarkerBlackAndBlue.icns in Resources */ = {isa = PBXBuildFile; fileRef = 2991914A28B3DCBF00766AE0 /* GOLFTeeMarkerBlackAndBlue.icns */; };
 		2992499C2235559500504569 /* GOLFWagering.h in Headers */ = {isa = PBXBuildFile; fileRef = 2992499A2235559500504569 /* GOLFWagering.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2992499D2235559500504569 /* GOLFWagering.h in Headers */ = {isa = PBXBuildFile; fileRef = 2992499A2235559500504569 /* GOLFWagering.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2992499E2235559500504569 /* GOLFWagering.m in Sources */ = {isa = PBXBuildFile; fileRef = 2992499B2235559500504569 /* GOLFWagering.m */; };
@@ -224,6 +225,7 @@
 		298DB4A52470EA63003D6F55 /* GOLFTeeMarkerThree.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = GOLFTeeMarkerThree.icns; sourceTree = "<group>"; };
 		2990FA9220726F7000E7DB45 /* GOLFClubs.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOLFClubs.h; sourceTree = "<group>"; };
 		2990FA9320726F7000E7DB45 /* GOLFClubs.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOLFClubs.m; sourceTree = "<group>"; };
+		2991914A28B3DCBF00766AE0 /* GOLFTeeMarkerBlackAndBlue.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = GOLFTeeMarkerBlackAndBlue.icns; sourceTree = "<group>"; };
 		2992499A2235559500504569 /* GOLFWagering.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOLFWagering.h; sourceTree = "<group>"; };
 		2992499B2235559500504569 /* GOLFWagering.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOLFWagering.m; sourceTree = "<group>"; };
 		299249A2223563F200504569 /* GOLFSettingsSwitchTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GOLFSettingsSwitchTableViewCell.xib; sourceTree = "<group>"; };
@@ -342,6 +344,7 @@
 				2941402E1DDA03E300CC9605 /* GOLFTeeMarkerAll.icns */,
 				296F4DDE1F3A40A100781C46 /* GOLFTeeMarkerAzure.icns */,
 				2941402F1DDA03E300CC9605 /* GOLFTeeMarkerBlack.icns */,
+				2991914A28B3DCBF00766AE0 /* GOLFTeeMarkerBlackAndBlue.icns */,
 				294140301DDA03E300CC9605 /* GOLFTeeMarkerBlackAndGold.icns */,
 				294140311DDA03E300CC9605 /* GOLFTeeMarkerBlackAndWhite.icns */,
 				294140321DDA03E300CC9605 /* GOLFTeeMarkerBlue.icns */,
@@ -648,7 +651,7 @@
 		29E888A31DCE5B0000C4A63A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1200;
+				LastUpgradeCheck = 1400;
 				ORGANIZATIONNAME = "Mulligan Software";
 				TargetAttributes = {
 					29E888AB1DCE5B0000C4A63A = {
@@ -721,6 +724,7 @@
 				294140581DDA03E300CC9605 /* GOLFTeeMarkerRedAndWhite.icns in Resources */,
 				2941405E1DDA03E300CC9605 /* GOLFTeeMarkerWhite.icns in Resources */,
 				2941404E1DDA03E300CC9605 /* GOLFTeeMarkerBrown.icns in Resources */,
+				2991914B28B3DCBF00766AE0 /* GOLFTeeMarkerBlackAndBlue.icns in Resources */,
 				297C860F204BA5D000A40BDB /* LargeTeeMarkers.xcassets in Resources */,
 				29031E5C22D8EB340080C7F3 /* GOLFTeeMarkerGreenAndRed.icns in Resources */,
 				298DB4A82470EA63003D6F55 /* GOLFTeeMarkerFour.icns in Resources */,
@@ -913,7 +917,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 63;
+				CURRENT_PROJECT_VERSION = 64;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -975,7 +980,8 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_IDENTITY = "-";
 				COPY_PHASE_STRIP = NO;
-				CURRENT_PROJECT_VERSION = 63;
+				CURRENT_PROJECT_VERSION = 64;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -1003,7 +1009,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 63;
+				CURRENT_PROJECT_VERSION = 64;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1031,7 +1037,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 63;
+				CURRENT_PROJECT_VERSION = 64;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1056,6 +1062,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				INFOPLIST_FILE = GOLFKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -1068,6 +1075,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
+				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				INFOPLIST_FILE = GOLFKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
@@ -1083,7 +1091,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 63;
+				CURRENT_PROJECT_VERSION = 64;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1110,7 +1119,8 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 63;
+				CURRENT_PROJECT_VERSION = 64;
+				DEAD_CODE_STRIPPING = YES;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				DYLIB_COMPATIBILITY_VERSION = 1;

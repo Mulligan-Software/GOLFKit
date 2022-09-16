@@ -54,6 +54,24 @@ NSString * GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupServic
 	return GOLFLocalizedString(@"TITLE_UNKNOWN_SERVICE");	//	???
 }
 
+//=================================================================
+//	NSStringFromGOLFHandicapLookupStatus(status)
+//=================================================================
+NSString * NSStringFromGOLFHandicapLookupStatus(GOLFHandicapLookupStatus status) {
+	switch (status) {
+		case GOLFHandicapLookupStatusNone:
+			return @"GOLFHandicapLookupStatusNone";
+		case GOLFHandicapLookupStatusSuccess:
+			return @"GOLFHandicapLookupStatusSuccess";
+		case GOLFHandicapLookupStatusFailure:
+			return @"GOLFHandicapLookupStatusFailure";
+		case GOLFHandicapLookupStatusWarning:
+			return @"GOLFHandicapLookupStatusWarning";
+		default:
+			return @"GOLFHandicapLookupStatusUnknown";
+    }
+}
+
 @interface GOLFHandicapLookupAgent ()
 
 - (NSURLSessionConfiguration *)lookupSessionConfiguration;

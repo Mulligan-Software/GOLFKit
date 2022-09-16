@@ -6,6 +6,9 @@
   Copyright © 2016 Mulligan Software. All rights reserved.
 */
 
+"TITLE_UPDATE_HANDICAP" = "Update Handicap";
+"TITLE_UPDATE_HANDICAP_PLURAL" = "Update Handicaps";
+
 //	Golf Terminology
 "TERM_ABOUT" = "about";
 "TERM_ACCOUNT" = "account";
@@ -402,6 +405,7 @@
 "GOLF_TEE_COLOR_NAME_BLUE_AND_GREEN" = "Blue & Green";
 "GOLF_TEE_COLOR_NAME_GREEN_AND_RED" = "Green & Red";
 "GOLF_TEE_COLOR_NAME_GREEN_AND_WHITE" = "Green & White";
+"GOLF_TEE_COLOR_NAME_BLACK_AND_BLUE" = "Black & Blue";
 "GOLF_TEE_COLOR_NAME_CUSTOM" = "Custom";
 "GOLF_TEE_COLOR_NAME_USA" = "U.S.A.";	//	Custom tee
 "GOLF_TEE_COLOR_NAME_EU" = "E.U.";		//	Custom tee

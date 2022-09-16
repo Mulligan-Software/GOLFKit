@@ -46,6 +46,13 @@ GOLFHandicapLookupService GOLFHandicapServiceForAuthority(GOLFHandicapAuthority 
 NSString * _Nonnull GOLFHandicapLookupServiceTitle(GOLFHandicapLookupService lookupService);
 //	Returns a localized title for the specified handicap data service ("GHIN", "GOLFLink", "Network de Golf", etc.)
 
+//=================================================================
+//	Utilities:
+//
+//	NSStringFromGOLFHandicapLookupStatus(status)
+//
+//=================================================================
+NSString * NSStringFromGOLFHandicapLookupStatus(GOLFHandicapLookupStatus status);
 
 //	Misc constants
 #define GOLFHandicapLookupProgressNotification @"GOLFHandicapLookupProgress"	//	for Notification
