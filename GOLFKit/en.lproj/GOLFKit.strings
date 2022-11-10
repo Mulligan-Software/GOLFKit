@@ -6,9 +6,6 @@
   Copyright © 2016 Mulligan Software. All rights reserved.
 */
 
-"TITLE_UPDATE_HANDICAP" = "Update Handicap";
-"TITLE_UPDATE_HANDICAP_PLURAL" = "Update Handicaps";
-
 //	Golf Terminology
 "TERM_ABOUT" = "about";
 "TERM_ACCOUNT" = "account";
@@ -23,6 +20,7 @@
 "TERM_ALL" = "all";
 "TERM_ALL_SEARCH" = "all";
 "TERM_ALL_SQUARE" = "all square";
+"TERM_ALL_SQUARE_ABBR" = "AS";
 "TERM_ALLOWANCE" = "allowance";
 "TERM_ALPHABETIC" = "alphabetic";
 "TERM_AND" = "and";
@@ -54,6 +52,7 @@
 "TERM_CELL_FAX" = "cell/fax";
 "TERM_CHACHA" = "Cha-Cha";
 "TERM_CHACHACHA" = "Cha-Cha-Cha";
+"TERM_CHANGE_PLURAL" = "changes";
 "TERM_CHAPMAN" = "Chapman";
 "TERM_CHICAGO" = "Chicago";
 "TERM_CHOOSE" = "choose";
@@ -83,6 +82,7 @@
 "TERM_CUSTOMIZATION" = "customization";
 "TERM_CUSTOMIZATION_PLURAL" = "customizations";
 "TERM_DATE" = "date";
+"TERM_DEACTIVATED" = "deactivated";
 "TERM_DEFAULT_PLURAL" = "defaults";
 "TERM_DELETE" = "delete";
 "TERM_DEVICE" = "device";
@@ -101,6 +101,7 @@
 "TERM_ENDING" = "ending";
 "TERM_ENTER" = "enter";
 "TERM_ERASE" = "erase";
+"TERM_ERROR" = "error";
 "TERM_EVEN" = "even";
 "TERM_EVEN_ABBR" = "E";
 "TERM_EVENT" = "event";
@@ -372,11 +373,6 @@
 "TERM_ZERO" = "zero";
 "TERM_ZIGZAG" = "Zig-Zag";
 
-"TERM_ALL_SQUARE_ABBR" = "AS";
-"TERM_CHANGE_PLURAL" = "changes";
-"TERM_DEACTIVATED" = "deactivated";
-"TERM_ERROR" = "error";
-
 //	Standard Tee Colors
 "GOLF_TEE_COLOR_NAME_BLACK" = "Black";
 "GOLF_TEE_COLOR_NAME_BLUE" = "Blue";
@@ -491,6 +487,8 @@
 "TITLE_ADVANCED_MULTIPLE_PRESSES" = "Prohibit multiple presses";
 "TITLE_ADVANCED_9_HOLE_HANDICAPS" = "Require 9-hole handicaps";
 "TITLE_ADVANCED_REFERENCE_TEES" = "Allow rating “Reference” Tees";
+"TITLE_ADVANCED_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Suppress “Course Rating vs. Par” adjustments in Course Handicap calculations";	//	Preferences Advanced configuration item
+"TITLE_ADVANCED_SUPPRESS_VS_PAR_ADJUSTMENTS_BLURB" = "For handicapping authorities that allow it, suppress the adjustment in handicap calculations.";	//	Preferences Advanced configuration item (blurb)
 "TITLE_ALLOWANCE" = "Allowance";
 "TITLE_ALWAYS_DARK" = "Always Dark";
 "TITLE_ALWAYS_LIGHT" = "Always Light";
@@ -567,6 +565,7 @@
 "TITLE_DIFFERENTIAL_TYPE" = "Differential type";
 "TITLE_DISCARD" = "Discard";
 "TITLE_DONE" = "Done";
+"TITLE_DONE_SHORT" = "Done";
 "TITLE_DONT_CALCULATE" = "Don’t Calculate";
 "TITLE_DOWNLOADING_COURSES" = "Downloading Courses";
 "TITLE_DOWNLOADING_EAGLE_USERS_GUIDE"= "Downloading the Mulligan’s Eagle™ Users’ Guide…";
@@ -701,6 +700,7 @@
 "TITLE_HANDICAPPING_CERTIFICATION" = "Handicapping Certification";
 "TITLE_HANDICAPPING_NUMBER" = "Handicapping number";
 "TITLE_HDCP_NETWORK_NUMBER" = "Handicap Network Account";
+"TITLE_HDCP_WORKSHEET_COLUMNS" = "✓\tPlayer\tAuthority\tAccount\tIndex\tEffective\tNotes";
 "TITLE_HOGAN" = "Hogan";
 "TITLE_HOLE_HANDICAP" = "Handicap";
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Hole score adjustment";
@@ -786,12 +786,30 @@
 "TITLE_OPEN_SCORECARD" = "Open the Scorecard";
 "TITLE_OPT_OUT_SKINS" = "Opt Out of Skins";
 "TITLE_OPTIONS" = "Options";
+"TITLE_OPTIONS_DELETE_ROUND" = "Delete Round…";
+"TITLE_OPTIONS_EDIT_PLAYER" = "Edit Player…";
+"TITLE_OPTIONS_EDIT_PLAYER_%@" = "Edit information about %@…";
+"TITLE_OPTIONS_EDIT_TEAMMATES" = "Edit Teammates…";
+"TITLE_OPTIONS_HIDE_DOTS" = "Hide Handicap Dots";
+"TITLE_OPTIONS_IGNORE_FOR_HANDICAPPING" = "Ignore for Handicapping";
+"TITLE_OPTIONS_MAKE_PREFERRED_TEE_%@_COURSE_%@" = "Make %@ on %@ the player’s Preferred Course";
+"TITLE_OPTIONS_MATCH_FOR_%@" = "Match for %@…";
+"TITLE_OPTIONS_MATCH_FOR_%@_VS_%@" = "Match - %@ vs. %@…";
+"TITLE_OPTIONS_MOVE_DOWN" = "Move Round Down";
+"TITLE_OPTIONS_MOVE_DOWN_PLAYER_%@_RANK_%@" = "Move Round Down – Make %@ the ‘%@’ Player";
+"TITLE_OPTIONS_MOVE_UP" = "Move Round Up";
+"TITLE_OPTIONS_MOVE_UP_PLAYER_%@_RANK_%@" = "Move Round Up – Make %@ the ‘%@’ Player";
+"TITLE_OPTIONS_NET_TO_A_TENTH" = "Net Scores to a tenth";
+"TITLE_OPTIONS_RECALCULATE_SCORES" = "Recalculate Scores";
+"TITLE_OPTIONS_SHOW_DOTS" = "Show Handicap Dots";
+"TITLE_OPTIONS_SPLIT_SCORECARD" = "Split Scorecard";
 "TITLE_ORGANIZED_COMPETITION" = "Organized Competition";	//	The WHS phrase for "Tournament" play
 "TITLE_OK_BUTTON" = "OK";
 "TITLE_OVERRIDE_UNAVAILABLE" = "override unavailable";
 "TITLE_PCC" = "Playing Conditions Calculation";
 "TITLE_PCC_ABBR" = "PCC";
 "TITLE_PENALTY_ROUND" = "Penalty Round";
+"TITLE_PENALTY_ROUND_PLURAL" = "Penalty Rounds";
 "TITLE_PENALTY_STROKE" = "Penalty Stroke";
 "TITLE_PENALTY_STROKE_PLURAL" = "Penalty Strokes";
 "TITLE_PERSONAL_HANDICAPPING" = "Personal Handicapping";
@@ -820,6 +838,7 @@
 "TITLE_RANDOM_SELECTION" = "Random Selection";
 "TITLE_RAW_INDEX" = "Raw Index";
 "TITLE_RECENT_PLAYERS_ETC" = "Recent Players, Clubs, Scorecards, etc.";
+"TITLE_RECORD_AS_COMPETITION_SCORES" = "Record as Competition/Tournament Scores";
 "TITLE_REFRESH" = "Refresh";
 "TITLE_REGISTER" = "Register";
 "TITLE_REMOTE_DATA" = "Remote Data";
@@ -922,6 +941,8 @@
 "TITLE_UNLOCK_YES_EVENT" = "Yes, all Event Scorecards";
 "TITLE_UP_AND_DOWN" = "Up & Down";
 "TITLE_UPDATE" = "Update";
+"TITLE_UPDATE_HANDICAP" = "Update Handicap";
+"TITLE_UPDATE_HANDICAP_PLURAL" = "Update Handicaps";
 "TITLE_UPDATES_UNAVAILABLE" = "Updates unavailable";
 "TITLE_USE_IOS_APPEARANCE" = "Use the iOS Appearance setting";
 "TITLE_USE_LAST" = "Use last";
@@ -1407,6 +1428,7 @@
 //	Phrases & Special characters
 "ABCDEFG" = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";	//	For cart signs, player positions, etc.
 "ALL_SQUARE_CHARACTER" = "―";		//	\U2015 Special character	alt: "–" (En Dash) \U2013
+"CHECK_MARK" = "✓";
 "CURLY_CHARACTERS" = "“”‘’";
 "DONE_DOT" = "•";		//	Special character
 "DONT_ASK_ME_AGAIN" = "Don’t ask me about this again.";

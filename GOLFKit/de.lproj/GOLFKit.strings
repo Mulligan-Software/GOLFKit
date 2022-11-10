@@ -62,6 +62,7 @@
 "TERM_ALL" = "alle";
 "TERM_ALL_SEARCH" = "alle";
 "TERM_ALL_SQUARE" = "ausgeglichen";
+"TERM_ALL_SQUARE_ABBR" = "AS";
 "TERM_ALLOWANCE" = "Zustimmung";
 "TERM_ALPHABETIC" = "alphabetisch";
 "TERM_AND" = "und";
@@ -93,6 +94,7 @@
 "TERM_CELL_FAX" = "Handy/Fax";
 "TERM_CHACHA" = "Cha-Cha";
 "TERM_CHACHACHA" = "Cha-Cha-Cha";
+"TERM_CHANGE_PLURAL" = "Änderungen";
 "TERM_CHAPMAN" = "Chapman";
 "TERM_CHICAGO" = "Chicago";
 "TERM_CHOOSE" = "auswählen";
@@ -122,6 +124,7 @@
 "TERM_CUSTOMIZATION" = "Anpassung";
 "TERM_CUSTOMIZATION_PLURAL" = "Anpassungen";
 "TERM_DATE" = "Datum";
+"TERM_DEACTIVATED" = "deaktiviert";
 "TERM_DEFAULT_PLURAL" = "Standardeinstellungen";
 "TERM_DELETE" = "löschen";
 "TERM_DEVICE" = "Gerät";
@@ -140,6 +143,7 @@
 "TERM_ENDING" = "ende";
 "TERM_ENTER" = "Nummer eingeben";
 "TERM_ERASE" = "löschen";
+"TERM_ERROR" = "Error";
 "TERM_EVEN" = "eben";
 "TERM_EVEN_ABBR" = "E";
 "TERM_EVENT" = "Event";
@@ -411,11 +415,6 @@
 "TERM_ZERO" = "null";
 "TERM_ZIGZAG" = "Zig-Zag";
 
-"TERM_ALL_SQUARE_ABBR" = "AS";
-"TERM_CHANGE_PLURAL" = "Änderungen";
-"TERM_DEACTIVATED" = "deaktiviert";
-"TERM_ERROR" = "Error";
-
 //	Standard Tee Colors
 "GOLF_TEE_COLOR_NAME_BLACK" = "schwarz";
 "GOLF_TEE_COLOR_NAME_BLUE" = "blau";
@@ -530,6 +529,8 @@
 "TITLE_ADVANCED_MULTIPLE_PRESSES" = "Verbieten mehrfache Pressen";
 "TITLE_ADVANCED_9_HOLE_HANDICAPS" = "Erfordert 9-Loch Handicaps";
 "TITLE_ADVANCED_REFERENCE_TEES" = "Zulassen Rating „Referenz“ Tees";
+"TITLE_ADVANCED_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Unterdrücken Sie „Course Rating vs. Par“ Anpassungen in Course Handicap-Berechnungen";	//	Preferences Advanced configuration item
+"TITLE_ADVANCED_SUPPRESS_VS_PAR_ADJUSTMENTS_BLURB" = "Für Handicap-Behörden, die dies zulassen, Unterdrückung der Anpassung in Handicap-Berechnungen.";	//	Preferences Advanced configuration item (blurb)
 "TITLE_ALLOWANCE" = "Zustimmung";
 "TITLE_ALWAYS_DARK" = "Immer Dunkel";
 "TITLE_ALWAYS_LIGHT" = "Immer Leicht";
@@ -606,6 +607,7 @@
 "TITLE_DIFFERENTIAL_TYPE" = "Differentieller Typ";
 "TITLE_DISCARD" = "Verwerfen";
 "TITLE_DONE" = "Fertig";
+"TITLE_DONE_SHORT" = "Fertig";
 "TITLE_DONT_CALCULATE" = "Berechne nicht";
 "TITLE_DOWNLOADING_COURSES" = "Golfplätze herunterladen";
 "TITLE_DOWNLOADING_EAGLE_USERS_GUIDE"= "Mulligan’s Eagle™ Benutzerhandbuch wird heruntergeladen…";
@@ -740,6 +742,7 @@
 "TITLE_HANDICAPPING_CERTIFICATION" = "Behindertenausweis";
 "TITLE_HANDICAPPING_NUMBER" = "Handicap-Kontonummer";
 "TITLE_HDCP_NETWORK_NUMBER" = "Handicap-Netwerkkonto";
+"TITLE_HDCP_WORKSHEET_COLUMNS" = "✓\tSpieler\tAutorität\tKonto\tIndex\tWirksam\tNotiz";
 "TITLE_HOGAN" = "Hogan";
 "TITLE_HOLE_HANDICAP" = "Handicap";
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Loch-Score-Einstellung";
@@ -793,8 +796,8 @@
 "TITLE_LOW_INDEX" = "Niedriger Handicap Index";
 "TITLE_MAKE_NEW_DATA_STORE" = "Erstellen einen Neuen Datenspeicher";
 "TITLE_MASS_CONVERT_%@" = "Handicap-Methode der Spieler ändern - %@";
-"TITLE_MATCH_IS_EVEN" = "Golfspiel ist ausgeglichen";
-"TITLE_MATCH_IS_TIED" = "Golfspiel ist unentschieden";
+"TITLE_MATCH_IS_EVEN" = "Golfmatch ist ausgeglichen";
+"TITLE_MATCH_IS_TIED" = "Golfmatch ist unentschieden";
 "TITLE_MATCH_NO_SCORES" = "Keine Golfergebnisse";
 "TITLE_MATCH_PLAY" = "Matchplay";
 "TITLE_MATCH_TYPE" = "Matchtyp";
@@ -825,12 +828,30 @@
 "TITLE_OPEN_SCORECARD" = "Scorekarte öffnen";
 "TITLE_OPT_OUT_SKINS" = "Ablehnen Sie die Skins";
 "TITLE_OPTIONS" = "Optionen";
+"TITLE_OPTIONS_DELETE_ROUND" = "Runde löschen…";
+"TITLE_OPTIONS_EDIT_PLAYER" = "Spieler bearbeiten…";
+"TITLE_OPTIONS_EDIT_PLAYER_%@" = "Informationen über %@ bearbeiten…";
+"TITLE_OPTIONS_EDIT_TEAMMATES" = "Teamkollegen bearbeiten…";
+"TITLE_OPTIONS_HIDE_DOTS" = "Handicap-Punkte ausblenden";
+"TITLE_OPTIONS_IGNORE_FOR_HANDICAPPING" = "Für Handicap-Berechnungen ignorieren";
+"TITLE_OPTIONS_MAKE_PREFERRED_TEE_%@_COURSE_%@" = "Machen Sie die %@ auf dem %@ zum Bevorzugten Golfplatz der Spieler";
+"TITLE_OPTIONS_MATCH_FOR_%@" = "Match für %@…";
+"TITLE_OPTIONS_MATCH_FOR_%@_VS_%@" = "Match - %@ vs. %@…";
+"TITLE_OPTIONS_MOVE_DOWN" = "Runde nach unten bewegen";
+"TITLE_OPTIONS_MOVE_DOWN_PLAYER_%@_RANK_%@" = "Runde nach unten bewegen – Machen Sie %@ zum „%@“-Spieler";
+"TITLE_OPTIONS_MOVE_UP" = "Runde nach oben bewegen";
+"TITLE_OPTIONS_MOVE_UP_PLAYER_%@_RANK_%@" = "Runde nach oben bewegen – Machen Sie %@ zum „%@“-Spieler";
+"TITLE_OPTIONS_NET_TO_A_TENTH" = "Netto-Scores auf ein Zehntel";
+"TITLE_OPTIONS_RECALCULATE_SCORES" = "Scores neu berechnen";
+"TITLE_OPTIONS_SHOW_DOTS" = "Handicap-Punkte anzeigen";
+"TITLE_OPTIONS_SPLIT_SCORECARD" = "Scorekarte aufteilen";
 "TITLE_ORGANIZED_COMPETITION" = "Organisierter Wettbewerb";	//	The WHS phrase for "Tournament" play
 "TITLE_OK_BUTTON" = "OK";
 "TITLE_OVERRIDE_UNAVAILABLE" = "Überschreiben nicht verfügbar";
 "TITLE_PCC" = "Berechnung der Speilbedingungen";
 "TITLE_PCC_ABBR" = "PCC";
 "TITLE_PENALTY_ROUND" = "Strafrunde";
+"TITLE_PENALTY_ROUND_PLURAL" = "Strafrunden";
 "TITLE_PENALTY_STROKE" = "Strafschlag";
 "TITLE_PENALTY_STROKE_PLURAL" = "Strafschlage";
 "TITLE_PERSONAL_HANDICAPPING" = "Persönliche Handicapend";
@@ -859,6 +880,7 @@
 "TITLE_RANDOM_SELECTION" = "Zufällige Auswahl";
 "TITLE_RAW_INDEX" = "Rohindex";
 "TITLE_RECENT_PLAYERS_ETC" = "Aktuelle Spieler, Vereine, Scorekarten, usw.";
+"TITLE_RECORD_AS_COMPETITION_SCORES" = "Als Wettbewerb/Turnier-Scores aufzeichnen";
 "TITLE_REFRESH" = "Aktualisieren";
 "TITLE_REGISTER" = "Registrieren";
 "TITLE_REMOTE_DATA" = "Entfernte Daten";
@@ -961,6 +983,8 @@
 "TITLE_UNLOCK_YES_EVENT" = "Ja, alle Scorekarten der Event";
 "TITLE_UP_AND_DOWN" = "Auf und ab";
 "TITLE_UPDATE" = "Aktualisieren";
+"TITLE_UPDATE_HANDICAP" = "Handicap aktualisieren";
+"TITLE_UPDATE_HANDICAP_PLURAL" = "Handicaps aktualisieren";
 "TITLE_UPDATES_UNAVAILABLE" = "Aktualisierung nicht verfügbar";
 "TITLE_USE_IOS_APPEARANCE" = "Verwenden die iOS-Darstellungseinstellung";
 "TITLE_USE_LAST" = "Benutze die letzten";
@@ -1445,6 +1469,7 @@
 //	Phrases & Special characters
 "ABCDEFG" = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";	//	For cart signs, player positions, etc.
 "ALL_SQUARE_CHARACTER" = "―";		//	\U2015 Special character	alt: "–" (En Dash) \U2013
+"CHECK_MARK" = "✓";
 "CURLY_CHARACTERS" = "“”‘’";
 "DONE_DOT" = "•";		//	Special character
 "DONT_ASK_ME_AGAIN" = "Fragen Sie mich nicht noch einmal.";

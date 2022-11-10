@@ -48,8 +48,6 @@ NSString * const MulliganScoringTeamRoundIDUniversalTypeIdentifier = @"com.mulli
 //	iTunes URL's for Mulligan & iOS apps
 NSString * const iTunesEagleURL = @"https://apps.apple.com/us/app/eagle/id403115926?mt=12";
 NSString * const iTunesMulliganAppsURL = @"https://apps.apple.com/us/developer/mulligan-software/id334049704?mt=12";
-NSString * const iTunesTeeChartURL = @"https://apps.apple.com/us/app/teechart/id334049701";	//	Obsolete for Eagle
-NSString * const iTunesiPressURL = @"https://apps.apple.com/us/app/ipress/id481425041";
 NSString * const iTunesScoringMachineURL = @"https://apps.apple.com/us/app/the-scoring-machine/id831912888";
 
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
@@ -63,7 +61,6 @@ NSString * const MulliganSoftwareVersionsDictionaryURL = @"https://www.mulligans
 NSString * const MulliganSoftwareClubsListDictionaryURL = @"https://www.mulligansoftware.com/golf/data/clubs_list.xml";
 NSString * const MulliganSoftwareCountriesDictionaryURL = @"https://www.mulligansoftware.com/golf/data/countries_list.xml";
 NSString * const MulliganSoftwareForEagleURL = @"https://www.mulligansoftware.com/responsive/mulligans-eagle.html";
-NSString * const MulliganSoftwareForiPressURL = @"https://www.mulligansoftware.com/responsive/ipress.html";
 
 //	Mulligan Software related data
 NSString * const MulliganSoftwareSupportEMailAddress = @"support@mulligansoftware.com";

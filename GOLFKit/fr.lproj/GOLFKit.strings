@@ -20,6 +20,7 @@
 "TERM_ALL" = "toutes";
 "TERM_ALL_SEARCH" = "tout";
 "TERM_ALL_SQUARE" = "pair";
+"TERM_ALL_SQUARE_ABBR" = "AS";
 "TERM_ALLOWANCE" = "allocation";
 "TERM_ALPHABETIC" = "alphabétique";
 "TERM_AND" = "et";
@@ -51,6 +52,7 @@
 "TERM_CELL_FAX" = "portable/fax";
 "TERM_CHACHA" = "Cha-Cha";
 "TERM_CHACHACHA" = "Cha-Cha-Cha";
+"TERM_CHANGE_PLURAL" = "changements";
 "TERM_CHAPMAN" = "Chapman";
 "TERM_CHICAGO" = "Chicago";
 "TERM_CHOOSE" = "choisir";
@@ -80,6 +82,7 @@
 "TERM_CUSTOMIZATION" = "personnalisation";
 "TERM_CUSTOMIZATION_PLURAL" = "personnalisations";
 "TERM_DATE" = "date";
+"TERM_DEACTIVATED" = "désactivé";
 "TERM_DEFAULT_PLURAL" = "valeurs par défaut";
 "TERM_DELETE" = "supprimer";
 "TERM_DEVICE" = "appareil";
@@ -98,6 +101,7 @@
 "TERM_ENDING" = "fin";
 "TERM_ENTER" = "entrée";
 "TERM_ERASE" = "effacer";
+"TERM_ERROR" = "erreur";
 "TERM_EVEN" = "égal";
 "TERM_EVEN_ABBR" = "E";
 "TERM_EVENT" = "événement";
@@ -369,11 +373,6 @@
 "TERM_ZERO" = "zéro";
 "TERM_ZIGZAG" = "Zig-Zag";
 
-"TERM_ALL_SQUARE_ABBR" = "AS";
-"TERM_CHANGE_PLURAL" = "changements";
-"TERM_DEACTIVATED" = "désactivé";
-"TERM_ERROR" = "erreur";
-
 //	Standard Tee Colors
 "GOLF_TEE_COLOR_NAME_BLACK" = "Noir";
 "GOLF_TEE_COLOR_NAME_BLUE" = "Bleue";
@@ -488,6 +487,8 @@
 "TITLE_ADVANCED_MULTIPLE_PRESSES" = "Prohibir les presses multiple";
 "TITLE_ADVANCED_9_HOLE_HANDICAPS" = "Requérir handicaps 9-trous";
 "TITLE_ADVANCED_REFERENCE_TEES" = "Permettre évaluation Jalons «Référence»";
+"TITLE_ADVANCED_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Supprimer les ajustements «Évaluation parcours vs Par» dans les calculs du Handicap de parcours";	//	Preferences Advanced configuration item
+"TITLE_ADVANCED_SUPPRESS_VS_PAR_ADJUSTMENTS_BLURB" = "Pour les autorités de handicap qui le permettent, supprimer l'ajustement dans les calculs de handicap.";	//	Preferences Advanced configuration item (blurb)
 "TITLE_ALLOWANCE" = "Allocation";
 "TITLE_ALWAYS_DARK" = "Toujours Sombre";
 "TITLE_ALWAYS_LIGHT" = "Toujours Clair";
@@ -564,6 +565,7 @@
 "TITLE_DIFFERENTIAL_TYPE" = "Type de différentiel";
 "TITLE_DISCARD" = "Éliminer";
 "TITLE_DONE" = "Terminé";
+"TITLE_DONE_SHORT" = "OK";
 "TITLE_DONT_CALCULATE" = "Ne calcule pas";
 "TITLE_DOWNLOADING_COURSES" = "Téléchargement des parcours";
 "TITLE_DOWNLOADING_EAGLE_USERS_GUIDE"= "Télécharant du Guide de Utilisateur de Mulligan’s Eagle™…";
@@ -698,6 +700,7 @@
 "TITLE_HANDICAPPING_CERTIFICATION" = "Certification Handicapant";
 "TITLE_HANDICAPPING_NUMBER" = "Numéro de compte Handicap";
 "TITLE_HDCP_NETWORK_NUMBER" = "Compte Handicap Network";
+"TITLE_HDCP_WORKSHEET_COLUMNS" = "✓\tJoueur\tAutorité\tCompte\tIndex\tEffective\tMémos";
 "TITLE_HOGAN" = "Hogan";
 "TITLE_HOLE_HANDICAP" = "Handicap";
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Trou score ajustement";
@@ -783,12 +786,30 @@
 "TITLE_OPEN_SCORECARD" = "Ouvrir la Carte";
 "TITLE_OPT_OUT_SKINS" = "Se Retirer de Skins";
 "TITLE_OPTIONS" = "Options";
+"TITLE_OPTIONS_DELETE_ROUND" = "Supprimer le tour…";
+"TITLE_OPTIONS_EDIT_PLAYER" = "Modifier le joueur…";
+"TITLE_OPTIONS_EDIT_PLAYER_%@" = "Modifier les informations sur %@…";
+"TITLE_OPTIONS_EDIT_TEAMMATES" = "Modifier les coéquipiers…";
+"TITLE_OPTIONS_HIDE_DOTS" = "Masquer les taches de handicap";
+"TITLE_OPTIONS_IGNORE_FOR_HANDICAPPING" = "Ignorer pour les calculs de handicap";
+"TITLE_OPTIONS_MAKE_PREFERRED_TEE_%@_COURSE_%@" = "Faire des %@ du %@ le Parcours Préféré de joueur";
+"TITLE_OPTIONS_MATCH_FOR_%@" = "Match pour %@…";
+"TITLE_OPTIONS_MATCH_FOR_%@_VS_%@" = "Match - %@ vs %@…";
+"TITLE_OPTIONS_MOVE_DOWN" = "Déplacer le tour ver le bas";
+"TITLE_OPTIONS_MOVE_DOWN_PLAYER_%@_RANK_%@" = "Déplacer le tour ver le bas – Faire de %@ le joueur «%@»";
+"TITLE_OPTIONS_MOVE_UP" = "Déplacer le tour ver le haut";
+"TITLE_OPTIONS_MOVE_UP_PLAYER_%@_RANK_%@" = "Déplacer le tour vers le haut – Faire de %@ le joueur «%@»";
+"TITLE_OPTIONS_NET_TO_A_TENTH" = "Scores nets au dixième";
+"TITLE_OPTIONS_RECALCULATE_SCORES" = "Recalculer les scores";
+"TITLE_OPTIONS_SHOW_DOTS" = "Afficher les taches de handicap";
+"TITLE_OPTIONS_SPLIT_SCORECARD" = "Diviser la carte de score";
 "TITLE_ORGANIZED_COMPETITION" = "Concours Organisé";	//	The WHS phrase for "Tournament" play
 "TITLE_OK_BUTTON" = "OK";
 "TITLE_OVERRIDE_UNAVAILABLE" = "remplacement indisponible";
 "TITLE_PCC" = "Calcul des Conditions de Jeu";
 "TITLE_PCC_ABBR" = "CCJ";
 "TITLE_PENALTY_ROUND" = "Tour de pénalité";
+"TITLE_PENALTY_ROUND_PLURAL" = "Tours de pénalité";
 "TITLE_PENALTY_STROKE" = "Coup de pénalité";
 "TITLE_PENALTY_STROKE_PLURAL" = "Coups de pénalité";
 "TITLE_PERSONAL_HANDICAPPING" = "Handicapant Individuel";
@@ -817,6 +838,7 @@
 "TITLE_RANDOM_SELECTION" = "Sélection au Hasard";
 "TITLE_RAW_INDEX" = "Indice Brut";
 "TITLE_RECENT_PLAYERS_ETC" = "Joueurs récents, Clubs, Cartes, etc.";
+"TITLE_RECORD_AS_COMPETITION_SCORES" = "Enregistrer en tant que scores de Compétition/Tournoi";
 "TITLE_REFRESH" = "Actualiser";
 "TITLE_REGISTER" = "Inscrire";
 "TITLE_REMOTE_DATA" = "Données Distant";
@@ -919,6 +941,8 @@
 "TITLE_UNLOCK_YES_EVENT" = "Oui, tous Cartes d’Événement";
 "TITLE_UP_AND_DOWN" = "En haut et en bas";
 "TITLE_UPDATE" = "Mettre à Jour";
+"TITLE_UPDATE_HANDICAP" = "Mettre à jour le Handicap";
+"TITLE_UPDATE_HANDICAP_PLURAL" = "Mettre à jour les Handicaps";
 "TITLE_UPDATES_UNAVAILABLE" = "Mises à jour non disponibles";
 "TITLE_USE_IOS_APPEARANCE" = "Utiliser le paramètre Apparence de iOS";
 "TITLE_USE_LAST" = "Utilizez dernières";
@@ -1403,6 +1427,7 @@
 //	Phrases & Special characters
 "ABCDEFG" = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";	//	For cart signs, player positions, etc.
 "ALL_SQUARE_CHARACTER" = "―";		//	\U2015 Special character	alt: "–" (En Dash) \U2013
+"CHECK_MARK" = "✓";
 "CURLY_CHARACTERS" = "“”‘’";
 "DONE_DOT" = "•";		//	Special character
 "DONT_ASK_ME_AGAIN" = "Ne plus me demander.";

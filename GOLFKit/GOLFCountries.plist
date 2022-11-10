@@ -212,7 +212,7 @@
 		<key>countryName</key>
 		<string>Canada</string>
 		<key>authority</key>
-		<string>RCGA</string>
+		<string>WHS</string>
 		<key>states</key>
 		<array>
 			<dict>
