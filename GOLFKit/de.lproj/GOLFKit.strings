@@ -1201,7 +1201,7 @@
 "INFO_EAGLE_USERS_GUIDE_DOWNLOAD" = "die aktuellste Version des Benutzerhandbuchs von der Mulligan Software-Website";
 "INFO_EAGLE_USERS_GUIDE_LOCATE" = "eine Kopie des Benutzerhandbuchs, das sich bereits auf dein Computer befindet";
 "INFO_ENFORCE_EXTINCT_HANDICAPS" = "Aktiviert: Die Anforderungen der Handicap-Behörde wurden eingehalten, auch wenn es weh tut.\nDeaktiviert: Andernfalls.";
-"INFO_UG_DOWNLOAD_MESSAGE" = "Bitte besuchen Sie:\n\nhttps://www.mulligansoftware.com/responsive/eagleguide.html\n\num die neueste Version des Benutzerhandbuchs herunterzuladen";
+"INFO_UG_DOWNLOAD_MESSAGE" = "Bitte besuchen Sie:\n\nhttps://www.mulligansoftware.com/EagleOptions/eagle-users-guide.html\n\num die neueste Version des Benutzerhandbuchs herunterzuladen";
 "INFO_UG_DOWNLOAD_INFORMATIVE" = "Installieren Sie die heruntergeladene Datei im Eagle-Ordner in Ihrem Home-Verzeichnis unter:\n\n~/Library/Application Support/Eagle";
 "INFO_USGA_EXTINCTION_WARNING" = "Das USGA Handicap System wurde abgelöst und wird in zukünftigen Versionen von Mulligan’s Eagle nicht unterstützt oder verfügbar sein.  Wir empfehlen Ihnen, eine andere Handicap-Methode zu wählen.";
 

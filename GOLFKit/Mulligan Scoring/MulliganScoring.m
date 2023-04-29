@@ -60,7 +60,7 @@ NSString * const MulliganSoftwareDisplayURL = @"www.mulligansoftware.com";
 NSString * const MulliganSoftwareVersionsDictionaryURL = @"https://www.mulligansoftware.com/golf/data/versions.xml";
 NSString * const MulliganSoftwareClubsListDictionaryURL = @"https://www.mulligansoftware.com/golf/data/clubs_list.xml";
 NSString * const MulliganSoftwareCountriesDictionaryURL = @"https://www.mulligansoftware.com/golf/data/countries_list.xml";
-NSString * const MulliganSoftwareForEagleURL = @"https://www.mulligansoftware.com/responsive/mulligans-eagle.html";
+NSString * const MulliganSoftwareForEagleURL = @"https://www.mulligansoftware.com/mulligans-eagle.html";
 
 //	Mulligan Software related data
 NSString * const MulliganSoftwareSupportEMailAddress = @"support@mulligansoftware.com";

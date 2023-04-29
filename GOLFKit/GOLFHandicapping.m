@@ -33,7 +33,7 @@ static NSDictionary *cachedGOLFHomeCountryInfo = nil;
 //=================================================================
 //	GOLFDefaultHandicapAuthority()
 //=================================================================
-GOLFHandicapAuthority * GOLFDefaultHandicapAuthority() {
+GOLFHandicapAuthority * GOLFDefaultHandicapAuthority(void) {
 	if (cachedGOLFHomeCountryInfo == nil) {
 		cachedGOLFHomeCountryInfo = GOLFHomeCountryInfo();	//	This might take a bit, so we just get it once
 	}
