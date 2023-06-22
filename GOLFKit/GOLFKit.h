@@ -53,6 +53,7 @@ typedef NS_ENUM(NSInteger, GOLFKitErrorDomainError) {
 //	User Interface (Colors, text, localization, etc.)
 #import <GOLFKit/GOLFColors.h>
 #import <GOLFKit/GOLFTeeMarkers.h>
+#import <GOLFKit/GOLFScorecardParts.h>
 
 //	Custom Drawing (not available on the Watch)
 #if !TARGET_OS_WATCH

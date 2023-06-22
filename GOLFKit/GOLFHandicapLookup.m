@@ -174,7 +174,7 @@ NSString * NSStringFromGOLFHandicapLookupStatus(GOLFHandicapLookupStatus status)
 		if (@available (macOS 10.14, *)) {
 			_userAgent = [MozillaPart stringByAppendingFormat:@"(Macintosh; Intel Mac OS X %@) %@ %@ %@", osVersionString, WebKitPart, GOLFKitPart, appPart];
 		} else {
-			//	User-Agent: Mozilla/5.0 (Macintosh; U; Mac OS X 10_13_2; en-us) Eagle/2.9.9
+			//	User-Agent: Mozilla/5.0 (Macintosh; U; Mac OS X 10_13_2; en-us) Eagle/3.0
 			_userAgent = [MozillaPart stringByAppendingFormat:@"(Macintosh; U; Mac OS X %@; en-us) Eagle/%@", osVersionString, appVersion];
 		}
 	

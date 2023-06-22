@@ -18,10 +18,11 @@
 //		Handicapping
 //			Handicapping System(s) Support
 //				World Handicap System (WHS)
-//				United States Golf Association (USGA) Handicap System
-//				Golf Canada (RCGA) Handicap System
+//				United States Golf Association (USGA) Handicap System (superceded)
+//				Golf Canada (RCGA) Handicap System (superceded)
 //				Congress of National Golf Unions (CONGU) Handicap System
 //				European Golf Association (EGA) Handicap System
+//				Golf Australia (AGU) Handicap System
 //
 //			Off-Season Rounds - rounds that are ignored for use in handicapping solely because they are played out of season
 //				Specifying a handicap system-specific calendar interval for "off-season"
