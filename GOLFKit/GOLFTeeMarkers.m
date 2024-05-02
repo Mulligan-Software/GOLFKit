@@ -27,12 +27,12 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		//
 		//	Key					Type			Description
 		//	--------------		----------		------------------------------------------------------------------------------------------
-		//	teeColorIndex		NSNumber		unsigned integer representing the tee color
+		//	teeColorIndex		NSNumber		GOLFTeeColorIndex value representing the tee color
 		//	teeColor			GOLFColor		NSColor (macOS) or UIColor (iOS) representing visual equivalent for display or tinting
 		//	teeColorName		NSString		localized name of the color (ie: "Vert", "Black & White", "Rojo y Blanco")@"teeColorName",
 		//	teeIconName			NSString		name of the tee icon (.ICNS), like "TeeMarkerBlueAndWhite"
 		//	teeImageName		NSString		name of the tee image (.PNG), like "tee_marker_blueandwhite" (excluding any size or scale identification)
-		//	isComboColor		NSNumber		optional boolean TRUE if entry represents a color combination (two colors)
+		//	isComboColor		NSNumber		optional boolean TRUE value if entry represents a color combination (two colors)
 		//	firstColorIndex		NSNumber		teeColorIndex of one of the combination's solid colors (when isComboColor is TRUE)
 		//	secondColorIndex	NSNumber		teeColorIndex of the other of the combination's solid colors (when isComboColor is TRUE)
 		
@@ -180,6 +180,15 @@ NSArray * GOLFStandardTeeColorArray(void) {
 				@"tee_marker_azure", @"teeImageName", nil];
 		[workingList addObject:colorDict];
 		
+		//	Bronze
+		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithUnsignedInteger:GOLFTeeColorBronze], @"teeColorIndex",
+				[GOLFColor colorWithRed:(125.0 / 255.0) green:(58.0 / 255.0) blue:(58.0 / 255.0) alpha:1.0], @"teeColor",
+				GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_BRONZE"), @"teeColorName",
+				@"GOLFTeeMarkerBronze", @"teeIconName",
+				@"tee_marker_bronze", @"teeImageName", nil];
+		[workingList addObject:colorDict];
+		
 		//	Blue & White
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorBlueAndWhite], @"teeColorIndex",
@@ -322,6 +331,18 @@ NSArray * GOLFStandardTeeColorArray(void) {
 				[NSNumber numberWithBool:YES], @"isComboColor",
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorBlack], @"firstColorIndex",
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorBlue], @"secondColorIndex", nil];
+		[workingList addObject:colorDict];
+		
+		//	Orange & Green
+		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithUnsignedInteger:GOLFTeeColorOrangeAndGreen], @"teeColorIndex",
+				[GOLFColor colorWithRed:(253 / 255.0) green:(126 / 255.0) blue:(0.0) alpha:1.0], @"teeColor",	//	Not quite orange
+				GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_ORANGE_AND_GREEN"), @"teeColorName",
+				@"GOLFTeeMarkerOrangeAndGreen", @"teeIconName",
+				@"tee_marker_orangeandgreen", @"teeImageName",
+				[NSNumber numberWithBool:YES], @"isComboColor",
+				[NSNumber numberWithUnsignedInteger:GOLFTeeColorOrange], @"firstColorIndex",
+				[NSNumber numberWithUnsignedInteger:GOLFTeeColorGreen], @"secondColorIndex", nil];
 		[workingList addObject:colorDict];
 		
 		//	U.S.A.
@@ -823,3 +844,47 @@ GOLFTeeImage * GOLFLargeTeeMarkerImageFromTeeColorIndex(GOLFTeeColorIndex teeCol
 	return GOLFTeeMarkerImageFromSpecs(teeColorIndex, GOLFTeeMarkerImageSize64pt, teeColor);
 }
 
+//=================================================================
+//	GOLFTeeColorDictionaryForTeeColorIndex(GOLFTeeColorIndex teeColorIndex)
+//=================================================================
+NSDictionary * _Nullable GOLFTeeColorDictionaryForTeeColorIndex(GOLFTeeColorIndex teeColorIndex) {
+	//	Each entry in GOLFStandardTeeColorArray is a NSDictionary with the following keyed items:
+	//
+	//	Key					Type			Description
+	//	--------------		----------		------------------------------------------------------------------------------------------
+	//	teeColorIndex		NSNumber		unsigned integer representing the tee color
+	//	teeColor			GOLFColor		NSColor (macOS) or UIColor (iOS) representing visual equivalent for display or tinting
+	//	teeColorName		NSString		localized name of the color (ie: "Vert", "Black & White", "Rojo y Blanco")@"teeColorName",
+	//	teeIconName			NSString		name of the tee icon (.ICNS), like "TeeMarkerBlueAndWhite"
+	//	teeImageName		NSString		name of the tee image (.PNG), like "tee_marker_blueandwhite" (excluding any size or scale identification)
+	//	isComboColor		NSNumber		optional boolean TRUE if entry represents a color combination (two colors)
+	//	firstColorIndex		NSNumber		teeColorIndex of one of the combination's solid colors (when isComboColor is TRUE)
+	//	secondColorIndex	NSNumber		teeColorIndex of the other of the combination's solid colors (when isComboColor is TRUE)
+
+	if (teeColorIndex == kNotATeeColorIndex) {
+		return nil;
+	} else if (teeColorIndex == GOLFTeeColorCombo) {
+		//	GOLFTeeColorCombo is NOT in the GOLFStandardTeeColorArray
+		NSDictionary *colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
+				[NSNumber numberWithUnsignedInteger:GOLFTeeColorCombo], @"teeColorIndex",
+				[GOLFColor colorWithRed:(0.0 / 256.0) green:(69.0 / 256.0) blue:(33.0 / 256.0) alpha:1.0], @"teeColor",	//	Mostly green (dark)
+				GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_COMBO"), @"teeColorName",
+				@"GOLFTeeMarkerCombo", @"teeIconName",
+				@"tee_marker_combo", @"teeImageName",
+				[NSNumber numberWithBool:YES], @"isComboColor",
+				[NSNumber numberWithUnsignedInteger:GOLFTeeColorGreen], @"firstColorIndex",	//	Usually calibrated to a standard color
+				[NSNumber numberWithUnsignedInteger:GOLFTeeColorRed], @"secondColorIndex",	//	Usually calibrated to a standard color
+				nil];
+		return colorDict;
+	} else if (teeColorIndex == GOLFTeeColorCustom) {
+		//	GOLFTeeColorCustom is NOT in the GOLFStandardTeeColorArray
+		return nil;
+	} else {
+		for (NSDictionary *colorDict in GOLFStandardTeeColorArray()) {
+			if ([[colorDict objectForKey:@"teeColorIndex"] integerValue] == teeColorIndex) {
+				return colorDict;
+			}
+		}
+	}
+	return nil;
+}

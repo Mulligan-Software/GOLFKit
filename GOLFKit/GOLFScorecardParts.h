@@ -10,15 +10,8 @@
 #import <GOLFKit/GOLFKitTypes.h>
 #import <GOLFKit/GOLFColors.h>
 
-#if TARGET_OS_IOS || TARGET_OS_WATCH
+NS_ASSUME_NONNULL_BEGIN
 
-#define ScorecardView UIView
-
-#elif TARGET_OS_MAC
-
-#define ScorecardView NSView
-
-#endif
 
 typedef NS_ENUM(NSUInteger, ScorecardPartType) {
         ScorecardPartTypeBaseView	= 0,	//	(0) Overall transparent non-drawing coordinating view
@@ -36,19 +29,41 @@ typedef NS_OPTIONS(NSUInteger, ScorecardPartBorder) {
 };
 
 
-//GOLFColor * _Nonnull GOLFTeeColorFromTeeColorIndex(GOLFTeeColorIndex proposedColorIndex);
-////	Returns the NSColor (macOS) or UIColor (iOS) that best represents the tee indicated by the proposedColorIndex
-////	Returns a best-visual color for combo tees, a black color if there is no tee identified by the proposedColorIndex
-//
-//GOLFTeeColorIndex GOLFTeeColorIndexFromTeeColor(GOLFColor *  _Nullable teeColor);
-////	Returns a GOLFTeeColorIndex that identifies a tee whose color matches teeColor (exactly as predefined)
-////	Returns GOLFTeeColorCustom if no exact match is found, GOLFTeeColorUnknown if no teeColor given.
-//
-//NSString * _Nonnull GOLFTeeColorNameFromTeeColorIndex(GOLFTeeColorIndex proposedColorIndex);
-////	Returns the localized name of the tee whose colorIndex matches proposedColorIndex, like "Blue", "Rouge et Blanc", etc.
-////	Can also return "Custom", "Unknown", "Combo", "Add" and "All" for special cases
-//
-//NSRange GOLFLongestRangeOfAnyTeeColorNameInTeeName(NSString * _Nonnull teeName);
-////	Returns the longest occurrance of any standard tee color name within the provided teeName string.
-////	Returns NSNotFound in range.location if no tee color name is found in the string.
-//
+@interface ScorecardPartView : NSView		//	An NSView for macOS
+{
+}
+
+@property(nonatomic, retain) NSColor *ourColor;
+@property(nonatomic, assign) ScorecardPartType partType;
+@property(nonatomic, assign) NSEdgeInsets borders;	//	top, left, bottom, right
+
+//	Dynamic resizeable part sizes (excluding border(s)
+@property(nonatomic, assign) CGFloat partHeight;
+@property(nonatomic, assign) CGFloat partHoleScoreWidth;
+@property(nonatomic, assign) CGFloat partSideTotalWidth;
+@property(nonatomic, assign) CGFloat partRoundTotalWidth;
+@property(nonatomic, assign) CGFloat partStrokesTotalWidth;
+@property(nonatomic, assign) CGFloat partNetTotalWidth;
+
+//- (NSRect)margins;	//	left = .origin.x, right = .origin.y, bottom = .size.width, top = .size.height
+//- (void)setMargins:(NSRect)margins;
+//- (BOOL)insertPagebreaks;
+//- (void)setInsertPagebreaks:(BOOL)insert;
+//- (void)insertView:(NSView *)viewToBeInserted atIndex:(NSInteger)index;
+//- (void)removeViewAtIndex:(NSInteger)index;
+//- (void)removeLastView;
+//- (void)updateKeyViews;
+
+#pragma mark NSView overrides
+//- (NSSize)intrinsicContentSize;
+//- (NSRect)rectForPage:(NSInteger)page;
+//- (BOOL)knowsPageRange:(NSRange *)pageRange;
+//- (NSAttributedString *)pageHeader;
+//- (NSAttributedString *)pageFooter;
+//- (NSMutableDictionary *)footerAttributes;
+//- (NSArray *)footerTabStops;
+
+@end
+
+NS_ASSUME_NONNULL_END
+

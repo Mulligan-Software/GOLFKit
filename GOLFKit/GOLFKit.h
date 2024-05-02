@@ -7,7 +7,7 @@
 //
 //	Umbrella header for the GolfKit framework
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 //	GOLFKit Errors
 extern NSString * _Nonnull const GOLFKitErrorDomain;	//	The error domain name
@@ -31,6 +31,7 @@ typedef NS_ENUM(NSInteger, GOLFKitErrorDomainError) {
 
 //	Models
 #import <GOLFKit/GOLFKitTypes.h>
+#import <GOLFKit/GOLFGlobals.h>
 #import <GOLFKit/GOLFUtilities.h>
 
 //	Categories - all targets
@@ -53,7 +54,6 @@ typedef NS_ENUM(NSInteger, GOLFKitErrorDomainError) {
 //	User Interface (Colors, text, localization, etc.)
 #import <GOLFKit/GOLFColors.h>
 #import <GOLFKit/GOLFTeeMarkers.h>
-#import <GOLFKit/GOLFScorecardParts.h>
 
 //	Custom Drawing (not available on the Watch)
 #if !TARGET_OS_WATCH
@@ -80,6 +80,7 @@ typedef NS_ENUM(NSInteger, GOLFKitErrorDomainError) {
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 #import <GOLFKit/GOLFmacOSUtilities.h>
 #import <GOLFKit/GOLFDynamicColor.h>
+#import <GOLFKit/GOLFScorecardParts.h>
 #endif
 
 #define GOLFKIT_BUNDLE_ID			@"com.mulligansoftware.GOLFKit"

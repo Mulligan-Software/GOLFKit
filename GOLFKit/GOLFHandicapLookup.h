@@ -6,7 +6,7 @@
 //  Copyright © 2021 Mulligan Software. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 #import <GOLFKit/GOLFKit.h>
 
 NS_ASSUME_NONNULL_BEGIN

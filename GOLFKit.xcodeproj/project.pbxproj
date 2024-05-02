@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 54;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -70,6 +70,11 @@
 		2954DC082050EBC2008A7306 /* GOLFUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 2954DC052050EBC2008A7306 /* GOLFUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2954DC092050EBC2008A7306 /* GOLFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2954DC062050EBC2008A7306 /* GOLFUtilities.m */; };
 		2954DC0A2050EBC2008A7306 /* GOLFUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 2954DC062050EBC2008A7306 /* GOLFUtilities.m */; };
+		295A44612BCED974000EF5E0 /* GOLFGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = 295A44602BCED974000EF5E0 /* GOLFGlobals.m */; };
+		295A44622BCED974000EF5E0 /* GOLFGlobals.m in Sources */ = {isa = PBXBuildFile; fileRef = 295A44602BCED974000EF5E0 /* GOLFGlobals.m */; };
+		295A44642BCF1B51000EF5E0 /* GOLFGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = 295A44632BCED9C1000EF5E0 /* GOLFGlobals.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		295A44652BCF1B52000EF5E0 /* GOLFGlobals.h in Headers */ = {isa = PBXBuildFile; fileRef = 295A44632BCED9C1000EF5E0 /* GOLFGlobals.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		295D73B02BA0FEFE0062E41A /* GOLFTeeMarkerBronze.icns in Resources */ = {isa = PBXBuildFile; fileRef = 295D73AF2BA0FEFE0062E41A /* GOLFTeeMarkerBronze.icns */; };
 		2962DC982695EF8900365565 /* GOLFHandicapLookup.h in Headers */ = {isa = PBXBuildFile; fileRef = 2962DC962695EF8900365565 /* GOLFHandicapLookup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2962DC992695EF8900365565 /* GOLFHandicapLookup.h in Headers */ = {isa = PBXBuildFile; fileRef = 2962DC962695EF8900365565 /* GOLFHandicapLookup.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		2962DC9A2695EF8900365565 /* GOLFHandicapLookup.m in Sources */ = {isa = PBXBuildFile; fileRef = 2962DC972695EF8900365565 /* GOLFHandicapLookup.m */; };
@@ -80,9 +85,7 @@
 		296CDDA92062F7A4006DBA2C /* GOLFTeeMarkerBlueAndGreen.icns in Resources */ = {isa = PBXBuildFile; fileRef = 296CDDA82062F7A3006DBA2C /* GOLFTeeMarkerBlueAndGreen.icns */; };
 		296F4DDF1F3A40A100781C46 /* GOLFTeeMarkerAzure.icns in Resources */ = {isa = PBXBuildFile; fileRef = 296F4DDE1F3A40A100781C46 /* GOLFTeeMarkerAzure.icns */; };
 		296F4DE21F3A497000781C46 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 296F4DE41F3A497000781C46 /* InfoPlist.strings */; };
-		29705F7F2A449F4C003ED5BC /* GOLFScorecardParts.h in Headers */ = {isa = PBXBuildFile; fileRef = 29705F7E2A449F4C003ED5BC /* GOLFScorecardParts.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29705F802A449F4C003ED5BC /* GOLFScorecardParts.h in Headers */ = {isa = PBXBuildFile; fileRef = 29705F7E2A449F4C003ED5BC /* GOLFScorecardParts.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		29705F822A449F66003ED5BC /* GOLFScorecardParts.m in Sources */ = {isa = PBXBuildFile; fileRef = 29705F812A449F66003ED5BC /* GOLFScorecardParts.m */; };
 		29705F832A449F66003ED5BC /* GOLFScorecardParts.m in Sources */ = {isa = PBXBuildFile; fileRef = 29705F812A449F66003ED5BC /* GOLFScorecardParts.m */; };
 		2971397F2098D5AE00F482BD /* MulliganScoring.m in Sources */ = {isa = PBXBuildFile; fileRef = 2971397E2098D5AE00F482BD /* MulliganScoring.m */; };
 		297139802098D5AE00F482BD /* MulliganScoring.m in Sources */ = {isa = PBXBuildFile; fileRef = 2971397E2098D5AE00F482BD /* MulliganScoring.m */; };
@@ -132,6 +135,7 @@
 		29C6C41920471B7E00EF584C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 29C6C41B20471B7E00EF584C /* InfoPlist.strings */; };
 		29C7847F218362080093857B /* GOLFmacOSUtilities.h in Headers */ = {isa = PBXBuildFile; fileRef = 29C7847D218362080093857B /* GOLFmacOSUtilities.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29C78480218362080093857B /* GOLFmacOSUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 29C7847E218362080093857B /* GOLFmacOSUtilities.m */; };
+		29CF18592BA1F2B900B1ACCF /* GOLFTeeMarkerOrangeAndGreen.icns in Resources */ = {isa = PBXBuildFile; fileRef = 29CF18582BA1F2B900B1ACCF /* GOLFTeeMarkerOrangeAndGreen.icns */; };
 		29DF87AC21C960CB008848D9 /* USGADataServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DF87AA21C960CB008848D9 /* USGADataServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29DF87AD21C960CB008848D9 /* USGADataServices.h in Headers */ = {isa = PBXBuildFile; fileRef = 29DF87AA21C960CB008848D9 /* USGADataServices.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		29DF87AE21C960CB008848D9 /* USGADataServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 29DF87AB21C960CB008848D9 /* USGADataServices.m */; };
@@ -209,6 +213,9 @@
 		2954A56822B7C9FE00F03FAE /* NSString+GOLFExtensions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+GOLFExtensions.m"; sourceTree = "<group>"; };
 		2954DC052050EBC2008A7306 /* GOLFUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOLFUtilities.h; sourceTree = "<group>"; };
 		2954DC062050EBC2008A7306 /* GOLFUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOLFUtilities.m; sourceTree = "<group>"; };
+		295A44602BCED974000EF5E0 /* GOLFGlobals.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOLFGlobals.m; sourceTree = "<group>"; };
+		295A44632BCED9C1000EF5E0 /* GOLFGlobals.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOLFGlobals.h; sourceTree = "<group>"; };
+		295D73AF2BA0FEFE0062E41A /* GOLFTeeMarkerBronze.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = GOLFTeeMarkerBronze.icns; sourceTree = "<group>"; };
 		2962DC962695EF8900365565 /* GOLFHandicapLookup.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOLFHandicapLookup.h; sourceTree = "<group>"; };
 		2962DC972695EF8900365565 /* GOLFHandicapLookup.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOLFHandicapLookup.m; sourceTree = "<group>"; };
 		296411EB204B44CF002A70CB /* GOLFKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLFKit.m; sourceTree = "<group>"; };
@@ -218,8 +225,8 @@
 		296F4DE31F3A497000781C46 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		296F4DE51F3A497900781C46 /* fr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = fr; path = fr.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		296F4DE61F3A497E00781C46 /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		29705F7E2A449F4C003ED5BC /* GOLFScorecardParts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GOLFScorecardParts.h; sourceTree = "<group>"; };
-		29705F812A449F66003ED5BC /* GOLFScorecardParts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GOLFScorecardParts.m; sourceTree = "<group>"; };
+		29705F7E2A449F4C003ED5BC /* GOLFScorecardParts.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GOLFScorecardParts.h; path = ../GOLFKit/GOLFScorecardParts.h; sourceTree = "<group>"; };
+		29705F812A449F66003ED5BC /* GOLFScorecardParts.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GOLFScorecardParts.m; path = ../GOLFKit/GOLFScorecardParts.m; sourceTree = "<group>"; };
 		2971397E2098D5AE00F482BD /* MulliganScoring.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MulliganScoring.m; path = "Mulligan Scoring/MulliganScoring.m"; sourceTree = "<group>"; };
 		297139812098D64000F482BD /* MulliganScoring.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MulliganScoring.h; path = "Mulligan Scoring/MulliganScoring.h"; sourceTree = "<group>"; };
 		29750D6320ADEB8B0082266D /* GOLFTeeMarkerGreenAndWhite.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = GOLFTeeMarkerGreenAndWhite.icns; sourceTree = "<group>"; };
@@ -254,6 +261,7 @@
 		29C6C4242047576800EF584C /* de */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = de; path = de.lproj/GOLFKit.strings; sourceTree = "<group>"; };
 		29C7847D218362080093857B /* GOLFmacOSUtilities.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GOLFmacOSUtilities.h; sourceTree = "<group>"; };
 		29C7847E218362080093857B /* GOLFmacOSUtilities.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GOLFmacOSUtilities.m; sourceTree = "<group>"; };
+		29CF18582BA1F2B900B1ACCF /* GOLFTeeMarkerOrangeAndGreen.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = GOLFTeeMarkerOrangeAndGreen.icns; sourceTree = "<group>"; };
 		29DF87AA21C960CB008848D9 /* USGADataServices.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = USGADataServices.h; path = USGA/USGADataServices.h; sourceTree = "<group>"; };
 		29DF87AB21C960CB008848D9 /* USGADataServices.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = USGADataServices.m; path = USGA/USGADataServices.m; sourceTree = "<group>"; };
 		29E02E3421E64CB80078569C /* NSDate+GOLFExtensions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSDate+GOLFExtensions.h"; sourceTree = "<group>"; };
@@ -335,6 +343,8 @@
 		294140281DD8E2F000CC9605 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				29705F7E2A449F4C003ED5BC /* GOLFScorecardParts.h */,
+				29705F812A449F66003ED5BC /* GOLFScorecardParts.m */,
 				29443571217E3A5700D4595C /* GOLFDynamicColor.h */,
 				29443572217E3A5700D4595C /* GOLFDynamicColor.m */,
 				29C7847B21835CFF0093857B /* Other icns */,
@@ -357,6 +367,7 @@
 				296CDDA82062F7A3006DBA2C /* GOLFTeeMarkerBlueAndGreen.icns */,
 				294140331DDA03E300CC9605 /* GOLFTeeMarkerBlueAndWhite.icns */,
 				294140341DDA03E300CC9605 /* GOLFTeeMarkerBrown.icns */,
+				295D73AF2BA0FEFE0062E41A /* GOLFTeeMarkerBronze.icns */,
 				29279F792152DD7E0025325D /* GOLFTeeMarkerCombo.icns */,
 				2907DB982048AB7C00A04B8F /* GOLFTeeMarkerEU.icns */,
 				298DB4A42470EA63003D6F55 /* GOLFTeeMarkerFour.icns */,
@@ -368,6 +379,7 @@
 				294140381DDA03E300CC9605 /* GOLFTeeMarkerMaroon.icns */,
 				298DB4A22470EA62003D6F55 /* GOLFTeeMarkerOne.icns */,
 				294140391DDA03E300CC9605 /* GOLFTeeMarkerOrange.icns */,
+				29CF18582BA1F2B900B1ACCF /* GOLFTeeMarkerOrangeAndGreen.icns */,
 				296896BB2049AFFF0030630C /* GOLFTeeMarkerPGA.icns */,
 				2941403A1DDA03E300CC9605 /* GOLFTeeMarkerPink.icns */,
 				2941403B1DDA03E300CC9605 /* GOLFTeeMarkerPurple.icns */,
@@ -485,6 +497,8 @@
 				294140621DDB582600CC9605 /* GOLFKitTypes.h */,
 				29E888AF1DCE5B0000C4A63A /* GOLFKit.h */,
 				296411EB204B44CF002A70CB /* GOLFKit.m */,
+				295A44632BCED9C1000EF5E0 /* GOLFGlobals.h */,
+				295A44602BCED974000EF5E0 /* GOLFGlobals.m */,
 				2954DC052050EBC2008A7306 /* GOLFUtilities.h */,
 				2954DC062050EBC2008A7306 /* GOLFUtilities.m */,
 				29C0E3901F9E921F0009E23C /* Categories */,
@@ -506,8 +520,6 @@
 				29E888CE1DCE611600C4A63A /* GOLFColors.m */,
 				29A338061DCE81D70074A064 /* GOLFTeeMarkers.h */,
 				29A338071DCE81D70074A064 /* GOLFTeeMarkers.m */,
-				29705F7E2A449F4C003ED5BC /* GOLFScorecardParts.h */,
-				29705F812A449F66003ED5BC /* GOLFScorecardParts.m */,
 				2944356C217E1CA500D4595C /* GOLFColors.xcassets */,
 				293EC97A217FD3B10031A2EA /* Dropbox.xcassets */,
 				29A338031DCE76E30074A064 /* TeeMarkers.xcassets */,
@@ -557,9 +569,9 @@
 				2988BCFB2078547800C173BE /* GOLFExtensions.h in Headers */,
 				2990FA9420726F7000E7DB45 /* GOLFClubs.h in Headers */,
 				29E02E3621E64CB80078569C /* NSDate+GOLFExtensions.h in Headers */,
-				29705F7F2A449F4C003ED5BC /* GOLFScorecardParts.h in Headers */,
 				29E888CF1DCE611600C4A63A /* GOLFColors.h in Headers */,
 				2954DC072050EBC2008A7306 /* GOLFUtilities.h in Headers */,
+				295A44642BCF1B51000EF5E0 /* GOLFGlobals.h in Headers */,
 				29C0E38C1F9E90580009E23C /* NSNumber+GOLFExtensions.h in Headers */,
 				29A6029220EA95BF006DD2EE /* GOLFiOSUtilities.h in Headers */,
 				29BDD14B214EAEC200446737 /* GOLFCustomTableViewCells.h in Headers */,
@@ -588,6 +600,7 @@
 				29705F802A449F4C003ED5BC /* GOLFScorecardParts.h in Headers */,
 				2954A56A22B7C9FE00F03FAE /* NSString+GOLFExtensions.h in Headers */,
 				2912D763204EE40D00649734 /* GOLFHandicapping.h in Headers */,
+				295A44652BCF1B52000EF5E0 /* GOLFGlobals.h in Headers */,
 				29A338021DCE74600074A064 /* GOLFKit.h in Headers */,
 				29C7847F218362080093857B /* GOLFmacOSUtilities.h in Headers */,
 				29290A6B20727B88005A0E3F /* GOLFScoring.h in Headers */,
@@ -661,7 +674,8 @@
 		29E888A31DCE5B0000C4A63A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1400;
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1530;
 				ORGANIZATIONNAME = "Mulligan Software";
 				TargetAttributes = {
 					29E888AB1DCE5B0000C4A63A = {
@@ -767,6 +781,7 @@
 				298DB4A92470EA63003D6F55 /* GOLFTeeMarkerThree.icns in Resources */,
 				29436C652055B5F90080E0FE /* GOLFCountries.plist in Resources */,
 				29164283204C3BB700E87478 /* GenericTeeMarkers.xcassets in Resources */,
+				29CF18592BA1F2B900B1ACCF /* GOLFTeeMarkerOrangeAndGreen.icns in Resources */,
 				294140551DDA03E300CC9605 /* GOLFTeeMarkerPurple.icns in Resources */,
 				2941405A1DDA03E300CC9605 /* GOLFTeeMarkerSilver.icns in Resources */,
 				2941405D1DDA03E300CC9605 /* GOLFTeeMarkerUSA.icns in Resources */,
@@ -778,6 +793,7 @@
 				294140591DDA03E300CC9605 /* GOLFTeeMarkerRedAndYellow.icns in Resources */,
 				29C6C41920471B7E00EF584C /* InfoPlist.strings in Resources */,
 				296F4DDF1F3A40A100781C46 /* GOLFTeeMarkerAzure.icns in Resources */,
+				295D73B02BA0FEFE0062E41A /* GOLFTeeMarkerBronze.icns in Resources */,
 				2941404C1DDA03E300CC9605 /* GOLFTeeMarkerBlue.icns in Resources */,
 				294140521DDA03E300CC9605 /* GOLFTeeMarkerMaroon.icns in Resources */,
 				2941405B1DDA03E300CC9605 /* GOLFTeeMarkerTan.icns in Resources */,
@@ -797,6 +813,7 @@
 				29A6029320EA95BF006DD2EE /* GOLFiOSUtilities.m in Sources */,
 				2992499E2235559500504569 /* GOLFWagering.m in Sources */,
 				2954A56B22B7C9FE00F03FAE /* NSString+GOLFExtensions.m in Sources */,
+				295A44612BCED974000EF5E0 /* GOLFGlobals.m in Sources */,
 				2971397F2098D5AE00F482BD /* MulliganScoring.m in Sources */,
 				296411EC204B44CF002A70CB /* GOLFKit.m in Sources */,
 				29A3380A1DCE81D70074A064 /* GOLFTeeMarkers.m in Sources */,
@@ -808,7 +825,6 @@
 				29290A6C20727B88005A0E3F /* GOLFScoring.m in Sources */,
 				2990FA9620726F7000E7DB45 /* GOLFClubs.m in Sources */,
 				2912D75F204EE3C800649734 /* GOLFHandicapping.m in Sources */,
-				29705F822A449F66003ED5BC /* GOLFScorecardParts.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -836,6 +852,7 @@
 				2954DC0A2050EBC2008A7306 /* GOLFUtilities.m in Sources */,
 				29290A6D20727B88005A0E3F /* GOLFScoring.m in Sources */,
 				2962DC9B2695EF8900365565 /* GOLFHandicapLookup.m in Sources */,
+				295A44622BCED974000EF5E0 /* GOLFGlobals.m in Sources */,
 				29443576217E3A5700D4595C /* GOLFDynamicColor.m in Sources */,
 				293EC978217FB5920031A2EA /* NSColor+GOLFExtensions.m in Sources */,
 				29E02E3921E64CB80078569C /* NSDate+GOLFExtensions.m in Sources */,
@@ -934,6 +951,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -997,6 +1015,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -1026,12 +1045,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "GOLFKit (iOS)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 12.4;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu99 gnu++11";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mulligansoftware.GOLFKit;
 				PRODUCT_NAME = GOLFKit;
 				SDKROOT = iphoneos;
@@ -1055,12 +1080,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "GOLFKit (iOS)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MARKETING_VERSION = 12.4;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu99 gnu++11";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mulligansoftware.GOLFKit;
 				PRODUCT_NAME = GOLFKit;
 				SDKROOT = iphoneos;
@@ -1079,7 +1110,11 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				INFOPLIST_FILE = GOLFKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mulligansoftware.GOLFKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1093,7 +1128,11 @@
 				DEAD_CODE_STRIPPING = YES;
 				DEVELOPMENT_TEAM = T439NGX64L;
 				INFOPLIST_FILE = GOLFKitTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				PRODUCT_BUNDLE_IDENTIFIER = com.mulligansoftware.GOLFKitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1114,12 +1153,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "GOLFKit (OS X)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MARKETING_VERSION = 10.14;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu99 gnu++11";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mulligansoftware.GOLFKit;
 				PRODUCT_NAME = GOLFKit;
 				REZ_SEARCH_PATHS = "";
@@ -1142,12 +1187,18 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = YES;
 				FRAMEWORK_VERSION = A;
 				INFOPLIST_FILE = "GOLFKit (OS X)/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
 				MACOSX_DEPLOYMENT_TARGET = 10.14;
 				MARKETING_VERSION = 10.14;
+				MODULE_VERIFIER_SUPPORTED_LANGUAGE_STANDARDS = "gnu99 gnu++11";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mulligansoftware.GOLFKit;
 				PRODUCT_NAME = GOLFKit;
 				REZ_SEARCH_PATHS = "";

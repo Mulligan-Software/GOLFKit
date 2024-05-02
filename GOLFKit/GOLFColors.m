@@ -57,13 +57,7 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 
 #elif TARGET_OS_MAC
 
-	if (@available (macOS 10.13, *)) {
-		return [GOLFColor GOLFFactoryEagleColor];
-	}
-	if (@available (macOS 10.10, *)) {
-		return (GOLFColor *)[[NSColor systemPurpleColor] colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
-	}
-	return [GOLFColor purpleColor];
+	return [GOLFColor GOLFFactoryEagleColor];
 	
 #endif
 }
@@ -75,13 +69,7 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 
 #elif TARGET_OS_MAC
 
-	if (@available (macOS 10.13, *)) {
-		return [GOLFColor GOLFFactoryBirdieColor];
-	}
-	if (@available (macOS 10.10, *)) {
-		return (GOLFColor *)[[NSColor systemRedColor] colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
-	}
-	return [GOLFColor redColor];
+	return [GOLFColor GOLFFactoryBirdieColor];
 	
 #endif
 }
@@ -93,13 +81,7 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 
 #elif TARGET_OS_MAC
 
-	if (@available (macOS 10.13, *)) {
-		return [GOLFColor GOLFFactoryParColor];
-	}
-	if (@available (macOS 10.10, *)) {
-		return (GOLFColor *)[[NSColor systemBlueColor] colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
-	}
-	return [GOLFColor blueColor];
+	return [GOLFColor GOLFFactoryParColor];
 	
 #endif
 }
@@ -114,10 +96,7 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 
 #elif TARGET_OS_MAC
 
-	if (@available (macOS 10.13, *)) {
-		return [GOLFColor GOLFFactoryBogeyColor];
-	}
-	return [GOLFColor blackColor];
+	return [GOLFColor GOLFFactoryBogeyColor];
 	
 #endif
 }
@@ -152,10 +131,7 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 
 #elif TARGET_OS_MAC
 
-	if (@available (macOS 10.13, *)) {
-		return [GOLFColor textColor];
-	}
-	return [GOLFColor whiteColor];
+	return [GOLFColor textColor];
 	
 #endif
 }
@@ -171,13 +147,7 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 
 #elif TARGET_OS_MAC
 
-	if (@available(macOS 10.13, *)) {
-		return [GOLFColor colorNamed:@"GOLFFactoryBirdieColor" bundle:GOLFKitBundle()];
-	}
-	if (@available (macOS 10.10, *)) {
-		return (GOLFColor *)[NSColor systemRedColor];
-	}
-	return [GOLFDynamicColor dynamicColorWithAquaColor:[NSColor redColor] darkAquaColor:nil];
+	return [GOLFColor colorNamed:@"GOLFFactoryBirdieColor" bundle:GOLFKitBundle()];
 	
 #endif
 }
@@ -192,13 +162,7 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 
 #elif TARGET_OS_MAC
 
-	if (@available(macOS 10.13, *)) {
-		return [GOLFColor colorNamed:@"GOLFFactoryBogeyColor" bundle:GOLFKitBundle()];
-	}
-//	if (@available (macOS 10.10, *)) {
-//		return (GOLFColor *)[NSColor textColor];
-//	}
-	return [GOLFDynamicColor dynamicColorWithAquaColor:[GOLFColor blackColor] darkAquaColor:[GOLFColor whiteColor]];
+	return [GOLFColor colorNamed:@"GOLFFactoryBogeyColor" bundle:GOLFKitBundle()];
 	
 #endif
 }
@@ -213,13 +177,7 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 
 #elif TARGET_OS_MAC
 
-	if (@available(macOS 10.13, *)) {
-		return [GOLFColor colorNamed:@"GOLFFactoryEagleColor" bundle:GOLFKitBundle()];
-	}
-	if (@available (macOS 10.10, *)) {
-		return (GOLFColor *)[NSColor systemPurpleColor];
-	}
-	return [GOLFDynamicColor dynamicColorWithAquaColor:[NSColor purpleColor] darkAquaColor:nil];
+	return [GOLFColor colorNamed:@"GOLFFactoryEagleColor" bundle:GOLFKitBundle()];
 	
 #endif
 }
@@ -234,10 +192,7 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 
 #elif TARGET_OS_MAC
 
-	if (@available(macOS 10.13, *)) {
-		return [GOLFColor colorNamed:@"GOLFFactoryErrorHighlightColor" bundle:GOLFKitBundle()];
-	}
-	return [GOLFDynamicColor dynamicColorWithAquaColor:[NSColor yellowColor] darkAquaColor:nil];
+	return [GOLFColor colorNamed:@"GOLFFactoryErrorHighlightColor" bundle:GOLFKitBundle()];
 	
 #endif
 }
@@ -252,13 +207,8 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 
 #elif TARGET_OS_MAC
 
-	if (@available(macOS 10.13, *)) {
-		return [GOLFColor colorNamed:@"GOLFFactoryMatchAColor" bundle:GOLFKitBundle()];
-	}
-	if (@available (macOS 10.10, *)) {
-		return (GOLFColor *)[NSColor systemBlueColor];
-	}
-	return [GOLFDynamicColor dynamicColorWithAquaColor:[NSColor blueColor] darkAquaColor:nil];
+	return [GOLFColor colorNamed:@"GOLFFactoryMatchAColor" bundle:GOLFKitBundle()];
+
 #endif
 }
 
@@ -272,13 +222,7 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 
 #elif TARGET_OS_MAC
 
-	if (@available(macOS 10.13, *)) {
-		return [GOLFColor GOLFFactoryMatchAColor];
-	}
-	if (@available (macOS 10.10, *)) {
-		return (GOLFColor *)[NSColor systemBlueColor];
-	}
-	return [GOLFDynamicColor dynamicColorWithAquaColor:[NSColor blueColor] darkAquaColor:nil];
+	return [GOLFColor GOLFFactoryMatchAColor];
 	
 #endif
 }
@@ -293,13 +237,7 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 
 #elif TARGET_OS_MAC
 
-	if (@available(macOS 10.13, *)) {
-		return [GOLFColor colorNamed:@"GOLFFactoryMatchBColor" bundle:GOLFKitBundle()];
-	}
-	if (@available (macOS 10.10, *)) {
-		return (GOLFColor *)[NSColor systemRedColor];
-	}
-	return [GOLFDynamicColor dynamicColorWithAquaColor:[NSColor redColor] darkAquaColor:nil];
+	return [GOLFColor colorNamed:@"GOLFFactoryMatchBColor" bundle:GOLFKitBundle()];
 	
 #endif
 }
@@ -314,13 +252,7 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 
 #elif TARGET_OS_MAC
 
-	if (@available(macOS 10.13, *)) {
-		return [GOLFColor GOLFFactoryMatchBColor];
-	}
-	if (@available (macOS 10.10, *)) {
-		return (GOLFColor *)[NSColor systemRedColor];
-	}
-	return [GOLFDynamicColor dynamicColorWithAquaColor:[NSColor redColor] darkAquaColor:nil];
+	return [GOLFColor GOLFFactoryMatchBColor];
 	
 #endif
 }
@@ -335,13 +267,7 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 
 #elif TARGET_OS_MAC
 
-	if (@available(macOS 10.13, *)) {
-		return [GOLFColor colorNamed:@"GOLFFactoryParColor" bundle:GOLFKitBundle()];
-	}
-	if (@available (macOS 10.10, *)) {
-		return (GOLFColor *)[NSColor systemBlueColor];
-	}
-	return [GOLFDynamicColor dynamicColorWithAquaColor:[NSColor blueColor] darkAquaColor:nil];
+	return [GOLFColor colorNamed:@"GOLFFactoryParColor" bundle:GOLFKitBundle()];
 	
 #endif
 }
@@ -356,13 +282,7 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 
 #elif TARGET_OS_MAC
 
-	if (@available(macOS 10.13, *)) {
-		return [GOLFColor colorNamed:@"GOLFFactoryPeoriaBackgroundColor" bundle:GOLFKitBundle()];
-	}
-	if (@available (macOS 10.10, *)) {
-		return (GOLFColor *)[NSColor systemBlueColor];
-	}
-	return [GOLFDynamicColor dynamicColorWithAquaColor:[NSColor blueColor] darkAquaColor:nil];
+	return [GOLFColor colorNamed:@"GOLFFactoryPeoriaBackgroundColor" bundle:GOLFKitBundle()];
 	
 #endif
 }
@@ -377,10 +297,7 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 
 #elif TARGET_OS_MAC
 
-	if (@available(macOS 10.13, *)) {
-		return [GOLFColor colorNamed:@"GOLFFactoryPlottingPrimaryColor" bundle:GOLFKitBundle()];
-	}
-	return [GOLFDynamicColor dynamicColorWithAquaColor:[NSColor colorWithCalibratedRed:0.0 green:(0.5) blue:0.0 alpha:1.0] darkAquaColor:nil];
+	return [GOLFColor colorNamed:@"GOLFFactoryPlottingPrimaryColor" bundle:GOLFKitBundle()];
 	
 #endif
 }
@@ -395,10 +312,7 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 
 #elif TARGET_OS_MAC
 
-	if (@available(macOS 10.13, *)) {
-		return [GOLFColor colorNamed:@"GOLFFactoryPlottingSecondaryColor" bundle:GOLFKitBundle()];
-	}
-	return [GOLFDynamicColor dynamicColorWithAquaColor:[NSColor blackColor] darkAquaColor:[NSColor whiteColor]];
+	return [GOLFColor colorNamed:@"GOLFFactoryPlottingSecondaryColor" bundle:GOLFKitBundle()];
 	
 #endif
 }
@@ -413,13 +327,7 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 
 #elif TARGET_OS_MAC
 
-	if (@available(macOS 10.13, *)) {
-		return [GOLFColor colorNamed:@"GOLFFactorySkinsBackgroundColor" bundle:GOLFKitBundle()];
-	}
-	if (@available (macOS 10.10, *)) {
-		return (GOLFColor *)[NSColor systemGreenColor];
-	}
-	return [GOLFDynamicColor dynamicColorWithAquaColor:[NSColor greenColor] darkAquaColor:nil];
+	return [GOLFColor colorNamed:@"GOLFFactorySkinsBackgroundColor" bundle:GOLFKitBundle()];
 	
 #endif
 }

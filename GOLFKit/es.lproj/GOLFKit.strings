@@ -239,6 +239,7 @@
 "TERM_PAR" = "par";
 "TERM_PAR_PLURAL" = "pars";
 "TERM_PARK" = "park";	//	like a "golf park"
+"TERM_PENDING" = "pendiente";
 "TERM_PEORIA" = "Peoria";
 "TERM_PHONE" = "teléfono";
 "TERM_PLACE" = "lugar";	//	like "first place" or "placement"
@@ -390,6 +391,7 @@
 "GOLF_TEE_COLOR_NAME_PINK" = "Rosado";
 "GOLF_TEE_COLOR_NAME_TEAL" = "Trullo";
 "GOLF_TEE_COLOR_NAME_AZURE" = "Azur";
+"GOLF_TEE_COLOR_NAME_BRONZE" = "Bronce";
 "GOLF_TEE_COLOR_NAME_BLUE_AND_WHITE" = "Azul y Blanco";
 "GOLF_TEE_COLOR_NAME_RED_AND_YELLOW" = "Rojo y Amarillo";
 "GOLF_TEE_COLOR_NAME_YELLOW_AND_BLUE" = "Amarillo y Azul";
@@ -402,6 +404,7 @@
 "GOLF_TEE_COLOR_NAME_GREEN_AND_RED" = "Verde y Rojo";
 "GOLF_TEE_COLOR_NAME_GREEN_AND_WHITE" = "Verde y Blanco";
 "GOLF_TEE_COLOR_NAME_BLACK_AND_BLUE" = "Negro y Azul";
+"GOLF_TEE_COLOR_NAME_ORANGE_AND_GREEN" = "Anaranjado y Verde";
 "GOLF_TEE_COLOR_NAME_CUSTOM" = "Personalizado";
 "GOLF_TEE_COLOR_NAME_USA" = "EE.UU.";	//	Custom tee
 "GOLF_TEE_COLOR_NAME_EU" = "UE.";		//	Custom tee
@@ -429,6 +432,8 @@
 "HANDICAP_METHOD_USGA" = "Sistema Handicap USGA";
 "HANDICAP_METHOD_WHS" = "Sistema Handicap Mundial";
 "HANDICAP_METHOD_WHS_ABBR" = "SHM";	//	Sistema Handicap Mundial
+"HANDICAP_METHOD_WHS2020" = "Sistema Handicap Mundial (2020)";
+"HANDICAP_METHOD_WHS2020_ABBR" = "SHM (2020)";
 "HANDICAP_ASSOCIATION_AGU" = "Golf Australia";
 "HANDICAP_ASSOCIATION_CONGU" = "Consejo de Uniones Nacionales de Golf";
 "HANDICAP_ASSOCIATION_EGA" = "Asociación Europea de Golf";
@@ -950,6 +955,7 @@
 "TITLE_USERS_GUIDE_FOUND" = "Guía del Usuario se ha encontrado";
 "TITLE_USERS_GUIDE_NOT_FOUND" = "Ningún archivo Guía del Usuario se ha encontrado";
 "TITLE_WICKERS" = "Wickers";
+"TITLE_WIN/LOSE/DRAW_ABBR" = "G/P/E";	//	ganen, pierdan o empaten
 "TITLE_WITH_SCORE" = "con resultado";
 "TITLE_WOLF" = "Wolf";
 "TITLE_WOMENS_HANDICAP" = "Handicap - Damas";
@@ -1406,6 +1412,7 @@
 "TOOLTIP_ROUND_NET_SCORE" = "Puntaje neto";
 "TOOLTIP_ROUND_TOTAL_SCORE" = "Puntaje total";
 "TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - utilizado\nH - a casa\nA - allá\nC - competencia\nN - 9-hoyos combinados\nS - stroke play\nM - match play\nI - incompleta\nE - excepcional\nP - pena";
+"TOOLTIP_ROUNDS_MODIFIER_WHS2020" = "* - utilizado\nH - a casa\nA - allá\nC - competencia\nN - 9-hoyos combinados\nS - stroke play\nM - match play\nI - incompleta\nE - excepcional\nP - pena";
 "TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - utilizado\nA - allá\nC - combinado\nT - torneo\nP - pena";
 "TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - utilizado\nA - allá\nC - combinado\nT - torneo\nP - pena";
 "TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - utilizado\nH - a casa\nA - allá\nC - competencia\nN - 9-hoyos combinados\nS - stroke play\nM - match play\nI - incompleta\nE - excepcional\nP - pena";

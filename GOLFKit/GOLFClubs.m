@@ -14,7 +14,7 @@
 //NSInteger EGACategoryFromEGAHandicap(float EGAHandicap, BOOL playerIsFemale);
 
 //	Globals
-//GOLFHandicapAuthority * const GOLFHandicapAuthorityUSGA			= @"USGA";
+//GOLFHandicapAuthority * const GOLFHandicapAuthorityWHS			= @"WHS";
 
 
 //=================================================================

@@ -6,18 +6,18 @@
 //  Copyright © 2018 Mulligan Software. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 #import <GOLFKit/GOLFKitTypes.h>
 
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 #define GOLFImage UIImage
 
 #elif TARGET_OS_MAC
 
-@import Cocoa;
+#import <Cocoa/Cocoa.h>
 
 #define GOLFImage NSImage
 
@@ -94,8 +94,14 @@ NSString * NSStringFromDragAndDropDelimiterType(GOLFDragAndDropDelimiterType del
 NSString * NSStringFromPlayingHandicap(GOLFPlayingHandicap playingHandicap);
 //	The Playing Handicap or 'kNotAPlayingHandicap'
 
+NSString * NSStringFromUnroundedPlayingHandicap(GOLFUnroundedPlayingHandicap unroundedPlayingHandicap);
+//	The unrounded Playing Handicap or 'kNotAnUnroundedPlayingHandicap'
+
 NSString * NSStringFromHandicapIndex(GOLFHandicapIndex handicapIndex);
 //	The Handicap Index or 'kNotAHandicapIndex'
+
+NSString * NSStringFromHandicapAllowance(GOLFHandicapAllowance handicapAllowance);
+//	The Handicap Allowance or 'kNotAHandicapAllowance'
 
 NSString * NSStringForClickOrTap(void);
 //	Localized 'click' or 'tap'

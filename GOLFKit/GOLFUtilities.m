@@ -52,10 +52,10 @@ NSDictionary * GOLFCountriesInfo(void) {
 	//	Each country dictionary is indexed by its universal country code (US, UK, JP, etc.) or sub-code (UK-EN, UK-SC, etc.)
 	//	Key				Type						Description
 	//	-------------	-------------------------	------------------------------------------
-	//	countryCode	NSString *					Universal country postal code or sub-code
-	//	countryName	NSString *					unlocalized (en) country name
-	//	authority		GOLFHandicapAuthority *	Handicapping authority mnemonic
-	//	association	NSString *					Localized name of the national golf association
+	//	countryCode		NSString *					Universal country postal code or sub-code
+	//	countryName		NSString *					unlocalized (en) country name
+	//	authority		GOLFHandicapAuthority *		Handicapping authority mnemonic
+	//	association		NSString *					Localized name of the national golf association
 	//	URL				NSString *					Web site URL of national golf association
 	
 	return [NSDictionary dictionaryWithContentsOfFile:[GOLFKitBundle() pathForResource:@"GOLFCountries" ofType:@"plist"]];
@@ -70,11 +70,11 @@ NSDictionary * GOLFCountriesInfoForCountryCode(NSString *countryCode) {
 	
 	//	Key				Type						Description
 	//	-------------	-------------------------	--------------------------------------------
-	//	countryCode	NSString *					Country code from locale date on this device
-	//	countryName	NSString *					The localized name of the country
-	//	association	NSString *					The name of the country's golf association
+	//	countryCode		NSString *					Country code from locale date on this device
+	//	countryName		NSString *					The localized name of the country
+	//	association		NSString *					The name of the country's golf association
 	//	URL				NSString *					The URL of the golf association
-	//	authority		GOLFHandicapAuthority *	The default golf authority for handicapping in this country
+	//	authority		GOLFHandicapAuthority *		The default golf authority for handicapping in this country
 	//	states			NSArray *					Optional array of states dictionaries for this country - postalCode, stateName
 	
 //	NSDictionary *rootDict = [NSDictionary dictionaryWithContentsOfFile:[GOLFKitBundle() pathForResource:@"GOLFCountries" ofType:@"plist"]];
@@ -122,21 +122,22 @@ NSDictionary * GOLFHomeCountryInfo(void) {
 	
 	//	Key				Type					Description
 	//	-------------	---------------------	--------------------------------------------
-	//	countryCode	NSString *				Country code from locale date on this device
-	//	countryName	NSString *				The localized name of the country
-	//	association	NSString *				The name of the country's golf association
+	//	countryCode		NSString *				Country code from locale date on this device
+	//	countryName		NSString *				The localized name of the country
+	//	association		NSString *				The name of the country's golf association
 	//	URL				NSString *				The URL of the golf association
 	//	authority		GOLFHandicapAuthority	The default golf authority for handicapping in this country
 	//	states			NSArray *				Optional array of states dictionaries for this country - postalCode, stateName
 	
 	NSLocale *ourLocale = [NSLocale autoupdatingCurrentLocale];
-	NSString *countryCode = @"US";
-	if (@available(macOS 10.12, iOS 10.0, *)) {
-		countryCode = ourLocale.countryCode;
-	} else {
-		NSDictionary *localeDict = [NSLocale componentsFromLocaleIdentifier:[ourLocale localeIdentifier]];
-		countryCode = [localeDict objectForKey:NSLocaleCountryCode];
-	}
+//	NSString *countryCode = @"US";
+	NSString *countryCode = ourLocale.countryCode;
+//	if (@available(macOS 10.12, iOS 10.0, *)) {
+//		countryCode = ourLocale.countryCode;
+//	} else {
+//		NSDictionary *localeDict = [NSLocale componentsFromLocaleIdentifier:[ourLocale localeIdentifier]];
+//		countryCode = [localeDict objectForKey:NSLocaleCountryCode];
+//	}
 	
 	return GOLFCountriesInfoForCountryCode(countryCode);
 }
@@ -231,6 +232,19 @@ NSString * NSStringFromPlayingHandicap(GOLFPlayingHandicap playingHandicap) {
 }
 
 //=================================================================
+//	NSStringFromUnroundedPlayingHandicap(unroundedPlayingHandicap)
+//=================================================================
+NSString * NSStringFromUnroundedPlayingHandicap(GOLFUnroundedPlayingHandicap unroundedPlayingHandicap) {
+	if (unroundedPlayingHandicap == kNotAnUnroundedPlayingHandicap) {
+		return @"kNotAnUnroundedPlayingHandicap";
+	} else if (unroundedPlayingHandicap < 0.0) {
+		return [NSString stringWithFormat:@"+%1.2f", -unroundedPlayingHandicap];
+	} else {
+		return [NSString stringWithFormat:@"%1.2f", unroundedPlayingHandicap];
+	}
+}
+
+//=================================================================
 //	NSStringFromHandicapIndex(handicapIndex)
 //=================================================================
 NSString * NSStringFromHandicapIndex(GOLFHandicapIndex handicapIndex) {
@@ -240,6 +254,17 @@ NSString * NSStringFromHandicapIndex(GOLFHandicapIndex handicapIndex) {
 		return [NSString localizedStringWithFormat:@"%1.1f", handicapIndex];
 	} else {
 		return [NSString localizedStringWithFormat:@"+%1.1f", -handicapIndex];
+	}
+}
+
+//=================================================================
+//	NSStringFromHandicapAllowance(handicapAllowance)
+//=================================================================
+NSString * NSStringFromHandicapAllowance(GOLFHandicapAllowance handicapAllowance) {
+	if (handicapAllowance == kNotAHandicapAllowance) {
+		return @"kNotAHandicapAllowance";
+	} else {
+		return [NSString stringWithFormat:@"%1.1f", handicapAllowance];
 	}
 }
 

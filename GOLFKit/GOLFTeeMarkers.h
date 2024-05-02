@@ -34,6 +34,9 @@ typedef NS_ENUM(NSUInteger, GOLFTeeMarkerImageSize) {
         GOLFTeeMarkerImageSizeLarge		= GOLFTeeMarkerImageSize64pt
 };
 
+@protocol GOLFTeeColorInfoSource;
+
+
 NSArray * _Nonnull GOLFStandardTeeColorArray(void);
 //	returns an array of tee color dictionaries, containing:
 //	key					data
@@ -48,7 +51,8 @@ NSArray * _Nonnull GOLFStandardTeeColorArray(void);
 //	secondColorIndex	NSNumber teeColorIndex of the other of the combination's solid colors (when isComboColor exists and is TRUE)
 //
 //	You are generally not required to keep a copy of this array, as a static version is built when first needed.  If you request
-//	the array, you will receive a copy of it that you are free to discard after use.
+//	the array, you will receive a copy of it that you are free to use, modify, enhance (see GOLFComboTeeInfoSource protocol) and
+//	discard after use.
 
 GOLFColor * _Nonnull GOLFTeeColorFromTeeColorIndex(GOLFTeeColorIndex proposedColorIndex);
 //	Returns the NSColor (macOS) or UIColor (iOS) that best represents the tee indicated by the proposedColorIndex
@@ -90,3 +94,45 @@ GOLFTeeImage * _Nonnull GOLFLargeTeeMarkerImageFromTeeColorIndex(GOLFTeeColorInd
 //	When teeColorIndex is GOLFTeeColorCombo, GOLFTeeColorAdd or GOLFTeeColorAll, returns the special tee icon
 //	When teeColorIndex is GOLFTeeColorCustom, returns a custom-colored (teeColor) tee icon
 //	If teeColorIndex is not any of the above, returns the special "Generic" tee icon
+
+NSDictionary * _Nullable GOLFTeeColorDictionaryForTeeColorIndex(GOLFTeeColorIndex teeColorIndex);
+//	Returns the NSDictionary entry in GOLFStandardTeeColorArray() that matches the provided teeColorIndex
+//	If there is no such NSDictionary, return nil.
+
+
+@protocol GOLFTeeColorInfoSource <NSObject>
+
+@optional
+
+- (NSDictionary * _Nonnull)GOLFTeeColorInfoFromStandardTeeColorItem:(NSDictionary * _Nonnull)comboDict;
+//	Key					Type			Description
+//	--------------		----------		------------------------------------------------------------------------------------------
+//	teeColorIndex		NSNumber		unsigned integer representing the tee color
+//	teeColor			GOLFColor		NSColor (macOS) or UIColor (iOS) representing visual equivalent for display or tinting
+//	teeColorName		NSString		localized name of the color (ie: "Vert", "Black & White", "Rojo y Blanco")@"teeColorName",
+//	teeIconName			NSString		name of the tee icon (.ICNS), like "TeeMarkerBlueAndWhite"
+//	teeImageName		NSString		name of the tee image (.PNG), like "tee_marker_blueandwhite" (excluding any size or scale identification)
+//	isComboColor		NSNumber		optional boolean TRUE if entry represents a color combination (two colors)
+//	firstColorIndex		NSNumber		teeColorIndex of one of the combination's solid colors (when isComboColor is TRUE)
+//	secondColorIndex	NSNumber		teeColorIndex of the other of the combination's solid colors (when isComboColor is TRUE)
+//	frontColoration		NSString 		optional 9 characters indicating (1) use 1st color, (2) use 2nd color, (3) use both colors (like totals)
+//	backColoration		NSString 		optional 9 characters indicating (1) use 1st color, (2) use 2nd color, (3) use both colors (like totals)
+//	course				id				optional golf course which has tees configured for combo coloration
+//	round				id				optional round which might require special tee color presentation
+//	tee					id				The golf tee associated with the original comboDict or its calibrated equivalent
+//
+//	Passed a standard combo teeColor NSDictionary or the "Combo" teeColor NSDictionary,
+//	returns (from a course, side, tee, round, or roundSide) an enhanced NSDictionary identifying any of those objects,
+//	the data derived from the original teeColor dictionary (the "combo" tee), course, round, sides or tee itself known to the GOLFComboTeeInfoSource
+//	and the StandardTeeColor NSDictionary items of the 2 solid color tees that best match the yardage of the master Combo (or "Combo") tee
+//	represented by comboDict.
+//
+//	That is, if the comboDict identifies as the "Red & White" tees (which the standard says will use the Red and White
+//	solid tees for hole-by-hole recognition) or comboDict designates a "Combo" tee, the course or round can tell us which
+//	ACTUAL solid color tees have yardages that best match 2 solid-colored tees (which might not be red and/or white or
+//	could be red AND white at certain holes).
+//	In the returned "calibrated" combo tee color NSDictionary, the "firstColorIndex" and "secondColorIndex" items will
+//	be set to corrected teeColor references, the "isComboColor" boolean will be set to TRUE and the display mapping for
+//	18 holes (color designator) will be provided by the GOLFComboTeeInfoSource if possible.
+
+@end

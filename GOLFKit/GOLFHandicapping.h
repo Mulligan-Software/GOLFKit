@@ -6,26 +6,24 @@
 //  Copyright © 2018 Mulligan Software. All rights reserved.
 //
 
-@import Foundation;
-@import CoreGraphics;
+#import <Foundation/Foundation.h>
+#import <CoreGraphics/CoreGraphics.h>
 #import <GOLFKit/GOLFKit.h>
 
 //	Misc constants
-#define	kGOLFHandicapMethodsNumberOfCertifiable		6			//	USGA (1) through WHS (6), total of 6
+#define	kGOLFHandicapMethodsNumberOfCertifiable		7			//	USGA (1) through WHS (6), WHS2020 (10), total of 7
 #define	kGOLFHandicapMethodsNumberOfMiscellaneous	3			//	Mulligan (20) through Second-Best (22), total of 3
 //													---
-#define kGOLFHandicapNumberOfMethods				9			//	Total number of handicapping methods
-
-#define GOLFDefaultSpecifiedPercentageAllowance		80			//	Default percentage for SpecifiedPercentAllowanceType
-#define GOLFDefaultUnratedTeeSLOPERating			113			//	Default SLOPE rating for unrated tee
+#define kGOLFHandicapNumberOfMethods				10			//	Total number of handicapping methods
 
 #define kNotAHandicapIndex							-999.0		//	No-value for GOLFHandicapIndex
 #define kNotAnOfficialHandicap						-999.0		//	No-value for GOLFOfficialHandicap
 #define kNotAPlayingHandicap						-999		//	No-value for GOLFPlayingHandicap
+#define kNotAnUnroundedPlayingHandicap				-999.0		//	No-value for GOLFUnroundedPlayingHandicap
 #define kNotAHandicapGrade							-999		//	No-value for GOLFHandicapGrade
 #define kNotHandicapStrokes							-999		//	No-value for GOLFHandicapStrokes
 #define kNotAHandicapAllowance						-999.0		//	No-value for GOLFHandicapAllowance
-#define kNotAHandicapDifferential					-999.0		//	No-value for GOLFHandicapDIfferential
+#define kNotAHandicapDifferential					-999.0		//	No-value for GOLFHandicapDifferential
 #define kMaximumStrokeControlLimit					999			//	Highest limit for stroke control of a GOLFScore
 #define kNotAPlayingConditionAdjustment				-999.0		//	No-value for GOLFPlayingConditionAdjustment
 
@@ -52,7 +50,7 @@ typedef NS_OPTIONS(NSUInteger, GOLFRoundHandicapOption) {
 	GOLFRoundHandicapOptionUsed						= 1 << 0,		//	(1)		Round used in handicap latest calculation (ie: one of the best n of last n+)
 	GOLFRoundHandicapOptionEligible					= 1 << 1,		//	(2)		Round is identified as eligible for use/review in calculations (stats and handicapping)
 	GOLFRoundHandicapOptionTournament				= 1 << 2,		//	(4)		Round identified as a "tournament" or "competition" (vs. "general play") round
-	GOLFRoundHandicapOptionCombined					= 1 << 3,		//	(8)		18-hole round constructed from two 9-hole rounds
+	GOLFRoundHandicapOptionCombined					= 1 << 3,		//	(8)		18-hole round constructed from two 9-hole rounds or 9-hole side and estimated holes
 	GOLFRoundHandicapOption9Holes					= 1 << 4,		//	(16)	9-hole round
 	GOLFRoundHandicapOptionAway						= 1 << 5,		//	(32)	Round identified as played "away" - not at home course
 	GOLFRoundHandicapOptionHome						= 1 << 6,		//	(64)	Round identified as played at home course (not exclusive of GOLFRoundHandicapOptionAway)
@@ -61,7 +59,7 @@ typedef NS_OPTIONS(NSUInteger, GOLFRoundHandicapOption) {
 	GOLFRoundHandicapOptionInternet					= 1 << 9,		//	(512)	Round recorded/entered via the internet
 	GOLFRoundHandicapOptionPenalty					= 1 << 10,		//	(1024)	Round identified as a "penalty" round - may have adjusted handicap
 	GOLFRoundHandicapOptionDiffAdjusted				= 1 << 11,		//	(2048)	Round differential has been adjusted (reduced or increased)
-	GOLFRoundHandicapOptionSpare12					= 1 << 12,		//	(4096)
+	GOLFRoundHandicapOptionHasEstimatedScore		= 1 << 12,		//	(4096)	Round has Estimated Score (differential) determined for missing hole scores
 	GOLFRoundHandicapOptionSpare13					= 1 << 13		//	(8192)
 };
 
@@ -87,7 +85,8 @@ typedef NS_ENUM(NSUInteger, GOLFHandicapMethodIndex) {
 	GOLFHandicapMethodAGU,						//	AGU (Golf Australia) Handicap System (3)
 	GOLFHandicapMethodEGA,						//	EGA (European Golf Association) Handicap System (4)
 	GOLFHandicapMethodCONGU,					//	CONGU Unified Handicap System (5)
-	GOLFHandicapMethodWHS,						//	World Handicap System (USGA/Generic) (6)
+	GOLFHandicapMethodWHS,						//	World Handicap System (USGA/Generic/current) (6)
+	GOLFHandicapMethodWHS2020 = 10,				//	World Handicap System (eff. 1/1/2020) (10)
 	GOLFHandicapMethodMulligan = 20,			//	Mulligan Handicap System (20)			*
 	GOLFHandicapMethodPersonal = 21,			//	Personalized Handicap System (21)		*
 	GOLFHandicapMethodSecondBest = 22,			//	Second-Best Score Handicap System (22)	*
@@ -104,6 +103,15 @@ typedef NS_ENUM(NSUInteger, GOLFHandicapStrokeControl) {
 	GOLFHandicapStrokeControlNetTripleBogey,	//	Limit to net triple-bogey							(5)
 	GOLFHandicapStrokeControlESC = 10,			//	Equitable Stroke Control (ESC) limit				(10)
 	GOLFHandicapStrokeControlUnknown = 99		//	Unknown stroke control technique
+};
+
+typedef NS_ENUM(NSUInteger, GOLFHandicapEstimatedScoreMethod) {
+	GOLFHandicapEstimatedScoreMethodNone = 0,		//	Don't calculate Estimate Scores					(0)
+	GOLFHandicapEstimatedScoreMethodNetPar,			//	Calculate net par (nines or unplayed holes)		(1)
+	GOLFHandicapEstimatedScoreMethodUsingRecord,	//	Calculate from active scores record (last 20?)	(2) *
+	GOLFHandicapEstimatedScoreMethodUsingHistory,	//	Calculate from scoring history (last 365 days?)	(3)	*
+	GOLFHandicapEstimatedScoreMethodUSGATable,		//	Calculate with USGA estimation table			(4)
+	GOLFHandicapEstimatedScoreMethodUnknown = 99	//	Unknown method for Estimated Score calculations
 };
 
 typedef NS_ENUM(NSUInteger, GOLFHandicapDifferentialType) {
@@ -130,6 +138,7 @@ extern GOLFHandicapAuthority * const GOLFHandicapAuthorityAGU;			//	"AGU"
 extern GOLFHandicapAuthority * const GOLFHandicapAuthorityEGA;			//	"EGA"
 extern GOLFHandicapAuthority * const GOLFHandicapAuthorityCONGU;		//	"CONGU"
 extern GOLFHandicapAuthority * const GOLFHandicapAuthorityWHS;			//	"WHS"
+extern GOLFHandicapAuthority * const GOLFHandicapAuthorityWHS2020;		//	"WHS2020"
 extern GOLFHandicapAuthority * const GOLFHandicapAuthorityMulligan;		//	"MULLIGAN"
 extern GOLFHandicapAuthority * const GOLFHandicapAuthoritySecondBest;	//	"SECONDBEST"
 extern GOLFHandicapAuthority * const GOLFHandicapAuthorityPersonal;		//	"PERSONAL"
@@ -334,6 +343,7 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 //	------------------	--------------	-------------------------------------------------------
 //	is9HoleResult		NSNumber *		BOOL indicating result is for 9-hole play
 //	isWomensResult		NSNumber *		BOOL indicating result is for women
+//	unroundedResult		NSNumber *		GOLFUnroundedPlayingHandicap of the returned GOLFPlayingHandicap
 //	referenceObject		id				a <GOLFHandicapDataSource> with data of interest
 //	need9HoleHandicap	NSNumber *		(legacy) BOOL (TRUE --> courseRating and/or par are 9-hole values)
 //	needWomensHandicap	NSNumber *		(legacy) BOOL (TRUE --> courseRating and/or par are women's values)

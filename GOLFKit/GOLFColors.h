@@ -6,18 +6,18 @@
 //  Copyright © 2016 Mulligan Software. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 #import <GOLFKit/GOLFKitTypes.h>
 
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
-@import UIKit;
+#import <UIKit/UIKit.h>
 
 #define GOLFColor UIColor
 
 #elif TARGET_OS_MAC
 
-@import Cocoa;
+#import <Cocoa/Cocoa.h>
 
 #define GOLFColor NSColor
 
@@ -30,11 +30,11 @@
 extern CGFloat GOLFColorDefaultYardageContrast;	//	Somewhere around 0.35
 
 //	Misc constants
-#define	kGOLFTeeColorsNumberOfSolid		16		//	Black (0) through Azure (15), total of 16
-#define	kGOLFTeeColorsNumberOfCombo		12		//	Blue & White (20) through Black & Blue (31), total of 12
+#define	kGOLFTeeColorsNumberOfSolid		17		//	Black (0) through Bronze (16), total of 17
+#define	kGOLFTeeColorsNumberOfCombo		13		//	Blue & White (20) through Orange & Green (32), total of 13
 #define kGOLFTeeColorsNumberOfCustom	8		//	U.S.A. (51) through IV (58), total of 8
 //										---
-#define kGOLFTeeColorsNumberOfStandard	36		//	Total Standard tee colors
+#define kGOLFTeeColorsNumberOfStandard	38		//	Total Standard tee colors
 
 #define kNotATeeColorIndex				-999	//	No-value GOLFTeeColorIndex specification
 
@@ -56,7 +56,8 @@ typedef NS_ENUM(GOLFTeeColorIndex, teeColorIndexEnumeration) {
 	GOLFTeeColorPink,					//	Pink (13)
 	GOLFTeeColorTeal,					//	Teal (14)
 	GOLFTeeColorAzure,					//	Azure (15)
-	GOLFTeeColorLastSolid = GOLFTeeColorAzure,
+	GOLFTeeColorBronze,					//	Bronze (16)
+	GOLFTeeColorLastSolid = GOLFTeeColorBronze,
 	GOLFTeeColorBlueAndWhite = 20,		//	Blue & White (20)
 	GOLFTeeColorFirstCombo = GOLFTeeColorBlueAndWhite,
 	GOLFTeeColorRedAndYellow = 21,		//	Red & Yellow (21)
@@ -70,7 +71,8 @@ typedef NS_ENUM(GOLFTeeColorIndex, teeColorIndexEnumeration) {
 	GOLFTeeColorGreenAndRed,			//	Green & Red (29)
 	GOLFTeeColorYellowAndGreen,			//	Yellow & Green (30)
 	GOLFTeeColorBlackAndBlue,			//	Black & Blue (31)
-	GOLFTeeColorLastCombo = GOLFTeeColorBlackAndBlue,
+	GOLFTeeColorOrangeAndGreen,			//	Orange & Green (32)
+	GOLFTeeColorLastCombo = GOLFTeeColorOrangeAndGreen,
 	GOLFTeeColorCustom = 50,			//	Custom tee color (50)
 	GOLFTeeColorUSA,					//	Custom tee marker (U.S.A.) (51)
 	GOLFTeeColorFirstSpecial = GOLFTeeColorUSA,
@@ -94,7 +96,7 @@ typedef NS_ENUM(GOLFTeeColorIndex, teeColorIndexEnumeration) {
 #endif
 
 #if !defined(IS_ANY_COMBO_TEE_COLOR_INDEX)
-	#define IS_ANY_COMBO_TEE_COLOR_INDEX(_index)	((((_index) >= GOLFTeeColorFirstCombo) && ((_index) <= GOLFTeeColorLastCombo)) ? YES : NO)
+	#define IS_ANY_COMBO_TEE_COLOR_INDEX(_index)	((((_index) == GOLFTeeColorCombo) || (((_index) >= GOLFTeeColorFirstCombo) && ((_index) <= GOLFTeeColorLastCombo))) ? YES : NO)
 #endif
 
 #if !defined(IS_ANY_SPECIAL_TEE_COLOR_INDEX)

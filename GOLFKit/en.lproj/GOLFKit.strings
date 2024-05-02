@@ -239,6 +239,7 @@
 "TERM_PAR" = "par";
 "TERM_PAR_PLURAL" = "pars";
 "TERM_PARK" = "park";	//	like a "golf park"
+"TERM_PENDING" = "pending";
 "TERM_PEORIA" = "Peoria";
 "TERM_PHONE" = "phone";
 "TERM_PLACE" = "place";	//	like "first place" or "placement"
@@ -390,6 +391,7 @@
 "GOLF_TEE_COLOR_NAME_PINK" = "Pink";
 "GOLF_TEE_COLOR_NAME_TEAL" = "Teal";
 "GOLF_TEE_COLOR_NAME_AZURE" = "Azure";
+"GOLF_TEE_COLOR_NAME_BRONZE" = "Bronze";
 "GOLF_TEE_COLOR_NAME_BLUE_AND_WHITE" = "Blue & White";
 "GOLF_TEE_COLOR_NAME_RED_AND_YELLOW" = "Red & Yellow";
 "GOLF_TEE_COLOR_NAME_YELLOW_AND_BLUE" = "Yellow & Blue";
@@ -402,6 +404,7 @@
 "GOLF_TEE_COLOR_NAME_GREEN_AND_RED" = "Green & Red";
 "GOLF_TEE_COLOR_NAME_GREEN_AND_WHITE" = "Green & White";
 "GOLF_TEE_COLOR_NAME_BLACK_AND_BLUE" = "Black & Blue";
+"GOLF_TEE_COLOR_NAME_ORANGE_AND_GREEN" = "Orange & Green";
 "GOLF_TEE_COLOR_NAME_CUSTOM" = "Custom";
 "GOLF_TEE_COLOR_NAME_USA" = "U.S.A.";	//	Custom tee
 "GOLF_TEE_COLOR_NAME_EU" = "E.U.";		//	Custom tee
@@ -429,6 +432,8 @@
 "HANDICAP_METHOD_USGA" = "USGA Handicap System";
 "HANDICAP_METHOD_WHS" = "World Handicap System";
 "HANDICAP_METHOD_WHS_ABBR" = "WHS";	//	World Handicap System
+"HANDICAP_METHOD_WHS2020" = "World Handicap System (2020)";
+"HANDICAP_METHOD_WHS2020_ABBR" = "WHS (2020)";
 "HANDICAP_ASSOCIATION_AGU" = "Golf Australia";
 "HANDICAP_ASSOCIATION_CONGU" = "Council of National Golf Unions";
 "HANDICAP_ASSOCIATION_EGA" = "European Golf Association";
@@ -950,6 +955,7 @@
 "TITLE_USERS_GUIDE_FOUND" = "Users’ Guide found";
 "TITLE_USERS_GUIDE_NOT_FOUND" = "No Users’ Guide file found";
 "TITLE_WICKERS" = "Wickers";
+"TITLE_WIN/LOSE/DRAW_ABBR" = "W/L/D";
 "TITLE_WITH_SCORE" = "with score";
 "TITLE_WOLF" = "Wolf";
 "TITLE_WOMENS_HANDICAP" = "Women’s Handicap";
@@ -1407,6 +1413,7 @@
 "TOOLTIP_ROUND_NET_SCORE" = "Net score";
 "TOOLTIP_ROUND_TOTAL_SCORE" = "Total score";
 "TOOLTIP_ROUNDS_MODIFIER_WHS" = "* - used\nH - home\nA - away\nC - competition\nN - 9-hole combined\nS - stroke play\nM - match play\nI - incomplete\nE - exceptional\nP - penalty";
+"TOOLTIP_ROUNDS_MODIFIER_WHS2020" = "* - used\nH - home\nA - away\nC - competition\nN - 9-hole combined\nS - stroke play\nM - match play\nI - incomplete\nE - exceptional\nP - penalty";
 "TOOLTIP_ROUNDS_MODIFIER_USGA" = "* - used\nA - away\nC - combined\nT - tournament\nP - penalty";
 "TOOLTIP_ROUNDS_MODIFIER_RCGA" = "* - used\nA - away\nC - combined\nT - tournament\nP - penalty";
 "TOOLTIP_ROUNDS_MODIFIER_AGU" = "* - used\nH - home\nA - away\nC - competition\nN - 9-hole combined\nS - stroke play\nM - match play\nI - incomplete\nE - exceptional\nP - penalty";

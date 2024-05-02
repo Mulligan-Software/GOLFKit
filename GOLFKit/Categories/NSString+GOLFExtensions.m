@@ -66,7 +66,7 @@ NSString *ETagLetters = @"abcdefghijklmnopqrstuvwxyz0123456789";
 	NSUInteger ourLength = self.length;
 	if (ourLength > 0) {
 		if ((authority && [authority length] > 1)) {
-			if ([authority isEqualToString:GOLFHandicapAuthorityWHS]) {
+			if ([authority isEqualToString:GOLFHandicapAuthorityWHS] || [authority isEqualToString:GOLFHandicapAuthorityWHS2020]) {
 				//	WHS uses GHIN, which uses 7 or fewer, 8 or 10 digit account numbers
 				if ([self rangeOfCharacterFromSet:[[NSCharacterSet decimalDigitCharacterSet] invertedSet]].location == NSNotFound) {
 					if ((ourLength <= 7) || (ourLength == 8) || (ourLength == 10)) {

@@ -44,6 +44,13 @@ typedef NS_OPTIONS(NSUInteger, GOLFCourseStatus) {
 	GOLFCourseStatusOption4					= 1 << 4,		//	(16)
 	GOLFCourseStatusOption5					= 1 << 5,		//	(32)
 	GOLFCourseStatusOption6					= 1 << 6,		//	(64)
+	GOLFCourseStatusOption7					= 1 << 7,		//	(128)
+	GOLFCourseStatusOption8					= 1 << 8,		//	(256)
+	GOLFCourseStatusOption9					= 1 << 9,		//	(512)
+	GOLFCourseStatusNameIsClubCourseName	= 1 << 10,		//	(1024)		Course uses name for ClubCourseName
+	GOLFCourseStatusOption11				= 1 << 11,		//	(2048)
+	GOLFCourseStatusOption12				= 1 << 12,		//	(4096)
+	GOLFCourseStatusMeasuredInMeters		= 1 << 13,		//	(8192)		Course measured in meters
 };
 
 typedef NS_ENUM(NSUInteger, GOLFCourseMeasurementType) {

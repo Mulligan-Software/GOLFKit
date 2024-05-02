@@ -180,6 +180,15 @@
 //				@"tee_marker_azure", @"teeImageName", nil];
 //		[workingList addObject:colorDict];
 //		
+//		//	Bronze
+//		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
+//				[NSNumber numberWithUnsignedInteger:GOLFTeeColorBronze], @"teeColorIndex",
+//				[GOLFColor colorWithRed:(125.0 / 255.0) green:(58.0 / 255.0) blue:(58.0 / 255.0) alpha:1.0], @"teeColor",
+//				GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_BRONZE"), @"teeColorName",
+//				@"GOLFTeeMarkerBronze", @"teeIconName",
+//				@"tee_marker_bronze", @"teeImageName", nil];
+//		[workingList addObject:colorDict];
+//		
 //		//	Blue & White
 //		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 //				[NSNumber numberWithUnsignedInteger:GOLFTeeColorBlueAndWhite], @"teeColorIndex",
@@ -477,349 +486,253 @@
 //#endif
 //}
 
-//=================================================================
-//	GOLFTeeColorIndexFromTeeColor
-//=================================================================
-//GOLFTeeColorIndex GOLFTeeColorIndexFromTeeColor(GOLFColor *teeColor) {
-//	if (teeColor) {
-//		CGFloat redComponent;
-//		CGFloat greenComponent;
-//		CGFloat blueComponent;
-//		CGFloat redTestComponent;
-//		CGFloat greenTestComponent;
-//		CGFloat blueTestComponent;
-//
-//#if TARGET_OS_IOS || TARGET_OS_WATCH
-//		GOLFColor *rgb = teeColor;
-//		[rgb getRed:&redComponent green:&greenComponent blue:&blueComponent alpha:nil];
-//#elif TARGET_OS_MAC
-//		GOLFColor *rgb = [teeColor colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
-//		redComponent = [rgb redComponent];
-//		greenComponent = [rgb greenComponent];
-//		blueComponent = [rgb blueComponent];
-//#endif
-//		//	Check for a standard color (solid, combo, special)…
-//		GOLFColor *testColor;
-//		for (NSDictionary *colorDict in GOLFStandardTeeColorArray()) {
-//			GOLFTeeColorIndex testColorIndex = [[colorDict objectForKey:@"teeColorIndex"] teeColorIndexValue];
-//
-//			//	We'll try to find a matching color in the numerically identifiable colors…
-//#if TARGET_OS_IOS || TARGET_OS_WATCH
-//			testColor = [colorDict objectForKey:@"teeColor"];
-//			[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
-//#elif TARGET_OS_MAC
-//			testColor = [[colorDict objectForKey:@"teeColor"] colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
-//			redTestComponent = [testColor redComponent];
-//			greenTestComponent = [testColor greenComponent];
-//			blueTestComponent = [testColor blueComponent];
-//#endif
-//			if ((redTestComponent == redComponent) && (greenTestComponent == greenComponent) && (blueTestComponent == blueComponent)) {
-//				return testColorIndex;
-//			}
-//		}
-//		
-//		//	Combo Tee…
-//		GOLFColor *comboGreen = [GOLFColor colorWithRed:(0.0 / 256.0) green:(69.0 / 256.0) blue:(33.0 / 256.0) alpha:1.0];
-//#if TARGET_OS_IOS || TARGET_OS_WATCH
-//		testColor = comboGreen;
-//		[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
-//#elif TARGET_OS_MAC
-//		testColor = [comboGreen colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
-//		redTestComponent = [testColor redComponent];
-//		greenTestComponent = [testColor greenComponent];
-//		blueTestComponent = [testColor blueComponent];
-//#endif
-//		if ((redTestComponent == redComponent) && (greenTestComponent == greenComponent) && (blueTestComponent == blueComponent)) {
-//			return GOLFTeeColorCombo;
-//		}
-//		
-////		//	USA Tee…
-////		GOLFColor *oldGloryRed = [GOLFColor colorWithRed:0.698 green:0.132 blue:0.203 alpha:1.0];
-////#if TARGET_OS_IOS || TARGET_OS_WATCH
-////		testColor = oldGloryRed;
-////		[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
-////#elif TARGET_OS_MAC
-////		testColor = [oldGloryRed colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
-////		redTestComponent = [testColor redComponent];
-////		greenTestComponent = [testColor greenComponent];
-////		blueTestComponent = [testColor blueComponent];
-////#endif
-////		if ((redTestComponent == redComponent) && (greenTestComponent == greenComponent) && (blueTestComponent == blueComponent)) {
-////			return GOLFTeeColorUSA;
-////		}
-//
-////		//	EU Tee…
-////		GOLFColor *euBlue = [GOLFColor colorWithRed:0.0 green:(51 / 255.0) blue:(153 / 255.0) alpha:1.0];
-////#if TARGET_OS_IOS || TARGET_OS_WATCH
-////		testColor = euBlue;
-////		[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
-////#elif TARGET_OS_MAC
-////		testColor = [euBlue colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
-////		redTestComponent = [testColor redComponent];
-////		greenTestComponent = [testColor greenComponent];
-////		blueTestComponent = [testColor blueComponent];
-////#endif
-////		if ((redTestComponent == redComponent) && (greenTestComponent == greenComponent) && (blueTestComponent == blueComponent)) {
-////			return GOLFTeeColorEU;
-////		}
-//
-////		//	PGA Tour Tee…
-////		GOLFColor *pgaPurple = [GOLFColor colorWithRed:(34 / 255.0) green:(36 / 255.0) blue:(108 / 255.0) alpha:1.0];
-////#if TARGET_OS_IOS || TARGET_OS_WATCH
-////		testColor = pgaPurple;
-////		[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
-////#elif TARGET_OS_MAC
-////		testColor = [pgaPurple colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
-////		redTestComponent = [testColor redComponent];
-////		greenTestComponent = [testColor greenComponent];
-////		blueTestComponent = [testColor blueComponent];
-////#endif
-////		if ((redTestComponent == redComponent) && (greenTestComponent == greenComponent) && (blueTestComponent == blueComponent)) {
-////			return GOLFTeeColorPGA;
-////		}
-//		
-////		//	USGA Tee…
-////		GOLFColor *usgaBlue = [GOLFColor colorWithRed:0.0 green:(73 / 255.0) blue:(144.0 / 255.0) alpha:1.0];
-////#if TARGET_OS_IOS || TARGET_OS_WATCH
-////		testColor = usgaBlue;
-////		[testColor getRed:&redTestComponent green:&greenTestComponent blue:&blueTestComponent alpha:nil];
-////#elif TARGET_OS_MAC
-////		testColor = [usgaBlue colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
-////		redTestComponent = [testColor redComponent];
-////		greenTestComponent = [testColor greenComponent];
-////		blueTestComponent = [testColor blueComponent];
-////#endif
-////		if ((redTestComponent == redComponent) && (greenTestComponent == greenComponent) && (blueTestComponent == blueComponent)) {
-////			return GOLFTeeColorUSGA;
-////		}
-//		
-//		return GOLFTeeColorCustom;	//	Any color we don't recognize is a custom color!
-//	}
-//	return GOLFTeeColorUnknown;
+#if TARGET_OS_MAC
+
+@implementation ScorecardPartView
+
+- (id)initWithFrame:(NSRect)frame {
+    self = [super initWithFrame:frame];
+    if (self) {
+    	self.ourColor = [GOLFColor GOLFFactoryBogeyColor];	//	This is white in dark mode, black in aqua
+    	self.partType = ScorecardPartTypeBaseView;
+		self.borders = NSEdgeInsetsMake(0, 0, 1, 1);	//	bottom, right
+		[self setAutoresizesSubviews:NO];	//	If we resize, leave the subviews alone
+		[self setPostsFrameChangedNotifications:YES];	//	Notifies anyone interested of frame changes
+		[self invalidateIntrinsicContentSize];	//	For layout purposes, we provide an intrinsicContentSize for height
+    }
+    return self;
+}
+
+- (ScorecardPartType)partType {
+	return ScorecardPartTypeBaseView;	//	No Scorecard Part superview - we're the base view
+}
+
+//- (NSRect)margins { return _margins; }
+
+//- (void)setMargins:(NSRect)newMargins {
+//	_margins = newMargins;
 //}
 
-//=================================================================
-//	GOLFTeeColorNameFromTeeColorIndex(colorIndex)
-//=================================================================
-//NSString * GOLFTeeColorNameFromTeeColorIndex(GOLFTeeColorIndex proposedColorIndex) {
-//	if ((proposedColorIndex < 0) || (proposedColorIndex == kNotATeeColorIndex) || (proposedColorIndex == GOLFTeeColorUnknown))
-//		return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_UNKNOWN");
-//	if (proposedColorIndex == GOLFTeeColorGeneric)
-//		return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_GENERIC");
-//	if (proposedColorIndex == GOLFTeeColorCombo)
-//		return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_COMBO");
-//	if (proposedColorIndex == GOLFTeeColorCustom)
-//		return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_CUSTOM");
-//	if (proposedColorIndex == GOLFTeeColorAdd)
-//		return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_ADD");
-//	if (proposedColorIndex == GOLFTeeColorAll)
-//		return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_ALL");
+//- (BOOL)insertPagebreaks { return _insertPagebreaks; }
 //
-//	for (NSDictionary *colorDict in GOLFStandardTeeColorArray()) {
-//		if ([[colorDict objectForKey:@"teeColorIndex"] teeColorIndexValue] == proposedColorIndex) {
-//			return [colorDict objectForKey:@"teeColorName"];	//	The GOLFStandardTeeColorArray is localized!
-//		}
-//	}
-//	
-////	if (proposedColorIndex == GOLFTeeColorUSA) {
-////		return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_USA");
-////	}
-////	if (proposedColorIndex == GOLFTeeColorEU) {
-////		return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_EU");
-////	}
-////	if (proposedColorIndex == GOLFTeeColorPGA) {
-////		return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_PGA");
-////	}
-////	if (proposedColorIndex == GOLFTeeColorUSGA) {
-////		return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_USGA");
-////	}
-//
-//	return GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_UNKNOWN");
+//- (void)setInsertPagebreaks:(BOOL)insert {
+//	_insertPagebreaks = insert;
 //}
 
-//=================================================================
-//	GOLFLongestRangeOfAnyTeeColorNameInTeeName(teeName)
-//=================================================================
-//NSRange GOLFLongestRangeOfAnyTeeColorNameInTeeName(NSString * _Nonnull teeName) {
-//	NSRange longestRange = NSMakeRange(NSNotFound, 0);
-//	NSString *testName = [teeName stringByAppendingString:@" "];	//	Pad with a space
+//- (void)insertView:(NSView *)viewToBeInserted atIndex:(NSInteger)index {
+//	NSInteger realIndex = ([self insertPagebreaks] ? index * 2 : index);
+//	[self sortSubviewsUsingFunction:CompareSubviewsByPosition context:NULL];	//	Get the subviews in the right order
+//	NSRect ourOldFrame = [self frame];	//	origin and size in our superview's coordinates
+//	NSRect viewFrame = [viewToBeInserted frame];
+//	NSView *aSubview;
+//	NSInteger subviewCount = [[self subviews] count];	//	Count of subviews (including pagebreaks)
+//	NSSize ourNewSize;
+//	if (subviewCount > 0)
+//		ourNewSize = NSMakeSize(MAX(ourOldFrame.size.width, viewFrame.size.width + _margins.origin.x + _margins.origin.y),
+//								ourOldFrame.size.height + viewFrame.size.height + _margins.size.width + _margins.size.height);
+//	else
+//		ourNewSize = NSMakeSize(viewFrame.size.width + _margins.origin.x + _margins.origin.y,
+//								viewFrame.size.height + _margins.size.width + _margins.size.height);
+//
+//	[self setFrameSize:ourNewSize];	//	Expand us to fit another subview - no change DOESN'T present a notification
+//	[self invalidateIntrinsicContentSize];
+//	[[self superview] setNeedsLayout:YES];
 //	
-//	for (NSDictionary *colorDict in GOLFStandardTeeColorArray()) {
-//		NSString *teeColorName = [[colorDict objectForKey:@"teeColorName"] stringByAppendingString:@" "];	//	Pad with trailing space
-//		NSRange testRange = [testName rangeOfString:teeColorName options:NSCaseInsensitiveSearch];
-//		if (testRange.location != NSNotFound) {
-//			NSUInteger foundLength = testRange.length - 1;	//	less the matching ending space
-//			if (foundLength > longestRange.length) {
-//				longestRange = NSMakeRange(testRange.location, foundLength);
-//			}
-//		}
+//	NSPoint insertLocation = NSMakePoint(0.0 + _margins.origin.x, 0.0 + _margins.size.width);	//	Insert location default is bottom left
+//	NSView *followingView = nil;
+//	if (realIndex < subviewCount) {
+//		followingView = [[self subviews] objectAtIndex:realIndex];	//	Find the subview that will follow this one
+//		NSRect followingFrame = [followingView frame];
+//		insertLocation = NSMakePoint(followingFrame.origin.x,
+//									followingFrame.origin.y + followingFrame.size.height + _margins.size.width + _margins.size.height);
 //	}
-//	return longestRange;	//	No tee color name found
+//	[viewToBeInserted setFrameOrigin:insertLocation];
+//	NSInteger position;
+//	NSInteger limit = ([self insertPagebreaks] ? realIndex - 1 : realIndex);
+//	for (position = 0; position < limit; position++) {
+//		//	Move all the preceding subviews up by the height of the inserted view
+//		aSubview = [[self subviews] objectAtIndex:position];
+//		NSRect oldFrame = [aSubview frame];
+//		[aSubview setFrameOrigin:NSMakePoint(oldFrame.origin.x, oldFrame.origin.y + viewFrame.size.height + _margins.size.width + _margins.size.height)];
+//		[aSubview setNeedsDisplay:YES];
+//	}
+//	[viewToBeInserted setAutoresizingMask:(NSViewMinYMargin | NSViewMaxXMargin)];
+//	[self addSubview:viewToBeInserted positioned:NSWindowAbove relativeTo:followingView];
+//	[viewToBeInserted setNeedsDisplay:YES];
+//	if ([self insertPagebreaks]) {
+//		EAGPageBreak *pagebreak = nil;
+//		if (followingView != nil) {
+//			pagebreak = [EAGPageBreak pageBreakOfWidth:ourNewSize.width];
+//			[pagebreak setFrameOrigin:NSMakePoint(0.0, insertLocation.y - _margins.size.width)];	//	After inserted, before following
+//			[pagebreak setAutoresizingMask:(NSViewMinYMargin | NSViewMaxXMargin)];
+//			[self addSubview:pagebreak positioned:NSWindowAbove relativeTo:followingView];
+//		} else if (realIndex > 0) {
+//			pagebreak = [EAGPageBreak pageBreakOfWidth:ourNewSize.width];
+//			[pagebreak setFrameOrigin:NSMakePoint(0.0, insertLocation.y + viewFrame.size.height + _margins.size.height)];	//	In front of inserted
+//			[pagebreak setAutoresizingMask:(NSViewMinYMargin | NSViewMaxXMargin)];
+//			[self addSubview:pagebreak positioned:NSWindowAbove relativeTo:viewToBeInserted];
+//		}
+//		[pagebreak setNeedsDisplay:YES];
+//	}
+//	[self updateKeyViews];	//	Does nothing
+//	[self setNeedsDisplay:YES];
 //}
 
-//=================================================================
-//	GOLFTeeMarkerImageFromSpecs(teeColorIndex, imageSize, teeColor)
-//=================================================================
-//GOLFTeeImage * GOLFTeeMarkerImageFromSpecs(GOLFTeeColorIndex teeColorIndex, GOLFTeeMarkerImageSize imageSize, GOLFColor *teeColor) {
-//	NSBundle *ourBundle = GOLFKitBundle();
-//	if (ourBundle) {
-//		//	Starting with defaults…
-//		NSUInteger workingSize = imageSize;
-//
-//#if TARGET_OS_IOS || TARGET_OS_WATCH
-//		NSString *workingTeeImageName = @"tee_marker_generic";
-//		
-//		//	Finalize the image size…
-//		switch (imageSize) {
-//			case GOLFTeeMarkerImageSize16pt:
-//			case GOLFTeeMarkerImageSize64pt:
-//				break;
-//
-//			default:
-//				workingSize = GOLFTeeMarkerImageSizeDefault;
-//				break;
+//- (void)removeViewAtIndex:(NSInteger)index {
+//	NSInteger realIndex = ([self insertPagebreaks] ? index * 2 : index);
+//	//	NSInteger pagebreakIndex = (realIndex > 0 ? realIndex - 1 : realIndex + 1);
+//	NSInteger subviewCount = [[self subviews] count];
+//	if ((subviewCount > 0) && (realIndex < subviewCount)) {
+//		[self sortSubviewsUsingFunction:CompareSubviewsByPosition context:NULL];	//	Get the subviews in the right order
+//		NSView *viewToBeRemoved = [[self subviews] objectAtIndex:realIndex];
+//		NSView *pagebreakToBeRemoved = nil;
+//		if ([self insertPagebreaks]) {
+//			if (realIndex > 0)
+//				pagebreakToBeRemoved = [[self subviews] objectAtIndex:realIndex - 1];	//	Pagebreak before is gone
+//			else if ((realIndex < 1) && (subviewCount > 1))
+//				pagebreakToBeRemoved = [[self subviews] objectAtIndex:1];	//	Pagebreak after is gone
 //		}
-//		
-//		//	Finalize the image name…
-//		if (teeColorIndex != GOLFTeeColorGeneric) {
-//			if (IS_ANY_STANDARD_TEE_COLOR_INDEX(teeColorIndex)) {
-//				for (NSDictionary *colorDict in GOLFStandardTeeColorArray()) {
-//					if ([[colorDict objectForKey:@"teeColorIndex"] integerValue] == teeColorIndex) {
-//						workingTeeImageName = [colorDict objectForKey:@"teeImageName"];
-//						break;	//	Out of "for (NSDictionary *colorDict" loop
-//					}
-//				}
-//			} else if (teeColorIndex == GOLFTeeColorCombo) {
-//				workingTeeImageName = @"tee_marker_combo";
-//			} else if (teeColorIndex == GOLFTeeColorAdd) {
-//				workingTeeImageName = @"tee_marker_add";
-//			} else if (teeColorIndex == GOLFTeeColorAll) {
-//				workingTeeImageName = @"tee_marker_all";
-//	//		} else if (teeColorIndex == GOLFTeeColorUSA) {
-//	//			workingTeeImageName = @"tee_marker_usa";
-//	//		} else if (teeColorIndex == GOLFTeeColorEU) {
-//	//			workingTeeImageName = @"tee_marker_eu";
-//	//		} else if (teeColorIndex == GOLFTeeColorPGA) {
-//	//			workingTeeImageName = @"tee_marker_pga";
-//	//		} else if (teeColorIndex == GOLFTeeColorUSGA) {
-//	//			workingTeeImageName = @"tee_marker_usga";
-//			}
+//		NSRect viewFrame = [viewToBeRemoved frame];
+//		NSRect oldFrame;
+//		NSInteger position;
+//		for (position = 0; position < realIndex; position++) {
+//			//	Move preceding subviews toward the origin
+//			NSView *subview = [[self subviews] objectAtIndex:position];
+//			oldFrame = [subview frame];
+//			[subview setFrameOrigin:NSMakePoint(oldFrame.origin.x, oldFrame.origin.y - viewFrame.size.height - _margins.size.width - _margins.size.height)];
 //		}
-//		return [GOLFTeeImage imageNamed:[workingTeeImageName stringByAppendingFormat:@"_%lu", (unsigned long)workingSize] inBundle:ourBundle compatibleWithTraitCollection:nil];
-//	
-//#elif TARGET_OS_MAC
-//		NSString *workingTeeIconName = @"GOLFTeeMarkerGeneric";
-//		GOLFTeeImage *workingTeeMarkerImage = nil;
-//		
-//		//	We can live with the requested size…
-//		
-//		if (teeColorIndex == GOLFTeeColorCustom) {
-//			NSRect offscreenRect = NSMakeRect(0.0, 0.0, 128.0, 128.0);
-//			NSBitmapImageRep *offscreenRep = [[NSBitmapImageRep alloc] initWithBitmapDataPlanes:nil
-//					pixelsWide:offscreenRect.size.width pixelsHigh:offscreenRect.size.height 
-//					bitsPerSample:8 samplesPerPixel:4 
-//					hasAlpha:YES isPlanar:NO 
-//					colorSpaceName:NSCalibratedRGBColorSpace bitmapFormat:0 
-//					bytesPerRow:(4 * offscreenRect.size.width) bitsPerPixel:32];
-//			 
-//			[NSGraphicsContext saveGraphicsState];
-//			[NSGraphicsContext setCurrentContext:[NSGraphicsContext graphicsContextWithBitmapImageRep:offscreenRep]];
-//			 
-//			//	We need to draw an icon and a color dot in the graphics context
-//			if (teeColor == nil) {
-//				//	Requesting a GOLFTeeColorCustom icon, but the color hasn't been specified!
-//				[(GOLFTeeImage *)[ourBundle imageForResource:@"GOLFTeeMarkerGeneric"] drawAtPoint:offscreenRect.origin fromRect:NSZeroRect operation:NSCompositingOperationCopy fraction:1.0];
-//			} else {
-//				//	Draw the white icon into the context
-//				GOLFColor *localTintingColor = [teeColor colorUsingColorSpace:[NSColorSpace deviceRGBColorSpace]];
-//				[(GOLFTeeImage *)[ourBundle imageForResource:@"GOLFTeeMarkerWhite"] drawAtPoint:offscreenRect.origin fromRect:NSZeroRect operation:NSCompositingOperationCopy fraction:1.0];
-//				//	The actual colored circle of the 128x128 image is 100 pixels wide, 14px left, 7 px top, 14 px right, 21 px bottom
-//				
-//				NSGradient *colorGradient = [[NSGradient alloc] initWithColorsAndLocations:
-//						[GOLFColor whiteColor], 0.0,
-//						[GOLFColor colorWithDeviceRed:[localTintingColor redComponent] green:[localTintingColor greenComponent] blue:[localTintingColor blueComponent] alpha:0.60], 0.2,
-//						[GOLFColor colorWithDeviceRed:[localTintingColor redComponent] green:[localTintingColor greenComponent] blue:[localTintingColor blueComponent] alpha:0.85], 0.5,
-//						localTintingColor, 0.9,
-//						[GOLFColor darkGrayColor], 1.0,
-//						nil];
-//				NSRect colorRect = NSMakeRect(offscreenRect.origin.x + 14.0, offscreenRect.origin.y + 21.0, offscreenRect.size.width - 28.0, offscreenRect.size.height - 28.0);
-//				NSBezierPath *circle = [NSBezierPath bezierPathWithOvalInRect:colorRect];
-//				[colorGradient drawInBezierPath:circle angle:-90.0];
-//				
-//	//			[colorGradient ah_release];
-//			}
-//			 
-//			[NSGraphicsContext restoreGraphicsState];
+//		oldFrame = [self frame];	//	origin and size in our superview's coordinates
+//		NSSize newSize = NSMakeSize(oldFrame.size.width, oldFrame.size.height - viewFrame.size.height - _margins.size.width - _margins.size.height);
+//		[viewToBeRemoved removeFromSuperview];	//	This removes the view and releases it
+//		if (pagebreakToBeRemoved != nil) {
+//			[pagebreakToBeRemoved removeFromSuperview];
+//		}
 //			
-//			workingTeeMarkerImage = [[GOLFTeeImage alloc] initWithSize:offscreenRect.size];
-//			[workingTeeMarkerImage addRepresentation:offscreenRep];	//	Add the image representation to the image
-//	//		[offscreenRep ah_release];	//	The image will retain the rep
+//		[self setFrameSize:newSize];	//	Shrink us by the size of the removed subview - no change DOESN'T present a notification
+//		[self invalidateIntrinsicContentSize];
+//		[[self superview] setNeedsLayout:YES];
+//		
+//		[self updateKeyViews];
+//		[self setNeedsDisplay:YES];
+//	}
+//}
+
+//- (void)removeLastView {
+//	NSInteger numberOfSubviews = [[self subviews] count];
+//	if (numberOfSubviews > 0) {
+//		NSInteger index = ([self insertPagebreaks] ? (numberOfSubviews - 1) / 2 : numberOfSubviews - 1);
+//		[self removeViewAtIndex:index];
+//	}
+//}
+
+- (void)updateKeyViews {
+	/*
+	NSEnumerator *subviewsE = [[self subviews] reverseObjectEnumerator];	//	We're going to run the subviews backward and link them
+	NSView *followingView = nil;
+	NSView *aSubview;
+	while (aSubview = [subviewsE nextObject]) {
+		[aSubview setNextKeyView:followingView];
+		followingView = aSubview;
+	}
+	*/
+}
+
+#pragma mark NSView overrides
+
+- (NSSize)intrinsicContentSize {
+	NSSize intrinsicSize = [super intrinsicContentSize];
+
+	return NSMakeSize(intrinsicSize.width, self.frame.size.height);	//	We need to advertise an intrinsic size height for autoLayout
+}
+
+//- (NSRect)rectForPage:(NSInteger)page {
+//	//	Page numbers start at 1!
+//	NSInteger realIndex = ([self insertPagebreaks] ? (page - 1) * 2 : page - 1);
+//	[self sortSubviewsUsingFunction:CompareSubviewsByPosition context:NULL];	//	Get the subviews in the right order
+//	NSRect result = [[[self subviews] objectAtIndex:realIndex] frame];
+//
+//	return result;
+//}
+
+//- (BOOL)knowsPageRange:(NSRange *)pageRange {
+//	// Page numbers start at 1
+//	pageRange->location = 1;
+//	pageRange->length = ([self insertPagebreaks] ? ([[self subviews] count] + 1) / 2 : [[self subviews] count]);
+//	//	NSLog(@"%@ -%@ pageBreaks: %@ %@", [self className], NSStringFromSelector(_cmd), ([self insertPagebreaks] ? @"YES" : @"NO"), NSStringFromRange(NSMakeRange(pageRange->location, pageRange->length)));
+//	return YES;
+//}
+
+//- (NSAttributedString *)pageHeader {
+//	//	Actually, the footer in an unflipped environment!
+//	NSString *timeString = [[MULTeeTimeFormatter sharedTeeTimeFormatter] stringFromDate:[NSDate date]];
+//	NSString *dateString = [[MULShortDateFormatter sharedShortDateFormatter] stringFromDate:[NSDate date]];
+//	NSString *dateTimeString = [NSString stringWithFormat:@"%@ %@", dateString, timeString];
+//	NSString *eagleString = NSLocalizedString(@"EagleT", @""); 
+//	NSString *pageString = nil; 
+//	NSPrintOperation *op = [NSPrintOperation currentOperation];
+//	if (op != nil) {
+//		NSInteger currentPage = [op currentPage];
+//		//	NSPrintInfo *info = [op printInfo];
+//		NSRange pageRange;
+//		if ([self knowsPageRange:&pageRange]) {
+//			pageString = [NSString stringWithFormat:NSLocalizedString(@"Page %d of %d", @""), (int)currentPage, (int)(pageRange.length)];
 //		} else {
-//			//	Finalize the icon name…
-//			if (teeColorIndex != GOLFTeeColorGeneric) {
-//				if (IS_ANY_STANDARD_TEE_COLOR_INDEX(teeColorIndex)) {
-//					for (NSDictionary *colorDict in GOLFStandardTeeColorArray()) {
-//						if ([[colorDict objectForKey:@"teeColorIndex"] integerValue] == teeColorIndex) {
-//							workingTeeIconName = [colorDict objectForKey:@"teeIconName"];
-//							break;	//	Out of "for (NSDictionary *colorDict" loop
-//						}
-//					}
-//				} else if (teeColorIndex == GOLFTeeColorCombo) {
-//					workingTeeIconName = @"GOLFTeeMarkerCombo";
-//				} else if (teeColorIndex == GOLFTeeColorAdd) {
-//					workingTeeIconName = @"GOLFTeeMarkerAdd";
-//				} else if (teeColorIndex == GOLFTeeColorAll) {
-//					workingTeeIconName = @"GOLFTeeMarkerAll";
-//	//			} else if (teeColorIndex == GOLFTeeColorUSA) {
-//	//				workingTeeIconName = @"GOLFTeeMarkerUSA";
-//	//			} else if (teeColorIndex == GOLFTeeColorEU) {
-//	//				workingTeeIconName = @"GOLFTeeMarkerEU";
-//	//			} else if (teeColorIndex == GOLFTeeColorPGA) {
-//	//				workingTeeIconName = @"GOLFTeeMarkerPGA";
-//	//			} else if (teeColorIndex == GOLFTeeColorUSGA) {
-//	//				workingTeeIconName = @"GOLFTeeMarkerUSGA";
-//				}
-//			}
-//			workingTeeMarkerImage = (GOLFTeeImage *)[ourBundle imageForResource:workingTeeIconName];	//	The icon as pulled from the bundle
-//		}
-//		NSImageRep *imageRep = [workingTeeMarkerImage bestRepresentationForRect:NSMakeRect(0.0, 0.0, workingSize, workingSize) context:[NSGraphicsContext currentContext] hints:nil];
-//		GOLFTeeImage *sizedImage = [[NSImage alloc] initWithSize:NSMakeSize(workingSize, workingSize)];
-//		[sizedImage addRepresentation:imageRep];
-//		return sizedImage;
-//	
-//#endif
-//	}	//	if (ourBundle)
-//	return nil;
-//}
-
-//=================================================================
-//	GOLFTeeMarkerImageFromTeeColorIndex(teeColorIndex, teeColor)
-//=================================================================
-//GOLFTeeImage * GOLFTeeMarkerImageFromTeeColorIndex(GOLFTeeColorIndex teeColorIndex, GOLFColor *teeColor) {
-//	return GOLFTeeMarkerImageFromSpecs(teeColorIndex, GOLFTeeMarkerImageSizeDefault, teeColor);
-//}
-
-//=================================================================
-//	GOLFLittleTeeMarkerImageFromTeeColorIndex(teeColorIndex, teeColor)
-//=================================================================
-//GOLFTeeImage * GOLFLittleTeeMarkerImageFromTeeColorIndex(GOLFTeeColorIndex teeColorIndex, GOLFColor *teeColor) {
-//	NSMutableDictionary *imageCache = cachedLittleTeeColorImages ?: [NSMutableDictionary dictionaryWithCapacity:5];
-//	NSNumber *imageKey = [NSNumber numberWithTeeColorIndex:teeColorIndex];
-//	GOLFTeeImage *cachedImage = [imageCache objectForKey:imageKey];
-//	if ((cachedImage == nil) || (teeColorIndex == GOLFTeeColorCustom)) {
-//		cachedImage = GOLFTeeMarkerImageFromSpecs(teeColorIndex, GOLFTeeMarkerImageSize16pt, teeColor);
-//		if (teeColorIndex != kNotATeeColorIndex) {
-//			[imageCache setObject:cachedImage forKey:imageKey];
-//			cachedLittleTeeColorImages = imageCache;
+//			pageString = [NSString stringWithFormat:NSLocalizedString(@"Page %d", @""), (int)currentPage];
 //		}
 //	}
-//	return cachedImage;
+//	NSAttributedString *newHeader = [[NSAttributedString alloc] initWithString:[NSString stringWithFormat:@"%@\t%@\t%@", dateTimeString, eagleString, pageString] attributes:[self footerAttributes]];
+//	return [newHeader ah_autorelease];
 //}
 
-//=================================================================
-//	GOLFLargeTeeMarkerImageFromTeeColorIndex(teeColorIndex, teeColor)
-//=================================================================
-//GOLFTeeImage * GOLFLargeTeeMarkerImageFromTeeColorIndex(GOLFTeeColorIndex teeColorIndex, GOLFColor *teeColor) {
-//	return GOLFTeeMarkerImageFromSpecs(teeColorIndex, GOLFTeeMarkerImageSize64pt, teeColor);
+//- (NSAttributedString *)pageFooter {
+//	//	Actually, the header in an unflipped environment!
+//	NSAttributedString *newFooter = [NSAttributedString attributedStringWithString:@"" fontAndRulerAttributesOf:[super pageFooter]];
+//	return newFooter;
 //}
 
+//- (NSMutableDictionary *)footerAttributes {
+//	// The attributes of the text to be printed
+//	NSMutableDictionary *attributes = [[NSMutableDictionary alloc] init];
+//	[attributes setObject:[NSFont fontWithName:@"Helvetica" size:8.0] forKey:NSFontAttributeName];
+//	[attributes setObject:[NSNumber numberWithFloat:8.0] forKey:NSBaselineOffsetAttributeName];
+//	
+//	NSMutableParagraphStyle *paragraphStyle = [[[NSParagraphStyle defaultParagraphStyle] mutableCopy] ah_autorelease];
+//	[paragraphStyle setAlignment:NSTextAlignmentCenter];
+//	[paragraphStyle setTabStops:[self footerTabStops]];
+//	[paragraphStyle setFirstLineHeadIndent:0.0];
+//
+//	[attributes setObject:paragraphStyle forKey:NSParagraphStyleAttributeName];
+//
+//	return [attributes ah_autorelease];
+//}
+
+//- (NSArray *)footerTabStops {
+//	//	May be overridden - usually we can use the bodyTabStops
+//	//	A center tab and a far right tab
+//	NSRect imageableRect = [[[NSPrintOperation currentOperation] printInfo] imageablePageBounds];
+//	NSMutableArray *tabStops = [NSMutableArray arrayWithCapacity:2];
+//	[tabStops addObject:[[[NSTextTab alloc] initWithType:NSCenterTabStopType location:(imageableRect.size.width / 2.0) - 8.0] ah_autorelease]];
+//	[tabStops addObject:[[[NSTextTab alloc] initWithType:NSRightTabStopType location:imageableRect.size.width - 8.0] ah_autorelease]];
+//	return [NSArray arrayWithArray:tabStops];
+//}
+
+- (void)drawRect:(NSRect)dirtyRect {
+	[self.ourColor setFill];	//	This is dark mode compatible
+	[NSBezierPath fillRect:dirtyRect];	//	Fill with the color
+}
+
+- (void)setColor:(NSColor *)newColor {
+    self.ourColor = newColor;
+	[self setNeedsDisplay:YES];
+}
+
+- (BOOL)isOpaque {
+	//	If we're the base level, it's possible we have non-opaque areas and we don't make borders
+	//	If we do make borders (partial or otherwise), our technique of drawing the border by filling our
+	//	area with the reverse (dark / light) of the current appearance might not work.
+	return NO;	
+}
+
+@end
+
+#endif

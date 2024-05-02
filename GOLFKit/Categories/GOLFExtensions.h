@@ -6,7 +6,7 @@
 //  Copyright © 2018 Mulligan Software. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 
 #ifndef GOLFExtensions_h
 #define GOLFExtensions_h

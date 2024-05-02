@@ -6,7 +6,7 @@
 //  Copyright © 2018 Mulligan Software. All rights reserved.
 //
 
-@import Foundation;
+#import <Foundation/Foundation.h>
 #import <GOLFKit/GOLFKitTypes.h>
 
 //	Mulligan Software iCloud credentials
