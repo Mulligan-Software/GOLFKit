@@ -43,6 +43,14 @@
 	return (GOLFPlayingHandicap)[self integerValue];
 }
 
++ (id)numberWithUnroundedPlayingHandicap:(GOLFUnroundedPlayingHandicap)unroundedPlayingHandicap {
+	return [NSNumber numberWithFloat:unroundedPlayingHandicap];
+}
+
+- (GOLFUnroundedPlayingHandicap)unroundedPlayingHandicapValue {
+	return (GOLFUnroundedPlayingHandicap)[self floatValue];
+}
+
 + (id)numberWithHandicapAllowance:(GOLFHandicapAllowance)handicapAllowance {
 	return [NSNumber numberWithFloat:handicapAllowance];
 }

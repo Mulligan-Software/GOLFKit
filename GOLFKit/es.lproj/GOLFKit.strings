@@ -298,6 +298,7 @@
 "TERM_SEMICOLON" = "punto y coma (;)";
 "TERM_SEND" = "enviar";	//	As in: "Send" email
 "TERM_SETTINGS" = "ajustes";
+"TERM_SHARE" = "compartir";
 "TERM_SIDE" = "lado";
 "TERM_SIDE_PLURAL" = "lados";
 "TERM_SIXPT" = "6-Puntos";
@@ -358,6 +359,7 @@
 "TERM_VALUE" = "valor";
 "TERM_VERSION" = "versión";
 "TERM_VERSUS_ABBR" = "vs.";
+"TERM_VERSUS_THE_FIELD" = "contra el campo";
 "TERM_VISIT" = "visitar";
 "TERM_VOICE" = "voz";
 "TERM_WAGERING" = "apostando";
@@ -708,8 +710,10 @@
 "TITLE_HDCP_WORKSHEET_COLUMNS" = "✓\tJugador\tPotestad\tCuenta\tÍndice\tEfectiva\tNotas";
 "TITLE_HOGAN" = "Hogan";
 "TITLE_HOLE_HANDICAP" = "Handicap";
+"TITLE_HOLE_NAMES" = "Nombres de Hoyos";
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Ajuste de resultado de hoyo";
 "TITLE_HOLE_SELECTION" = "Selección de los Hoyos";
+"TITLE_HOLES_HAVE_NAMES" = "Hoyos tienen nombres";
 "TITLE_HOLES_TO_BE_SCORED" = "Hoyos que se Puntúan";
 "TITLE_HOLLYWOOD" = "Hollywood";
 "TITLE_HOME_CLUB" = "Club de origen";

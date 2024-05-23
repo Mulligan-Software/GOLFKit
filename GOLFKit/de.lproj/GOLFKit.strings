@@ -340,6 +340,7 @@
 "TERM_SEMICOLON" = "Semikolon (;)";
 "TERM_SEND" = "senden";	//	As in: "Send" email
 "TERM_SETTINGS" = "Einstellungen";
+"TERM_SHARE" = "teilen";
 "TERM_SIDE" = "Seite";
 "TERM_SIDE_PLURAL" = "Seiten";
 "TERM_SIXPT" = "6-Punkte";
@@ -400,6 +401,7 @@
 "TERM_VALUE" = "Wert";
 "TERM_VERSION" = "Version";
 "TERM_VERSUS_ABBR" = "vs.";
+"TERM_VERSUS_THE_FIELD" = "gegen das Feld";
 "TERM_VISIT" = "besichtigen";
 "TERM_VOICE" = "Sprachleitung";
 "TERM_WAGERING" = "Wetten";
@@ -750,8 +752,10 @@
 "TITLE_HDCP_WORKSHEET_COLUMNS" = "✓\tSpieler\tAutorität\tKonto\tIndex\tWirksam\tNotiz";
 "TITLE_HOGAN" = "Hogan";
 "TITLE_HOLE_HANDICAP" = "Handicap";
+"TITLE_HOLE_NAMES" = "Namen von Golflöchern";
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Loch-Score-Einstellung";
 "TITLE_HOLE_SELECTION" = "Lochauswahl";
+"TITLE_HOLES_HAVE_NAMES" = "Löcher haben Namen";
 "TITLE_HOLES_TO_BE_SCORED" = "Zu bewertenden Löcher";
 "TITLE_HOLLYWOOD" = "Hollywood";
 "TITLE_HOME_CLUB" = "Heimverein";

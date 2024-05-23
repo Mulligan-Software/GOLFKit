@@ -276,6 +276,9 @@ BOOL GOLFDoesTournamentAdjustmentForAuthority(GOLFHandicapAuthority *authority);
 BOOL GOLFHandicapCCRUsedForAuthority(GOLFHandicapAuthority *authority, BOOL *required);
 //	Indicates whether the handicapping method for this authority uses (or requires) a conditions-dependent CCR or CSS returned for scores used for handicapping
 
+BOOL GOLFHandicapPreciseAllowancesForAuthority(GOLFHandicapAuthority *authority);
+//	Indicates whether the handicapping method for this authority uses (if available) unrounded playing handicaps to calculate allowances (rounded or not)
+
 GOLFPlayingConditionAdjustment GOLFHandicapPCCMinimumAdjustmentForAuthority(GOLFHandicapAuthority *authority);
 //	Returns the minimum legal PCC (Playing Condition Calculation) adjustment for this authority (usually a WHS authority)
 
@@ -317,7 +320,7 @@ GOLFScore GOLFHandicapStrokeControlLimitForAuthority(GOLFHandicapAuthority *auth
 //	------------------	--------------	-------------------------------------------------------
 //	referenceObject		id				a <GOLFHandicapDataSource> that responds to strokeControlInfo:
 
-GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOLFHandicapIndex handicapIndex, GOLFTeeCourseRating courseRating, GOLFTeeSLOPERating slopeRating, GOLFPar par, GOLFHandicapCalculationOption options, NSDictionary *info);
+GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOLFHandicapIndex handicapIndex, GOLFTeeCourseRating courseRating, GOLFTeeSLOPERating slopeRating, GOLFPar par, GOLFHandicapCalculationOption options, NSDictionary *info, GOLFUnroundedPlayingHandicap *unRounded);
 //	Playing handicap calculation per the authority
 //
 //	GOLFHandicapAuthority *			authority		required		Handicap authority
@@ -326,7 +329,8 @@ GOLFPlayingHandicap GOLFPlayingHandicapFor(GOLFHandicapAuthority *authority, GOL
 //	GOLFTeeSLOPERating				slopeRating		required		18 holes unless GOLFHandicapCalculationOption9HoleSLOPE (kNotASLOPERating is valid)
 //	GOLFPar							par				required		18 holes unless GOLFHandicapCalculationOption9HolePar (kNotAPar is valid)
 //	GOLFHandicapCalculationOption	options			required		Calculations options or GOLFHandicapCalculationOptionNone
-//	NSDictionary *					info			optional		optional parameters (described below)
+//	NS(Mutable)Dictionary *			info			optional		optional parameters (described below)
+//	GOLFUnroundedPlayingHandicap *	unrounded		optional		optional unrounded result destination
 //
 //	options:
 //	GOLFHandicapCalculationOptionNeed9HoleResult	(1)		Need return of a 9-hole handicap

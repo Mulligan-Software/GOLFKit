@@ -36,6 +36,9 @@
 + (id)numberWithPlayingHandicap:(GOLFPlayingHandicap)playingHandicap;
 - (GOLFPlayingHandicap)playingHandicapValue;
 
++ (id)numberWithUnroundedPlayingHandicap:(GOLFUnroundedPlayingHandicap)unroundedPlayingHandicap;
+- (GOLFUnroundedPlayingHandicap)unroundedPlayingHandicapValue;
+
 + (id)numberWithTeeSLOPERating:(GOLFTeeSLOPERating)teeSLOPERating;
 - (GOLFTeeSLOPERating)teeSLOPERatingValue;
 

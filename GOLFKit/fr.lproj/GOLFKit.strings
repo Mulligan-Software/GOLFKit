@@ -298,6 +298,7 @@
 "TERM_SEMICOLON" = "point-virgule (;)";
 "TERM_SEND" = "envoyer";	//	As in: "Send" email
 "TERM_SETTINGS" = "réglages";
+"TERM_SHARE" = "partager";
 "TERM_SIDE" = "côté";
 "TERM_SIDE_PLURAL" = "côtés";
 "TERM_SIXPT" = "6-Points";
@@ -358,6 +359,7 @@
 "TERM_VALUE" = "valeur";
 "TERM_VERSION" = "version";
 "TERM_VERSUS_ABBR" = "vs";
+"TERM_VERSUS_THE_FIELD" = "contre le terrain";
 "TERM_VISIT" = "visiter";
 "TERM_VOICE" = "vocale";
 "TERM_WAGERING" = "parier";
@@ -708,8 +710,10 @@
 "TITLE_HDCP_WORKSHEET_COLUMNS" = "✓\tJoueur\tAutorité\tCompte\tIndex\tEffective\tMémos";
 "TITLE_HOGAN" = "Hogan";
 "TITLE_HOLE_HANDICAP" = "Handicap";
+"TITLE_HOLE_NAMES" = "Noms de Trous";
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Trou score ajustement";
 "TITLE_HOLE_SELECTION" = "Sélection de Trou";
+"TITLE_HOLES_HAVE_NAMES" = "Trous ont des noms";
 "TITLE_HOLES_TO_BE_SCORED" = "Trous à marquer";
 "TITLE_HOLLYWOOD" = "Hollywood";
 "TITLE_HOME_CLUB" = "Club d’accueil";

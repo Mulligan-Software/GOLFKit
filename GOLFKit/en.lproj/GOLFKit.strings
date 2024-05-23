@@ -298,6 +298,7 @@
 "TERM_SEMICOLON" = "semicolon (;)";
 "TERM_SEND" = "send";	//	As in: "Send" email
 "TERM_SETTINGS" = "settings";
+"TERM_SHARE" = "share";
 "TERM_SIDE" = "side";
 "TERM_SIDE_PLURAL" = "sides";
 "TERM_SIXPT" = "6-Point";
@@ -358,6 +359,7 @@
 "TERM_VALUE" = "value";
 "TERM_VERSION" = "version";
 "TERM_VERSUS_ABBR" = "vs.";
+"TERM_VERSUS_THE_FIELD" = "vs. the field";
 "TERM_VISIT" = "visit";
 "TERM_VOICE" = "voice";
 "TERM_WAGERING" = "wagering";
@@ -708,9 +710,11 @@
 "TITLE_HDCP_WORKSHEET_COLUMNS" = "✓\tPlayer\tAuthority\tAccount\tIndex\tEffective\tNotes";
 "TITLE_HOGAN" = "Hogan";
 "TITLE_HOLE_HANDICAP" = "Handicap";
+"TITLE_HOLE_NAMES" = "Hole Names";
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Hole score adjustment";
-"TITLE_HOLES_TO_BE_SCORED" = "Holes to be Scored";
 "TITLE_HOLE_SELECTION" = "Hole Selection";
+"TITLE_HOLES_HAVE_NAMES" = "Holes have names";
+"TITLE_HOLES_TO_BE_SCORED" = "Holes to be Scored";
 "TITLE_HOLLYWOOD" = "Hollywood";
 "TITLE_HOME_CLUB" = "Home Club";
 "TITLE_HOW_TO_GET_STARTED" = "How would you like to get started?";
