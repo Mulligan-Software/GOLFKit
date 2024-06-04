@@ -109,7 +109,7 @@ NSDictionary * _Nullable GOLFTeeColorDictionaryForTeeColorIndex(GOLFTeeColorInde
 //	--------------		----------		------------------------------------------------------------------------------------------
 //	teeColorIndex		NSNumber		unsigned integer representing the tee color
 //	teeColor			GOLFColor		NSColor (macOS) or UIColor (iOS) representing visual equivalent for display or tinting
-//	teeColorName		NSString		localized name of the color (ie: "Vert", "Black & White", "Rojo y Blanco")@"teeColorName",
+//	teeColorName		NSString		localized name of the color (ie: "Vert", "Black & White", "Rojo y Blanco")
 //	teeIconName			NSString		name of the tee icon (.ICNS), like "TeeMarkerBlueAndWhite"
 //	teeImageName		NSString		name of the tee image (.PNG), like "tee_marker_blueandwhite" (excluding any size or scale identification)
 //	isComboColor		NSNumber		optional boolean TRUE if entry represents a color combination (two colors)
@@ -120,6 +120,7 @@ NSDictionary * _Nullable GOLFTeeColorDictionaryForTeeColorIndex(GOLFTeeColorInde
 //	course				id				optional golf course which has tees configured for combo coloration
 //	round				id				optional round which might require special tee color presentation
 //	tee					id				The golf tee associated with the original comboDict or its calibrated equivalent
+//	side				id				The side or roundSide associated with the original comboDict or its calibrated equivalent
 //
 //	Passed a standard combo teeColor NSDictionary or the "Combo" teeColor NSDictionary,
 //	returns (from a course, side, tee, round, or roundSide) an enhanced NSDictionary identifying any of those objects,
@@ -133,6 +134,8 @@ NSDictionary * _Nullable GOLFTeeColorDictionaryForTeeColorIndex(GOLFTeeColorInde
 //	could be red AND white at certain holes).
 //	In the returned "calibrated" combo tee color NSDictionary, the "firstColorIndex" and "secondColorIndex" items will
 //	be set to corrected teeColor references, the "isComboColor" boolean will be set to TRUE and the display mapping for
-//	18 holes (color designator) will be provided by the GOLFComboTeeInfoSource if possible.
+//	18 holes (color designator) will be provided by the GOLFComboTeeInfoSource if possible.  The GOLFComboTeeInfoSource provider
+//	will supply this dictionary full of stuff, but interested party has to provide comboDict and do the right thing with these
+//	specs - like picking out a color or tee marker image, or paint text boxes.
 
 @end

@@ -98,6 +98,7 @@
 "TERM_CHAPMAN" = "Chapman";
 "TERM_CHICAGO" = "Chicago";
 "TERM_CHOOSE" = "auswählen";
+"TERM_CHRONOLOGICAL" = "chronologisch";
 "TERM_CITY" = "Stadt";
 "TERM_CLICK" = "klicken";
 "TERM_CLUB" = "Club";
@@ -130,6 +131,7 @@
 "TERM_DEVICE" = "Gerät";
 "TERM_DIFFERENTIAL" = "Differential";
 "TERM_DIFFERENTIAL_ABBR" = "Diff.";
+"TERM_DIM" = "schwacher";
 "TERM_DISABLED" = "deaktiviert";
 "TERM_DISQUALIFIED" = "disqualifiziert";
 "TERM_DISQUALIFIED_ABBR" = "disq.";
@@ -247,6 +249,7 @@
 "TERM_NAME" = "Name";
 "TERM_NET" = "netto";
 "TERM_NEVER" = "noch nie";
+"TERM_NEWEST_FIRST" = "das Neueste zuerst";
 "TERM_NEXT" = "weiter";
 "TERM_NICKNAME" = "Spitzname";
 "TERM_NINE" = "Neun";
@@ -257,6 +260,7 @@
 "TERM_NONE" = "keiner";
 "TERM_NORMAL" = "üblich";
 "TERM_NOT_AVAILABLE_ABBR" = "n/a";
+"TERM_NOT_ON_FILE" = "nicht verfügbar";
 "TERM_NOTE" = "Notiz";
 "TERM_NOTE_PLURAL" = "Notizen";
 "TERM_NOTICE" = "beachten";	//	v. take notice, pay attention
@@ -267,6 +271,7 @@
 "TERM_OF_FROM" = "von";	//	"the Rockefellers of Staton Island"
 "TERM_OF_PORTION" = "der";	//	"30% of Course Handicap"
 "TERM_OFF_SETTING" = "deaktiviert";
+"TERM_OLDEST_FIRST" = "Die ältesten zu erst";
 "TERM_ON_SETTING" = "aktiviert";
 "TERM_ON_SITUATED" = "in";
 "TERM_OPEN" = "öffnen";
@@ -365,6 +370,7 @@
 "TERM_TEE_PLURAL" = "Tees";
 "TERM_TEE_TIME" = "Teezeit";
 "TERM_TEE_TIME_PLURAL" = "Teezeiten";
+"TERM_TEXT" = "Text";
 "TERM_THE_ARTICLE" = "die";
 "TERM_THE_ARTICLE_F" = "die";
 "TERM_THE_ARTICLE_M" = "der";
@@ -387,7 +393,8 @@
 "TERM_TYPE" = "Art";
 "TERM_UNAVAILABLE" = "nicht verfügbar";
 "TERM_UNCHANGED" = "unverändert";
-"TERM_UNKNOWN" = "unbekannt";
+"TERM_UNKNOWN" = "unbekannter";
+"TERM_UNKNOWN_PLURAL" = "unbekannte";
 "TERM_UNLINK" = "Verknüpfung aufheben";
 "TERM_UNLOCK" = "entsperren";
 "TERM_UNLOCKED" = "entsperrt";
@@ -680,6 +687,7 @@
 "TITLE_GREEN_IN_REGULATION_PLURAL" = "Grüns in Regulation";
 "TITLE_GREENIE" = "Greenie";
 "TITLE_GREENSIDE_BUNKER_HIT" = "Grün-Bunker erreicht";
+"TITLE_GROSS_BALL" = "Brutto Ball";
 "TITLE_GURGLIE" = "Gurglie, Fish";
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
@@ -751,6 +759,7 @@
 "TITLE_HDCP_NETWORK_NUMBER" = "Handicap-Netwerkkonto";
 "TITLE_HDCP_WORKSHEET_COLUMNS" = "✓\tSpieler\tAutorität\tKonto\tIndex\tWirksam\tNotiz";
 "TITLE_HOGAN" = "Hogan";
+"TITLE_HOLE_BY_HOLE_DETAILS" = "Loch-für-Loch Details";
 "TITLE_HOLE_HANDICAP" = "Handicap";
 "TITLE_HOLE_NAMES" = "Namen von Golflöchern";
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Loch-Score-Einstellung";
@@ -822,6 +831,7 @@
 "TITLE_NAME_SCORECARDS" = "Benennen Scorekarten";
 "TITLE_NAME_TEAMS" = "Benennen Teams";
 "TITLE_NASSAU" = "Nassau";
+"TITLE_NET_BALL" = "Netto Ball";
 "TITLE_NEW_DATA_STORE_NAME" = "Neuer Datenspeichername";
 "TITLE_NEW_SCORECARD" = "Neue Scorekarte";
 "TITLE_NEW_SCORECARD_BUTTON" = "Neue Scorekarte";
@@ -1304,9 +1314,9 @@
 "PLAY_TYPE_TEAM_BETTER_BALL" = "best-Ball";
 "PLAY_TYPE_TEAM_BETTER_BALL_DESC" = "geringe Punktzahl von Partnern oder Mitspieler";
 "PLAY_TYPE_TEAM_TWO_BEST_BALLS" = "zwei beste Bälle";
-"PLAY_TYPE_TEAM_TWO_BEST_BALLS_DESC" = "2 niedrige Werte von 3 oder mehr Mitspieler";
+"PLAY_TYPE_TEAM_TWO_BEST_BALLS_DESC" = "2 niedrige Bälle von 3 oder mehr Mitspieler";
 "PLAY_TYPE_TEAM_THREE_BEST_BALLS" = "drei beste Bälle";
-"PLAY_TYPE_TEAM_THREE_BEST_BALLS_DESC" = "3 niedrige Werte von 4 oder mehr Mitspieler";
+"PLAY_TYPE_TEAM_THREE_BEST_BALLS_DESC" = "3 niedrige Bälle von 4 oder mehr Mitspieler";
 "PLAY_TYPE_TEAM_RITZ" = "das Ritz";
 "PLAY_TYPE_TEAM_RITZ_DESC" = "bestes Brutto-Wertung des Mitspielers, dann eine weiter Netto-Wertung";
 "PLAY_TYPE_TEAM_RITZ_REVERSE" = "das Ritz rückwärts";

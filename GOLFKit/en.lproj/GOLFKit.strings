@@ -56,6 +56,7 @@
 "TERM_CHAPMAN" = "Chapman";
 "TERM_CHICAGO" = "Chicago";
 "TERM_CHOOSE" = "choose";
+"TERM_CHRONOLOGICAL" = "chronological";
 "TERM_CITY" = "city";
 "TERM_CLICK" = "click";
 "TERM_CLUB" = "club";
@@ -88,6 +89,7 @@
 "TERM_DEVICE" = "device";
 "TERM_DIFFERENTIAL" = "differential";
 "TERM_DIFFERENTIAL_ABBR" = "diff.";
+"TERM_DIM" = "dim";
 "TERM_DISABLED" = "disabled";
 "TERM_DISQUALIFIED" = "disqualified";
 "TERM_DISQUALIFIED_ABBR" = "disq.";
@@ -205,6 +207,7 @@
 "TERM_NAME" = "name";
 "TERM_NET" = "net";
 "TERM_NEVER" = "never";
+"TERM_NEWEST_FIRST" = "newest first";
 "TERM_NEXT" = "next";
 "TERM_NICKNAME" = "nickname";
 "TERM_NINE" = "nine";
@@ -215,6 +218,7 @@
 "TERM_NONE" = "none";
 "TERM_NORMAL" = "normal";
 "TERM_NOT_AVAILABLE_ABBR" = "n/a";
+"TERM_NOT_ON_FILE" = "not on file";
 "TERM_NOTE" = "note";
 "TERM_NOTE_PLURAL" = "notes";
 "TERM_NOTICE" = "notice";
@@ -225,6 +229,7 @@
 "TERM_OF_FROM" = "of";	//	"the Rockefellers of Staton Island"
 "TERM_OF_PORTION" = "of";	//	"30% of Course Handicap"
 "TERM_OFF_SETTING" = "off";
+"TERM_OLDEST_FIRST" = "oldest first";
 "TERM_ON_SETTING" = "on";
 "TERM_ON_SITUATED" = "on";
 "TERM_OPEN" = "open";
@@ -323,6 +328,7 @@
 "TERM_TEE_PLURAL" = "tees";
 "TERM_TEE_TIME" = "tee time";
 "TERM_TEE_TIME_PLURAL" = "tee times";
+"TERM_TEXT" = "text";
 "TERM_THE_ARTICLE" = "the";
 "TERM_THE_ARTICLE_F" = "the";
 "TERM_THE_ARTICLE_M" = "the";
@@ -346,6 +352,7 @@
 "TERM_UNAVAILABLE" = "unavailable";
 "TERM_UNCHANGED" = "unchanged";
 "TERM_UNKNOWN" = "unknown";
+"TERM_UNKNOWN_PLURAL" = "unknown";
 "TERM_UNLINK" = "unlink";
 "TERM_UNLOCK" = "unlock";
 "TERM_UNLOCKED" = "unlocked";
@@ -709,6 +716,7 @@
 "TITLE_HDCP_NETWORK_NUMBER" = "Handicap Network Account";
 "TITLE_HDCP_WORKSHEET_COLUMNS" = "✓\tPlayer\tAuthority\tAccount\tIndex\tEffective\tNotes";
 "TITLE_HOGAN" = "Hogan";
+"TITLE_HOLE_BY_HOLE_DETAILS" = "Hole-by-Hole Details";
 "TITLE_HOLE_HANDICAP" = "Handicap";
 "TITLE_HOLE_NAMES" = "Hole Names";
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Hole score adjustment";
@@ -780,6 +788,7 @@
 "TITLE_NAME_SCORECARDS" = "Name Scorecards";
 "TITLE_NAME_TEAMS" = "Name Teams";
 "TITLE_NASSAU" = "Nassau";
+"TITLE_NET_BALL" = "Net Ball";
 "TITLE_NEW_DATA_STORE_NAME" = "New Data Store Name";
 "TITLE_NEW_SCORECARD" = "New Scorecard";
 "TITLE_NEW_SCORECARD_BUTTON" = "New Scorecard";

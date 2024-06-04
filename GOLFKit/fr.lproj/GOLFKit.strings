@@ -56,6 +56,7 @@
 "TERM_CHAPMAN" = "Chapman";
 "TERM_CHICAGO" = "Chicago";
 "TERM_CHOOSE" = "choisir";
+"TERM_CHRONOLOGICAL" = "chronologique";
 "TERM_CITY" = "ville";
 "TERM_CLICK" = "cliquez";
 "TERM_CLUB" = "club";
@@ -88,6 +89,7 @@
 "TERM_DEVICE" = "appareil";
 "TERM_DIFFERENTIAL" = "différentiel";
 "TERM_DIFFERENTIAL_ABBR" = "diff.";
+"TERM_DIM" = "sombre";
 "TERM_DISABLED" = "désactivé";
 "TERM_DISQUALIFIED" = "disqualifié";
 "TERM_DISQUALIFIED_ABBR" = "disq.";
@@ -205,6 +207,7 @@
 "TERM_NAME" = "nom";
 "TERM_NET" = "net";
 "TERM_NEVER" = "jamais";
+"TERM_NEWEST_FIRST" = "plus récent en premier";
 "TERM_NEXT" = "suivant";
 "TERM_NICKNAME" = "surnom";
 "TERM_NINE" = "neuf";
@@ -215,6 +218,7 @@
 "TERM_NONE" = "aucun";
 "TERM_NORMAL" = "normal";
 "TERM_NOT_AVAILABLE_ABBR" = "n/a";
+"TERM_NOT_ON_FILE" = "pas disponible";
 "TERM_NOTE" = "mémo";
 "TERM_NOTE_PLURAL" = "mémos";
 "TERM_NOTICE" = "remarquer";	//	v. note, remark, observe
@@ -225,6 +229,7 @@
 "TERM_OF_FROM" = "de";	//	"the Rockefellers of Staton Island"
 "TERM_OF_PORTION" = "de";	//	"30% of Course Handicap"
 "TERM_OFF_SETTING" = "désactivé";
+"TERM_OLDEST_FIRST" = "plus ancien en premier";
 "TERM_ON_SETTING" = "activé";
 "TERM_ON_SITUATED" = "sur";
 "TERM_OPEN" = "ouvrir";
@@ -323,6 +328,7 @@
 "TERM_TEE_PLURAL" = "jalons";
 "TERM_TEE_TIME" = "heure de départ";
 "TERM_TEE_TIME_PLURAL" = "heures de départ";
+"TERM_TEXT" = "texte";
 "TERM_THE_ARTICLE" = "le";
 "TERM_THE_ARTICLE_F" = "la";
 "TERM_THE_ARTICLE_M" = "le";
@@ -346,6 +352,7 @@
 "TERM_UNAVAILABLE" = "indisponible";
 "TERM_UNCHANGED" = "inchangé";
 "TERM_UNKNOWN" = "inconnu";
+"TERM_UNKNOWN_PLURAL" = "inconnus";
 "TERM_UNLINK" = "délier";
 "TERM_UNLOCK" = "déverrouiller";
 "TERM_UNLOCKED" = "déverrouillé";
@@ -638,6 +645,7 @@
 "TITLE_GREEN_IN_REGULATION_PLURAL" = "Greens réglementaires";
 "TITLE_GREENIE" = "Greenie";
 "TITLE_GREENSIDE_BUNKER_HIT" = "Bunker au bord du green atteint";
+"TITLE_NET_BALL" = "Balle Brut";
 "TITLE_GURGLIE" = "Gurglie, Fish";
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
@@ -709,6 +717,7 @@
 "TITLE_HDCP_NETWORK_NUMBER" = "Compte Handicap Network";
 "TITLE_HDCP_WORKSHEET_COLUMNS" = "✓\tJoueur\tAutorité\tCompte\tIndex\tEffective\tMémos";
 "TITLE_HOGAN" = "Hogan";
+"TITLE_HOLE_BY_HOLE_DETAILS" = "Détails Trou par Trou";
 "TITLE_HOLE_HANDICAP" = "Handicap";
 "TITLE_HOLE_NAMES" = "Noms de Trous";
 "TITLE_HOLE_SCORE_ADJUSTMENT" = "Trou score ajustement";
@@ -780,6 +789,7 @@
 "TITLE_NAME_SCORECARDS" = "Nommez les Cartes de Score";
 "TITLE_NAME_TEAMS" = "Nommez les Équipes";
 "TITLE_NASSAU" = "Nassau";
+"TITLE_NET_BALL" = "Balle Net";
 "TITLE_NEW_DATA_STORE_NAME" = "Nom du nouveau base de données";
 "TITLE_NEW_SCORECARD" = "Nouvelle Carte de Score";
 "TITLE_NEW_SCORECARD_BUTTON" = "Nouvelle Carte";
@@ -1262,13 +1272,13 @@
 "PLAY_TYPE_TEAM_BETTER_BALL" = "Meilleur Score";
 "PLAY_TYPE_TEAM_BETTER_BALL_DESC" = "Balle plus bas de partenaires ou de coéquipières";
 "PLAY_TYPE_TEAM_TWO_BEST_BALLS" = "Deux meilleurs scores";
-"PLAY_TYPE_TEAM_TWO_BEST_BALLS_DESC" = "2 balles plus bas de 3 ou plusieurs coéquipiers";
+"PLAY_TYPE_TEAM_TWO_BEST_BALLS_DESC" = "2 balles les plus basses de 3 ou plusieurs coéquipiers";
 "PLAY_TYPE_TEAM_THREE_BEST_BALLS" = "Trois meilleurs scores";
-"PLAY_TYPE_TEAM_THREE_BEST_BALLS_DESC" = "3 balles plus bas de 4 ou plusieurs coéquipiers";
+"PLAY_TYPE_TEAM_THREE_BEST_BALLS_DESC" = "3 balles les plus basses de 4 ou plusieurs coéquipiers";
 "PLAY_TYPE_TEAM_RITZ" = "Le Ritz";
-"PLAY_TYPE_TEAM_RITZ_DESC" = "Balle bas brut des coéquipiers, puis un autre balle net";
+"PLAY_TYPE_TEAM_RITZ_DESC" = "Balle au brut bas des coéquipiers, puis un autre balle net";
 "PLAY_TYPE_TEAM_RITZ_REVERSE" = "Le Ritz à l’Envers";
-"PLAY_TYPE_TEAM_RITZ_REVERSE_DESC" = "Balle bas net des coéquipiers, puis un autre balle brut";
+"PLAY_TYPE_TEAM_RITZ_REVERSE_DESC" = "Balle au net bas des coéquipiers, puis un autre balle brut";
 "PLAY_TYPE_TEAM_FOUR_BALL" = "Quatre balles";
 "PLAY_TYPE_TEAM_FOUR_BALL_DESC" = "Meilleure balle de partenaires";
 "PLAY_TYPE_TEAM_FOURSOMES" = "Foursomes";
