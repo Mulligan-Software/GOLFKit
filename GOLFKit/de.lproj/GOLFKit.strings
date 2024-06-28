@@ -911,6 +911,7 @@
 "TITLE_REMOTE_SCORECARD_ALERT_EXTRA" = "Diese Scorekarte wurde auf einem anderen Gerät erstellt. Möchten Sie es zum Bearbeiten oder Eingeben von Partituren entsperren?";
 "TITLE_REMOTE_SCORECARD_ALERT_UNLOCK" = "Diese Scorekarte wurde auf einem anderen Gerät erstellt. Möchten Sie es freischalten, um Punkte einzugeben?";
 "TITLE_REMOVE" = "Entfernen";
+"TITLE_RESULTS_DETAIL" = "Ergebnisdetails";
 "TITLE_REVIEW_BUTTON" = "Überprüfen";
 "TITLE_REVISION_DATE" = "Änderungsdatum";
 "TITLE_ROUNDS_HIGHLIGHT" = "Runden Akzentuierung";

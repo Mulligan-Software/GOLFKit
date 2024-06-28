@@ -869,6 +869,7 @@
 "TITLE_REMOTE_SCORECARD_ALERT_EXTRA" = "Este tarjeta se créa en otro dispositivo.  ¿Quieres desbloquear para la edición o introducir los puntajes?";
 "TITLE_REMOTE_SCORECARD_ALERT_UNLOCK" = "Este tarjeta se créa en otro dispositivo.  ¿Quieres desbloquear para introducir los puntajes?";
 "TITLE_REMOVE" = "Eliminar";
+"TITLE_RESULTS_DETAIL" = "Detalle de Resultados";
 "TITLE_REVIEW_BUTTON" = "Revisar";
 "TITLE_REVISION_DATE" = "Fecha de Revisión";
 "TITLE_ROUNDS_HIGHLIGHT" = "Resaltado de Rondas";

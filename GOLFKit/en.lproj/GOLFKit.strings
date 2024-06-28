@@ -9,7 +9,7 @@
 //	Golf Terminology
 "TERM_ABOUT" = "about";
 "TERM_ACCOUNT" = "account";
-"TERM_ACKNOWLEDGEMENT_PLURAL" = "acknowledgments";
+"TERM_ACKNOWLEDGEMENT_PLURAL" = "acknowledgements";
 "TERM_ACTION" = "action";
 "TERM_ADJUSTED" = "adjusted";
 "TERM_ADJUSTED_ABBR" = "adj.";
@@ -868,6 +868,7 @@
 "TITLE_REMOTE_SCORECARD_ALERT_EXTRA" = "This scorecard was created on another device.  Do you want to unlock it for editing or entering scores?";
 "TITLE_REMOTE_SCORECARD_ALERT_UNLOCK" = "This scorecard was created on another device.  Do you want to unlock it to enter scores?";
 "TITLE_REMOVE" = "Remove";
+"TITLE_RESULTS_DETAIL" = "Results Detail";
 "TITLE_REVIEW_BUTTON" = "Review";
 "TITLE_REVISION_DATE" = "Revision Date";
 "TITLE_ROUNDS_HIGHLIGHT" = "Rounds Highlight";

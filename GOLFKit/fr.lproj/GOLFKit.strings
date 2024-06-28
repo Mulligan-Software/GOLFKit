@@ -869,6 +869,7 @@
 "TITLE_REMOTE_SCORECARD_ALERT_EXTRA" = "Cette carte de score a été créé sur un autre appareil.  Voulez-vous le déverrouiller pour l’édition ou la saisie des scores?";
 "TITLE_REMOTE_SCORECARD_ALERT_UNLOCK" = "Cette carte de score a été créé sur un autre appareil.  Voulez-vous le déverrouiller pour la saisie des scores?";
 "TITLE_REMOVE" = "Supprimer";
+"TITLE_RESULTS_DETAIL" = "Détail des Résultats";
 "TITLE_REVIEW_BUTTON" = "Revoir";
 "TITLE_REVISION_DATE" = "Date de Révision";
 "TITLE_ROUNDS_HIGHLIGHT" = "Marquage des Tours";
