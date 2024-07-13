@@ -110,6 +110,7 @@
 "TERM_COMPETITOR" = "Konkurrent";
 "TERM_COMPETITOR_PLURAL" = "Konkurrenten";
 "TERM_COMPLETE" = "komplett";
+"TERM_CONFIGURATION" = "Konfiguration";
 "TERM_CONNECTION" = "Verbindung";
 "TERM_CONTACT_VERB" = "erreichen";	//	to CONTACT someone
 "TERM_CONTESTANT" = "Teilnehmer";
@@ -629,6 +630,7 @@
 "TITLE_DROPBOX" = "Dropbox";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
+"TITLE_EAGLE_SETTINGS" = "Einstellungen für Mulligan’s Eagle";
 "TITLE_EAGLE_USERS_GUIDE" = "Benutzerhandbuch für Mulligan’s Eagle";
 "TITLE_EAGLES_OR_BETTER" = "Eagles & besser";
 "TITLE_EDIT_BUTTON" = "Bearbeiten";
@@ -741,6 +743,7 @@
 "TITLE_HANDICAP_PLAYING" = "Spielen Handicap";
 "TITLE_HANDICAP_PLAYING_PLURAL" = "Spielen Handicapen";
 "TITLE_HANDICAP_RECORDS" = "Handicap-Datensätze";
+"TITLE_HANDICAP_REPORT" = "Handicap-Bericht";
 "TITLE_HANDICAP_SERVICE" = "Handicap-Service";
 "TITLE_HANDICAP_SERVICE_ACCOUNT" = "Handicap-Konto";
 "TITLE_HANDICAP_SLOPE_CHART" = "Slope-Diagramm";
@@ -832,6 +835,8 @@
 "TITLE_NAME_TEAMS" = "Benennen Teams";
 "TITLE_NASSAU" = "Nassau";
 "TITLE_NET_BALL" = "Netto Ball";
+"TITLE_NET_PAR" = "Netto-Par";
+"TITLE_NET_PAR_PLUS_1" = "Nettopar plus 1";
 "TITLE_NEW_DATA_STORE_NAME" = "Neuer Datenspeichername";
 "TITLE_NEW_SCORECARD" = "Neue Scorekarte";
 "TITLE_NEW_SCORECARD_BUTTON" = "Neue Scorekarte";
@@ -928,6 +933,8 @@
 "TITLE_SCORECARD_PLURAL" = "Scorekarten";
 "TITLE_SCORECARD_TOTAL" = "Sum";	//	As it appears in Scorecard total headers
 "TITLE_SCORING_COLORS" = "Farben für Golfwertung";
+"TITLE_SCORING_HISTORY" = "Scores-Historie";
+"TITLE_SCORING_RECORD" = "Scorerekord";
 "TITLE_SCORING_SHORTHAND" = "Kurzschrift für Golfwertung";
 "TITLE_SCRATCH_SCORE" = "Scratch Score";
 "TITLE_SECONDARY" = "Sekundär";
@@ -1011,6 +1018,8 @@
 "TITLE_USE_SSS" = "SSS verwenden";
 "TITLE_USERS_GUIDE_FOUND" = "Benutzerleitfaden gefunden";
 "TITLE_USERS_GUIDE_NOT_FOUND" = "Benutzerleitfaden nicht gefunden";
+"TITLE_USGA_TABLE" = "USGA-Tabelle";
+"TITLE_WHS_EXPECTED_SCORES_METHOD" = "WHS-Erwartete Punktzahl oder Differenzberechnungsmethode";
 "TITLE_WICKERS" = "Wickers";
 "TITLE_WIN/LOSE/DRAW_ABBR" = "S/N/U";	//	Sieg, Niederlage oder Unentschieden
 "TITLE_WITH_SCORE" = "mit Punktzahl";
@@ -1049,10 +1058,15 @@
 "DESCRIPTION_LOW_BALL_SECOND_BALL" = "1 Punkt - niedriger Teamkollege, 1 pt. - vs. zweite Teamkollegen";
 "DESCRIPTION_MATCH_PLAY" = "Kopf-an-Kopf-Wettbewerb durch gewonnenen Golflöcher";
 "DESCRIPTION_NASSAU" = "Ersteseite, Letzteseite und 18 Löcher";
+"DESCRIPTION_NET_PAR" = "Schätzen Sie den Score oder die Differenz zum Netto-Par (Par + Schläge) für Neuner oder nicht gespielte Löcher";
+"DESCRIPTION_NET_PAR_PLUS_1" = "Schätzen Sie den Score oder die Differenz zum Netto-Par (Par + Schläge + 1) für Neuner oder nicht gespielte Löcher";
+"DESCRIPTION_NO_METHOD" = "Schätzen Sie nicht die Scores für das Handicapping";
 "DESCRIPTION_NO_TRASH" = "Keine Reste / Punkte Kategorie angegeben";
 "DESCRIPTION_POLIE" = "1-Putt länger als Flaggenstocklänge";
 "DESCRIPTION_PRINTING_PRIVACY_%@" = "Eventsregistrierung Kategorien als „%@“ bezeichnet werden in der Regel nicht gedruckt oder angezeigt.";
 "DESCRIPTION_SANDIE" = "Auf und ab von einem Grün-Bunker";
+"DESCRIPTION_SCORING_HISTORY" = "Bestimmen Sie den typischen Score oder die Differenz aus dem 365-tägigen Scoreverlauf";
+"DESCRIPTION_SCORING_RECORD" = "Bestimmen Sie den typischen Score oder die Differenz aus dem Scorerekord des Spielers – die letzten 20 Runden";
 "DESCRIPTION_SEVE" = "Birdie oder besser, ohne das Fairway oder das Grün zu erreichen";
 "DESCRIPTION_SKINS_ALL_SCORES" = "Jeder gültige Golfloch-Score kann einen Skin gewinnen";
 "DESCRIPTION_SKINS_BIRDIE_OR_BETTER" = "Nur Golfloch-Scores unter Par können einen Skin gewinnen";
@@ -1069,6 +1083,7 @@
 "DESCRIPTION_THEME_APPEARANCE" = "Helle - Eagle verwendet immer den klassischen Aqua-Thema\nDunkel - Eagle verwendet immer den dunklen Modus\nSystem - Eagle verwendet das in den Systemeinstellungen ausgewählte Thema";
 "DESCRIPTION_THEME_PRE_MOJAVE" = "Vor macOS 10.14 Mojave, Eagle verwendet den standardmäßigen Aqua-Thema des Systems.";
 "DESCRIPTION_TRASH" = "Punkte oder „Flecken“ für Golfleistungen";
+"DESCRIPTION_USGA_TABLE" = "Abrufen von beispielhaften Scores oder Differenzen aus proprietären USGA-Statistiktabellen";
 "DESCRIPTION_WICKERS" = "Reste / Punkte Werte nehmen mit jedem Auftreten zu";
 "DESCRIPTION_WOLF" = "Spieler, optionaler Partner vs. der Rest an jedem Loch";
 

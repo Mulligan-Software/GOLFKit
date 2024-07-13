@@ -68,6 +68,7 @@
 "TERM_COMPETITOR" = "competitor";
 "TERM_COMPETITOR_PLURAL" = "competitors";
 "TERM_COMPLETE" = "complete";
+"TERM_CONFIGURATION" = "configuration";
 "TERM_CONNECTION" = "connection";
 "TERM_CONTACT_VERB" = "contact";	//	to CONTACT someone
 "TERM_CONTESTANT" = "contestant";
@@ -587,6 +588,7 @@
 "TITLE_DROPBOX" = "Dropbox";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
+"TITLE_EAGLE_SETTINGS" = "Settings for Mulligan’s Eagle";
 "TITLE_EAGLE_USERS_GUIDE" = "Mulligan’s Eagle Users’ Guide";
 "TITLE_EAGLES_OR_BETTER" = "Eagles & better";
 "TITLE_EDIT_BUTTON" = "Edit";
@@ -698,6 +700,7 @@
 "TITLE_HANDICAP_PLAYING" = "Playing Handicap";
 "TITLE_HANDICAP_PLAYING_PLURAL" = "Playing Handicaps";
 "TITLE_HANDICAP_RECORDS" = "Handicap Records";
+"TITLE_HANDICAP_REPORT" = "Handicap Report";
 "TITLE_HANDICAP_SERVICE" = "Handicap Service";
 "TITLE_HANDICAP_SERVICE_ACCOUNT" = "Handicapping Account";
 "TITLE_HANDICAP_SLOPE_CHART" = "Slope Chart";
@@ -789,6 +792,8 @@
 "TITLE_NAME_TEAMS" = "Name Teams";
 "TITLE_NASSAU" = "Nassau";
 "TITLE_NET_BALL" = "Net Ball";
+"TITLE_NET_PAR" = "Net Par";
+"TITLE_NET_PAR_PLUS_1" = "Net Par plus 1";
 "TITLE_NEW_DATA_STORE_NAME" = "New Data Store Name";
 "TITLE_NEW_SCORECARD" = "New Scorecard";
 "TITLE_NEW_SCORECARD_BUTTON" = "New Scorecard";
@@ -885,6 +890,8 @@
 "TITLE_SCORECARD_PLURAL" = "Scorecards";
 "TITLE_SCORECARD_TOTAL" = "Tot";	//	As it appears in Scorecard total headers ("Tot"
 "TITLE_SCORING_COLORS" = "Scoring Colors";
+"TITLE_SCORING_HISTORY" = "Scoring History";
+"TITLE_SCORING_RECORD" = "Scoring Record";
 "TITLE_SCORING_SHORTHAND" = "Scoring Shorthand";
 "TITLE_SCRATCH_SCORE" = "Scratch Score";
 "TITLE_SECONDARY" = "Secondary";
@@ -968,6 +975,8 @@
 "TITLE_USE_SSS" = "Use SSS";
 "TITLE_USERS_GUIDE_FOUND" = "Users’ Guide found";
 "TITLE_USERS_GUIDE_NOT_FOUND" = "No Users’ Guide file found";
+"TITLE_USGA_TABLE" = "USGA Table";
+"TITLE_WHS_EXPECTED_SCORES_METHOD" = "WHS Expected Score / Differential Calculation Method";
 "TITLE_WICKERS" = "Wickers";
 "TITLE_WIN/LOSE/DRAW_ABBR" = "W/L/D";
 "TITLE_WITH_SCORE" = "with score";
@@ -1006,10 +1015,15 @@
 "DESCRIPTION_LOW_BALL_SECOND_BALL" = "1 point - low teammate, 1 pt. - vs. 2nd teammates";
 "DESCRIPTION_MATCH_PLAY" = "Head-to-head competition scored by holes won";
 "DESCRIPTION_NASSAU" = "Front side, Back side and 18 holes";
+"DESCRIPTION_NET_PAR" = "Estimate score or differential from net par (par + strokes) for nines or unplayed holes";
+"DESCRIPTION_NET_PAR_PLUS_1" = "Estimate score or differential from net par (par + strokes + 1) for nines or unplayed holes";
+"DESCRIPTION_NO_METHOD" = "Do not estimate scores for handicapping";
 "DESCRIPTION_NO_TRASH" = "No Trash/Dots category specified";
 "DESCRIPTION_POLIE" = "1-putt longer than flagstick length";
 "DESCRIPTION_PRINTING_PRIVACY_%@" = "Event registration categories identified as “%@” are generally not printed or displayed.";
 "DESCRIPTION_SANDIE" = "Up and down from a greenside bunker";
+"DESCRIPTION_SCORING_HISTORY" = "Determine typical score or differential from 365-day scoring history";
+"DESCRIPTION_SCORING_RECORD" = "Determine typical score or differential from player's scoring record - last 20 rounds";
 "DESCRIPTION_SEVE" = "Birdie or better without hitting fairway or green";
 "DESCRIPTION_SKINS_ALL_SCORES" = "Any valid hole score may win a skin";
 "DESCRIPTION_SKINS_BIRDIE_OR_BETTER" = "Only scores below par may win a skin";
@@ -1026,6 +1040,7 @@
 "DESCRIPTION_THEME_APPEARANCE" = "Light - Eagle always uses classic Aqua appearance\nDark - Eagle always uses Dark Mode appearance\nSystem - Eagle uses the appearance selected in System Preferences";
 "DESCRIPTION_THEME_PRE_MOJAVE" = "Prior to macOS 10.14 Mojave, Eagle uses the system's standard Aqua appearance style.";
 "DESCRIPTION_TRASH" = "Points or “dots” awarded for achievements";
+"DESCRIPTION_USGA_TABLE" = "Retrieve illustrative score or differential from proprietary USGA statistical tables";
 "DESCRIPTION_WICKERS" = "Trash/Dots value increases with each occurrance";
 "DESCRIPTION_WOLF" = "Player, optional partner vs. rest at each hole";
 

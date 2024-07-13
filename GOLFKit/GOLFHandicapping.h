@@ -26,6 +26,7 @@
 #define kNotAHandicapDifferential					-999.0		//	No-value for GOLFHandicapDifferential
 #define kMaximumStrokeControlLimit					999			//	Highest limit for stroke control of a GOLFScore
 #define kNotAPlayingConditionAdjustment				-999.0		//	No-value for GOLFPlayingConditionAdjustment
+#define kNotAnExpectedScore							-999.0		//	No-value for GOLFHandicapExpectedScore
 
 typedef NS_OPTIONS(NSUInteger, GOLFHandicapCalculationOption) {
 	GOLFHandicapCalculationOptionNone				= 0,			//	(0)
@@ -50,7 +51,7 @@ typedef NS_OPTIONS(NSUInteger, GOLFRoundHandicapOption) {
 	GOLFRoundHandicapOptionUsed						= 1 << 0,		//	(1)		Round used in handicap latest calculation (ie: one of the best n of last n+)
 	GOLFRoundHandicapOptionEligible					= 1 << 1,		//	(2)		Round is identified as eligible for use/review in calculations (stats and handicapping)
 	GOLFRoundHandicapOptionTournament				= 1 << 2,		//	(4)		Round identified as a "tournament" or "competition" (vs. "general play") round
-	GOLFRoundHandicapOptionCombined					= 1 << 3,		//	(8)		18-hole round constructed from two 9-hole rounds or 9-hole side and estimated holes
+	GOLFRoundHandicapOptionCombined					= 1 << 3,		//	(8)		18-hole round constructed (combined) from two 9-hole rounds
 	GOLFRoundHandicapOption9Holes					= 1 << 4,		//	(16)	9-hole round
 	GOLFRoundHandicapOptionAway						= 1 << 5,		//	(32)	Round identified as played "away" - not at home course
 	GOLFRoundHandicapOptionHome						= 1 << 6,		//	(64)	Round identified as played at home course (not exclusive of GOLFRoundHandicapOptionAway)
@@ -59,7 +60,7 @@ typedef NS_OPTIONS(NSUInteger, GOLFRoundHandicapOption) {
 	GOLFRoundHandicapOptionInternet					= 1 << 9,		//	(512)	Round recorded/entered via the internet
 	GOLFRoundHandicapOptionPenalty					= 1 << 10,		//	(1024)	Round identified as a "penalty" round - may have adjusted handicap
 	GOLFRoundHandicapOptionDiffAdjusted				= 1 << 11,		//	(2048)	Round differential has been adjusted (reduced or increased)
-	GOLFRoundHandicapOptionHasEstimatedScore		= 1 << 12,		//	(4096)	Round has Estimated Score (differential) determined for missing hole scores
+	GOLFRoundHandicapOptionHasExpectedScore			= 1 << 12,		//	(4096)	Round has Expected Score (differential) determined for missing hole scores
 	GOLFRoundHandicapOptionSpare13					= 1 << 13		//	(8192)
 };
 
@@ -105,13 +106,14 @@ typedef NS_ENUM(NSUInteger, GOLFHandicapStrokeControl) {
 	GOLFHandicapStrokeControlUnknown = 99		//	Unknown stroke control technique
 };
 
-typedef NS_ENUM(NSUInteger, GOLFHandicapEstimatedScoreMethod) {
-	GOLFHandicapEstimatedScoreMethodNone = 0,		//	Don't calculate Estimate Scores					(0)
-	GOLFHandicapEstimatedScoreMethodNetPar,			//	Calculate net par (nines or unplayed holes)		(1)
-	GOLFHandicapEstimatedScoreMethodUsingRecord,	//	Calculate from active scores record (last 20?)	(2) *
-	GOLFHandicapEstimatedScoreMethodUsingHistory,	//	Calculate from scoring history (last 365 days?)	(3)	*
-	GOLFHandicapEstimatedScoreMethodUSGATable,		//	Calculate with USGA estimation table			(4)
-	GOLFHandicapEstimatedScoreMethodUnknown = 99	//	Unknown method for Estimated Score calculations
+typedef NS_ENUM(NSUInteger, GOLFHandicapExpectedScoreMethod) {
+	GOLFHandicapExpectedScoreMethodNone = 0,			//	Don't calculate Expected Scores						(0)
+	GOLFHandicapExpectedScoreMethodNetPar,				//	Calculate net par (nines or unplayed holes)			(1)
+	GOLFHandicapExpectedScoreMethodNetParPlus1,			//	Calculate net par (nines or unplayed holes)			(2)
+	GOLFHandicapExpectedScoreMethodUsingRecord,			//	Calculate from active scores record (last 20?)		(3) *
+	GOLFHandicapExpectedScoreMethodUsingHistory,		//	Calculate from scoring history (last 365 days?)		(4)	*
+	GOLFHandicapExpectedScoreMethodUSGATable = 10,		//	Calculate with USGA Expected Score table			(10)
+	GOLFHandicapExpectedScoreMethodUnknown = 99			//	Unknown method for Expected Score calculations
 };
 
 typedef NS_ENUM(NSUInteger, GOLFHandicapDifferentialType) {
@@ -279,6 +281,9 @@ BOOL GOLFHandicapCCRUsedForAuthority(GOLFHandicapAuthority *authority, BOOL *req
 BOOL GOLFHandicapPreciseAllowancesForAuthority(GOLFHandicapAuthority *authority);
 //	Indicates whether the handicapping method for this authority uses (if available) unrounded playing handicaps to calculate allowances (rounded or not)
 
+GOLFHandicapExpectedScoreMethod GOLFHandicapExpectedScoreMethodForAuthority(GOLFHandicapAuthority *authority);
+//	Indicates the method for this authority by which an expected score or differential is calculated.
+
 GOLFPlayingConditionAdjustment GOLFHandicapPCCMinimumAdjustmentForAuthority(GOLFHandicapAuthority *authority);
 //	Returns the minimum legal PCC (Playing Condition Calculation) adjustment for this authority (usually a WHS authority)
 
@@ -292,6 +297,10 @@ GOLFHandicapStrokes GOLFHandicapDefaultLimitsDifferenceForAuthority(GOLFHandicap
 float GOLFHandicapDefaultLimitsPctAdjForAuthority(GOLFHandicapAuthority *authority);
 //	In foursomes or partners competitions which limit the difference between partners' handicaps, the percentage reduction (0.0 - 100.0)
 //	of BOTH partner's, or ALL teammates' handicap allowances.
+
+NSUInteger GOLFHandicapScoringRecordSizeForAuthority(GOLFHandicapAuthority *authority);
+//	The maximum number of valid rounds (9 or 18-hole) that constitute a full scoring record from which a current official
+//	handicap can be derived - excluding earlier (historical) rounds that might be examined to establish handicapping limits.
 
 NSInteger GOLFHandicapDifferentialsToUseForAuthority(GOLFHandicapAuthority *authority, NSInteger numberOfScores, float *newHandicapAdj);
 //	In handicapping methods based on the calculation of Handicap Differentials, the number of those "best" differentials to be used for handicap calculation
@@ -397,3 +406,9 @@ GOLFPlayingHandicap GOLFFirstLocalHandicapForAuthority(GOLFHandicapAuthority *au
 //	GOLFHandicapCalculationOption9HolePar			(32)	Provided GOLFPar is for 9 holes
 //	GOLFHandicapCalculationOptionSuppressVsParAdj	(256)	If authority includes it, suppress (Course Rating - Par) adjustment
 //	GOLFHandicapCalculationOptionEnforceVsParAdj	(512)	Do (Course Rating - Par) adjustment if Authority doesn't include it
+
+#pragma mark Localization & non-authority utilities
+
+NSString * NSStringFromGOLFHandicapExpectedScoreMethod(GOLFHandicapExpectedScoreMethod method, NSString **descriptiveText);
+//	Returns an appropriate localized title identifying an Expected Score calculation method.  Optionally returns a description.
+

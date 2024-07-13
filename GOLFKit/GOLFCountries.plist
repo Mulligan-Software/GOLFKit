@@ -9,17 +9,37 @@
 		<key>countryName</key>
 		<string>Algeria</string>
 	</dict>
+	<key>AD</key>
+	<dict>
+		<key>countryCod</key>
+		<string>AN</string>
+		<key>countryName</key>
+		<string>Andorra</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
+	<key>AO</key>
+	<dict>
+		<key>countryCode</key>
+		<string>AO</string>
+		<key>countryName</key>
+		<string>Angola</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
 	<key>AR</key>
 	<dict>
 		<key>countryCode</key>
 		<string>AR</string>
 		<key>countryName</key>
 		<string>Argentina</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>AU</key>
 	<dict>
 		<key>authority</key>
-		<string>AGU</string>
+		<string>WHS</string>
 		<key>countryCode</key>
 		<string>AU</string>
 		<key>association</key>
@@ -87,7 +107,16 @@
 		<key>association</key>
 		<string>Austrian Golf Federation</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
+	</dict>
+	<key>AZ</key>
+	<dict>
+		<key>countryCode</key>
+		<string>AZ</string>
+		<key>countryName</key>
+		<string>Azerbaijan</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>BS</key>
 	<dict>
@@ -102,12 +131,32 @@
 		<key>authority</key>
 		<string>WHS</string>
 	</dict>
+	<key>BB</key>
+	<dict>
+		<key>countryCode</key>
+		<string>BB</string>
+		<key>countryName</key>
+		<string>Barbados</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
+	<key>BY</key>
+	<dict>
+		<key>countryCode</key>
+		<string>BY</string>
+		<key>countryName</key>
+		<string>Belarus</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
 	<key>BH</key>
 	<dict>
 		<key>countryCode</key>
 		<string>BH</string>
 		<key>countryName</key>
 		<string>Bahrain</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>BE</key>
 	<dict>
@@ -120,7 +169,16 @@
 		<key>countryName</key>
 		<string>Belgium</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
+	</dict>
+	<key>BZ</key>
+	<dict>
+		<key>countryCode</key>
+		<string>BZ</string>
+		<key>countryName</key>
+		<string>Belize</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>BM</key>
 	<dict>
@@ -145,6 +203,8 @@
 		<string>Federacion Boliviana de Golf</string>
 		<key>URL</key>
 		<string>https://www.golfbolivia.com</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>BW</key>
 	<dict>
@@ -152,6 +212,8 @@
 		<string>BW</string>
 		<key>countryName</key>
 		<string>Botswana</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>BR</key>
 	<dict>
@@ -186,7 +248,7 @@
 		<key>countryName</key>
 		<string>Bulgaria</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>KH</key>
 	<dict>
@@ -366,6 +428,8 @@
 		<string>CK</string>
 		<key>countryName</key>
 		<string>Cook Islands</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>CR</key>
 	<dict>
@@ -389,7 +453,7 @@
 		<key>countryName</key>
 		<string>Croatia</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>CY</key>
 	<dict>
@@ -402,7 +466,7 @@
 		<key>countryName</key>
 		<string>Cyprus</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>CZ</key>
 	<dict>
@@ -415,7 +479,7 @@
 		<key>countryName</key>
 		<string>Czech Republic</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>CD</key>
 	<dict>
@@ -423,6 +487,8 @@
 		<string>CD</string>
 		<key>countryName</key>
 		<string>Republic of the Congo</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>DK</key>
 	<dict>
@@ -435,7 +501,7 @@
 		<key>countryName</key>
 		<string>Denmark</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>DO</key>
 	<dict>
@@ -463,25 +529,14 @@
 		<key>authority</key>
 		<string>WHS</string>
 	</dict>
-	<key>GB</key>
-	<dict>
-		<key>countryCode</key>
-		<string>GB</string>
-		<key>association</key>
-		<string>Council of National Golf Unions</string>
-		<key>URL</key>
-		<string>http://www.congu.co.uk</string>
-		<key>countryName</key>
-		<string>Great Britain</string>
-		<key>authority</key>
-		<string>CONGU</string>
-	</dict>
 	<key>EG</key>
 	<dict>
 		<key>countryCode</key>
 		<string>EG</string>
 		<key>countryName</key>
 		<string>Egypt</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>SV</key>
 	<dict>
@@ -489,6 +544,8 @@
 		<string>SV</string>
 		<key>countryName</key>
 		<string>El Salvador</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>EE</key>
 	<dict>
@@ -501,7 +558,25 @@
 		<key>countryName</key>
 		<string>Estonia</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
+	</dict>
+	<key>SZ</key>
+	<dict>
+		<key>countryCode</key>
+		<string>SZ</string>
+		<key>countryName</key>
+		<string>Eswatini</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
+	<key>ET</key>
+	<dict>
+		<key>countryCode</key>
+		<string>ET</string>
+		<key>countryName</key>
+		<string>Ethiopia</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>FJ</key>
 	<dict>
@@ -509,6 +584,8 @@
 		<string>FJ</string>
 		<key>countryName</key>
 		<string>Fiji</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>FI</key>
 	<dict>
@@ -521,7 +598,7 @@
 		<key>countryName</key>
 		<string>Finland</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>FR</key>
 	<dict>
@@ -534,7 +611,34 @@
 		<key>countryName</key>
 		<string>France</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
+	</dict>
+	<key>GA</key>
+	<dict>
+		<key>countryCode</key>
+		<string>GA</string>
+		<key>countryName</key>
+		<string>Gabon</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
+	<key>GM</key>
+	<dict>
+		<key>countryCode</key>
+		<string>GM</string>
+		<key>countryName</key>
+		<string>Gambia</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
+	<key>GE</key>
+	<dict>
+		<key>countryCode</key>
+		<string>GE</string>
+		<key>countryName</key>
+		<string>Georgia</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>DE</key>
 	<dict>
@@ -547,7 +651,29 @@
 		<key>countryName</key>
 		<string>Germany</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
+	</dict>
+	<key>GH</key>
+	<dict>
+		<key>countryCode</key>
+		<string>GH</string>
+		<key>countryName</key>
+		<string>Ghana</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
+	<key>GB</key>
+	<dict>
+		<key>countryCode</key>
+		<string>GB</string>
+		<key>association</key>
+		<string>Council of National Golf Unions</string>
+		<key>URL</key>
+		<string>http://www.congu.co.uk</string>
+		<key>countryName</key>
+		<string>Great Britain</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>GR</key>
 	<dict>
@@ -556,7 +682,16 @@
 		<key>countryName</key>
 		<string>Greece</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
+	</dict>
+	<key>GL</key>
+	<dict>
+		<key>countryCode</key>
+		<string>GL</string>
+		<key>countryName</key>
+		<string>Greenland</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>GU</key>
 	<dict>
@@ -580,12 +715,23 @@
 		<key>authority</key>
 		<string>WHS</string>
 	</dict>
+	<key>HT</key>
+	<dict>
+		<key>countryCode</key>
+		<string>HT</string>
+		<key>countryName</key>
+		<string>Haiti</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
 	<key>HN</key>
 	<dict>
 		<key>countryCode</key>
 		<string>HN</string>
 		<key>countryName</key>
 		<string>Honduras</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>HK</key>
 	<dict>
@@ -611,7 +757,7 @@
 		<key>countryName</key>
 		<string>Hungary</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>IS</key>
 	<dict>
@@ -624,7 +770,7 @@
 		<key>countryName</key>
 		<string>Iceland</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>IN</key>
 	<dict>
@@ -663,7 +809,7 @@
 		<key>countryName</key>
 		<string>Ireland</string>
 		<key>authority</key>
-		<string>CONGU</string>
+		<string>WHS</string>
 	</dict>
 	<key>IL</key>
 	<dict>
@@ -674,7 +820,7 @@
 		<key>countryName</key>
 		<string>Israel</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>IT</key>
 	<dict>
@@ -687,7 +833,7 @@
 		<key>countryName</key>
 		<string>Italy</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>CI</key>
 	<dict>
@@ -702,6 +848,8 @@
 		<string>JM</string>
 		<key>countryName</key>
 		<string>Jamaica</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>JP</key>
 	<dict>
@@ -716,6 +864,15 @@
 		<key>URL</key>
 		<string>http://www.jga.or.jp</string>
 	</dict>
+	<key>JO</key>
+	<dict>
+		<key>countryCode</key>
+		<string>JO</string>
+		<key>countryName</key>
+		<string>Jordan</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
 	<key>KZ</key>
 	<dict>
 		<key>countryCode</key>
@@ -727,7 +884,16 @@
 		<key>countryName</key>
 		<string>Kazakhstan</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
+	</dict>
+	<key>KE</key>
+	<dict>
+		<key>countryCode</key>
+		<string>KE</string>
+		<key>countryName</key>
+		<string>Kenya</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>KR</key>
 	<dict>
@@ -753,7 +919,16 @@
 		<key>countryName</key>
 		<string>Latvia</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
+	</dict>
+	<key>LS</key>
+	<dict>
+		<key>countryCode</key>
+		<string>LS</string>
+		<key>countryName</key>
+		<string>Lesotho</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>LB</key>
 	<dict>
@@ -769,6 +944,15 @@
 		<key>countryName</key>
 		<string>Libya</string>
 	</dict>
+	<key>LI</key>
+	<dict>
+		<key>countryCode</key>
+		<string>LI</string>
+		<key>countryName</key>
+		<string>Liechtenstein</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
 	<key>LT</key>
 	<dict>
 		<key>countryCode</key>
@@ -778,7 +962,7 @@
 		<key>countryName</key>
 		<string>Lithuania</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>whs</string>
 	</dict>
 	<key>LU</key>
 	<dict>
@@ -791,7 +975,16 @@
 		<key>countryName</key>
 		<string>Luxembourg</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
+	</dict>
+	<key>MW</key>
+	<dict>
+		<key>countryCode</key>
+		<string>MW</string>
+		<key>countryName</key>
+		<string>Malawi</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>MY</key>
 	<dict>
@@ -803,6 +996,24 @@
 		<string>Malaysia</string>
 		<key>URL</key>
 		<string>http://www.mgaonline.com.my</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
+	<key>MT</key>
+	<dict>
+		<key>countryCode</key>
+		<string>MT</string>
+		<key>countryName</key>
+		<string>Malta</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
+	<key>MU</key>
+	<dict>
+		<key>countryCode</key>
+		<string>MU</string>
+		<key>countryName</key>
+		<string>Mauritius</string>
 		<key>authority</key>
 		<string>WHS</string>
 	</dict>
@@ -1014,6 +1225,15 @@
 			</dict>
 		</array>
 	</dict>
+	<key>MN</key>
+	<dict>
+		<key>countryCode</key>
+		<string>MN</string>
+		<key>countryName</key>
+		<string>Mongolia</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
 	<key>ME</key>
 	<dict>
 		<key>countryCode</key>
@@ -1040,6 +1260,24 @@
 		<string>MA</string>
 		<key>countryName</key>
 		<string>Morocco</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
+	<key>MO</key>
+	<dict>
+		<key>countryCode</key>
+		<string>MO</string>
+		<key>countryName</key>
+		<string>Macao</string>
+	</dict>
+	<key>MZ</key>
+	<dict>
+		<key>countryCode</key>
+		<string>MZ</string>
+		<key>countryName</key>
+		<string>Mozambique</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>MM</key>
 	<dict>
@@ -1047,6 +1285,17 @@
 		<string>MM</string>
 		<key>countryName</key>
 		<string>Myanmar</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
+	<key>NA</key>
+	<dict>
+		<key>countryCode</key>
+		<string>NA</string>
+		<key>countryName</key>
+		<string>Namibia</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>NL</key>
 	<dict>
@@ -1059,7 +1308,7 @@
 		<key>countryName</key>
 		<string>Netherlands</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>NZ</key>
 	<dict>
@@ -1080,6 +1329,26 @@
 		<string>NI</string>
 		<key>countryName</key>
 		<string>Nicaragua</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
+	<key>NG</key>
+	<dict>
+		<key>countryCode</key>
+		<string>NG</string>
+		<key>countryName</key>
+		<string>Nigeria</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
+	<key>MD</key>
+	<dict>
+		<key>countryCode</key>
+		<string>MD</string>
+		<key>countryName</key>
+		<string>North Macedonia</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>NO</key>
 	<dict>
@@ -1092,7 +1361,7 @@
 		<key>countryName</key>
 		<string>Norway</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>OM</key>
 	<dict>
@@ -1130,7 +1399,9 @@
 		<key>countryCode</key>
 		<string>PG</string>
 		<key>countryName</key>
-		<string>Papua</string>
+		<string>Papua New Guinea</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>PY</key>
 	<dict>
@@ -1182,7 +1453,7 @@
 		<key>countryName</key>
 		<string>Poland</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>PT</key>
 	<dict>
@@ -1195,7 +1466,7 @@
 		<key>countryName</key>
 		<string>Portugal</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>PR</key>
 	<dict>
@@ -1212,6 +1483,17 @@
 		<string>QA</string>
 		<key>countryName</key>
 		<string>Qatar</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
+	<key>RO</key>
+	<dict>
+		<key>countryCode</key>
+		<string>RO</string>
+		<key>countryName</key>
+		<string>Romania</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>RU</key>
 	<dict>
@@ -1224,7 +1506,16 @@
 		<key>countryName</key>
 		<string>Russia</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
+	</dict>
+	<key>RW</key>
+	<dict>
+		<key>countryCode</key>
+		<string>RW</string>
+		<key>countryName</key>
+		<string>Rwanda</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>SM</key>
 	<dict>
@@ -1239,6 +1530,8 @@
 		<string>SA</string>
 		<key>countryName</key>
 		<string>Saudi Arabia</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>RS</key>
 	<dict>
@@ -1251,7 +1544,16 @@
 		<key>countryName</key>
 		<string>Serbia</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
+	</dict>
+	<key>SC</key>
+	<dict>
+		<key>countryCode</key>
+		<string>SC</string>
+		<key>countryName</key>
+		<string>Seychelles</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>SG</key>
 	<dict>
@@ -1275,7 +1577,7 @@
 		<key>countryName</key>
 		<string>Slovakia</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>SI</key>
 	<dict>
@@ -1288,7 +1590,7 @@
 		<key>countryName</key>
 		<string>Slovenia</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>ZA</key>
 	<dict>
@@ -1300,6 +1602,8 @@
 		<string>http://www.saga.co.za</string>
 		<key>countryName</key>
 		<string>South Africa</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>ES</key>
 	<dict>
@@ -1312,7 +1616,7 @@
 		<key>countryName</key>
 		<string>Spain</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>LK</key>
 	<dict>
@@ -1327,6 +1631,24 @@
 		<key>authority</key>
 		<string>WHS</string>
 	</dict>
+	<key>LC</key>
+	<dict>
+		<key>countryCode</key>
+		<string>LC</string>
+		<key>countryName</key>
+		<string>St. Lucia</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
+	<key>SD</key>
+	<dict>
+		<key>countryCode</key>
+		<string>SD</string>
+		<key>countryName</key>
+		<string>Sudan</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
 	<key>SE</key>
 	<dict>
 		<key>countryCode</key>
@@ -1338,7 +1660,7 @@
 		<key>countryName</key>
 		<string>Sweden</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
 	</dict>
 	<key>CH</key>
 	<dict>
@@ -1351,7 +1673,16 @@
 		<key>countryName</key>
 		<string>Switzerland</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
+	</dict>
+	<key>TZ</key>
+	<dict>
+		<key>countryCode</key>
+		<string>TZ</string>
+		<key>countryName</key>
+		<string>Tanzania</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>TH</key>
 	<dict>
@@ -1379,6 +1710,15 @@
 		<key>authority</key>
 		<string>WHS</string>
 	</dict>
+	<key>TN</key>
+	<dict>
+		<key>countryCode</key>
+		<string>TN</string>
+		<key>countryName</key>
+		<string>Tunisia</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
 	<key>TR</key>
 	<dict>
 		<key>countryCode</key>
@@ -1390,12 +1730,39 @@
 		<key>countryName</key>
 		<string>Turkey</string>
 		<key>authority</key>
-		<string>EGA</string>
+		<string>WHS</string>
+	</dict>
+	<key>UG</key>
+	<dict>
+		<key>countryCode</key>
+		<string>UG</string>
+		<key>countryName</key>
+		<string>Uganda</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
+	<key>UY</key>
+	<dict>
+		<key>countryCode</key>
+		<string>UY</string>
+		<key>countryName</key>
+		<string>Uruguay</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>UA</key>
 	<dict>
 		<key>countryCode</key>
 		<string>UA</string>
+		<key>countryName</key>
+		<string>Ukraine</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
+	<key>AE</key>
+	<dict>
+		<key>countryCode</key>
+		<string>AE</string>
 		<key>association</key>
 		<string>Emirates Golf Federation</string>
 		<key>URL</key>
@@ -1412,7 +1779,7 @@
 		<key>countryName</key>
 		<string>United Kingdom</string>
 		<key>authority</key>
-		<string>CONGU</string>
+		<string>WHS</string>
 		<key>association</key>
 		<string>Council of National Golf Unions</string>
 		<key>URL</key>
@@ -1425,7 +1792,7 @@
 		<key>countryName</key>
 		<string>England</string>
 		<key>authority</key>
-		<string>CONGU</string>
+		<string>WHS</string>
 		<key>association</key>
 		<string>English Golf Union</string>
 		<key>URL</key>
@@ -1438,7 +1805,7 @@
 		<key>countryName</key>
 		<string>Scotland</string>
 		<key>authority</key>
-		<string>CONGU</string>
+		<string>WHS</string>
 		<key>association</key>
 		<string>Scottish Golf Union</string>
 		<key>URL</key>
@@ -1451,7 +1818,7 @@
 		<key>countryName</key>
 		<string>Northern Ireland</string>
 		<key>authority</key>
-		<string>CONGU</string>
+		<string>WHS</string>
 	</dict>
 	<key>UK-WL</key>
 	<dict>
@@ -1460,11 +1827,20 @@
 		<key>countryName</key>
 		<string>Wales</string>
 		<key>authority</key>
-		<string>CONGU</string>
+		<string>WHS</string>
 		<key>association</key>
 		<string>Golf Union of Wales</string>
 		<key>URL</key>
 		<string>http://www.welshgolf.org</string>
+	</dict>
+	<key>UK-VG</key>
+	<dict>
+		<key>countryCode</key>
+		<string>VG</string>
+		<key>countryName</key>
+		<string>Virgin Islands (GB)</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>US</key>
 	<dict>
@@ -1836,6 +2212,8 @@
 		<string>VU</string>
 		<key>countryName</key>
 		<string>Vanuatu</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 	<key>VE</key>
 	<dict>
@@ -1863,12 +2241,32 @@
 		<key>authority</key>
 		<string>WHS</string>
 	</dict>
+	<key>VI</key>
+	<dict>
+		<key>countryCode</key>
+		<string>VI</string>
+		<key>countryName</key>
+		<string>Virgin Islands (US)</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
+	<key>ZM</key>
+	<dict>
+		<key>countryCode</key>
+		<string>ZM</string>
+		<key>countryName</key>
+		<string>Zambia</string>
+		<key>authority</key>
+		<string>WHS</string>
+	</dict>
 	<key>ZW</key>
 	<dict>
 		<key>countryCode</key>
 		<string>ZW</string>
 		<key>countryName</key>
 		<string>Zimbabwe</string>
+		<key>authority</key>
+		<string>WHS</string>
 	</dict>
 </dict>
 </plist>

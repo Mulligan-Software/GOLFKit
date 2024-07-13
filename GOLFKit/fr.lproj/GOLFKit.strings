@@ -68,6 +68,7 @@
 "TERM_COMPETITOR" = "concurrent";
 "TERM_COMPETITOR_PLURAL" = "concurrents";
 "TERM_COMPLETE" = "complet";
+"TERM_CONFIGURATION" = "configuration";
 "TERM_CONNECTION" = "connexion";
 "TERM_CONTACT_VERB" = "contacter";	//	to CONTACT someone
 "TERM_CONTESTANT" = "concurrent";
@@ -587,6 +588,7 @@
 "TITLE_DROPBOX" = "Dropbox";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
+"TITLE_EAGLE_SETTINGS" = "Réglages de Mulligan’s Eagle";
 "TITLE_EAGLE_USERS_GUIDE" = "Guide des Utilisateurs de Mulligan’s Eagle";
 "TITLE_EAGLES_OR_BETTER" = "Eagles & meilleur";
 "TITLE_EDIT_BUTTON" = "Modifier";
@@ -609,7 +611,7 @@
 "TITLE_EVERNOTE" = "Evernote";
 "TITLE_EXCLUDE_GUESTS" = "Exclure les Invités";
 "TITLE_EXPORT" = "Exporter";
-"TITLE_EXTENDED_SCORING" = "Marquant Avancée";
+"TITLE_EXTENDED_SCORING" = "Le Score Avancé";
 "TITLE_FACTORY_SETTINGS" = "Réglages par défaut";
 "TITLE_FAIRWAY_HIT" = "Fairway atteint";
 "TITLE_FAVORITE_PLAYER" = "Joueur «Favori»";
@@ -699,6 +701,7 @@
 "TITLE_HANDICAP_PLAYING" = "Handicap Jouer";
 "TITLE_HANDICAP_PLAYING_PLURAL" = "Handicaps Jouer";
 "TITLE_HANDICAP_RECORDS" = "Données de Handicap";
+"TITLE_HANDICAP_REPORT" = "Rapport de Handicap";
 "TITLE_HANDICAP_SERVICE" = "Service Handicap";
 "TITLE_HANDICAP_SERVICE_ACCOUNT" = "Compte Handicapant";
 "TITLE_HANDICAP_SLOPE_CHART" = "Diagramme Slope";
@@ -790,6 +793,8 @@
 "TITLE_NAME_TEAMS" = "Nommez les Équipes";
 "TITLE_NASSAU" = "Nassau";
 "TITLE_NET_BALL" = "Balle Net";
+"TITLE_NET_PAR" = "Par Net";
+"TITLE_NET_PAR_PLUS_1" = "Par Net plus 1";
 "TITLE_NEW_DATA_STORE_NAME" = "Nom du nouveau base de données";
 "TITLE_NEW_SCORECARD" = "Nouvelle Carte de Score";
 "TITLE_NEW_SCORECARD_BUTTON" = "Nouvelle Carte";
@@ -886,6 +891,8 @@
 "TITLE_SCORECARD_PLURAL" = "Cartes de Score";
 "TITLE_SCORECARD_TOTAL" = "Tot";	//	As it appears in Scorecard total headers
 "TITLE_SCORING_COLORS" = "Couleurs pour Marquer";
+"TITLE_SCORING_HISTORY" = "Historique des Scores";
+"TITLE_SCORING_RECORD" = "Record de Pointage";
 "TITLE_SCORING_SHORTHAND" = "Raccourcis pour Marquer";
 "TITLE_SCRATCH_SCORE" = "Scratch Score";
 "TITLE_SECONDARY" = "Secondaire";
@@ -949,8 +956,8 @@
 "TITLE_TEE_TIME_ABBR" = "Heure";
 "TITLE_THANK_YOU" = "Merci";
 "TITLE_THE_SCOREBOARD" = "Le Tableau";
-"TITLE_THE_SCORING_MACHINE" = "La Machine de Marquant";
-"TITLE_THE_SCORING_MACHINE_TM" = "La Machine de Marquant™";
+"TITLE_THE_SCORING_MACHINE" = "La Machine à Score";
+"TITLE_THE_SCORING_MACHINE_TM" = "La Machine à Score™";
 "TITLE_TIME_CART_PLAYER" = "Heure/Voiturette/Joueur";
 "TITLE_TIMES_OR_TEES" = "Heures ou Jalons";
 "TITLE_TOTAL_POINTS" = "Points Totaux";
@@ -969,6 +976,8 @@
 "TITLE_USE_SSS" = "Util. SSS";
 "TITLE_USERS_GUIDE_FOUND" = "Guide des Utilisateurs a été trouvé";
 "TITLE_USERS_GUIDE_NOT_FOUND" = "Aucun fichier du Guide des Utilisateurs a été trouvé";
+"TITLE_USGA_TABLE" = "Tableau USGA";
+"TITLE_WHS_EXPECTED_SCORES_METHOD" = "WHS Méthode de calcul du score attendu ou du différentiel";
 "TITLE_WICKERS" = "Wickers";
 "TITLE_WIN/LOSE/DRAW_ABBR" = "G/P/N";	//	gagner, perdre ou faire match nul
 "TITLE_WITH_SCORE" = "avec score";
@@ -992,7 +1001,7 @@
 "DESCRIPTION_CLOSE_OUT" = "(lorsque aucune pari n'est en vigueur)";
 "DESCRIPTION_COVER" = "Nouer ou battre le score sous-par de l’adversaire";
 "DESCRIPTION_DEFAULT_TEAM_MATCH_STYLE_%@" = "%@ utilisant scores d’équipe ¹";
-"DESCRIPTION_EXTENDED_SCORING" = "Marquant Avancée comprends les scores “X”, les scores maximaux (contrôlés par les coups), les scores de  Compétition/Tournoi, les fairways et bunkers touchés.";
+"DESCRIPTION_EXTENDED_SCORING" = "Le Score Avancé comprends les scores “X”, les scores maximaux (contrôlés par les coups), les scores de Compétition/Tournoi, les fairways et bunkers touchés.";
 "DESCRIPTION_FAIRWAY" = "Fairway atteint avec coup de départ initial";
 "DESCRIPTION_FRONT_BACK" = "Premier côté et deuxième côté";
 "DESCRIPTION_GORILLA" = "Plus proche du drapeau dans le réglement sur un par 5";
@@ -1007,10 +1016,15 @@
 "DESCRIPTION_LOW_BALL_SECOND_BALL" = "1 point - équipier bas, 1 pt. - vs. équipiers secondes";
 "DESCRIPTION_MATCH_PLAY" = "Compétition face à face marquée par les trous gagnés.";
 "DESCRIPTION_NASSAU" = "Premier côté, deuxième côté et 18 trous";
+"DESCRIPTION_NET_PAR" = "Estimer le score ou le différentiel par rapport au par net (par + coups) pour les neufs ou les trous non joués";
+"DESCRIPTION_NET_PAR_PLUS_1" = "Estimer le score ou le différentiel par rapport au par net (par + coups + 1) pour les neufs ou les trous non joués";
+"DESCRIPTION_NO_METHOD" = "Ne pas estimer les scores pour le handicap";
 "DESCRIPTION_NO_TRASH" = "Aucune catégorie de Trash / Dots spécifiée";
 "DESCRIPTION_POLIE" = "1-putt plus long que la longueur du drapeau";
 "DESCRIPTION_PRINTING_PRIVACY_%@" = "Les catégories d’enregistrement d’événement identifiés comme «%@» ne sont généralement ni imprimés ni affichés.";
 "DESCRIPTION_SANDIE" = "En haut et en bas d’un bunker au bord du green";
+"DESCRIPTION_SCORING_HISTORY" = "Déterminer le score typique ou le différentiel à partir de l'historique de scores sur 365 jours";
+"DESCRIPTION_SCORING_RECORD" = "Déterminer le score typique ou le différentiel à partir du record de score du joueur - 20 derniers tours";
 "DESCRIPTION_SEVE" = "Birdie ou mieux sans atteindre le fairway ou le green";
 "DESCRIPTION_SKINS_ALL_SCORES" = "Tout score de trou valide peut gagner un skin";
 "DESCRIPTION_SKINS_BIRDIE_OR_BETTER" = "Seuls les scores sous le par peuvent gagner un skin";
@@ -1027,6 +1041,7 @@
 "DESCRIPTION_THEME_APPEARANCE" = "Claire - Eagle utilise toujours l’apperance classique de l’Aqua\nSombre - Eagle utilise toujours l’apperance du Mode Sombre\nSystème - Eagle utilise l’apperance sélectionnée dans les Préférences Système";
 "DESCRIPTION_THEME_PRE_MOJAVE" = "Avant macOS 10.14 Mojave, Eagle utilisait le style d’apperance Aqua standard du système.";
 "DESCRIPTION_TRASH" = "Points ou «Dots» attribués pour les réalisations de golf";
+"DESCRIPTION_USGA_TABLE" = "Récupérez un score illustratif ou un différentiel à partir de tableaux statistiques exclusifs de l'USGA";
 "DESCRIPTION_WICKERS" = "Points / Dots valeurs augmentent à chaque occurrence";
 "DESCRIPTION_WOLF" = "Joueur, partenaire optionnel vs reste à chaque trou";
 
@@ -1093,9 +1108,9 @@
 "FORMAT_THROUGH_HOLE_%@" = "jusqu’à %@";
 "FORMAT_TO_PROMPT_%@" = "en: %@";	//	Convert to: WHS
 "FORMAT_TOTAL_POINTS_VS_QUOTA_%d" = "Points Totaux v. %d Quota";
-"FORMAT_TSM_APPEARANCE_DARK_ON_%@" = "La Machine de Marquant ajustera son affichage pour le Mode Sombre, quel que soit le paramètre iOS de votre %@.";
-"FORMAT_TSM_APPEARANCE_LIGHT_ON_%@" = "La Machine de Marquant ajustera son affichage pour le Mode Clair, quel que soit le paramètre iOS pour votre %@, bien que vous puissiez indiquer ci-dessous un Thème Sombre pour le clavier.";
-"FORMAT_TSM_APPEARANCE_SYSTEM_ON_%@" = "La Machine de Marquant ajustera son affichage pour s’adapter aux paramètres d’apparence de l’affichage sur votre %@.";
+"FORMAT_TSM_APPEARANCE_DARK_ON_%@" = "La Machine à Score ajustera son affichage pour le Mode Sombre, quel que soit le paramètre iOS de votre %@.";
+"FORMAT_TSM_APPEARANCE_LIGHT_ON_%@" = "La Machine à Score ajustera son affichage pour le Mode Clair, quel que soit le paramètre iOS pour votre %@, bien que vous puissiez indiquer ci-dessous un Thème Sombre pour le clavier.";
+"FORMAT_TSM_APPEARANCE_SYSTEM_ON_%@" = "La Machine à Score ajustera son affichage pour s’adapter aux paramètres d’apparence de l’affichage sur votre %@.";
 "FORMAT_UPDATE_COLORS_%@" = "Bleu - changement en attente\nRouge - %@ dérogation";	//	Section footer for handicap updates - "Blue - change pending / Red - scorecard override"
 "FORMAT_UPDATE_PLAYER_%@" = "Mettre à jour %@";	//	Button title for handicap updates - "Update Handicap Indexes"
 "FORMAT_UPDATE_%@_OVERRIDES" = "Installer %@ Dérogations";	//	Button title for handicap overrides - "Install Handicap Index Overrides"

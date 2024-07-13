@@ -75,6 +75,9 @@
 + (id)numberWithCompScore:(GOLFCompScore)compScore;
 - (GOLFCompScore)compScoreValue;
 
++ (id)numberWithExpectedScore:(GOLFHandicapExpectedScore)expectedScore;
+- (GOLFHandicapExpectedScore)expectedScoreValue;
+
 + (id)numberWithPutts:(GOLFPutts)putts;
 - (GOLFPutts)puttsValue;
 

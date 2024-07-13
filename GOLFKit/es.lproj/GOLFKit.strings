@@ -68,6 +68,7 @@
 "TERM_COMPETITOR" = "competidor";
 "TERM_COMPETITOR_PLURAL" = "competidores";
 "TERM_COMPLETE" = "completo";
+"TERM_CONFIGURATION" = "configuración";
 "TERM_CONNECTION" = "conexión";
 "TERM_CONTACT_VERB" = "contactar";	//	to CONTACT someone
 "TERM_CONTESTANT" = "concursante";
@@ -294,7 +295,7 @@
 "TERM_SCORECARD" = "tarjeta";
 "TERM_SCORECARD_PLURAL" = "tarjetas";
 "TERM_SCORECARD_PLURAL_SHORT" = "tarjetas";
-"TERM_SCORING" = "puntuación";
+"TERM_SCORING" = "puntaje";
 "TERM_SCRAMBLE" = "Scramble";
 "TERM_SECOND" = "segundo";
 "TERM_SECOND_PLURAL" = "segundos";
@@ -587,6 +588,7 @@
 "TITLE_DROPBOX" = "Dropbox";
 "TITLE_DSR" = "Daily Scratch Rating";
 "TITLE_DSR_ABBR" = "DSR";
+"TITLE_EAGLE_SETTINGS" = "Ajustes para Mulligan's Eagle";
 "TITLE_EAGLE_USERS_GUIDE" = "Guía del usuario de Mulligan’s Eagle";
 "TITLE_EAGLES_OR_BETTER" = "Eagles & mejor";
 "TITLE_EDIT_BUTTON" = "Editar";
@@ -699,6 +701,7 @@
 "TITLE_HANDICAP_PLAYING" = "Handicap de Jugar";
 "TITLE_HANDICAP_PLAYING_PLURAL" = "Handicaps de Jugar";
 "TITLE_HANDICAP_RECORDS" = "Registros de Handicap";
+"TITLE_HANDICAP_REPORT" = "Informe de Handicap";
 "TITLE_HANDICAP_SERVICE" = "Servicio de Handicap";
 "TITLE_HANDICAP_SERVICE_ACCOUNT" = "Cuenta Handicapados";
 "TITLE_HANDICAP_SLOPE_CHART" = "Gráfico Slope";
@@ -790,6 +793,8 @@
 "TITLE_NAME_TEAMS" = "Nombra los Equipos";
 "TITLE_NASSAU" = "Nassau";
 "TITLE_NET_BALL" = "Pelota Neta";
+"TITLE_NET_PAR" = "Par Neto";
+"TITLE_NET_PAR_PLUS_1" = "Par Neto más 1";
 "TITLE_NEW_DATA_STORE_NAME" = "Nuevo nombre de base de datos";
 "TITLE_NEW_SCORECARD" = "Nueva Tarjeta de Score";
 "TITLE_NEW_SCORECARD_BUTTON" = "Nueva Tarjeta";
@@ -886,6 +891,8 @@
 "TITLE_SCORECARD_PLURAL" = "Tarjetas";
 "TITLE_SCORECARD_TOTAL" = "Tot";	//	As it appears in Scorecard total headers
 "TITLE_SCORING_COLORS" = "Colores de Resultados";
+"TITLE_SCORING_HISTORY" = "Historial de Puntajes";
+"TITLE_SCORING_RECORD" = "Récord de Puntajes";
 "TITLE_SCORING_SHORTHAND" = "Taquigrafía para Resultados";
 "TITLE_SCRATCH_SCORE" = "Scratch Score";
 "TITLE_SECONDARY" = "Secundario";
@@ -969,6 +976,8 @@
 "TITLE_USE_SSS" = "Utilizar SSS";
 "TITLE_USERS_GUIDE_FOUND" = "Guía del Usuario se ha encontrado";
 "TITLE_USERS_GUIDE_NOT_FOUND" = "Ningún archivo Guía del Usuario se ha encontrado";
+"TITLE_USGA_TABLE" = "Tabla de la USGA";
+"TITLE_WHS_EXPECTED_SCORES_METHOD" = "WHS Método de cálculo puntajes esperado o diferenciales";
 "TITLE_WICKERS" = "Wickers";
 "TITLE_WIN/LOSE/DRAW_ABBR" = "G/P/E";	//	ganen, pierdan o empaten
 "TITLE_WITH_SCORE" = "con resultado";
@@ -1007,11 +1016,16 @@
 "DESCRIPTION_LOW_BALL_SECOND_BALL" = "1 punto - compañero bajo, 1 pt. - vs. segundos compañeros";
 "DESCRIPTION_MATCH_PLAY" = "Competición cara a cara anotada por los hoyos ganados.";
 "DESCRIPTION_NASSAU" = "Primero lado, Segundo lado y 18 hoyos";
+"DESCRIPTION_NET_PAR" = "Calcule el puntaje o el diferencial del par neto (par + golpes) para nueves o hoyos no jugados";
+"DESCRIPTION_NET_PAR_PLUS_1" = "Calcule el puntaje o el diferencial del par neto (par + golpes) para nueves o hoyos no jugados";
+"DESCRIPTION_NO_METHOD" = "No estime los puntajes por handicapados";
 "DESCRIPTION_NO_TRASH" = "No se especificó categoria de Trash / Dots";
 "DESCRIPTION_POLIE" = "1-putt más largo que la longitud del flagstick";
 "DESCRIPTION_PRINTING_PRIVACY_%@" = "Las categorías de registro de eventos identificadas como “%@” generalmente no se imprimen ni se muestran.";
 "DESCRIPTION_SANDIE" = "Alto y abajo de un bunker al green acertó";
 "DESCRIPTION_SEVE" = "Birdie o mejor sin alcanzar el fairway o el green";
+"DESCRIPTION_SCORING_HISTORY" = "Determinar el resultado típico o diferencial del historial de puntajes de 365 días";
+"DESCRIPTION_SCORING_RECORD" = "Determinar el resultado típico o diferencial del récord de puntajes del jugador (últimas 20 rondas)";
 "DESCRIPTION_SKINS_ALL_SCORES" = "Cualquier resultado de hoyo válido puede ganar un skin";
 "DESCRIPTION_SKINS_BIRDIE_OR_BETTER" = "Solo los resultados debajo del par pueden ganar un skin";
 "DESCRIPTION_SKINS_BOGEY_OR_BETTER" = "Solo resultados de bogey o mejores pueden ganar un skin";
@@ -1027,6 +1041,7 @@
 "DESCRIPTION_THEME_APPEARANCE" = "Claro - Eagle siempre usa la apariencia clásico de Aqua\nOscuro - Eagle siempre usa la apariencia del Modo Oscuro\nSistema - Eagle usa la apariencia seleccionada en Preferencias del Sistema";
 "DESCRIPTION_THEME_PRE_MOJAVE" = "Antes de macOS 10.14 Mojave, Eagle utiliza el estilo de apariencia Aqua estándar del sistema.";
 "DESCRIPTION_TRASH" = "Puntos otorgados por logros de golf";
+"DESCRIPTION_USGA_TABLE" = "Obtenga puntaje ilustrativo o diferencial de tablas estadísticas patentadas por la USGA";
 "DESCRIPTION_WICKERS" = "Puntos valores aumentan con cada aperición";
 "DESCRIPTION_WOLF" = "Jugador, compañero opcional vs. resto en cada hoyo";
 

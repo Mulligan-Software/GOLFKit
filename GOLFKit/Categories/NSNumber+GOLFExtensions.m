@@ -179,6 +179,14 @@
     return (GOLFCompScore)[self floatValue];
 }
 
++ (id)numberWithExpectedScore:(GOLFHandicapExpectedScore)expectedScore {
+    return [NSNumber numberWithFloat:(float)expectedScore];
+}
+
+- (GOLFHandicapExpectedScore)expectedScoreValue {
+    return (GOLFHandicapExpectedScore)[self floatValue];
+}
+
 + (id)numberWithPutts:(GOLFPutts)putts {
     return [NSNumber numberWithInteger:(NSInteger)putts];
 }
