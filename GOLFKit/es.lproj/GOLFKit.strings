@@ -520,6 +520,7 @@
 "TITLE_AUTHORITY_OR_METHOD" = "Autoridad / Sistema";
 "TITLE_AUTOMATIC_PRESSES" = "Presiones automáticas";
 "TITLE_AVAILABLE_FILES_HEADER" = "Archivos de base de datos disponibles";
+"TITLE_AVAILABLE_SCORING_DATA" = "Datos de Puntajes Disponibles";
 "TITLE_BACK_NINE" = "Segundo Nueve";
 "TITLE_BACK_SIDE" = "Segundo Lado";
 "TITLE_BANGO" = "Bango";
@@ -891,6 +892,8 @@
 "TITLE_SCORECARD_PLURAL" = "Tarjetas";
 "TITLE_SCORECARD_TOTAL" = "Tot";	//	As it appears in Scorecard total headers
 "TITLE_SCORING_COLORS" = "Colores de Resultados";
+"TITLE_SCORING_DATA" = "Datos de Puntajes";
+"TITLE_SCORING_FILE" = "Archivo de Puntaje";
 "TITLE_SCORING_HISTORY" = "Historial de Puntajes";
 "TITLE_SCORING_RECORD" = "Récord de Puntajes";
 "TITLE_SCORING_SHORTHAND" = "Taquigrafía para Resultados";
@@ -1459,6 +1462,8 @@
 
 "INSTRUCTION_DRAG_ROUND_HERE" = "… o arrastrar una ronda aquí";
 "INSTRUCTION_DRAG_TO_REORDER" = "Arrastre para arreglar";
+"INSTRUCTION_SCORING_FILES" = "Pulsa para elegir un archivo de datos de puntaje que se utilizará para crear una tarjeta de score en este dispositivo.";
+"INSTRUCTION_SCORING_FILES_NONE" = "Los archivos de datos de puntajes que se muestran aquí son publicados por otros dispositivos con información del campo, del jugador y de la competencia para crear tarjectas de score en dispositivos remotos como este.";
 "INSTRUCTION_TSM_GETTING_STARTED" = "Pulsa el botón ☰ esquina superior izquierda, ó desliza este Marcadore hacia la derecha para configurar su campo de casa, adicionar unos jugadores y procede a crear Tarjetas ó Eventos.\n\nPara obtener ayuda detallada, incluyando una guía “Quick-Start”, ó para cambiar ajustes de este aplicación, pulsa el botón ☰ esquina superior derecha ó desliza este Marcadore hacia la izquierda.";
 
 //	Phrases & Special characters

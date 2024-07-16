@@ -562,6 +562,7 @@
 "TITLE_AUTHORITY_OR_METHOD" = "Behörde / System";
 "TITLE_AUTOMATIC_PRESSES" = "Automatische Pressen";
 "TITLE_AVAILABLE_FILES_HEADER" = "Verfügbare Datenspeicherdateien";
+"TITLE_AVAILABLE_SCORING_DATA" = "Verfügbare Scoring-Daten";
 "TITLE_BACK_NINE" = "Letzteneun";
 "TITLE_BACK_SIDE" = "Letzteseite";
 "TITLE_BANGO" = "Bango";
@@ -933,6 +934,8 @@
 "TITLE_SCORECARD_PLURAL" = "Scorekarten";
 "TITLE_SCORECARD_TOTAL" = "Sum";	//	As it appears in Scorecard total headers
 "TITLE_SCORING_COLORS" = "Farben für Golfwertung";
+"TITLE_SCORING_DATA" = "Scores-Daten";
+"TITLE_SCORING_FILE" = "Scoring-Datei";
 "TITLE_SCORING_HISTORY" = "Scores-Historie";
 "TITLE_SCORING_RECORD" = "Scorerekord";
 "TITLE_SCORING_SHORTHAND" = "Kurzschrift für Golfwertung";
@@ -1501,6 +1504,8 @@
 
 "INSTRUCTION_DRAG_ROUND_HERE" = "… oder zeihen Sie eine Runde hierher";
 "INSTRUCTION_DRAG_TO_REORDER" = "Ziehen zum Neuanordnen";
+"INSTRUCTION_SCORING_FILES" = "Tippen Sie hier, um eine Scoresdatendatei auszuwählen, die zum Erstellen einer Scorekarte auf diesem Gerät verwendet werden soll.";
+"INSTRUCTION_SCORING_FILES_NONE" = "Die hier angezeigten Scoring-Datendateien werden von anderen Geräten mit Kurs-, Spieler- und Wettkampfinformationen veröffentlicht, um Scorecards auf Remote-Geräten wie diesem zu erstellen.";
 "INSTRUCTION_TSM_GETTING_STARTED" = "Tippe oben links auf die Schaltfläche ☰ Menü-Offenbarung oder streiche diese Anzeigetafel nach rechts, um deinen Heimkurs einzurichten, einige Spieler hinzuzufügen und dann Scorekarten oder Events zu erstellen.\n\nFür detaillierte Hilfe, einschließlich einer „Kurzanleitung“, Um die App-Einstellungen zu ändern, tippen Sie oben rechts auf die Schaltfläche ☰ oder streichen Sie diese Anzeigetafel nach links.";
 
 //	Phrases & Special characters

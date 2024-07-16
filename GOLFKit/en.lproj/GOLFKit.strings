@@ -520,6 +520,7 @@
 "TITLE_AUTHORITY_OR_METHOD" = "Authority / System";
 "TITLE_AUTOMATIC_PRESSES" = "Automatic Presses";
 "TITLE_AVAILABLE_FILES_HEADER" = "Available Data Store Files";
+"TITLE_AVAILABLE_SCORING_DATA" = "Available Scoring Data";
 "TITLE_BACK_NINE" = "Back Nine";
 "TITLE_BACK_SIDE" = "Back Side";
 "TITLE_BANGO" = "Bango";
@@ -890,6 +891,8 @@
 "TITLE_SCORECARD_PLURAL" = "Scorecards";
 "TITLE_SCORECARD_TOTAL" = "Tot";	//	As it appears in Scorecard total headers ("Tot"
 "TITLE_SCORING_COLORS" = "Scoring Colors";
+"TITLE_SCORING_DATA" = "Scoring Data";
+"TITLE_SCORING_FILE" = "Scoring File";
 "TITLE_SCORING_HISTORY" = "Scoring History";
 "TITLE_SCORING_RECORD" = "Scoring Record";
 "TITLE_SCORING_SHORTHAND" = "Scoring Shorthand";
@@ -1459,6 +1462,8 @@
 
 "INSTRUCTION_DRAG_ROUND_HERE" = "… or drag a round here";
 "INSTRUCTION_DRAG_TO_REORDER" = "Drag to reorder";
+"INSTRUCTION_SCORING_FILES" = "Tap to choose a scoring data file to be used to make a scorecard on this device.";
+"INSTRUCTION_SCORING_FILES_NONE" = "Scoring data files shown here are published by other devices with course, player and competition information to create scorecards on remote devices like this one.";
 "INSTRUCTION_TSM_GETTING_STARTED" = "Tap the ☰ menu disclosure button at the top left, or swipe this Scoreboard to the right to set up your home course, add some players, then create Scorecards or Events.\n\nFor detailed Help including a “Quick-Start” guide, or to change app Settings, tap the ☰ button at the top right or swipe this Scoreboard to the left.";
 
 //	Phrases & Special characters

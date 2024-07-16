@@ -520,6 +520,7 @@
 "TITLE_AUTHORITY_OR_METHOD" = "Autorité / Système";
 "TITLE_AUTOMATIC_PRESSES" = "Presses Automatiques";
 "TITLE_AVAILABLE_FILES_HEADER" = "Fichiers de base de données disponibles";
+"TITLE_AVAILABLE_SCORING_DATA" = "Données de Scores Disponibles";
 "TITLE_BACK_NINE" = "Deuxième Neuf";
 "TITLE_BACK_SIDE" = "Deuxième Côté";
 "TITLE_BANGO" = "Bango";
@@ -891,8 +892,10 @@
 "TITLE_SCORECARD_PLURAL" = "Cartes de Score";
 "TITLE_SCORECARD_TOTAL" = "Tot";	//	As it appears in Scorecard total headers
 "TITLE_SCORING_COLORS" = "Couleurs pour Marquer";
+"TITLE_SCORING_DATA" = "Données des Scores";
+"TITLE_SCORING_FILE" = "Fichier de Score";
 "TITLE_SCORING_HISTORY" = "Historique des Scores";
-"TITLE_SCORING_RECORD" = "Record de Pointage";
+"TITLE_SCORING_RECORD" = "Record des Scores";
 "TITLE_SCORING_SHORTHAND" = "Raccourcis pour Marquer";
 "TITLE_SCRATCH_SCORE" = "Scratch Score";
 "TITLE_SECONDARY" = "Secondaire";
@@ -1459,6 +1462,8 @@
 
 "INSTRUCTION_DRAG_ROUND_HERE" = "… ou glissez un tour ici";
 "INSTRUCTION_DRAG_TO_REORDER" = "Faites glisser pour réordonner";
+"INSTRUCTION_SCORING_FILES" = "Touchez pour choisir un fichier de données de score à utiliser pour créer une carte de score sur cet appareil.";
+"INSTRUCTION_SCORING_FILES_NONE" = "Les fichiers de données de score présentés ici sont publiés par d'autres appareils avec des informations sur les parcours, les joueurs et les compétitions pour créer des cartes de score sur des appareils distants comme celui-ci.";
 "INSTRUCTION_TSM_GETTING_STARTED" = "Touchez le bouton ☰ en haute à gauche, ou balayez ce Tableau vers la droite pour configurer votre parcours d’accueil, ajoutez des joueurs, puis créez des Cartes de Score ou des Événements.\n\nPour obtenir une aide détaillée, y compris un guide «Quick-Start», ou pour modifier les réglages de cette application, touchez le bouton ☰ en haut à droite ou balayez ce Tableau vers la gauche.";
 
 //	Phrases & Special characters
