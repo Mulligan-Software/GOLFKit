@@ -1530,7 +1530,7 @@ NSUInteger GOLFHandicapScoringRecordSizeForAuthority(GOLFHandicapAuthority *auth
 			
 #if TARGET_OS_MAC && !(TARGET_OS_EMBEDDED || TARGET_OS_IOS || TARGET_OS_WATCH)
 		} else if ([authority isEqualToString:GOLFHandicapAuthorityPersonal]) {
-			size = [[[NSUserDefaults standardUserDefaults] objectForKey:@"PHUseLastNScores"] unsignedIntegerValue];
+			size = [[[NSUserDefaults standardUserDefaults] objectForKey:@"PHUseLastNScores"] integerValue];
 #endif
 		}
 	}

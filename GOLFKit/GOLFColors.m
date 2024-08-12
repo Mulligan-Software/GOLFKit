@@ -32,6 +32,10 @@ CGFloat GOLFColorDefaultYardageContrast = 0.40;	//	Somewhere around 0.35
 #if TARGET_OS_IOS || TARGET_OS_WATCH
 
 	if (@available(iOS 13.0, *)) {
+
+//		aView.traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark;
+//		aViewController.traitCollection.userInterfaceStyle == UIUserInterfaceStyleDark;
+
 		UITraitCollection *currentTraits = [UITraitCollection currentTraitCollection];
 		return ([currentTraits userInterfaceStyle] == UIUserInterfaceStyleDark);
 	}
