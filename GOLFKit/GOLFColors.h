@@ -96,7 +96,7 @@ typedef NS_ENUM(GOLFTeeColorIndex, teeColorIndexEnumeration) {
 #endif
 
 #if !defined(IS_ANY_COMBO_TEE_COLOR_INDEX)
-	#define IS_ANY_COMBO_TEE_COLOR_INDEX(_index)	((((_index) == GOLFTeeColorCombo) || (((_index) >= GOLFTeeColorFirstCombo) && ((_index) <= GOLFTeeColorLastCombo))) ? YES : NO)
+	#define IS_ANY_COMBO_TEE_COLOR_INDEX(_index)	((((_index) >= GOLFTeeColorFirstCombo) && ((_index) <= GOLFTeeColorLastCombo)) ? YES : NO)
 #endif
 
 #if !defined(IS_ANY_SPECIAL_TEE_COLOR_INDEX)

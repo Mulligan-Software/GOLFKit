@@ -579,6 +579,7 @@
 "TITLE_BOGEYS_OR_WORSE" = "Bogeys & schlimmer";
 "TITLE_BONGO" = "Bongo";
 "TITLE_CANCEL" = "Abbrechen";
+"TITLE_CANCEL_EDITING_TO_UNDO" = "Rückgängig machen durch Abbrechen.";
 "TITLE_CART_ASSIGNMENT_CARDS" = "Wagenzuweisungsplakate";
 "TITLE_CART_ASSIGNMENT_PLANNER" = "Golfwagen Einsatzplaner";
 "TITLE_CART_NUMBER" = "Golfwagen Nummer";
@@ -594,6 +595,8 @@
 "TITLE_CHECK_FOR_SCORES_NOW" = "Prüfen ob Scores jetzt";
 "TITLE_CHECK_FOR_SCORES_STARTUP" = "Prüfen Sie ob Scores beim Start";
 "TITLE_CHIPINSKI" = "Chip-in, Offner, Dr. Chipinski";
+"TITLE_CHOOSE_A_TEE_COLOR" = "Wählen Sie eine Farbe für das neue Tee…";
+"TITLE_CHOOSE_ANOTHER_COLOR" = "Wählen Sie eine andere Farbe für dieses Tee…";
 "TITLE_CHOOSE_HOLE" = "Wählen ein Golfloch";
 "TITLE_CITY_STATE" = "Ort, Bundesland PLZ";
 "TITLE_CLEAR" = "Löschen";
@@ -619,6 +622,7 @@
 "TITLE_DEFAULT_TEAM_MATCH_STYLE" = "Mannschafts-Score";
 "TITLE_DELETE_ALL" = "Alles löschen";
 "TITLE_DELETE_CONTESTANT" = "Mitbewerber löschen";
+"TITLE_DELETE_THIS_TEE" = "Dieses Tee löschen";
 "TITLE_DESIGNATE_CAPTAIN" = "Als Kapitän bestimmen";
 "TITLE_DIFFERENTIAL_TYPE" = "Differentieller Typ";
 "TITLE_DISCARD" = "Verwerfen";

@@ -537,6 +537,7 @@
 "TITLE_BOGEYS_OR_WORSE" = "Bogeys & worse";
 "TITLE_BONGO" = "Bongo";
 "TITLE_CANCEL" = "Cancel";
+"TITLE_CANCEL_EDITING_TO_UNDO" = "Cancel editing to undo.";
 "TITLE_CART_ASSIGNMENT_CARDS" = "Cart Assignment Cards";
 "TITLE_CART_ASSIGNMENT_PLANNER" = "Cart Assignment Planner";
 "TITLE_CART_NUMBER" = "Cart Number";
@@ -552,6 +553,8 @@
 "TITLE_CHECK_FOR_SCORES_NOW" = "Check for Scores Now";
 "TITLE_CHECK_FOR_SCORES_STARTUP" = "Check for scores at startup";
 "TITLE_CHIPINSKI" = "Chip-in, Offner, Dr. Chipinski";
+"TITLE_CHOOSE_A_TEE_COLOR" = "Choose a color for the new tee…";
+"TITLE_CHOOSE_ANOTHER_COLOR" = "Choose another color for this tee…";
 "TITLE_CHOOSE_HOLE" = "Choose a Hole";
 "TITLE_CITY_STATE" = "City, State postal";
 "TITLE_CLEAR" = "Clear";
@@ -577,6 +580,7 @@
 "TITLE_DEFAULT_TEAM_MATCH_STYLE" = "Team Score";
 "TITLE_DELETE_ALL" = "Delete All";
 "TITLE_DELETE_CONTESTANT" = "Delete Contestant";
+"TITLE_DELETE_THIS_TEE" = "Delete this tee";
 "TITLE_DESIGNATE_CAPTAIN" = "Designate as Captain";
 "TITLE_DIFFERENTIAL_TYPE" = "Differential type";
 "TITLE_DISCARD" = "Discard";

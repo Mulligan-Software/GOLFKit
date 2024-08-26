@@ -537,6 +537,7 @@
 "TITLE_BOGEYS_OR_WORSE" = "Bogeys & pire";
 "TITLE_BONGO" = "Bongo";
 "TITLE_CANCEL" = "Annuler";
+"TITLE_CANCEL_EDITING_TO_UNDO" = "Annuler l’édition à défaire.";
 "TITLE_CART_ASSIGNMENT_CARDS" = "Écriteaux Voiturettes de Golf";
 "TITLE_CART_ASSIGNMENT_PLANNER" = "Agenda des Affectations de Voiturette";
 "TITLE_CART_NUMBER" = "Numéro de voiturette";
@@ -552,6 +553,8 @@
 "TITLE_CHECK_FOR_SCORES_NOW" = "Vérifiez Scores Maintenant";
 "TITLE_CHECK_FOR_SCORES_STARTUP" = "Vérifiez scores au démarrage";
 "TITLE_CHIPINSKI" = "Chip-in, Offner, Dr. Chipinski";
+"TITLE_CHOOSE_A_TEE_COLOR" = "Choisissez une couleur pour le nouveau jalon…";
+"TITLE_CHOOSE_ANOTHER_COLOR" = "Choisissez une autre couleur pour ce jalon…";
 "TITLE_CHOOSE_HOLE" = "Choisissez un trou";
 "TITLE_CITY_STATE" = "Ville, Province postal";
 "TITLE_CLEAR" = "Effacer";
@@ -577,6 +580,7 @@
 "TITLE_DEFAULT_TEAM_MATCH_STYLE" = "Score d’Équipe";
 "TITLE_DELETE_ALL" = "Effacer Tout";
 "TITLE_DELETE_CONTESTANT" = "Supprimer le compétiteur";
+"TITLE_DELETE_THIS_TEE" = "Supprimer ce jalon";
 "TITLE_DESIGNATE_CAPTAIN" = "Désigner comme capitaine";
 "TITLE_DIFFERENTIAL_TYPE" = "Type de différentiel";
 "TITLE_DISCARD" = "Éliminer";

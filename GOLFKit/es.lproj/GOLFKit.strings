@@ -537,6 +537,7 @@
 "TITLE_BOGEYS_OR_WORSE" = "Bogeys & peor";
 "TITLE_BONGO" = "Bongo";
 "TITLE_CANCEL" = "Cancelar";
+"TITLE_CANCEL_EDITING_TO_UNDO" = "Cancelar edición para deshacer.";
 "TITLE_CART_ASSIGNMENT_CARDS" = "Letreros Carros de Golf";
 "TITLE_CART_ASSIGNMENT_PLANNER" = "Trazador Asignación de Carritos de Golf";
 "TITLE_CART_NUMBER" = "Número de carrito";
@@ -552,6 +553,8 @@
 "TITLE_CHECK_FOR_SCORES_NOW" = "Compruebe Resultados Ahora";
 "TITLE_CHECK_FOR_SCORES_STARTUP" = "Compruebe resultados al inicio";
 "TITLE_CHIPINSKI" = "Chip-in, Offner, Dr. Chipinski";
+"TITLE_CHOOSE_A_TEE_COLOR" = "Elige un color para el nuevo tee…";
+"TITLE_CHOOSE_ANOTHER_COLOR" = "Elige otro color para este tee…";
 "TITLE_CHOOSE_HOLE" = "Elige un hoyo";
 "TITLE_CITY_STATE" = "Ciudad, Estado CP";
 "TITLE_CLEAR" = "Borrar";
@@ -577,6 +580,7 @@
 "TITLE_DEFAULT_TEAM_MATCH_STYLE" = "Puntaje del Equipo";
 "TITLE_DELETE_ALL" = "Eliminar Todos";
 "TITLE_DELETE_CONTESTANT" = "Eliminar el concursante";
+"TITLE_DELETE_THIS_TEE" = "Eliminar esta tee";
 "TITLE_DESIGNATE_CAPTAIN" = "Designar como capitán";
 "TITLE_DIFFERENTIAL_TYPE" = "Tipo de diferencial";
 "TITLE_DISCARD" = "Descartar";
