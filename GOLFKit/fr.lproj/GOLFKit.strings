@@ -386,7 +386,7 @@
 
 //	Standard Tee Colors
 "GOLF_TEE_COLOR_NAME_BLACK" = "Noir";
-"GOLF_TEE_COLOR_NAME_BLUE" = "Bleue";
+"GOLF_TEE_COLOR_NAME_BLUE" = "Bleu";
 "GOLF_TEE_COLOR_NAME_WHITE" = "Blanc";
 "GOLF_TEE_COLOR_NAME_GREEN" = "Vert";
 "GOLF_TEE_COLOR_NAME_RED" = "Rouge";
@@ -402,19 +402,23 @@
 "GOLF_TEE_COLOR_NAME_TEAL" = "Sarcelle";
 "GOLF_TEE_COLOR_NAME_AZURE" = "Azur";
 "GOLF_TEE_COLOR_NAME_BRONZE" = "Bronze";
-"GOLF_TEE_COLOR_NAME_BLUE_AND_WHITE" = "Bleue & Blanc";
+"GOLF_TEE_COLOR_NAME_FOREST" = "de Forêt";
+"GOLF_TEE_COLOR_NAME_BLUE_AND_WHITE" = "Bleu & Blanc";
 "GOLF_TEE_COLOR_NAME_RED_AND_YELLOW" = "Rouge & Jaune";
-"GOLF_TEE_COLOR_NAME_YELLOW_AND_BLUE" = "Jaune & Bleue";
+"GOLF_TEE_COLOR_NAME_YELLOW_AND_BLUE" = "Jaune & Bleu";
 "GOLF_TEE_COLOR_NAME_YELLOW_AND_GREEN" = "Jaune & Vert";
 "GOLF_TEE_COLOR_NAME_RED_AND_WHITE" = "Rouge & Blanc";
 "GOLF_TEE_COLOR_NAME_BLACK_AND_GOLD" = "Noir & Or";
 "GOLF_TEE_COLOR_NAME_WHITE_AND_GOLD" = "Blanc & Or";
 "GOLF_TEE_COLOR_NAME_BLACK_AND_WHITE" = "Noir & Blanc";
-"GOLF_TEE_COLOR_NAME_BLUE_AND_GREEN" = "Bleue & Vert";
+"GOLF_TEE_COLOR_NAME_BLUE_AND_GREEN" = "Bleu & Vert";
 "GOLF_TEE_COLOR_NAME_GREEN_AND_RED" = "Vert & Rouge";
 "GOLF_TEE_COLOR_NAME_GREEN_AND_WHITE" = "Vert & Blanc";
-"GOLF_TEE_COLOR_NAME_BLACK_AND_BLUE" = "Noir & Bleue";
+"GOLF_TEE_COLOR_NAME_BLACK_AND_BLUE" = "Noir & Bleu";
 "GOLF_TEE_COLOR_NAME_ORANGE_AND_GREEN" = "Orange & Vert";
+"GOLF_TEE_COLOR_NAME_RED_AND_BLUE" = "Rouge & Bleu";
+"GOLF_TEE_COLOR_NAME_BLACK_AND_ORANGE" = "Noir & Orange";
+"GOLF_TEE_COLOR_NAME_ORANGE_AND_TAN" = "Orange & Beige";
 "GOLF_TEE_COLOR_NAME_CUSTOM" = "Personnalisé";
 "GOLF_TEE_COLOR_NAME_USA" = "USA";		//	Custom tee
 "GOLF_TEE_COLOR_NAME_EU" = "UE.";		//	Custom tee
@@ -424,6 +428,12 @@
 "GOLF_TEE_COLOR_NAME_TWO" = "Deux";		//	Custom tee
 "GOLF_TEE_COLOR_NAME_THREE" = "Trois";	//	Custom tee
 "GOLF_TEE_COLOR_NAME_FOUR" = "Quatre";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_FIVE" = "Cinq";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_SQUARE" = "Carré";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_CIRCLE" = "Cercle";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_TRIANGLE" = "Triangle";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_DIAMOND" = "Diamant";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_STAR" = "Étoile";	//	Custom tee
 "GOLF_TEE_COLOR_NAME_COMBO" = "Combo";
 "GOLF_TEE_COLOR_NAME_GENERIC" = "Un Jalon";
 "GOLF_TEE_COLOR_NAME_UNKNOWN" = "Inconnu";
@@ -1462,7 +1472,13 @@
 "TOOLTIP_TEAM_GROSS_SCORE" = "Le score brut total d’équipe";
 "TOOLTIP_TEAM_NET_SCORE" = "Le score net total d’équipe";
 "TOOLTIP_TEAM_TOTAL_SCORE" = "Le score total d’équipe";
-"TOOLTIP_TOOLBAR_REGISTRATION" = "Pré-inscrire les joueurs à l'événement";
+"TOOLTIP_EVENT_TOOLBAR_FAST_SCORING" = "Saisissez rapidement les scores des participants";
+"TOOLTIP_EVENT_TOOLBAR_PAIRINGS" = "Specifiez les paires d’événement";
+"TOOLTIP_EVENT_TOOLBAR_PRINT" = "Imprimez le contenu de cette fenêtre";
+"TOOLTIP_EVENT_TOOLBAR_QUICK_ADD" = "Ajouter rapidement un nouveau joueur";
+"TOOLTIP_EVENT_TOOLBAR_REGISTRATION" = "Pré-inscrire les joueurs à l'événement";
+"TOOLTIP_EVENT_TOOLBAR_RESULTS" = "Créez des cartes de score, affichez les scores et les résultats d’événement";
+"TOOLTIP_EVENT_TOOLBAR_SETUP" = "Specifiez le style et les règles de l’événement";
 
 "INSTRUCTION_DRAG_ROUND_HERE" = "… ou glissez un tour ici";
 "INSTRUCTION_DRAG_TO_REORDER" = "Faites glisser pour réordonner";

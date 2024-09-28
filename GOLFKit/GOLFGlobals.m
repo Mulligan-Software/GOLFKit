@@ -20,7 +20,7 @@ GOLFTeeCourseRating const GOLFMinimum9HoleCourseRating = 12.0;
 GOLFTeeCourseRating const GOLFMaximum9HoleCourseRating = 42.0;
 
 GOLFTeeSLOPERating const GOLFMinimumSLOPERating = 27;
-GOLFTeeSLOPERating const GOLFMaximumSLOPERating = 155;
+GOLFTeeSLOPERating const GOLFMaximumSLOPERating = 166;
 
 GOLFHandicapIndex const GOLFDefaultMinimumHandicapIndex = -10.0;
 GOLFHandicapIndex const GOLFDefaultMaximumHandicapIndex = 64.0;

@@ -1244,6 +1244,35 @@ BOOL GOLFHandicapStablefordRequiredForAuthority(GOLFHandicapAuthority *authority
 }
 
 //=================================================================
+//	GOLFHandicapIncludesRatingsAdjustmentForAuthority(authority)
+//=================================================================
+BOOL GOLFHandicapIncludesRatingsAdjustmentForAuthority(GOLFHandicapAuthority *authority) {
+	GOLFHandicapMethodIndex methodIndex = GOLFHandicapBestMethodIndexFromAuthority(authority);
+
+	switch (methodIndex) {
+  		case GOLFHandicapMethodEGA:
+  		case GOLFHandicapMethodWHS:
+  		case GOLFHandicapMethodWHS2020:
+  			return ([[NSUserDefaults standardUserDefaults] boolForKey:@"SuppressVsParHandicapAdjustments"] ? NO : YES);
+  		
+  		case GOLFHandicapMethodAGU:
+  			return ([[NSUserDefaults standardUserDefaults] boolForKey:@"SuppressVsParHandicapAdjustments"] ? NO : YES);
+
+   		case GOLFHandicapMethodUSGA:
+  		case GOLFHandicapMethodRCGA:
+			return NO;
+
+
+ 		case GOLFHandicapMethodPersonal:
+  		case GOLFHandicapMethodCONGU:
+  		case GOLFHandicapMethodMulligan:
+		case GOLFHandicapMethodSecondBest:
+  		default:
+			return NO;
+	}
+}
+
+//=================================================================
 //	GOLFDoesTournamentAdjustmentForAuthority(authority)
 //=================================================================
 BOOL GOLFDoesTournamentAdjustmentForAuthority(GOLFHandicapAuthority *authority) {

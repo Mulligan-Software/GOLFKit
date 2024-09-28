@@ -402,6 +402,7 @@
 "GOLF_TEE_COLOR_NAME_TEAL" = "Teal";
 "GOLF_TEE_COLOR_NAME_AZURE" = "Azure";
 "GOLF_TEE_COLOR_NAME_BRONZE" = "Bronze";
+"GOLF_TEE_COLOR_NAME_FOREST" = "Forest";
 "GOLF_TEE_COLOR_NAME_BLUE_AND_WHITE" = "Blue & White";
 "GOLF_TEE_COLOR_NAME_RED_AND_YELLOW" = "Red & Yellow";
 "GOLF_TEE_COLOR_NAME_YELLOW_AND_BLUE" = "Yellow & Blue";
@@ -415,6 +416,9 @@
 "GOLF_TEE_COLOR_NAME_GREEN_AND_WHITE" = "Green & White";
 "GOLF_TEE_COLOR_NAME_BLACK_AND_BLUE" = "Black & Blue";
 "GOLF_TEE_COLOR_NAME_ORANGE_AND_GREEN" = "Orange & Green";
+"GOLF_TEE_COLOR_NAME_RED_AND_BLUE" = "Red & Blue";
+"GOLF_TEE_COLOR_NAME_BLACK_AND_ORANGE" = "Black & Orange";
+"GOLF_TEE_COLOR_NAME_ORANGE_AND_TAN" = "Orange & Tan";
 "GOLF_TEE_COLOR_NAME_CUSTOM" = "Custom";
 "GOLF_TEE_COLOR_NAME_USA" = "U.S.A.";	//	Custom tee
 "GOLF_TEE_COLOR_NAME_EU" = "E.U.";		//	Custom tee
@@ -424,6 +428,12 @@
 "GOLF_TEE_COLOR_NAME_TWO" = "Two";	//	Custom tee
 "GOLF_TEE_COLOR_NAME_THREE" = "Three";	//	Custom tee
 "GOLF_TEE_COLOR_NAME_FOUR" = "Four";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_FIVE" = "Five";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_SQUARE" = "Square";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_CIRCLE" = "Circle";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_TRIANGLE" = "Triangle";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_DIAMOND" = "Diamond";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_STAR" = "Star";	//	Custom tee
 "GOLF_TEE_COLOR_NAME_COMBO" = "Combo";
 "GOLF_TEE_COLOR_NAME_GENERIC" = "A Tee";
 "GOLF_TEE_COLOR_NAME_UNKNOWN" = "Unknown";
@@ -1462,7 +1472,13 @@
 "TOOLTIP_TEAM_GROSS_SCORE" = "The team’s total gross score";
 "TOOLTIP_TEAM_NET_SCORE" = "The team’s total net score";
 "TOOLTIP_TEAM_TOTAL_SCORE" = "The team’s total score";
-"TOOLTIP_TOOLBAR_REGISTRATION" = "Pre-register players for the event";
+"TOOLTIP_EVENT_TOOLBAR_FAST_SCORING" = "Enter contestant scores";
+"TOOLTIP_EVENT_TOOLBAR_PAIRINGS" = "Set up event pairings";
+"TOOLTIP_EVENT_TOOLBAR_PRINT" = "Print contents of this window";
+"TOOLTIP_EVENT_TOOLBAR_QUICK_ADD" = "Quickly make a new player";
+"TOOLTIP_EVENT_TOOLBAR_REGISTRATION" = "Pre-register players for the event";
+"TOOLTIP_EVENT_TOOLBAR_RESULTS" = "Create scorecards, show event scores and results";
+"TOOLTIP_EVENT_TOOLBAR_SETUP" = "Specify the style and rules of the event";
 
 "INSTRUCTION_DRAG_ROUND_HERE" = "… or drag a round here";
 "INSTRUCTION_DRAG_TO_REORDER" = "Drag to reorder";

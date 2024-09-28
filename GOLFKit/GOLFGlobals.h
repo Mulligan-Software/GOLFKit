@@ -20,7 +20,7 @@ extern GOLFTeeCourseRating const GOLFMinimum9HoleCourseRating;		//	12.0
 extern GOLFTeeCourseRating const GOLFMaximum9HoleCourseRating;		//	42.0
 
 extern GOLFTeeSLOPERating const GOLFMinimumSLOPERating;				//	27
-extern GOLFTeeSLOPERating const GOLFMaximumSLOPERating;				//	155
+extern GOLFTeeSLOPERating const GOLFMaximumSLOPERating;				//	166
 
 extern GOLFHandicapIndex const GOLFDefaultMinimumHandicapIndex;		//	-10.0
 extern GOLFHandicapIndex const GOLFDefaultMaximumHandicapIndex;		//	64.0

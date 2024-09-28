@@ -272,6 +272,9 @@ BOOL GOLFHandicap9HoleHandicapsSupported(GOLFHandicapAuthority *authority);
 BOOL GOLFHandicapStablefordRequiredForAuthority(GOLFHandicapAuthority *authority);
 //	Indicates whether the handicapping method of this authority requires Stableford scores or equivalents for handicap calculation
 
+BOOL GOLFHandicapIncludesRatingsAdjustmentForAuthority(GOLFHandicapAuthority *authority);
+//	Indicates whether the handicapping method of this authority includes an adjustment for course rating (and perhaps par) in its playing handicap calculation
+
 BOOL GOLFDoesTournamentAdjustmentForAuthority(GOLFHandicapAuthority *authority);
 //	Indicates whether the handicapping method of this authority accommodates adjustments or special handling for "tournament" (T) scores
 

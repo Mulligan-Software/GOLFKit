@@ -444,6 +444,7 @@
 "GOLF_TEE_COLOR_NAME_TEAL" = "teal";
 "GOLF_TEE_COLOR_NAME_AZURE" = "himmelblau";
 "GOLF_TEE_COLOR_NAME_BRONZE" = "bronze";
+"GOLF_TEE_COLOR_NAME_FOREST" = "waldgrün";
 "GOLF_TEE_COLOR_NAME_BLUE_AND_WHITE" = "blau und weiß";
 "GOLF_TEE_COLOR_NAME_RED_AND_YELLOW" = "rot und gelb";
 "GOLF_TEE_COLOR_NAME_YELLOW_AND_BLUE" = "gelb und blau";
@@ -457,6 +458,9 @@
 "GOLF_TEE_COLOR_NAME_GREEN_AND_WHITE" = "grün und weiß";
 "GOLF_TEE_COLOR_NAME_BLACK_AND_BLUE" = "schwarz und blau";
 "GOLF_TEE_COLOR_NAME_ORANGE_AND_GREEN" = "orangefarben und grün";
+"GOLF_TEE_COLOR_NAME_RED_AND_BLUE" = "rot und blau";
+"GOLF_TEE_COLOR_NAME_BLACK_AND_ORANGE" = "schwarz und orangefarben";
+"GOLF_TEE_COLOR_NAME_ORANGE_AND_TAN" = "orangefarben und tan";
 "GOLF_TEE_COLOR_NAME_CUSTOM" = "angepasste";
 "GOLF_TEE_COLOR_NAME_USA" = "USA.";		//	Custom tee
 "GOLF_TEE_COLOR_NAME_EU" = "EU.";		//	Custom tee
@@ -466,6 +470,12 @@
 "GOLF_TEE_COLOR_NAME_TWO" = "Zwei";		//	Custom tee
 "GOLF_TEE_COLOR_NAME_THREE" = "Drei";	//	Custom tee
 "GOLF_TEE_COLOR_NAME_FOUR" = "Vier";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_FIVE" = "Fünf";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_SQUARE" = "Quadrat";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_CIRCLE" = "Kreis";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_TRIANGLE" = "Dreieck";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_DIAMOND" = "Diamanten";	//	Custom tee
+"GOLF_TEE_COLOR_NAME_STAR" = "Stern";	//	Custom tee
 "GOLF_TEE_COLOR_NAME_COMBO" = "Combo";
 "GOLF_TEE_COLOR_NAME_GENERIC" = "Ein Tee";
 "GOLF_TEE_COLOR_NAME_UNKNOWN" = "unbekannte";
@@ -1504,7 +1514,13 @@
 "TOOLTIP_TEAM_GROSS_SCORE" = "Die gesamte Brutto Punktzahl der Mannschaft";
 "TOOLTIP_TEAM_NET_SCORE" = "Die gesamte Netto Punktzahl der Mannschaft";
 "TOOLTIP_TEAM_TOTAL_SCORE" = "Die Gesamtpunktzahl der Mannschaft";
-"TOOLTIP_TOOLBAR_REGISTRATION" = "Spieler für das Event vorregistrieren";
+"TOOLTIP_EVENT_TOOLBAR_FAST_SCORING" = "Geben Sie schnell die Punktzahlen der Teilnehmer ein";
+"TOOLTIP_EVENT_TOOLBAR_PAIRINGS" = "Ereignispaarungen einrichten";
+"TOOLTIP_EVENT_TOOLBAR_PRINT" = "Inhalt dieses Fensters drucken";
+"TOOLTIP_EVENT_TOOLBAR_QUICK_ADD" = "Schnell einen neuen Spieler erstellen";
+"TOOLTIP_EVENT_TOOLBAR_REGISTRATION" = "Spieler für das Event vorregistrieren";
+"TOOLTIP_EVENT_TOOLBAR_RESULTS" = "Erstellen Sie Scorecards und zeigen Sie die Ergebnisse und Ergebnisse der Veranstaltung an";
+"TOOLTIP_EVENT_TOOLBAR_SETUP" = "Geben Sie den Stil und die Regeln der Veranstaltung an";
 
 "INSTRUCTION_DRAG_ROUND_HERE" = "… oder zeihen Sie eine Runde hierher";
 "INSTRUCTION_DRAG_TO_REORDER" = "Ziehen zum Neuanordnen";

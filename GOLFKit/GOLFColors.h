@@ -30,11 +30,11 @@
 extern CGFloat GOLFColorDefaultYardageContrast;	//	Somewhere around 0.35
 
 //	Misc constants
-#define	kGOLFTeeColorsNumberOfSolid		17		//	Black (0) through Bronze (16), total of 17
-#define	kGOLFTeeColorsNumberOfCombo		13		//	Blue & White (20) through Orange & Green (32), total of 13
-#define kGOLFTeeColorsNumberOfCustom	8		//	U.S.A. (51) through IV (58), total of 8
+#define	kGOLFTeeColorsNumberOfSolid		18		//	Black (0) through Forest (17), total of 18
+#define	kGOLFTeeColorsNumberOfCombo		16		//	Blue & White (20) through Orange & Tan (35), total of 16
+#define kGOLFTeeColorsNumberOfCustom	14		//	U.S.A. (51) through Star (64), total of 14
 //										---
-#define kGOLFTeeColorsNumberOfStandard	38		//	Total Standard tee colors
+#define kGOLFTeeColorsNumberOfStandard	48		//	Total Standard tee colors
 
 #define kNotATeeColorIndex				-999	//	No-value GOLFTeeColorIndex specification
 
@@ -57,7 +57,8 @@ typedef NS_ENUM(GOLFTeeColorIndex, teeColorIndexEnumeration) {
 	GOLFTeeColorTeal,					//	Teal (14)
 	GOLFTeeColorAzure,					//	Azure (15)
 	GOLFTeeColorBronze,					//	Bronze (16)
-	GOLFTeeColorLastSolid = GOLFTeeColorBronze,
+	GOLFTeeColorForest,					//	Forest (17)
+	GOLFTeeColorLastSolid = GOLFTeeColorForest,
 	GOLFTeeColorBlueAndWhite = 20,		//	Blue & White (20)
 	GOLFTeeColorFirstCombo = GOLFTeeColorBlueAndWhite,
 	GOLFTeeColorRedAndYellow = 21,		//	Red & Yellow (21)
@@ -72,7 +73,10 @@ typedef NS_ENUM(GOLFTeeColorIndex, teeColorIndexEnumeration) {
 	GOLFTeeColorYellowAndGreen,			//	Yellow & Green (30)
 	GOLFTeeColorBlackAndBlue,			//	Black & Blue (31)
 	GOLFTeeColorOrangeAndGreen,			//	Orange & Green (32)
-	GOLFTeeColorLastCombo = GOLFTeeColorOrangeAndGreen,
+	GOLFTeeColorRedAndBlue,				//	Red & Blue (33)
+	GOLFTeeColorBlackAndOrange,			//	Black & Orange (34)
+	GOLFTeeColorOrangeAndTan,			//	Orange & Tan (35)
+	GOLFTeeColorLastCombo = GOLFTeeColorOrangeAndTan,
 	GOLFTeeColorCustom = 50,			//	Custom tee color (50)
 	GOLFTeeColorUSA,					//	Custom tee marker (U.S.A.) (51)
 	GOLFTeeColorFirstSpecial = GOLFTeeColorUSA,
@@ -83,7 +87,13 @@ typedef NS_ENUM(GOLFTeeColorIndex, teeColorIndexEnumeration) {
 	GOLFTeeColorTwo,					//	Custom tee marker (II) (56)
 	GOLFTeeColorThree,					//	Custom tee marker (III) (57)
 	GOLFTeeColorFour,					//	Custom tee marker (IV) (58)
-	GOLFTeeColorLastSpecial = GOLFTeeColorFour,
+	GOLFTeeColorFive,					//	Custom tee marker (V) (59)
+	GOLFTeeColorSquare,					//	Custom tee marker (Square) (60)
+	GOLFTeeColorCircle,					//	Custom tee marker (Circle) (61)
+	GOLFTeeColorTriangle,				//	Custom tee marker (Triangle) (62)
+	GOLFTeeColorDiamond,				//	Custom tee marker (Diamond) (63)
+	GOLFTeeColorStar,					//	Custom tee marker (Star) (64)
+	GOLFTeeColorLastSpecial = GOLFTeeColorStar,
 	GOLFTeeColorCombo = 80,				//	Combo tee color (80)
 	GOLFTeeColorGeneric = 98,			//	Generic tee color (98)
 	GOLFTeeColorUnknown = 99,			//	Unknown tee color
