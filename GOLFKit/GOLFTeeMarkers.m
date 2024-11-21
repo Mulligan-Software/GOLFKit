@@ -483,7 +483,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		//	Square
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorSquare], @"teeColorIndex",
-				[GOLFColor colorWithRed:(12.0 / 255.0) green:(97.0 / 255.0) blue:(14.0 + 5.0 / 255.0) alpha:1.0], @"teeColor",	//	Not quite Forest
+				[GOLFColor colorWithRed:(12.0 / 255.0) green:(97.0 / 255.0) blue:((14.0 + 5.0) / 255.0) alpha:1.0], @"teeColor",	//	Not quite Forest
 				GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_SQUARE"), @"teeColorName",
 				@"GOLFTeeMarkerSquare", @"teeIconName",
 				@"tee_marker_square", @"teeImageName",
@@ -493,7 +493,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		//	Circle
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorCircle], @"teeColorIndex",
-				[GOLFColor colorWithRed:(12.0 / 255.0) green:(97.0 / 255.0) blue:(14.0 + 10.0 / 255.0) alpha:1.0], @"teeColor",	//	Not quite Forest
+				[GOLFColor colorWithRed:(12.0 / 255.0) green:(97.0 / 255.0) blue:((14.0 + 10.0) / 255.0) alpha:1.0], @"teeColor",	//	Not quite Forest
 				GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_CIRCLE"), @"teeColorName",
 				@"GOLFTeeMarkerCircle", @"teeIconName",
 				@"tee_marker_circle", @"teeImageName",
@@ -503,7 +503,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		//	Triangle
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorTriangle], @"teeColorIndex",
-				[GOLFColor colorWithRed:(12.0 / 255.0) green:(97.0 / 255.0) blue:(14.0 + 15.0 / 255.0) alpha:1.0], @"teeColor",	//	Not quite Forest
+				[GOLFColor colorWithRed:(12.0 / 255.0) green:(97.0 / 255.0) blue:((14.0 + 15.0) / 255.0) alpha:1.0], @"teeColor",	//	Not quite Forest
 				GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_TRIANGLE"), @"teeColorName",
 				@"GOLFTeeMarkerTriangle", @"teeIconName",
 				@"tee_marker_triangle", @"teeImageName",
@@ -513,7 +513,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		//	Diamond
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorDiamond], @"teeColorIndex",
-				[GOLFColor colorWithRed:(12.0 / 255.0) green:(97.0 / 255.0) blue:(14.0 + 20.0 / 255.0) alpha:1.0], @"teeColor",	//	Not quite Forest
+				[GOLFColor colorWithRed:(12.0 / 255.0) green:(97.0 / 255.0) blue:((14.0 + 20.0) / 255.0) alpha:1.0], @"teeColor",	//	Not quite Forest
 				GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_DIAMOND"), @"teeColorName",
 				@"GOLFTeeMarkerDiamond", @"teeIconName",
 				@"tee_marker_diamond", @"teeImageName",
@@ -523,7 +523,7 @@ NSArray * GOLFStandardTeeColorArray(void) {
 		//	Star
 		colorDict = [NSDictionary dictionaryWithObjectsAndKeys:
 				[NSNumber numberWithUnsignedInteger:GOLFTeeColorStar], @"teeColorIndex",
-				[GOLFColor colorWithRed:(12.0 / 255.0) green:(97.0 / 255.0) blue:(14.0 + 25.0 / 255.0) alpha:1.0], @"teeColor",	//	Not quite Forest
+				[GOLFColor colorWithRed:(12.0 / 255.0) green:(97.0 / 255.0) blue:((14.0 + 25.0) / 255.0) alpha:1.0], @"teeColor",	//	Not quite Forest
 				GOLFLocalizedString(@"GOLF_TEE_COLOR_NAME_STAR"), @"teeColorName",
 				@"GOLFTeeMarkerStar", @"teeIconName",
 				@"tee_marker_star", @"teeImageName",
