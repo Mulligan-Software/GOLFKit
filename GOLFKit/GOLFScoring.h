@@ -8,6 +8,18 @@
 
 #import <Foundation/Foundation.h>
 #import <GOLFKit/GOLFKitTypes.h>
+#import <GOLFKit/GOLFColors.h>
+
+#if TARGET_OS_IOS || TARGET_OS_WATCH
+
+#define GOLFStatusIndicator UIImage
+
+#elif TARGET_OS_MAC
+
+#define GOLFStatusIndicator NSImage
+
+#endif
+
 
 #define kNotAScore						-999		//	No-value for a whole-number score - GOLFScore
 #define kNotAGrossScore					-999		//	No-value for a gross score - GOLFGrossScore
@@ -217,6 +229,19 @@ typedef NS_ENUM(NSUInteger, GOLFSkinsEligibility) {
 	GOLFSkinsEligibilityParOrBetter,		//	Only scores of par or better are eligible		(2)
 	GOLFSkinsEligibilityUnderPar,			//	Only hole scores under par are eligible			(3)
 	GOLFSkinsEligibilityUnknown = 99		//	Eligibility Unknown / Error						(99)
+};
+
+typedef NS_ENUM(NSUInteger, GOLFImportStatus) {
+	GOLFImportStatusNone,						//	No status 						(0 - gray bullet)
+    GOLFImportStatusWarning,					//	Warning status 					(1 - yellow bullet)
+    GOLFImportStatusReady,						//	Ready status 					(2 - green bullet)
+    GOLFImportStatusOverridden,					//	Overridden status 				(3 - blue bullet)
+	GOLFImportStatusNoneInactive = 10,			//	No status - inactive 			(10 - dim gray bullet)
+    GOLFImportStatusWarningInactive,			//	Warning status - inactive		(11 - dim yellow bullet)
+    GOLFImportStatusReadyInactive,				//	Ready status - inactive 		(12 - dim green bullet)
+    GOLFImportStatusOverriddenInactive,			//	Overridden status - inactive	(13 - dim blue bullet)
+    GOLFImportStatusError = 99,					//	Error status 					(99 - red bullet)
+    GOLFImportStatusErrorInactive = 109			//	Error status - inactive			(109 - dim red bullet)
 };
 
 //	Status Masks
@@ -440,6 +465,13 @@ NSString * GOLFHoleSelectionInstructionsForAllowanceType(GOLFAllowanceType allow
 GOLFHandicapStrokes GOLFMaxPointQuotaForPlayType(GOLFPlayType playType, BOOL for9Holes);
 //	Returns the appropriate quota points assigned to scratch player for the specified playType
 
+//=================================================================
+//	GOLFStatusIndicatorForImportStatus(status)
+//=================================================================
+GOLFStatusIndicator * GOLFStatusIndicatorForImportStatus(GOLFImportStatus status);
+//	Returns a GOLFStatusIndicator (NSImage or UIImage) associated with the GOLFImportStatus
+//	specified.
+
 #pragma mark NSStringFrom… Utilities
 
 //=================================================================
@@ -449,7 +481,6 @@ NSString * NSStringOrdinalSuffixFromRank(NSUInteger rank);
 //	Returns a localized suffix for a positive integer rank
 //	In English, "st", "nd", "rd", "th", "th", etc.
 
-
 //=================================================================
 //	NSStringFromMixedScore(score, denominatorHint, *error)
 //=================================================================
@@ -457,7 +488,6 @@ NSString * NSStringFromMixedScore(float score, NSInteger denominatorHint, float 
 //	Returns a whole or mixed number string from a score - including the whole number followed by its vulgar fraction (if any)
 //	The denominator hint may help decide how precisely to test for fractional parts
 //	If it's not reasonable to be able to return a mixed number, the localized decimal value to a tenth is returned
-
 
 //=================================================================
 //	NSStringFromAllowanceType(allowanceType, info, descriptiveText)
@@ -475,7 +505,6 @@ NSString * NSStringFromAllowanceType(GOLFAllowanceType allowanceType, NSDictiona
 //	allowancePct		NSNumber *					The allowance percentage (of 100) for the SpecifiedPercentAllowanceType (default provided if missing)
 //	lowHandicap			NSNumber *					GOLFPlayingHandicap for the base (low) handicap player used for DifferenceAllowanceType
 
-
 //=================================================================
 //	NSStringFromPlayType(playType, info, descriptiveText)
 //=================================================================
@@ -491,7 +520,6 @@ NSString * NSStringFromPlayType(GOLFPlayType playType, NSDictionary *info, NSStr
 //	bestRoundsN			NSNumber *		Integer N of TeamBestNPlayType (Team total of best N rounds) - default: 4
 //	maxScoreMethod		NSNumber *		GOLFMaxScoreMethod identifying MaxScore allowance calculation
 
-
 //=================================================================
 //	NSStringFromTiebreakerMethod(method, descriptiveText)
 //=================================================================
@@ -500,14 +528,12 @@ NSString * NSStringFromTiebreakerMethod(GOLFTiebreakerMethod method, NSString **
 //	optionally (when the address of descriptiveText is provided), a localized description of the tiebreaker
 //	("last 9 holes", "hole 18, hole 17, etc.", etc.)
 
-
 //=================================================================
 //	NSStringFromTiebreakerOutcome(outcome, result)
 //=================================================================
 NSString * NSStringFromTiebreakerOutcome(GOLFTiebreakerOutcome outcome, NSNumber *result);
 //	Returns a localized description of the reason a tiebreaker was invoked ("last 6 holes", "complete round", etc.)
 //	If available, provide a numeric result that identifies the hole (or handicap, etc.) involved in the tiebreak.
-
 
 //=================================================================
 //	NSStringFromMaxScoreType(type, descriptiveText)
@@ -524,3 +550,9 @@ NSString * NSStringFromSkinsEligibility(GOLFSkinsEligibility eligibility, NSStri
 //	Returns a localized title/name of a skins eligibility setting ("Any Score", "Par or Better", etc.) and
 //	optionally (when the address of descriptiveText is provided), a localized description of the setting
 //	("All hole scores are eligible for skins", "Only scores of par or better are eligible", etc.)
+
+//=================================================================
+//	NSStringFromGOLFImportStatus(status)
+//=================================================================
+NSString * NSStringFromGOLFImportStatus(GOLFImportStatus status);
+//	Returns a localized title/name of a data importing status ("None", "Ready", "Warning", etc.).

@@ -34,6 +34,7 @@
 "TERM_AVERAGE" = "average";
 "TERM_BACK" = "back";
 "TERM_BACKWARD" = "backward";
+"TERM_BEFORE" = "before";
 "TERM_BEGINNING" = "beginning";
 "TERM_BEST" = "best";
 "TERM_BESTBALL" = "Best-Ball";
@@ -83,6 +84,7 @@
 "TERM_CURRENT" = "current";
 "TERM_CUSTOMIZATION" = "customization";
 "TERM_CUSTOMIZATION_PLURAL" = "customizations";
+"TERM_DAILY" = "daily";
 "TERM_DATE" = "date";
 "TERM_DEACTIVATED" = "deactivated";
 "TERM_DEFAULT_PLURAL" = "defaults";
@@ -149,6 +151,8 @@
 "TERM_HANDICAP" = "handicap";
 "TERM_HANDICAP_PLURAL" = "handicaps";
 "TERM_HANDICAP_ABBR" = "hdcp";
+"TERM_HANDICAP_RECORD" = "handicap record";
+"TERM_HANDICAP_RECORD_PLURAL" = "handicap records";
 "TERM_HANDICAPPING" = "handicapping";
 "TERM_HELP" = "help";
 "TERM_HOLE" = "hole";
@@ -274,7 +278,10 @@
 "TERM_RATING" = "rating";
 "TERM_RATING_PLURAL" = "ratings";
 "TERM_RATING_PLURAL_ABBR" = "ratings";
+"TERM_READY" = "ready";
 "TERM_REASON" = "reason";
+"TERM_RECORD" = "record";
+"TERM_RECORD_PLURAL" = "records";
 "TERM_REGULATION_ABBR" = "reg";
 "TERM_REPUBLISH" = "republish";
 "TERM_RESET" = "reset";
@@ -287,6 +294,8 @@
 "TERM_ROUNDED" = "rounded";	//	mathematically rounded, like 1.6 --> 2.0
 "TERM_SAND" = "sand";
 "TERM_SAVE" = "save";
+"TERM_SCHEDULE_NOUN" = "schedule";
+"TERM_SCHEDULE_VERB" = "schedule";
 "TERM_SCHEID" = "Scheid";
 "TERM_SCORE" = "score";
 "TERM_SCORE_ABBR" = "score";
@@ -307,6 +316,7 @@
 "TERM_SHARE" = "share";
 "TERM_SIDE" = "side";
 "TERM_SIDE_PLURAL" = "sides";
+"TERM_SINCE" = "since";
 "TERM_SIXPT" = "6-Point";
 "TERM_SKIN" = "skin";
 "TERM_SKIN_PLURAL" = "skins";
@@ -359,6 +369,7 @@
 "TERM_UNLOCKED" = "unlocked";
 "TERM_UNNAMED" = "unnamed";
 "TERM_UNRATED" = "unrated";
+"TERM_UNRESOLVED" = "unresolved";
 "TERM_UPDATED" = "updated";
 "TERM_USE" = "use";
 "TERM_USED" = "used";
@@ -372,6 +383,7 @@
 "TERM_VOICE" = "voice";
 "TERM_WAGERING" = "wagering";
 "TERM_WALTZ" = "Waltz";
+"TERM_WARNING" = "warning";
 "TERM_WINNING" = "winning";
 "TERM_WINS" = "wins";
 "TERM_WOMAN_PLURAL" = "women";
@@ -514,6 +526,7 @@
 "TITLE_ADVANCED_REFERENCE_TEES" = "Allow rating “Reference” Tees";
 "TITLE_ADVANCED_SUPPRESS_VS_PAR_ADJUSTMENTS" = "Suppress “Course Rating vs. Par” adjustments in Course Handicap calculations";	//	Preferences Advanced configuration item
 "TITLE_ADVANCED_SUPPRESS_VS_PAR_ADJUSTMENTS_BLURB" = "For handicapping authorities that allow it, suppress the adjustment in handicap calculations.";	//	Preferences Advanced configuration item (blurb)
+"TITLE_ALL_PLAYERS" = "All Players";
 "TITLE_ALLOWANCE" = "Allowance";
 "TITLE_ALWAYS_DARK" = "Always Dark";
 "TITLE_ALWAYS_LIGHT" = "Always Light";
@@ -546,6 +559,7 @@
 "TITLE_BINGO_BANGO_BONGO" = "Bingo-Bango-Bongo";
 "TITLE_BOGEYS_OR_WORSE" = "Bogeys & worse";
 "TITLE_BONGO" = "Bongo";
+"TITLE_CALCULATE_NEW_HANDICAPS" = "Calculate New Handicaps";
 "TITLE_CANCEL" = "Cancel";
 "TITLE_CANCEL_EDITING_TO_UNDO" = "Cancel editing to undo.";
 "TITLE_CART_ASSIGNMENT_CARDS" = "Cart Assignment Cards";
@@ -633,6 +647,8 @@
 "TITLE_FAX_CELL" = "Fax / Cell";
 "TITLE_FILE_NAME" = "File Name";
 "TITLE_FILE_TYPE" = "File Type";
+"TITLE_FILES_IN_DROPBOX" = "Files in Dropbox";
+"TITLE_FILES_IN_ICLOUD" = "Files in iCloud";
 "TITLE_FIRST_HOLE" = "First Hole";
 "TITLE_FIRST_TEE_TIME" = "First Tee Time";
 "TITLE_FLAG_TOURNAMENT_SCORES" = "Flag Tournament scores";
@@ -662,6 +678,7 @@
 "TITLE_GREEN_IN_REGULATION_PLURAL" = "Greens in Regulation";
 "TITLE_GREENIE" = "Greenie";
 "TITLE_GREENSIDE_BUNKER_HIT" = "Greenside Bunker Hit";
+"TITLE_GROSS_BALL" = "Gross Ball";
 "TITLE_GURGLIE" = "Gurglie, Fish";
 "TITLE_HANDICAP" = "Handicap";
 "TITLE_HANDICAP_ABBR" = "Hdcp";
@@ -716,6 +733,7 @@
 "TITLE_HANDICAP_PLAYING" = "Playing Handicap";
 "TITLE_HANDICAP_PLAYING_PLURAL" = "Playing Handicaps";
 "TITLE_HANDICAP_RECORDS" = "Handicap Records";
+"TITLE_HANDICAP_RECORDS_REMOVED" = "Handicap Records Removed";
 "TITLE_HANDICAP_REPORT" = "Handicap Report";
 "TITLE_HANDICAP_SERVICE" = "Handicap Service";
 "TITLE_HANDICAP_SERVICE_ACCOUNT" = "Handicapping Account";
@@ -800,7 +818,9 @@
 "TITLE_MAXIMUM_ABBR" = "Max";
 "TITLE_MAXIMUM_SCORE" = "Maximum Score";
 "TITLE_MEMBER_NO" = "Member no.";
+"TITLE_MEMBERS_OF" = "Members of";
 "TITLE_MENS_HANDICAP" = "Men’s Handicap";
+"TITLE_MONTHLY_LAST_DAY" = "Monthly through the last day of the month";
 "TITLE_MOVE_ROUND_DOWN" = "Move Round Down";
 "TITLE_MOVE_ROUND_UP" = "Move Round Up";
 "TITLE_MULLIGAN_SOFTWARE" = "Mulligan Software";
@@ -818,10 +838,15 @@
 "TITLE_NINE_NAME" = "Nine Name";
 "TITLE_NO_COURSES_AVAILABLE" = "No Courses Available";
 "TITLE_NO_DATA_FOUND" = "no data found";
+"TITLE_NO_PLAYERS_UPDATED" = "No players updated.";
+"TITLE_NO_PLAYERS_WITH_RECORDS" = "No players with handicap records";
 "TITLE_NO_STROKES" = "no strokes";
 "TITLE_NO_TEAM_MEMBERS" = "No Team Members";
 "TITLE_NONE_OF_THESE" = "None of These";
 "TITLE_ON_COURSE_ASSISTANT" = "“On-Course” Assistant";
+"TITLE_ONE_PLAYER_UPDATED" = "One player updated.";
+"TITLE_ONE_PLAYER_WITH_ONE_RECORD" = "One player with one handicap record";
+"TITLE_ONE_SELECTED_PLAYER" = "One selected player";
 "TITLE_OPEN_SCORECARD" = "Open the Scorecard";
 "TITLE_OPT_OUT_SKINS" = "Opt Out of Skins";
 "TITLE_OPTIONS" = "Options";
@@ -853,6 +878,7 @@
 "TITLE_PENALTY_STROKE_PLURAL" = "Penalty Strokes";
 "TITLE_PERSONAL_HANDICAPPING" = "Personal Handicapping";
 "TITLE_PLAYER_NAME" = "Player Name";
+"TITLE_PLAYER_SCORES" = "Player Scores";
 "TITLE_PLAYERS_TO_ADD" = "Players to add to a new Scorecard";
 "TITLE_PLAYER(S)" = "Player(s)";
 "TITLE_PLAYING_HANDICAP_DETERMINATION" = "Playing Handicap determination";
@@ -868,6 +894,7 @@
 "TITLE_PRESS_2_DOWN" = "2↓ Press";
 "TITLE_PREVIOUS_HOLE" = "Previous Hole";
 "TITLE_PRIMARY" = "Primary";
+"TITLE_PRIMARY_SCHEDULE" = "Primary Schedule";
 "TITLE_PRINT_SCORECARD" = "Print Scorecard";
 "TITLE_PRINT_SCORECARDS" = "Print Scorecards";
 "TITLE_PROPOSED_UPDATE" = "Proposed Update";
@@ -889,13 +916,16 @@
 "TITLE_REMOTE_SCORECARD_ALERT_EXTRA" = "This scorecard was created on another device.  Do you want to unlock it for editing or entering scores?";
 "TITLE_REMOTE_SCORECARD_ALERT_UNLOCK" = "This scorecard was created on another device.  Do you want to unlock it to enter scores?";
 "TITLE_REMOVE" = "Remove";
+"TITLE_REMOVE_HANDICAP_RECORDS" = "Remove Handicap Records";
 "TITLE_RESULTS_DETAIL" = "Results Detail";
 "TITLE_REVIEW_BUTTON" = "Review";
 "TITLE_REVISION_DATE" = "Revision Date";
 "TITLE_ROUNDS_HIGHLIGHT" = "Rounds Highlight";
+"TITLE_ROUNDS_THROUGH" = "Rounds through";
 "TITLE_SAND_SAVES_PER_TRY" = "Sand Saves/Tries";
 "TITLE_SANDIE" = "Sandie";
 "TITLE_SAVE" = "Save";
+"TITLE_SCHEDULE_HANDICAP_CALCULATIONS" = "Schedule Handicap Calculations";
 "TITLE_SCORECARD" = "Scorecard";
 "TITLE_SCORECARD_HANDICAP" = "Hcp";		//	As it appears in Scorecard headers ("Hcp")
 "TITLE_SCORECARD_IN" = "In";		//	As it appears in Scorecard total headers ("In")
@@ -913,9 +943,11 @@
 "TITLE_SCORING_SHORTHAND" = "Scoring Shorthand";
 "TITLE_SCRATCH_SCORE" = "Scratch Score";
 "TITLE_SECONDARY" = "Secondary";
+"TITLE_SECONDARY_SCHEDULE" = "Secondary Schedule";
 "TITLE_SELECT_ALL" = "Select All";
 "TITLE_SELECT_PLAYERS" = "Select Players";
 "TITLE_SELECTED_HOLES" = "Selected Holes";
+"TITLE_SELECTED_PLAYERS" = "Selected Players";
 "TITLE_SERIAL_NUMBER" = "Serial number";
 "TITLE_SESSION_LIST" = "Session List";
 "TITLE_SET_BUTTON" = "Set";
@@ -966,6 +998,7 @@
 "TITLE_TEAM_MATCHES" = "Team Matches";
 "TITLE_TEAM_MEMBERS" = "Team Members";
 "TITLE_TEAM_PLAY" = "Team Play";
+"TITLE_TEAM_SCORES" = "Team Scores";
 "TITLE_TECHNICAL_SUPPORT" = "Technical Support";
 "TITLE_TEE_COLOR" = "Tee Color";
 "TITLE_TEE_NAME" = "Tee Name";
@@ -1026,6 +1059,13 @@
 "DESCRIPTION_GUEST" = "One-time-only, non-member, or single event player.  No handicap calculation.";
 "DESCRIPTION_GUEST_PADDING" = "             ";
 "DESCRIPTION_GURGLIE" = "Par or better from, or skipping off, water";
+"DESCRIPTION_HANDICAP_CALCULATION_NTH_DAY" = "Nth day";	//	"Monthly through the Nth day"
+"DESCRIPTION_HANDICAP_CALCULATION_THE_WEEKDAY" = "the weekday";	//	"Weekly through the weekday"
+"DESCRIPTION_HANDICAP_CALCULATION_TYPE_NONE" = "No handicap calculations scheduled.";
+"DESCRIPTION_HANDICAP_CALCULATION_TYPE_DAILY" = "Handicap calculations scheduled daily through the end of play each day.";
+"DESCRIPTION_HANDICAP_CALCULATION_TYPE_WEEKLY" = "Handicap calculations scheduled weekly through the end of play on a specified weekday of each week.";
+"DESCRIPTION_HANDICAP_CALCULATION_TYPE_MONTHLY" = "Handicap calculations scheduled monthly through the end of play on a specified day of each month.";
+"DESCRIPTION_HANDICAP_CALCULATION_TYPE_MONTHEND" = "Handicap calculations scheduled monthly through the end of play on the last day of the month.";
 "DESCRIPTION_HOGAN" = "Hit fairway, green in regulation, 2-putt par";
 "DESCRIPTION_HOLLYWOOD" = "6-Hole matches (Sixes, Round-Robin)";
 "DESCRIPTION_LOW_BALL_LOW_TOTAL" = "1 point - low teammate, 1 pt. - low team total";
@@ -1086,6 +1126,7 @@
 "FORMAT_CURRENT_%@_TITLE_PLURAL" = "Current %@";
 "FORMAT_DETERMINE_YOUR_%@_WITH_YOUR_%@" = "Determine your %@ on the right by finding the row in which your %@ appears on the left.";
 "FORMAT_DISCONTINUED_HANDICAP_METHOD_%@_PLAYER_%@" = "The %@ is no longer available.  If you select another method for %@ and save the change, you will be unable to restore the previous setting.";
+"FORMAT_EFFECTIVE_%@_UNTIL_NEXT" = "to create handicap records effective for play %@ and later…";
 "FORMAT_EVENT_HAS_TEE_%@_WARNING" = "Warning: Event is configured with a starting tee (%@).";
 "FORMAT_EVENT_HAS_TIME_%@_WARNING" = "Warning: Event is configured with a tee time (%@).";
 "FORMAT_FOLLOWS_%@_DATE" = "follows %@ date";	//	"follows Scorecard date" or "follows Event date" lookup errors
@@ -1097,9 +1138,12 @@
 "FORMAT_%@_IS_DEFAULT_SCORECARD_CAPTAIN" = "%@ assigned by handicap as scorecard captain.";
 "FORMAT_%@_IS_DESIGNATED_SCORECARD_CAPTAIN" = "%@ is designated as scorecard captain.";
 "FORMAT_%@_OR_%@" = "%@ or %@";
+"FORMAT_%d_RECORDS_REMOVED" = "%d records removed.";
+"FORMAT_%@_SCHEDULING_EXAMPLE" = "%@, the date through which scores would be selected for scheduled calculations…";
 "FORMAT_MAXIMUM_%@_ABBR" = "Max. %@";
 "FORMAT_MB_DOWNLOADED_%1.1f" = "%1.1fMB downloaded";
 "FORMAT_MISSING_%@" = "missing %@";
+"FORMAT_MONTHLY_THROUGH_%@" = "Monthly through the %@";	//	"Monthly through the 15th", "Monthly through the Nth day"
 "FORMAT_NET_%@" = "Net %@";
 "FORMAT_NO_%@" = "no %@";	//	"no strokes", "no players"
 "FORMAT_NOT_AVAILABLE_WITH_%@" = "not available for %@";
@@ -1113,13 +1157,26 @@
 "FORMAT_PLAYER_%@_WINS_%d_UP_%@" = "%@ wins %d up.%@";
 "FORMAT_PLAYER_%@_WINS_%d_%@" = "%@ wins %d %@";
 "FORMAT_PLAYER_%@_WINS_%@" = "%@ wins %@";
+"FORMAT_PLAYERS_%d_WITH_%d_RECORDS" = "%d players with %d handicap records";
+"FORMAT_PLAYERS_%d_UPDATED" = "%d players updated.";
+"FORMAT_PLAYERS_ONE_WITH_%d_RECORDS" = "One player with %d handicap records";
 "FORMAT_PREF_SETTINGS_FOR_%@" = "Preferred settings for %@…";
+"FORMAT_REMOVED_ITEM_%@_NONE" = "no %@ removed";
+"FORMAT_REMOVED_ITEM_%@_ONE" = "1 %@ removed";
+"FORMAT_REMOVED_ITEMS_%1$@_COUNT_%2$d" = "%2$d %1$@ removed";
+"FORMAT_REMOVING_%@_AND_LATER" = "to remove handicap records effective %@ and later…";
+"FORMAT_REMOVING_%@_AND_EARLIER" = "to remove handicap records effective %@ and earlier…";
+"FORMAT_REQUEST_DELETE_%d_%@_FOR_%d_%@…" = "Request to permanently delete %d %@ for %d %@…";
 "FORMAT_REVISED_ITEM_%@_NONE" = "no %@ revised";
 "FORMAT_REVISED_ITEM_%@_ONE" = "1 %@ revised";
 "FORMAT_REVISED_ITEMS_%1$@_COUNT_%2$d" = "%2$d %1$@ revised";
+"FORMAT_ROUNDS_BEFORESINCE_%@_DATE_%@" = "Rounds %@ %@";
 "FORMAT_SELECTED_ITEM_%@_ONE" = "1 %@ selected";
 "FORMAT_SELECTED_ITEM_%@_NONE" = "no %@ selected";
 "FORMAT_SELECTED_ITEMS_%1$@_COUNT_%2$d" = "%2$d %1$@ selected";
+"FORMAT_SELECTED_PLAYER_%@" = "Selected Player (%@)";
+"FORMAT_SELECTED_PLAYERS_%d_PLAYERS" = "Selected Players (%d players)";
+"FORMAT_SELECTED_PLAYERS_%@_%@" = "Selected Players (%@, %@)";
 "FORMAT_SWAP_%@_HEADER" = "Swap %@…";
 "FORMAT_TEE_NO_%@" = "Tee no. %@";
 "FORMAT_THROUGH_HOLE_%@" = "through %@";
@@ -1131,6 +1188,7 @@
 "FORMAT_UPDATE_COLORS_%@" = "Blue - change pending\nRed - %@ override";	//	Section footer for handicap updates - "Blue - change pending / Red - scorecard override"
 "FORMAT_UPDATE_PLAYER_%@" = "Update %@";	//	Button title for handicap updates - "Update Handicap Indexes"
 "FORMAT_UPDATE_%@_OVERRIDES" = "Install %@ Overrides";	//	Button title for handicap overrides - "Install Handicap Index Overrides"
+"FORMAT_WEEKLY_THROUGH_%@" = "Weekly through %@";	//	"Weekly through Thursday"
 "FORMAT_%@_DIFFERENCE" = "%@ Difference";	//	"COURSE HANDICAP Difference"
 "FORMAT_%@_OF_EACH_PLAYER" = "%@ of each player";	//	"COURSE HANDICAP of each player"
 "FORMAT_%@_OVERRIDE" = "%@ override";
@@ -1186,6 +1244,7 @@
 "ALERT_DATABASE_ERROR" = "Database Error";
 "ALERT_DATABASE_ERROR_INFO" = "The data storage found on this device is incompatible or damaged.\n\nYou can delete the app and re-install, or we can clear the database and you can restart the app.\n\nThe application will terminate.";
 "ALERT_DATABASE_ERROR_REINSTALL" = "I’ll re-install";
+"ALERT_DELETE_RECORDS_INFO" = "Click Continue to confirm your request, or Cancel keep the records.";
 "ALERT_NO_GOLFERS_COURSES_FOR_EVENT" = "No Players or Courses are available yet to create an Event.";
 "ALERT_NO_COURSES_FOR_EVENT" = "No Courses are available yet to create an Event.";
 "ALERT_NO_GOLFERS_FOR_EVENT" = "No Players are available yet to create an Event.";

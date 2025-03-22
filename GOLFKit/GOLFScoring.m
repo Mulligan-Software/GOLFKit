@@ -47,6 +47,84 @@ GOLFHandicapStrokes GOLFMaxPointQuotaForPlayType(GOLFPlayType playType, BOOL for
 	}
 }
 
+//=================================================================
+//	GOLFStatusIndicatorForImportStatus(status)
+//=================================================================
+GOLFStatusIndicator * GOLFStatusIndicatorForImportStatus(GOLFImportStatus status) {
+	NSString *workingIndicatorName;
+	
+	switch (status) {
+		case GOLFImportStatusNone:
+			workingIndicatorName = @"gray_indicator";
+			break;
+			
+		case GOLFImportStatusWarning:
+			workingIndicatorName = @"yellow_indicator";
+			break;
+			
+		case GOLFImportStatusReady:
+			workingIndicatorName = @"green_indicator";
+			break;
+			
+		case GOLFImportStatusOverridden:
+			workingIndicatorName = @"blue_indicator";
+			break;
+			
+		case GOLFImportStatusError:
+			workingIndicatorName = @"red_indicator";
+			break;
+			
+		case GOLFImportStatusNoneInactive:
+			workingIndicatorName = @"gray_indicator_dim";
+			break;
+			
+		case GOLFImportStatusWarningInactive:
+			workingIndicatorName = @"yellow_indicator_dim";
+			break;
+			
+		case GOLFImportStatusReadyInactive:
+			workingIndicatorName = @"green_indicator_dim";
+			break;
+			
+		case GOLFImportStatusOverriddenInactive:
+			workingIndicatorName = @"blue_indicator_dim";
+			break;
+			
+		case GOLFImportStatusErrorInactive:
+			workingIndicatorName = @"red_indicator_dim";
+			break;
+			
+		default:
+			workingIndicatorName = @"gray_indicator_dim";
+			break;
+	}
+
+	NSBundle *ourBundle = GOLFKitBundle();
+	if (ourBundle) {
+		//	Starting with defaults…
+		NSUInteger workingSize = 10;
+
+#if TARGET_OS_IOS || TARGET_OS_WATCH
+		
+		return [GOLFStatusIndicator imageNamed:workingIndicatorName inBundle:ourBundle compatibleWithTraitCollection:nil];
+	
+#elif TARGET_OS_MAC
+		GOLFStatusIndicator *workingIndicatorImage = nil;
+		
+		//	We can live with the requested size…
+		
+		workingIndicatorImage = (GOLFStatusIndicator *)[ourBundle imageForResource:workingIndicatorName];	//	The image as pulled from the bundle
+		NSImageRep *imageRep = [workingIndicatorImage bestRepresentationForRect:NSMakeRect(0.0, 0.0, 30.0, 30.0) context:[NSGraphicsContext currentContext] hints:nil];
+		GOLFStatusIndicator *sizedImage = [[NSImage alloc] initWithSize:NSMakeSize(workingSize, workingSize)];
+		[sizedImage addRepresentation:imageRep];
+		return sizedImage;
+	
+#endif
+
+	}	//	if (ourBundle)
+	return nil;
+}
+
 #pragma mark NSStringFrom… Utilities
 
 //=================================================================
@@ -945,6 +1023,48 @@ NSString * NSStringFromMaxScoreType(GOLFMaxScoreType type, NSString **descriptiv
 				*descriptiveText = ((type == GOLFMaxScoreTypeUnknown) ? @"" : [NSString stringWithFormat:@"(%lu)", (unsigned long)type]);
 			}
 			return [GOLFLocalizedString(@"TERM_UNKNOWN") capitalizedString];
+	}
+}
+
+//=================================================================
+//	NSStringFromGOLFImportStatus(status)
+//=================================================================
+NSString * NSStringFromGOLFImportStatus(GOLFImportStatus status) {
+
+	//	Type							  Value		Description
+	//	-----------------------------	--------	-----------------------------------
+	//	GOLFImportStatusNone				0		None or unresolved status (gray bullet)
+    //	GOLFImportStatusWarning				1		Warning status (yellow bullet)
+    //	GOLFImportStatusReady				2		Ready status (green bullet)
+    //	GOLFImportStatusOverridden			3		Overridden status (blue bullet)
+	//	GOLFImportStatusNoneInactive		10		None or unresolved status (dim gray bullet)
+    //	GOLFImportStatusWarningInactive		11		Warning status (dim yellow bullet)
+    //	GOLFImportStatusReadyInactive		12		Ready status (dim green bullet)
+    //	GOLFImportStatusOverriddenInactive	13		Overridden status (dim blue bullet)
+    //	GOLFImportStatusError				99		Error status (red bullet)
+    //	GOLFImportStatusErrorInactive		109		Error status - inactive (dim red bullet)
+	
+	switch(status) {
+		case GOLFImportStatusWarning:
+		case GOLFImportStatusWarningInactive:
+			return [GOLFLocalizedString(@"TERM_WARNING") capitalizedString];
+			
+		case GOLFImportStatusReady:
+		case GOLFImportStatusReadyInactive:
+			return [GOLFLocalizedString(@"TERM_READY") capitalizedString];
+			
+		case GOLFImportStatusOverridden:
+		case GOLFImportStatusOverriddenInactive:
+			return [GOLFLocalizedString(@"TERM_OVERRIDDEN") capitalizedString];
+			
+		case GOLFImportStatusError:
+		case GOLFImportStatusErrorInactive:
+			return [GOLFLocalizedString(@"TERM_ERROR") capitalizedString];
+			
+		case GOLFImportStatusNone:
+		case GOLFImportStatusNoneInactive:
+		default:
+			return [GOLFLocalizedString(@"TERM_PENDING") capitalizedString];
 	}
 }
 

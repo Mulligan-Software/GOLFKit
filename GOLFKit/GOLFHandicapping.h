@@ -134,6 +134,22 @@ typedef NS_ENUM(NSUInteger, GOLFPlayingHandicapType) {
 	GOLFPlayingHandicapTypeUnknown = 99				//	Unknown playing handicap style
 };
 
+typedef NS_ENUM(NSUInteger, GOLFHandicapCalculationScheduleType) {
+	GOLFHandicapCalculationScheduleTypeNone = 0,		//	No handicap calculation schedule set (None)				(0)
+	GOLFHandicapCalculationScheduleTypeDaily,			//	Handicap calculation daily								(1)
+	GOLFHandicapCalculationScheduleTypeWeekly = 10,		//	Handicap calculation weekly on a specified weekday		(10)
+	GOLFHandicapCalculationScheduleTypeMonthly = 20,	//	Handicap calculation monthly on a specified day			(20)
+	GOLFHandicapCalculationScheduleTypeMonthEnd			//	Handicap calculation on the last day of the month		(21)
+};
+
+typedef NS_ENUM(NSUInteger, GOLFPlayersSelectionType) {
+	GOLFPlayersSelectionTypeAll = 0,		//	All eligible players							(0)
+	GOLFPlayersSelectionTypeClubMembers,	//	Members of the selected home club				(1)
+	GOLFPlayersSelectionTypeAuthority,		//	Players handicapped by a selected authority		(2)
+	GOLFPlayersSelectionTypeSelected,		//	Selected in the Players list					(3)
+	GOLFPlayersSelectionTypeUnknown = 99	//	Unknown selectionType or error					(99)
+};
+
 extern GOLFHandicapAuthority * const GOLFHandicapAuthorityUSGA;			//	"USGA"
 extern GOLFHandicapAuthority * const GOLFHandicapAuthorityRCGA;			//	"RCGA"
 extern GOLFHandicapAuthority * const GOLFHandicapAuthorityAGU;			//	"AGU"
@@ -414,4 +430,7 @@ GOLFPlayingHandicap GOLFFirstLocalHandicapForAuthority(GOLFHandicapAuthority *au
 
 NSString * NSStringFromGOLFHandicapExpectedScoreMethod(GOLFHandicapExpectedScoreMethod method, NSString **descriptiveText);
 //	Returns an appropriate localized title identifying an Expected Score calculation method.  Optionally returns a description.
+
+NSString * NSStringFromGOLFHandicapCalculationScheduleType(GOLFHandicapCalculationScheduleType type, NSString **descriptiveText, NSInteger *specifiedDay);
+//	Returns an appropriate localized title identifying a handicap calculation schedule type.  Optionally returns a description.
 

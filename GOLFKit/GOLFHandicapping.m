@@ -87,6 +87,81 @@ NSString * NSStringFromGOLFHandicapExpectedScoreMethod(GOLFHandicapExpectedScore
 	}
 }
 
+//=================================================================
+//	NSStringFromGOLFHandicapCalculationScheduleType(type, &descriptiveText, &day)
+//=================================================================
+NSString * NSStringFromGOLFHandicapCalculationScheduleType(GOLFHandicapCalculationScheduleType type, NSString **descriptiveText, NSInteger *specifiedDay) {
+	//	Returns a localized title/name of a handicap calculation schedule type ("None", "Daily", "Weekly", etc.) and
+	//	optionally (when the address of descriptiveText is provided), a localized description of the
+	//	type ("No schedule", "Calculation of new handicap records for play through every day",
+	//	"Calculation of new handicap records for play through the last day of the month", etc.)
+
+	//	GOLFHandicapCalculationScheduleType			value	description
+	//	-----------------------------------------	-----	--------------------------------------------------
+	//	GOLFHandicapCalculationScheduleTypeNone		  0		No handicap calculation schedule set (None)
+	//	GOLFHandicapCalculationScheduleTypeDaily	  1		Handicap calculation daily
+	//	GOLFHandicapCalculationScheduleTypeWeekly	 10		Handicap calculation weekly on a specified weekday
+	//	GOLFHandicapCalculationScheduleTypeMonthly	 20		Handicap calculation monthly on a specified day
+	//	GOLFHandicapCalculationScheduleTypeMonthEnd	 21		Handicap calculation on the last day of the month
+	
+	NSInteger dayOrWeekday = 0;	//	Unknown date
+	NSDateFormatter *dateFormatter;
+	if (specifiedDay) {
+		dayOrWeekday = *specifiedDay;
+	}
+
+	if (type == GOLFHandicapCalculationScheduleTypeNone) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_HANDICAP_CALCULATION_TYPE_NONE");	//	No handicap calculation scheduled
+		}
+		return [GOLFLocalizedString(@"TERM_NONE") capitalizedString];
+	} else if (type == GOLFHandicapCalculationScheduleTypeDaily) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_HANDICAP_CALCULATION_TYPE_DAILY");	//	Daily handicap calculations through each day end
+		}
+		return [GOLFLocalizedString(@"TERM_DAILY") capitalizedString];
+	} else if (type == GOLFHandicapCalculationScheduleTypeWeekly) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_HANDICAP_CALCULATION_TYPE_WEEKLY");	//	Weekly handicap calculations through the end of a specified weekday of each week
+		}
+		dateFormatter = [[NSDateFormatter alloc] init];
+		dateFormatter.calendar = [NSCalendar currentCalendar];
+		dateFormatter.locale = [NSLocale currentLocale];
+		NSString *weekdayName;
+
+		if (dayOrWeekday > 0) {
+			weekdayName = [[dateFormatter weekdaySymbols] objectAtIndex:(dayOrWeekday - 1)];
+		} else {
+			weekdayName = GOLFLocalizedString(@"DESCRIPTION_HANDICAP_CALCULATION_THE_WEEKDAY");
+		}
+		return [NSString localizedStringWithFormat:GOLFLocalizedString(@"FORMAT_WEEKLY_THROUGH_%@"), weekdayName];
+	} else if (type == GOLFHandicapCalculationScheduleTypeMonthly) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_HANDICAP_CALCULATION_TYPE_MONTHLY");	//	Monthly handicap calculations through the end of a specified day of each month 
+		}
+		dateFormatter = [[NSDateFormatter alloc] init];
+		dateFormatter.calendar = [NSCalendar currentCalendar];
+		dateFormatter.locale = [NSLocale currentLocale];
+		NSString *dayName;
+		if (dayOrWeekday > 0) {
+			dayName = [NSString localizedStringWithFormat:@"%ld%@", (long)dayOrWeekday, NSStringOrdinalSuffixFromRank(dayOrWeekday)];
+		} else {
+			dayName = GOLFLocalizedString(@"DESCRIPTION_HANDICAP_CALCULATION_NTH_DAY");
+		}
+		return [NSString localizedStringWithFormat:GOLFLocalizedString(@"FORMAT_MONTHLY_THROUGH_%@"), dayName];
+	} else if (type == GOLFHandicapCalculationScheduleTypeMonthEnd) {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"DESCRIPTION_HANDICAP_CALCULATION_TYPE_MONTHEND");	//	Monthly handicap calculations through the last day of each month
+		}
+		return GOLFLocalizedString(@"TITLE_MONTHLY_LAST_DAY");
+	} else {
+		if (descriptiveText) {
+			*descriptiveText = GOLFLocalizedString(@"");
+		}
+		return [GOLFLocalizedString(@"TERM_UNKNOWN") capitalizedString];
+	}
+}
+
 #pragma mark Handicap authority-specific functions and utilities
 
 //=================================================================

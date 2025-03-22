@@ -16,10 +16,10 @@
 //	Exactly one day backward
 - (NSDate *)yesterdayDate;
 
-//	Date normalized to midnight (no minutes or seconds)
+//	Date normalized to local midnight (no minutes or seconds in local time zone)
 - (NSDate *)midnightDate;
 
-//	Date normalized to noon (12:00:00)
+//	Date normalized to local noon (12:00:00, no minutes or seconds in local time zone)
 - (NSDate *)noonDate;
 
 //	Exactly one year forward
@@ -34,7 +34,7 @@
 //	Same time on last day of the year
 - (NSDate *)lastDayOfYearDate;
 
-//	Day comparison, ignoring time
+//	Day comparison, ignoring time in local time zone
 - (BOOL)isSameDayAsDate:(NSDate *)otherDate;
 
 @end
