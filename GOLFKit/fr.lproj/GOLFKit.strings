@@ -637,6 +637,7 @@
 "TITLE_EVEN" = "Égal";
 "TITLE_EVEN_ABBR" = "E";
 "TITLE_EVENT_REGISTRATION" = "Inscription à l’Événement";
+"TITLE_EVENT_SETTINGS" = "Paramètres de l'Événement";
 "TITLE_EVERNOTE" = "Evernote";
 "TITLE_EXCLUDE_GUESTS" = "Exclure les Invités";
 "TITLE_EXPORT" = "Exporter";
@@ -818,7 +819,9 @@
 "TITLE_MAXIMUM_SCORE" = "Score Maximum";
 "TITLE_MEMBER_NO" = "Membre no.";
 "TITLE_MEMBERS_OF" = "Membres de";
+"TITLE_MEN_OR_WOMEN" = "Hommes ou Femmes";
 "TITLE_MENS_HANDICAP" = "Handicap - Hommes";
+"TITLE_MENS_HANDICAP_PLURAL" = "Handicaps - Hommes";
 "TITLE_MONTHLY_LAST_DAY" = "Mensuel jusqu'au dernier jour du mois";
 "TITLE_MOVE_ROUND_DOWN" = "Déplacer le tour ver le bas";
 "TITLE_MOVE_ROUND_UP" = "Déplacer le tour ver le haut";
@@ -1032,6 +1035,7 @@
 "TITLE_WITH_SCORE" = "avec score";
 "TITLE_WOLF" = "Wolf";
 "TITLE_WOMENS_HANDICAP" = "Handicap - Femmes";
+"TITLE_WOMENS_HANDICAP_PLURAL" = "Handicaps des Femmes";
 "TITLE_1_DOWN_LAST" = "1-down dernier trou";
 "TITLE_2_DOWN" = "2-down";
 "TITLE_3_BY_6" = "3 × 6";
@@ -1351,9 +1355,9 @@
 "PLAY_TYPE_INTERNATIONAL" = "l’INTERNATIONAL™";
 "PLAY_TYPE_INTERNATIONAL_DESC" = "Points - pire -3, bogey -1, par 0, birdie 2, 5, 8";
 "PLAY_TYPE_9_POINT" = "9’s";
-"PLAY_TYPE_9_POINT_DESC" = "3 joueurs ou plus se partagent 9 (16, 25, 36) points par trou";
+"PLAY_TYPE_9_POINT_DESC" = "3 joueurs ou plus se partagent 9 points par trou";
 "PLAY_TYPE_6_POINT" = "Jeu 6-Point";
-"PLAY_TYPE_6_POINT_DESC" = "Jeu 6-Point";
+"PLAY_TYPE_6_POINT_DESC" = "3 joueurs se partagent 6 points par trou";
 "PLAY_TYPE_MAXIMUM_SCORE" = "Score Maximum";
 "PLAY_TYPE_MAXIMUM_SCORE_ABBR" = "Score Max";
 "PLAY_TYPE_MAXIMUM_SCORE_DESC" = "Jeu par coups avec limites de trous";

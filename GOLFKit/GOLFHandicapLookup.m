@@ -188,9 +188,7 @@ NSString * NSStringFromGOLFHandicapLookupStatus(GOLFHandicapLookupStatus status)
 - (NSURLSessionConfiguration *)lookupSessionConfiguration {
 	NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
 	
-	if (@available (macOS 10.13, iOS 11.0, *)) {
-		configuration.waitsForConnectivity = YES;
-	}
+	configuration.waitsForConnectivity = YES;
 	configuration.networkServiceType = NSURLNetworkServiceTypeDefault;
 	configuration.timeoutIntervalForRequest = 10.0;	//	10 second timeouts
 	configuration.HTTPCookieAcceptPolicy = NSHTTPCookieAcceptPolicyAlways;	//	Accept cookies using default service
@@ -692,11 +690,9 @@ NSString * NSStringFromGOLFHandicapLookupStatus(GOLFHandicapLookupStatus status)
 
 	//	For loading to continue, the delegate must call the completion handler, passing in a disposition that indicates how the task should proceed. Passing the NSURLSessionDelayedRequestCancel disposition is equivalent to calling cancel on the task directly.
 
-	if (@available (macOS 10.13, iOS 11.0, *)) {
-		if (session == self.handicapLookupSession) {
-			NSURLSessionDelayedRequestDisposition disposition = (self.needCancel ? NSURLSessionDelayedRequestCancel : NSURLSessionDelayedRequestContinueLoading);
-			completionHandler(disposition, nil);
-		}
+	if (session == self.handicapLookupSession) {
+		NSURLSessionDelayedRequestDisposition disposition = (self.needCancel ? NSURLSessionDelayedRequestCancel : NSURLSessionDelayedRequestContinueLoading);
+		completionHandler(disposition, nil);
 	}
 }
 
@@ -708,22 +704,20 @@ NSString * NSStringFromGOLFHandicapLookupStatus(GOLFHandicapLookupStatus status)
 
 	//	This method is called, at most, once per task, and only if connectivity is initially unavailable.  It is never called for background sessions because waitsForConnectivity is ignored for those sessions.
 	
-	if (@available (macOS 10.13, iOS 11.0, *)) {
-		if (session == self.handicapLookupSession) {
-			if (task == self.getHandicapTask) {
-				if (self.needCancel) {
-					self.progressNotice = GOLFLocalizedString(@"NOTICE_SERVICE_CANCELLING");
-					[self.getHandicapTask cancel];
-				} else {
-					NSTimeInterval fiveSecondsAgo = -5.0;
-					if ([self.getHandicapTaskStart timeIntervalSinceNow] < fiveSecondsAgo) {
-						self.progressNotice = GOLFLocalizedString(@"NOTICE_SERVICE_NO_CONNECTION");
-						[self.getHandicapTask cancel];	//	Cancel and report an error
-					}
+	if (session == self.handicapLookupSession) {
+		if (task == self.getHandicapTask) {
+			if (self.needCancel) {
+				self.progressNotice = GOLFLocalizedString(@"NOTICE_SERVICE_CANCELLING");
+				[self.getHandicapTask cancel];
+			} else {
+				NSTimeInterval fiveSecondsAgo = -5.0;
+				if ([self.getHandicapTaskStart timeIntervalSinceNow] < fiveSecondsAgo) {
+					self.progressNotice = GOLFLocalizedString(@"NOTICE_SERVICE_NO_CONNECTION");
+					[self.getHandicapTask cancel];	//	Cancel and report an error
 				}
 			}
-		}
-	}
+		}	//	if (task == self.getHandicapTask)
+	}	//	if (session == self.handicapLookupSession)
 }
 
 #pragma mark <NSURLSessionDataDelegate>

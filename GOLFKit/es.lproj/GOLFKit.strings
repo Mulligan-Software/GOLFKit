@@ -637,6 +637,7 @@
 "TITLE_EVEN" = "Igual";
 "TITLE_EVEN_ABBR" = "E";
 "TITLE_EVENT_REGISTRATION" = "Registro de Eventos";
+"TITLE_EVENT_SETTINGS" = "Configuración del Evento";
 "TITLE_EVERNOTE" = "Evernote";
 "TITLE_EXCLUDE_GUESTS" = "Excluir Invitados";
 "TITLE_EXPORT" = "Exportar";
@@ -818,7 +819,9 @@
 "TITLE_MAXIMUM_SCORE" = "Puntaje Máximo";
 "TITLE_MEMBER_NO" = "Miembro no.";
 "TITLE_MEMBERS_OF" = "Miembros del";
+"TITLE_MEN_OR_WOMEN" = "Caballeros o Damas";
 "TITLE_MENS_HANDICAP" = "Handicap - Caballeros";
+"TITLE_MENS_HANDICAP_PLURAL" = "Handicaps - Caballeros";
 "TITLE_MONTHLY_LAST_DAY" = "Mensualmente hasta el último día del mes";
 "TITLE_MOVE_ROUND_DOWN" = "Mover la ronda hacia abajo";
 "TITLE_MOVE_ROUND_UP" = "Mover la ronda hacia arriba";
@@ -1032,6 +1035,7 @@
 "TITLE_WITH_SCORE" = "con resultado";
 "TITLE_WOLF" = "Wolf";
 "TITLE_WOMENS_HANDICAP" = "Handicap - Damas";
+"TITLE_WOMENS_HANDICAP_PLURAL" = "Handicaps de Damas";
 "TITLE_1_DOWN_LAST" = "1-down último hoyo";
 "TITLE_2_DOWN" = "2-down";
 "TITLE_3_BY_6" = "3 × 6";
@@ -1347,13 +1351,13 @@
 "PLAY_TYPE_HALF_STABLEFORD" = "Stableford Medio";
 "PLAY_TYPE_HALF_STABLEFORD_DESC" = "Puntos - par 1, birdie 2, 3, 4, …";
 "PLAY_TYPE_CHICAGO" = "Chicago";
-"PLAY_TYPE_CHICAGO_DESC" = "Puntos - bogey 1, par 2, birdie 4, 8, 16, …s";
+"PLAY_TYPE_CHICAGO_DESC" = "Puntos - bogey 1, par 2, birdie 4, 8, 16, …";
 "PLAY_TYPE_INTERNATIONAL" = "The INTERNATIONAL™";
 "PLAY_TYPE_INTERNATIONAL_DESC" = "Puntos - peor -3, bogey -1, par 0, birdie 2, 5, 8";
 "PLAY_TYPE_9_POINT" = "9’s";
-"PLAY_TYPE_9_POINT_DESC" = "3 o más jugadores dividen 9 (16, 25, 36) puntos por hoyo";
+"PLAY_TYPE_9_POINT_DESC" = "3 jugadores dividen 9 puntos por hoyo";
 "PLAY_TYPE_6_POINT" = "Juego 6-Puntos";
-"PLAY_TYPE_6_POINT_DESC" = "3 jugadores dividen 6 puntos por hoyo";
+"PLAY_TYPE_6_POINT_DESC" = "3 jugadores comparten 6 puntos por hoyo";
 "PLAY_TYPE_MAXIMUM_SCORE" = "Puntajes Máximos";
 "PLAY_TYPE_MAXIMUM_SCORE_ABBR" = "Puntajes Máx";
 "PLAY_TYPE_MAXIMUM_SCORE_DESC" = "Stroke play con límites de hoyo";

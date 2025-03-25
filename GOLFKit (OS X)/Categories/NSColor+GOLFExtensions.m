@@ -13,10 +13,8 @@
 @implementation NSColor (GOLFExtensions)
 
 - (NSColor *)effectiveColor {
-	if (@available(macOS 10.13, *)) {
-		if (self.type == NSColorTypeCatalog) {
-			return self;
-		}
+	if (self.type == NSColorTypeCatalog) {
+		return self;
 	}
 	return [[GOLFDynamicColor dynamicColorWithAquaColor:self darkAquaColor:nil] effectiveColor];
 }

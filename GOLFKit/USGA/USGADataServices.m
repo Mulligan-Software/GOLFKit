@@ -139,9 +139,7 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 - (NSURLSessionConfiguration *)USGAQuerySessionConfiguration {
 	NSURLSessionConfiguration *configuration = [NSURLSessionConfiguration defaultSessionConfiguration];
 	
-	if (@available (macOS 10.13, iOS 11.0, *)) {
-		configuration.waitsForConnectivity = YES;
-	}
+	configuration.waitsForConnectivity = YES;
 	configuration.networkServiceType = NSURLNetworkServiceTypeDefault;
 	configuration.timeoutIntervalForRequest = 30.0;	//	30 second timeouts
 	configuration.HTTPCookieAcceptPolicy = NSHTTPCookieAcceptPolicyAlways;	//	Accept cookies using default service
@@ -1220,11 +1218,9 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 
 	//	For loading to continue, the delegate must call the completion handler, passing in a disposition that indicates how the task should proceed. Passing the NSURLSessionDelayedRequestCancel disposition is equivalent to calling cancel on the task directly.
 
-	if (@available (macOS 10.13, iOS 11.0, *)) {
-		if (session == self.USGAQuerySession) {
-			NSURLSessionDelayedRequestDisposition disposition = (self.needCancel ? NSURLSessionDelayedRequestCancel : NSURLSessionDelayedRequestContinueLoading);
-			completionHandler(disposition, nil);
-		}
+	if (session == self.USGAQuerySession) {
+		NSURLSessionDelayedRequestDisposition disposition = (self.needCancel ? NSURLSessionDelayedRequestCancel : NSURLSessionDelayedRequestContinueLoading);
+		completionHandler(disposition, nil);
 	}
 }
 
@@ -1236,21 +1232,11 @@ NSDictionary * USGADataServicesGOLFKitInfo(void) {
 
 	//	This method is called, at most, once per task, and only if connectivity is initially unavailable.  It is never called for background sessions because waitsForConnectivity is ignored for those sessions.
 	
-	if (@available (macOS 10.13, iOS 11.0, *)) {
-		if (session == self.USGAQuerySession) {
-			if (self.needCancel) {
-//#ifdef DEBUG
-//	NSLog(@"%@ -%@ task cancelled", NSStringFromClass([self class]), NSStringFromSelector(_cmd));
-//#endif
-				[task cancel];	//	Cancel the task (and report a "User cancelled" error)
-//			} else if (task == self.USGATokenPostTask) {
-//				NSTimeInterval twoMinutesAgo = -120.0;
-//				if ([self.USGATokenPostTaskStart timeIntervalSinceNow] < twoMinutesAgo) {
-//					[self.USGATokenPostTask cancel];	//	Cancel and report an error
-//				}
-			}
+	if (session == self.USGAQuerySession) {
+		if (self.needCancel) {
+			[task cancel];	//	Cancel the task (and report a "User cancelled" error)
 		}
-	}
+	}	//	if (session == self.USGAQuerySession)
 }
 
 //- (void)URLSession:(NSURLSession *)session task:(NSURLSessionTask *)task didFinishCollectingMetrics:(NSURLSessionTaskMetrics *)metrics API_AVAILABLE(macosx(10.12), ios(10.0), watchos(3.0), tvos(10.0)) {

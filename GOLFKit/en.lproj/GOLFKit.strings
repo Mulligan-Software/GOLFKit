@@ -637,6 +637,7 @@
 "TITLE_EVEN" = "Even";
 "TITLE_EVEN_ABBR" = "E";
 "TITLE_EVENT_REGISTRATION" = "Event Registration";
+"TITLE_EVENT_SETTINGS" = "Event Settings";
 "TITLE_EVERNOTE" = "Evernote";
 "TITLE_EXCLUDE_GUESTS" = "Exclude Guests";
 "TITLE_EXPORT" = "Export";
@@ -819,7 +820,9 @@
 "TITLE_MAXIMUM_SCORE" = "Maximum Score";
 "TITLE_MEMBER_NO" = "Member no.";
 "TITLE_MEMBERS_OF" = "Members of";
+"TITLE_MEN_OR_WOMEN" = "Men or Women";
 "TITLE_MENS_HANDICAP" = "Men’s Handicap";
+"TITLE_MENS_HANDICAP_PLURAL" = "Men’s Handicaps";
 "TITLE_MONTHLY_LAST_DAY" = "Monthly through the last day of the month";
 "TITLE_MOVE_ROUND_DOWN" = "Move Round Down";
 "TITLE_MOVE_ROUND_UP" = "Move Round Up";
@@ -1033,6 +1036,7 @@
 "TITLE_WITH_SCORE" = "with score";
 "TITLE_WOLF" = "Wolf";
 "TITLE_WOMENS_HANDICAP" = "Women’s Handicap";
+"TITLE_WOMENS_HANDICAP_PLURAL" = "Women’s Handicaps";
 "TITLE_1_DOWN_LAST" = "1-down last hole";
 "TITLE_2_DOWN" = "2-down";
 "TITLE_3_BY_6" = "3 × 6";
@@ -1353,7 +1357,7 @@
 "PLAY_TYPE_INTERNATIONAL" = "The INTERNATIONAL™";
 "PLAY_TYPE_INTERNATIONAL_DESC" = "Points - worse -3, bogey -1, par 0, birdie 2, 5, 8";
 "PLAY_TYPE_9_POINT" = "9’s";
-"PLAY_TYPE_9_POINT_DESC" = "3 or more players share 9 (16, 25, 36) points per hole";
+"PLAY_TYPE_9_POINT_DESC" = "3 or more players share 9 points per hole";
 "PLAY_TYPE_6_POINT" = "6-Point Game";
 "PLAY_TYPE_6_POINT_DESC" = "3 players share 6 points per hole";
 "PLAY_TYPE_MAXIMUM_SCORE" = "Maximum Score";

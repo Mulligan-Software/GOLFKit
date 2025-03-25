@@ -679,6 +679,7 @@
 "TITLE_EVEN" = "Eben";
 "TITLE_EVEN_ABBR" = "E";
 "TITLE_EVENT_REGISTRATION" = "Eventsregistrierung";
+"TITLE_EVENT_SETTINGS" = "Eventinstellungen";
 "TITLE_EVERNOTE" = "Evernote";
 "TITLE_EXCLUDE_GUESTS" = "Gäste ausschließen";
 "TITLE_EXPORT" = "Exportiere";
@@ -860,7 +861,9 @@
 "TITLE_MAXIMUM_SCORE" = "Höchste Punktzahl";
 "TITLE_MEMBER_NO" = "Mitglied nr.";
 "TITLE_MEMBERS_OF" = "Mitglieder des";
+"TITLE_MEN_OR_WOMEN" = "Herren oder Damen";
 "TITLE_MENS_HANDICAP" = "Handicap der Herren";
+"TITLE_MENS_HANDICAP_PLURAL" = "Handicaps der Herren";
 "TITLE_MONTHLY_LAST_DAY" = "Monatlich bis zum letzten Tag des Monats";
 "TITLE_MOVE_ROUND_DOWN" = "Bewege die Runde nach unten";
 "TITLE_MOVE_ROUND_UP" = "Bewege die Runde nach oben";
@@ -1074,6 +1077,7 @@
 "TITLE_WITH_SCORE" = "mit Punktzahl";
 "TITLE_WOLF" = "Wolf";
 "TITLE_WOMENS_HANDICAP" = "Handicap der Damen";
+"TITLE_WOMENS_HANDICAP_PLURAL" = "Handicaps der Damen";
 "TITLE_1_DOWN_LAST" = "1-down letztes Loch";
 "TITLE_2_DOWN" = "2-down";
 "TITLE_3_BY_6" = "3 × 6";
@@ -1393,9 +1397,9 @@
 "PLAY_TYPE_INTERNATIONAL" = "das INTERNATIONAL™";
 "PLAY_TYPE_INTERNATIONAL_DESC" = "Punkte - schlechter -3, bogey -1, par 0, birdie 2, 5, 8";
 "PLAY_TYPE_9_POINT" = "9’s";
-"PLAY_TYPE_9_POINT_DESC" = "3 oder mehr Spieler teilen 9 (16, 25, 36) Punkt pro Loch";
+"PLAY_TYPE_9_POINT_DESC" = "3 Spieler teilen sich 9 Punkte pro Loch";
 "PLAY_TYPE_6_POINT" = "6-Point Game";
-"PLAY_TYPE_6_POINT_DESC" = "3 Spieler teilen sich 6 Punkt pro Loch";
+"PLAY_TYPE_6_POINT_DESC" = "3 Spieler teilen sich 6 Punkte pro Loch";
 "PLAY_TYPE_MAXIMUM_SCORE" = "Höchste Punktzahl";
 "PLAY_TYPE_MAXIMUM_SCORE_ABBR" = "Max. Punktzahl";
 "PLAY_TYPE_MAXIMUM_SCORE_DESC" = "Schlagspiel mit Lochgrenzen";
